@@ -37,9 +37,6 @@ import com.aimxcel.abclearn.common.abclearncommon.view.util.HTMLUtils.HTMLEditor
 import com.aimxcel.abclearn.common.abclearncommon.application.PaintImmediateDialog;
 import com.aimxcel.abclearn.common.abclearncommon.application.SoftwareAgreement;
 
-/**
- * Displays the full text of PhET's Software Use Agreement.
- */
 public class SoftwareAgreementDialog extends PaintImmediateDialog {
 
     private static final Dimension PREFERRED_SIZE = new Dimension( 700, 400 );

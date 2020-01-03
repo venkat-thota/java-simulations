@@ -1,13 +1,4 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author:samreid $
- * Revision : $Revision:14677 $
- * Date modified : $Date:2007-04-17 03:40:29 -0500 (Tue, 17 Apr 2007) $
- */
 package com.aimxcel.abclearn.common.abclearncommon.application;
 
 import java.awt.Color;
@@ -33,12 +24,6 @@ import com.aimxcel.abclearn.common.abclearncommon.view.LogoPanel;
 import com.aimxcel.abclearn.common.abclearncommon.view.ModulePanel;
 import com.aimxcel.abclearn.common.abclearncommon.view.util.SwingUtils;
 
-//import com.aimxcel.abclearn.common.abclearncommon.application.Listener;
-
-/**
- * The Module is the fundamental unit of a phet simulation.
- * It entails graphics, controls and a model.
- */
 
 public abstract class Module implements Resettable {
 
@@ -403,7 +388,7 @@ public abstract class Module implements Resettable {
     //----------------------------------------------------------------------------
 
     /**
-     * Shows/hides the PhET logo.
+     * Shows/hides the abcLearn logo.
      *
      * @param visible
      */
@@ -415,7 +400,7 @@ public abstract class Module implements Resettable {
     }
 
     /**
-     * Is the PhET logo visible?
+     * Is the abcLearn logo visible?
      *
      * @return true or false
      */

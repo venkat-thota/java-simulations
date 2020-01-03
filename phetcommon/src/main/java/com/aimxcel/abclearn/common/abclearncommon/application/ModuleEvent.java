@@ -1,36 +1,21 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
 package com.aimxcel.abclearn.common.abclearncommon.application;
 
 import com.aimxcel.abclearn.common.abclearncommon.application.Module;
 import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
 
-/**
- * An event class sent to ModuleObservers.
- *
- * @author Ron LeMaster
- * @version $Revision$
- */
 public class ModuleEvent {
-    private AbcLearnApplication phetApplication;
+    private AbcLearnApplication abcLearnApplication;
     private Module module;
 
     /**
      * Constructs a new ModuleEvent.
      *
-     * @param phetApplication
+     * @param abcLearnApplication
      * @param module
      */
-    public ModuleEvent( AbcLearnApplication phetApplication, Module module ) {
-        this.phetApplication = phetApplication;
+    public ModuleEvent( AbcLearnApplication abcLearnApplication, Module module ) {
+        this.abcLearnApplication = abcLearnApplication;
         this.module = module;
     }
 
@@ -49,6 +34,6 @@ public class ModuleEvent {
      * @return the AbcLearnApplication associated with this ModuleEvent.
      */
     public AbcLearnApplication getAbcLearnApplication() {
-        return phetApplication;
+        return abcLearnApplication;
     }
 }

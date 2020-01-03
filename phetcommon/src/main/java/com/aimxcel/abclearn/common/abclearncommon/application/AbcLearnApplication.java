@@ -38,16 +38,16 @@ public class AbcLearnApplication
     //----------------------------------------------------------------
 
     public static final String DEVELOPER_CONTROLS_COMMAND_LINE_ARG = "-dev";//Command line argument to enable developer-only features
-    private static ArrayList<AbcLearnApplication> phetApplications = new ArrayList<AbcLearnApplication>();
+    private static ArrayList<AbcLearnApplication> abcLearnApplications = new ArrayList<AbcLearnApplication>();
 
     //----------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------
 
     private ITabbedModulePane tabbedModulePane;
-    private AbcLearnApplicationConfig phetApplicationConfig;
+    private AbcLearnApplicationConfig abcLearnApplicationConfig;
 
-    private AbcLearnFrame phetFrame;
+    private AbcLearnFrame abcLearnFrame;
     private ModuleManager moduleManager;
     private AbcLearnAboutDialog aboutDialog; // not null only when About dialog is shown for the first time
     private boolean applicationStarted = false;//flag to make sure we don't start the application more than once
@@ -73,13 +73,13 @@ public class AbcLearnApplication
         this.tabbedModulePane = tabbedPane;
 
         this.moduleManager = new ModuleManager( this );
-        phetFrame = createAbcLearnFrame();
-        ApplicationConfig.getFrameSetup().initialize( phetFrame );
+        abcLearnFrame = createAbcLearnFrame();
+        ApplicationConfig.getFrameSetup().initialize( abcLearnFrame );
 
         // Handle command line arguments
         parseArgs( ApplicationConfig.getCommandLineArgs() );
 
-        phetApplications.add( this );
+        abcLearnApplications.add( this );
     }
 
     //----------------------------------------------------------------
@@ -96,11 +96,11 @@ public class AbcLearnApplication
      * @return true or false
      */
     public boolean isDeveloperControlsEnabled() {
-        return CommandLineUtils.contains( phetApplicationConfig.getCommandLineArgs(), DEVELOPER_CONTROLS_COMMAND_LINE_ARG );
+        return CommandLineUtils.contains( abcLearnApplicationConfig.getCommandLineArgs(), DEVELOPER_CONTROLS_COMMAND_LINE_ARG );
     }
 
     public ISimInfo getSimInfo() {
-        return phetApplicationConfig;
+        return abcLearnApplicationConfig;
     }
 
 
@@ -110,7 +110,7 @@ public class AbcLearnApplication
      * @return last created AbcLearnApplication.
      */
     public static AbcLearnApplication getInstance() {
-        return (AbcLearnApplication) phetApplications.get( phetApplications.size() - 1 );
+        return (AbcLearnApplication) abcLearnApplications.get( abcLearnApplications.size() - 1 );
     }
 
     /**
@@ -148,23 +148,23 @@ public class AbcLearnApplication
             // after the AbcLearnFrame has been set to its startup size.
             // When the outer WindowAdapter gets called, the AbcLearnFrame is
             // at the proper size, but the ApparatusPanel2 has not yet gotten its resize event.
-            phetFrame.addWindowFocusListener( new WindowAdapter() {
+            abcLearnFrame.addWindowFocusListener( new WindowAdapter() {
                 public void windowGainedFocus( WindowEvent e ) {
                     initializeModuleReferenceSizes();
-                    phetFrame.removeWindowFocusListener( this );
+                    abcLearnFrame.removeWindowFocusListener( this );
                 }
             } );
 
             // #3395: dev feature, start with the module number specified on the command line.
             if ( isDeveloperControlsEnabled() ) {
-                String startModuleNumber = phetApplicationConfig.getOptionArg( "-startModule" );
+                String startModuleNumber = abcLearnApplicationConfig.getOptionArg( "-startModule" );
                 if ( startModuleNumber != null ) {
                     setStartModule( getModule( Integer.valueOf( startModuleNumber ) ) );
                 }
             }
 
             moduleManager.setActiveModule( getStartModule() );
-            phetFrame.setVisible( true );
+            abcLearnFrame.setVisible( true );
 
             updateLogoVisibility();
         }
@@ -184,7 +184,7 @@ public class AbcLearnApplication
      */
     protected void updateLogoVisibility() {
         for ( int i = 0; i < moduleManager.numModules(); i++ ) {
-            if ( moduleAt( i ).isLogoPanelVisible() && phetFrame.getTabbedModulePane() != null && phetFrame.getTabbedModulePane().getLogoVisible() ) {
+            if ( moduleAt( i ).isLogoPanelVisible() && abcLearnFrame.getTabbedModulePane() != null && abcLearnFrame.getTabbedModulePane().getLogoVisible() ) {
                 moduleAt( i ).setLogoPanelVisible( false );
             }
         }
@@ -202,7 +202,7 @@ public class AbcLearnApplication
      * @return the AbcLearnFrame for this Application.
      */
     public AbcLearnFrame getAbcLearnFrame() {
-        return phetFrame;
+        return abcLearnFrame;
     }
 
     //----------------------------------------------------------------
@@ -454,14 +454,14 @@ public class AbcLearnApplication
     public Option<Integer> getDevelopmentModule() {
 
         //Make sure the sim is running in development mode
-        if ( phetApplicationConfig.isDev() ) {
+        if ( abcLearnApplicationConfig.isDev() ) {
 
             //Check the command line arguments for presence of "-module" command
-            int index = Arrays.asList( phetApplicationConfig.getCommandLineArgs() ).indexOf( "-module" );
-            if ( index >= 0 && index + 1 < phetApplicationConfig.getCommandLineArgs().length ) {
+            int index = Arrays.asList( abcLearnApplicationConfig.getCommandLineArgs() ).indexOf( "-module" );
+            if ( index >= 0 && index + 1 < abcLearnApplicationConfig.getCommandLineArgs().length ) {
 
                 //Find the next argument and parse
-                String moduleIndexString = phetApplicationConfig.getCommandLineArgs()[index + 1];
+                String moduleIndexString = abcLearnApplicationConfig.getCommandLineArgs()[index + 1];
                 int moduleIndex = parseInt( moduleIndexString );
 
                 //Signify the selected module

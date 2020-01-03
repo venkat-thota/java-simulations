@@ -27,62 +27,7 @@ import com.aimxcel.abclearn.common.abclearncommon.util.logging.LoggingUtils;
 import com.aimxcel.abclearn.common.abclearncommon.view.util.XMLUtils;
 
 import com.aimxcel.abclearn.common.abclearncommon.application.ISimInfo;
-//import com.aimxcel.abclearn.common.abclearncommon.application.InstallerResponse;
-//import com.aimxcel.abclearn.common.abclearncommon.application.Response;
-//import com.aimxcel.abclearn.common.abclearncommon.application.SimResponse;
-//import com.aimxcel.abclearn.common.abclearncommon.application.VersionInfoQuery;
-//import com.aimxcel.abclearn.common.abclearncommon.application.VersionInfoQueryException;
-//import com.aimxcel.abclearn.common.abclearncommon.application.VersionInfoQueryListener;
 
-/**
- * Query that returns version information about the simulation and PhET installer.
- * <p/>
- * XML query format:
- * <code>
- * <?xml version="1.0" encoding="UTF-8"?>
- * <php_info>
- * <sim_version request_version="1" project="faraday" sim="magnet-and-compass" requested_by="automatic"/>
- * <phet_installer_update request_version="1" timestamp_seconds="1234567890" requested_by="automatic"/>
- * </php_info>
- * </code>
- * <p/>
- * XML response format with no errors:
- * <code>
- * <?xml version="1.0" encoding="UTF-8"?>
- * <php_info_response success="true">
- * <sim_version_response
- * success="true"
- * version_major="1"
- * version_minor="01"
- * version_dev="00"
- * version_revision="23478"
- * version_timestamp="1234567890"
- * ask_me_later_duration_days="1"/>
- * <phet_installer_update_response
- * success="true"
- * recommend_update="false"
- * timestamp_seconds="1234567890"
- * ask_me_later_duration_days="1"/>
- * </php_info_response>
- * </code>
- * <p/>
- * XML response format with errors:
- * <code>
- * <?xml version="1.0" encoding="UTF-8"?>
- * <php_info_response success="false">
- * <sim_version_response success="false">
- * <error>message</error>
- * <warning>message</warning>
- * </sim_version_response>
- * <phet_installer_update_response success="false"/>
- * <error>message</error>
- * <warning>message</warning>
- * </phet_installer_update_response>
- * </php_info_response>
- * </code>
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class VersionInfoQuery {
 
     private static final String REQUEST_VERSION_TAG = "request_version";
@@ -213,7 +158,7 @@ public class VersionInfoQuery {
         DocumentBuilder docBuilder = documentBuilderFactory.newDocumentBuilder();
         Document document = docBuilder.newDocument();
 
-        Element rootElement = document.createElement( "phet_info" );
+        Element rootElement = document.createElement( "abcLearn_info" );
         document.appendChild( rootElement );
 
         if ( hasSimQuery ) {
@@ -226,7 +171,7 @@ public class VersionInfoQuery {
         }
 
         if ( hasInstallerQuery ) {
-            Element installerUpdateElement = document.createElement( "phet_installer_update" );
+            Element installerUpdateElement = document.createElement( "abcLearn_installer_update" );
             installerUpdateElement.setAttribute( REQUEST_VERSION_TAG, String.valueOf( AbcLearnCommonConstants.ABC_LEARN_INSTALLER_UPDATE_VERSION ) );
             installerUpdateElement.setAttribute( "timestamp_seconds", String.valueOf( currentInstallerVersion.getTimestamp() ) );
             installerUpdateElement.setAttribute( "requested_by", requestedBy );
@@ -333,7 +278,7 @@ public class VersionInfoQuery {
             AbcLearnInstallerVersion version = null;
             long askMeLaterDuration = 0;
 
-            String elementName = "phet_installer_update_response";
+            String elementName = "abcLearn_installer_update_response";
 
             String attributeName = "recommend_update";
             String attributeValue = getAttribute( document, elementName, attributeName );

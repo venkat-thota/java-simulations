@@ -27,12 +27,6 @@ import com.aimxcel.abclearn.common.abclearncommon.view.util.SwingUtils;
 import com.aimxcel.abclearn.common.abclearncommon.application.KSUCreditsWindow;
 import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationConfig;
 
-/**
- * Window that displays translation credits for KSU ERCSME.
- * See #2624.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class KSUCreditsWindow extends JWindow {
 
     private static final String TRANSLATED_BY = AbcLearnCommonResources.getString( "Common.About.CreditsDialog.TranslationCreditsTitle" );

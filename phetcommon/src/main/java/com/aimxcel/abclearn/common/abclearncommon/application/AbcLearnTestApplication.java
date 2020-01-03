@@ -13,10 +13,6 @@ import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicatio
 import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationConfig;
 import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationLauncher;
 
-/**
- * Use this for test applications.
- * It will not send statistics messages or check for updates.
- */
 public class AbcLearnTestApplication {
 
     private String[] args;
@@ -50,7 +46,7 @@ public class AbcLearnTestApplication {
 
     public void startApplication() {
 
-        AbcLearnApplicationConfig config = new AbcLearnApplicationConfig( args, "phetcommon" );
+        AbcLearnApplicationConfig config = new AbcLearnApplicationConfig( args, "abcLearncommon" );
         if ( frameSetup != null ) {
             config.setFrameSetup( frameSetup );
         }
@@ -58,10 +54,10 @@ public class AbcLearnTestApplication {
         if ( appConstructor == null ) {
             appConstructor = new ApplicationConstructor() {
                 public AbcLearnApplication getApplication( AbcLearnApplicationConfig config ) {
-                    AbcLearnApplication phetApplication = new AbcLearnApplication( config ) {
+                    AbcLearnApplication abcLearnApplication = new AbcLearnApplication( config ) {
                     };
-                    phetApplication.setModules( (Module[]) modules.toArray( new Module[modules.size()] ) );
-                    return phetApplication;
+                    abcLearnApplication.setModules( (Module[]) modules.toArray( new Module[modules.size()] ) );
+                    return abcLearnApplication;
                 }
             };
         }

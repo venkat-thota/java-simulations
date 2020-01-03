@@ -1,14 +1,4 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-
 package com.aimxcel.abclearn.common.abclearncommon.application;
 
 import java.awt.Color;
@@ -43,24 +33,7 @@ import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
 import com.aimxcel.abclearn.common.abclearncommon.view.util.SwingUtils;
 
 import com.aimxcel.abclearn.common.abclearncommon.application.AWTSplashWindow;
-//import com.aimxcel.abclearn.common.abclearncommon.application.AnimationComponent;
-//import com.aimxcel.abclearn.common.abclearncommon.application.ImageComponent;
 
-/**
- * AWTSplashWindow is a splash window based on AWT, that allows
- * us to show some animation outside of the event dispatch thread.
- * <p/>
- * To overcome some deadlock problems at startup, we've started using
- * SwingUtilities.invokeLater to do all of our initialization of PhET
- * sims. An unfortunate consequence of this is that an indeterminate
- * progress bar will not animate in the event dispatch thread.
- * AWTSplashWindow does an animation that is similar to an
- * indeterminate progress bar, but does its painting in its
- * own thread.
- *
- * @author Sam Reid
- * @version $Revision$
- */
 public class AWTSplashWindow extends Window {
 
     private Color backgroundColor = Color.white;
@@ -169,7 +142,7 @@ public class AWTSplashWindow extends Window {
     }
 
     /*
-     * Gets the PhET logo image.
+     * Gets the abcLearn logo image.
      */
     private static BufferedImage getLogoImage() {
         return AbcLearnCommonResources.getInstance().getImage( LOGO_RESOURCE_NAME );

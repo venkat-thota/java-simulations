@@ -26,15 +26,13 @@ import com.aimxcel.abclearn.common.abclearncommon.view.util.HTMLUtils.Interactiv
 
 import com.aimxcel.abclearn.common.abclearncommon.dialogs.StackTraceDialog;
 
-/**
- * StackTraceDialog is a dialog that displays a stack trace.
- * A JTextField is used so that it's easy for the user to copy-&-paste.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class StackTraceDialog extends PaintImmediateDialog {
 
-    private static final String CLOSE_BUTTON = AbcLearnCommonResources.getString( "Common.choice.close" );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final String CLOSE_BUTTON = AbcLearnCommonResources.getString( "Common.choice.close" );
 
     public StackTraceDialog( JDialog owner, String title, String htmlMessage, Exception e ) {
         super( owner, title );

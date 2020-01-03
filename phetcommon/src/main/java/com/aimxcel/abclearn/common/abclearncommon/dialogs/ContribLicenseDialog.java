@@ -18,16 +18,14 @@ import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnCommonResour
 import com.aimxcel.abclearn.common.abclearncommon.view.util.SwingUtils;
 import com.aimxcel.abclearn.common.abclearncommon.view.util.HTMLUtils.InteractiveHTMLPane;
 
-/**
- * This dialog shows license information for a particular license (such as GPL) for
- * a contributed project.
- *
- * @author Sam Reid
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ContribLicenseDialog extends PaintImmediateDialog {
 
-    // preferred size for the scrollpane, change this to affect initial dialog size
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	// preferred size for the scrollpane, change this to affect initial dialog size
     private static final Dimension SCROLLPANE_SIZE = new Dimension( 440, 300 );
 
     private static final String CLOSE_BUTTON = AbcLearnCommonResources.getString( "Common.choice.close" );

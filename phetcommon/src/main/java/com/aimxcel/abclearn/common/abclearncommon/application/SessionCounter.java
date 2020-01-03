@@ -9,17 +9,7 @@ import com.aimxcel.abclearn.common.abclearncommon.util.AbstractPropertiesFile;
 
 import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnPersistenceDir;
 import com.aimxcel.abclearn.common.abclearncommon.application.SessionCounter;
-//import com.aimxcel.abclearn.common.abclearncommon.application.SessionCountsFile;
 
-/**
- * Counts simulation sessions, the number of times a simulation is run.
- * Session counts are persistent, residing in .phet/session-counts.properties in the user's home directory.
- * This information is used by the statistics feature.
- * <p/>
- * This class must be thread safe, because it may be called from different threads.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class SessionCounter {
 
     /* singleton */
@@ -90,7 +80,7 @@ public class SessionCounter {
 
     /**
      * Resets the counts related to when the sim was last able to send statistics.
-     * This should be called after successfully sending a "session" message to PhET.
+     * This should be called after successfully sending a "session" message to abcLearn.
      */
     public synchronized void resetCountSince() {
         file.setCountSince( project, simulation, 0 );

@@ -21,17 +21,7 @@ import com.aimxcel.abclearn.common.abclearncommon.application.ApplicationConstru
 import com.aimxcel.abclearn.common.abclearncommon.application.KSUCreditsWindow;
 import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
 import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationConfig;
-//import com.aimxcel.abclearn.common.abclearncommon.application.ReflectionApplicationConstructor;
 
-/**
- * This launcher solves the following problems:
- * 1. Consolidate (instead of duplicate) launch code
- * 2. Make sure that all AbcLearnSimulations launch in the Swing Event Thread
- * Note: The application main class should not invoke any unsafe Swing operations outside of the Swing thread.
- * 3. Make sure all AbcLearnSimulations instantiate and use a AbcLearnLookAndFeel, which is necessary to enable font support for many laungages.
- * <p/>
- * This implementation uses ApplicationConstructor instead of reflection to ensure compile-time checking (at the expense of slightly more complicated subclass implementations).
- */
 public class AbcLearnApplicationLauncher {
 
     //for splash window
@@ -57,20 +47,20 @@ public class AbcLearnApplicationLauncher {
         }
     }
 
-    public void launchSim( String[] commandLineArgs, String project, final Class phetApplicationClass ) {
-        launchSim( commandLineArgs, project, new ReflectionApplicationConstructor( phetApplicationClass ) );
+    public void launchSim( String[] commandLineArgs, String project, final Class abcLearnApplicationClass ) {
+        launchSim( commandLineArgs, project, new ReflectionApplicationConstructor( abcLearnApplicationClass ) );
     }
 
     public static class ReflectionApplicationConstructor implements ApplicationConstructor {
-        private Class phetApplicationClass;
+        private Class abcLearnApplicationClass;
 
-        public ReflectionApplicationConstructor( Class phetApplicationClass ) {
-            this.phetApplicationClass = phetApplicationClass;
+        public ReflectionApplicationConstructor( Class abcLearnApplicationClass ) {
+            this.abcLearnApplicationClass = abcLearnApplicationClass;
         }
 
         public AbcLearnApplication getApplication( AbcLearnApplicationConfig config ) {
             try {
-                return (AbcLearnApplication) phetApplicationClass.getConstructor( new Class[] { config.getClass() } ).newInstance( new Object[] { config } );
+                return (AbcLearnApplication) abcLearnApplicationClass.getConstructor( new Class[] { config.getClass() } ).newInstance( new Object[] { config } );
             }
             catch ( Exception e ) {
                 throw new RuntimeException( e );
@@ -79,8 +69,8 @@ public class AbcLearnApplicationLauncher {
 
     }
 
-    public void launchSim( String[] commandLineArgs, String project, String flavor, final Class phetApplicationClass ) {
-        launchSim( commandLineArgs, project, flavor, new ReflectionApplicationConstructor( phetApplicationClass ) );
+    public void launchSim( String[] commandLineArgs, String project, String flavor, final Class abcLearnApplicationClass ) {
+        launchSim( commandLineArgs, project, flavor, new ReflectionApplicationConstructor( abcLearnApplicationClass ) );
     }
 
     public void launchSim( String[] commandLineArgs, String project, ApplicationConstructor applicationConstructor ) {
@@ -91,8 +81,8 @@ public class AbcLearnApplicationLauncher {
         launchSim( new AbcLearnApplicationConfig( commandLineArgs, project, flavor ), applicationConstructor );
     }
 
-    public void launchSim( final AbcLearnApplicationConfig config, final Class phetApplicationClass ) {
-        launchSim( config, new ReflectionApplicationConstructor( phetApplicationClass ) );
+    public void launchSim( final AbcLearnApplicationConfig config, final Class abcLearnApplicationClass ) {
+        launchSim( config, new ReflectionApplicationConstructor( abcLearnApplicationClass ) );
     }
 
     public void launchSim( final AbcLearnApplicationConfig config, final ApplicationConstructor applicationConstructor ) {
@@ -111,7 +101,7 @@ public class AbcLearnApplicationLauncher {
          */
         try {
 
-            //Use invoke and wait since many older PhET simulations
+            //Use invoke and wait since many older abcLearn simulations
             //require the existence of a reference to the AbcLearnApplication as soon as launchSim exits
             //
             //If/when these references have been changed/removed, we can change this to invokeLater()

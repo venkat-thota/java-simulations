@@ -34,16 +34,14 @@ import com.aimxcel.abclearn.common.abclearncommon.view.util.SwingUtils;
 
 import com.aimxcel.abclearn.common.abclearncommon.dialogs.DownloadProgressDialog;
 import com.aimxcel.abclearn.common.abclearncommon.dialogs.ErrorDialog;
-//import com.aimxcel.abclearn.common.abclearncommon.dialogs.ThisDownloadThreadListener;
 
-/**
- * Dialog that shows progress of a batch download.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class DownloadProgressDialog extends PaintImmediateDialog {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
 

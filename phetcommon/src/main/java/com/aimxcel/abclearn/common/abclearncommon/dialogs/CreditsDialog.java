@@ -34,27 +34,14 @@ import com.aimxcel.abclearn.common.abclearncommon.view.util.SwingUtils;
 
 import com.aimxcel.abclearn.common.abclearncommon.dialogs.ContribLicenseDialog;
 import com.aimxcel.abclearn.common.abclearncommon.dialogs.CreditsDialog;
-//import com.aimxcel.abclearn.common.abclearncommon.dialogs.DevelopmentTeamCredits;
-//import com.aimxcel.abclearn.common.abclearncommon.dialogs.InteractiveHTMLPane;
-//import com.aimxcel.abclearn.common.abclearncommon.dialogs.ThirdPartySoftwareCredits;
-//import com.aimxcel.abclearn.common.abclearncommon.dialogs.TranslationCredits;
 
-/**
- * The Credits dialog displays several types credits, including:
- * - Development Team
- * - Translation
- * - Third-Party Software
- * <p/>
- * Each type of credit appears under a major heading.
- * A separate inner class handles the specifics of reading, parsing and formatting
- * each type of credit.
- *
- * @author Sam Reid
- * @author Chris Malley
- */
 public class CreditsDialog extends PaintImmediateDialog {
 
-    // public for Translation Utility access
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// public for Translation Utility access
     public static final String TRANSLATION_CREDITS_KEY = "translation.credits";  // key for general translation credits
     public static final String KSU_CREDITS_KEY = "ksu.credits"; // key for KSU-specific credits
 
@@ -119,7 +106,12 @@ public class CreditsDialog extends PaintImmediateDialog {
      * Opens a web browser for all other URLs.
      */
     private class InteractiveHTMLPane extends HTMLUtils.HTMLEditorPane {
-        public InteractiveHTMLPane( final Dialog owner, String html ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public InteractiveHTMLPane( final Dialog owner, String html ) {
             super( html );
             addHyperlinkListener( new HyperlinkListener() {
                 public void hyperlinkUpdate( HyperlinkEvent e ) {
@@ -361,7 +353,7 @@ public class CreditsDialog extends PaintImmediateDialog {
 
         /*
          * Reads a specific third-party license file from the JAR.
-         * These files are placed in the contrib-licenses directory by the phet build process,
+         * These files are placed in the contrib-licenses directory by the abcLearn build process,
          * via the Misc menu in AbcLearnBuildGUI
          */
         public String getThirdPartyLicenseHTML( URL url ) {

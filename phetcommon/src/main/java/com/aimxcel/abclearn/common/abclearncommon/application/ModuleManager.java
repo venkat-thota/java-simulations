@@ -11,31 +11,21 @@ import com.aimxcel.abclearn.common.abclearncommon.application.ModuleEvent;
 import com.aimxcel.abclearn.common.abclearncommon.application.ModuleObserver;
 import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
 
-/**
- * The ModuleManager keeps track of a list of Modules in a AbcLearnApplication, and which one is active.
- * Notification events are sent to registered listeners when modules are added or removed, or when
- * the active module changes.  There is currently no support for setting the active module to null.
- * <p/>
- * Clients shouldn't use this class directly.  They should use the public interface published by
- * AbcLearnApplication.
- *
- * @author Ron LeMaster & Sam Reid
- */
 class ModuleManager {
 
     private ArrayList<Module> modules = new ArrayList<Module>();
     private Module activeModule;
-    private AbcLearnApplication phetApplication;
+    private AbcLearnApplication abcLearnApplication;
     private ArrayList moduleObservers = new ArrayList();
     private Module startModule; // module to be activated when the app starts, default to first module added
 
     /**
      * Constructs a ModuleManager for a AbcLearnApplication.
      *
-     * @param phetApplication
+     * @param abcLearnApplication
      */
-    ModuleManager( AbcLearnApplication phetApplication ) {
-        this.phetApplication = phetApplication;
+    ModuleManager( AbcLearnApplication abcLearnApplication ) {
+        this.abcLearnApplication = abcLearnApplication;
         startModule = null;
     }
 
@@ -255,7 +245,7 @@ class ModuleManager {
     }
 
     private AbcLearnApplication getAbcLearnApplication() {
-        return phetApplication;
+        return abcLearnApplication;
     }
 
     private void activate( Module module ) {

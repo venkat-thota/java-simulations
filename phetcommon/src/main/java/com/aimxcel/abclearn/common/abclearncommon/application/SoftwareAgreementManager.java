@@ -35,9 +35,6 @@ import com.aimxcel.abclearn.common.abclearncommon.application.PaintImmediateDial
 import com.aimxcel.abclearn.common.abclearncommon.application.SessionCounter;
 import com.aimxcel.abclearn.common.abclearncommon.application.SoftwareAgreement;
 
-/**
- * Manages policy related to PhET's software and privacy agreements.
- */
 public class SoftwareAgreementManager {
 
     /* not intended for instantiation */

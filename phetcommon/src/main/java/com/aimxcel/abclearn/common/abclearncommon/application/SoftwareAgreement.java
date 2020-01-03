@@ -10,11 +10,6 @@ import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnProperties;
 
 import com.aimxcel.abclearn.common.abclearncommon.application.SoftwareAgreement;
 
-/**
- * Encapsulation of the "Software Use Agreement".
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class SoftwareAgreement {
 
     private static final String RESOURCE_NAME = "software-agreement.properties";

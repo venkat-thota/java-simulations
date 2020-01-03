@@ -29,15 +29,13 @@ import com.aimxcel.abclearn.common.abclearncommon.view.util.HTMLUtils.Interactiv
 import com.aimxcel.abclearn.common.abclearncommon.dialogs.ErrorDialog;
 import com.aimxcel.abclearn.common.abclearncommon.dialogs.StackTraceDialog;
 
-/**
- * ErrorDialog is a general-purpose error dialog.
- * If an Exception is specified, a Details button is visible that lets you see the stack trace.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ErrorDialog extends PaintImmediateDialog {
 
-    private static final String TITLE = AbcLearnCommonResources.getString( "Common.title.error" );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final String TITLE = AbcLearnCommonResources.getString( "Common.title.error" );
     private static final String CLOSE_BUTTON = AbcLearnCommonResources.getString( "Common.choice.close" );
     private static final String DETAILS_BUTTON = AbcLearnCommonResources.getString( "Common.ErrorDialog.detailsButton" );
     private static final String DETAILS_TITLE = AbcLearnCommonResources.getString( "Common.ErrorDialog.detailsTitle" );

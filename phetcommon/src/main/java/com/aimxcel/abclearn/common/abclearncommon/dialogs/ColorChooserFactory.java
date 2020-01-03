@@ -1,14 +1,4 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-
 package com.aimxcel.abclearn.common.abclearncommon.dialogs;
 
 import java.awt.Color;
@@ -25,15 +15,7 @@ import javax.swing.event.ChangeListener;
 import com.aimxcel.abclearn.common.abclearncommon.view.util.SwingUtils;
 
 import com.aimxcel.abclearn.common.abclearncommon.dialogs.ColorChooserFactory;
-//import com.aimxcel.abclearn.common.abclearncommon.dialogs.Listener;
 
-
-/**
- * ColorChooserFactory creates non-modal color chooser dialogs.
- *
- * @author Sam Reid, Chris Malley (cmalley@pixelzoom.com)
- * @version $Revision$
- */
 public class ColorChooserFactory {
 
     /**

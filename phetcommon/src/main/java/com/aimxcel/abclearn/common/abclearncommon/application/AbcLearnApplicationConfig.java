@@ -17,29 +17,13 @@ import com.aimxcel.abclearn.common.abclearncommon.view.util.StringUtil;
 import com.aimxcel.abclearn.common.abclearncommon.application.ISimInfo;
 import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
 
-/**
- * AbcLearnApplicationConfig encapsulates the information required to configure
- * a AbcLearnApplication, including transparent access to the project's
- * properties file. It is also responsible for launching an application.
- * <p/>
- * Some terminology:
- * <ul>
- * <li>A project is a directory name in the PhET source code repository.
- * <li>More than one simulation may live under a project directory, be built
- * from the project's source code, and use the project's resources.
- * Each of these simulations is referred to as a flavor.
- * <li>If a flavor name is not specified, it defaults to the project name.
- * </ul>
- *
- * @author John De Goes / Chris Malley
- */
 public class AbcLearnApplicationConfig implements ISimInfo {
 
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
 
-    //This frame setup should be used for all phet applications, to ensure a consistent window size
+    //This frame setup should be used for all abcLearn applications, to ensure a consistent window size
     public static final FrameSetup.CenteredWithSize DEFAULT_FRAME_SETUP = new FrameSetup.CenteredWithSize( 1024, 768 );
 
     //----------------------------------------------------------------------------
@@ -53,7 +37,7 @@ public class AbcLearnApplicationConfig implements ISimInfo {
 
     // mutable
     private FrameSetup frameSetup;
-    private AbcLearnLookAndFeel phetLookAndFeel = new AbcLearnLookAndFeel(); // the look and feel to be initialized in launchSim
+    private AbcLearnLookAndFeel abcLearnLookAndFeel = new AbcLearnLookAndFeel(); // the look and feel to be initialized in launchSim
 
     //----------------------------------------------------------------------------
     // Constructors
@@ -84,7 +68,7 @@ public class AbcLearnApplicationConfig implements ISimInfo {
         this.flavor = flavor;
         this.resourceLoader = new AbcLearnResources( project );
         this.frameSetup = DEFAULT_FRAME_SETUP;
-        this.phetLookAndFeel = new AbcLearnLookAndFeel();
+        this.abcLearnLookAndFeel = new AbcLearnLookAndFeel();
     }
 
     //----------------------------------------------------------------------------
@@ -122,12 +106,12 @@ public class AbcLearnApplicationConfig implements ISimInfo {
         return flavor;
     }
 
-    public void setLookAndFeel( AbcLearnLookAndFeel phetLookAndFeel ) {
-        this.phetLookAndFeel = phetLookAndFeel;
+    public void setLookAndFeel( AbcLearnLookAndFeel abcLearnLookAndFeel ) {
+        this.abcLearnLookAndFeel = abcLearnLookAndFeel;
     }
 
     public AbcLearnLookAndFeel getLookAndFeel() {
-        return phetLookAndFeel;
+        return abcLearnLookAndFeel;
     }
 
     public AbcLearnResources getResourceLoader() {

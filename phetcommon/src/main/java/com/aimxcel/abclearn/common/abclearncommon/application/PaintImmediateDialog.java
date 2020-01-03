@@ -12,17 +12,6 @@ import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.Timer;
 
-//import com.aimxcel.abclearn.common.abclearncommon.application.PaintImmediateTimer;
-
-/**
- * This dialog attempts to paint its content pane immediately using a Timer.
- * Use this in situations where your dialog doesn't paint in a timely manner (or at all).
- * <p/>
- * Workaround was originally developed in response to Unfuddle #89.
- * See #2072 for redesign to fix performance problems.
- * <p/>
- * TODO: This is unnecessary in Java 6.
- */
 public class PaintImmediateDialog extends JDialog {
 
     /*

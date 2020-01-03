@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+
 package com.aimxcel.abclearn.common.abclearncommon.audio;
 
 import java.io.BufferedInputStream;
@@ -12,13 +12,6 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.SourceDataLine;
 
-/**
- * Reason why AbcLearnAudioClip exists:
- * <p/>
- * http://www.javaworld.com/javaworld/javatips/jw-javatip24.html
- * <p/>
- * TODO: why not use Applet.newAudioClip instead of this implementation?
- */
 public class AbcLearnAudioClip {
 
     private static final int EXTERNAL_BUFFER_SIZE = 4000;
