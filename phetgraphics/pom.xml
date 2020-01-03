@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>edu.colorado.phet.common.phetgraphics.application</groupId>
+	<artifactId>phetgraphics</artifactId>
+	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>com.aimxcel.abclearn.common.abclearncommon</groupId>
+			<artifactId>phetcommon</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>edu.colorado.phet.common.piccolophet</groupId>
+			<artifactId>piccolophet</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources/images</directory>
+				<includes>
+					<include>*.png</include>
+					<include>*.gif</include>
+				</includes>
+				<targetPath>images</targetPath>
+			</resource>
+			<resource>
+				<directory>src/main/resources/images/zoom</directory>
+				<includes>
+					<include>*.png</include>
+				</includes>
+				<targetPath>images/zoom</targetPath>
+			</resource>
+		</resources>
+	</build>
+</project>

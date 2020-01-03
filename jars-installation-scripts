@@ -1,0 +1,47 @@
+phetcommon:
+----------
+mvn install:install-file -Dfile=functionaljava-3.1.jar -DgroupId=functionaljava -DartifactId=functionaljava -Dversion=3.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jnlp.jar -DgroupId=jnlp -DartifactId=jnlp -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=junit.jar -DgroupId=junit -DartifactId=junit -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=lombok-0.11.8.jar -DgroupId=lombok -DartifactId=lombok -Dversion=0.11.8 -Dpackaging=jar
+mvn install:install-file -Dfile=mongo-2.7.2.jar -DgroupId=mongo -DartifactId=mongo -Dversion=2.7.2 -Dpackaging=jar
+
+piccolophet:
+-----------
+mvn install:install-file -Dfile=functionaljava-3.1.jar -DgroupId=functionaljava -DartifactId=functionaljava -Dversion=3.1 -Dpackaging=jar
+mvn install:install-file -Dfile=lombok-0.11.8.jar -DgroupId=lombok -DartifactId=lombok -Dversion=0.11.8 -Dpackaging=jar
+mvn install:install-file -Dfile=piccolo2d-core.jar -DgroupId=piccolo2d-core -DartifactId=piccolo2d-core -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=piccolo2d-extras.jar -DgroupId=piccolo2d-extras -DartifactId=piccolo2d-extras -Dversion=0.1 -Dpackaging=jar
+
+eating-and-exercise:
+-------------------
+mvn install:install-file -Dfile=junit.jar -DgroupId=junit -DartifactId=junit -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jfreechart.jar -DgroupId=jfreechart -DartifactId=jfreechart -Dversion=0.1 -Dpackaging=jar
+
+jfreechart-phet:
+---------------
+mvn install:install-file -Dfile=junit.jar -DgroupId=junit -DartifactId=junit -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jfreechart.jar -DgroupId=jfreechart -DartifactId=jfreechart -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jcommon.jar -DgroupId=jcommon -DartifactId=jcommon -Dversion=0.1 -Dpackaging=jar
+
+motion:
+-------
+mvn install:install-file -Dfile=junit.jar -DgroupId=junit -DartifactId=junit -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jfreechart.jar -DgroupId=jfreechart -DartifactId=jfreechart -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jcommon.jar -DgroupId=jcommon -DartifactId=jcommon -Dversion=0.1 -Dpackaging=jar
+
+mvn install:install-file -Dfile=jsci-astro.jar -DgroupId=jsci-astro -DartifactId=jsci-astro -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jsci-beans.jar -DgroupId=jsci-beans -DartifactId=jsci-beans -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jsci-bio.jar -DgroupId=jsci-bio -DartifactId=jsci-bio -Dversion=0.1 -Dpackaging=jar
+
+mvn install:install-file -Dfile=jsci-core.jar -DgroupId=jsci-core -DartifactId=jsci-core -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jsci-instr.jar -DgroupId=jsci-instr -DartifactId=jsci-instr -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jsci-sci.jar -DgroupId=jsci-sci -DartifactId=jsci-sci -Dversion=0.1 -Dpackaging=jar
+
+
+mvn install:install-file -Dfile=jsci-wavelet.jar -DgroupId=jsci-wavelet -DartifactId=jsci-wavelet -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jsci-xtra.jar -DgroupId=jsci-xtra -DartifactId=jsci-xtra -Dversion=0.1 -Dpackaging=jar
+
+timeseries:
+-----------
+mvn install:install-file -Dfile=junit.jar -DgroupId=junit -DartifactId=junit -Dversion=0.1 -Dpackaging=jar
