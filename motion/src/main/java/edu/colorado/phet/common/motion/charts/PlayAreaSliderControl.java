@@ -4,11 +4,11 @@ package edu.colorado.phet.common.motion.charts;
 import java.awt.Color;
 import java.io.IOException;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.DefaultDecimalFormat;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowPText;
 
-import edu.colorado.phet.common.piccolophet.nodes.HTMLNode;
-import edu.colorado.phet.common.piccolophet.nodes.ShadowPText;
 import edu.umd.cs.piccolo.PNode;
 
 /**
@@ -28,7 +28,7 @@ public class PlayAreaSliderControl extends PNode {
         this.textBox = textBox;
         ShadowPText text = new ShadowPText( title );
         text.setTextPaint( color );
-        text.setFont( new AbcLearnFont( 20, true ) );
+        text.setFont( new AimxcelFont( 20, true ) );
         addChild( text );
         addChild( textBox );
         textBox.setOffset( 200, text.getFullBounds().getCenterY() - textBox.getFullBounds().getHeight() / 2 );//todo: align with other controls but make sure doesn't overlap text
@@ -45,7 +45,7 @@ public class PlayAreaSliderControl extends PNode {
         HTMLNode unitsPText = new HTMLNode( units );//Use HTMLNode for support for provided translations, which use HTML
         unitsPText.setHTMLColor( color );
 
-        unitsPText.setFont( new AbcLearnFont( 20, true ) );
+        unitsPText.setFont( new AimxcelFont( 20, true ) );
         addChild( unitsPText );
         unitsPText.setOffset( textBox.getFullBounds().getMaxX() + 2, 0 );
 

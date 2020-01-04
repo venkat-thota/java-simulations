@@ -1,7 +1,8 @@
 
 package edu.colorado.phet.common.motion.graphs;
 
-import edu.colorado.phet.common.piccolophet.nodes.ZoomControlNode;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.ZoomControlNode;
+
 import edu.umd.cs.piccolo.PNode;
 
 /**

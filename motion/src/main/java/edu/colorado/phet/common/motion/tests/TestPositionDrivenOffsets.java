@@ -5,9 +5,9 @@ import junit.framework.TestCase;
 
 import java.text.DecimalFormat;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.Clock;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
-import com.aimxcel.abclearn.common.abclearncommon.util.DefaultDecimalFormat;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.Clock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
 
 import edu.colorado.phet.common.motion.model.SingleBodyMotionModel;
 

@@ -12,13 +12,13 @@ import java.awt.Color;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
 
 import edu.colorado.phet.common.motion.graphs.ControlGraphSeries;
 import edu.colorado.phet.common.motion.graphs.GraphTimeControlNode;
 import edu.colorado.phet.common.motion.model.DefaultTemporalVariable;
-import edu.colorado.phet.common.piccolophet.BufferedAbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 import edu.colorado.phet.common.timeseries.model.TestTimeSeries;
 import edu.colorado.phet.common.timeseries.model.TimeSeriesModel;
 
@@ -31,7 +31,7 @@ public class TestGraphControlNode {
         frame.setSize( 600, 600 );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
-        AbcLearnPCanvas phetPCanvas = new BufferedAbcLearnPCanvas();
+        AimxcelPCanvas phetPCanvas = new BufferedAimxcelPCanvas();
         swingClock = new ConstantDtClock( 30, 1.0 );
         TimeSeriesModel timeSeriesModel = new TimeSeriesModel( new TestTimeSeries.MyRecordableModel(), swingClock );
 

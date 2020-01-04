@@ -24,7 +24,10 @@ import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.VerticalLayoutPanel;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.ZoomControlNode;
 
 import edu.colorado.phet.common.jfreechartphet.piccolo.JFreeChartNode;
 import edu.colorado.phet.common.jfreechartphet.piccolo.dynamic.DynamicJFreeChartNode;
@@ -33,9 +36,6 @@ import edu.colorado.phet.common.motion.model.ITemporalVariable;
 import edu.colorado.phet.common.motion.model.IVariable;
 import edu.colorado.phet.common.motion.model.TimeData;
 import edu.colorado.phet.common.motion.tests.ColorArrows;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.AbcLearnPNode;
-import edu.colorado.phet.common.piccolophet.nodes.ZoomControlNode;
 import edu.colorado.phet.common.timeseries.model.TimeSeriesModel;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
@@ -79,22 +79,22 @@ public class ControlGraph extends PNode {
     private boolean centerControls = false;//todo: currently only applied for aligned layout
     private double sliderDecorationInset = 0.0; //ability to increase padding between series controls and slider
 
-    public ControlGraph( AbcLearnPCanvas pSwingCanvas, final ITemporalVariable temporalVariable,
+    public ControlGraph( AimxcelPCanvas pSwingCanvas, final ITemporalVariable temporalVariable,
                          String title, double minY, double maxY, TimeSeriesModel timeSeriesModel ) {
         this( pSwingCanvas, new ControlGraphSeries( temporalVariable ), title, minY, maxY, timeSeriesModel );
     }
 
-    public ControlGraph( AbcLearnPCanvas pSwingCanvas, ControlGraphSeries series,
+    public ControlGraph( AimxcelPCanvas pSwingCanvas, ControlGraphSeries series,
                          String title, double minY, final double maxY, TimeSeriesModel timeSeriesModel ) {
         this( pSwingCanvas, series, title, minY, maxY, timeSeriesModel, 1000 );
     }
 
-    public ControlGraph( AbcLearnPCanvas pSwingCanvas, ControlGraphSeries series,
+    public ControlGraph( AimxcelPCanvas pSwingCanvas, ControlGraphSeries series,
                          String title, double minY, final double maxY, TimeSeriesModel timeSeriesModel, double maxDomainTime ) {
         this( createDefaultChart( title ), pSwingCanvas, series, minY, maxY, timeSeriesModel, maxDomainTime );
     }
 
-    public ControlGraph( JFreeChart jFreeChart, AbcLearnPCanvas pSwingCanvas, ControlGraphSeries series,
+    public ControlGraph( JFreeChart jFreeChart, AimxcelPCanvas pSwingCanvas, ControlGraphSeries series,
                          double minY, final double maxY, TimeSeriesModel timeSeriesModel, double maxDomainTime ) {
         this.jFreeChart = jFreeChart;
         PNode thumb = null;
@@ -410,7 +410,7 @@ public class ControlGraph extends PNode {
         jFreeChartSliderNode.addListener( listener );
     }
 
-    public static class TitleLayer extends AbcLearnPNode {
+    public static class TitleLayer extends AimxcelPNode {
         public TitleLayer() {
         }
 

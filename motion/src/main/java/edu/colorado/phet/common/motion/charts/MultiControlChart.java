@@ -3,7 +3,7 @@ package edu.colorado.phet.common.motion.charts;
 
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 import edu.umd.cs.piccolo.PNode;
 

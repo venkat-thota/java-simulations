@@ -3,7 +3,7 @@ package edu.colorado.phet.common.motion.charts;
 
 import java.awt.geom.Rectangle2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObservable;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
 
 /**
  * @author Sam Reid

@@ -17,8 +17,8 @@ import javax.swing.Timer;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
-import com.aimxcel.abclearn.common.abclearncommon.view.ModelSlider;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.ModelSlider;
 
 import edu.colorado.phet.common.motion.model.SingleBodyMotionModel;
 import edu.colorado.phet.common.motion.model.UpdateStrategy;

@@ -15,7 +15,8 @@ import org.jfree.chart.ChartRenderingInfo;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.XYPlot;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+
 import edu.umd.cs.piccolo.nodes.PText;
 import edu.umd.cs.piccolo.util.PPaintContext;
 
@@ -68,7 +69,7 @@ public class JFreeChartDecorator extends JFreeChart {
                 double x = chart.getXYPlot().getDomainAxis().valueToJava2D( tickValue, da, chart.getXYPlot().getDomainAxisEdge() );
                 double y = chart.getXYPlot().getRangeAxis().valueToJava2D( 0, da, chart.getXYPlot().getRangeAxisEdge() );
                 double dy = 5;
-                AbcLearnPPath path = new AbcLearnPPath( new Line2D.Double( x, y - dy, x, y + dy ), new BasicStroke( 2 ), Color.black );
+                AimxcelPPath path = new AimxcelPPath( new Line2D.Double( x, y - dy, x, y + dy ), new BasicStroke( 2 ), Color.black );
                 path.fullPaint( new PPaintContext( g2 ) );
                 PText tickLabel = new PText( format.format( tickValue ) );
                 tickLabel.setOffset( path.getFullBounds().getCenterX() - tickLabel.getFullBounds().getWidth() / 2,
@@ -85,7 +86,7 @@ public class JFreeChartDecorator extends JFreeChart {
             double x0 = chart.getXYPlot().getDomainAxis().valueToJava2D( chart.getXYPlot().getDomainAxis().getRange().getLowerBound(), da, chart.getXYPlot().getDomainAxisEdge() );
             double x1 = chart.getXYPlot().getDomainAxis().valueToJava2D( chart.getXYPlot().getDomainAxis().getRange().getUpperBound(), da, chart.getXYPlot().getDomainAxisEdge() );
             double y = chart.getXYPlot().getRangeAxis().valueToJava2D( 0, da, chart.getXYPlot().getRangeAxisEdge() );
-            AbcLearnPPath path = new AbcLearnPPath( new Line2D.Double( x0, y, x1, y ), new BasicStroke( 1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1f, new float[] { 12, 4 }, 0 ), Color.black );
+            AimxcelPPath path = new AimxcelPPath( new Line2D.Double( x0, y, x1, y ), new BasicStroke( 1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1f, new float[] { 12, 4 }, 0 ), Color.black );
             path.fullPaint( new PPaintContext( g2 ) );
         }
     }

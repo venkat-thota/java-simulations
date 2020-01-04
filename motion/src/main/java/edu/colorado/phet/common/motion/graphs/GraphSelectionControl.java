@@ -13,8 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnCommonResources;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.motion.util.GraphicsUtil;
 
@@ -29,8 +29,8 @@ public class GraphSelectionControl extends JPanel {
     public GraphSelectionControl( GraphSuiteSet graphSuiteSet, final GraphSetModel graphSetModel ) {
         setLayout( new GridBagLayout() );
         GridBagConstraints gridBagConstraints = new GridBagConstraints( 0, GridBagConstraints.RELATIVE, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 0, 0, 0, 0 ), 0, 0 );
-        JLabel label = new JLabel( AbcLearnCommonResources.getString( "charts.show-graphs" ) );
-        label.setFont( new AbcLearnFont( Font.PLAIN, 16 ) );
+        JLabel label = new JLabel( AimxcelCommonResources.getString( "charts.show-graphs" ) );
+        label.setFont( new AimxcelFont( Font.PLAIN, 16 ) );
         add( label, gridBagConstraints );
         for ( int i = 0; i < graphSuiteSet.getNumGraphSuites(); i++ ) {
             add( new GraphSuiteRadioButton( graphSetModel, graphSuiteSet.getGraphSuite( i ) ), gridBagConstraints );
@@ -45,7 +45,7 @@ public class GraphSelectionControl extends JPanel {
             super( graphSuite.getLabel(), graphSetModel.getGraphSuite() == graphSuite );
             this.graphSetPanel = graphSetModel;
             this.graphSuite = graphSuite;
-            setFont( new AbcLearnFont( Font.PLAIN, 16 ) );
+            setFont( new AimxcelFont( Font.PLAIN, 16 ) );
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     graphSetModel.setGraphSuite( graphSuite );

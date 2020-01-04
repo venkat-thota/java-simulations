@@ -9,13 +9,13 @@ import java.awt.font.TextLayout;
 import java.awt.geom.AffineTransform;
 import java.text.DecimalFormat;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowHTMLNode;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowPText;
 
 import edu.colorado.phet.common.motion.model.IVariable;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
-import edu.colorado.phet.common.piccolophet.nodes.ShadowHTMLNode;
-import edu.colorado.phet.common.piccolophet.nodes.ShadowPText;
 import edu.umd.cs.piccolo.PNode;
 
 /**
@@ -31,7 +31,7 @@ public class ReadoutTitleNode extends PNode {
 
     private ControlGraphSeries series;
     private DecimalFormat decimalFormat;
-    private AbcLearnPPath background;
+    private AimxcelPPath background;
     private double insetX = 2;
     private double insetY = 2;
 
@@ -50,9 +50,9 @@ public class ReadoutTitleNode extends PNode {
         private String text;
         private Font font;
         private FontRenderContext fontRenderContext;
-        private AbcLearnPPath render;
+        private AimxcelPPath render;
 
-        public OutlinePText( AbcLearnPPath render, String text, Font font, FontRenderContext fontRenderContext ) {
+        public OutlinePText( AimxcelPPath render, String text, Font font, FontRenderContext fontRenderContext ) {
             this.render = render;
             this.text = text;
             this.font = font;
@@ -93,7 +93,7 @@ public class ReadoutTitleNode extends PNode {
         titleNode.setFont( getTitleFont() );
         titleNode.setColor( series.getColor() );
 
-//        valueNode = new OutlinePText( new AbcLearnPPath( series.getColor(), new BasicStroke( 1.2f ), Color.black ), "0.00", new AbcLearnDefaultFont(), new FontRenderContext( new AffineTransform(), true, false ) );
+//        valueNode = new OutlinePText( new AimxcelPPath( series.getColor(), new BasicStroke( 1.2f ), Color.black ), "0.00", new AimxcelDefaultFont(), new FontRenderContext( new AffineTransform(), true, false ) );
         valueNode = new ShadowPText();
         valueNode.setFont( getTitleFont() );
         valueNode.setTextPaint( series.getColor() );
@@ -108,7 +108,7 @@ public class ReadoutTitleNode extends PNode {
             unitsNode.setShadowColor( new Color( 255, 255, 255, 255 ) );
         }
 
-        background = new AbcLearnPPath( Color.white );
+        background = new AimxcelPPath( Color.white );
         addChild( background );
         addChild( titleNode );
         addChild( valueNode );
@@ -142,7 +142,7 @@ public class ReadoutTitleNode extends PNode {
     }
 
     private Font getTitleFont() {
-        return new Font( AbcLearnFont.getDefaultFontName(), Font.BOLD, isLowRes() ? 12 : 14 );
+        return new Font( AimxcelFont.getDefaultFontName(), Font.BOLD, isLowRes() ? 12 : 14 );
     }
 
     private boolean isLowRes() {

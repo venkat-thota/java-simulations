@@ -8,9 +8,9 @@ import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowPText;
 
-import edu.colorado.phet.common.piccolophet.nodes.ShadowPText;
 import edu.umd.cs.piccolo.PCanvas;
 
 /**
@@ -32,7 +32,7 @@ public class ShadowJLabel extends PCanvas {
 
     public static void main( String[] args ) {
         JFrame frame = new JFrame();
-        ShadowJLabel contentPane = new ShadowJLabel( "" + '\u03B8', Color.blue, new AbcLearnFont( Font.BOLD, 24 ) );
+        ShadowJLabel contentPane = new ShadowJLabel( "" + '\u03B8', Color.blue, new AimxcelFont( Font.BOLD, 24 ) );
         frame.setContentPane( contentPane );
         frame.pack();
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );

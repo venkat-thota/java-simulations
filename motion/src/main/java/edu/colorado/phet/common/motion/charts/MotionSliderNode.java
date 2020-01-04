@@ -11,15 +11,15 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
-import com.aimxcel.abclearn.common.abclearncommon.math.MathUtil;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.BufferedImageUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
 import edu.colorado.phet.common.motion.MotionResources;
 import edu.colorado.phet.common.motion.tests.ColorArrows;
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
 import edu.umd.cs.piccolo.event.PInputEvent;
@@ -29,8 +29,8 @@ import edu.umd.cs.piccolo.nodes.PImage;
  * @author Sam Reid
  */
 public abstract class MotionSliderNode extends PNode {
-    private AbcLearnPPath trackPPath;
-    protected AbcLearnPPath tickMarkAtZero;
+    private AimxcelPPath trackPPath;
+    protected AimxcelPPath tickMarkAtZero;
     private PNode sliderThumb;
     private double value = 0.0;
     private ArrayList<Listener> listeners = new ArrayList<Listener>();
@@ -78,7 +78,7 @@ public abstract class MotionSliderNode extends PNode {
         this.sliderThumb = sliderThumb;
         this.highlightColor = highlightColor;
         this.sliderThumb.addInputEventListener( new CursorHandler() );
-        trackPPath = new AbcLearnPPath( Color.white, new BasicStroke( 1 ), Color.black );
+        trackPPath = new AimxcelPPath( Color.white, new BasicStroke( 1 ), Color.black );
         addChild( trackPPath );
 
         tickMarkAtZero = createTickMark();
@@ -131,7 +131,7 @@ public abstract class MotionSliderNode extends PNode {
         }
     }
 
-    protected abstract AbcLearnPPath createTickMark();
+    protected abstract AimxcelPPath createTickMark();
 
     protected abstract void updateTransform( Range viewRange );
 
@@ -330,8 +330,8 @@ public abstract class MotionSliderNode extends PNode {
         }
 
         @Override
-        protected AbcLearnPPath createTickMark() {
-            return new AbcLearnPPath( new Line2D.Double( 0, 0, TICK_HEIGHT, 0 ), Color.black, new BasicStroke( 2 ), Color.black );
+        protected AimxcelPPath createTickMark() {
+            return new AimxcelPPath( new Line2D.Double( 0, 0, TICK_HEIGHT, 0 ), Color.black, new BasicStroke( 2 ), Color.black );
         }
 
         @Override
@@ -380,9 +380,9 @@ public abstract class MotionSliderNode extends PNode {
         }
 
         @Override
-        protected AbcLearnPPath createTickMark() {
+        protected AimxcelPPath createTickMark() {
             final Line2D.Double createTickMarkPath = createTickMarkPath( 0 );
-            return new AbcLearnPPath( createTickMarkPath, Color.black, new BasicStroke( 2 ), Color.black );
+            return new AimxcelPPath( createTickMarkPath, Color.black, new BasicStroke( 2 ), Color.black );
         }
 
         private Line2D.Double createTickMarkPath( double thumbHeight ) {

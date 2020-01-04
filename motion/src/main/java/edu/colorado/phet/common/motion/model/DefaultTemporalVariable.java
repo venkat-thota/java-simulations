@@ -3,7 +3,7 @@ package edu.colorado.phet.common.motion.model;
 
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
 
 import edu.colorado.phet.common.motion.MotionMath;
 

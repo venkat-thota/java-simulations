@@ -6,14 +6,14 @@ import java.awt.geom.GeneralPath;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.BufferedImageUtils;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.core.aimxcelcore.event.ButtonEventHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.AbstractMediaButton;
 
 import edu.colorado.phet.common.motion.MotionResources;
-import edu.colorado.phet.common.piccolophet.event.ButtonEventHandler;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
-import edu.colorado.phet.common.piccolophet.nodes.mediabuttons.AbstractMediaButton;
 import edu.umd.cs.piccolo.PNode;
 
 /**
@@ -187,7 +187,7 @@ public class ChartZoomControlNode extends PNode {
             trianglePath.lineToRelative( 0, triangleHeight );
             trianglePath.lineTo( triangleWidth, triangleHeight / 2 );
             GeneralPath path1 = trianglePath.getGeneralPath();
-            addChild( new AbcLearnPPath( path1, Color.black ) );
+            addChild( new AimxcelPPath( path1, Color.black ) );
         }
     }
 }

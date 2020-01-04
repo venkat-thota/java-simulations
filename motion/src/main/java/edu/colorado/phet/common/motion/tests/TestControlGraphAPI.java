@@ -7,12 +7,12 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
 import edu.colorado.phet.common.motion.graphs.ControlGraph;
 import edu.colorado.phet.common.motion.model.DefaultTemporalVariable;
 import edu.colorado.phet.common.motion.model.ITemporalVariable;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 import edu.colorado.phet.common.timeseries.model.RecordableModel;
 import edu.colorado.phet.common.timeseries.model.TimeSeriesModel;
 
@@ -20,7 +20,7 @@ public class TestControlGraphAPI {
     public static void main( String[] args ) {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-        AbcLearnPCanvas contentPane = new AbcLearnPCanvas();
+        AimxcelPCanvas contentPane = new AimxcelPCanvas();
 
         final ITemporalVariable variable = new DefaultTemporalVariable();
         RecordableModel recordableModel = new TestRecordableModel();

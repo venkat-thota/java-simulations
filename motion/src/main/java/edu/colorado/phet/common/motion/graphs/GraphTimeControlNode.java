@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnCommonResources;
+import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
 
 import edu.colorado.phet.common.timeseries.model.TimeSeriesModel;
 import edu.colorado.phet.common.timeseries.ui.TimeseriesResources;
@@ -89,7 +89,7 @@ public class GraphTimeControlNode extends PNode {
         private TimeSeriesModel graphTimeSeries;
 
         public ClearButton( final TimeSeriesModel graphTimeSeries ) {
-            super( AbcLearnCommonResources.getString( "Common.clear" ) );
+            super( AimxcelCommonResources.getString( "Common.clear" ) );
             this.graphTimeSeries = graphTimeSeries;
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
@@ -115,7 +115,7 @@ public class GraphTimeControlNode extends PNode {
         private TimeSeriesModel timeSeriesModel;
 
         public GoStopButton( final TimeSeriesModel timeSeriesModel ) {
-            super( AbcLearnCommonResources.getString( "chart-time-control.go" ) );
+            super( AimxcelCommonResources.getString( "chart-time-control.go" ) );
             this.timeSeriesModel = timeSeriesModel;
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
@@ -153,7 +153,7 @@ public class GraphTimeControlNode extends PNode {
 
         private void setGoButton( boolean go ) {
             this.goButton = go;
-            setText( goButton ? AbcLearnCommonResources.getString( "chart-time-control.go" ) : AbcLearnCommonResources.getString( "Common.StopwatchPanel.stop" ) );
+            setText( goButton ? AimxcelCommonResources.getString( "chart-time-control.go" ) : AimxcelCommonResources.getString( "Common.StopwatchPanel.stop" ) );
             setIcon( new ImageIcon( TimeseriesResources.loadBufferedImage( goButton ? "icons/go.png" : "icons/stop.png" ) ) );
         }
 

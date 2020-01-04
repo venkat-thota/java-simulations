@@ -13,15 +13,15 @@ import java.text.DecimalFormat;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.graphics.transforms.ModelViewTransform2D;
-import com.aimxcel.abclearn.common.abclearncommon.view.graphics.transforms.TransformListener;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.DoubleGeneralPath;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.TransformListener;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.motion.model.TimeData;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.nodes.PText;
 import edu.umd.cs.piccolox.nodes.PClip;
@@ -70,7 +70,7 @@ public class TemporalChart extends PNode {
         chartContents = new PNode();
         addChild( chartContents );
 
-        final AbcLearnPPath background = new AbcLearnPPath( Color.white, new BasicStroke( 1 ), Color.black );
+        final AimxcelPPath background = new AimxcelPPath( Color.white, new BasicStroke( 1 ), Color.black );
         SimpleObserver backgroundUpdate = new SimpleObserver() {
             public void update() {
                 background.setPathTo( new Rectangle2D.Double( 0, 0, viewDimension.getWidth(), viewDimension.getHeight() ) );
@@ -139,7 +139,7 @@ public class TemporalChart extends PNode {
             tickMarksAndGridLines.addChild( gridLine );
 
             //Support for in-axis tick marks
-            final AbcLearnPPath axisTickMark = new AbcLearnPPath( new Line2D.Double( 0, 0, 0, DOMAIN_TICK_HEIGHT ), DOMAIN_TICK_MARK_STROKE, DOMAIN_TICK_MARK_COLOR );
+            final AimxcelPPath axisTickMark = new AimxcelPPath( new Line2D.Double( 0, 0, 0, DOMAIN_TICK_HEIGHT ), DOMAIN_TICK_MARK_STROKE, DOMAIN_TICK_MARK_COLOR );
             tickMarksAndGridLines.addChild( axisTickMark );
             SimpleObserver axisTickMarkUpdate = new SimpleObserver() {
                 public void update() {
@@ -273,7 +273,7 @@ public class TemporalChart extends PNode {
         private PText text;
 
         public DomainTickMark( double x ) {
-            AbcLearnPPath tick = new AbcLearnPPath( new Line2D.Double( 0, 0, 0, DOMAIN_TICK_HEIGHT ), DOMAIN_TICK_MARK_STROKE, DOMAIN_TICK_MARK_COLOR );
+            AimxcelPPath tick = new AimxcelPPath( new Line2D.Double( 0, 0, 0, DOMAIN_TICK_HEIGHT ), DOMAIN_TICK_MARK_STROKE, DOMAIN_TICK_MARK_COLOR );
             addChild( tick );
             String text = new DecimalFormat( "0.0" ).format( x );
             //hide the decimal point where possible, but don't trim for series like 4.0, 4.5, etc.
@@ -281,7 +281,7 @@ public class TemporalChart extends PNode {
                 text = text.substring( 0, text.indexOf( ".0" ) );//TODO handle comma for il8n
             }
             this.text = new PText( text );
-            this.text.setFont( new AbcLearnFont( 14, true ) );
+            this.text.setFont( new AimxcelFont( 14, true ) );
             addChild( this.text );
 
             //Center the text under the tickmark
@@ -299,10 +299,10 @@ public class TemporalChart extends PNode {
 
     private static class RangeTickMark extends PNode {
         private RangeTickMark( double y ) {
-            AbcLearnPPath tick = new AbcLearnPPath( new Line2D.Double( 0, 0, -DOMAIN_TICK_HEIGHT, 0 ), DOMAIN_TICK_MARK_STROKE, DOMAIN_TICK_MARK_COLOR );
+            AimxcelPPath tick = new AimxcelPPath( new Line2D.Double( 0, 0, -DOMAIN_TICK_HEIGHT, 0 ), DOMAIN_TICK_MARK_STROKE, DOMAIN_TICK_MARK_COLOR );
             addChild( tick );
             PText text = new PText( new DecimalFormat( "0.0" ).format( y ) );
-            text.setFont( new AbcLearnFont( 14, true ) );
+            text.setFont( new AimxcelFont( 14, true ) );
             addChild( text );
             double insetDX = 7;//spacing between the text and tick
             text.setOffset( tick.getFullBounds().getMinX() - text.getFullBounds().getWidth() - insetDX, tick.getFullBounds().getCenterY() - text.getFullBounds().getHeight() / 2 );
@@ -311,7 +311,7 @@ public class TemporalChart extends PNode {
 
     private static class DomainGridLine extends PNode {
         private DomainGridLine( final double x, final TemporalChart chart ) {
-            final AbcLearnPPath tick = new AbcLearnPPath( new BasicStroke( 1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_ROUND, 0, new float[] { 10, 3 }, 0 ), Color.lightGray );
+            final AimxcelPPath tick = new AimxcelPPath( new BasicStroke( 1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_ROUND, 0, new float[] { 10, 3 }, 0 ), Color.lightGray );
             final SimpleObserver update = new SimpleObserver() {
                 public void update() {
                     final double chartX = chart.modelToView( new TimeData( 0, x ) ).getX();
@@ -325,7 +325,7 @@ public class TemporalChart extends PNode {
 
     private static class RangeGridLine extends PNode {
         private RangeGridLine( final double y, final TemporalChart chart ) {
-            final AbcLearnPPath tick = new AbcLearnPPath( new BasicStroke( y == 0 ? 1.25f : 1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_ROUND, 0, new float[] { 10, 3 }, 0 ), y == 0 ? Color.black : Color.lightGray );
+            final AimxcelPPath tick = new AimxcelPPath( new BasicStroke( y == 0 ? 1.25f : 1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_ROUND, 0, new float[] { 10, 3 }, 0 ), y == 0 ? Color.black : Color.lightGray );
             addChild( tick );
             final SimpleObserver pathUpdate = new SimpleObserver() {
                 public void update() {
@@ -373,7 +373,7 @@ public class TemporalChart extends PNode {
             viewDimension.addObserver( so );
             so.update();
 
-            final AbcLearnPPath path = new AbcLearnPPath( new GeneralPath(), new BasicStroke( 3 ), color ) {//todo: is performance dependent on stroke width here?
+            final AimxcelPPath path = new AimxcelPPath( new GeneralPath(), new BasicStroke( 3 ), color ) {//todo: is performance dependent on stroke width here?
 
                 //Stroke.createStrokedPath was by far the highest allocation in JProfiler
                 //And severe lag during GC suggested this workaround

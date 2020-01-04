@@ -4,11 +4,11 @@ package edu.colorado.phet.common.motion.charts;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.property.BooleanProperty;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.property.BooleanProperty;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.MinimizeMaximizeNode;
 
-import edu.colorado.phet.common.piccolophet.nodes.MinimizeMaximizeNode;
 import edu.umd.cs.piccolo.PNode;
 
 /**

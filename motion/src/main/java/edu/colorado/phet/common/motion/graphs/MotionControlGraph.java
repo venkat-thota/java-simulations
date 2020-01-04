@@ -5,11 +5,12 @@ import java.util.ArrayList;
 
 import org.jfree.chart.JFreeChart;
 
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.ZoomControlNode;
+
 import edu.colorado.phet.common.jfreechartphet.piccolo.JFreeChartCursorNode;
 import edu.colorado.phet.common.motion.model.UpdateStrategy;
 import edu.colorado.phet.common.motion.model.UpdateableObject;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.nodes.ZoomControlNode;
 import edu.colorado.phet.common.timeseries.model.TimeSeriesModel;
 
 /**
@@ -25,22 +26,22 @@ public class MotionControlGraph extends ControlGraph {
     private UpdateStrategy updateStrategy;
     private TimeSeriesModel timeSeriesModel;
 
-    public MotionControlGraph( AbcLearnPCanvas pSwingCanvas, final ControlGraphSeries series, String label, String title,
+    public MotionControlGraph( AimxcelPCanvas pSwingCanvas, final ControlGraphSeries series, String label, String title,
                                double min, double max, boolean editable, TimeSeriesModel timeSeriesModel, UpdateableObject updateableObject ) {
         this( pSwingCanvas, series, label, title, min, max, editable, timeSeriesModel, null, updateableObject );
     }
 
-    public MotionControlGraph( AbcLearnPCanvas pSwingCanvas, final ControlGraphSeries series, String label, String title,
+    public MotionControlGraph( AimxcelPCanvas pSwingCanvas, final ControlGraphSeries series, String label, String title,
                                double min, double max, boolean editable, final TimeSeriesModel timeSeriesModel, final UpdateStrategy updateStrategy, UpdateableObject updateableObject ) {
         this( pSwingCanvas, series, label, title, min, max, editable, timeSeriesModel, updateStrategy, 20, updateableObject );
     }
 
-    public MotionControlGraph( AbcLearnPCanvas pSwingCanvas, final ControlGraphSeries series, String label, String title,
+    public MotionControlGraph( AimxcelPCanvas pSwingCanvas, final ControlGraphSeries series, String label, String title,
                                double min, double max, boolean editable, final TimeSeriesModel timeSeriesModel, final UpdateStrategy updateStrategy, double maxDomainValue, final UpdateableObject updateableObject ) {
         this( ControlGraph.createDefaultChart( title ), pSwingCanvas, series, label, title, min, max, editable, timeSeriesModel, updateStrategy, maxDomainValue, updateableObject );
     }
 
-    public MotionControlGraph( JFreeChart chart, AbcLearnPCanvas pSwingCanvas, final ControlGraphSeries series, String label, String title,
+    public MotionControlGraph( JFreeChart chart, AimxcelPCanvas pSwingCanvas, final ControlGraphSeries series, String label, String title,
                                double min, double max, boolean editable, final TimeSeriesModel timeSeriesModel, final UpdateStrategy updateStrategy, double maxDomainValue, final UpdateableObject updateableObject ) {
         super( chart, pSwingCanvas, series, min, max, timeSeriesModel, maxDomainValue );
         this.updateableObject = updateableObject;

@@ -17,19 +17,19 @@ import java.awt.event.ComponentEvent;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
-import com.aimxcel.abclearn.common.abclearncommon.view.AbcLearnLookAndFeel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelLookAndFeel;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
 
 import edu.colorado.phet.common.motion.graphs.ControlGraph;
 import edu.colorado.phet.common.motion.graphs.ControlGraphSeries;
 import edu.colorado.phet.common.motion.model.SingleBodyMotionModel;
-import edu.colorado.phet.common.piccolophet.BufferedAbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 
 public class TestMotionGraphs {
     private JFrame frame;
     private Timer timer;
-    private AbcLearnPCanvas phetPCanvas;
+    private AimxcelPCanvas phetPCanvas;
 
     private SingleBodyMotionModel singleBodyMotionModel;
 
@@ -38,13 +38,13 @@ public class TestMotionGraphs {
     private ControlGraph aGraph;
 
     public TestMotionGraphs() {
-        new AbcLearnLookAndFeel().initLookAndFeel();
+        new AimxcelLookAndFeel().initLookAndFeel();
         frame = new JFrame();
         frame.setSize( 600, 600 );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
         singleBodyMotionModel = new SingleBodyMotionModel( new ConstantDtClock( 30, 1 ) );
-        phetPCanvas = new BufferedAbcLearnPCanvas();
+        phetPCanvas = new BufferedAimxcelPCanvas();
         phetPCanvas.setBackground( new Color( 200, 240, 200 ) );
 
         xGraph = new ControlGraph( phetPCanvas, new ControlGraphSeries( singleBodyMotionModel.getXVariable() ), "Angle", -10, 10, singleBodyMotionModel.getTimeSeriesModel() );

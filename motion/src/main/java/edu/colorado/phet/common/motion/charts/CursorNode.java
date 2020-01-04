@@ -6,11 +6,11 @@ import java.awt.Color;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
 import edu.colorado.phet.common.motion.model.TimeData;
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
 import edu.umd.cs.piccolo.event.PInputEvent;
 import edu.umd.cs.piccolox.nodes.PClip;
@@ -23,7 +23,7 @@ import edu.umd.cs.piccolox.nodes.PClip;
 public class CursorNode extends PClip {
     private ChartCursor cursor;
     private TemporalChart chart;
-    private AbcLearnPPath path;
+    private AimxcelPPath path;
 
     public CursorNode( final ChartCursor cursor, final TemporalChart chart ) {
         this.cursor = cursor;
@@ -41,7 +41,7 @@ public class CursorNode extends PClip {
         chart.getViewDimension().addObserver( updateClip );
         updateClip.update();
 
-        path = new HighQualityAbcLearnPPath( new Color( 50, 50, 200, 83 ), new BasicStroke( 1f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1, new float[] { 5, 2 }, 0 ), new Color( 20, 20, 30, 160 ) );
+        path = new HighQualityAimxcelPPath( new Color( 50, 50, 200, 83 ), new BasicStroke( 1f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1, new float[] { 5, 2 }, 0 ), new Color( 20, 20, 30, 160 ) );
         addChild( path );
 
         final ChartCursor.Adapter pathUpdater = new ChartCursor.Adapter() {

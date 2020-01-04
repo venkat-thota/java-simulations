@@ -1,7 +1,7 @@
 
 package edu.colorado.phet.common.motion;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
 
 import JSci.maths.LinearMath;
 import JSci.maths.vectors.AbstractDoubleVector;

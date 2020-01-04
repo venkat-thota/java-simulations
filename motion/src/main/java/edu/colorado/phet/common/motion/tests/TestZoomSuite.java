@@ -10,8 +10,9 @@ package edu.colorado.phet.common.motion.tests;
 
 import javax.swing.JFrame;
 
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+
 import edu.colorado.phet.common.motion.graphs.ZoomSuiteNode;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 
 public class TestZoomSuite {
     private JFrame frame;
@@ -21,7 +22,7 @@ public class TestZoomSuite {
         frame.setSize( 600, 600 );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
-        AbcLearnPCanvas phetPCanvas = new AbcLearnPCanvas();
+        AimxcelPCanvas phetPCanvas = new AimxcelPCanvas();
         ZoomSuiteNode suiteNode = new ZoomSuiteNode();
         suiteNode.setHorizontalZoomOutEnabled( false );
         phetPCanvas.addScreenChild( suiteNode );

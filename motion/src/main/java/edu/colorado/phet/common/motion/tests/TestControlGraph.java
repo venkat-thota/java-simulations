@@ -14,21 +14,21 @@ import java.awt.event.ComponentEvent;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
 
 import edu.colorado.phet.common.motion.graphs.ControlGraph;
 import edu.colorado.phet.common.motion.graphs.ControlGraphSeries;
 import edu.colorado.phet.common.motion.model.DefaultTemporalVariable;
 import edu.colorado.phet.common.motion.model.ITemporalVariable;
-import edu.colorado.phet.common.piccolophet.BufferedAbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 import edu.colorado.phet.common.timeseries.model.TestTimeSeries;
 import edu.colorado.phet.common.timeseries.model.TimeSeriesModel;
 
 public class TestControlGraph {
     private JFrame frame;
     private ControlGraph controlGraph;
-    private AbcLearnPCanvas phetPCanvas;
+    private AimxcelPCanvas phetPCanvas;
 
     public TestControlGraph() {
         frame = new JFrame();
@@ -39,7 +39,7 @@ public class TestControlGraph {
 
         ControlGraphSeries graphSeries = new ControlGraphSeries( "series", Color.blue, "abbr", "units", null, v );
 
-        phetPCanvas = new BufferedAbcLearnPCanvas();
+        phetPCanvas = new BufferedAimxcelPCanvas();
         controlGraph = new ControlGraph( phetPCanvas, graphSeries, "title", -10, 10, new TimeSeriesModel( new TestTimeSeries.MyRecordableModel(), new ConstantDtClock( 30, 1 ) ) );
 
         controlGraph.addValue( 0, 0 );

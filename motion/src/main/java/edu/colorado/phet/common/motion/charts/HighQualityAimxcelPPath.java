@@ -5,19 +5,20 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Shape;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+
 import edu.umd.cs.piccolo.util.PPaintContext;
 
 /**
  * @author Sam Reid
  */
-public class HighQualityAbcLearnPPath extends AbcLearnPPath {
+public class HighQualityAimxcelPPath extends AimxcelPPath {
 
-    public HighQualityAbcLearnPPath( Shape shape, Color color ) {
+    public HighQualityAimxcelPPath( Shape shape, Color color ) {
         super( shape, color );
     }
 
-    public HighQualityAbcLearnPPath( Color color, BasicStroke stroke, Color strokeColor ) {
+    public HighQualityAimxcelPPath( Color color, BasicStroke stroke, Color strokeColor ) {
         super( color, stroke, strokeColor );
     }
 

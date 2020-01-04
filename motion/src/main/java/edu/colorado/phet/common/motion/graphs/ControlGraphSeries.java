@@ -7,7 +7,7 @@ import java.awt.Stroke;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.DefaultDecimalFormat;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
 
 import edu.colorado.phet.common.jfreechartphet.piccolo.dynamic.BufferedSeriesView;
 import edu.colorado.phet.common.motion.model.ITemporalVariable;

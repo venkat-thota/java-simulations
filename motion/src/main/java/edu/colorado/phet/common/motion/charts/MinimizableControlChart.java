@@ -1,9 +1,9 @@
 
 package edu.colorado.phet.common.motion.charts;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.property.BooleanProperty;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.property.BooleanProperty;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 import edu.umd.cs.piccolo.PNode;
 

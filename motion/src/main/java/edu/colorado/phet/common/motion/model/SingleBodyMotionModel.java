@@ -1,7 +1,7 @@
 
 package edu.colorado.phet.common.motion.model;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 
 /**
  * This class contains a single MotionBody, and convenience methods for interacting with it.

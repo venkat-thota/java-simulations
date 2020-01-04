@@ -11,8 +11,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+
 import edu.colorado.phet.common.motion.MotionResources;
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolox.pswing.PSwing;
 

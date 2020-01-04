@@ -6,9 +6,10 @@ import java.awt.event.ComponentEvent;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockAdapter;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
 import edu.colorado.phet.common.motion.graphs.ControlGraph;
 import edu.colorado.phet.common.motion.graphs.ControlGraphSeries;
@@ -19,14 +20,13 @@ import edu.colorado.phet.common.motion.graphs.MinimizableControlGraph;
 import edu.colorado.phet.common.motion.graphs.MotionControlGraph;
 import edu.colorado.phet.common.motion.graphs.TimeSeriesGraphSetNode;
 import edu.colorado.phet.common.motion.model.SingleBodyMotionModel;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 import edu.colorado.phet.common.timeseries.model.TestTimeSeries;
 import edu.colorado.phet.common.timeseries.model.TimeSeriesModel;
 
 public class TestTimeSeriesGraphSetNode {
     private JFrame frame;
     private TimeSeriesGraphSetNode timeSeriesGraphSetNode;
-    private AbcLearnPCanvas pSwingCanvas;
+    private AimxcelPCanvas pSwingCanvas;
     private ConstantDtClock clock;
 
     public TestTimeSeriesGraphSetNode() {
@@ -34,7 +34,7 @@ public class TestTimeSeriesGraphSetNode {
         frame.setSize( 1024, 768 );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
-        pSwingCanvas = new AbcLearnPCanvas();
+        pSwingCanvas = new AimxcelPCanvas();
         frame.setContentPane( pSwingCanvas );
         clock = new ConstantDtClock( 30, 1 );
         final TestMotionModel testMotionModel = new TestMotionModel( clock );
@@ -56,7 +56,7 @@ public class TestTimeSeriesGraphSetNode {
     class TestGraphSet extends GraphSuiteSet {
         private MinimizableControlGraph positionGraph;
 
-        public TestGraphSet( AbcLearnPCanvas pSwingCanvas, final TestMotionModel motionModel ) {
+        public TestGraphSet( AimxcelPCanvas pSwingCanvas, final TestMotionModel motionModel ) {
             positionGraph = new MinimizableControlGraph( "x", new MotionControlGraph( pSwingCanvas, new ControlGraphSeries( motionModel.getXVariable() ), "X", "Position", -Math.PI * 3, Math.PI * 3, true, motionModel.getTimeSeriesModel(), motionModel ) );
             addGraphSuite( new GraphSuite( new MinimizableControlGraph[] { positionGraph } ) );
 

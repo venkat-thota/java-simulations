@@ -15,8 +15,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.DefaultDecimalFormat;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.motion.model.IVariable;
 
@@ -31,7 +31,7 @@ public class GraphControlTextBox extends JPanel {
 
     public GraphControlTextBox( ControlGraphSeries series ) {
         this.series = series;
-        Font labelFont = new AbcLearnFont( Font.PLAIN, 24 );//Java 1.6 renders THETA as an empty box with Lucida Sans BOLD
+        Font labelFont = new AimxcelFont( Font.PLAIN, 24 );//Java 1.6 renders THETA as an empty box with Lucida Sans BOLD
         add( new ShadowJLabel( series.getAbbr(), series.getColor(), labelFont ) );
 
         JLabel equalsSign = new JLabel( " =" );
@@ -40,7 +40,7 @@ public class GraphControlTextBox extends JPanel {
         add( equalsSign );
 
         textField = new JTextField( "0.0", 5 );
-        textField.setFont( new AbcLearnFont( 20, true ) );
+        textField.setFont( new AimxcelFont( 20, true ) );
         textField.setHorizontalAlignment( JTextField.RIGHT );
         add( textField );
         setBorder( BorderFactory.createLineBorder( Color.black ) );

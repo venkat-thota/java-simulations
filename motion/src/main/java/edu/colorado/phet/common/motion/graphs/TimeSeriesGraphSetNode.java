@@ -7,7 +7,8 @@ import java.beans.PropertyChangeListener;
 
 import javax.swing.JLabel;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+
 import edu.colorado.phet.common.timeseries.model.TimeSeriesModel;
 import edu.colorado.phet.common.timeseries.ui.TimeSeriesControlPanel;
 import edu.umd.cs.piccolo.PNode;
@@ -23,7 +24,7 @@ public class TimeSeriesGraphSetNode extends PNode {
     private GraphSetNode graphSetNode;
     private PSwing timeSeriesControlPanelNode;
     private boolean constructed = false;
-    private AbcLearnPPath background;
+    private AimxcelPPath background;
 
     public TimeSeriesGraphSetNode( GraphSetModel graphSetModel, TimeSeriesModel timeSeriesModel, double minDT, double maxDT ) {
         setBounds( 0, 0, 800, 600 );
@@ -31,7 +32,7 @@ public class TimeSeriesGraphSetNode extends PNode {
         TimeSeriesControlPanel timeSeriesControlPanel = new TimeSeriesControlPanel( timeSeriesModel, minDT, maxDT );
         timeSeriesControlPanelNode = new PSwing( timeSeriesControlPanel );
 
-        background = new AbcLearnPPath( new JLabel().getBackground() );
+        background = new AimxcelPPath( new JLabel().getBackground() );
         addChild( background );
         addChild( graphSetNode );
         addChild( timeSeriesControlPanelNode );

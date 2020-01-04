@@ -12,9 +12,10 @@ import java.util.ArrayList;
 import org.jfree.chart.event.ChartChangeEvent;
 import org.jfree.chart.event.ChartChangeListener;
 
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+
 import edu.colorado.phet.common.jfreechartphet.piccolo.JFreeChartNode;
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
 import edu.umd.cs.piccolo.event.PInputEvent;
@@ -27,7 +28,7 @@ import edu.umd.cs.piccolo.event.PInputEvent;
  * @author Sam Reid
  */
 public class JFreeChartSliderNode extends PNode {
-    private AbcLearnPPath trackPPath;
+    private AimxcelPPath trackPPath;
     private PNode sliderThumb;
     private Color highlightColor;
     private double value = 0.0;
@@ -39,7 +40,7 @@ public class JFreeChartSliderNode extends PNode {
         this.sliderThumb = sliderThumb;
         this.highlightColor = highlightColor;
         this.sliderThumb.addInputEventListener( new CursorHandler() );
-        trackPPath = new AbcLearnPPath( new BasicStroke( 1 ), Color.black );
+        trackPPath = new AimxcelPPath( new BasicStroke( 1 ), Color.black );
         addChild( trackPPath );
         addChild( sliderThumb );
         sliderThumb.addInputEventListener( new PBasicInputEventHandler() {
