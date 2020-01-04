@@ -9,11 +9,11 @@ import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
-import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnCommonResources;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
 import edu.colorado.phet.recordandplayback.model.RecordAndPlaybackModel;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolox.pswing.PSwing;
@@ -37,8 +37,8 @@ public class PlaybackSpeedSlider<T> extends PNode {
 
         Hashtable<Integer, JLabel> dict = new Hashtable<Integer, JLabel>();
 
-        dict.put( slider.getMinimum(), new JLabel( AbcLearnCommonResources.getString( "Common.time.slow" ) ) );
-        dict.put( slider.getMaximum(), new JLabel( AbcLearnCommonResources.getString( "Common.time.fast" ) ) );
+        dict.put( slider.getMinimum(), new JLabel( AimxcelCommonResources.getString( "Common.time.slow" ) ) );
+        dict.put( slider.getMaximum(), new JLabel( AimxcelCommonResources.getString( "Common.time.fast" ) ) );
 
         slider.setLabelTable( dict );
         slider.setPaintLabels( true );

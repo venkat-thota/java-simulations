@@ -3,15 +3,15 @@ package edu.colorado.phet.recordandplayback.test;
 
 import java.util.Observable;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.Module;
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationConfig;
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationLauncher;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockAdapter;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationConfig;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationLauncher;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 import edu.colorado.phet.recordandplayback.gui.RecordAndPlaybackControlPanel;
 import edu.colorado.phet.recordandplayback.model.RecordAndPlaybackModel;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
@@ -22,9 +22,9 @@ import edu.umd.cs.piccolo.event.PInputEvent;
  *
  * @author Sam Reid
  */
-public class TestRecordAndPlaybackWithCompositionApplication extends AbcLearnApplication {
+public class TestRecordAndPlaybackWithCompositionApplication extends AimxcelApplication {
 
-    public TestRecordAndPlaybackWithCompositionApplication( AbcLearnApplicationConfig config ) {
+    public TestRecordAndPlaybackWithCompositionApplication( AimxcelApplicationConfig config ) {
         super( config );
         addModule( new TestRecordAndPlaybackModule() );
     }
@@ -70,7 +70,7 @@ public class TestRecordAndPlaybackWithCompositionApplication extends AbcLearnApp
         }
     }
 
-    private class TestRecordAndPlaybackSimulationPanel extends AbcLearnPCanvas {
+    private class TestRecordAndPlaybackSimulationPanel extends AimxcelPCanvas {
         private TestRecordAndPlaybackSimulationPanel( final TestRecordAndPlaybackModel model ) {
             ParticleNode particleNode = new ParticleNode( model.getParticle() );
 
@@ -127,6 +127,6 @@ public class TestRecordAndPlaybackWithCompositionApplication extends AbcLearnApp
     }
 
     public static void main( String[] args ) {
-        new AbcLearnApplicationLauncher().launchSim( args, "record-and-playback", TestRecordAndPlaybackWithCompositionApplication.class );
+        new AimxcelApplicationLauncher().launchSim( args, "record-and-playback", TestRecordAndPlaybackWithCompositionApplication.class );
     }
 }

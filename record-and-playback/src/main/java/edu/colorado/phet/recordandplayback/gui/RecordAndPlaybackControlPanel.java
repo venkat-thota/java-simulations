@@ -12,16 +12,16 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
-import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnCommonResources;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.event.ToolTipHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.DefaultIconButton;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.PiccoloTimeControlPanel;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.PlayPauseButton;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.RewindButton;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.StepButton;
 
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.event.ToolTipHandler;
-import edu.colorado.phet.common.piccolophet.nodes.mediabuttons.DefaultIconButton;
-import edu.colorado.phet.common.piccolophet.nodes.mediabuttons.PiccoloTimeControlPanel;
-import edu.colorado.phet.common.piccolophet.nodes.mediabuttons.PlayPauseButton;
-import edu.colorado.phet.common.piccolophet.nodes.mediabuttons.RewindButton;
-import edu.colorado.phet.common.piccolophet.nodes.mediabuttons.StepButton;
 import edu.colorado.phet.recordandplayback.model.RecordAndPlaybackModel;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolox.pswing.PSwing;
@@ -33,16 +33,16 @@ import edu.umd.cs.piccolox.pswing.PSwing;
  * @param <T> the type of model state that is being recorded, typically immutable
  * @author Sam Reid
  */
-public class RecordAndPlaybackControlPanel<T> extends AbcLearnPCanvas {
+public class RecordAndPlaybackControlPanel<T> extends AimxcelPCanvas {
     private RecordAndPlaybackModel<T> model;
     private JComponent simPanel;//used to determine the size of this component
     private PiccoloTimeControlPanel.BackgroundNode backgroundNode = new PiccoloTimeControlPanel.BackgroundNode();
-    private JButton clearButton = new JButton( AbcLearnCommonResources.getString( "Common.clear" ) );
+    private JButton clearButton = new JButton( AimxcelCommonResources.getString( "Common.clear" ) );
     private RewindButton rewind = new RewindButton( 50 );
     private PSwing clearButtonNode = new PSwing( clearButton );
     private PSwing modePanelNode;
     private PlayPauseButton playPause = new PlayPauseButton( 75 );
-    private ToolTipHandler playPauseTooltipHandler = new ToolTipHandler( AbcLearnCommonResources.getString( "Common.ClockControlPanel.Pause" ), this );
+    private ToolTipHandler playPauseTooltipHandler = new ToolTipHandler( AimxcelCommonResources.getString( "Common.ClockControlPanel.Pause" ), this );
     private StepButton stepButton = new StepButton( 50 );
     private double stepTimeChange = 0.0;//todo: add this as a parameter
     private PNode controlLayer;
@@ -99,7 +99,7 @@ public class RecordAndPlaybackControlPanel<T> extends AbcLearnPCanvas {
         model.addObserver( updateRewindEnabled );
         updateRewindEnabled.update();
 
-        rewind.addInputEventListener( new ToolTipHandler( AbcLearnCommonResources.getString( "Common.rewind" ), this ) );
+        rewind.addInputEventListener( new ToolTipHandler( AimxcelCommonResources.getString( "Common.rewind" ), this ) );
 
         playPause.addListener( new PlayPauseButton.Listener() {
             public void playbackStateChanged() {
@@ -111,14 +111,14 @@ public class RecordAndPlaybackControlPanel<T> extends AbcLearnPCanvas {
         SimpleObserver updatePlayPauseButton = new SimpleObserver() {
             public void update() {
                 playPause.setPlaying( !model.isPaused() );
-                playPauseTooltipHandler.setText( model.isPaused() ? AbcLearnCommonResources.getString( "Common.ClockControlPanel.Play" ) : AbcLearnCommonResources.getString( "Common.ClockControlPanel.Pause" ) );
+                playPauseTooltipHandler.setText( model.isPaused() ? AimxcelCommonResources.getString( "Common.ClockControlPanel.Play" ) : AimxcelCommonResources.getString( "Common.ClockControlPanel.Pause" ) );
             }
         };
         model.addObserver( updatePlayPauseButton );
         updatePlayPauseButton.update();
 
         stepButton.setEnabled( false );
-        stepButton.addInputEventListener( new ToolTipHandler( AbcLearnCommonResources.getString( "Common.ClockControlPanel.Step" ), this ) );
+        stepButton.addInputEventListener( new ToolTipHandler( AimxcelCommonResources.getString( "Common.ClockControlPanel.Step" ), this ) );
         model.addObserver( new SimpleObserver() {
             public void update() {
                 boolean isLastStep = model.getTime() == model.getMaxRecordedTime();

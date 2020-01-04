@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObservable;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
 
 /**
  * This is the main model class for sims that support recording and playing back.  This is done by recording discrete states,

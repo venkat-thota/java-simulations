@@ -12,14 +12,14 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.MathUtil;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.BufferedImageUtils;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.ImageLoader;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.colorado.phet.recordandplayback.model.RecordAndPlaybackModel;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
@@ -36,22 +36,22 @@ import edu.umd.cs.piccolo.nodes.PImage;
  */
 public class TimelineNode<T> extends PNode {
     private RecordAndPlaybackModel<T> model;
-    private AbcLearnPCanvas canvas;
+    private AimxcelPCanvas canvas;
     private double maxTime;
 
     private int pathOffsetY = 4;
     private int pathHeight = 6;
     private int insetX = 10;
-    private AbcLearnPPath shaded;
-    private AbcLearnPPath background;
+    private AimxcelPPath shaded;
+    private AimxcelPPath background;
     private PImage handle;
 
-    public TimelineNode( final RecordAndPlaybackModel<T> model, AbcLearnPCanvas canvas, Color timelineColor, double maxTime ) {
+    public TimelineNode( final RecordAndPlaybackModel<T> model, AimxcelPCanvas canvas, Color timelineColor, double maxTime ) {
         this.model = model;
         this.canvas = canvas;
         this.maxTime = maxTime;
 
-        shaded = new AbcLearnPPath( timelineColor );
+        shaded = new AimxcelPPath( timelineColor );
         Color backgroundColor = new Color( 190, 195, 195 );
 
         background = new Track( backgroundColor );
@@ -154,21 +154,21 @@ public class TimelineNode<T> extends PNode {
         handle.setOffset( timeToX( elapsed ) - handle.getFullBounds().getWidth() / 2 + insetX, pathOffsetY - 2 );
     }
 
-    public static class Track extends AbcLearnPPath {
-        private AbcLearnPPath topShade;
-        private AbcLearnPPath bottomShade;
-        private AbcLearnPPath leftShade;
-        private AbcLearnPPath rightShade;
+    public static class Track extends AimxcelPPath {
+        private AimxcelPPath topShade;
+        private AimxcelPPath bottomShade;
+        private AimxcelPPath leftShade;
+        private AimxcelPPath rightShade;
 
         public Track( Color backgroundColor ) {
             super( backgroundColor );
-            topShade = new AbcLearnPPath( new BasicStroke( 2 ), darker( backgroundColor, 55 ) );
+            topShade = new AimxcelPPath( new BasicStroke( 2 ), darker( backgroundColor, 55 ) );
             addChild( topShade );
-            bottomShade = new AbcLearnPPath( new BasicStroke( 1 ), darker( backgroundColor, 20 ) );
+            bottomShade = new AimxcelPPath( new BasicStroke( 1 ), darker( backgroundColor, 20 ) );
             addChild( bottomShade );
-            leftShade = new AbcLearnPPath( new BasicStroke( 2 ), darker( backgroundColor, 50 ) );
+            leftShade = new AimxcelPPath( new BasicStroke( 2 ), darker( backgroundColor, 50 ) );
             addChild( leftShade );
-            rightShade = new AbcLearnPPath( new BasicStroke( 1 ), darker( backgroundColor, 20 ) );
+            rightShade = new AimxcelPPath( new BasicStroke( 1 ), darker( backgroundColor, 20 ) );
             addChild( rightShade );
         }
 

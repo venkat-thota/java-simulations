@@ -9,9 +9,9 @@ import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnCommonResources;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.recordandplayback.model.RecordAndPlaybackModel;
 
@@ -27,17 +27,17 @@ public class ModePanel<T> extends JPanel {
     public ModePanel( final RecordAndPlaybackModel<T> model ) {
         setLayout( new BoxLayout( this, BoxLayout.Y_AXIS ) );
         setBackground( new Color( 0, 0, 0, 0 ) );
-        final JRadioButton recordingButton = new JRadioButton( AbcLearnCommonResources.getString( "Common.record" ), model.isRecord() );
+        final JRadioButton recordingButton = new JRadioButton( AimxcelCommonResources.getString( "Common.record" ), model.isRecord() );
         recordingButton.setBackground( new Color( 0, 0, 0, 0 ) );
-        recordingButton.setFont( new AbcLearnFont( 15, true ) );
+        recordingButton.setFont( new AimxcelFont( 15, true ) );
         recordingButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 model.setRecord( true );
             }
         } );
 
-        final JRadioButton playbackButton = new JRadioButton( AbcLearnCommonResources.getString( "Common.playback" ), model.isPlayback() );
-        playbackButton.setFont( new AbcLearnFont( 15, true ) );
+        final JRadioButton playbackButton = new JRadioButton( AimxcelCommonResources.getString( "Common.playback" ), model.isPlayback() );
+        playbackButton.setFont( new AimxcelFont( 15, true ) );
         playbackButton.setBackground( new Color( 0, 0, 0, 0 ) );
         playbackButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {

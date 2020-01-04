@@ -5,8 +5,9 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.geom.Rectangle2D;
 
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
 import edu.umd.cs.piccolo.event.PInputEvent;
@@ -18,7 +19,7 @@ import edu.umd.cs.piccolo.event.PInputEvent;
  */
 public class ParticleNode extends PNode {
     ParticleNode( final Particle particle ) {
-        final AbcLearnPPath path = new AbcLearnPPath( new Rectangle2D.Double( 0, 0, 100, 100 ), Color.blue, new BasicStroke( 4 ), Color.black );
+        final AimxcelPPath path = new AimxcelPPath( new Rectangle2D.Double( 0, 0, 100, 100 ), Color.blue, new BasicStroke( 4 ), Color.black );
         addChild( path );
         path.setOffset( particle.getX(), particle.getY() );
         particle.addListener( new Particle.Listener() {
