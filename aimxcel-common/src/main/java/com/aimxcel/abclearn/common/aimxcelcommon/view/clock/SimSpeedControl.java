@@ -18,7 +18,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.clock.SimSpeedControl;
-//import com.aimxcel.abclearn.common.abclearncommon.view.clock.TimeSpeederLabel;
+//import com.aimxcel.abclearn.common.aimxcelcommon.view.clock.TimeSpeederLabel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.LinearValueControl;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.SliderOnlyLayoutStrategy;
 

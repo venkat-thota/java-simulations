@@ -43,7 +43,7 @@ import javax.swing.event.ChangeListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.ModelViewTransform1D;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ModelSlider;
-//import com.aimxcel.abclearn.common.abclearncommon.view.SliderKeyHandler;
+//import com.aimxcel.abclearn.common.aimxcelcommon.view.SliderKeyHandler;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;

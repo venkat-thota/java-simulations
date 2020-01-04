@@ -36,8 +36,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterVa
 import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.HTMLLabel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.AbstractSlider;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.ILayoutStrategy;
-//import com.aimxcel.abclearn.common.abclearncommon.view.controls.valuecontrol.SliderListener;
-//import com.aimxcel.abclearn.common.abclearncommon.view.controls.valuecontrol.TextFieldListener;
+//import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.SliderListener;
+//import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.TextFieldListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 
