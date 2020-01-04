@@ -5,10 +5,10 @@ package edu.colorado.phet.faraday.view;
 import java.awt.Component;
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;
 import edu.colorado.phet.faraday.model.Lightbulb;
@@ -22,7 +22,7 @@ import edu.colorado.phet.faraday.util.VariableAlphaImageGraphic;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class LightbulbGraphic extends CompositeAbcLearnGraphic implements SimpleObserver {
+public class LightbulbGraphic extends CompositeAimxcelGraphic implements SimpleObserver {
 
     //----------------------------------------------------------------------------
     // Class data
@@ -74,12 +74,12 @@ public class LightbulbGraphic extends CompositeAbcLearnGraphic implements Simple
         
         // Cap
         BufferedImage capImage = FaradayResources.getImage( FaradayConstants.LIGHTBULB_CAP_IMAGE );
-        AbcLearnImageGraphic capGraphic = new AbcLearnImageGraphic( component, capImage );
+        AimxcelImageGraphic capGraphic = new AimxcelImageGraphic( component, capImage );
         addGraphic( capGraphic, BULB_LAYER );
         
         // Base
         BufferedImage baseImage = FaradayResources.getImage( FaradayConstants.LIGHTBULB_BASE_IMAGE );
-        AbcLearnImageGraphic baseGraphic = new AbcLearnImageGraphic( component, baseImage );
+        AimxcelImageGraphic baseGraphic = new AimxcelImageGraphic( component, baseImage );
         addGraphic( baseGraphic, BULB_LAYER );
         
         // Locations
@@ -154,7 +154,7 @@ public class LightbulbGraphic extends CompositeAbcLearnGraphic implements Simple
     /**
      * Synchronize the view with the model.
      * 
-     * @see com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver#update()
+     * @see com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver#update()
      */
     public void update() {
         

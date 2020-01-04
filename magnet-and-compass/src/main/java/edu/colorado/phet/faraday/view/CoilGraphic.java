@@ -6,12 +6,12 @@ import java.awt.*;
 import java.awt.geom.Line2D;
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.model.AbstractCoil;
 import edu.colorado.phet.faraday.model.Electron;
@@ -77,10 +77,10 @@ public class CoilGraphic implements SimpleObserver {
     private BaseModel _baseModel;
     
     // The foreground graphics layer.
-    private CompositeAbcLearnGraphic _foreground;
+    private CompositeAimxcelGraphic _foreground;
     
     // The background graphics layer.
-    private CompositeAbcLearnGraphic _background;
+    private CompositeAimxcelGraphic _background;
     
     // Is electron animation enabled?
     private boolean _electronAnimationEnabled;
@@ -141,8 +141,8 @@ public class CoilGraphic implements SimpleObserver {
         _coilModel.addObserver( this );
         
         RenderingHints hints = new RenderingHints( RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON ); 
-        _foreground = new CompositeAbcLearnGraphic( _component );
-        _background = new CompositeAbcLearnGraphic( _component );
+        _foreground = new CompositeAimxcelGraphic( _component );
+        _background = new CompositeAimxcelGraphic( _component );
         _foreground.setRenderingHints( hints );
         _background.setRenderingHints( hints );
         
@@ -178,20 +178,20 @@ public class CoilGraphic implements SimpleObserver {
     //----------------------------------------------------------------------------
     
     /**
-     * Gets the AbcLearnGraphic that contains the foreground elements of the coil.
+     * Gets the AimxcelGraphic that contains the foreground elements of the coil.
      * 
      * @return the foreground graphics
      */
-    public AbcLearnGraphic getForeground() {
+    public AimxcelGraphic getForeground() {
         return _foreground;
     }
     
     /**
-     * Gets the AbcLearnGraphic that contains the background elements of the coil.
+     * Gets the AimxcelGraphic that contains the background elements of the coil.
      * 
      * @return the background graphics
      */
-    public AbcLearnGraphic getBackground() {
+    public AimxcelGraphic getBackground() {
         return _background;
     }
     
@@ -471,7 +471,7 @@ public class CoilGraphic implements SimpleObserver {
                     // Horizontal gradient, left to right.
                     Paint paint = new GradientPaint( startPoint.x, 0, _middlegroundColor, endPoint.x, 0, _backgroundColor );
                     
-                    AbcLearnShapeGraphic shapeGraphic = new AbcLearnShapeGraphic( _component );
+                    AimxcelShapeGraphic shapeGraphic = new AimxcelShapeGraphic( _component );
                     shapeGraphic.setShape( curve );
                     shapeGraphic.setStroke( loopStroke );
                     shapeGraphic.setBorderPaint( paint );
@@ -492,7 +492,7 @@ public class CoilGraphic implements SimpleObserver {
                     
                     Paint paint = _backgroundColor;
                     
-                    AbcLearnShapeGraphic shapeGraphic = new AbcLearnShapeGraphic( _component );
+                    AimxcelShapeGraphic shapeGraphic = new AimxcelShapeGraphic( _component );
                     shapeGraphic.setShape( curve );
                     shapeGraphic.setStroke( loopStroke );
                     shapeGraphic.setBorderPaint( paint );
@@ -512,7 +512,7 @@ public class CoilGraphic implements SimpleObserver {
                 // Diagonal gradient, upper left to lower right.
                 Paint paint = new GradientPaint( (int)(startPoint.x + (radius * .10)), (int)-(radius), _middlegroundColor, xOffset, (int)-(radius * 0.92), _backgroundColor );
                 
-                AbcLearnShapeGraphic shapeGraphic = new AbcLearnShapeGraphic( _component );
+                AimxcelShapeGraphic shapeGraphic = new AimxcelShapeGraphic( _component );
                 shapeGraphic.setShape( curve );
                 shapeGraphic.setStroke( loopStroke );
                 shapeGraphic.setBorderPaint( paint );
@@ -532,7 +532,7 @@ public class CoilGraphic implements SimpleObserver {
                 // Vertical gradient, upper to lower
                 Paint paint = new GradientPaint( 0, (int)(radius * 0.92), _backgroundColor, 0, (int)(radius), _middlegroundColor );
                 
-                AbcLearnShapeGraphic shapeGraphic = new AbcLearnShapeGraphic( _component );
+                AimxcelShapeGraphic shapeGraphic = new AimxcelShapeGraphic( _component );
                 shapeGraphic.setShape( curve );
                 shapeGraphic.setStroke( loopStroke );
                 shapeGraphic.setBorderPaint( paint );
@@ -552,7 +552,7 @@ public class CoilGraphic implements SimpleObserver {
                 // Horizontal gradient, left to right
                 Paint paint = new GradientPaint( (int)(-radius * .25) + xOffset, 0, _foregroundColor, (int)(-radius * .15) + xOffset, 0, _middlegroundColor );
                 
-                AbcLearnShapeGraphic shapeGraphic = new AbcLearnShapeGraphic( _component );
+                AimxcelShapeGraphic shapeGraphic = new AimxcelShapeGraphic( _component );
                 shapeGraphic.setShape( curve );
                 shapeGraphic.setStroke( loopStroke );
                 shapeGraphic.setBorderPaint( paint );
@@ -572,7 +572,7 @@ public class CoilGraphic implements SimpleObserver {
                 // Horizontal gradient, left to right
                 Paint paint = new GradientPaint( (int)(-radius * .25) + xOffset, 0, _foregroundColor, (int)(-radius * .15) + xOffset, 0, _middlegroundColor );
                 
-                AbcLearnShapeGraphic shapeGraphic = new AbcLearnShapeGraphic( _component );
+                AimxcelShapeGraphic shapeGraphic = new AimxcelShapeGraphic( _component );
                 shapeGraphic.setShape( curve );
                 shapeGraphic.setStroke( loopStroke );
                 shapeGraphic.setBorderPaint( paint );
@@ -593,7 +593,7 @@ public class CoilGraphic implements SimpleObserver {
 
                 Paint paint = _middlegroundColor;
                 
-                AbcLearnShapeGraphic shapeGraphic = new AbcLearnShapeGraphic( _component );
+                AimxcelShapeGraphic shapeGraphic = new AimxcelShapeGraphic( _component );
                 shapeGraphic.setShape( curve );
                 shapeGraphic.setStroke( loopStroke );
                 shapeGraphic.setBorderPaint( paint );
@@ -607,7 +607,7 @@ public class CoilGraphic implements SimpleObserver {
         if ( _endsConnected ) {
             
             Line2D line = new Line2D.Double( leftEndPoint.getX(), leftEndPoint.getY(), rightEndPoint.getX(), rightEndPoint.getY() );
-            AbcLearnShapeGraphic shapeGraphic = new AbcLearnShapeGraphic( _component );
+            AimxcelShapeGraphic shapeGraphic = new AimxcelShapeGraphic( _component );
             
             Paint paint = _middlegroundColor;
             
@@ -658,7 +658,7 @@ public class CoilGraphic implements SimpleObserver {
 
                     // View
                     ElectronPathDescriptor descriptor = electron.getPathDescriptor();
-                    CompositeAbcLearnGraphic parent = descriptor.getParent();
+                    CompositeAimxcelGraphic parent = descriptor.getParent();
                     ElectronGraphic electronGraphic = new ElectronGraphic( _component, parent, electron );
                     descriptor.getParent().addGraphic( electronGraphic );
                 }

@@ -4,17 +4,17 @@ package edu.colorado.phet.faraday;
 
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnResources;
+import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelResources;
 
 
 public class FaradayResources {
     
-    private static final AbcLearnResources RESOURCES = new AbcLearnResources( FaradayConstants.PROJECT_NAME );
+    private static final AimxcelResources RESOURCES = new AimxcelResources( FaradayConstants.PROJECT_NAME );
     
     /* not intended for instantiation */
     private FaradayResources() {}
     
-    public static final AbcLearnResources getResourceLoader() {
+    public static final AimxcelResources getResourceLoader() {
         return RESOURCES;
     }
     

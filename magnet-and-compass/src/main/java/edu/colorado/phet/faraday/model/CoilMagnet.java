@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.model;
 
@@ -6,7 +6,7 @@ import java.awt.Shape;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
 /**
  * CoilMagnet is the model of a coil magnet.

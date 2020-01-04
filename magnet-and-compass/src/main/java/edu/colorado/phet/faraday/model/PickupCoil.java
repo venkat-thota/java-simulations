@@ -1,15 +1,15 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.model;
 
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
-import com.aimxcel.abclearn.common.abclearncommon.math.MathUtil;
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
-import com.aimxcel.abclearn.common.abclearncommon.model.ModelElement;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 import edu.colorado.phet.faraday.FaradayConstants;
 
@@ -448,7 +448,7 @@ public class PickupCoil extends AbstractCoil implements ModelElement, SimpleObse
             * This will cause view components to exhibit responses that are less then their maximums.
             * For example, the voltmeter won't fully deflect, and the lightbulb won't fully light.
             */
-            if ( _biggestAbsEmf > _calibrationEmf && AbcLearnApplication.getInstance().isDeveloperControlsEnabled() ) {
+            if ( _biggestAbsEmf > _calibrationEmf && AimxcelApplication.getInstance().isDeveloperControlsEnabled() ) {
                 System.out.println( "PickupCoil.updateEmf: you should recalibrate module \"" + _moduleName + "\" with CALIBRATION_EMF=" + _biggestAbsEmf );
             }
         }

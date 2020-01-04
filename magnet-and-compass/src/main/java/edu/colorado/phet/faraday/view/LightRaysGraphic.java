@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.view;
 
@@ -11,9 +11,9 @@ import java.awt.RenderingHints;
 import java.awt.geom.Line2D;
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 
 
 /**
@@ -21,7 +21,7 @@ import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-class LightRaysGraphic extends AbcLearnGraphic {
+class LightRaysGraphic extends AimxcelGraphic {
 
     //----------------------------------------------------------------------------
     // Class data
@@ -167,7 +167,7 @@ class LightRaysGraphic extends AbcLearnGraphic {
     }
 
     //----------------------------------------------------------------------------
-    // AbcLearnGraphic implementation
+    // AimxcelGraphic implementation
     //----------------------------------------------------------------------------
 
     /**

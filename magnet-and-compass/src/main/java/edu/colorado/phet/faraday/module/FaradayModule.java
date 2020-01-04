@@ -9,12 +9,12 @@ import javax.swing.Box;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 
-import edu.colorado.phet.common.phetgraphics.application.SimSharingAbcLearnGraphicsModule;
+import edu.colorado.phet.common.phetgraphics.application.SimSharingAimxcelGraphicsModule;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.view.BFieldOutsideGraphic;
 import edu.colorado.phet.faraday.view.DebuggerGraphic;
@@ -25,7 +25,7 @@ import edu.colorado.phet.faraday.view.DebuggerGraphic;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public abstract class FaradayModule extends SimSharingAbcLearnGraphicsModule implements ICompassGridModule {
+public abstract class FaradayModule extends SimSharingAimxcelGraphicsModule implements ICompassGridModule {
 
     //----------------------------------------------------------------------------
     // Class data
@@ -103,7 +103,7 @@ public abstract class FaradayModule extends SimSharingAbcLearnGraphicsModule imp
      *
      * @param graphic the graphic
      */
-    protected void drawBounds( AbcLearnGraphic graphic ) {
+    protected void drawBounds( AimxcelGraphic graphic ) {
         ApparatusPanel apparatusPanel = getApparatusPanel();
         if ( _debuggerGraphic == null ) {
             _debuggerGraphic = new DebuggerGraphic( apparatusPanel );

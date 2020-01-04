@@ -9,15 +9,15 @@ import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.Shape;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentTypes;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2.ChangeEvent;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
 import edu.colorado.phet.faraday.collision.CollisionDetector;
 import edu.colorado.phet.faraday.collision.ICollidable;
@@ -45,7 +45,7 @@ public class ElectromagnetGraphic extends GraphicLayerSet
     private ACPowerSupplyGraphic _acPowerSupplyGraphic;
     private GraphicLayerSet _foreground, _background;
     private CollisionDetector _collisionDetector;
-    private AbcLearnShapeGraphic _modelShapeGraphic;
+    private AimxcelShapeGraphic _modelShapeGraphic;
     private FaradayMouseHandler _mouseHandler;
 
     //----------------------------------------------------------------------------
@@ -92,7 +92,7 @@ public class ElectromagnetGraphic extends GraphicLayerSet
 
         // Graphic that represents the magnet's bounds.
         {
-            _modelShapeGraphic = new AbcLearnShapeGraphic( component );
+            _modelShapeGraphic = new AimxcelShapeGraphic( component );
             _modelShapeGraphic.setShape( _electromagnetModel.getShape() );
             _modelShapeGraphic.setVisible( false );
             _modelShapeGraphic.setBorderColor( Color.YELLOW );
@@ -134,20 +134,20 @@ public class ElectromagnetGraphic extends GraphicLayerSet
     //----------------------------------------------------------------------------
 
     /**
-     * Gets the AbcLearnGraphic that contains the foreground elements of the coil.
+     * Gets the AimxcelGraphic that contains the foreground elements of the coil.
      *
      * @return the foreground graphics
      */
-    public AbcLearnGraphic getForeground() {
+    public AimxcelGraphic getForeground() {
         return _foreground;
     }
 
     /**
-     * Gets the AbcLearnGraphic that contains the background elements of the coil.
+     * Gets the AimxcelGraphic that contains the background elements of the coil.
      *
      * @return the background graphics
      */
-    public AbcLearnGraphic getBackground() {
+    public AimxcelGraphic getBackground() {
         return _background;
     }
 

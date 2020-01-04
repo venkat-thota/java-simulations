@@ -8,7 +8,7 @@ import java.awt.Composite;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
 
 /**
  * VariableAlphaImageGraphic is an image graphic whose alpha can be varied.
@@ -17,7 +17,7 @@ import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGrap
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class VariableAlphaImageGraphic extends AbcLearnImageGraphic {
+public class VariableAlphaImageGraphic extends AimxcelImageGraphic {
 
     private AlphaComposite _composite;
 

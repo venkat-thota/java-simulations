@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.view;
 
@@ -11,16 +11,16 @@ import java.awt.image.BufferedImage;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentTypes;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2.ChangeEvent;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
@@ -38,7 +38,7 @@ import edu.colorado.phet.faraday.model.FieldMeter;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class FieldMeterGraphic extends CompositeAbcLearnGraphic
+public class FieldMeterGraphic extends CompositeAimxcelGraphic
         implements SimpleObserver, ApparatusPanel2.ChangeListener {
 
     //----------------------------------------------------------------------------
@@ -64,10 +64,10 @@ public class FieldMeterGraphic extends CompositeAbcLearnGraphic
     private static final Color FIELD_COLOR = Color.WHITE;
 
     // Title font
-    private static final Font TITLE_FONT = new AbcLearnFont( 15 );
+    private static final Font TITLE_FONT = new AimxcelFont( 15 );
 
     // Field font
-    private static final Font FIELD_FONT = new AbcLearnFont( 15 );
+    private static final Font FIELD_FONT = new AimxcelFont( 15 );
 
     // Field format
     private static final String MAGNITUDE_FORMAT = "###0.00";
@@ -86,7 +86,7 @@ public class FieldMeterGraphic extends CompositeAbcLearnGraphic
     //----------------------------------------------------------------------------
 
     private FieldMeter _fieldMeterModel;
-    private AbcLearnTextGraphic _bText, _bxText, _byText, _angleText;
+    private AimxcelTextGraphic _bText, _bxText, _byText, _angleText;
     private NumberFormat _magnitudeFormatter, _angleFormatter;
     private MutableVector2D _fieldVector; // reusable vector
     private FaradayMouseHandler _mouseHandler;
@@ -119,12 +119,12 @@ public class FieldMeterGraphic extends CompositeAbcLearnGraphic
 
         // Probe body, registration point at center of crosshairs.
         BufferedImage fieldMeterImage = FaradayResources.getImage( FaradayConstants.FIELD_METER_IMAGE );
-        AbcLearnImageGraphic body = new AbcLearnImageGraphic( component, fieldMeterImage );
+        AimxcelImageGraphic body = new AimxcelImageGraphic( component, fieldMeterImage );
         body.setRegistrationPoint( CROSSHAIRS_LOCATION.x, CROSSHAIRS_LOCATION.y );
         addGraphic( body );
 
         // Title text, registration point at bottom center.
-        AbcLearnTextGraphic titleText = new AbcLearnTextGraphic( component, TITLE_FONT, FaradayStrings.TITLE_FIELD_METER, TITLE_COLOR, 0, 0 );
+        AimxcelTextGraphic titleText = new AimxcelTextGraphic( component, TITLE_FONT, FaradayStrings.TITLE_FIELD_METER, TITLE_COLOR, 0, 0 );
         int width = titleText.getBounds().width;
         int height = titleText.getBounds().height;
         titleText.setRegistrationPoint( width / 2, height ); // bottom center
@@ -137,22 +137,22 @@ public class FieldMeterGraphic extends CompositeAbcLearnGraphic
             int y = FIELD_LOCATION.y;
 
             // B text
-            _bText = new AbcLearnTextGraphic( component, FIELD_FONT, "", FIELD_COLOR, x, y );
+            _bText = new AimxcelTextGraphic( component, FIELD_FONT, "", FIELD_COLOR, x, y );
             y = y + FIELD_SPACING;
             addGraphic( _bText );
 
             // Bx text
-            _bxText = new AbcLearnTextGraphic( component, FIELD_FONT, "", FIELD_COLOR, x, y );
+            _bxText = new AimxcelTextGraphic( component, FIELD_FONT, "", FIELD_COLOR, x, y );
             y = y + FIELD_SPACING;
             addGraphic( _bxText );
 
             // By text
-            _byText = new AbcLearnTextGraphic( component, FIELD_FONT, "", FIELD_COLOR, x, y );
+            _byText = new AimxcelTextGraphic( component, FIELD_FONT, "", FIELD_COLOR, x, y );
             y = y + FIELD_SPACING;
             addGraphic( _byText );
 
             // Angle text
-            _angleText = new AbcLearnTextGraphic( component, FIELD_FONT, "", FIELD_COLOR, x, y );
+            _angleText = new AimxcelTextGraphic( component, FIELD_FONT, "", FIELD_COLOR, x, y );
             y = y + FIELD_SPACING;
             addGraphic( _angleText );
         }
@@ -175,7 +175,7 @@ public class FieldMeterGraphic extends CompositeAbcLearnGraphic
     }
 
     //----------------------------------------------------------------------------
-    // CompositeAbcLearnGraphic overrides
+    // CompositeAimxcelGraphic overrides
     //----------------------------------------------------------------------------
 
     /**

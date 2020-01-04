@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.view;
 
@@ -12,16 +12,16 @@ import java.awt.Shape;
 import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.Vector2D;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentTypes;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2.ChangeEvent;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
 import edu.colorado.phet.faraday.collision.CollisionDetector;
 import edu.colorado.phet.faraday.collision.ICollidable;
@@ -34,7 +34,7 @@ import edu.colorado.phet.faraday.model.Compass;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class CompassGraphic extends CompositeAbcLearnGraphic
+public class CompassGraphic extends CompositeAimxcelGraphic
         implements SimpleObserver, ICollidable, ApparatusPanel2.ChangeListener {
 
     //----------------------------------------------------------------------------
@@ -62,7 +62,7 @@ public class CompassGraphic extends CompositeAbcLearnGraphic
     //----------------------------------------------------------------------------
 
     private Compass _compassModel;
-    private AbcLearnShapeGraphic _needleNorthGraphic, _needleSouthGraphic;
+    private AimxcelShapeGraphic _needleNorthGraphic, _needleSouthGraphic;
     private CompassNeedleCache _needleCache;
     private CollisionDetector _collisionDetector;
     private Ellipse2D[] _collisionBounds;
@@ -102,7 +102,7 @@ public class CompassGraphic extends CompositeAbcLearnGraphic
             // North tip
             Color northColor = _needleCache.getNorthColor( 1.0 ); // opaque
             Shape northShape = _needleCache.getNorthShape( _compassModel.getDirection() );
-            _needleNorthGraphic = new AbcLearnShapeGraphic( component );
+            _needleNorthGraphic = new AimxcelShapeGraphic( component );
             _needleNorthGraphic.setColor( northColor );
             _needleNorthGraphic.setShape( northShape );
             addGraphic( _needleNorthGraphic );
@@ -110,7 +110,7 @@ public class CompassGraphic extends CompositeAbcLearnGraphic
             // South tip
             Color southColor = _needleCache.getSouthColor( 1.0 ); // opaque
             Shape southShape = _needleCache.getSouthShape( _compassModel.getDirection() );
-            _needleSouthGraphic = new AbcLearnShapeGraphic( component );
+            _needleSouthGraphic = new AimxcelShapeGraphic( component );
             _needleSouthGraphic.setColor( southColor );
             _needleSouthGraphic.setShape( southShape );
             addGraphic( _needleSouthGraphic );
@@ -118,7 +118,7 @@ public class CompassGraphic extends CompositeAbcLearnGraphic
 
         // Thing that anchors the needle to the body.
         Shape anchorShape = new Ellipse2D.Double( -( ANCHOR_DIAMETER / 2 ), -( ANCHOR_DIAMETER / 2 ), ANCHOR_DIAMETER, ANCHOR_DIAMETER );
-        AbcLearnShapeGraphic anchor = new AbcLearnShapeGraphic( component );
+        AimxcelShapeGraphic anchor = new AimxcelShapeGraphic( component );
         anchor.setShape( anchorShape );
         anchor.setPaint( ANCHOR_COLOR );
         addGraphic( anchor );
@@ -212,7 +212,7 @@ public class CompassGraphic extends CompositeAbcLearnGraphic
     /*
     * All the parts of the compass that don't move.
     */
-    private static class BodyGraphic extends AbcLearnImageGraphic {
+    private static class BodyGraphic extends AimxcelImageGraphic {
         public BodyGraphic( Component component ) {
             super( component );
 
@@ -224,7 +224,7 @@ public class CompassGraphic extends CompositeAbcLearnGraphic
             // Ring & lens, center at (0,0)
             double adjustedDiameter = RING_DIAMETER - RING_STROKE_WIDTH; // adjust for half of stroke width
             Shape ringShape = new Ellipse2D.Double( -adjustedDiameter / 2, -adjustedDiameter / 2, adjustedDiameter, adjustedDiameter );
-            AbcLearnShapeGraphic ring = new AbcLearnShapeGraphic( component );
+            AimxcelShapeGraphic ring = new AimxcelShapeGraphic( component );
             ring.setShape( ringShape );
             ring.setPaint( LENS_COLOR );
             ring.setBorderColor( RING_COLOR );
@@ -233,10 +233,10 @@ public class CompassGraphic extends CompositeAbcLearnGraphic
 
             // Indicators at evenly-spaced increments around the ring.
             int angle = 0; // degrees
-            AbcLearnShapeGraphic indicatorGraphic = null;
+            AimxcelShapeGraphic indicatorGraphic = null;
             Shape indicatorShape = new Ellipse2D.Double( -( INDICATOR_DIAMETER / 2 ), -( INDICATOR_DIAMETER / 2 ), INDICATOR_DIAMETER, INDICATOR_DIAMETER );
             while ( angle < 360 ) {
-                indicatorGraphic = new AbcLearnShapeGraphic( component );
+                indicatorGraphic = new AimxcelShapeGraphic( component );
                 indicatorGraphic.setShape( indicatorShape );
                 indicatorGraphic.setPaint( INDICATOR_COLOR );
                 Vector2D v = Vector2D.createPolar( adjustedDiameter / 2, Math.toRadians( angle ) );

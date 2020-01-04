@@ -2,12 +2,12 @@
 
 package edu.colorado.phet.faraday;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.ApplicationConstructor;
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationConfig;
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationLauncher;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.ApplicationConstructor;
+import com.aimxcel.abclearn.core.aimxcelcore.PiccoloAimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationConfig;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationLauncher;
 
-import edu.colorado.phet.common.piccolophet.PiccoloAbcLearnApplication;
 import edu.colorado.phet.faraday.control.menu.FaradayOptionsMenu;
 import edu.colorado.phet.faraday.module.*;
 
@@ -17,7 +17,7 @@ import edu.colorado.phet.faraday.module.*;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class GeneratorApplication extends PiccoloAbcLearnApplication {
+public class GeneratorApplication extends PiccoloAimxcelApplication {
 
     //----------------------------------------------------------------------------
     // Constructors
@@ -26,7 +26,7 @@ public class GeneratorApplication extends PiccoloAbcLearnApplication {
     /**
      * Sole constructor.
      */
-    public GeneratorApplication( AbcLearnApplicationConfig config ) {
+    public GeneratorApplication( AimxcelApplicationConfig config ) {
         super( config );
         initModules();
         initMenubar();
@@ -59,7 +59,7 @@ public class GeneratorApplication extends PiccoloAbcLearnApplication {
     private void initMenubar() {
         // Options menu
         FaradayOptionsMenu optionsMenu = new FaradayOptionsMenu( this );
-        getAbcLearnFrame().addMenu( optionsMenu );
+        getAimxcelFrame().addMenu( optionsMenu );
     }
 
     //----------------------------------------------------------------------------
@@ -69,12 +69,12 @@ public class GeneratorApplication extends PiccoloAbcLearnApplication {
     public static void main( final String[] args ) {
 
         ApplicationConstructor appConstructor = new ApplicationConstructor() {
-            public AbcLearnApplication getApplication( AbcLearnApplicationConfig config ) {
+            public AimxcelApplication getApplication( AimxcelApplicationConfig config ) {
                 return new GeneratorApplication( config );
             }
         };
 
-        AbcLearnApplicationConfig appConfig = new AbcLearnApplicationConfig( args, FaradayConstants.PROJECT_NAME, FaradayConstants.FLAVOR_GENERATOR );
-        new AbcLearnApplicationLauncher().launchSim( appConfig, appConstructor );
+        AimxcelApplicationConfig appConfig = new AimxcelApplicationConfig( args, FaradayConstants.PROJECT_NAME, FaradayConstants.FLAVOR_GENERATOR );
+        new AimxcelApplicationLauncher().launchSim( appConfig, appConstructor );
     }
 }

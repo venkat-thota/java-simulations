@@ -11,15 +11,15 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.components.NonInteractiveEventListener;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.NonInteractiveEventListener;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;
 import edu.colorado.phet.faraday.FaradaySimSharing;
@@ -51,8 +51,8 @@ public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, A
     private static final double RPM_LAYER = 7;
 
     private static final Color RPM_COLOR = Color.GREEN;
-    private static final Font RPM_VALUE_FONT = new AbcLearnFont( 15 );
-    private static final Font RPM_UNITS_FONT = new AbcLearnFont( 12 );
+    private static final Font RPM_VALUE_FONT = new AimxcelFont( 15 );
+    private static final Font RPM_UNITS_FONT = new AimxcelFont( 12 );
 
     private static final double MAX_WATER_WIDTH = 40.0;
     private static final Color WATER_COLOR = new Color( 194, 234, 255, 180 );
@@ -63,11 +63,11 @@ public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, A
 
     private Rectangle _parentBounds;
     private Turbine _turbineModel;
-    private AbcLearnShapeGraphic _waterGraphic;
+    private AimxcelShapeGraphic _waterGraphic;
     private Rectangle2D _waterShape;
-    private AbcLearnImageGraphic _barMagnetGraphic;
-    private AbcLearnImageGraphic _waterWheelGraphic;
-    private AbcLearnTextGraphic _rpmValue;
+    private AimxcelImageGraphic _barMagnetGraphic;
+    private AimxcelImageGraphic _waterWheelGraphic;
+    private AimxcelTextGraphic _rpmValue;
     private FaradaySlider _flowSlider;
     private double _previousSpeed;
 
@@ -94,7 +94,7 @@ public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, A
         // Faucet 
         {
             BufferedImage faucetImage = FaradayResources.getImage( FaradayConstants.FAUCET_IMAGE );
-            AbcLearnImageGraphic faucet = new AbcLearnImageGraphic( component, faucetImage );
+            AimxcelImageGraphic faucet = new AimxcelImageGraphic( component, faucetImage );
             addGraphic( faucet, FAUCET_LAYER );
             faucet.setLocation( -405, -350 );
             faucet.addMouseInputListener( new NonInteractiveEventListener( Components.faucet ) );
@@ -102,7 +102,7 @@ public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, A
 
         // Water
         {
-            _waterGraphic = new AbcLearnShapeGraphic( component );
+            _waterGraphic = new AimxcelShapeGraphic( component );
             _waterGraphic.setIgnoreMouse( !TURBINE_IS_DRAGGABLE );
             addGraphic( _waterGraphic, WATER_LAYER );
             _waterGraphic.setPaint( WATER_COLOR );
@@ -128,7 +128,7 @@ public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, A
         // Water Wheel
         {
             BufferedImage waterWheelImage = FaradayResources.getImage( FaradayConstants.WATER_WHEEL_IMAGE );
-            _waterWheelGraphic = new AbcLearnImageGraphic( component, waterWheelImage );
+            _waterWheelGraphic = new AimxcelImageGraphic( component, waterWheelImage );
             _waterWheelGraphic.centerRegistrationPoint();
             _waterWheelGraphic.setLocation( 0, 0 );
             _waterWheelGraphic.addMouseInputListener( new NonInteractiveEventListener( FaradaySimSharing.Components.waterWheel ) );
@@ -138,7 +138,7 @@ public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, A
         // Bar magnet
         {
             BufferedImage barMagnetImage = FaradayResources.getImage( FaradayConstants.BAR_MAGNET_IMAGE );
-            _barMagnetGraphic = new AbcLearnImageGraphic( component, barMagnetImage );
+            _barMagnetGraphic = new AimxcelImageGraphic( component, barMagnetImage );
             _barMagnetGraphic.setIgnoreMouse( !TURBINE_IS_DRAGGABLE );
             _barMagnetGraphic.centerRegistrationPoint();
             _barMagnetGraphic.setLocation( 0, 0 );
@@ -153,7 +153,7 @@ public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, A
         // Pivot point
         {
             BufferedImage turbinePivotImage = FaradayResources.getImage( FaradayConstants.TURBINE_PIVOT_IMAGE );
-            AbcLearnImageGraphic pivotGraphic = new AbcLearnImageGraphic( component, turbinePivotImage );
+            AimxcelImageGraphic pivotGraphic = new AimxcelImageGraphic( component, turbinePivotImage );
             pivotGraphic.setIgnoreMouse( !TURBINE_IS_DRAGGABLE );
             addGraphic( pivotGraphic, PIVOT_LAYER );
             pivotGraphic.centerRegistrationPoint();
@@ -163,13 +163,13 @@ public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, A
         // RPM readout
         {
             String valueString = String.valueOf( (int) ( _turbineModel.getRPM() ) );
-            _rpmValue = new AbcLearnTextGraphic( component, RPM_VALUE_FONT, valueString, RPM_COLOR );
+            _rpmValue = new AimxcelTextGraphic( component, RPM_VALUE_FONT, valueString, RPM_COLOR );
             addGraphic( _rpmValue, RPM_LAYER );
             _rpmValue.centerRegistrationPoint();
             _rpmValue.setLocation( 0, 10 );
             _rpmValue.setIgnoreMouse( !TURBINE_IS_DRAGGABLE );
 
-            AbcLearnTextGraphic rpmUnits = new AbcLearnTextGraphic( component, RPM_UNITS_FONT, FaradayStrings.UNITS_RPM, RPM_COLOR );
+            AimxcelTextGraphic rpmUnits = new AimxcelTextGraphic( component, RPM_UNITS_FONT, FaradayStrings.UNITS_RPM, RPM_COLOR );
             addGraphic( rpmUnits, RPM_LAYER );
             rpmUnits.centerRegistrationPoint();
             rpmUnits.setLocation( 0, 22 );

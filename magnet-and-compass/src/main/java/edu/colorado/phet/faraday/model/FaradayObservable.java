@@ -4,7 +4,7 @@ package edu.colorado.phet.faraday.model;
 
 import java.awt.geom.Point2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObservable;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
 
 
 /**
