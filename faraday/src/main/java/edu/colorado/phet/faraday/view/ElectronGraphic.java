@@ -5,10 +5,10 @@ package edu.colorado.phet.faraday.view;
 import java.awt.Component;
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;
 import edu.colorado.phet.faraday.model.Electron;
@@ -20,7 +20,7 @@ import edu.colorado.phet.faraday.model.ElectronPathDescriptor;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class ElectronGraphic extends AbcLearnImageGraphic implements SimpleObserver {
+public class ElectronGraphic extends AimxcelImageGraphic implements SimpleObserver {
     
     //----------------------------------------------------------------------------
     // Instance data
@@ -30,7 +30,7 @@ public class ElectronGraphic extends AbcLearnImageGraphic implements SimpleObser
     private Electron _electronModel;
     
     // The parent graphic.
-    private CompositeAbcLearnGraphic _parent;
+    private CompositeAimxcelGraphic _parent;
     
     // Foreground image.
     private BufferedImage _foregroundImage;
@@ -48,7 +48,7 @@ public class ElectronGraphic extends AbcLearnImageGraphic implements SimpleObser
      * @param component the parent Component
      * @param electronModel the electron that this graphic represents
      */
-    public ElectronGraphic( Component component, CompositeAbcLearnGraphic parent, Electron electronModel ) {
+    public ElectronGraphic( Component component, CompositeAimxcelGraphic parent, Electron electronModel ) {
         super( component );
         
         assert( component != null );
@@ -94,7 +94,7 @@ public class ElectronGraphic extends AbcLearnImageGraphic implements SimpleObser
             ElectronPathDescriptor descriptor = _electronModel.getPathDescriptor();
                 
             // Jump between foreground and background.
-            CompositeAbcLearnGraphic parent = descriptor.getParent();
+            CompositeAimxcelGraphic parent = descriptor.getParent();
             if ( parent != _parent ) {
                 
                 // Change the parent.

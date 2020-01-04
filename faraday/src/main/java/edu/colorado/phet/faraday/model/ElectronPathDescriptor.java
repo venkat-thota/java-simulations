@@ -2,7 +2,7 @@
 
 package edu.colorado.phet.faraday.model;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
 import edu.colorado.phet.faraday.util.QuadBezierSpline;
 
 
@@ -36,7 +36,7 @@ public class ElectronPathDescriptor {
     private final QuadBezierSpline _curve;
     
     // The parent graphic
-    private final CompositeAbcLearnGraphic _parent;
+    private final CompositeAimxcelGraphic _parent;
     
     // The layer that the curve is in (FOREGROUND or BACKGROUND).
     private final int _layer;
@@ -56,7 +56,7 @@ public class ElectronPathDescriptor {
      * @param layer FOREGROUND or BACKGROUND
      * @param pathScale see getPathScale
      */
-    public ElectronPathDescriptor( QuadBezierSpline curve, CompositeAbcLearnGraphic parent, int layer, double pathScale ) {
+    public ElectronPathDescriptor( QuadBezierSpline curve, CompositeAimxcelGraphic parent, int layer, double pathScale ) {
         assert ( curve != null );
         assert ( parent != null );
         assert ( layer == FOREGROUND || layer == BACKGROUND );
@@ -75,7 +75,7 @@ public class ElectronPathDescriptor {
      * @param parent
      * @param layer
      */
-    public ElectronPathDescriptor( QuadBezierSpline curve, CompositeAbcLearnGraphic parent, int layer ) {
+    public ElectronPathDescriptor( QuadBezierSpline curve, CompositeAimxcelGraphic parent, int layer ) {
         this( curve, parent, layer, DEFAULT_SPEED_SCALE );
     }
     
@@ -97,7 +97,7 @@ public class ElectronPathDescriptor {
      * 
      * @return the parent
      */
-    public CompositeAbcLearnGraphic getParent() {
+    public CompositeAimxcelGraphic getParent() {
         return _parent;
     }
     

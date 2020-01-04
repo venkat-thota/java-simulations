@@ -8,11 +8,11 @@ import java.awt.Shape;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import edu.colorado.phet.faraday.model.PickupCoil;
 
 /**
@@ -22,7 +22,7 @@ import edu.colorado.phet.faraday.model.PickupCoil;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class PickupCoilSamplePointsGraphic extends CompositeAbcLearnGraphic implements SimpleObserver {
+public class PickupCoilSamplePointsGraphic extends CompositeAimxcelGraphic implements SimpleObserver {
     
     private static final Color POINT_COLOR = Color.YELLOW;
     private static final Shape POINT_SHAPE = new Ellipse2D.Double( -2, 2, 4, 4 );
@@ -60,7 +60,7 @@ public class PickupCoilSamplePointsGraphic extends CompositeAbcLearnGraphic impl
             final Point2D[] samplePoints = _pickupCoilModel.getSamplePoints();
             Component component = getComponent();
             for ( int i = 0; i < samplePoints.length; i++ ) {
-                AbcLearnGraphic samplePointGraphic = createGraphic( component, (int)samplePoints[i].getX(), (int)samplePoints[i].getY() );
+                AimxcelGraphic samplePointGraphic = createGraphic( component, (int)samplePoints[i].getX(), (int)samplePoints[i].getY() );
                 addGraphic( samplePointGraphic );
             }
         }
@@ -69,8 +69,8 @@ public class PickupCoilSamplePointsGraphic extends CompositeAbcLearnGraphic impl
     /*
      * Creates the graphical representation of a sample point.
      */
-    private static AbcLearnGraphic createGraphic( Component component, int x, int y ) {
-        AbcLearnShapeGraphic g = new AbcLearnShapeGraphic( component );
+    private static AimxcelGraphic createGraphic( Component component, int x, int y ) {
+        AimxcelShapeGraphic g = new AimxcelShapeGraphic( component );
         g.setShape( POINT_SHAPE );
         g.setColor( POINT_COLOR );
         g.centerRegistrationPoint();

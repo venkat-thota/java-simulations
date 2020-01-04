@@ -9,9 +9,9 @@ import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.graphics.Arrow;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.*;
 import edu.colorado.phet.faraday.FaradayConstants;
@@ -26,7 +26,7 @@ import edu.colorado.phet.faraday.model.Voltmeter;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements SimpleObserver {
+public class VoltmeterGraphic extends CompositeAimxcelGraphic implements SimpleObserver {
     
     //----------------------------------------------------------------------------
     // Class data
@@ -50,7 +50,7 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
     //----------------------------------------------------------------------------
     
     private Voltmeter _voltmeterModel;
-    private AbcLearnShapeGraphic _needle;
+    private AimxcelShapeGraphic _needle;
 
     //----------------------------------------------------------------------------
     // Constructors
@@ -85,7 +85,7 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
             Point2D tail = new Point2D.Double( 0, 0 );
             Point2D tip = new Point2D.Double( 0, -NEEDLE_LENGTH );
             Arrow arrow = new Arrow( tail, tip, NEEDLE_HEAD_SIZE.height, NEEDLE_HEAD_SIZE.width, NEEDLE_TAIL_WIDTH );
-            _needle = new AbcLearnShapeGraphic( component );
+            _needle = new AimxcelShapeGraphic( component );
             addGraphic( _needle );
             _needle.setShape( arrow.getShape() );
             _needle.setPaint( NEEDLE_COLOR );
@@ -94,7 +94,7 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
         
         // Screw that holds the needle in place.
         {
-            AbcLearnShapeGraphic screw = new AbcLearnShapeGraphic( component );
+            AimxcelShapeGraphic screw = new AimxcelShapeGraphic( component );
             addGraphic( screw );
             screw.setShape( new Ellipse2D.Double( 0, 0, SCREW_DIAMETER, SCREW_DIAMETER ) );
             screw.setPaint( SCREW_COLOR );
@@ -146,7 +146,7 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
      * @author Chris Malley (cmalley@pixelzoom.com)
      * @version $Revision$
      */
-    private static class BackgroundGraphic extends AbcLearnImageGraphic {
+    private static class BackgroundGraphic extends AimxcelImageGraphic {
         
         // Layers
         private static final double RESISTOR_LAYER = 1;
@@ -161,7 +161,7 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
         private static final Stroke GUAGE_STROKE = new BasicStroke( 1f );
         
         // Title
-        private static final Font TITLE_FONT = new AbcLearnFont( 14 );
+        private static final Font TITLE_FONT = new AimxcelFont( 14 );
         private static final Color TITLE_COLOR = Color.WHITE;
         
         // Tick marks
@@ -189,12 +189,12 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
             
             // Meter body
             BufferedImage voltMeterImage = FaradayResources.getImage( FaradayConstants.VOLTMETER_IMAGE );
-            AbcLearnImageGraphic body = new AbcLearnImageGraphic( component, voltMeterImage );
+            AimxcelImageGraphic body = new AimxcelImageGraphic( component, voltMeterImage );
             graphicLayerSet.addGraphic( body, BODY_LAYER );
             
             // Title label
             {
-                AbcLearnTextGraphic title = new AbcLearnTextGraphic( component, TITLE_FONT, FaradayStrings.TITLE_VOLTMETER, TITLE_COLOR );
+                AimxcelTextGraphic title = new AimxcelTextGraphic( component, TITLE_FONT, FaradayStrings.TITLE_VOLTMETER, TITLE_COLOR );
                 title.centerRegistrationPoint();
                 title.setLocation( body.getWidth() / 2, body.getHeight() + 3 );
                 graphicLayerSet.addGraphic( title, TITLE_LAYER );
@@ -202,7 +202,7 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
             
             // Meter guage, a 180-degree chorded arc.
             {
-                AbcLearnShapeGraphic guage = new AbcLearnShapeGraphic( component );
+                AimxcelShapeGraphic guage = new AimxcelShapeGraphic( component );
                 double diameter = 2 * GUAGE_RADIUS;
                 guage.setShape( new Arc2D.Double( 0, 0, diameter, diameter, 0, 180, Arc2D.CHORD ) );
                 guage.setBorderColor( GUAGE_COLOR );
@@ -214,7 +214,7 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
             
             // Vertical line at zero-point of guage.
             {
-                AbcLearnShapeGraphic line = new AbcLearnShapeGraphic( component );
+                AimxcelShapeGraphic line = new AimxcelShapeGraphic( component );
                 line.setShape( new Line2D.Double( 0, 0, 0, -GUAGE_RADIUS ) );
                 line.setBorderColor( GUAGE_COLOR );
                 line.setStroke( GUAGE_STROKE );
@@ -239,7 +239,7 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
                     }
                     
                     // Positive tick mark
-                    AbcLearnShapeGraphic positiveTick = new AbcLearnShapeGraphic( component );
+                    AimxcelShapeGraphic positiveTick = new AimxcelShapeGraphic( component );
                     positiveTick.setShape( new Line2D.Double( 0, 1, 0, length ) );
                     positiveTick.setBorderColor( color );
                     positiveTick.setStroke( stroke );
@@ -249,7 +249,7 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
                     graphicLayerSet.addGraphic( positiveTick, GUAGE_LAYER );
                     
                     // Negative tick mark
-                    AbcLearnShapeGraphic negativeTick = new AbcLearnShapeGraphic( component );
+                    AimxcelShapeGraphic negativeTick = new AimxcelShapeGraphic( component );
                     negativeTick.setShape( new Line2D.Double( 0, 1, 0, length ) );
                     negativeTick.setBorderColor( color );
                     negativeTick.setStroke( stroke );
@@ -265,7 +265,7 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
 
             // Resistor
             BufferedImage resistorImage = FaradayResources.getImage( FaradayConstants.RESISTOR_IMAGE );
-            AbcLearnImageGraphic resistor = new AbcLearnImageGraphic( component, resistorImage );
+            AimxcelImageGraphic resistor = new AimxcelImageGraphic( component, resistorImage );
             resistor.centerRegistrationPoint();
             resistor.setLocation( body.getWidth() / 2, body.getHeight() + 40 );
             graphicLayerSet.addGraphic( resistor, RESISTOR_LAYER );
@@ -276,12 +276,12 @@ public class VoltmeterGraphic extends CompositeAbcLearnGraphic implements Simple
                 int yOffset = body.getHeight() - 52;
                 
                 BufferedImage leftProbeImage = FaradayResources.getImage( FaradayConstants.VOLTMETER_PROBE_WHITE_IMAGE );
-                AbcLearnImageGraphic leftProbe = new AbcLearnImageGraphic( component, leftProbeImage );
+                AimxcelImageGraphic leftProbe = new AimxcelImageGraphic( component, leftProbeImage );
                 leftProbe.setLocation( xOffset, yOffset );
                 graphicLayerSet.addGraphic( leftProbe, PROBE_LAYER );
                 
                 BufferedImage rightProbeImage = FaradayResources.getImage( FaradayConstants.VOLTMETER_PROBE_BLACK_IMAGE );
-                AbcLearnImageGraphic rightProbe = new AbcLearnImageGraphic( component, rightProbeImage );
+                AimxcelImageGraphic rightProbe = new AimxcelImageGraphic( component, rightProbeImage );
                 rightProbe.setLocation( xOffset + resistor.getWidth() + 2, leftProbe.getY() );
                 graphicLayerSet.addGraphic( rightProbe, PROBE_LAYER );
             }

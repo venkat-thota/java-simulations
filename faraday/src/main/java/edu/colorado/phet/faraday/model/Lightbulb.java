@@ -2,7 +2,7 @@
 
 package edu.colorado.phet.faraday.model;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 import edu.colorado.phet.faraday.FaradayConstants;
 

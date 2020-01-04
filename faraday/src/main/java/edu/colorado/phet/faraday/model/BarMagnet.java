@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.model;
 
@@ -11,9 +11,9 @@ import java.io.InputStreamReader;
 import java.text.MessageFormat;
 import java.util.StringTokenizer;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnOptionPane;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
 
 import edu.colorado.phet.faraday.FaradayResources;
 import edu.colorado.phet.faraday.FaradayStrings;
@@ -329,7 +329,7 @@ public class BarMagnet extends AbstractMagnet {
             // if we had problems, this sim can't function, so bail.
             if ( errorString != null ) {
                 String message = MessageFormat.format( FaradayStrings.ERROR_BAR_MAGNET_INITIALIZATION, errorString );
-                AbcLearnOptionPane.showErrorDialog( AbcLearnApplication.getInstance().getAbcLearnFrame(), message );
+                AimxcelOptionPane.showErrorDialog( AimxcelApplication.getInstance().getAimxcelFrame(), message );
                 System.exit( 1 );
             }
 

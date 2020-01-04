@@ -6,12 +6,12 @@ import java.awt.Component;
 import java.awt.Rectangle;
 import java.awt.Shape;
 
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentTypes;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2.ChangeEvent;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
@@ -25,7 +25,7 @@ import edu.colorado.phet.faraday.model.BarMagnet;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class BarMagnetGraphic extends AbcLearnImageGraphic
+public class BarMagnetGraphic extends AimxcelImageGraphic
         implements SimpleObserver, ICollidable, ApparatusPanel2.ChangeListener {
 
     //----------------------------------------------------------------------------

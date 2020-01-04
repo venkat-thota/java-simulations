@@ -15,8 +15,8 @@ import javax.swing.border.TitledBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.controls.valuecontrol.LinearValueControl;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.EasyGridBagLayout;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.LinearValueControl;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.model.PickupCoil;

@@ -2,7 +2,7 @@
 
 package edu.colorado.phet.faraday.control;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.ControlPanel;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.ControlPanel;
 
 import edu.colorado.phet.faraday.FaradayResources;
 

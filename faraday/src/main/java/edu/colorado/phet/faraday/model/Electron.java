@@ -5,7 +5,7 @@ package edu.colorado.phet.faraday.model;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.ModelElement;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
 
 import edu.colorado.phet.faraday.util.QuadBezierSpline;
 

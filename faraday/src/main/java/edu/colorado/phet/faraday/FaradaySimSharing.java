@@ -1,8 +1,8 @@
 
 package edu.colorado.phet.faraday;
 
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.ISystemComponent;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ISystemComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 
 /**
  * Sim-sharing enums that are specific to this sim.

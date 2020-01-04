@@ -8,11 +8,11 @@ import java.awt.Rectangle;
 import java.awt.Shape;
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;
 
@@ -66,18 +66,18 @@ public class FaradaySlider extends GraphicSlider {
 
         // Track
         Shape shape = new Rectangle( 0, 0, trackLength, trackWidth );
-        AbcLearnGraphic track = new AbcLearnShapeGraphic( component, shape, trackColor );
+        AimxcelGraphic track = new AimxcelShapeGraphic( component, shape, trackColor );
         setTrack( track );
 
         // Knob
         BufferedImage knobImage = FaradayResources.getImage( FaradayConstants.SLIDER_KNOB_IMAGE );
-        AbcLearnGraphic knob = new AbcLearnImageGraphic( component, knobImage );
+        AimxcelGraphic knob = new AimxcelImageGraphic( component, knobImage );
         knob.centerRegistrationPoint();
         setKnob( knob );
 
         // Knob Highlight
         BufferedImage knobHighlightImage = FaradayResources.getImage( FaradayConstants.SLIDER_KNOB_HIGHLIGHT_IMAGE );
-        AbcLearnGraphic knobHighlight = new AbcLearnImageGraphic( component, knobHighlightImage );
+        AimxcelGraphic knobHighlight = new AimxcelImageGraphic( component, knobHighlightImage );
         knobHighlight.centerRegistrationPoint();
         setKnobHighlight( knobHighlight );
     }

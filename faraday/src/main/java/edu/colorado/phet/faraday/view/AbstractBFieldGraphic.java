@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.view;
 
@@ -11,10 +11,10 @@ import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.Shape;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.components.NonInteractiveEventListener;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.NonInteractiveEventListener;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
 import edu.colorado.phet.faraday.model.AbstractMagnet;
@@ -29,7 +29,7 @@ import edu.colorado.phet.faraday.model.AbstractMagnet;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public abstract class AbstractBFieldGraphic extends AbcLearnGraphic {
+public abstract class AbstractBFieldGraphic extends AimxcelGraphic {
 
     //----------------------------------------------------------------------------
     // Class data

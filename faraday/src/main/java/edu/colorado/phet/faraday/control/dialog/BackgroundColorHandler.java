@@ -7,13 +7,13 @@ import java.awt.Component;
 
 import javax.swing.JDialog;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.Module;
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
-import com.aimxcel.abclearn.common.abclearncommon.dialogs.ColorChooserFactory;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.SimSharingManager;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserActions;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentChain;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentTypes;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.dialogs.ColorChooserFactory;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.SimSharingManager;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserActions;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentChain;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
 
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
 import edu.colorado.phet.faraday.FaradayStrings;
@@ -32,7 +32,7 @@ public class BackgroundColorHandler implements ColorChooserFactory.Listener {
     // Instance data
     //----------------------------------------------------------------------------
 
-    private AbcLearnApplication _app;
+    private AimxcelApplication _app;
     private JDialog _dialog;
 
     //----------------------------------------------------------------------------
@@ -44,11 +44,11 @@ public class BackgroundColorHandler implements ColorChooserFactory.Listener {
      *
      * @param app the application
      */
-    public BackgroundColorHandler( AbcLearnApplication app ) {
+    public BackgroundColorHandler( AimxcelApplication app ) {
         super();
         _app = app;
         String title = FaradayStrings.TITLE_BACKGROUND_COLOR;
-        Component parent = app.getAbcLearnFrame();
+        Component parent = app.getAimxcelFrame();
 
         // Start with the active module's background color.
         Color initialColor = app.getActiveModule().getSimulationPanel().getBackground();
@@ -106,6 +106,6 @@ public class BackgroundColorHandler implements ColorChooserFactory.Listener {
                 ( (ICompassGridModule) module ).setGridBackground( color );
             }
         }
-        _app.getAbcLearnFrame().repaint();
+        _app.getAimxcelFrame().repaint();
     }
 }

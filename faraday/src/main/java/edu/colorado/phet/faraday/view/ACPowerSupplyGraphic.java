@@ -19,16 +19,16 @@ import java.text.MessageFormat;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentChain;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentChain;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic2;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic2;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
@@ -59,7 +59,7 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
     private static final double CURSOR_LAYER = 5;
 
     // Amplitude & frequency values
-    private static final Font VALUE_FONT = new AbcLearnFont( 12 );
+    private static final Font VALUE_FONT = new AimxcelFont( 12 );
     private static final Color VALUE_COLOR = Color.GREEN;
     private static final String AMPLITUDE_FORMAT = "{0}%";
     private static final String FREQUENCY_FORMAT = "{0}%";
@@ -80,11 +80,11 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
     private ACPowerSupply _acPowerSupplyModel;
     private FaradaySlider _maxAmplitudeSlider;
     private FaradaySlider _frequencySlider;
-    private AbcLearnTextGraphic2 _maxAmplitudeValue;
-    private AbcLearnTextGraphic2 _frequencyValue;
-    private AbcLearnTextGraphic2 _debugAmplitudeValue; // set DEBUG=true to display this
+    private AimxcelTextGraphic2 _maxAmplitudeValue;
+    private AimxcelTextGraphic2 _frequencyValue;
+    private AimxcelTextGraphic2 _debugAmplitudeValue; // set DEBUG=true to display this
     private SineWaveGraphic _waveGraphic;
-    private AbcLearnShapeGraphic _cursorGraphic;
+    private AimxcelShapeGraphic _cursorGraphic;
     private double _previousMaxAmplitude;
     private double _previousFrequency;
     private double _cursorAngle;
@@ -132,13 +132,13 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
 
         // Max Amplitude value
         {
-            _maxAmplitudeValue = new AbcLearnTextGraphic2( component, VALUE_FONT, "", VALUE_COLOR );
+            _maxAmplitudeValue = new AimxcelTextGraphic2( component, VALUE_FONT, "", VALUE_COLOR );
             _maxAmplitudeValue.setLocation( 45, 57 );
         }
 
         // Amplitude value  (debug)
         {
-            _debugAmplitudeValue = new AbcLearnTextGraphic2( component, VALUE_FONT, "", Color.RED );
+            _debugAmplitudeValue = new AimxcelTextGraphic2( component, VALUE_FONT, "", Color.RED );
             _debugAmplitudeValue.setLocation( 90, 57 );
             _debugAmplitudeValue.setVisible( DEBUG );
         }
@@ -158,7 +158,7 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
 
         // Frequency value
         {
-            _frequencyValue = new AbcLearnTextGraphic2( component, VALUE_FONT, " ", VALUE_COLOR );
+            _frequencyValue = new AimxcelTextGraphic2( component, VALUE_FONT, " ", VALUE_COLOR );
             _frequencyValue.setLocation( 210, 193 );
         }
 
@@ -174,7 +174,7 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
         {
             int yOffset = WAVE_VIEWPORT_SIZE.height / 2;
             Shape shape = new Line2D.Double( 0, -yOffset, 0, yOffset );
-            _cursorGraphic = new AbcLearnShapeGraphic( component );
+            _cursorGraphic = new AimxcelShapeGraphic( component );
             _cursorGraphic.setShape( shape );
             _cursorGraphic.setBorderColor( CURSOR_COLOR );
             _cursorGraphic.setStroke( CURSOR_STROKE );
@@ -202,7 +202,7 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
         // DEBUG -- draw a red rectangle around bounds
 //        {
 //            Shape shape = new Rectangle2D.Double( 0, 0, getWidth(), getHeight() );
-//            AbcLearnShapeGraphic boundsGraphic = new AbcLearnShapeGraphic( component );
+//            AimxcelShapeGraphic boundsGraphic = new AimxcelShapeGraphic( component );
 //            boundsGraphic.setShape( shape );
 //            boundsGraphic.setStroke( new BasicStroke( 2f ) );
 //            boundsGraphic.setBorderColor( Color.RED );
@@ -423,7 +423,7 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
      * @author Chris Malley (cmalley@pixelzoom.com)
      * @version $Revision$
      */
-    private static class BackgroundGraphic extends AbcLearnImageGraphic {
+    private static class BackgroundGraphic extends AimxcelImageGraphic {
 
         // Layers
         private static final double PANEL_LAYER = 1;
@@ -432,7 +432,7 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
         private static final double TICK_LAYER = 4;
 
         // Title
-        private static final Font TITLE_FONT = new AbcLearnFont( 15 );
+        private static final Font TITLE_FONT = new AimxcelFont( 15 );
         private static final Color TITLE_COLOR = Color.WHITE;
 
         // Axes
@@ -460,12 +460,12 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
 
             // AC panel
             BufferedImage powerSupplyImage = FaradayResources.getImage( FaradayConstants.AC_POWER_SUPPLY_IMAGE );
-            AbcLearnImageGraphic panel = new AbcLearnImageGraphic( component, powerSupplyImage );
+            AimxcelImageGraphic panel = new AimxcelImageGraphic( component, powerSupplyImage );
             graphicLayerSet.addGraphic( panel, PANEL_LAYER );
 
             // Title label
             {
-                AbcLearnTextGraphic title = new AbcLearnTextGraphic( component, TITLE_FONT, FaradayStrings.TITLE_AC_POWER_SUPPLY, TITLE_COLOR );
+                AimxcelTextGraphic title = new AimxcelTextGraphic( component, TITLE_FONT, FaradayStrings.TITLE_AC_POWER_SUPPLY, TITLE_COLOR );
                 graphicLayerSet.addGraphic( title, TITLE_LAYER );
                 title.centerRegistrationPoint();
                 title.setLocation( panel.getWidth() / 2, 36 );
@@ -479,7 +479,7 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
                 // X axis
                 {
                     // Axis
-                    AbcLearnShapeGraphic xAxis = new AbcLearnShapeGraphic( component );
+                    AimxcelShapeGraphic xAxis = new AimxcelShapeGraphic( component );
                     xAxis.setShape( new Line2D.Double( -xLength / 2, 0, xLength / 2, 0 ) );
                     xAxis.setBorderColor( AXES_COLOR );
                     xAxis.setStroke( AXES_STROKE );
@@ -491,14 +491,14 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
                     int y = TICK_LENGTH / 2;
                     while ( x < xLength / 2 ) {
 
-                        AbcLearnShapeGraphic positiveTick = new AbcLearnShapeGraphic( component );
+                        AimxcelShapeGraphic positiveTick = new AimxcelShapeGraphic( component );
                         positiveTick.setShape( new Line2D.Double( x, -y, x, y ) );
                         positiveTick.setBorderColor( TICK_COLOR );
                         positiveTick.setStroke( TICK_STROKE );
                         positiveTick.setLocation( WAVE_ORIGIN );
                         graphicLayerSet.addGraphic( positiveTick, TICK_LAYER );
 
-                        AbcLearnShapeGraphic negativeTick = new AbcLearnShapeGraphic( component );
+                        AimxcelShapeGraphic negativeTick = new AimxcelShapeGraphic( component );
                         negativeTick.setShape( new Line2D.Double( -x, -y, -x, y ) );
                         negativeTick.setBorderColor( TICK_COLOR );
                         negativeTick.setStroke( TICK_STROKE );
@@ -512,7 +512,7 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
                 // Y axis
                 {
                     // Axis
-                    AbcLearnShapeGraphic yAxis = new AbcLearnShapeGraphic( component );
+                    AimxcelShapeGraphic yAxis = new AimxcelShapeGraphic( component );
                     yAxis.setShape( new Line2D.Double( 0, -yLength / 2, 0, yLength / 2 ) );
                     yAxis.setBorderColor( AXES_COLOR );
                     yAxis.setStroke( AXES_STROKE );
@@ -524,14 +524,14 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
                     int y = TICK_SPACING;
                     while ( y < yLength / 2 ) {
 
-                        AbcLearnShapeGraphic positiveTick = new AbcLearnShapeGraphic( component );
+                        AimxcelShapeGraphic positiveTick = new AimxcelShapeGraphic( component );
                         positiveTick.setShape( new Line2D.Double( -x, y, x, y ) );
                         positiveTick.setBorderColor( TICK_COLOR );
                         positiveTick.setStroke( TICK_STROKE );
                         positiveTick.setLocation( WAVE_ORIGIN );
                         graphicLayerSet.addGraphic( positiveTick, TICK_LAYER );
 
-                        AbcLearnShapeGraphic negativeTick = new AbcLearnShapeGraphic( component );
+                        AimxcelShapeGraphic negativeTick = new AimxcelShapeGraphic( component );
                         negativeTick.setShape( new Line2D.Double( -x, -y, x, -y ) );
                         negativeTick.setBorderColor( TICK_COLOR );
                         negativeTick.setStroke( TICK_STROKE );

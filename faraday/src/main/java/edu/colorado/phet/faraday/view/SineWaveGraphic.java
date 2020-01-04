@@ -8,7 +8,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.geom.GeneralPath;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 
 
 /**
@@ -22,7 +22,7 @@ import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGrap
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class SineWaveGraphic extends AbcLearnShapeGraphic {
+public class SineWaveGraphic extends AimxcelShapeGraphic {
     
     //----------------------------------------------------------------------------
     // Instance data

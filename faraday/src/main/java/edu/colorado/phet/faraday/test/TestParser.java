@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.StringTokenizer;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.graphics.transforms.ModelViewTransform2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
 
 /**
  * @author Sam Reid

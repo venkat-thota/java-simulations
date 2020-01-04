@@ -22,14 +22,14 @@ import javax.swing.border.TitledBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.components.SimSharingJCheckBox;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.components.SimSharingJRadioButton;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.components.SimSharingJSpinner;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentChain;
-import com.aimxcel.abclearn.common.abclearncommon.view.controls.valuecontrol.LinearValueControl;
-import com.aimxcel.abclearn.common.abclearncommon.view.controls.valuecontrol.SimSharingLinearValueControl;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.EasyGridBagLayout;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.SimSharingJCheckBox;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.SimSharingJRadioButton;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.SimSharingJSpinner;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentChain;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.LinearValueControl;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.SimSharingLinearValueControl;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;

@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.view;
 
@@ -12,15 +12,15 @@ import java.awt.RenderingHints;
 import java.awt.Stroke;
 import java.awt.geom.Point2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.model.ModelElement;
-import com.aimxcel.abclearn.common.abclearncommon.view.graphics.Arrow;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
 
 
 /**
@@ -60,7 +60,7 @@ public class WiggleMeGraphic extends GraphicLayerSet implements ModelElement {
     private static final double ARROW_FRACTIONAL_HEAD_HEIGHT = 100;
 
     // Fonts and Colors
-    private static final Font DEFAULT_TEXT_FONT = new AbcLearnFont( 18 );
+    private static final Font DEFAULT_TEXT_FONT = new AimxcelFont( 18 );
     private static final Color DEFAULT_TEXT_COLOR = Color.YELLOW;
     private static final Color DEFAULT_ARROW_FILL_COLOR = Color.YELLOW;
     private static final Color DEFAULT_ARROW_BORDER_COLOR = Color.BLACK;
@@ -82,7 +82,7 @@ public class WiggleMeGraphic extends GraphicLayerSet implements ModelElement {
     // The model, used to get clock ticks for animation
     private BaseModel _model;
     // The text
-    private AbcLearnTextGraphic _textGraphic;
+    private AimxcelTextGraphic _textGraphic;
     // The width and height that the wiggle will travel.
     private Dimension _range;
     // The number of animation cycles completed, usually fractional.
@@ -108,7 +108,7 @@ public class WiggleMeGraphic extends GraphicLayerSet implements ModelElement {
         assert ( model != null );
 
         _model = model;
-        _textGraphic = new AbcLearnTextGraphic( component, DEFAULT_TEXT_FONT, "", DEFAULT_TEXT_COLOR );
+        _textGraphic = new AimxcelTextGraphic( component, DEFAULT_TEXT_FONT, "", DEFAULT_TEXT_COLOR );
         _range = new Dimension( DEFAULT_RANGE );
         _cycles = 0;
         _cycleDuration = DEFAULT_CYCLE_DURATION;
@@ -264,7 +264,7 @@ public class WiggleMeGraphic extends GraphicLayerSet implements ModelElement {
 
         Arrow arrow = new Arrow( tail, tip, ARROW_HEAD_HEIGHT, ARROW_HEAD_WIDTH, ARROW_TAIL_WIDTH, ARROW_FRACTIONAL_HEAD_HEIGHT, false );
 
-        AbcLearnShapeGraphic arrowGraphic = new AbcLearnShapeGraphic( getComponent() );
+        AimxcelShapeGraphic arrowGraphic = new AimxcelShapeGraphic( getComponent() );
         arrowGraphic.setShape( arrow.getShape() );
         arrowGraphic.setPaint( fillColor );
         arrowGraphic.setBorderPaint( borderColor );
@@ -273,7 +273,7 @@ public class WiggleMeGraphic extends GraphicLayerSet implements ModelElement {
     }
 
     //----------------------------------------------------------------------------
-    // AbcLearnGraphic overrides
+    // AimxcelGraphic overrides
     //----------------------------------------------------------------------------
 
     /**

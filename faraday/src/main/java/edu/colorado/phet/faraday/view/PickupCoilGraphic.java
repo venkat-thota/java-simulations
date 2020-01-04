@@ -6,16 +6,16 @@ import java.awt.Component;
 import java.awt.Point;
 import java.awt.Shape;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.components.NonInteractiveEventListener;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentTypes;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.NonInteractiveEventListener;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2.ChangeEvent;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
 import edu.colorado.phet.faraday.collision.CollisionDetector;
 import edu.colorado.phet.faraday.collision.ICollidable;
@@ -41,7 +41,7 @@ public class PickupCoilGraphic extends GraphicLayerSet
     private CoilGraphic _coilGraphic;
     private LightbulbGraphic _lightbulbGraphic;
     private VoltmeterGraphic _voltmeterGraphic;
-    private CompositeAbcLearnGraphic _foreground, _background;
+    private CompositeAimxcelGraphic _foreground, _background;
     private CollisionDetector _collisionDetector;
     private FluxDisplayGraphic _fluxDisplayGraphic;
     private PickupCoilSamplePointsGraphic _samplePointsGraphic;
@@ -86,13 +86,13 @@ public class PickupCoilGraphic extends GraphicLayerSet
         _voltmeterGraphic = new VoltmeterGraphic( component, voltmeterModel );
 
         // Foreground composition
-        _foreground = new CompositeAbcLearnGraphic( component );
+        _foreground = new CompositeAimxcelGraphic( component );
         _foreground.addGraphic( _coilGraphic.getForeground() );
         _foreground.addGraphic( _lightbulbGraphic );
         _foreground.addGraphic( _voltmeterGraphic );
 
         // Background composition
-        _background = new CompositeAbcLearnGraphic( component );
+        _background = new CompositeAimxcelGraphic( component );
         _background.addGraphic( _coilGraphic.getBackground() );
 
         /* =================================================================
@@ -134,20 +134,20 @@ public class PickupCoilGraphic extends GraphicLayerSet
     //----------------------------------------------------------------------------
 
     /**
-     * Gets the AbcLearnGraphic that contains the foreground elements of the coil.
+     * Gets the AimxcelGraphic that contains the foreground elements of the coil.
      *
      * @return the foreground graphics
      */
-    public AbcLearnGraphic getForeground() {
+    public AimxcelGraphic getForeground() {
         return _foreground;
     }
 
     /**
-     * Gets the AbcLearnGraphic that contains the background elements of the coil.
+     * Gets the AimxcelGraphic that contains the background elements of the coil.
      *
      * @return the background graphics
      */
-    public AbcLearnGraphic getBackground() {
+    public AimxcelGraphic getBackground() {
         return _background;
     }
 
