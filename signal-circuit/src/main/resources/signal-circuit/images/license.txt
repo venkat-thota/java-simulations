@@ -7,6 +7,6 @@ A.jpg license=same as B.jpg
 B.jpg 
 ChandelierOff2.jpg license=same as ChandelierOn2.jpg  
 ChandelierOn2.jpg 
-Electron3VX.GIF author=PhET 
-electron9.gif author=PhET 
-AbcLearnBattery1.gif 
+Electron3VX.GIF author=Aimxcel 
+electron9.gif author=Aimxcel 
+AimxcelBattery1.gif 
