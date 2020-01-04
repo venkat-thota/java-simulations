@@ -1,0 +1,30 @@
+battery.png source=Aimxcel notes=reused from faraday
+button-template.png source=Aimxcel notes=NP
+button-template_pressed.png source=Aimxcel notes=NP
+button_pressed.png source=Aimxcel
+button_pressed_disabled.png source=Aimxcel
+button_unpressed.png source=Aimxcel
+button_unpressed_disabled.png source=Aimxcel
+faucet_front.png author=Aimxcel notes=NP
+faucet_pipe.png author=Aimxcel notes=NP
+gray-arrow.png author=Aimxcel notes=SR, modified from one in motion-series
+lightBulbBase.png source=Aimxcel notes=reused from faraday
+lightBulbGlass.png source=Aimxcel notes=reused from faraday
+lightBulbGlassMask.png source=Aimxcel notes=reused from faraday
+lightBulbMask.png source=Aimxcel notes=masked version of lightBulbGlass.png
+measuringTape.gif source=Aimxcel
+measuringTape.png source=Aimxcel notes=NP
+speedometer_point.png source=Aimxcel notes=SR
+squeezer_background.png source=Aimxcel notes=NP
+velocity_left.png author=aimxcel notes=NP
+velocity_center.png author=aimxcel notes=NP
+velocity_right.png author=aimxcel notes=NP
+velocity_point.png author=aimxcel notes=NP
+zoomBackgroundHorizontal.png author=aimxcel
+zoomBackgroundVertical.png author=aimxcel
+zoomInButton.png author=aimxcel
+zoominButtonPressed.png author=aimxcel
+zoomOutButton.png author=aimxcel
+zoomOutButtonPressed.png author=aimxcel
+
+
