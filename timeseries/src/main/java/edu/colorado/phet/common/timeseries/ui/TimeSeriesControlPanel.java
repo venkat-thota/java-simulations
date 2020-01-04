@@ -11,13 +11,13 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockAdapter;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
-import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnCommonResources;
-import com.aimxcel.abclearn.common.abclearncommon.view.MultiStateButton;
-import com.aimxcel.abclearn.common.abclearncommon.view.clock.SimSpeedControl;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnOptionPane;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.MultiStateButton;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.clock.SimSpeedControl;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
 
 import edu.colorado.phet.common.timeseries.model.TimeSeriesModel;
 
@@ -51,7 +51,7 @@ public class TimeSeriesControlPanel extends JPanel {
 
         add( timeSpeedSlider );
 
-        recordButton = new MultiStateButton( new Object[] { KEY_REC, KEY_PAUSE_REC }, new String[] { AbcLearnCommonResources.getString( "chart-time-control.go" ), AbcLearnCommonResources.getString( "Common.StopwatchPanel.stop" ) },
+        recordButton = new MultiStateButton( new Object[] { KEY_REC, KEY_PAUSE_REC }, new String[] { AimxcelCommonResources.getString( "chart-time-control.go" ), AimxcelCommonResources.getString( "Common.StopwatchPanel.stop" ) },
                                              new Icon[] {
                                                      new ImageIcon( TimeseriesResources.loadBufferedImage( "icons/go.png" ) ),
                                                      new ImageIcon( TimeseriesResources.loadBufferedImage( "icons/stop.png" ) )
@@ -84,7 +84,7 @@ public class TimeSeriesControlPanel extends JPanel {
             }
         } );
 
-        playbackButton = new MultiStateButton( new Object[] { KEY_PLAYBACK, KEY_PAUSE }, new String[] { AbcLearnCommonResources.getString( "timeseries.control.panel.playback" ), AbcLearnCommonResources.getString( "Common.ClockControlPanel.Pause" ) }, new Icon[] { loadCommonIcon( AbcLearnCommonResources.IMAGE_PLAY ), loadCommonIcon( AbcLearnCommonResources.IMAGE_PAUSE ) } );
+        playbackButton = new MultiStateButton( new Object[] { KEY_PLAYBACK, KEY_PAUSE }, new String[] { AimxcelCommonResources.getString( "timeseries.control.panel.playback" ), AimxcelCommonResources.getString( "Common.ClockControlPanel.Pause" ) }, new Icon[] { loadCommonIcon( AimxcelCommonResources.IMAGE_PLAY ), loadCommonIcon( AimxcelCommonResources.IMAGE_PAUSE ) } );
         playbackButton.addActionListener( KEY_PLAYBACK, new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 if ( timeSeriesModel.isRecording() ) {
@@ -123,7 +123,7 @@ public class TimeSeriesControlPanel extends JPanel {
             }
         } );
 
-        stepButton = new JButton( AbcLearnCommonResources.getString( "Common.ClockControlPanel.Step" ), loadCommonIcon( AbcLearnCommonResources.IMAGE_STEP_FORWARD ) );
+        stepButton = new JButton( AimxcelCommonResources.getString( "Common.ClockControlPanel.Step" ), loadCommonIcon( AimxcelCommonResources.IMAGE_STEP_FORWARD ) );
         stepButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 clock.stepClockWhilePaused();
@@ -146,7 +146,7 @@ public class TimeSeriesControlPanel extends JPanel {
             }
         } );
 
-        rewindButton = new JButton( TimeseriesResources.getString( "Common.rewind" ), new ImageIcon( AbcLearnCommonResources.getInstance().getImage( AbcLearnCommonResources.IMAGE_REWIND ) ) );
+        rewindButton = new JButton( TimeseriesResources.getString( "Common.rewind" ), new ImageIcon( AimxcelCommonResources.getInstance().getImage( AimxcelCommonResources.IMAGE_REWIND ) ) );
         rewindButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 timeSeriesModel.rewind();
@@ -162,7 +162,7 @@ public class TimeSeriesControlPanel extends JPanel {
                 updateRewindButtonEnabled();
             }
         } );
-        JButton clearButton = new JButton( AbcLearnCommonResources.getString( "Common.clear" ), new ImageIcon( AbcLearnCommonResources.getInstance().getImage( AbcLearnCommonResources.IMAGE_STOP ) ) );
+        JButton clearButton = new JButton( AimxcelCommonResources.getString( "Common.clear" ), new ImageIcon( AimxcelCommonResources.getInstance().getImage( AimxcelCommonResources.IMAGE_STOP ) ) );
         clearButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 if ( confirmClear() ) {
@@ -175,7 +175,7 @@ public class TimeSeriesControlPanel extends JPanel {
     }
 
     private boolean confirmClear() {
-        return AbcLearnOptionPane.showYesNoDialog( this, TimeseriesResources.getString( "Common.confirm.clear.graphs" ) ) == JOptionPane.YES_OPTION;
+        return AimxcelOptionPane.showYesNoDialog( this, TimeseriesResources.getString( "Common.confirm.clear.graphs" ) ) == JOptionPane.YES_OPTION;
     }
 
     public void setSpeedControlVisible( boolean b ) {
@@ -219,7 +219,7 @@ public class TimeSeriesControlPanel extends JPanel {
     }
 
     protected Icon loadCommonIcon( String commonResource ) {
-        return new ImageIcon( AbcLearnCommonResources.getInstance().getImage( commonResource ) );
+        return new ImageIcon( AimxcelCommonResources.getInstance().getImage( commonResource ) );
     }
 
     protected void updateRewindButtonEnabled() {

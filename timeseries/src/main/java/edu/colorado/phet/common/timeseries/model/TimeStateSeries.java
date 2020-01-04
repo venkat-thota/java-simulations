@@ -1,6 +1,6 @@
 
 
-/*PhET, 2004.*/
+/*Aimxcel, 2004.*/
 package edu.colorado.phet.common.timeseries.model;
 
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 
 package edu.colorado.phet.common.timeseries.model;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 
 import junit.framework.TestCase;
 

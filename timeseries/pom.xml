@@ -7,13 +7,13 @@
 	<url>http://maven.apache.org</url>
   <dependencies>
 		<dependency>
-			<groupId>com.aimxcel.abclearn.common.abclearncommon</groupId>
-			<artifactId>phetcommon</artifactId>
+			<groupId>com.aimxcel.abclearn.common.aimxcelcommon</groupId>
+			<artifactId>aimxcel-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>edu.colorado.phet.common.piccolophet</groupId>
-			<artifactId>piccolophet</artifactId>
+			<groupId>com.aimxcel.abclearn.core.aimxcelcore</groupId>
+			<artifactId>aimxcel-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>

@@ -3,7 +3,7 @@ package edu.colorado.phet.common.timeseries.model;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 
 import edu.colorado.phet.common.timeseries.ui.TimeSeriesControlPanel;
 
