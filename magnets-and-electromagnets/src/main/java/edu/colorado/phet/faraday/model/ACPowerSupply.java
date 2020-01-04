@@ -2,7 +2,7 @@
 
 package edu.colorado.phet.faraday.model;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.ModelElement;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
 
 
 /**

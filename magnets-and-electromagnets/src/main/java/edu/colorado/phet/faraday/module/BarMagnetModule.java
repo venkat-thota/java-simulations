@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.module;
 
@@ -8,10 +8,10 @@ import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.geom.Point2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel3;
@@ -183,7 +183,7 @@ public class BarMagnetModule extends FaradayModule {
             controlPanel.addControlFullWidth( _barMagnetPanel );
 
             // Developer controls
-            if ( AbcLearnApplication.getInstance().isDeveloperControlsEnabled() ) {
+            if ( AimxcelApplication.getInstance().isDeveloperControlsEnabled() ) {
                 controlPanel.addDefaultVerticalSpace();
 
                 DeveloperControlsPanel developerControlsPanel = new DeveloperControlsPanel( null, null, null, null, _bFieldInsideGraphic, _bFieldOutsideGraphic );

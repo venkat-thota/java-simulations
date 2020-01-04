@@ -10,12 +10,12 @@ import java.awt.event.WindowEvent;
 import javax.swing.JDialog;
 import javax.swing.JMenuItem;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.SimSharingManager;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.components.SimSharingJMenuItem;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.SystemActions;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.SystemComponentTypes;
-import com.aimxcel.abclearn.common.abclearncommon.view.menu.OptionsMenu;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.SimSharingManager;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.SimSharingJMenuItem;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.SystemActions;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.SystemComponentTypes;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.menu.OptionsMenu;
 
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
 import edu.colorado.phet.faraday.FaradayStrings;
@@ -39,7 +39,7 @@ public class FaradayOptionsMenu extends OptionsMenu {
      *
      * @param application
      */
-    public FaradayOptionsMenu( final AbcLearnApplication application ) {
+    public FaradayOptionsMenu( final AimxcelApplication application ) {
         super();
 
         // Background Color menu item, disabled when dialog is open

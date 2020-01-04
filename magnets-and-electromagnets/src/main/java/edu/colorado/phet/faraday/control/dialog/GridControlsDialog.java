@@ -20,14 +20,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.Module;
-import com.aimxcel.abclearn.common.abclearncommon.application.PaintImmediateDialog;
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.components.SimSharingJButton;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.components.SimSharingJSlider;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentChain;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.EasyGridBagLayout;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.PaintImmediateDialog;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.SimSharingJButton;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.SimSharingJSlider;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentChain;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
@@ -49,7 +49,7 @@ public class GridControlsDialog extends PaintImmediateDialog implements ActionLi
     // Instance data
     //----------------------------------------------------------------------------
 
-    private AbcLearnApplication _app;
+    private AimxcelApplication _app;
     private JSlider _spacingSlider, _needleSizeSlider;
     private JLabel _gridSpacingValue, _needleSizeValue;
     private JButton _okButton, _cancelButton;
@@ -65,8 +65,8 @@ public class GridControlsDialog extends PaintImmediateDialog implements ActionLi
      *
      * @param app the application
      */
-    public GridControlsDialog( AbcLearnApplication app ) {
-        super( app.getAbcLearnFrame() );
+    public GridControlsDialog( AimxcelApplication app ) {
+        super( app.getAimxcelFrame() );
         _app = app;
 
         super.setTitle( FaradayStrings.TITLE_GRID_CONTROLS );
@@ -74,7 +74,7 @@ public class GridControlsDialog extends PaintImmediateDialog implements ActionLi
         super.setResizable( false );
 
         initValues();
-        createUI( app.getAbcLearnFrame() );
+        createUI( app.getAimxcelFrame() );
     }
 
     /**

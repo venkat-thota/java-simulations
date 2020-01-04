@@ -20,20 +20,20 @@ import javax.swing.event.ChangeListener;
 import javax.swing.event.EventListenerList;
 import javax.swing.event.MouseInputAdapter;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.MathUtil;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.SimSharingManager;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.ParameterKeys;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.ParameterSet;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserActions;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserComponentTypes;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.SimSharingManager;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterKeys;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterSet;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserActions;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
 
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 
 /**
- * GraphicSlider is a AbcLearnGraphic UI component that is similar to a JSlider.
+ * GraphicSlider is a AimxcelGraphic UI component that is similar to a JSlider.
  * <p/>
  * The default orientation is horizontal.
  * Unlike JSlider, there is no setOrientation method.
@@ -61,7 +61,7 @@ public class GraphicSlider extends GraphicLayerSet {
     // Sim-sharing user component
     private final IUserComponent _userComponent;
     // The graphic used for the slider's components.
-    private AbcLearnGraphic _knob, _knobHighlight, _track, _background;
+    private AimxcelGraphic _knob, _knobHighlight, _track, _background;
     // Bounary for dragging the knob, in relative coordinates.
     private Rectangle _dragBounds;
     // Minimum and maximum range, inclusive.
@@ -114,7 +114,7 @@ public class GraphicSlider extends GraphicLayerSet {
      *
      * @param knob the knob graphic
      */
-    public void setKnob( AbcLearnGraphic knob ) {
+    public void setKnob( AimxcelGraphic knob ) {
         if ( _knob != null ) {
             removeGraphic( _knob );
             _knob.removeCursor();
@@ -134,7 +134,7 @@ public class GraphicSlider extends GraphicLayerSet {
      *
      * @return the knob graphic
      */
-    public AbcLearnGraphic getKnob() {
+    public AimxcelGraphic getKnob() {
         return _knob;
     }
 
@@ -143,7 +143,7 @@ public class GraphicSlider extends GraphicLayerSet {
      *
      * @param knobHighlight the knob highlight graphic
      */
-    public void setKnobHighlight( AbcLearnGraphic knobHighlight ) {
+    public void setKnobHighlight( AimxcelGraphic knobHighlight ) {
         if ( _knobHighlight != null ) {
             removeGraphic( _knobHighlight );
         }
@@ -162,7 +162,7 @@ public class GraphicSlider extends GraphicLayerSet {
      *
      * @return the knob highlight graphic
      */
-    public AbcLearnGraphic getKnobHighlight() {
+    public AimxcelGraphic getKnobHighlight() {
         return _knobHighlight;
     }
 
@@ -171,7 +171,7 @@ public class GraphicSlider extends GraphicLayerSet {
      *
      * @param track the track graphic
      */
-    public void setTrack( AbcLearnGraphic track ) {
+    public void setTrack( AimxcelGraphic track ) {
         if ( _track != null ) {
             removeGraphic( track );
         }
@@ -198,7 +198,7 @@ public class GraphicSlider extends GraphicLayerSet {
      *
      * @return the track graphic
      */
-    public AbcLearnGraphic getTrack() {
+    public AimxcelGraphic getTrack() {
         return _track;
     }
 
@@ -207,7 +207,7 @@ public class GraphicSlider extends GraphicLayerSet {
      *
      * @param background the background graphic
      */
-    public void setBackground( AbcLearnGraphic background ) {
+    public void setBackground( AimxcelGraphic background ) {
         if ( _background != null ) {
             removeGraphic( _background );
         }
@@ -225,7 +225,7 @@ public class GraphicSlider extends GraphicLayerSet {
      *
      * @return the background graphic
      */
-    public AbcLearnGraphic getBackground() {
+    public AimxcelGraphic getBackground() {
         return _background;
     }
 
@@ -327,7 +327,7 @@ public class GraphicSlider extends GraphicLayerSet {
         if ( _track != null && tickValue >= _minimum && tickValue <= _maximum ) {
 
             Shape shape = new Line2D.Double( 0, 0, 0, _tickSize.height );
-            AbcLearnShapeGraphic tick = new AbcLearnShapeGraphic( getComponent() );
+            AimxcelShapeGraphic tick = new AimxcelShapeGraphic( getComponent() );
             tick.setShape( shape );
             tick.setBorderColor( Color.BLACK );
             tick.setStroke( new BasicStroke( (float) _tickSize.width ) );

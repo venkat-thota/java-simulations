@@ -5,8 +5,8 @@ package edu.colorado.phet.faraday.module;
 import java.awt.Color;
 import java.awt.Point;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel3;
@@ -204,7 +204,7 @@ public class ElectromagnetModule extends FaradayModule {
             controlPanel.addControlFullWidth( _electromagnetPanel );
 
             // Developer controls
-            if ( AbcLearnApplication.getInstance().isDeveloperControlsEnabled() ) {
+            if ( AimxcelApplication.getInstance().isDeveloperControlsEnabled() ) {
                 controlPanel.addDefaultVerticalSpace();
 
                 DeveloperControlsPanel developerControlsPanel = new DeveloperControlsPanel( null, null, _electromagnetGraphic, null, null, _bFieldOutsideGraphic );

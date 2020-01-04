@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.test;
 
@@ -17,9 +17,9 @@ import java.util.StringTokenizer;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.ArrowNode;
 
-import edu.colorado.phet.common.piccolophet.nodes.ArrowNode;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;
 import edu.umd.cs.piccolo.PCanvas;
@@ -37,7 +37,7 @@ import edu.umd.cs.piccolox.nodes.PComposite;
  */
 public class TestBFieldGrid extends JFrame {
 
-    private static final Dimension CANVAS_SIZE = new Dimension( 1024, 768 ); // similar to PhET sims
+    private static final Dimension CANVAS_SIZE = new Dimension( 1024, 768 ); // similar to Aimxcel sims
     private static final Dimension MAGNET_SIZE = FaradayConstants.BAR_MAGNET_SIZE; // value used when generating data files in MathCAD
     private static final Dimension GRID_SPACING = new Dimension( 4, 4 ); // value used when generating data files in MathCAD
     private static final Dimension GRID_SIZE = new Dimension( 125, 50 ); // value used when generating data files in MathCAD

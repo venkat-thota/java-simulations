@@ -7,9 +7,9 @@ import java.awt.Component;
 import java.awt.Composite;
 import java.awt.Graphics2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;
 import edu.colorado.phet.faraday.model.BarMagnet;
@@ -20,7 +20,7 @@ import edu.colorado.phet.faraday.model.BarMagnet;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class EarthGraphic extends AbcLearnImageGraphic implements SimpleObserver {
+public class EarthGraphic extends AimxcelImageGraphic implements SimpleObserver {
 
     // the image is opaque, this operator is used to make it transparent
     private static final Composite COMPOSITE = 

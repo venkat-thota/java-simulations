@@ -12,12 +12,12 @@ import java.text.DecimalFormat;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
 import edu.colorado.phet.faraday.FaradayConstants;
 import edu.colorado.phet.faraday.FaradayResources;
 import edu.colorado.phet.faraday.FaradaySimSharing.Components;
@@ -42,7 +42,7 @@ public class BatteryGraphic extends GraphicLayerSet implements SimpleObserver {
     private static final double SLIDER_LAYER = 2;
     private static final double VALUE_LAYER = 3;
 
-    private static final Font VALUE_FONT = new AbcLearnFont( 15 );
+    private static final Font VALUE_FONT = new AimxcelFont( 15 );
     private static final Color VALUE_COLOR = Color.BLACK;
     private static final Point VALUE_POSITIVE_LOCATION = new Point( 158, 83 );
     private static final Point VALUE_NEGATIVE_LOCATION = new Point( 55, 83 );
@@ -54,9 +54,9 @@ public class BatteryGraphic extends GraphicLayerSet implements SimpleObserver {
     //----------------------------------------------------------------------------
 
     private Battery _batteryModel;
-    private AbcLearnImageGraphic _batteryGraphic;
+    private AimxcelImageGraphic _batteryGraphic;
     private GraphicSlider _amplitudeSlider;
-    private AbcLearnTextGraphic _amplitudeValue;
+    private AimxcelTextGraphic _amplitudeValue;
 
     //----------------------------------------------------------------------------
     // Constructors
@@ -77,7 +77,7 @@ public class BatteryGraphic extends GraphicLayerSet implements SimpleObserver {
         // Battery image
         {
             BufferedImage batteryImage = FaradayResources.getImage( FaradayConstants.BATTERY_IMAGE );
-            _batteryGraphic = new AbcLearnImageGraphic( component, batteryImage );
+            _batteryGraphic = new AimxcelImageGraphic( component, batteryImage );
             addGraphic( _batteryGraphic, BATTERY_LAYER );
 
             // Registration point at top center.
@@ -107,7 +107,7 @@ public class BatteryGraphic extends GraphicLayerSet implements SimpleObserver {
 
         // Amplitude value
         {
-            _amplitudeValue = new AbcLearnTextGraphic( component, VALUE_FONT, "", VALUE_COLOR );
+            _amplitudeValue = new AimxcelTextGraphic( component, VALUE_FONT, "", VALUE_COLOR );
             addGraphic( _amplitudeValue, VALUE_LAYER );
         }
 

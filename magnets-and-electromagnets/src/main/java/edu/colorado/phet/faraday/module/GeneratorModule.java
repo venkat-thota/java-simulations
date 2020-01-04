@@ -6,8 +6,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel3;
@@ -221,7 +221,7 @@ public class GeneratorModule extends FaradayModule {
             controlPanel.addControlFullWidth( _pickupCoilPanel );
 
             // Developer controls
-            if ( AbcLearnApplication.getInstance().isDeveloperControlsEnabled() ) {
+            if ( AimxcelApplication.getInstance().isDeveloperControlsEnabled() ) {
                 controlPanel.addDefaultVerticalSpace();
 
                 DeveloperControlsPanel developerControlsPanel = new DeveloperControlsPanel( _pickupCoilModel, _pickupCoilGraphic, null, _pickupCoilGraphic.getLightbulbGraphic(), null, _bFieldOutsideGraphic );

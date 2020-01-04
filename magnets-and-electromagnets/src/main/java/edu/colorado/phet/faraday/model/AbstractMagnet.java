@@ -1,11 +1,11 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.model;
 
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
 /**
  * AbstractMagnet is the abstract base class for all magnets.

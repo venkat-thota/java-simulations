@@ -1,13 +1,13 @@
-// Copyright 2002-2012, University of Colorado
+ 
 
 package edu.colorado.phet.faraday.model;
 
 import java.awt.geom.Point2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
-import com.aimxcel.abclearn.common.abclearncommon.model.ModelElement;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 /**
  * Compass is the model of a compass.
@@ -136,7 +136,7 @@ public class Compass extends FaradayObservable implements ModelElement, SimpleOb
     //----------------------------------------------------------------------------
 
     /**
-     * @see com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver#update()
+     * @see com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver#update()
      */
     public void update() {
         // if the clock is running, updates are handled via stepInTime
@@ -158,7 +158,7 @@ public class Compass extends FaradayObservable implements ModelElement, SimpleOb
      * in Ron LeMaster's "microwaves" simulation, with some minor changes.
      * The algorithm was verified by Mike Dubson.
      *
-     * @see com.aimxcel.abclearn.common.abclearncommon.model.ModelElement#stepInTime(double)
+     * @see com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement#stepInTime(double)
      */
     public void stepInTime( double dt ) {
         if ( isEnabled() ) {

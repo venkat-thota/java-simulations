@@ -7,7 +7,7 @@ import java.awt.Font;
 
 import javax.swing.JPanel;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 
 /**
@@ -41,7 +41,7 @@ public class FaradayPanel extends JPanel {
      */
     public FaradayPanel() {
         super();
-        _titleFont = new AbcLearnFont( Font.BOLD, AbcLearnFont.getDefaultFontSize() + 2 );
+        _titleFont = new AimxcelFont( Font.BOLD, AimxcelFont.getDefaultFontSize() + 2 );
     }
     
     //----------------------------------------------------------------------------

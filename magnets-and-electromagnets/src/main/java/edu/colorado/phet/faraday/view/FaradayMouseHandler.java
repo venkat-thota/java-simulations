@@ -8,12 +8,12 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.event.MouseInputAdapter;
 
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.SimSharingManager;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponentType;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.UserActions;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.SimSharingManager;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponentType;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserActions;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 import edu.colorado.phet.faraday.collision.CollisionDetector;
 import edu.colorado.phet.faraday.model.FaradayObservable;
 
@@ -34,7 +34,7 @@ public class FaradayMouseHandler extends MouseInputAdapter {
     private IUserComponent _userComponent;
     private IUserComponentType _userComponentType;
     private FaradayObservable _modelComponent;
-    private AbcLearnGraphic _viewComponent;
+    private AimxcelGraphic _viewComponent;
     private boolean _dragEnabled;
     private Point _previousPoint;
     private Rectangle _dragBounds;
@@ -52,7 +52,7 @@ public class FaradayMouseHandler extends MouseInputAdapter {
      * @param modelComponent    the model to be translated
      * @param viewComponent     the view that is the drag target and is associated with the model
      */
-    public FaradayMouseHandler( IUserComponent userComponent, IUserComponentType userComponentType, FaradayObservable modelComponent, AbcLearnGraphic viewComponent ) {
+    public FaradayMouseHandler( IUserComponent userComponent, IUserComponentType userComponentType, FaradayObservable modelComponent, AimxcelGraphic viewComponent ) {
         super();
 
         assert ( modelComponent != null );

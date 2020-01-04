@@ -6,17 +6,17 @@ import java.awt.*;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 
 /**
- * DebuggerGraphic displays the bounds and location marker for a set of AbcLearnGraphics.
+ * DebuggerGraphic displays the bounds and location marker for a set of AimxcelGraphics.
  * It is intended for use in debugging phetcommon and client applications.
  * The bounds is drawn as a rectangle outline.
  * The location marker is drawn as a crosshair.
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class DebuggerGraphic extends AbcLearnGraphic {
+public class DebuggerGraphic extends AimxcelGraphic {
     
     //----------------------------------------------------------------------------
     // Instance data
@@ -29,7 +29,7 @@ public class DebuggerGraphic extends AbcLearnGraphic {
     private Color _locationColor;
     private BasicStroke _locationStroke;
     private Dimension _locationSize;
-    private Hashtable _specifications; // key=AbcLearnGraphic, value=Specification
+    private Hashtable _specifications; // key=AimxcelGraphic, value=Specification
     
     //----------------------------------------------------------------------------
     // Inner classes
@@ -76,7 +76,7 @@ public class DebuggerGraphic extends AbcLearnGraphic {
      * 
      * @param graphic
      */
-    public void add( AbcLearnGraphic graphic ) {
+    public void add( AimxcelGraphic graphic ) {
         add( graphic, _boundsColor, _locationColor );
     }
     
@@ -87,7 +87,7 @@ public class DebuggerGraphic extends AbcLearnGraphic {
      * @param boundsColor
      * @param locationColor
      */
-    public void add( AbcLearnGraphic graphic, Color boundsColor, Color locationColor ) {
+    public void add( AimxcelGraphic graphic, Color boundsColor, Color locationColor ) {
         assert( graphic != null );
         assert( boundsColor != null );
         assert( locationColor != null );
@@ -99,7 +99,7 @@ public class DebuggerGraphic extends AbcLearnGraphic {
      * 
      * @param graphic
      */
-    public void remove( AbcLearnGraphic graphic ) {
+    public void remove( AimxcelGraphic graphic ) {
         assert( graphic != null );
         _specifications.remove( graphic);
     }
@@ -254,7 +254,7 @@ public class DebuggerGraphic extends AbcLearnGraphic {
         Rectangle bounds = null;
         Enumeration e = _specifications.keys();
         while ( e.hasMoreElements() ) {
-            AbcLearnGraphic graphic = (AbcLearnGraphic) e.nextElement();
+            AimxcelGraphic graphic = (AimxcelGraphic) e.nextElement();
             if ( bounds == null ) {
                 bounds = new Rectangle();
             }
@@ -281,7 +281,7 @@ public class DebuggerGraphic extends AbcLearnGraphic {
             Enumeration e = _specifications.keys();
             while ( e.hasMoreElements() ) {
                 // Get the rendering details for the next graphic.
-                AbcLearnGraphic graphic = (AbcLearnGraphic) e.nextElement();
+                AimxcelGraphic graphic = (AimxcelGraphic) e.nextElement();
                 Rectangle bounds = graphic.getBounds();
                 Point location = graphic.getLocation();
                 Specification s = (Specification)_specifications.get( graphic );
