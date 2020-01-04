@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.model.CalorieSet;
@@ -54,7 +54,7 @@ public class FoodSelectionPanel extends JPanel implements ICalorieSelectionPanel
                         human.getSelectedFoods().addItem( baseDiets[i1] );
                     }
                 } );
-                jRadioButton.setFont( new AbcLearnFont( 13, true ) );
+                jRadioButton.setFont( new AimxcelFont( 13, true ) );
                 bg.add( jRadioButton );
                 add( jRadioButton );
             }

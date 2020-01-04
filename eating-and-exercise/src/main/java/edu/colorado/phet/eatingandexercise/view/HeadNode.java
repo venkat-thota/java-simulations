@@ -3,9 +3,9 @@ package edu.colorado.phet.eatingandexercise.view;
 
 import java.awt.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.colorado.phet.eatingandexercise.model.Human;
 import edu.umd.cs.piccolo.PNode;
 
@@ -14,21 +14,21 @@ import edu.umd.cs.piccolo.PNode;
  * Jun 26, 2008 at 3:50:22 PM
  */
 public class HeadNode extends PNode {
-    private AbcLearnPPath headPath;
+    private AimxcelPPath headPath;
     private Human human;
     private PNode eyeGraphics;
-    private AbcLearnPPath leftEye;
-    private AbcLearnPPath rightEye;
+    private AimxcelPPath leftEye;
+    private AimxcelPPath rightEye;
 
     public HeadNode( final Human human, Color fill, BasicStroke basicStroke, Color stroke ) {
         this.human = human;
-        headPath = new AbcLearnPPath( fill, basicStroke, stroke );
+        headPath = new AimxcelPPath( fill, basicStroke, stroke );
         addChild( headPath );
 
         eyeGraphics = new PNode();
         float STROKE_WIDTH = 0.015f;
-        leftEye = new AbcLearnPPath( createEyePath(), new BasicStroke( STROKE_WIDTH ), Color.black );
-        rightEye = new AbcLearnPPath( createEyePath(), new BasicStroke( STROKE_WIDTH ), Color.black );
+        leftEye = new AimxcelPPath( createEyePath(), new BasicStroke( STROKE_WIDTH ), Color.black );
+        rightEye = new AimxcelPPath( createEyePath(), new BasicStroke( STROKE_WIDTH ), Color.black );
         human.addListener( new Human.Adapter() {
             public void aliveChanged() {
                 updateEyesVisible();

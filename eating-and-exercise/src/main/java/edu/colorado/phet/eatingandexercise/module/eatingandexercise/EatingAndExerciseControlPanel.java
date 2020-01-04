@@ -4,7 +4,7 @@ package edu.colorado.phet.eatingandexercise.module.eatingandexercise;
 
 import java.awt.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.ControlPanel;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.ControlPanel;
 
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 

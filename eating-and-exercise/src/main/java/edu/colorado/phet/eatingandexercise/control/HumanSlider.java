@@ -7,7 +7,7 @@ import java.util.Hashtable;
 import javax.swing.*;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.DefaultDecimalFormat;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
 
 import edu.colorado.phet.eatingandexercise.control.valuenode.LinearValueControlNode;
 

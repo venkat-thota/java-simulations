@@ -10,12 +10,12 @@ import java.util.Random;
 
 import javax.swing.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.BufferedImageUtils;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLImageButtonNode;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
-import edu.colorado.phet.common.piccolophet.nodes.HTMLImageButtonNode;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseStrings;
 import edu.colorado.phet.eatingandexercise.model.CalorieSet;
@@ -54,7 +54,7 @@ public class CalorieDragStrip extends PNode {
         stripPanelClip.addChild( stripPanel );
         stripPanelClip.setPaint( new Color( 200, 220, 220 ) );
 
-        AbcLearnFont buttonFont = new AbcLearnFont( Font.BOLD, 13 );
+        AimxcelFont buttonFont = new AimxcelFont( Font.BOLD, 13 );
         HTMLImageButtonNode leftButton = new HTMLImageButtonNode( EatingAndExerciseResources.getString( "control.more.right" ), buttonFont, buttonColor );
         leftButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
@@ -375,7 +375,7 @@ public class CalorieDragStrip extends PNode {
             return dragNode;
         }
         else {
-            return new DefaultDragNode( new AbcLearnPPath( new Rectangle( 0, 0, 10, 10 ), new Color( random.nextInt( 255 ), random.nextInt( 255 ), random.nextInt( 255 ) ) ), item );
+            return new DefaultDragNode( new AimxcelPPath( new Rectangle( 0, 0, 10, 10 ), new Color( random.nextInt( 255 ), random.nextInt( 255 ), random.nextInt( 255 ) ) ), item );
         }
     }
 
@@ -383,7 +383,7 @@ public class CalorieDragStrip extends PNode {
         final BalancedDietDialog dialog = new BalancedDietDialog( item );
         balancedDietDialogs.add( dialog );
 
-        HTMLImageButtonNode gradientButtonNode = new HTMLImageButtonNode( EatingAndExerciseResources.getString( "edit.edit" ), new AbcLearnFont( Font.BOLD, 12 ), Color.red );
+        HTMLImageButtonNode gradientButtonNode = new HTMLImageButtonNode( EatingAndExerciseResources.getString( "edit.edit" ), new AimxcelFont( Font.BOLD, 12 ), Color.red );
         gradientButtonNode.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 dialog.setVisible( true );

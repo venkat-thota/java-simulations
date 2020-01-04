@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 package edu.colorado.phet.eatingandexercise.view;
 
 import java.awt.BasicStroke;
@@ -19,15 +19,15 @@ import javax.swing.JPanel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
-import com.aimxcel.abclearn.common.abclearncommon.view.VerticalLayoutPanel;
-import com.aimxcel.abclearn.common.abclearncommon.view.controls.valuecontrol.LinearValueControl;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.LinearValueControl;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLImageButtonNode;
 
-import edu.colorado.phet.common.piccolophet.BufferedAbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.nodes.HTMLImageButtonNode;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.model.Human;
 import edu.umd.cs.piccolo.PNode;
@@ -45,7 +45,7 @@ public class HumanNode extends PNode {
     private HeadNode head;
     private PImage heartNode;
     private BasicStroke stroke = new BasicStroke( 0.02f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER );
-    private AbcLearnPPath areaNode = new AbcLearnPPath( Color.white, stroke, Color.black );
+    private AimxcelPPath areaNode = new AimxcelPPath( Color.white, stroke, Color.black );
     private HTMLImageButtonNode infoButton;
     private ArrayList listeners = new ArrayList();
 
@@ -76,7 +76,7 @@ public class HumanNode extends PNode {
             }
         } );
 
-        infoButton = new HTMLImageButtonNode( EatingAndExerciseResources.getString( "question.mark" ), new AbcLearnFont( Font.BOLD, 12 ), Color.red );
+        infoButton = new HTMLImageButtonNode( EatingAndExerciseResources.getString( "question.mark" ), new AimxcelFont( Font.BOLD, 12 ), Color.red );
         infoButton.setScale( 0.007 );
         infoButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
@@ -190,7 +190,7 @@ public class HumanNode extends PNode {
         JFrame frame = new JFrame( "Test Frame" );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         frame.setSize( 800, 600 );
-        AbcLearnPCanvas phetPCanvas = new BufferedAbcLearnPCanvas( new PDimension( 3, 3 ) );
+        AimxcelPCanvas phetPCanvas = new BufferedAimxcelPCanvas( new PDimension( 3, 3 ) );
         phetPCanvas.setZoomEventHandler( new PZoomEventHandler() );
         //todo: update layout
         frame.setContentPane( phetPCanvas );

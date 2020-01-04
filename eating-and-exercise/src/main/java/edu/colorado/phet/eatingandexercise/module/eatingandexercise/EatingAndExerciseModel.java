@@ -4,8 +4,8 @@ package edu.colorado.phet.eatingandexercise.module.eatingandexercise;
 
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockAdapter;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.control.CalorieDragStrip;

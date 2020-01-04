@@ -5,10 +5,10 @@ import java.awt.*;
 import java.awt.geom.Line2D;
 import java.text.DecimalFormat;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.nodes.PText;
 
@@ -53,7 +53,7 @@ public class SparseStackedBarChartAxisNode extends PNode {
 
     public class MinorTick extends PNode {
         public MinorTick( double width, double y ) {
-            AbcLearnPPath path = new AbcLearnPPath( new Line2D.Double( -width / 2, -modelToView( y ), width / 2, -modelToView( y ) ), new BasicStroke( 1 ), Color.black );
+            AimxcelPPath path = new AimxcelPPath( new Line2D.Double( -width / 2, -modelToView( y ), width / 2, -modelToView( y ) ), new BasicStroke( 1 ), Color.black );
             addChild( path );
         }
     }
@@ -64,10 +64,10 @@ public class SparseStackedBarChartAxisNode extends PNode {
 
     public class MajorTick extends PNode {
         public MajorTick( double width, double y ) {
-            AbcLearnPPath path = new AbcLearnPPath( new Line2D.Double( -width / 2, -modelToView( y ), width / 2, -modelToView( y ) ), new BasicStroke( 2 ), Color.black );
+            AimxcelPPath path = new AimxcelPPath( new Line2D.Double( -width / 2, -modelToView( y ), width / 2, -modelToView( y ) ), new BasicStroke( 2 ), Color.black );
             addChild( path );
             PText textLabel = new EatingAndExercisePText( new DecimalFormat( "0" ).format( y ) );
-            textLabel.setFont( new AbcLearnFont( 12, true ) );
+            textLabel.setFont( new AimxcelFont( 12, true ) );
             addChild( textLabel );
             textLabel.setOffset( path.getFullBounds().getCenterX() - textLabel.getFullBounds().getWidth() / 2,
                                  path.getFullBounds().getCenterY() - textLabel.getFullBounds().getHeight() / 2 );

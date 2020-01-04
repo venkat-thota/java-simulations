@@ -12,10 +12,10 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.border.BevelBorder;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.VerticalLayoutPanel;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseStrings;
 import edu.colorado.phet.eatingandexercise.model.Human;
@@ -64,7 +64,7 @@ public class ScaleNode extends PNode {
         topPath.lineTo( FACE_WIDTH / 2 - DEPTH_DX, FACE_Y - DEPTH_DY );
         topPath.lineTo( FACE_WIDTH / 2, FACE_Y );
         topPath.lineTo( -FACE_WIDTH / 2, FACE_Y );
-        addChild( new AbcLearnPPath( topPath.getGeneralPath(), SCALE_COLOR, new BasicStroke( STROKE_WIDTH ), Color.black ) );
+        addChild( new AimxcelPPath( topPath.getGeneralPath(), SCALE_COLOR, new BasicStroke( STROKE_WIDTH ), Color.black ) );
 
         // front face
         DoubleGeneralPath facePath = new DoubleGeneralPath();
@@ -73,7 +73,7 @@ public class ScaleNode extends PNode {
         facePath.lineTo( FACE_WIDTH / 2, FACE_Y + FACE_HEIGHT );
         facePath.lineTo( FACE_WIDTH / 2, FACE_Y );
         facePath.lineTo( -FACE_WIDTH / 2, FACE_Y );
-        PNode faceNode = new AbcLearnPPath( facePath.getGeneralPath(), SCALE_COLOR, new BasicStroke( STROKE_WIDTH ), Color.black );
+        PNode faceNode = new AimxcelPPath( facePath.getGeneralPath(), SCALE_COLOR, new BasicStroke( STROKE_WIDTH ), Color.black );
         addChild( faceNode );
         
         // monitor changes in the human's weight and BMI

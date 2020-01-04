@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
-import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnCommonResources;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnOptionPane;
+import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
 
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 
@@ -21,12 +21,12 @@ public class EatingAndExerciseHelpButton extends JButton {
         super( getHelpString() );
         addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
-                AbcLearnOptionPane.showMessageDialog( EatingAndExerciseHelpButton.this, EatingAndExerciseResources.getString( "help.message" ), getHelpString() );
+                AimxcelOptionPane.showMessageDialog( EatingAndExerciseHelpButton.this, EatingAndExerciseResources.getString( "help.message" ), getHelpString() );
             }
         } );
     }
 
     private static String getHelpString() {
-        return EatingAndExerciseResources.getCommonString( AbcLearnCommonResources.STRING_HELP_MENU_HELP );
+        return EatingAndExerciseResources.getCommonString( AimxcelCommonResources.STRING_HELP_MENU_HELP );
     }
 }

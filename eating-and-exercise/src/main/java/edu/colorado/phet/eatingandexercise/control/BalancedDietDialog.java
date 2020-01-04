@@ -8,10 +8,10 @@ import java.awt.RenderingHints;
 
 import javax.swing.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.PaintImmediateDialog;
-import com.aimxcel.abclearn.common.abclearncommon.util.DefaultDecimalFormat;
-import com.aimxcel.abclearn.common.abclearncommon.view.VerticalLayoutPanel;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.SwingUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.PaintImmediateDialog;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.control.valuenode.LinearValueControlNode;

@@ -7,11 +7,11 @@ import java.awt.geom.Point2D;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
-import com.aimxcel.abclearn.common.abclearncommon.view.graphics.Arrow;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.nodes.PPath;
 import edu.umd.cs.piccolo.nodes.PText;
@@ -34,7 +34,7 @@ public class DefaultStackedBarChartAxisNode extends PNode {
         this.minorTickSpacing = minorTickSpacing;
         this.majorTickSpacing = majorTickSpacing;
         this.max = max;
-        PPath arrowPath = new AbcLearnPPath( createArrowShape(), Color.black );
+        PPath arrowPath = new AimxcelPPath( createArrowShape(), Color.black );
         addChild( arrowPath );
         ArrayList minorTicks = new ArrayList();
         for ( double y = 0; y <= max; y += minorTickSpacing ) {
@@ -52,7 +52,7 @@ public class DefaultStackedBarChartAxisNode extends PNode {
             count++;
         }
         PText titleNode = new EatingAndExercisePText( title );
-        titleNode.setFont( new AbcLearnFont( 18, true ) );
+        titleNode.setFont( new AimxcelFont( 18, true ) );
         addChild( titleNode );
 
         PNode bottomMajor = (PNode) minorTicks.get( 0 );
@@ -62,7 +62,7 @@ public class DefaultStackedBarChartAxisNode extends PNode {
 
     public class MinorTick extends PNode {
         public MinorTick( double width, double y ) {
-            AbcLearnPPath path = new AbcLearnPPath( new Line2D.Double( -width / 2, -modelToView( y ), width / 2, -modelToView( y ) ), new BasicStroke( 1 ), Color.black );
+            AimxcelPPath path = new AimxcelPPath( new Line2D.Double( -width / 2, -modelToView( y ), width / 2, -modelToView( y ) ), new BasicStroke( 1 ), Color.black );
             addChild( path );
         }
     }
@@ -73,7 +73,7 @@ public class DefaultStackedBarChartAxisNode extends PNode {
 
     public class MajorTick extends PNode {
         public MajorTick( double width, double y, boolean textOnLeft ) {
-            AbcLearnPPath path = new AbcLearnPPath( new Line2D.Double( -width / 2, -modelToView( y ), width / 2, -modelToView( y ) ), new BasicStroke( 2 ), Color.black );
+            AimxcelPPath path = new AimxcelPPath( new Line2D.Double( -width / 2, -modelToView( y ), width / 2, -modelToView( y ) ), new BasicStroke( 2 ), Color.black );
             addChild( path );
             PText textLabel = new EatingAndExercisePText( new DecimalFormat( "0" ).format( y ) );
             addChild( textLabel );

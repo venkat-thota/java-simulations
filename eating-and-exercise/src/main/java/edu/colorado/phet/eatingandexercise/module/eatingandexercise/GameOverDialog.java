@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.AbcLearnFrame;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelFrame;
 
 import edu.colorado.phet.eatingandexercise.model.Human;
 
@@ -15,11 +15,11 @@ import edu.colorado.phet.eatingandexercise.model.Human;
  * Jun 26, 2008 at 4:37:47 PM
  */
 public class GameOverDialog {
-    private AbcLearnFrame parentFrame;
+    private AimxcelFrame parentFrame;
     private Human human;
     private EatingAndExerciseModule module;
 
-    public GameOverDialog( AbcLearnFrame parentFrame, final Human human, EatingAndExerciseModule module ) {
+    public GameOverDialog( AimxcelFrame parentFrame, final Human human, EatingAndExerciseModule module ) {
         this.parentFrame = parentFrame;
         this.human = human;
         this.module = module;
@@ -40,7 +40,7 @@ public class GameOverDialog {
         timer.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 module.getClock().pause();
-//                AbcLearnOptionPane.showMessageDialog( parentFrame, "Game Over.  Body died from " + causeOfDeath + ". Click to start over." );
+//                AimxcelOptionPane.showMessageDialog( parentFrame, "Game Over.  Body died from " + causeOfDeath + ". Click to start over." );
                 Object[] options = {"Restart"};
                 JOptionPane.showOptionDialog( parentFrame, "Game Over", "Game Over", JOptionPane.OK_OPTION,
                                               JOptionPane.WARNING_MESSAGE, null, options, options[0] ); //default button title

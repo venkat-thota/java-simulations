@@ -3,7 +3,8 @@ package edu.colorado.phet.eatingandexercise.view;
 
 import java.awt.*;
 
-import edu.colorado.phet.common.piccolophet.test.PiccoloTestFrame;
+import com.aimxcel.abclearn.core.aimxcelcore.test.PiccoloTestFrame;
+
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.model.Human;
 import edu.umd.cs.piccolo.PNode;

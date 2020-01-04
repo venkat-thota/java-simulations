@@ -4,13 +4,13 @@ package edu.colorado.phet.eatingandexercise.view;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.dialogs.ColorChooserFactory;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.BufferedImageUtils;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.dialogs.ColorChooserFactory;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
-import edu.colorado.phet.common.piccolophet.nodes.HTMLNode;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseStrings;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
@@ -25,8 +25,8 @@ import edu.umd.cs.piccolox.nodes.PClip;
 public class BarChartElementNode extends PNode {
     private BarChartElement barChartElement;
     private PClip clip;
-    private AbcLearnPPath barNode;
-    private AbcLearnPPath barThumb;
+    private AimxcelPPath barNode;
+    private AimxcelPPath barThumb;
     private StackedBarNode.Thumb thumbLocation;
 
     private PNode imageNode;
@@ -38,7 +38,7 @@ public class BarChartElementNode extends PNode {
         this.stackedBarNode = stackedBarNode;
         this.thumbLocation = thumbLocation;
         this.barChartElement = barChartElement;
-        barNode = new AbcLearnPPath( createShape(), barChartElement.getPaint() );
+        barNode = new AimxcelPPath( createShape(), barChartElement.getPaint() );
         addChild( barNode );
 
         if ( stackedBarNode.showColorChooser ) {
@@ -64,7 +64,7 @@ public class BarChartElementNode extends PNode {
             imageNode = new PNode();
         }
 
-        AbcLearnFont font = new AbcLearnFont( 14, true );
+        AimxcelFont font = new AimxcelFont( 14, true );
         textNode = new HTMLNode( barChartElement.getName(), barChartElement.getTextColor(), font );
         valueNode = new HTMLNode( "", barChartElement.getTextColor(), font );
         clip.addChild( imageNode );
@@ -74,7 +74,7 @@ public class BarChartElementNode extends PNode {
         addChild( clip );
 
         //todo: delegate to subclass
-        barThumb = new AbcLearnPPath( thumbLocation.getThumbShape( stackedBarNode.getBarWidth() ), barChartElement.getPaint(), new BasicStroke( 1 ), Color.black );
+        barThumb = new AimxcelPPath( thumbLocation.getThumbShape( stackedBarNode.getBarWidth() ), barChartElement.getPaint(), new BasicStroke( 1 ), Color.black );
         addChild( barThumb );
         barThumb.addInputEventListener( new CursorHandler() );
         barThumb.addInputEventListener( new PBasicInputEventHandler() {

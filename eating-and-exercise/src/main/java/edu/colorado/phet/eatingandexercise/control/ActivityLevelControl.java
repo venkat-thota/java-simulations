@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnOptionPane;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
 
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.model.Human;
@@ -23,7 +23,7 @@ public class ActivityLevelControl extends JPanel {
         add( button );
         button.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
-                AbcLearnOptionPane.showMessageDialog( canvas, getExplanationText() );
+                AimxcelOptionPane.showMessageDialog( canvas, getExplanationText() );
             }
         } );
     }

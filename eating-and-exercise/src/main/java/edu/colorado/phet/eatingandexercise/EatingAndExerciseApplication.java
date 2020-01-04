@@ -6,35 +6,35 @@ import java.awt.event.ActionListener;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationConfig;
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationLauncher;
-import com.aimxcel.abclearn.common.abclearncommon.view.AbcLearnFrame;
-import com.aimxcel.abclearn.common.abclearncommon.view.AbcLearnFrameWorkaround;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationConfig;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationLauncher;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelFrame;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelFrameWorkaround;
+import com.aimxcel.abclearn.core.aimxcelcore.PiccoloAimxcelApplication;
 
-import edu.colorado.phet.common.piccolophet.PiccoloAbcLearnApplication;
 import edu.colorado.phet.eatingandexercise.developer.DeveloperFrame;
 import edu.colorado.phet.eatingandexercise.module.eatingandexercise.EatingAndExerciseModule;
 
-public class EatingAndExerciseApplication extends PiccoloAbcLearnApplication {
+public class EatingAndExerciseApplication extends PiccoloAimxcelApplication {
 
     private EatingAndExerciseModule eatingAndExerciseModule;
 
-    public EatingAndExerciseApplication( AbcLearnApplicationConfig config ) {
+    public EatingAndExerciseApplication( AimxcelApplicationConfig config ) {
         super( config );
-        eatingAndExerciseModule = new EatingAndExerciseModule( getAbcLearnFrame() );
+        eatingAndExerciseModule = new EatingAndExerciseModule( getAimxcelFrame() );
         addModule( eatingAndExerciseModule );
         initMenubar();
     }
 
-    protected AbcLearnFrame createAbcLearnFrame() {
-        return new AbcLearnFrameWorkaround( this );
+    protected AimxcelFrame createAimxcelFrame() {
+        return new AimxcelFrameWorkaround( this );
     }
 
     private void initMenubar() {
-        final AbcLearnFrame frame = getAbcLearnFrame();
+        final AimxcelFrame frame = getAimxcelFrame();
 
         // Developer menu
-        JMenu developerMenu = getAbcLearnFrame().getDeveloperMenu();
+        JMenu developerMenu = getAimxcelFrame().getDeveloperMenu();
         JMenuItem menuItem = new JMenuItem( "Show Model Controls..." );
         menuItem.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
@@ -54,8 +54,8 @@ public class EatingAndExerciseApplication extends PiccoloAbcLearnApplication {
     }
 
     public static void main( final String[] args ) {
-        AbcLearnApplicationConfig config = new AbcLearnApplicationConfig( args, EatingAndExerciseConstants.PROJECT_NAME );
+        AimxcelApplicationConfig config = new AimxcelApplicationConfig( args, EatingAndExerciseConstants.PROJECT_NAME );
         config.setLookAndFeel( new EatingAndExerciseLookAndFeel() );
-        new AbcLearnApplicationLauncher().launchSim( config, EatingAndExerciseApplication.class );
+        new AimxcelApplicationLauncher().launchSim( config, EatingAndExerciseApplication.class );
     }
 }

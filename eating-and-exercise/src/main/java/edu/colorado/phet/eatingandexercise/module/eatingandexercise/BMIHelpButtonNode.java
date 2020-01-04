@@ -6,10 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnOptionPane;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLImageButtonNode;
 
-import edu.colorado.phet.common.piccolophet.nodes.HTMLImageButtonNode;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.model.Human;
 
@@ -21,7 +21,7 @@ public class BMIHelpButtonNode extends HTMLImageButtonNode {
     private Human human;
 
     public BMIHelpButtonNode( final Component parentComponent, final Human human ) {
-        super( "?", new AbcLearnFont( Font.BOLD, 14 ), Color.red );
+        super( "?", new AimxcelFont( Font.BOLD, 14 ), Color.red );
         this.human = human;
         addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
@@ -32,7 +32,7 @@ public class BMIHelpButtonNode extends HTMLImageButtonNode {
                 String line4 = EatingAndExerciseResources.getString( "bmi.normal" );
                 String line5 = EatingAndExerciseResources.getString( "bmi.overweight" );
                 String line6 = EatingAndExerciseResources.getString( "bmi.obese" );
-                AbcLearnOptionPane.showMessageDialog( parentComponent, currentBMI + new DecimalFormat( "0.0" ).format( human.getBMI() ) + "\n\n" +
+                AimxcelOptionPane.showMessageDialog( parentComponent, currentBMI + new DecimalFormat( "0.0" ).format( human.getBMI() ) + "\n\n" +
                                                                    line1 +
                                                                    line2 +
                                                                    line3 +

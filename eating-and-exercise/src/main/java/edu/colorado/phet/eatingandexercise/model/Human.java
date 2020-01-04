@@ -4,8 +4,8 @@ package edu.colorado.phet.eatingandexercise.model;
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
-import com.aimxcel.abclearn.common.abclearncommon.math.MathUtil;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 
 import edu.colorado.phet.common.motion.model.DefaultTemporalVariable;
 import edu.colorado.phet.common.motion.model.ITemporalVariable;

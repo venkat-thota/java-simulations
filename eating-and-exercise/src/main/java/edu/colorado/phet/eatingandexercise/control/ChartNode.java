@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 package edu.colorado.phet.eatingandexercise.control;
 
 import java.awt.BasicStroke;
@@ -13,11 +13,14 @@ import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.axis.NumberTickUnit;
 import org.jfree.data.Range;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.MutableVector2D;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ConstantDtClock;
-import com.aimxcel.abclearn.common.abclearncommon.util.DefaultDecimalFormat;
-import com.aimxcel.abclearn.common.abclearncommon.view.graphics.Arrow;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLImageButtonNode;
 
 import edu.colorado.phet.common.motion.graphs.ControlGraph;
 import edu.colorado.phet.common.motion.graphs.ControlGraphSeries;
@@ -26,9 +29,6 @@ import edu.colorado.phet.common.motion.graphs.MinimizableControlGraph;
 import edu.colorado.phet.common.motion.model.DefaultTemporalVariable;
 import edu.colorado.phet.common.motion.model.ITemporalVariable;
 import edu.colorado.phet.common.motion.model.MotionTimeSeriesModel;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.nodes.HTMLImageButtonNode;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.colorado.phet.common.timeseries.model.TestTimeSeries;
 import edu.colorado.phet.common.timeseries.model.TimeSeriesModel;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
@@ -60,7 +60,7 @@ public class ChartNode extends PNode {
     private EatingAndExerciseModel.Units previousUnits;
     private ArrayList listeners = new ArrayList();
 
-    public ChartNode( final EatingAndExerciseModel model, AbcLearnPCanvas phetPCanvas ) {
+    public ChartNode( final EatingAndExerciseModel model, AimxcelPCanvas phetPCanvas ) {
         this.model = model;
         GraphSuiteSet graphSuiteSet = new GraphSuiteSet();
 
@@ -290,9 +290,9 @@ public class ChartNode extends PNode {
         private HTMLImageButtonNode gradientButtonNode;
         private PNode axisLabel;
 
-        public EatingAndExerciseControlGraph( AbcLearnPCanvas canvas, ControlGraphSeries series, String title, int minY, int maxY, TimeSeriesModel timeSeriesModel ) {
+        public EatingAndExerciseControlGraph( AimxcelPCanvas canvas, ControlGraphSeries series, String title, int minY, int maxY, TimeSeriesModel timeSeriesModel ) {
             super( canvas, series, title, minY, maxY, timeSeriesModel );
-            gradientButtonNode = new HTMLImageButtonNode( EatingAndExerciseResources.getString( "time.reset" ), new AbcLearnFont( Font.BOLD, 12 ), Color.green );
+            gradientButtonNode = new HTMLImageButtonNode( EatingAndExerciseResources.getString( "time.reset" ), new AimxcelFont( Font.BOLD, 12 ), Color.green );
             gradientButtonNode.addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     resetChartArea();
@@ -303,7 +303,7 @@ public class ChartNode extends PNode {
             axisLabel = new PNode();
             PText text = new EatingAndExercisePText( EatingAndExerciseResources.getString( "units.time.yrs" ) );
             axisLabel.addChild( text );
-            axisLabel.addChild( new AbcLearnPPath( new Arrow( new Point2D.Double( text.getFullBounds().getMaxX(), text.getFullBounds().getCenterY() ),
+            axisLabel.addChild( new AimxcelPPath( new Arrow( new Point2D.Double( text.getFullBounds().getMaxX(), text.getFullBounds().getCenterY() ),
                                                           new MutableVector2D( 20, 0 ), 6, 6, 2, 0.5, true ).getShape(), Color.black ) );
             addChild( axisLabel );
 

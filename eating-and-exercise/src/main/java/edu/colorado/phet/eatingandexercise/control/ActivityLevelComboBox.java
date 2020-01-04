@@ -11,9 +11,9 @@ import javax.swing.plaf.basic.BasicComboBoxUI;
 import javax.swing.plaf.basic.BasicComboPopup;
 import javax.swing.plaf.basic.ComboPopup;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.core.aimxcelcore.swing.AimxcelJComboBox;
 
-import edu.colorado.phet.common.piccolophet.swing.AbcLearnJComboBox;
 import edu.colorado.phet.eatingandexercise.model.Human;
 import edu.colorado.phet.eatingandexercise.module.eatingandexercise.EatingAndExerciseCanvas;
 
@@ -21,7 +21,7 @@ import edu.colorado.phet.eatingandexercise.module.eatingandexercise.EatingAndExe
  * Created by: Sam
  * Jun 26, 2008 at 11:57:34 AM
  */
-public class ActivityLevelComboBox extends AbcLearnJComboBox {
+public class ActivityLevelComboBox extends AimxcelJComboBox {
     private EatingAndExerciseCanvas canvas;
     private Human human;
 
@@ -33,7 +33,7 @@ public class ActivityLevelComboBox extends AbcLearnJComboBox {
         }
         updateSelectedItem();
 
-        setFont( new AbcLearnFont( 13, true ) );
+        setFont( new AimxcelFont( 13, true ) );
         addItemListener( new ItemListener() {
             public void itemStateChanged( ItemEvent e ) {
                 human.setActivityLevel( ( (Activity) e.getItem() ) );

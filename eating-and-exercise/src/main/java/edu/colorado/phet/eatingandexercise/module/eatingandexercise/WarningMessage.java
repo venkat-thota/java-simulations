@@ -1,7 +1,7 @@
 
 package edu.colorado.phet.eatingandexercise.module.eatingandexercise;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.eatingandexercise.view.LabelNode;
 
@@ -12,6 +12,6 @@ import edu.colorado.phet.eatingandexercise.view.LabelNode;
 public class WarningMessage extends LabelNode {
     public WarningMessage( String text ) {
         super( text );
-        setFont( new AbcLearnFont( 30, true ) );
+        setFont( new AimxcelFont( 30, true ) );
     }
 }

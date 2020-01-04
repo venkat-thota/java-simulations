@@ -1,8 +1,9 @@
 
 package edu.colorado.phet.eatingandexercise.module.eatingandexercise;
 
-import edu.colorado.phet.common.piccolophet.help.DefaultWiggleMe;
-import edu.colorado.phet.common.piccolophet.help.MotionHelpBalloon;
+import com.aimxcel.abclearn.core.aimxcelcore.help.DefaultWiggleMe;
+import com.aimxcel.abclearn.core.aimxcelcore.help.MotionHelpBalloon;
+
 import edu.colorado.phet.eatingandexercise.control.CaloricItem;
 import edu.colorado.phet.eatingandexercise.model.CalorieSet;
 import edu.umd.cs.piccolo.PNode;

@@ -23,10 +23,10 @@ import javax.swing.event.ChangeListener;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.NumberFormatter;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.MathUtil;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.SliderNode;
+import com.aimxcel.abclearn.core.aimxcelcore.test.PiccoloTestFrame;
 
-import edu.colorado.phet.common.piccolophet.nodes.SliderNode;
-import edu.colorado.phet.common.piccolophet.test.PiccoloTestFrame;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.nodes.PText;
 import edu.umd.cs.piccolox.pswing.PSwing;
@@ -145,7 +145,7 @@ public class LinearValueControlNode extends PNode {
         addChild( readoutNode );
 
         unitsNode = new PText( units );
-        unitsNode.setFont( new JLabel().getFont() );//todo: why does AbcLearnFont return the wrong thing here?
+        unitsNode.setFont( new JLabel().getFont() );//todo: why does AimxcelFont return the wrong thing here?
         addChild( unitsNode );
 
         sliderNode = new SliderNode( min, max, value );

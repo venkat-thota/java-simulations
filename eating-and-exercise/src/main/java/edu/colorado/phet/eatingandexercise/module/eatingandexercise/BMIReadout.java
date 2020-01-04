@@ -6,10 +6,10 @@ import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 import java.text.DecimalFormat;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.model.Human;
 import edu.umd.cs.piccolo.PNode;
@@ -22,11 +22,11 @@ import edu.umd.cs.piccolo.nodes.PText;
 public class BMIReadout extends PNode {
     private PText pText;
     private Human human;
-    private AbcLearnPPath background;
+    private AimxcelPPath background;
 
     public BMIReadout( Human human ) {
         this.pText = new PText();
-        pText.setFont( new AbcLearnFont( 12, true ) );
+        pText.setFont( new AimxcelFont( 12, true ) );
         this.human = human;
 
         human.addListener( new Human.Adapter() {
@@ -35,7 +35,7 @@ public class BMIReadout extends PNode {
             }
         } );
 
-        background = new AbcLearnPPath( new Color( 0.8f, 0.2f, 0.3f ) );
+        background = new AimxcelPPath( new Color( 0.8f, 0.2f, 0.3f ) );
         addChild( background );
         addChild( pText );
         updateReadout();

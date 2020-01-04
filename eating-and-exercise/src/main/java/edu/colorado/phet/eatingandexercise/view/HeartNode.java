@@ -3,12 +3,12 @@ package edu.colorado.phet.eatingandexercise.view;
 
 import java.awt.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
-import com.aimxcel.abclearn.common.abclearncommon.math.MathUtil;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.BufferedImageUtils;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.model.Human;
 import edu.umd.cs.piccolo.nodes.PImage;
@@ -20,7 +20,7 @@ import edu.umd.cs.piccolo.nodes.PImage;
 public class HeartNode extends PImage {
     private PImage heart;
     private Human human;
-    private AbcLearnPPath smilePath;
+    private AimxcelPPath smilePath;
 
     public HeartNode( Human human ) {
         this.human = human;
@@ -39,7 +39,7 @@ public class HeartNode extends PImage {
         rightEye.setOffset( heart.getFullBounds().getWidth() / 2 - rightEye.getFullBounds().getWidth() / 2 + eyeDX / 2, eyeY );
         addChild( rightEye );
 
-        smilePath = new AbcLearnPPath( new BasicStroke( 14f ), Color.black );
+        smilePath = new AimxcelPPath( new BasicStroke( 14f ), Color.black );
         addChild( smilePath );
         human.addListener( new Human.Adapter() {
             public void heartHealthChanged() {

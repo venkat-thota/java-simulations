@@ -9,14 +9,14 @@ import java.awt.event.*;
 import java.awt.geom.Dimension2D;
 import java.awt.geom.Point2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.dialogs.ColorChooserFactory;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnOptionPane;
+import com.aimxcel.abclearn.common.aimxcelcommon.dialogs.ColorChooserFactory;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
+import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.RulerNode;
 
-import edu.colorado.phet.common.piccolophet.BufferedAbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
-import edu.colorado.phet.common.piccolophet.nodes.RulerNode;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseConstants;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.control.CaloriePanel;
@@ -35,7 +35,7 @@ import edu.umd.cs.piccolo.event.PInputEvent;
 import edu.umd.cs.piccolo.util.PDimension;
 import edu.umd.cs.piccolox.pswing.PSwing;
 
-public class EatingAndExerciseCanvas extends BufferedAbcLearnPCanvas {
+public class EatingAndExerciseCanvas extends BufferedAimxcelPCanvas {
 
     //----------------------------------------------------------------------------
     // Instance data
@@ -58,7 +58,7 @@ public class EatingAndExerciseCanvas extends BufferedAbcLearnPCanvas {
     private StarvingMessage starvingMessage;
     private HeartAttackMessage heartAttackMessage;
     private HealthIndicator healthIndicator;
-    private AbcLearnPPath playAreaBackgroundNode;
+    private AimxcelPPath playAreaBackgroundNode;
     private boolean showColorChooser = false;
 
     //----------------------------------------------------------------------------
@@ -82,11 +82,11 @@ public class EatingAndExerciseCanvas extends BufferedAbcLearnPCanvas {
         humanAreaNode = new HumanNode( model.getHuman() );
         humanAreaNode.addListener( new HumanNode.Listener() {
             public void infoButtonPressed() {
-                AbcLearnOptionPane.showMessageDialog( EatingAndExerciseCanvas.this, EatingAndExerciseResources.getString( "heart.health.info" ) );
+                AimxcelOptionPane.showMessageDialog( EatingAndExerciseCanvas.this, EatingAndExerciseResources.getString( "heart.health.info" ) );
             }
         } );
 
-        playAreaBackgroundNode = new AbcLearnPPath( EatingAndExerciseColorScheme.getBackgroundColor(), new BasicStroke( 2 ), Color.gray );
+        playAreaBackgroundNode = new AimxcelPPath( EatingAndExerciseColorScheme.getBackgroundColor(), new BasicStroke( 2 ), Color.gray );
         addScreenChild( playAreaBackgroundNode );
 
         addWorldChild( _rootNode );

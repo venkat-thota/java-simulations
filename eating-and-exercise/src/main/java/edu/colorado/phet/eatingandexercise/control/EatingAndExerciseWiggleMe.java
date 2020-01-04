@@ -5,8 +5,9 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import edu.colorado.phet.common.piccolophet.help.DefaultWiggleMe;
-import edu.colorado.phet.common.piccolophet.help.MotionHelpBalloon;
+import com.aimxcel.abclearn.core.aimxcelcore.help.DefaultWiggleMe;
+import com.aimxcel.abclearn.core.aimxcelcore.help.MotionHelpBalloon;
+
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.umd.cs.piccolo.PCanvas;
 import edu.umd.cs.piccolo.PNode;

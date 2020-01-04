@@ -10,12 +10,12 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
-import com.aimxcel.abclearn.common.abclearncommon.view.VerticalLayoutPanel;
-import com.aimxcel.abclearn.common.abclearncommon.view.controls.valuecontrol.LinearValueControl;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.LinearValueControl;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
 
-import edu.colorado.phet.common.piccolophet.BufferedAbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseStrings;
 import edu.umd.cs.piccolo.PNode;
@@ -180,7 +180,7 @@ public class StackedBarNode extends PNode {
         JFrame frame = new JFrame( "Test Frame" );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         frame.setSize( 800, 600 );
-        AbcLearnPCanvas contentPane = new BufferedAbcLearnPCanvas();
+        AimxcelPCanvas contentPane = new BufferedAimxcelPCanvas();
         frame.setContentPane( contentPane );
 
 //        StackedBarNode barNode = new StackedBarNode( new Function.IdentityFunction(), 100 );

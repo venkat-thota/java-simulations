@@ -5,7 +5,7 @@ import java.awt.*;
 
 import javax.swing.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.VerticalLayoutPanel;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
 
 /**
  * This component makes sure that items are added from the top down instead of centered vertically.

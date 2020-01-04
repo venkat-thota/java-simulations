@@ -14,10 +14,10 @@ import java.util.Random;
 
 import javax.swing.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.BufferedImageUtils;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLImageButtonNode;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.colorado.phet.common.piccolophet.nodes.HTMLImageButtonNode;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.model.CalorieSet;
 import edu.umd.cs.piccolo.PNode;
@@ -50,7 +50,7 @@ public class CalorieNode extends PNode {
         this.calorieSet = calorieSet;
         this.availableTitle = availableTitle;
         this.selectedTitle = selectedTitle;
-        editButton = new HTMLImageButtonNode( editButtonText, new AbcLearnFont( Font.BOLD, 18 ), editButtonColor );
+        editButton = new HTMLImageButtonNode( editButtonText, new AimxcelFont( Font.BOLD, 18 ), editButtonColor );
         editButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 if ( dialog == null ) {

@@ -7,9 +7,9 @@ import java.awt.geom.Point2D;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseConstants;
 import edu.colorado.phet.eatingandexercise.module.eatingandexercise.EatingAndExerciseCanvas;
 import edu.colorado.phet.eatingandexercise.view.EatingAndExercisePText;
@@ -32,7 +32,7 @@ public class BarChartNodeAxisTitleLabelNode extends PNode {
         this.stackedBarChart = stackedBarChart;
         this.parent = parent;
         EatingAndExercisePText text = new EatingAndExercisePText( stackedBarChart.getTitle() );
-        text.setFont( new AbcLearnFont( 20, true ) );
+        text.setFont( new AimxcelFont( 20, true ) );
 
         canvas.addComponentListener( new ComponentAdapter() {
             public void componentResized( ComponentEvent e ) {
@@ -51,7 +51,7 @@ public class BarChartNodeAxisTitleLabelNode extends PNode {
         updateLayout();
         updateLayout();
 
-        backgroundCoverup = new AbcLearnPPath( text.getFullBounds(), EatingAndExerciseConstants.BACKGROUND );
+        backgroundCoverup = new AimxcelPPath( text.getFullBounds(), EatingAndExerciseConstants.BACKGROUND );
         addChild( backgroundCoverup );
         addChild( text );
     }

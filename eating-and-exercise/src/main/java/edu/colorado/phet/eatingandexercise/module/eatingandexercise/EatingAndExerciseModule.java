@@ -9,18 +9,18 @@ import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.Resettable;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockAdapter;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.view.AbcLearnFrame;
-import com.aimxcel.abclearn.common.abclearncommon.view.ResetAllButton;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnOptionPane;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.Resettable;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelFrame;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.ResetAllButton;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
+import com.aimxcel.abclearn.core.aimxcelcore.PiccoloModule;
+import com.aimxcel.abclearn.core.aimxcelcore.help.DefaultWiggleMe;
+import com.aimxcel.abclearn.core.aimxcelcore.help.HelpPane;
+import com.aimxcel.abclearn.core.aimxcelcore.help.MotionHelpBalloon;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.PiccoloClockControlPanel;
 
-import edu.colorado.phet.common.piccolophet.PiccoloModule;
-import edu.colorado.phet.common.piccolophet.help.DefaultWiggleMe;
-import edu.colorado.phet.common.piccolophet.help.HelpPane;
-import edu.colorado.phet.common.piccolophet.help.MotionHelpBalloon;
-import edu.colorado.phet.common.piccolophet.nodes.mediabuttons.PiccoloClockControlPanel;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseStrings;
 import edu.colorado.phet.eatingandexercise.control.CaloricItem;
@@ -46,7 +46,7 @@ public class EatingAndExerciseModule extends PiccoloModule {
         return EatingAndExerciseUnits.secondsToYears( _model.getHuman().getAge() );
     }
 
-    public EatingAndExerciseModule( final AbcLearnFrame parentFrame ) {
+    public EatingAndExerciseModule( final AimxcelFrame parentFrame ) {
         super( EatingAndExerciseStrings.TITLE_EATING_AND_EXERCISE_MODULE, new EatingAndExerciseClock(), EatingAndExerciseDefaults.STARTS_PAUSED );
         this.parentFrame = parentFrame;
 
@@ -150,7 +150,7 @@ public class EatingAndExerciseModule extends PiccoloModule {
         JButton disclaimerButton = new JButton( EatingAndExerciseResources.getString( "disclaimer" ) );
         disclaimerButton.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
-                AbcLearnOptionPane.showMessageDialog( parentFrame, EatingAndExerciseStrings.DISCLAIMER );
+                AimxcelOptionPane.showMessageDialog( parentFrame, EatingAndExerciseStrings.DISCLAIMER );
             }
         } );
         _clockControlPanel.add( new EatingAndExerciseHelpButton(), 0 );

@@ -11,11 +11,11 @@ import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.TitledBorder;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.BufferedImageUtils;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.PieChartNode;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.nodes.PieChartNode;
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.model.CalorieSet;
 import edu.colorado.phet.eatingandexercise.module.eatingandexercise.CaloricFoodItem;
@@ -113,7 +113,7 @@ public class CalorieSelectionPanel extends JPanel implements ICalorieSelectionPa
     }
 
     public static TitledBorder createTitledBorder( String title ) {
-        return new TitledBorder( new BevelBorder( BevelBorder.LOWERED ), title, TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION, new AbcLearnFont( 16, true ) ) {
+        return new TitledBorder( new BevelBorder( BevelBorder.LOWERED ), title, TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION, new AimxcelFont( 16, true ) ) {
             public void paintBorder( Component c, Graphics g, int x, int y, int width, int height ) {
                 Graphics2D g2 = (Graphics2D) g;
                 g2.setRenderingHint( RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON );
@@ -137,7 +137,7 @@ public class CalorieSelectionPanel extends JPanel implements ICalorieSelectionPa
                 add( Box.createHorizontalStrut( maxImageW - imageW ) );
             }
             JLabel jLabel = new JLabel( jlabelText );
-            jLabel.setFont( new AbcLearnFont( 12 ) );
+            jLabel.setFont( new AimxcelFont( 12 ) );
             add( jLabel );
         }
 
@@ -149,7 +149,7 @@ public class CalorieSelectionPanel extends JPanel implements ICalorieSelectionPa
         }
 
         protected void showPieChart( CaloricFoodItem c ) {
-            AbcLearnPCanvas pieChartCanvas = new AbcLearnPCanvas();
+            AimxcelPCanvas pieChartCanvas = new AimxcelPCanvas();
             pieChartCanvas.setPreferredSize( new Dimension( 50, 50 ) );
             pieChartCanvas.addScreenChild( new PieChartNode( new PieChartNode.PieValue[]{
                     new PieChartNode.PieValue( c.getCarbCalories(), EatingAndExerciseColorScheme.CARBS ),

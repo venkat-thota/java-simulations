@@ -3,7 +3,8 @@ package edu.colorado.phet.eatingandexercise.control;
 
 import javax.swing.*;
 
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+
 import edu.colorado.phet.eatingandexercise.model.CalorieSet;
 import edu.colorado.phet.eatingandexercise.model.Human;
 import edu.umd.cs.piccolo.PNode;
@@ -61,7 +62,7 @@ public class SummaryNode extends PNode {
     public static void main( String[] args ) {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-        AbcLearnPCanvas contentPane = new AbcLearnPCanvas();
+        AimxcelPCanvas contentPane = new AimxcelPCanvas();
         SummaryNode node = new SummaryNode( new CalorieSet() );
         node.addItem( new ExerciseItem( "banana split", "bananasplit.png", 100, 0, 160, new Human() ) );
         node.addItem( new ExerciseItem( "burger", "burger.png", 100, 0, 160, new Human() ) );

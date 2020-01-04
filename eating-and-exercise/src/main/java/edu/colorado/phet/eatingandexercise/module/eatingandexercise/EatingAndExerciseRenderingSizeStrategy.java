@@ -3,14 +3,15 @@ package edu.colorado.phet.eatingandexercise.module.eatingandexercise;
 
 import java.awt.geom.AffineTransform;
 
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+
 import edu.colorado.phet.eatingandexercise.model.EatingAndExerciseUnits;
 
 /**
  * Created by: Sam
  * Apr 18, 2008 at 1:14:25 AM
  */
-public class EatingAndExerciseRenderingSizeStrategy implements AbcLearnPCanvas.TransformStrategy {
+public class EatingAndExerciseRenderingSizeStrategy implements AimxcelPCanvas.TransformStrategy {
     private EatingAndExerciseCanvas canvas;
 
     public EatingAndExerciseRenderingSizeStrategy( EatingAndExerciseCanvas canvas ) {

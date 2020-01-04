@@ -5,10 +5,10 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 
-import edu.colorado.phet.common.piccolophet.nodes.HTMLNode;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.PNode;
 
 /**
@@ -31,7 +31,7 @@ public class HealthBar extends PNode {
         this.minOptimal = minOptimal;
         this.maxOptimal = maxOptimal;
         this.viewHeight = viewHeight;
-        AbcLearnPPath boundary = new AbcLearnPPath( new Rectangle2D.Double( 0, 0, viewWidth, viewHeight ), new BasicStroke( 1 ), Color.black );
+        AimxcelPPath boundary = new AimxcelPPath( new Rectangle2D.Double( 0, 0, viewWidth, viewHeight ), new BasicStroke( 1 ), Color.black );
 
         HTMLNode label = new HTMLNode( name );
         addChild( label );
@@ -49,24 +49,24 @@ public class HealthBar extends PNode {
         addChild( boundary );
     }
 
-    private AbcLearnPPath getPath( double a, double b, Color c1, Color c2 ) {
+    private AimxcelPPath getPath( double a, double b, Color c1, Color c2 ) {
         Point2D optimalCorner = new Point2D.Double( 0, modelToView.evaluate( a ) );
         Point2D extremumCorner = new Point2D.Double( 0, modelToView.evaluate( b ) );
 
         GradientPaint gradientPaint = new GradientPaint( optimalCorner, c1, extremumCorner, c2 );
         Rectangle2D.Double rec = new Rectangle2D.Double();
         rec.setFrameFromDiagonal( optimalCorner, new Point2D.Double( extremumCorner.getX() + viewWidth, extremumCorner.getY() ) );
-        return new AbcLearnPPath( rec, gradientPaint );
+        return new AimxcelPPath( rec, gradientPaint );
     }
 
-//    private AbcLearnPPath getPath( double extremum ) {
+//    private AimxcelPPath getPath( double extremum ) {
 //        Point2D optimalCorner = new Point2D.Double( 0, modelToView.evaluate( minOptimal ) );
 //        Point2D extremumCorner = new Point2D.Double( 0, modelToView.evaluate( extremum ) );
 //
 //        GradientPaint gradientPaint = new GradientPaint( optimalCorner, Color.green, extremumCorner, Color.red );
 //        Rectangle2D.Double rec = new Rectangle2D.Double();
 //        rec.setFrameFromDiagonal( optimalCorner, new Point2D.Double( extremumCorner.getX() + viewWidth, extremumCorner.getY() ) );
-//        AbcLearnPPath bottom = new AbcLearnPPath( rec, gradientPaint );
+//        AimxcelPPath bottom = new AimxcelPPath( rec, gradientPaint );
 //        return bottom;
 //    }
 

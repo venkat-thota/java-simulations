@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
 
 import javax.imageio.ImageIO;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.BufferedImageUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
 
 import edu.colorado.phet.eatingandexercise.EatingAndExerciseResources;
 import edu.colorado.phet.eatingandexercise.control.CaloricItem;

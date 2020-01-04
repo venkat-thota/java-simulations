@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.Function;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
 
 import edu.colorado.phet.common.motion.model.DefaultTemporalVariable;
 import edu.colorado.phet.common.motion.model.IVariable;

@@ -5,11 +5,11 @@ import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 
-import edu.colorado.phet.common.piccolophet.nodes.HTMLNode;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.PNode;
 
 /**
@@ -18,14 +18,14 @@ import edu.umd.cs.piccolo.PNode;
  */
 public class LabelNode extends PNode {
     private HTMLNode htmlNode;
-    private AbcLearnPPath background;
+    private AimxcelPPath background;
 
     public LabelNode( String text ) {
         htmlNode = new HTMLNode( text );
-        htmlNode.setFont( new AbcLearnFont( 16, true ) );
+        htmlNode.setFont( new AimxcelFont( 16, true ) );
 
         Color color = new Color( 246, 239, 169, 200 );
-        background = new AbcLearnPPath( color );
+        background = new AimxcelPPath( color );
 
         addChild( background );
         addChild( htmlNode );

@@ -4,25 +4,25 @@ package edu.colorado.phet.eatingandexercise;
 
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnCommonResources;
-import com.aimxcel.abclearn.common.abclearncommon.resources.AbcLearnResources;
+import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
+import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelResources;
 
 import edu.umd.cs.piccolo.nodes.PImage;
 
 /**
- * TemplateResources is a wrapper around the PhET resource loader.
+ * TemplateResources is a wrapper around the Aimxcel resource loader.
  * If we decide to use a different technique to load resources in the
  * future, all changes will be encapsulated here.
  */
 public class EatingAndExerciseResources {
 
-    private static final AbcLearnResources RESOURCES = new AbcLearnResources( EatingAndExerciseConstants.PROJECT_NAME );
+    private static final AimxcelResources RESOURCES = new AimxcelResources( EatingAndExerciseConstants.PROJECT_NAME );
 
     /* not intended for instantiation */
     private EatingAndExerciseResources() {
     }
 
-    public static final AbcLearnResources getResourceLoader() {
+    public static final AimxcelResources getResourceLoader() {
         return RESOURCES;
     }
 
@@ -47,10 +47,10 @@ public class EatingAndExerciseResources {
     }
 
     public static final String getCommonString( String name ) {
-        return AbcLearnCommonResources.getInstance().getLocalizedString( name );
+        return AimxcelCommonResources.getInstance().getLocalizedString( name );
     }
 
     public static final BufferedImage getCommonImage( String name ) {
-        return AbcLearnCommonResources.getInstance().getImage( name );
+        return AimxcelCommonResources.getInstance().getImage( name );
     }
 }

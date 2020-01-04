@@ -1,8 +1,8 @@
 
 package edu.colorado.phet.eatingandexercise.module.eatingandexercise;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.TimingStrategy;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.TimingStrategy;
 
 /**
  * Created by: Sam

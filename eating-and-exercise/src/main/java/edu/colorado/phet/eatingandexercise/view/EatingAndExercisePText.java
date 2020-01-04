@@ -1,7 +1,7 @@
 
 package edu.colorado.phet.eatingandexercise.view;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.umd.cs.piccolo.nodes.PText;
 
@@ -11,11 +11,11 @@ import edu.umd.cs.piccolo.nodes.PText;
  */
 public class EatingAndExercisePText extends PText {
     public EatingAndExercisePText() {
-        setFont( new AbcLearnFont() );
+        setFont( new AimxcelFont() );
     }
 
     public EatingAndExercisePText( String aText ) {
         super( aText );
-        setFont( new AbcLearnFont() );
+        setFont( new AimxcelFont() );
     }
 }

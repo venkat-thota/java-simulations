@@ -4,9 +4,9 @@ package edu.colorado.phet.eatingandexercise.view;
 import java.awt.*;
 import java.awt.geom.GeneralPath;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.PNode;
 
 /**
@@ -15,11 +15,11 @@ import edu.umd.cs.piccolo.PNode;
  */
 public class HealthLevel extends PNode {
     private HealthBar bar;
-    private AbcLearnPPath path;
+    private AimxcelPPath path;
 
     public HealthLevel( HealthBar bar ) {
         this.bar = bar;
-        path = new AbcLearnPPath( createPath(), Color.blue );
+        path = new AimxcelPPath( createPath(), Color.blue );
         addChild( path );
     }
 

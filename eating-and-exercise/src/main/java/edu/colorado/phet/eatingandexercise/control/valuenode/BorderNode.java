@@ -3,9 +3,9 @@ package edu.colorado.phet.eatingandexercise.control.valuenode;
 
 import java.awt.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.PNode;
 
 /**
@@ -13,7 +13,7 @@ import edu.umd.cs.piccolo.PNode;
  * Jun 24, 2008 at 8:46:37 PM
  */
 public class BorderNode extends PNode {
-    private AbcLearnPPath borderPath;
+    private AimxcelPPath borderPath;
     private PNode child;
     private double dw;
     private double dh;
@@ -23,7 +23,7 @@ public class BorderNode extends PNode {
         this.dw = dw;
         this.dh = dh;
         addChild( child );
-        borderPath = new AbcLearnPPath( new BasicStroke( 1 ), Color.black );
+        borderPath = new AimxcelPPath( new BasicStroke( 1 ), Color.black );
         addChild( borderPath );
         relayout();
     }

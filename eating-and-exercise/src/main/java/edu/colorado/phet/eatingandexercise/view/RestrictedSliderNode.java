@@ -3,10 +3,10 @@ package edu.colorado.phet.eatingandexercise.view;
 
 import java.awt.*;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.MathUtil;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.SliderNode;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
-import edu.colorado.phet.common.piccolophet.nodes.SliderNode;
 import edu.umd.cs.piccolo.PNode;
 
 /**
@@ -38,14 +38,14 @@ public class RestrictedSliderNode extends SliderNode {
     }
 
     private class RestrictedRangeNode extends PNode {
-        private AbcLearnPPath path;
+        private AimxcelPPath path;
         private double min;
         private double max;
 
         public RestrictedRangeNode( double min, double max ) {
             this.min = min;
             this.max = max;
-            path = new AbcLearnPPath( Color.red, new BasicStroke( 1 ), Color.black );
+            path = new AimxcelPPath( Color.red, new BasicStroke( 1 ), Color.black );
             addChild( path );
             updatePath();
         }
