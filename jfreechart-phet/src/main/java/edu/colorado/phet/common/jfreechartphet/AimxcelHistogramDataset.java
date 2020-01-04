@@ -14,7 +14,7 @@ import org.jfree.util.ObjectUtilities;
 import org.jfree.util.PublicCloneable;
 
 /**
- * AbcLearnHistogramDataset is a JFreeChart dataset for creating histograms.
+ * AimxcelHistogramDataset is a JFreeChart dataset for creating histograms.
  * It is loosely based on org.jfree.data.statistics.HistogramDataset,
  * which was unfortunately not written to be extensible or dynamic.
  * <p/>
@@ -24,14 +24,14 @@ import org.jfree.util.PublicCloneable;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implements IntervalXYDataset, Cloneable, PublicCloneable, Serializable {
+public class AimxcelHistogramDataset extends AbstractIntervalXYDataset implements IntervalXYDataset, Cloneable, PublicCloneable, Serializable {
 
     //----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
 
     private HistogramType histogramType;
-    private List seriesList; // list of AbcLearnHistogramSeries
+    private List seriesList; // list of AimxcelHistogramSeries
 
     //----------------------------------------------------------------------------
     // Constructors
@@ -40,7 +40,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
     /**
      * Creates an empty dataset of type HistogramType.FREQUENCY.
      */
-    public AbcLearnHistogramDataset() {
+    public AimxcelHistogramDataset() {
         this( HistogramType.FREQUENCY );
     }
 
@@ -49,7 +49,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      *
      * @param histogramType the histogram type (null not permitted)
      */
-    public AbcLearnHistogramDataset( HistogramType histogramType ) {
+    public AimxcelHistogramDataset( HistogramType histogramType ) {
         if ( histogramType == null ) {
             throw new IllegalArgumentException( "histogramType is null" );
         }
@@ -92,20 +92,20 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      * @param seriesIndex
      * @return the series
      */
-    public AbcLearnHistogramSeries getSeries( int seriesIndex ) {
-        return (AbcLearnHistogramSeries) seriesList.get( seriesIndex );
+    public AimxcelHistogramSeries getSeries( int seriesIndex ) {
+        return (AimxcelHistogramSeries) seriesList.get( seriesIndex );
     }
 
     /**
      * Gets a series by key.
      *
      * @param seriesKey
-     * @return AbcLearnHistogramSeries, null if not found
+     * @return AimxcelHistogramSeries, null if not found
      */
-    public AbcLearnHistogramSeries getSeries( Comparable seriesKey ) {
-        AbcLearnHistogramSeries series = null;
+    public AimxcelHistogramSeries getSeries( Comparable seriesKey ) {
+        AimxcelHistogramSeries series = null;
         for ( int i = 0; i < seriesList.size(); i++ ) {
-            series = (AbcLearnHistogramSeries) seriesList.get( i );
+            series = (AimxcelHistogramSeries) seriesList.get( i );
             if ( series.getKey().compareTo( seriesKey ) == 0 ) {
                 break;
             }
@@ -119,7 +119,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      * @param series
      * @return index, -1 if the dataset does not contain this series
      */
-    public int getSeriesIndex( AbcLearnHistogramSeries series ) {
+    public int getSeriesIndex( AimxcelHistogramSeries series ) {
         return seriesList.indexOf( series );
     }
 
@@ -131,7 +131,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      */
     public int getSeriesIndex( Comparable seriesKey ) {
         int seriesIndex = -1;
-        AbcLearnHistogramSeries series = getSeries( seriesKey );
+        AimxcelHistogramSeries series = getSeries( seriesKey );
         if ( series != null ) {
             seriesIndex = getSeriesIndex( series );
         }
@@ -150,7 +150,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      * @param series
      * @return the index of the series
      */
-    public int addSeries( AbcLearnHistogramSeries series ) {
+    public int addSeries( AimxcelHistogramSeries series ) {
         seriesList.add( series );
         series.addChangeListener( this );
         fireDatasetChanged();
@@ -167,7 +167,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      *
      * @param seriesIndex
      */
-    public void removeSeries( AbcLearnHistogramSeries series ) {
+    public void removeSeries( AimxcelHistogramSeries series ) {
         seriesList.remove( series );
         series.removeChangeListener( this );
         fireDatasetChanged();
@@ -184,7 +184,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      * @param seriesIndex
      */
     public void removeSeries( int seriesIndex ) {
-        AbcLearnHistogramSeries series = (AbcLearnHistogramSeries) seriesList.get( seriesIndex );
+        AimxcelHistogramSeries series = (AimxcelHistogramSeries) seriesList.get( seriesIndex );
         removeSeries( series );
     }
 
@@ -208,7 +208,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      * @return the series key
      */
     public Comparable getSeriesKey( int seriesIndex ) {
-        AbcLearnHistogramSeries series = getSeries( seriesIndex );
+        AimxcelHistogramSeries series = getSeries( seriesIndex );
         return series.getKey();
     }
 
@@ -228,7 +228,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      * @return the item (bin) count
      */
     public int getItemCount( int seriesIndex ) {
-        AbcLearnHistogramSeries series = getSeries( seriesIndex );
+        AimxcelHistogramSeries series = getSeries( seriesIndex );
         return series.getNumberOfBins();
     }
 
@@ -242,7 +242,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      * @return the start value
      */
     public Number getX( int seriesIndex, int binIndex ) {
-        AbcLearnHistogramSeries series = getSeries( seriesIndex );
+        AimxcelHistogramSeries series = getSeries( seriesIndex );
         double startBoundary = series.getStartBoundary( binIndex );
         double endBoundary = series.getEndBoundary( binIndex );
         final double x = ( startBoundary + endBoundary ) / 2.;
@@ -259,7 +259,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      */
     public Number getY( int seriesIndex, int binIndex ) {
 
-        AbcLearnHistogramSeries series = getSeries( seriesIndex );
+        AimxcelHistogramSeries series = getSeries( seriesIndex );
         final double totalObservations = series.getNumberOfObservations();
         final double binObservations = series.getNumberOfObservations( binIndex );
         final double binWidth = series.getBinWidth();
@@ -288,7 +288,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      * @return the start value
      */
     public Number getStartX( int seriesIndex, int binIndex ) {
-        AbcLearnHistogramSeries series = getSeries( seriesIndex );
+        AimxcelHistogramSeries series = getSeries( seriesIndex );
         double startBoundary = series.getStartBoundary( binIndex );
         return new Double( startBoundary );
     }
@@ -301,7 +301,7 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
      * @return the end value
      */
     public Number getEndX( int seriesIndex, int binIndex ) {
-        AbcLearnHistogramSeries series = getSeries( seriesIndex );
+        AimxcelHistogramSeries series = getSeries( seriesIndex );
         double endBoundary = series.getEndBoundary( binIndex );
         return new Double( endBoundary );
     }
@@ -346,10 +346,10 @@ public class AbcLearnHistogramDataset extends AbstractIntervalXYDataset implemen
         if ( obj == this ) {
             return true;
         }
-        if ( !( obj instanceof AbcLearnHistogramDataset ) ) {
+        if ( !( obj instanceof AimxcelHistogramDataset ) ) {
             return false;
         }
-        AbcLearnHistogramDataset that = (AbcLearnHistogramDataset) obj;
+        AimxcelHistogramDataset that = (AimxcelHistogramDataset) obj;
         if ( !ObjectUtilities.equal( this.histogramType, that.histogramType ) ) {
             return false;
         }

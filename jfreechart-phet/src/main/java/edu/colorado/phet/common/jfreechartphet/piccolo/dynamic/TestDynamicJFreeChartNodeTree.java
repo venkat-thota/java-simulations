@@ -6,7 +6,8 @@ import java.awt.Rectangle;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.nodes.PText;
 
@@ -21,13 +22,13 @@ public class TestDynamicJFreeChartNodeTree extends TestDynamicJFreeChartNode {
     private PText text;
 
     public TestDynamicJFreeChartNodeTree() {
-        getAbcLearnPCanvas().removeScreenChild( getDynamicJFreeChartNode() );
-        root = new AbcLearnPPath( new Rectangle( 0, 0, 10, 10 ), Color.blue );
+        getAimxcelPCanvas().removeScreenChild( getDynamicJFreeChartNode() );
+        root = new AimxcelPPath( new Rectangle( 0, 0, 10, 10 ), Color.blue );
 
         root.addChild( getDynamicJFreeChartNode() );
 
-        getAbcLearnPCanvas().addScreenChild( root );
-        getAbcLearnPCanvas().addKeyListener( new KeyAdapter() {
+        getAimxcelPCanvas().addScreenChild( root );
+        getAimxcelPCanvas().addKeyListener( new KeyAdapter() {
             public void keyPressed( KeyEvent e ) {
                 if ( e.getKeyCode() == KeyEvent.VK_PAGE_UP ) {
                     root.scale( 1.1 );
@@ -40,7 +41,7 @@ public class TestDynamicJFreeChartNodeTree extends TestDynamicJFreeChartNode {
         constructed = true;
 
         text = new PText( "Page Up/Down to scale" );
-        getAbcLearnPCanvas().addScreenChild( text );
+        getAimxcelPCanvas().addScreenChild( text );
     }
 
     protected void relayout() {

@@ -9,7 +9,7 @@ import java.util.List;
 import org.jfree.data.general.Series;
 
 /**
- * AbcLearnHistogramSeries is a JFreeChart series for histogram observations.
+ * AimxcelHistogramSeries is a JFreeChart series for histogram observations.
  * <p/>
  * A histogram series has an immutable range, which is divided into equal-width bins.
  * When a one-dimensional data point (referred to as an observation) is added to a series,
@@ -17,25 +17,25 @@ import org.jfree.data.general.Series;
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class AbcLearnHistogramSeries extends Series {
+public class AimxcelHistogramSeries extends Series {
 
     //----------------------------------------------------------------------------
     // Inner classes
     //----------------------------------------------------------------------------
 
     /**
-     * AbcLearnHistogramBin describes a bin in a histogram.
+     * AimxcelHistogramBin describes a bin in a histogram.
      * A bin has start and end boundaries, and a count of the number of
      * observations that have fallen in the range between its boundaries.
      */
-    private static class AbcLearnHistogramBin {
+    private static class AimxcelHistogramBin {
 
         private final double startBoundary;
         private final double endBoundary;
         private int numberOfObservations; // mutable
 
         /* Creates an empty bin */
-        public AbcLearnHistogramBin( double startBoundary, double endBoundary ) {
+        public AimxcelHistogramBin( double startBoundary, double endBoundary ) {
             this.startBoundary = startBoundary;
             this.endBoundary = endBoundary;
             this.numberOfObservations = 0;
@@ -89,7 +89,7 @@ public class AbcLearnHistogramSeries extends Series {
      * @param maximum
      * @param numberOfBins
      */
-    public AbcLearnHistogramSeries( Comparable key, double minimum, double maximum, int numberOfBins ) {
+    public AimxcelHistogramSeries( Comparable key, double minimum, double maximum, int numberOfBins ) {
         this( key, minimum, maximum, numberOfBins, null /* observations */ );
     }
 
@@ -102,7 +102,7 @@ public class AbcLearnHistogramSeries extends Series {
      * @param numberOfBins
      * @param observations
      */
-    public AbcLearnHistogramSeries( Comparable key, double minimum, double maximum, int numberOfBins, double[] observations ) {
+    public AimxcelHistogramSeries( Comparable key, double minimum, double maximum, int numberOfBins, double[] observations ) {
         super( key );
 
         if ( key == null ) {
@@ -133,7 +133,7 @@ public class AbcLearnHistogramSeries extends Series {
             else {
                 endBoundary = minimum + ( i + 1 ) * binWidth;
             }
-            bins.add( new AbcLearnHistogramBin( startBoundary, endBoundary ) );
+            bins.add( new AimxcelHistogramBin( startBoundary, endBoundary ) );
             startBoundary = endBoundary;
             endBoundary = startBoundary + binWidth;
         }
@@ -219,8 +219,8 @@ public class AbcLearnHistogramSeries extends Series {
     * @param binIndex
     */
 
-    private AbcLearnHistogramBin getBin( int binIndex ) {
-        return (AbcLearnHistogramBin) bins.get( binIndex );
+    private AimxcelHistogramBin getBin( int binIndex ) {
+        return (AimxcelHistogramBin) bins.get( binIndex );
     }
 
     /**
@@ -272,7 +272,7 @@ public class AbcLearnHistogramSeries extends Series {
         // clear all bins
         Iterator i = bins.iterator();
         while ( i.hasNext() ) {
-            ( (AbcLearnHistogramBin) i.next() ).clear();
+            ( (AimxcelHistogramBin) i.next() ).clear();
         }
         // clear the series
         numberOfObservations = 0;

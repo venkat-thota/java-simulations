@@ -6,8 +6,9 @@ import java.awt.Color;
 import java.awt.Rectangle;
 import java.awt.geom.Point2D;
 
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+
 import edu.umd.cs.piccolo.event.PDragEventHandler;
 
 /**
@@ -22,10 +23,10 @@ public class TestInterleavedSeries extends TestDynamicJFreeChartNode {
         getDynamicJFreeChartNode().addSeries( "Series 1", Color.green );
         getDynamicJFreeChartNode().addSeries( "Series 2", Color.red );
         getDynamicJFreeChartNode().addSeries( "Series 3", Color.black );
-        AbcLearnPPath phetPPath = new AbcLearnPPath( new Rectangle( 0, 0, 100, 100 ), new BasicStroke( 2 ), Color.green );
+        AimxcelPPath phetPPath = new AimxcelPPath( new Rectangle( 0, 0, 100, 100 ), new BasicStroke( 2 ), Color.green );
         phetPPath.addInputEventListener( new PDragEventHandler() );
         phetPPath.addInputEventListener( new CursorHandler() );
-        getAbcLearnPCanvas().addScreenChild( phetPPath );
+        getAimxcelPCanvas().addScreenChild( phetPPath );
     }
 
     protected void updateGraph() {

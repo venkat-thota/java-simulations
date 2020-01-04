@@ -18,15 +18,16 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeriesCollection;
 
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+
 import edu.colorado.phet.common.jfreechartphet.piccolo.JFreeChartNode;
 import edu.colorado.phet.common.jfreechartphet.piccolo.dynamic.DynamicJFreeChartNode;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 import edu.umd.cs.piccolox.pswing.PSwing;
 
 public class TestDataAreaChange {
     private JFrame frame;
     private Timer timer;
-    private AbcLearnPCanvas phetPCanvas;
+    private AimxcelPCanvas phetPCanvas;
     private JFreeChartNode dynamicJFreeChartNode;
     private PSwing pSwing;
 
@@ -35,7 +36,7 @@ public class TestDataAreaChange {
         frame.setSize( 1280, 768 - 100 );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
-        phetPCanvas = new AbcLearnPCanvas();
+        phetPCanvas = new AimxcelPCanvas();
         frame.setContentPane( phetPCanvas );
 
         JFreeChart chart = ChartFactory.createXYLineChart( "title", "x", "y", new XYSeriesCollection(), PlotOrientation.VERTICAL, false, false, false );

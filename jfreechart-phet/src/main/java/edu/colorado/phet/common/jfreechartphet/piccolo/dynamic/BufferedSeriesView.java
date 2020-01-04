@@ -29,7 +29,7 @@ public class BufferedSeriesView extends SeriesView {
     public static final BasicStroke DEFAULT_STROKE = new BasicStroke( 3.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER, 1.0f );
 //    private BasicStroke DEFAULT_STROKE = new BasicStroke( 3.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER, 1.0f, new float[]{10, 10}, 0 );
 
-    //    private AbcLearnPPath debugRegion = new AbcLearnPPath( new BasicStroke( 3 ), Color.blue );
+    //    private AimxcelPPath debugRegion = new AimxcelPPath( new BasicStroke( 3 ), Color.blue );
     private boolean updateAllEnabled = false;
     private double lastLineLength = 0;
 
@@ -44,8 +44,8 @@ public class BufferedSeriesView extends SeriesView {
                 paintAll();
             }
         } );
-//        dynamicJFreeChartNode.getAbcLearnPCanvas().addScreenChild( debugRegion );
-        dynamicJFreeChartNode.getAbcLearnPCanvas().addComponentListener( new ComponentAdapter() {
+//        dynamicJFreeChartNode.getAimxcelPCanvas().addScreenChild( debugRegion );
+        dynamicJFreeChartNode.getAimxcelPCanvas().addComponentListener( new ComponentAdapter() {
             public void componentResized( ComponentEvent e ) {
                 paintAll();
             }
@@ -83,7 +83,7 @@ public class BufferedSeriesView extends SeriesView {
         Shape sh = getSeriesData().getStroke().createStrokedShape( viewLine );
         Rectangle2D bounds = sh.getBounds2D();
         getDynamicJFreeChartNode().localToGlobal( bounds );
-        getDynamicJFreeChartNode().getAbcLearnPCanvas().getAbcLearnRootNode().globalToScreen( bounds );
+        getDynamicJFreeChartNode().getAimxcelPCanvas().getAimxcelRootNode().globalToScreen( bounds );
         repaintPanel( translateDown( bounds ) );
     }
 
@@ -154,7 +154,7 @@ public class BufferedSeriesView extends SeriesView {
                 graphics2D.draw( translateDown( toGeneralPath() ) );//toGeneralPath calls our overriden getNodePoint
             }
             //todo: the following line seems unnecessary in Rotation, and slows performance
-//            repaintPanel( translateDown( new Rectangle2D.Double( 0, 0, getDynamicJFreeChartNode().getAbcLearnPCanvas().getWidth(), getDynamicJFreeChartNode().getAbcLearnPCanvas().getHeight() ) ) );
+//            repaintPanel( translateDown( new Rectangle2D.Double( 0, 0, getDynamicJFreeChartNode().getAimxcelPCanvas().getWidth(), getDynamicJFreeChartNode().getAimxcelPCanvas().getHeight() ) ) );
         }
     }
 
@@ -185,7 +185,7 @@ public class BufferedSeriesView extends SeriesView {
         Rectangle2D dataArea = getDataArea();
         getDynamicJFreeChartNode().localToGlobal( dataArea );
         Rectangle2D b = bounds.createIntersection( dataArea );
-        getDynamicJFreeChartNode().getAbcLearnPCanvas().repaint( new PBounds( b ) );
+        getDynamicJFreeChartNode().getAimxcelPCanvas().repaint( new PBounds( b ) );
     }
 
 }

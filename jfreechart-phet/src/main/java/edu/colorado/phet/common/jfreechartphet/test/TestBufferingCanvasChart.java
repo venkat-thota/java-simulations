@@ -19,11 +19,12 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeriesCollection;
 
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
+import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+
 import edu.colorado.phet.common.jfreechartphet.piccolo.JFreeChartNode;
-import edu.colorado.phet.common.piccolophet.BufferedAbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.AbcLearnPNode;
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
 import edu.umd.cs.piccolo.PCanvas;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PDragEventHandler;
@@ -33,7 +34,7 @@ import edu.umd.cs.piccolo.util.PDebug;
 /**
  * For debugging Unfuddle #1404.
  * <p/>
- * When an unbuffered JFreeChartNode is displayed on a BufferedAbcLearnPCanvas,
+ * When an unbuffered JFreeChartNode is displayed on a BufferedAimxcelPCanvas,
  * rendering doesn't work correctly on Mac OS 10.5 with Java 1.5.0_16.
  * In this example, the red circles disappear.  They are still in the scene,
  * because the cursor changes and they are visible while dragging.
@@ -55,7 +56,7 @@ public class TestBufferingCanvasChart extends JFrame {
         super( "Test Buffering" );
 
         // play area
-        canvas = ( BUFFERED_CANVAS ? new BufferedAbcLearnPCanvas() : new AbcLearnPCanvas() );
+        canvas = ( BUFFERED_CANVAS ? new BufferedAimxcelPCanvas() : new AimxcelPCanvas() );
         canvas.setPreferredSize( CANVAS_SIZE );
 
         // control panel
@@ -87,7 +88,7 @@ public class TestBufferingCanvasChart extends JFrame {
         nextWidgetLocation.setLocation( nextWidgetLocation.getX() + 50, nextWidgetLocation.getY() + 50 );
     }
 
-    private static class MyWidgetNode extends AbcLearnPNode {
+    private static class MyWidgetNode extends AimxcelPNode {
         public MyWidgetNode() {
             // chart
             PNode chartNode = new MyChartNode();

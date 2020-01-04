@@ -45,7 +45,7 @@ public class PPathSeriesView extends SeriesView {
 
         updateClip();
 
-        dynamicJFreeChartNode.getAbcLearnPCanvas().addComponentListener( new ComponentAdapter() {
+        dynamicJFreeChartNode.getAimxcelPCanvas().addComponentListener( new ComponentAdapter() {
             public void componentResized( ComponentEvent e ) {
                 updateAll();
             }

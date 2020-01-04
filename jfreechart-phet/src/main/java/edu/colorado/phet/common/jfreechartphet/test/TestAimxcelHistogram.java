@@ -14,18 +14,18 @@ import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYBarRenderer;
 
-import edu.colorado.phet.common.jfreechartphet.AbcLearnHistogramDataset;
-import edu.colorado.phet.common.jfreechartphet.AbcLearnHistogramSeries;
+import edu.colorado.phet.common.jfreechartphet.AimxcelHistogramDataset;
+import edu.colorado.phet.common.jfreechartphet.AimxcelHistogramSeries;
 
 /**
- * Test application for AbcLearnHistogramSeries and AbcLearnHistogramDataset.
+ * Test application for AimxcelHistogramSeries and AimxcelHistogramDataset.
  * This test is not exhaustive, and the data is identical to the HistogramData1 demo in jfreechart.
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class TestAbcLearnHistogram extends JFrame {
+public class TestAimxcelHistogram extends JFrame {
 
-    public TestAbcLearnHistogram() {
+    public TestAimxcelHistogram() {
         super();
 
         // Series 1
@@ -34,17 +34,17 @@ public class TestAbcLearnHistogram extends JFrame {
         for ( int i = 0; i < 1000; i++ ) {
             values[i] = generator.nextGaussian() + 5;
         }
-        AbcLearnHistogramSeries series1 = new AbcLearnHistogramSeries( "series1", 2.0, 8.0, 100, values );
+        AimxcelHistogramSeries series1 = new AimxcelHistogramSeries( "series1", 2.0, 8.0, 100, values );
 
         // Series 2
         values = new double[1000];
         for ( int i = 0; i < 1000; i++ ) {
             values[i] = generator.nextGaussian() + 7;
         }
-        AbcLearnHistogramSeries series2 = new AbcLearnHistogramSeries( "series2", 4.0, 10.0, 100, values );
+        AimxcelHistogramSeries series2 = new AimxcelHistogramSeries( "series2", 4.0, 10.0, 100, values );
 
         // Dataset
-        AbcLearnHistogramDataset dataset = new AbcLearnHistogramDataset();
+        AimxcelHistogramDataset dataset = new AimxcelHistogramDataset();
         dataset.addSeries( series1 );
         dataset.addSeries( series2 );
 
@@ -59,7 +59,7 @@ public class TestAbcLearnHistogram extends JFrame {
         plot.setRenderer( renderer );
 
         // Chart
-        JFreeChart chart = new JFreeChart( "AbcLearnHistogram Test", plot );
+        JFreeChart chart = new JFreeChart( "AimxcelHistogram Test", plot );
 
         // Panel
         JPanel chartPanel = new ChartPanel( chart );
@@ -68,7 +68,7 @@ public class TestAbcLearnHistogram extends JFrame {
     }
 
     public static void main( String[] args ) throws IOException {
-        TestAbcLearnHistogram testFrame = new TestAbcLearnHistogram();
+        TestAimxcelHistogram testFrame = new TestAimxcelHistogram();
         testFrame.pack();
         testFrame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         testFrame.setVisible( true );

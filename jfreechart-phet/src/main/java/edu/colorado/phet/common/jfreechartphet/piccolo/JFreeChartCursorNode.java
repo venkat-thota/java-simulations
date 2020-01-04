@@ -9,10 +9,10 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.MathUtil;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
+import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.colorado.phet.common.piccolophet.event.CursorHandler;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
 import edu.umd.cs.piccolo.event.PInputEvent;
@@ -24,7 +24,7 @@ import edu.umd.cs.piccolo.event.PInputEvent;
  */
 public class JFreeChartCursorNode extends PNode {
     private JFreeChartNode jFreeChartNode;
-    private AbcLearnPPath path;
+    private AimxcelPPath path;
     private double time;
     private double width = 9;
     private double minDragTime = Double.NEGATIVE_INFINITY;
@@ -61,7 +61,7 @@ public class JFreeChartCursorNode extends PNode {
      */
     public JFreeChartCursorNode( final JFreeChartNode jFreeChartNode ) {
         this.jFreeChartNode = jFreeChartNode;
-        path = new AbcLearnPPath( new Color( 50, 50, 200, 80 ), new BasicStroke( 1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1.0f, new float[] { 10.0f, 5.0f }, 0 ), Color.darkGray );
+        path = new AimxcelPPath( new Color( 50, 50, 200, 80 ), new BasicStroke( 1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1.0f, new float[] { 10.0f, 5.0f }, 0 ), Color.darkGray );
         addChild( path );
 
         jFreeChartNode.addPropertyChangeListener( updater );

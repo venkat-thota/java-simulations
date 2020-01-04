@@ -10,8 +10,9 @@ import java.util.ArrayList;
 
 import org.jfree.chart.JFreeChart;
 
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+
 import edu.colorado.phet.common.jfreechartphet.piccolo.JFreeChartNode;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 
 /**
  * This class extends the functionality of JFreeChartNode by providing different strategies for rendering the data.
@@ -41,17 +42,17 @@ import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
 public class DynamicJFreeChartNode extends JFreeChartNode {
     private ArrayList<SeriesData> seriesDataList = new ArrayList<SeriesData>();
     private ArrayList<SeriesView> seriesViewList = new ArrayList<SeriesView>();
-    private AbcLearnPCanvas phetPCanvas;
-//    private AbcLearnPPath debugBufferRegion;//internal debugging tool for deciphering screen output regions
+    private AimxcelPCanvas phetPCanvas;
+//    private AimxcelPPath debugBufferRegion;//internal debugging tool for deciphering screen output regions
 
     //The default SeriesView is JFreeChart rendering.
     private SeriesViewFactory viewFactory = RENDERER_JFREECHART;
     private boolean autoUpdateAll = true;//require user to force repaints to reduce redundant calls
 
-    public DynamicJFreeChartNode( AbcLearnPCanvas phetPCanvas, JFreeChart chart ) {
+    public DynamicJFreeChartNode( AimxcelPCanvas phetPCanvas, JFreeChart chart ) {
         super( chart );
         this.phetPCanvas = phetPCanvas;
-//        debugBufferRegion = new AbcLearnPPath( new BasicStroke( 1.0f ), Color.green );
+//        debugBufferRegion = new AimxcelPPath( new BasicStroke( 1.0f ), Color.green );
 //        addChild( debugBufferRegion );//this can destroy the bounds of the graph, use with care
     }
 
@@ -241,7 +242,7 @@ public class DynamicJFreeChartNode extends JFreeChartNode {
         updateSeriesViews();
     }
 
-    public AbcLearnPCanvas getAbcLearnPCanvas() {
+    public AimxcelPCanvas getAimxcelPCanvas() {
         return phetPCanvas;
     }
 

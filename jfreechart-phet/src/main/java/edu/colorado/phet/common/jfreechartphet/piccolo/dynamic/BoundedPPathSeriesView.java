@@ -3,7 +3,8 @@ package edu.colorado.phet.common.jfreechartphet.piccolo.dynamic;
 
 import java.awt.geom.Rectangle2D;
 
-import edu.colorado.phet.common.piccolophet.nodes.IncrementalPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.IncrementalPPath;
+
 import edu.umd.cs.piccolo.nodes.PPath;
 
 /**
@@ -18,7 +19,7 @@ public class BoundedPPathSeriesView extends PPathSeriesView {
     }
 
     protected PPath createPPath() {
-        return new IncrementalPPath( getDynamicJFreeChartNode().getAbcLearnPCanvas() ) {
+        return new IncrementalPPath( getDynamicJFreeChartNode().getAimxcelPCanvas() ) {
             protected void globalBoundsChanged( Rectangle2D bounds ) {
                 Rectangle2D dataArea = getDataArea();
                 getDynamicJFreeChartNode().localToGlobal( dataArea );

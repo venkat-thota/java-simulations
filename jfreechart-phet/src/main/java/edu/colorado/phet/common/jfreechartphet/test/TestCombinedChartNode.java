@@ -24,9 +24,10 @@ import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
+import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
+
 import edu.colorado.phet.common.jfreechartphet.piccolo.JFreeChartNode;
-import edu.colorado.phet.common.piccolophet.AbcLearnPCanvas;
-import edu.colorado.phet.common.piccolophet.nodes.AbcLearnPPath;
 
 public class TestCombinedChartNode {
     private JFrame frame;
@@ -41,11 +42,11 @@ public class TestCombinedChartNode {
 
         jFreeChartNode.updateChartRenderingInfo();
 
-        AbcLearnPCanvas phetPCanvas = new AbcLearnPCanvas();
+        AimxcelPCanvas phetPCanvas = new AimxcelPCanvas();
         phetPCanvas.addScreenChild( jFreeChartNode );
 
-        phetPCanvas.addScreenChild( new AbcLearnPPath( jFreeChartNode.getDataArea( 0 ), new BasicStroke( 5 ), Color.blue ) );
-        phetPCanvas.addScreenChild( new AbcLearnPPath( jFreeChartNode.getDataArea( 1 ), new BasicStroke( 5 ), Color.red ) );
+        phetPCanvas.addScreenChild( new AimxcelPPath( jFreeChartNode.getDataArea( 0 ), new BasicStroke( 5 ), Color.blue ) );
+        phetPCanvas.addScreenChild( new AimxcelPPath( jFreeChartNode.getDataArea( 1 ), new BasicStroke( 5 ), Color.red ) );
 
         frame.setContentPane( phetPCanvas );
     }

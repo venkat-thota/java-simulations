@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+ 
 package edu.colorado.phet.common.jfreechartphet.test;
 
 import java.awt.event.ActionEvent;
@@ -27,7 +27,7 @@ import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
-import com.aimxcel.abclearn.common.abclearncommon.math.vector.Vector2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 
 /**
  * User: Sam Reid

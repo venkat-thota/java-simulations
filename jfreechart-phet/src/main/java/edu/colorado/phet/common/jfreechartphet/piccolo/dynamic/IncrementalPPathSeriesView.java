@@ -1,7 +1,8 @@
 
 package edu.colorado.phet.common.jfreechartphet.piccolo.dynamic;
 
-import edu.colorado.phet.common.piccolophet.nodes.IncrementalPPath;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.IncrementalPPath;
+
 import edu.umd.cs.piccolo.nodes.PPath;
 
 /**
@@ -16,6 +17,6 @@ public class IncrementalPPathSeriesView extends PPathSeriesView {
     }
 
     protected PPath createPPath() {
-        return new IncrementalPPath( getDynamicJFreeChartNode().getAbcLearnPCanvas() );
+        return new IncrementalPPath( getDynamicJFreeChartNode().getAimxcelPCanvas() );
     }
 }

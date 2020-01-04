@@ -12,7 +12,7 @@ public class TestJFreeChartCursorNode extends TestDynamicJFreeChartNodeTree {
 
     public TestJFreeChartCursorNode() {
         JFreeChartCursorNode jFreeChartCursorNode = new JFreeChartCursorNode( getDynamicJFreeChartNode() );
-        getAbcLearnPCanvas().addScreenChild( jFreeChartCursorNode );
+        getAimxcelPCanvas().addScreenChild( jFreeChartCursorNode );
     }
 
     public static void main( String[] args ) {
