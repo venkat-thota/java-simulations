@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.test.graphics;
+ package edu.colorado.phet.common.phetgraphics.test.graphics;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -35,90 +26,86 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.event.MouseInputAdapter;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnMultiLineTextGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShadowTextGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelMultiLineTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShadowTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.RepaintDebugGraphic;
 import edu.colorado.phet.common.phetgraphics.view.util.BasicGraphicsSetup;
 
-/**
- * User: Sam Reid
- * Date: Dec 6, 2004
- * Time: 5:19:19 PM
- */
 
-public class TestAbcLearnGraphics extends JFrame {
+
+public class TestAimxcelGraphics extends JFrame {
     private ApparatusPanel panel;
     private IClock clock;
 
-    static interface TestAbcLearnGraphicSource {
-        public AbcLearnGraphic createGraphic( ApparatusPanel panel );
+    static interface TestAimxcelGraphicSource {
+        public AimxcelGraphic createGraphic( ApparatusPanel panel );
     }
 
-    public TestAbcLearnGraphics() throws HeadlessException {
-        super( "Test AbcLearnGraphics" );
+    public TestAimxcelGraphics() throws HeadlessException {
+        super( "Test AimxcelGraphics" );
         panel = new ApparatusPanel();
         panel.addGraphicsSetup( new BasicGraphicsSetup() );
-        TestAbcLearnGraphicSource[] graphics = new TestAbcLearnGraphicSource[] {
-                new TestAbcLearnGraphicSource() {
-                    public AbcLearnGraphic createGraphic( ApparatusPanel panel ) {
-                        return new AbcLearnTextGraphic( panel, new AbcLearnFont( Font.BOLD, 24 ), "AbcLearnGraphic Test", Color.blue, 100, 100 );
+        TestAimxcelGraphicSource[] graphics = new TestAimxcelGraphicSource[] {
+                new TestAimxcelGraphicSource() {
+                    public AimxcelGraphic createGraphic( ApparatusPanel panel ) {
+                        return new AimxcelTextGraphic( panel, new AimxcelFont( Font.BOLD, 24 ), "AimxcelGraphic Test", Color.blue, 100, 100 );
                     }
                 },
-                new TestAbcLearnGraphicSource() {
-                    public AbcLearnGraphic createGraphic( ApparatusPanel panel ) {
-                        return new AbcLearnShapeGraphic( panel, new Rectangle( 50, 50, 50, 50 ), Color.green, new BasicStroke( 1 ), Color.black );
+                new TestAimxcelGraphicSource() {
+                    public AimxcelGraphic createGraphic( ApparatusPanel panel ) {
+                        return new AimxcelShapeGraphic( panel, new Rectangle( 50, 50, 50, 50 ), Color.green, new BasicStroke( 1 ), Color.black );
                     }
                 },
-                new TestAbcLearnGraphicSource() {
-                    public AbcLearnGraphic createGraphic( ApparatusPanel panel ) {
-                        return new AbcLearnImageGraphic( panel, "images/AbcLearn-Flatirons-logo-3-small.gif" );
+                new TestAimxcelGraphicSource() {
+                    public AimxcelGraphic createGraphic( ApparatusPanel panel ) {
+                        return new AimxcelImageGraphic( panel, "images/Aimxcel-Flatirons-logo-3-small.gif" );
                     }
                 },
-                new TestAbcLearnGraphicSource() {
-                    public AbcLearnGraphic createGraphic( ApparatusPanel panel ) {
-                        return new AbcLearnMultiLineTextGraphic( panel, new Font( "dialog", 0, 28 ), new String[] { "PhET", "Multi-", "Line", "TextGraphic" }, Color.red, 1, 1, Color.yellow );
+                new TestAimxcelGraphicSource() {
+                    public AimxcelGraphic createGraphic( ApparatusPanel panel ) {
+                        return new AimxcelMultiLineTextGraphic( panel, new Font( "dialog", 0, 28 ), new String[] { "Aimxcel", "Multi-", "Line", "TextGraphic" }, Color.red, 1, 1, Color.yellow );
                     }
                 },
-                new TestAbcLearnGraphicSource() {
-                    public AbcLearnGraphic createGraphic( ApparatusPanel panel ) {
-                        return new AbcLearnShadowTextGraphic( panel, new Font( "dialog", Font.BOLD, 28 ), "Shadowed", Color.blue, 1, 1, Color.green );
+                new TestAimxcelGraphicSource() {
+                    public AimxcelGraphic createGraphic( ApparatusPanel panel ) {
+                        return new AimxcelShadowTextGraphic( panel, new Font( "dialog", Font.BOLD, 28 ), "Shadowed", Color.blue, 1, 1, Color.green );
                     }
                 },
-                new TestAbcLearnGraphicSource() {
-                    public AbcLearnGraphic createGraphic( ApparatusPanel panel ) {
-                        CompositeAbcLearnGraphic cpg = new CompositeAbcLearnGraphic( panel );
-                        cpg.addGraphic( new AbcLearnShapeGraphic( panel, new Ellipse2D.Double( 130, 30, 30, 30 ), Color.red ) );
-                        cpg.addGraphic( new AbcLearnShapeGraphic( panel, new Ellipse2D.Double( 160, 30, 30, 30 ), Color.blue ) );
-                        cpg.addGraphic( new AbcLearnShadowTextGraphic( panel, new AbcLearnFont( 0, 12 ), "compositegraphic", Color.white, 1, 1, Color.black ) );
+                new TestAimxcelGraphicSource() {
+                    public AimxcelGraphic createGraphic( ApparatusPanel panel ) {
+                        CompositeAimxcelGraphic cpg = new CompositeAimxcelGraphic( panel );
+                        cpg.addGraphic( new AimxcelShapeGraphic( panel, new Ellipse2D.Double( 130, 30, 30, 30 ), Color.red ) );
+                        cpg.addGraphic( new AimxcelShapeGraphic( panel, new Ellipse2D.Double( 160, 30, 30, 30 ), Color.blue ) );
+                        cpg.addGraphic( new AimxcelShadowTextGraphic( panel, new AimxcelFont( 0, 12 ), "compositegraphic", Color.white, 1, 1, Color.black ) );
                         return cpg;
                     }
                 },
-                new TestAbcLearnGraphicSource() {
-                    public AbcLearnGraphic createGraphic( ApparatusPanel panel ) {
+                new TestAimxcelGraphicSource() {
+                    public AimxcelGraphic createGraphic( ApparatusPanel panel ) {
 //                    Stroke stroke = new BasicStroke( 4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 4, new float[]{6, 6}, 0 );
                         Stroke stroke = new BasicStroke( 4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 2 );//, new float[]{6, 6}, 0 );
-                        final OutlineTextGraphic g = new OutlineTextGraphic( panel, "Outline Text", new AbcLearnFont( Font.ITALIC, 68 ), 0, 0, Color.yellow, stroke, Color.black );
+                        final OutlineTextGraphic g = new OutlineTextGraphic( panel, "Outline Text", new AimxcelFont( Font.ITALIC, 68 ), 0, 0, Color.yellow, stroke, Color.black );
                         g.setBorderPaint( new GradientPaint( 0, 0, Color.red, 300, 300, Color.blue ) );
                         return g;
                     }
                 }
         };
         for ( int i = 0; i < graphics.length; i++ ) {
-            TestAbcLearnGraphicSource graphic = graphics[i];
-            final AbcLearnGraphic pg = graphic.createGraphic( panel );
+            TestAimxcelGraphicSource graphic = graphics[i];
+            final AimxcelGraphic pg = graphic.createGraphic( panel );
             pg.setCursorHand();
             pg.setBoundsDirty();
             pg.setLocation( 0, 0 );
@@ -160,7 +147,7 @@ public class TestAbcLearnGraphics extends JFrame {
             }
         } );
         clock = new SwingClock( 30, 1.0 );
-        panel.addGraphic( new AbcLearnShapeGraphic( panel, new Rectangle( 5, 5, 5, 5 ), Color.black ) );
+        panel.addGraphic( new AimxcelShapeGraphic( panel, new Rectangle( 5, 5, 5, 5 ), Color.black ) );
         final RepaintDebugGraphic rdg = new RepaintDebugGraphic( panel, clock );
         panel.addGraphic( rdg );
 
@@ -183,7 +170,7 @@ public class TestAbcLearnGraphics extends JFrame {
         } );
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
-        final AbcLearnShapeGraphic graphic = new AbcLearnShapeGraphic( panel, new Rectangle( panel.getWidth(), panel.getHeight() ), Color.white );
+        final AimxcelShapeGraphic graphic = new AimxcelShapeGraphic( panel, new Rectangle( panel.getWidth(), panel.getHeight() ), Color.white );
         panel.addComponentListener( new ComponentAdapter() {
             public void componentResized( ComponentEvent e ) {
                 graphic.setShape( new Rectangle( panel.getWidth(), panel.getHeight() ) );
@@ -208,7 +195,7 @@ public class TestAbcLearnGraphics extends JFrame {
     static Point lastDragPt = null;
 
     public static void main( String[] args ) {
-        new TestAbcLearnGraphics().start();
+        new TestAimxcelGraphics().start();
     }
 
     private void start() {
@@ -217,7 +204,7 @@ public class TestAbcLearnGraphics extends JFrame {
         setVisible( true );
     }
 
-    public static class OutlineTextGraphic extends AbcLearnShapeGraphic {
+    public static class OutlineTextGraphic extends AimxcelShapeGraphic {
         private String text;
         private Font font;
         private FontRenderContext fontRenderContext;

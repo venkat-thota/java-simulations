@@ -7,20 +7,20 @@ import java.awt.Font;
 import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.Module;
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnTestApplication;
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelTestApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
-import edu.colorado.phet.common.phetgraphics.application.AbcLearnGraphicsModule;
+import edu.colorado.phet.common.phetgraphics.application.AimxcelGraphicsModule;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
 
 /**
  * Class: TestApparatusPanel2
@@ -47,7 +47,7 @@ public class TestApparatusPanel2 {
 //        }
 //    }
 
-    static class TestModule extends AbcLearnGraphicsModule {
+    static class TestModule extends AimxcelGraphicsModule {
 
         protected TestModule( IClock clock ) {
             super( "ApparatusPanel2 Test", clock );
@@ -63,16 +63,16 @@ public class TestApparatusPanel2 {
             int style = Font.PLAIN;
             int size = 12;
             Font font = new Font( family, style, size );
-            AbcLearnGraphic pg = new TestGraphic( ap, font, "YO!", Color.blue, 100, 100 );
+            AimxcelGraphic pg = new TestGraphic( ap, font, "YO!", Color.blue, 100, 100 );
             pg.setCursorHand();
             ap.addGraphic( pg );
-            AbcLearnGraphic pg2 = new TestGraphic2( ap, 50, 50 );
+            AimxcelGraphic pg2 = new TestGraphic2( ap, 50, 50 );
             pg2.setCursorHand();
             ap.addGraphic( pg2 );
         }
     }
 
-    static class TestGraphic extends AbcLearnTextGraphic {
+    static class TestGraphic extends AimxcelTextGraphic {
         public TestGraphic( Component component, Font font, String text, Color color, int x, int y ) {
             super( component, font, text, color, x, y );
             addTranslationListener( new TranslationListener() {
@@ -88,7 +88,7 @@ public class TestApparatusPanel2 {
         }
     }
 
-    static class TestGraphic2 extends AbcLearnShapeGraphic {
+    static class TestGraphic2 extends AimxcelShapeGraphic {
         public TestGraphic2( Component component, int x, int y ) {
             super( component, new Rectangle( x, y, 30, 20 ), Color.red );
         }
@@ -105,7 +105,7 @@ public class TestApparatusPanel2 {
     }
 
     public static void main( String[] args ) {
-        AbcLearnTestApplication testApp = new AbcLearnTestApplication( args );
+        AimxcelTestApplication testApp = new AimxcelTestApplication( args );
         TestModule module = new TestModule( new SwingClock( 30, 1 ) );
         testApp.addModule( module );
         testApp.setModules( new Module[] { module } );

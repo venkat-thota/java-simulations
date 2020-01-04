@@ -1,7 +1,7 @@
 
 
 /**
- * Class: TestAbcLearnApplication
+ * Class: TestAimxcelApplication
  * Package: edu.colorado.phet.common.examples
  * Author: Another Guy
  * Date: May 12, 2004
@@ -20,23 +20,23 @@ import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnTestApplication;
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.model.ModelElement;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObservable;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
-import com.aimxcel.abclearn.common.abclearncommon.view.ControlPanel;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelTestApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.ControlPanel;
 
-import edu.colorado.phet.common.phetgraphics.application.AbcLearnGraphicsModule;
+import edu.colorado.phet.common.phetgraphics.application.AimxcelGraphicsModule;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.help.HelpItem;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 
-public class TestAbcLearnApplication {
-    static class MyModule extends AbcLearnGraphicsModule {
+public class TestAimxcelApplication {
+    static class MyModule extends AimxcelGraphicsModule {
 
         public MyModule( String name, IClock clock, Color color ) {
             super( name, clock );
@@ -47,7 +47,7 @@ public class TestAbcLearnApplication {
             setApparatusPanel( new ApparatusPanel() );
             setModel( new BaseModel() );
             JTextArea ctrl = new JTextArea( 5, 20 );
-            getApparatusPanel().addGraphic( new AbcLearnShapeGraphic( getApparatusPanel(), new Rectangle( 200, 100, 300, 100 ), color ) );
+            getApparatusPanel().addGraphic( new AimxcelShapeGraphic( getApparatusPanel(), new Rectangle( 200, 100, 300, 100 ), color ) );
 
             final ControlPanel controlPanel = new ControlPanel( this );
             setControlPanel( controlPanel );
@@ -71,7 +71,7 @@ public class TestAbcLearnApplication {
         }
     }
 
-    static class MyModule2 extends AbcLearnGraphicsModule {
+    static class MyModule2 extends AimxcelGraphicsModule {
 
         public MyModule2( String name, IClock clock, Color color ) {
             super( name, clock );
@@ -80,7 +80,7 @@ public class TestAbcLearnApplication {
             JButton ctrl = new JButton( "Click Me" );
             ControlPanel controls = new ControlPanel( this );
             controls.addControl( ctrl );
-            getApparatusPanel().addGraphic( new AbcLearnShapeGraphic( getApparatusPanel(), new Rectangle( 200, 100, 300, 100 ), color ) );
+            getApparatusPanel().addGraphic( new AimxcelShapeGraphic( getApparatusPanel(), new Rectangle( 200, 100, 300, 100 ), color ) );
             setControlPanel( controls );
             JPanel monitorPanel = new JPanel();
             monitorPanel.add( new JCheckBox( "yes/no" ) );
@@ -128,7 +128,7 @@ public class TestAbcLearnApplication {
         }
     }
 
-    static class PhotonGraphic extends AbcLearnGraphic {
+    static class PhotonGraphic extends AimxcelGraphic {
         private Photon ph;
 
         public PhotonGraphic( ApparatusPanel ap, Photon ph ) {
@@ -146,7 +146,7 @@ public class TestAbcLearnApplication {
         }
     }
 
-    static class MyModule3 extends AbcLearnGraphicsModule {
+    static class MyModule3 extends AimxcelGraphicsModule {
         public MyModule3( IClock clock ) {
             super( "Test Module", clock );
             setApparatusPanel( new ApparatusPanel() );
@@ -155,7 +155,7 @@ public class TestAbcLearnApplication {
             Photon ph = new Photon( 100, 100 );
             addModelElement( ph );
 
-            AbcLearnGraphic g = new PhotonGraphic( getApparatusPanel(), ph );
+            AimxcelGraphic g = new PhotonGraphic( getApparatusPanel(), ph );
             addGraphic( g, 0 );
 
             ph.addObserver( new SimpleObserver() {
@@ -169,14 +169,14 @@ public class TestAbcLearnApplication {
 
     public static void main( String[] args ) {
         SwingClock clock = new SwingClock( 30, 1.0 );
-        AbcLearnGraphicsModule module = new MyModule( "Testing", clock, Color.blue );
-        AbcLearnGraphicsModule module2 = new MyModule( "1ntht", clock, Color.red );
-        AbcLearnGraphicsModule module3 = new MyModule2( "Button", clock, Color.red );
+        AimxcelGraphicsModule module = new MyModule( "Testing", clock, Color.blue );
+        AimxcelGraphicsModule module2 = new MyModule( "1ntht", clock, Color.red );
+        AimxcelGraphicsModule module3 = new MyModule2( "Button", clock, Color.red );
 
         MyModule3 modulePhotons = new MyModule3( clock );
-        AbcLearnGraphicsModule[] m = new AbcLearnGraphicsModule[] { module, module2, module3, modulePhotons };
+        AimxcelGraphicsModule[] m = new AimxcelGraphicsModule[] { module, module2, module3, modulePhotons };
 
-        AbcLearnTestApplication app = new AbcLearnTestApplication( args );
+        AimxcelTestApplication app = new AimxcelTestApplication( args );
         for ( int i = 0; i < m.length; i++ ) {
             app.addModule( m[i] );
         }

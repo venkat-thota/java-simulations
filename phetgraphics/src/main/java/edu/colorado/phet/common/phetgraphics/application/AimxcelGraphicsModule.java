@@ -1,32 +1,23 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-
+ 
 package edu.colorado.phet.common.phetgraphics.application;
 
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.Module;
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.model.ModelElement;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.view.ControlPanel;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.ControlPanel;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.PiccoloClockControlPanel;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.help.HelpManager;
-import edu.colorado.phet.common.phetgraphics.view.phetcomponents.AbcLearnJComponent;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.piccolophet.nodes.mediabuttons.PiccoloClockControlPanel;
+import edu.colorado.phet.common.phetgraphics.view.phetcomponents.AimxcelJComponent;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 
 /**
  * This class encapsulates the parts of an application that make up
@@ -37,7 +28,7 @@ import edu.colorado.phet.common.piccolophet.nodes.mediabuttons.PiccoloClockContr
  * @author ?
  * @version $Revision$
  */
-public class AbcLearnGraphicsModule extends Module {
+public class AimxcelGraphicsModule extends Module {
 
     private ApparatusPanel apparatusPanel;
     private HelpManager helpManager;
@@ -46,7 +37,7 @@ public class AbcLearnGraphicsModule extends Module {
      * @param name
      * @deprecated
      */
-    protected AbcLearnGraphicsModule( String name ) {
+    protected AimxcelGraphicsModule( String name ) {
         this( name, null );
     }
 
@@ -54,7 +45,7 @@ public class AbcLearnGraphicsModule extends Module {
      * @param name
      * @param clock
      */
-    protected AbcLearnGraphicsModule( String name, IClock clock ) {
+    protected AimxcelGraphicsModule( String name, IClock clock ) {
         super( name, clock );
         helpManager = new HelpManager();
         updateHelpPanelVisible();//have to update the state in the parent class, since helpManager was null
@@ -90,16 +81,16 @@ public class AbcLearnGraphicsModule extends Module {
         return apparatusPanel;
     }
 
-    public void addGraphic( AbcLearnGraphic graphic, double layer ) {
+    public void addGraphic( AimxcelGraphic graphic, double layer ) {
         getApparatusPanel().addGraphic( graphic, layer );
     }
 
-    protected void add( ModelElement modelElement, AbcLearnGraphic graphic, double layer ) {
+    protected void add( ModelElement modelElement, AimxcelGraphic graphic, double layer ) {
         this.addModelElement( modelElement );
         this.addGraphic( graphic, layer );
     }
 
-    protected void remove( ModelElement modelElement, AbcLearnGraphic graphic ) {
+    protected void remove( ModelElement modelElement, AimxcelGraphic graphic ) {
         getModel().removeModelElement( modelElement );
         getApparatusPanel().removeGraphic( graphic );
     }
@@ -113,7 +104,7 @@ public class AbcLearnGraphicsModule extends Module {
      *
      * @param helpItem
      */
-    public void addHelpItem( AbcLearnGraphic helpItem ) {
+    public void addHelpItem( AimxcelGraphic helpItem ) {
         helpManager.addGraphic( helpItem );
     }
 
@@ -122,7 +113,7 @@ public class AbcLearnGraphicsModule extends Module {
      *
      * @param helpItem
      */
-    public void removeHelpItem( AbcLearnGraphic helpItem ) {
+    public void removeHelpItem( AimxcelGraphic helpItem ) {
         helpManager.removeGraphic( helpItem );
     }
 
@@ -155,7 +146,7 @@ public class AbcLearnGraphicsModule extends Module {
 //    private void restoreState( ModuleStateDescriptor stateDescriptor ) {
 //
 //        // Remove and clean up the current model
-//        AbstractClock clock = AbcLearnApplication.instance().getApplicationModel().getClock();
+//        AbstractClock clock = AimxcelApplication.instance().getApplicationModel().getClock();
 //        BaseModel oldModel = getModel();
 //        oldModel.removeAllModelElements();
 //        clock.removeClockTickListener( oldModel );
@@ -171,8 +162,8 @@ public class AbcLearnGraphicsModule extends Module {
 //        Iterator it = graphicsMap.iterator();
 //        while( it.hasNext() ) {
 //            Object obj = it.next();
-//            if( obj instanceof AbcLearnGraphic ) {
-//                AbcLearnGraphic phetGraphic = (AbcLearnGraphic)obj;
+//            if( obj instanceof AimxcelGraphic ) {
+//                AimxcelGraphic phetGraphic = (AimxcelGraphic)obj;
 //                phetGraphic.setComponent( getApparatusPanel() );
 //            }
 //        }
@@ -184,7 +175,7 @@ public class AbcLearnGraphicsModule extends Module {
 
     public void updateGraphics( ClockEvent event ) {
         super.updateGraphics( event );
-        AbcLearnJComponent.getRepaintManager().updateGraphics();
+        AimxcelJComponent.getRepaintManager().updateGraphics();
     }
 
     public boolean hasHelp() {
@@ -201,8 +192,8 @@ public class AbcLearnGraphicsModule extends Module {
      * Refreshes the Module, redrawing it while its clock is paused.
      */
     public void refresh() {
-        // Repaint all dirty AbcLearnJComponents
-        AbcLearnJComponent.getRepaintManager().updateGraphics();
+        // Repaint all dirty AimxcelJComponents
+        AimxcelJComponent.getRepaintManager().updateGraphics();
         // Paint the apparatus panel
         apparatusPanel.paint();
     }

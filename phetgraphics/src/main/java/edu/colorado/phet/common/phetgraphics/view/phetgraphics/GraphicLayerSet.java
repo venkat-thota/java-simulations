@@ -22,22 +22,22 @@ import java.util.Iterator;
 
 import javax.swing.event.MouseInputListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.util.MultiMap;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.MultiMap;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
 /**
- * GraphicLayerSet is a collection of AbcLearnGraphics (referred to as "children").
+ * GraphicLayerSet is a collection of AimxcelGraphics (referred to as "children").
  * Children are painted in the order that they are added.
  * Mouse events received by a GraphicLayer are forwarded to all children.
  *
  * @author ?
  * @version $Revision:14674 $
  */
-public class GraphicLayerSet extends AbcLearnGraphic {
+public class GraphicLayerSet extends AimxcelGraphic {
 
     private MultiMap graphicMap = new MultiMap();
-    private AbcLearnGraphic activeUnit;//The unit being dragged or moused-over.
-    private AbcLearnGraphic keyFocusUnit;//The unit that should accept key events.
+    private AimxcelGraphic activeUnit;//The unit being dragged or moused-over.
+    private AimxcelGraphic keyFocusUnit;//The unit that should accept key events.
     private SwingAdapter swingAdapter = new SwingAdapter();
     private KeyListener keyAdapter = new KeyAdapter();
     private static int mouseEventID = 0;//For creating mouse events.
@@ -63,15 +63,15 @@ public class GraphicLayerSet extends AbcLearnGraphic {
         Iterator gIt = graphicMap.iterator();
         while ( gIt.hasNext() ) {
             Object o = gIt.next();
-            if ( o instanceof AbcLearnGraphic ) {
-                AbcLearnGraphic phetGraphic = (AbcLearnGraphic) o;
+            if ( o instanceof AimxcelGraphic ) {
+                AimxcelGraphic phetGraphic = (AimxcelGraphic) o;
                 phetGraphic.setComponent( component );
             }
         }
     }
 
     /**
-     * Paints all AbcLearnGraphics in order on the Graphics2D device
+     * Paints all AimxcelGraphics in order on the Graphics2D device
      *
      * @param g2 the Graphics2D on which to paint.
      */
@@ -82,7 +82,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
             // Iterate over each child graphic.
             Iterator it = graphicMap.iterator();
             while ( it.hasNext() ) {
-                AbcLearnGraphic graphic = (AbcLearnGraphic) it.next();
+                AimxcelGraphic graphic = (AimxcelGraphic) it.next();
 
                 // The following test is here because as persistence support is being developed, null
                 // entries are turning up in the MultiMap
@@ -117,7 +117,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
         if ( isVisible() ) {
             Iterator it = this.graphicMap.iterator();
             while ( it.hasNext() ) {
-                AbcLearnGraphic o = (AbcLearnGraphic) it.next();
+                AimxcelGraphic o = (AimxcelGraphic) it.next();
                 if ( o.contains( x, y ) ) {
                     return true;
                 }
@@ -142,7 +142,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
      * @return the union of child graphics bounds.
      */
     protected Rectangle determineBounds() {
-        AbcLearnGraphic[] ch = getGraphics();
+        AimxcelGraphic[] ch = getGraphics();
         Rectangle[] r = new Rectangle[ch.length];
         for ( int i = 0; i < r.length; i++ ) {
             r[i] = ch[i].getBounds();
@@ -160,10 +160,10 @@ public class GraphicLayerSet extends AbcLearnGraphic {
      */
     public void clear() {
         Iterator i = graphicMap.iterator();
-        AbcLearnGraphic graphic;
+        AimxcelGraphic graphic;
         while ( i.hasNext() ) {
             // Do everything that removeGraphic method does.
-            graphic = (AbcLearnGraphic) i.next();
+            graphic = (AimxcelGraphic) i.next();
             graphic.setParent( null );
             setBoundsDirty();
             graphic.autorepaint();//Automatically repaint.
@@ -172,11 +172,11 @@ public class GraphicLayerSet extends AbcLearnGraphic {
     }
 
     /**
-     * Remove a particular AbcLearnGraphic from this composite.
+     * Remove a particular AimxcelGraphic from this composite.
      *
      * @param graphic the graphic to remove.
      */
-    public void removeGraphic( AbcLearnGraphic graphic ) {
+    public void removeGraphic( AimxcelGraphic graphic ) {
         if ( containsGraphic( graphic ) ) {
             graphicMap.removeValue( graphic );
             graphic.setParent( null );
@@ -189,7 +189,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
         super.setBoundsDirty();
         Iterator it = graphicMap.iterator();
         while ( it.hasNext() ) {
-            AbcLearnGraphic graphic = (AbcLearnGraphic) it.next();
+            AimxcelGraphic graphic = (AimxcelGraphic) it.next();
             graphic.setBoundsDirty();
         }
     }
@@ -201,7 +201,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
         syncBounds();//This guarantees a notification, if necessary.
         Iterator it = graphicMap.iterator();
         while ( it.hasNext() ) {
-            AbcLearnGraphic graphic = (AbcLearnGraphic) it.next();
+            AimxcelGraphic graphic = (AimxcelGraphic) it.next();
             graphic.forceRepaint();
         }
     }
@@ -211,7 +211,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
      *
      * @param graphic the graphic to add.
      */
-    public void addGraphic( AbcLearnGraphic graphic ) {
+    public void addGraphic( AimxcelGraphic graphic ) {
         addGraphic( graphic, 0 );
         graphic.setParent( this );
     }
@@ -222,14 +222,14 @@ public class GraphicLayerSet extends AbcLearnGraphic {
      * @return the array of graphics in painting order.
      */
 
-    public AbcLearnGraphic[] getGraphics() {
+    public AimxcelGraphic[] getGraphics() {
         Iterator it = graphicMap.iterator();
         ArrayList graphics = new ArrayList();
         while ( it.hasNext() ) {
-            AbcLearnGraphic graphic = (AbcLearnGraphic) it.next();
+            AimxcelGraphic graphic = (AimxcelGraphic) it.next();
             graphics.add( graphic );
         }
-        return (AbcLearnGraphic[]) graphics.toArray( new AbcLearnGraphic[0] );
+        return (AimxcelGraphic[]) graphics.toArray( new AimxcelGraphic[0] );
     }
 
     /**
@@ -238,7 +238,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
      * @param graphic
      * @param layer
      */
-    public void addGraphic( AbcLearnGraphic graphic, double layer ) {
+    public void addGraphic( AimxcelGraphic graphic, double layer ) {
         this.graphicMap.put( new Double( layer ), graphic );
         graphic.setParent( this );
         super.setBoundsDirty();
@@ -251,15 +251,15 @@ public class GraphicLayerSet extends AbcLearnGraphic {
      *
      * @param target
      */
-    public void moveToTop( AbcLearnGraphic target ) {
+    public void moveToTop( AimxcelGraphic target ) {
         this.removeGraphic( target );
         graphicMap.put( graphicMap.lastKey(), target );
     }
 
     /**
-     * A forward iterator over the AbcLearnGraphics.
+     * A forward iterator over the AimxcelGraphics.
      *
-     * @return the AbcLearnGraphic iterator.
+     * @return the AimxcelGraphic iterator.
      */
     protected Iterator iterator() {
         return this.graphicMap.iterator();
@@ -285,7 +285,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
     ///////////////////////////////////////////////////////////////////////////////
     // Methods for MouseInteraction.
     //
-    public void startDragging( MouseEvent event, AbcLearnGraphic activeUnit ) {
+    public void startDragging( MouseEvent event, AimxcelGraphic activeUnit ) {
         if ( this.activeUnit != null ) {
             this.activeUnit.fireMouseExited( event );
         }
@@ -310,7 +310,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
      */
     protected void handleEntranceAndExit( MouseEvent e ) {
         // Find the topmost graphic that can handle the event
-        AbcLearnGraphic newUnit = getHandler( e.getPoint() );
+        AimxcelGraphic newUnit = getHandler( e.getPoint() );
 //        System.out.println( "newUnit = " + newUnit );
         if ( newUnit == null ) {
             // If the mouse isn't over anything contained in the
@@ -340,26 +340,26 @@ public class GraphicLayerSet extends AbcLearnGraphic {
     }
 
     /**
-     * Determine the AbcLearnGraphic suited for handling a click at the specified point.
+     * Determine the AimxcelGraphic suited for handling a click at the specified point.
      * If no such graphic is identified and this GraphicLayerSet is interested in
      * mouse events, then this GraphicLayerSet is returned.
      *
      * @param p the mouse point.
      * @return the handler.
      */
-    protected AbcLearnGraphic getHandler( Point p ) {
+    protected AimxcelGraphic getHandler( Point p ) {
 
         // If the GraphicLayerSet is ignoring the mouse, then don't check any children.
         if ( getIgnoreMouse() == true ) {
             return null;
         }
 
-        AbcLearnGraphic[] graphics = getGraphics();
-        AbcLearnGraphic result = null;
+        AimxcelGraphic[] graphics = getGraphics();
+        AimxcelGraphic result = null;
 
         // For each graphic, working from foreground to background layer...
         for ( int i = graphics.length - 1; result == null && i >= 0; i-- ) {
-            AbcLearnGraphic g = graphics[i];
+            AimxcelGraphic g = graphics[i];
 
             // XMLEncoder/Decoder serialization puts nulls in the map, for some reason.
             if ( g != null ) {
@@ -391,7 +391,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
         return keyAdapter;
     }
 
-    public void setKeyFocus( AbcLearnGraphic focus ) {
+    public void setKeyFocus( AimxcelGraphic focus ) {
         if ( keyFocusUnit != focus ) {
             if ( keyFocusUnit != null ) {
                 keyFocusUnit.lostKeyFocus();
@@ -406,7 +406,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
 
     }
 
-    public void childBecameInvisible( AbcLearnGraphic phetGraphic ) {
+    public void childBecameInvisible( AimxcelGraphic phetGraphic ) {
         if ( keyFocusUnit == phetGraphic ) {
             setKeyFocus( null );
         }
@@ -448,7 +448,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
 
     /**
      * This class is used on a Swing component or AWT component to forward events to
-     * the AbcLearnGraphic subsystem.
+     * the AimxcelGraphic subsystem.
      */
     public class SwingAdapter implements MouseInputListener {
         private boolean pressed = false;
@@ -537,16 +537,16 @@ public class GraphicLayerSet extends AbcLearnGraphic {
         }
     }
 
-    public boolean containsGraphic( AbcLearnGraphic graphic ) {
+    public boolean containsGraphic( AimxcelGraphic graphic ) {
         return graphicMap.containsValue( graphic );
     }
 
-    public AbcLearnGraphic getActiveUnit() {
+    public AimxcelGraphic getActiveUnit() {
         return activeUnit;
     }
 
     public Rectangle getVisibleBounds() {
-        AbcLearnGraphic[] ch = getGraphics();
+        AimxcelGraphic[] ch = getGraphics();
         Rectangle[] r = new Rectangle[ch.length];
         for ( int i = 0; i < r.length; i++ ) {
             r[i] = ch[i].getVisibleBounds();
@@ -567,7 +567,7 @@ public class GraphicLayerSet extends AbcLearnGraphic {
         super.fireVisibilityChanged();
         Iterator it = graphicMap.iterator();
         while ( it.hasNext() ) {
-            AbcLearnGraphic graphic = (AbcLearnGraphic) it.next();
+            AimxcelGraphic graphic = (AimxcelGraphic) it.next();
             graphic.fireVisibilityChanged();
         }
     }

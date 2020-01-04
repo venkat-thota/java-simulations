@@ -14,15 +14,10 @@ import javax.swing.event.MouseInputAdapter;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnImageGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelImageGraphic;
 
 
-/**
- * AbcLearnZoomControl is a control for horizontal or vertical zooming.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
-public class AbcLearnZoomControl extends GraphicLayerSet {
+public class AimxcelZoomControl extends GraphicLayerSet {
 
     //----------------------------------------------------------------------------
     // Public class data
@@ -53,8 +48,8 @@ public class AbcLearnZoomControl extends GraphicLayerSet {
     //----------------------------------------------------------------------------
 
     private int _orientation;
-    private AbcLearnImageGraphic _inButton, _inButtonPressed;
-    private AbcLearnImageGraphic _outButton, _outButtonPressed;
+    private AimxcelImageGraphic _inButton, _inButtonPressed;
+    private AimxcelImageGraphic _outButton, _outButtonPressed;
     private EventListenerList _listenerList;
 
     //----------------------------------------------------------------------------
@@ -67,29 +62,29 @@ public class AbcLearnZoomControl extends GraphicLayerSet {
      * @param component
      * @param orientation HORIZONTAL or VERTICAL
      */
-    public AbcLearnZoomControl( Component component, int orientation ) {
+    public AimxcelZoomControl( Component component, int orientation ) {
         super( component );
 
         _orientation = orientation;
 
-        AbcLearnImageGraphic background;
+        AimxcelImageGraphic background;
         if ( orientation == HORIZONTAL ) {
-            background = new AbcLearnImageGraphic( component, ZOOM_BACKGROUND_HORIZONTAL_IMAGE );
+            background = new AimxcelImageGraphic( component, ZOOM_BACKGROUND_HORIZONTAL_IMAGE );
         }
         else {
-            background = new AbcLearnImageGraphic( component, ZOOM_BACKGROUND_VERTICAL_IMAGE );
+            background = new AimxcelImageGraphic( component, ZOOM_BACKGROUND_VERTICAL_IMAGE );
         }
         addGraphic( background );
 
-        _inButton = new AbcLearnImageGraphic( component, ZOOM_IN_BUTTON_IMAGE );
-        _inButtonPressed = new AbcLearnImageGraphic( component, ZOOM_IN_BUTTON_PRESSED_IMAGE );
+        _inButton = new AimxcelImageGraphic( component, ZOOM_IN_BUTTON_IMAGE );
+        _inButtonPressed = new AimxcelImageGraphic( component, ZOOM_IN_BUTTON_PRESSED_IMAGE );
         _inButton.setLocation( IN_LOCATION );
         _inButtonPressed.setLocation( IN_LOCATION );
         addGraphic( _inButton );
         addGraphic( _inButtonPressed );
 
-        _outButton = new AbcLearnImageGraphic( component, ZOOM_OUT_BUTTON_IMAGE );
-        _outButtonPressed = new AbcLearnImageGraphic( component, ZOOM_OUT_BUTTON_PRESSED_IMAGE );
+        _outButton = new AimxcelImageGraphic( component, ZOOM_OUT_BUTTON_IMAGE );
+        _outButtonPressed = new AimxcelImageGraphic( component, ZOOM_OUT_BUTTON_PRESSED_IMAGE );
         _outButton.setLocation( OUT_LOCATION );
         _outButtonPressed.setLocation( OUT_LOCATION );
         addGraphic( _outButton );
@@ -317,9 +312,9 @@ public class AbcLearnZoomControl extends GraphicLayerSet {
 
     public static void main( String[] args ) {
         ApparatusPanel ap = new ApparatusPanel();
-        AbcLearnZoomControl zc = new AbcLearnZoomControl( ap, HORIZONTAL );
+        AimxcelZoomControl zc = new AimxcelZoomControl( ap, HORIZONTAL );
         zc.setLocation( 200, 300 );
-        AbcLearnZoomControl zc2 = new AbcLearnZoomControl( ap, VERTICAL );
+        AimxcelZoomControl zc2 = new AimxcelZoomControl( ap, VERTICAL );
         zc2.setLocation( 300, 300 );
         ap.addGraphic( zc );
         ap.addGraphic( zc2 );

@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-
+ 
 package edu.colorado.phet.common.phetgraphics.test;
 
 import java.awt.Color;
@@ -19,15 +10,15 @@ import java.io.IOException;
 
 import javax.swing.event.MouseInputAdapter;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnTestApplication;
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelTestApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
-import edu.colorado.phet.common.phetgraphics.application.AbcLearnGraphicsModule;
+import edu.colorado.phet.common.phetgraphics.application.AimxcelGraphicsModule;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 
 /**
  * TestMouseHandling is a simple simulation that is useful for testing of mouse event handling.
@@ -45,16 +36,16 @@ public class TestMouseHandling {
     }
 
     /**
-     * TestMouseHandling creates the PhET application.
+     * TestMouseHandling creates the Aimxcel application.
      */
     public TestMouseHandling( String[] args ) throws IOException {
 
         // Set up the application descriptor.
         IClock clock = new SwingClock( 40, 1 );
-        AbcLearnGraphicsModule module = new TestModule( clock );
+        AimxcelGraphicsModule module = new TestModule( clock );
 
         // Create and start the application.
-        AbcLearnTestApplication app = new AbcLearnTestApplication( args );
+        AimxcelTestApplication app = new AimxcelTestApplication( args );
         app.addModule( module );
         app.startApplication();
     }
@@ -62,7 +53,7 @@ public class TestMouseHandling {
     /**
      * TestModule sets up a module with two draggable shapes.
      */
-    private class TestModule extends AbcLearnGraphicsModule {
+    private class TestModule extends AimxcelGraphicsModule {
         public TestModule( IClock clock ) {
             super( "Test Module", clock );
 
@@ -76,7 +67,7 @@ public class TestMouseHandling {
             setApparatusPanel( apparatusPanel );
 
             // Yellow rectangle
-            AbcLearnShapeGraphic yellowGraphic = new AbcLearnShapeGraphic( apparatusPanel );
+            AimxcelShapeGraphic yellowGraphic = new AimxcelShapeGraphic( apparatusPanel );
             yellowGraphic.setName( "yellow" );
             yellowGraphic.setShape( new Rectangle( 0, 0, 50, 50 ) );
             yellowGraphic.setPaint( Color.YELLOW );
@@ -86,7 +77,7 @@ public class TestMouseHandling {
             apparatusPanel.addGraphic( yellowGraphic, 1 );
 
             // Red rectangle
-            final AbcLearnShapeGraphic redGraphic = new AbcLearnShapeGraphic( apparatusPanel );
+            final AimxcelShapeGraphic redGraphic = new AimxcelShapeGraphic( apparatusPanel );
             redGraphic.setName( "red" );
             redGraphic.setShape( new Rectangle( 0, 0, 50, 50 ) );
             redGraphic.setPaint( Color.RED );
@@ -104,10 +95,10 @@ public class TestMouseHandling {
      */
     private class MouseHandler extends MouseInputAdapter {
 
-        private AbcLearnGraphic _graphic;
+        private AimxcelGraphic _graphic;
         private Point _previousPoint;
 
-        public MouseHandler( AbcLearnGraphic graphic ) {
+        public MouseHandler( AimxcelGraphic graphic ) {
             super();
             _graphic = graphic;
             _previousPoint = new Point();

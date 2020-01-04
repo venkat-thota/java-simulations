@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.view;
+ package edu.colorado.phet.common.phetgraphics.view;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -27,10 +18,10 @@ import java.util.Iterator;
 import javax.swing.JPanel;
 import javax.swing.event.MouseInputListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.RepaintDebugGraphic;
 import edu.colorado.phet.common.phetgraphics.view.util.GraphicsSetup;
 import edu.colorado.phet.common.phetgraphics.view.util.GraphicsState;
@@ -48,7 +39,7 @@ import edu.colorado.phet.common.phetgraphics.view.util.GraphicsState;
  *
  * @author Ron LeMaster
  * @version $Revision$
- * @see edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic
+ * @see edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic
  */
 public class ApparatusPanel extends JPanel {
 
@@ -84,7 +75,7 @@ public class ApparatusPanel extends JPanel {
 
     /**
      * Sets the GraphicLayerSet for the ApparatusPanel, and attaches its listeners to the panel, after
-     * getting rid of the old ones. Also tells all the AbcLearnGraphics in the new GraphicLayerSet that their
+     * getting rid of the old ones. Also tells all the AimxcelGraphics in the new GraphicLayerSet that their
      * containing component is this AppratusPanel.
      *
      * @param newGraphic
@@ -98,8 +89,8 @@ public class ApparatusPanel extends JPanel {
         Iterator gIt = graphic.getGraphicMap().iterator();
         while ( gIt.hasNext() ) {
             Object obj = gIt.next();
-            if ( obj instanceof AbcLearnGraphic ) {
-                AbcLearnGraphic phetGraphic = (AbcLearnGraphic) obj;
+            if ( obj instanceof AimxcelGraphic ) {
+                AimxcelGraphic phetGraphic = (AimxcelGraphic) obj;
                 phetGraphic.setComponent( this );
             }
         }
@@ -226,18 +217,18 @@ public class ApparatusPanel extends JPanel {
         repaint();
     }
 
-    public void addGraphic( AbcLearnGraphic graphic, double level ) {
+    public void addGraphic( AimxcelGraphic graphic, double level ) {
         this.graphic.addGraphic( graphic, level );
     }
 
     /**
      * Adds a graphic to the default layer 0.
      */
-    public void addGraphic( AbcLearnGraphic graphic ) {
+    public void addGraphic( AimxcelGraphic graphic ) {
         this.addGraphic( graphic, 0 );
     }
 
-    public void removeGraphic( AbcLearnGraphic graphic ) {
+    public void removeGraphic( AimxcelGraphic graphic ) {
         this.graphic.removeGraphic( graphic );
     }
 

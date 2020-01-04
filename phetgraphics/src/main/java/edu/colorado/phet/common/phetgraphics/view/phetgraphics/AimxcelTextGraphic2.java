@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
+ package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -17,15 +8,10 @@ import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-/**
- * AbcLearnTextGraphic is a graphic that draws single-line text.
- *
- * @author ?
- * @version $Revision$
- */
-public class AbcLearnTextGraphic2 extends AbcLearnGraphic {
+
+public class AimxcelTextGraphic2 extends AimxcelGraphic {
 
     //----------------------------------------------------------------
     // Class data
@@ -44,7 +30,7 @@ public class AbcLearnTextGraphic2 extends AbcLearnGraphic {
     public static final int CENTER = 9;
 
     // Defaults
-    private static final Font DEFAULT_FONT = new AbcLearnFont( Font.PLAIN, 12 );
+    private static final Font DEFAULT_FONT = new AimxcelFont( Font.PLAIN, 12 );
     private static final String DEFAULT_TEXT = "";
     private static final Color DEFAULT_COLOR = Color.BLACK;
     private static final int DEFAULT_JUSTIFICATION = NONE;
@@ -64,7 +50,7 @@ public class AbcLearnTextGraphic2 extends AbcLearnGraphic {
     //----------------------------------------------------------------
 
     /**
-     * Creates a AbcLearnTextGraphic at a specified location.
+     * Creates a AimxcelTextGraphic at a specified location.
      *
      * @param component
      * @param font
@@ -73,7 +59,7 @@ public class AbcLearnTextGraphic2 extends AbcLearnGraphic {
      * @param x
      * @param y
      */
-    public AbcLearnTextGraphic2( Component component, Font font, String text, Color color, int x, int y ) {
+    public AimxcelTextGraphic2( Component component, Font font, String text, Color color, int x, int y ) {
         super( component );
         setFont( font ); // also sets fontMetrics
         this.text = text;
@@ -83,7 +69,7 @@ public class AbcLearnTextGraphic2 extends AbcLearnGraphic {
     }
 
     /**
-     * Creates a AbcLearnTextGraphic at (0,0).
+     * Creates a AimxcelTextGraphic at (0,0).
      * You can now set location easily with setLocation().
      *
      * @param component
@@ -91,23 +77,23 @@ public class AbcLearnTextGraphic2 extends AbcLearnGraphic {
      * @param text
      * @param color
      */
-    public AbcLearnTextGraphic2( Component component, Font font, String text, Color color ) {
+    public AimxcelTextGraphic2( Component component, Font font, String text, Color color ) {
         this( component, font, text, color, 0, 0 );
     }
 
     /**
-     * Creates a default AbcLearnTextGraphic at (0,0).
+     * Creates a default AimxcelTextGraphic at (0,0).
      *
      * @param component
      */
-    public AbcLearnTextGraphic2( Component component ) {
+    public AimxcelTextGraphic2( Component component ) {
         this( component, DEFAULT_FONT, DEFAULT_TEXT, DEFAULT_COLOR );
     }
 
     /**
      * Provides for Java Bean conformance, should not be used by clients.
      */
-    public AbcLearnTextGraphic2() {
+    public AimxcelTextGraphic2() {
     }
 
     //----------------------------------------------------------------
@@ -212,7 +198,7 @@ public class AbcLearnTextGraphic2 extends AbcLearnGraphic {
     }
 
     //----------------------------------------------------------------
-    // AbcLearnGraphic implementation
+    // AimxcelGraphic implementation
     //----------------------------------------------------------------
 
     public void paint( Graphics2D g2 ) {

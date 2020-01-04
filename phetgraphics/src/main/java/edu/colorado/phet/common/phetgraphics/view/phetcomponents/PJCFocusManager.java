@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.view.phetcomponents;
+ package edu.colorado.phet.common.phetgraphics.view.phetcomponents;
 
 import java.awt.FocusTraversalPolicy;
 import java.util.ArrayList;
@@ -21,16 +12,16 @@ import javax.swing.SortingFocusTraversalPolicy;
  * Uses setNextFocusableComponent to handle focus.  Doesn't support removal yet.  A later version should use FocusTraversalPolicy.
  */
 
-public class PJCFocusManager implements AbcLearnJComponentManager.Listener {
+public class PJCFocusManager implements AimxcelJComponentManager.Listener {
     private ArrayList list = new ArrayList();
     private FocusTraversalPolicy policy = new PJCFocusManager.MyPolicy();
 
-    public void phetJComponentCreated( AbcLearnJComponent phetJComponent ) {
+    public void phetJComponentCreated( AimxcelJComponent phetJComponent ) {
         if ( list.size() >= 1 ) {
-            AbcLearnJComponent prev = (AbcLearnJComponent) list.get( list.size() - 1 );
+            AimxcelJComponent prev = (AimxcelJComponent) list.get( list.size() - 1 );
             prev.getSourceComponent().setNextFocusableComponent( phetJComponent.getSourceComponent() );
 
-            AbcLearnJComponent first = (AbcLearnJComponent) list.get( 0 );
+            AimxcelJComponent first = (AimxcelJComponent) list.get( 0 );
             phetJComponent.getSourceComponent().setNextFocusableComponent( first.getSourceComponent() );
         }
         list.add( phetJComponent );
@@ -55,7 +46,7 @@ public class PJCFocusManager implements AbcLearnJComponentManager.Listener {
 
     private int indexOf( JComponent jComponent ) {
         for ( int i = 0; i < list.size(); i++ ) {
-            AbcLearnJComponent phetJComponent = (AbcLearnJComponent) list.get( i );
+            AimxcelJComponent phetJComponent = (AimxcelJComponent) list.get( i );
             if ( phetJComponent.getSourceComponent() == jComponent ) {
                 return i;
             }

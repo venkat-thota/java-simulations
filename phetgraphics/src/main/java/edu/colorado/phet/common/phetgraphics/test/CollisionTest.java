@@ -10,18 +10,18 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.model.ModelElement;
-import com.aimxcel.abclearn.common.abclearncommon.model.Particle;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
-import com.aimxcel.abclearn.common.abclearncommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.Particle;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-import edu.colorado.phet.common.phetgraphics.application.AbcLearnGraphicsModule;
+import edu.colorado.phet.common.phetgraphics.application.AimxcelGraphicsModule;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import edu.colorado.phet.common.phetgraphics.view.util.BasicGraphicsSetup;
 
 /**
@@ -66,15 +66,15 @@ public class CollisionTest {
         }
     }
 
-    static class SphereGraphic extends AbcLearnGraphic {
-        AbcLearnShapeGraphic graphic;
+    static class SphereGraphic extends AimxcelGraphic {
+        AimxcelShapeGraphic graphic;
         private Sphere sph;
         private Ellipse2D.Double shape;
 
         public SphereGraphic( Sphere sph, Component parent ) {
             super( parent );
             shape = new Ellipse2D.Double();
-            this.graphic = new AbcLearnShapeGraphic( parent, shape, Color.blue );
+            this.graphic = new AimxcelShapeGraphic( parent, shape, Color.blue );
             this.sph = sph;
             sph.addObserver( new SimpleObserver() {
                 public void update() {
@@ -103,7 +103,7 @@ public class CollisionTest {
         }
     }
 
-    static class CollisionModule extends AbcLearnGraphicsModule {
+    static class CollisionModule extends AimxcelGraphicsModule {
         ArrayList spheres = new ArrayList();
 
         public CollisionModule( String name, IClock clock, boolean useAP2, boolean offscreen, int numParticles ) {

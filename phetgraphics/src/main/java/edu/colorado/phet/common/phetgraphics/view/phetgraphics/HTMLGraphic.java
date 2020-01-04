@@ -14,20 +14,20 @@ import javax.swing.JLabel;
 import javax.swing.plaf.basic.BasicHTML;
 import javax.swing.text.View;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 /**
  * Class for rendering HTML Text.
  */
-public class HTMLGraphic extends CompositeAbcLearnGraphic {
+public class HTMLGraphic extends CompositeAimxcelGraphic {
 
     private static final Color DEFAULT_COLOR = Color.BLACK;
-    private static final Font DEFAULT_FONT = new AbcLearnFont( Font.PLAIN, 12 );
+    private static final Font DEFAULT_FONT = new AimxcelFont( Font.PLAIN, 12 );
 
     private String html;
     private Font font;
     private Color color;
-    private AbcLearnImageGraphic imageGraphic;
+    private AimxcelImageGraphic imageGraphic;
 
     public HTMLGraphic( Component component ) {
         this( component, DEFAULT_FONT, "", DEFAULT_COLOR );
@@ -47,7 +47,7 @@ public class HTMLGraphic extends CompositeAbcLearnGraphic {
         this.html = makeHTML( html );
         this.font = font;
         this.color = color;
-        imageGraphic = new AbcLearnImageGraphic( component, null, 0, 0 );
+        imageGraphic = new AimxcelImageGraphic( component, null, 0, 0 );
         addGraphic( imageGraphic );
         update();
     }

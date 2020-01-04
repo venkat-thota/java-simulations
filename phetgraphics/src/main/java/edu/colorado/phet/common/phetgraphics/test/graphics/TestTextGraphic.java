@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.test.graphics;
+ package edu.colorado.phet.common.phetgraphics.test.graphics;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -17,16 +8,16 @@ import java.awt.Rectangle;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.SwingUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
 
 /**
  * Draws a rectangle centered at (100,100) for purposes of aligning
- * a AbcLearnTextGraphic and its bounding box.
+ * a AimxcelTextGraphic and its bounding box.
  */
 
 public class TestTextGraphic {
@@ -39,15 +30,15 @@ public class TestTextGraphic {
         SwingUtils.centerWindowOnScreen( frame );
         frame.setVisible( true );
 
-        AbcLearnShapeGraphic phetShapeGraphic = new AbcLearnShapeGraphic( apparatusPanel, new Rectangle( 98, 98, 4, 4 ), Color.red );
+        AimxcelShapeGraphic phetShapeGraphic = new AimxcelShapeGraphic( apparatusPanel, new Rectangle( 98, 98, 4, 4 ), Color.red );
         apparatusPanel.addGraphic( phetShapeGraphic );
 
-        AbcLearnTextGraphic textGraphic = new AbcLearnTextGraphic( apparatusPanel, new AbcLearnFont( Font.BOLD, 24 ), "Test PhET Text & graphics", Color.blue, 0, 0 );
+        AimxcelTextGraphic textGraphic = new AimxcelTextGraphic( apparatusPanel, new AimxcelFont( Font.BOLD, 24 ), "Test Aimxcel Text & graphics", Color.blue, 0, 0 );
         apparatusPanel.addGraphic( textGraphic );
         textGraphic.setLocation( 100, 100 );
 
         Rectangle bounds = textGraphic.getBounds();
-        AbcLearnShapeGraphic boundGraphic = new AbcLearnShapeGraphic( apparatusPanel, bounds, new BasicStroke( 1 ), Color.green );
+        AimxcelShapeGraphic boundGraphic = new AimxcelShapeGraphic( apparatusPanel, bounds, new BasicStroke( 1 ), Color.green );
         apparatusPanel.addGraphic( boundGraphic );
 
         int dy = bounds.y - 100;

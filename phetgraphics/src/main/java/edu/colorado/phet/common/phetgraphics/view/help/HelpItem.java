@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.view.help;
+ package edu.colorado.phet.common.phetgraphics.view.help;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -21,11 +12,11 @@ import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShadowTextGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShadowTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import edu.colorado.phet.common.phetgraphics.view.util.GraphicsUtil;
 
 /**
@@ -34,7 +25,7 @@ import edu.colorado.phet.common.phetgraphics.view.util.GraphicsUtil;
  * @author ?
  * @version $Revision$
  */
-public class HelpItem extends AbcLearnGraphic {
+public class HelpItem extends AimxcelGraphic {
 
     //----------------------------------------------------------------
     // Class data and methods
@@ -45,7 +36,7 @@ public class HelpItem extends AbcLearnGraphic {
     public final static int LEFT = 3;
     public final static int CENTER = 4;
     public final static int RIGHT = 5;
-    public final static Font DEFAULT_FONT = new AbcLearnFont( Font.BOLD, 16 );
+    public final static Font DEFAULT_FONT = new AimxcelFont( Font.BOLD, 16 );
 
     private static String[] tokenizeString( String inputText ) {
         StringTokenizer st = new StringTokenizer( inputText, "\n" );
@@ -61,7 +52,7 @@ public class HelpItem extends AbcLearnGraphic {
     // Instance data and methods
     //----------------------------------------------------------------
 
-    AbcLearnShapeGraphic backgroundGraphic;
+    AimxcelShapeGraphic backgroundGraphic;
     ArrayList shadowTextGraphics = new ArrayList();
     int horizontalAlignment;
     int verticalAlignment;
@@ -166,7 +157,7 @@ public class HelpItem extends AbcLearnGraphic {
 
         for ( int i = 0; i < sa.length; i++ ) {
             int y = (int) yBase + (int) location.getY() + ( i + 1 ) * ( fontMetrics.getHeight() + fontMetrics.getLeading() );
-            AbcLearnShadowTextGraphic textGraphic = new AbcLearnShadowTextGraphic( getComponent(), font, sa[i], foregroundColor, 1, 1, shadowColor );
+            AimxcelShadowTextGraphic textGraphic = new AimxcelShadowTextGraphic( getComponent(), font, sa[i], foregroundColor, 1, 1, shadowColor );
             textGraphic.setLocation( x, y );
             shadowTextGraphics.add( textGraphic );
         }
@@ -189,7 +180,7 @@ public class HelpItem extends AbcLearnGraphic {
             backgroundGraphic.paint( g );
         }
         for ( int i = 0; i < shadowTextGraphics.size(); i++ ) {
-            AbcLearnShadowTextGraphic textGraphic = (AbcLearnShadowTextGraphic) shadowTextGraphics.get( i );
+            AimxcelShadowTextGraphic textGraphic = (AimxcelShadowTextGraphic) shadowTextGraphics.get( i );
             textGraphic.paint( g );
         }
         g.setRenderingHints( rhOrg );
@@ -214,7 +205,7 @@ public class HelpItem extends AbcLearnGraphic {
     public void setShadowColor( Color shadowColor ) {
         this.shadowColor = shadowColor;
         for ( int i = 0; i < shadowTextGraphics.size(); i++ ) {
-            AbcLearnShadowTextGraphic textGraphic = (AbcLearnShadowTextGraphic) shadowTextGraphics.get( i );
+            AimxcelShadowTextGraphic textGraphic = (AimxcelShadowTextGraphic) shadowTextGraphics.get( i );
             textGraphic.setShadowColor( shadowColor );
         }
     }
@@ -225,7 +216,7 @@ public class HelpItem extends AbcLearnGraphic {
     public void setForegroundColor( Color foregroundColor ) {
         this.foregroundColor = foregroundColor;
         for ( int i = 0; i < shadowTextGraphics.size(); i++ ) {
-            AbcLearnShadowTextGraphic shadowTextGraphic = (AbcLearnShadowTextGraphic) shadowTextGraphics.get( i );
+            AimxcelShadowTextGraphic shadowTextGraphic = (AimxcelShadowTextGraphic) shadowTextGraphics.get( i );
             shadowTextGraphic.setColor( foregroundColor );
         }
     }

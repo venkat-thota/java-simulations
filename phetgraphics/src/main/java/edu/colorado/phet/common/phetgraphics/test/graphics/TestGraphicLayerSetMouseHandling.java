@@ -15,8 +15,8 @@ import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationListener;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnMultiLineTextGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelMultiLineTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 
 /**
  * This example tests how GraphicLayerSet handles mouse events.
@@ -58,7 +58,7 @@ public class TestGraphicLayerSetMouseHandling extends JFrame {
                 "The BLUE square ignores mouse events."
         };
         Font font = new Font( null, Font.PLAIN, 14 );
-        AbcLearnMultiLineTextGraphic help = new AbcLearnMultiLineTextGraphic( apparatusPanel, font, lines, Color.BLACK );
+        AimxcelMultiLineTextGraphic help = new AimxcelMultiLineTextGraphic( apparatusPanel, font, lines, Color.BLACK );
         help.setLocation( 10, 10 );
         help.setRenderingHints( new RenderingHints( RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON ) );
         apparatusPanel.addGraphic( help );
@@ -87,7 +87,7 @@ public class TestGraphicLayerSetMouseHandling extends JFrame {
             addGraphic( child );
 
             // Blue rectangle, not draggable, allows picking through it.
-            AbcLearnShapeGraphic rectangle1 = new AbcLearnShapeGraphic( component,
+            AimxcelShapeGraphic rectangle1 = new AimxcelShapeGraphic( component,
                                                                 new Rectangle( 0, 0, 50, 50 ), Color.BLUE, new BasicStroke( 1 ), Color.BLACK );
             rectangle1.setRegistrationPoint( 25, 25 ); // center
             rectangle1.setIgnoreMouse( true );
@@ -95,7 +95,7 @@ public class TestGraphicLayerSetMouseHandling extends JFrame {
             addGraphic( rectangle1 );
 
             // Blue rectangle, not draggable, does NOT allow picking through it.
-            AbcLearnShapeGraphic rectangle2 = new AbcLearnShapeGraphic( component,
+            AimxcelShapeGraphic rectangle2 = new AimxcelShapeGraphic( component,
                                                                 new Rectangle( 0, 0, 50, 50 ), Color.YELLOW, new BasicStroke( 1 ), Color.BLACK );
             rectangle2.setRegistrationPoint( 25, 25 ); // center
             rectangle2.setIgnoreMouse( false );
@@ -126,14 +126,14 @@ public class TestGraphicLayerSetMouseHandling extends JFrame {
             super( component );
 
             // Green circle, not draggable.
-            AbcLearnShapeGraphic background = new AbcLearnShapeGraphic( component,
+            AimxcelShapeGraphic background = new AimxcelShapeGraphic( component,
                                                                 new Ellipse2D.Double( 0, 0, 200, 200 ), Color.GREEN, new BasicStroke( 1 ), Color.BLACK );
             background.setRegistrationPoint( 100, 100 ); // center
             background.setLocation( 0, 0 );
             addGraphic( background );
 
             // Red circle, draggable.
-            final AbcLearnShapeGraphic control = new AbcLearnShapeGraphic( component,
+            final AimxcelShapeGraphic control = new AimxcelShapeGraphic( component,
                                                                    new Ellipse2D.Double( 0, 0, 50, 50 ), Color.RED, new BasicStroke( 1 ), Color.BLACK );
             control.setRegistrationPoint( 25, 25 ); // center
             control.setLocation( 0, -25 );

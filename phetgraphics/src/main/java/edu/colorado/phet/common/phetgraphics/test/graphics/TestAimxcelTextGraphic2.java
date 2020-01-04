@@ -15,32 +15,32 @@ import java.awt.geom.Point2D;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnTestApplication;
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.FrameSetup;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelTestApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.FrameSetup;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.colorado.phet.common.phetgraphics.application.AbcLearnGraphicsModule;
+import edu.colorado.phet.common.phetgraphics.application.AimxcelGraphicsModule;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic2;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic2;
 
 /**
- * TestAbcLearnTextGraphic2 test the bounds, justifications, and registration point
- * features of AbcLearnTextGraphic22.
+ * TestAimxcelTextGraphic2 test the bounds, justifications, and registration point
+ * features of AimxcelTextGraphic22.
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  * @version $Revision$
  */
-public class TestAbcLearnTextGraphic2 {
+public class TestAimxcelTextGraphic2 {
 
     public static void main( String args[] ) throws IOException {
-        TestAbcLearnTextGraphic2 test = new TestAbcLearnTextGraphic2( args );
+        TestAimxcelTextGraphic2 test = new TestAimxcelTextGraphic2( args );
     }
 
-    public TestAbcLearnTextGraphic2( String[] args ) throws IOException {
+    public TestAimxcelTextGraphic2( String[] args ) throws IOException {
 
         // Clock
         double timeStep = 1;
@@ -50,16 +50,16 @@ public class TestAbcLearnTextGraphic2 {
 
         FrameSetup frameSetup = new FrameSetup.CenteredWithSize( 1024, 768 );
 
-        AbcLearnTestApplication app = new AbcLearnTestApplication( args, frameSetup );
+        AimxcelTestApplication app = new AimxcelTestApplication( args, frameSetup );
 
-        AbcLearnGraphicsModule module = new TestModule( clock );
+        AimxcelGraphicsModule module = new TestModule( clock );
 
-        app.setModules( new AbcLearnGraphicsModule[] { module } );
+        app.setModules( new AimxcelGraphicsModule[] { module } );
 
         app.startApplication();
     }
 
-    private class TestModule extends AbcLearnGraphicsModule {
+    private class TestModule extends AimxcelGraphicsModule {
 
         public TestModule( IClock clock ) {
             super( "TestModule", clock );
@@ -81,100 +81,100 @@ public class TestAbcLearnTextGraphic2 {
             apparatusPanel.addGraphic( boundsDebugger, debugLayer );
 
             // Title
-            AbcLearnTextGraphic2 title = new AbcLearnTextGraphic2( apparatusPanel );
-            title.setFont( new AbcLearnFont( Font.PLAIN, 24 ) );
+            AimxcelTextGraphic2 title = new AimxcelTextGraphic2( apparatusPanel );
+            title.setFont( new AimxcelFont( Font.PLAIN, 24 ) );
             title.setColor( Color.YELLOW );
-            title.setText( "AbcLearnTextGraphic2: test of bounds, justifications, and registration points" );
+            title.setText( "AimxcelTextGraphic2: test of bounds, justifications, and registration points" );
             title.setLocation( 50, 50 );
             apparatusPanel.addGraphic( title, textLayer );
 
-            // A bunch of AbcLearnTextGraphic2s
+            // A bunch of AimxcelTextGraphic2s
 
-            Font font = new AbcLearnFont( Font.PLAIN, 18 );
+            Font font = new AimxcelFont( Font.PLAIN, 18 );
             Color color = Color.LIGHT_GRAY;
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "justification = NORTH_WEST", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "justification = NORTH_WEST", color );
                 t.setLocation( 50, 150 );
-                t.setJustification( AbcLearnTextGraphic2.NORTH_WEST );
+                t.setJustification( AimxcelTextGraphic2.NORTH_WEST );
                 apparatusPanel.addGraphic( t, textLayer );
                 boundsDebugger.add( t );
             }
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "justification = NORTH", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "justification = NORTH", color );
                 t.setLocation( 500, 150 );
-                t.setJustification( AbcLearnTextGraphic2.NORTH );
+                t.setJustification( AimxcelTextGraphic2.NORTH );
                 apparatusPanel.addGraphic( t, textLayer );
                 boundsDebugger.add( t );
             }
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "justification = NORTH_EAST", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "justification = NORTH_EAST", color );
                 t.setLocation( 900, 150 );
-                t.setJustification( AbcLearnTextGraphic2.NORTH_EAST );
+                t.setJustification( AimxcelTextGraphic2.NORTH_EAST );
                 apparatusPanel.addGraphic( t, textLayer );
                 boundsDebugger.add( t );
             }
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "justification = WEST", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "justification = WEST", color );
                 t.setLocation( 50, 300 );
-                t.setJustification( AbcLearnTextGraphic2.WEST );
+                t.setJustification( AimxcelTextGraphic2.WEST );
                 apparatusPanel.addGraphic( t, textLayer );
                 boundsDebugger.add( t );
             }
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "justification = CENTER", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "justification = CENTER", color );
                 t.setLocation( 500, 300 );
-                t.setJustification( AbcLearnTextGraphic2.CENTER );
+                t.setJustification( AimxcelTextGraphic2.CENTER );
                 apparatusPanel.addGraphic( t, textLayer );
                 boundsDebugger.add( t );
             }
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "justification = EAST", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "justification = EAST", color );
                 t.setLocation( 900, 300 );
-                t.setJustification( AbcLearnTextGraphic2.EAST );
+                t.setJustification( AimxcelTextGraphic2.EAST );
                 apparatusPanel.addGraphic( t, textLayer );
                 boundsDebugger.add( t );
             }
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "justification = SOUTH_WEST", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "justification = SOUTH_WEST", color );
                 t.setLocation( 50, 450 );
-                t.setJustification( AbcLearnTextGraphic2.SOUTH_WEST );
+                t.setJustification( AimxcelTextGraphic2.SOUTH_WEST );
                 apparatusPanel.addGraphic( t, textLayer );
                 boundsDebugger.add( t );
             }
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "justification = SOUTH", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "justification = SOUTH", color );
                 t.setLocation( 500, 450 );
-                t.setJustification( AbcLearnTextGraphic2.SOUTH );
+                t.setJustification( AimxcelTextGraphic2.SOUTH );
                 apparatusPanel.addGraphic( t, textLayer );
                 boundsDebugger.add( t );
             }
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "justification = SOUTH_EAST", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "justification = SOUTH_EAST", color );
                 t.setLocation( 900, 450 );
-                t.setJustification( AbcLearnTextGraphic2.SOUTH_EAST );
+                t.setJustification( AimxcelTextGraphic2.SOUTH_EAST );
                 apparatusPanel.addGraphic( t, textLayer );
                 boundsDebugger.add( t );
             }
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "justification = NONE", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "justification = NONE", color );
                 t.setLocation( 50, 600 );
-                t.setJustification( AbcLearnTextGraphic2.NONE );
+                t.setJustification( AimxcelTextGraphic2.NONE );
                 apparatusPanel.addGraphic( t, textLayer );
                 boundsDebugger.add( t );
             }
 
             {
-                AbcLearnTextGraphic2 t = new AbcLearnTextGraphic2( apparatusPanel, font, "custom registration point = bottom center", color );
+                AimxcelTextGraphic2 t = new AimxcelTextGraphic2( apparatusPanel, font, "custom registration point = bottom center", color );
                 t.setLocation( 600, 600 );
                 t.setRegistrationPoint( t.getWidth() / 2, t.getHeight() );
                 apparatusPanel.addGraphic( t, textLayer );
@@ -184,10 +184,10 @@ public class TestAbcLearnTextGraphic2 {
     }
 
     /**
-     * BoundsDebugger displays the bounds and locations of a set of AbcLearnGraphics.
+     * BoundsDebugger displays the bounds and locations of a set of AimxcelGraphics.
      * It is intended for use in debugging phetcommon and client applications.
      */
-    public class BoundsDebugger extends AbcLearnGraphic {
+    public class BoundsDebugger extends AimxcelGraphic {
 
         //----------------------------------------------------------------------------
         // Instance data
@@ -209,18 +209,18 @@ public class TestAbcLearnTextGraphic2 {
             setIgnoreMouse( true );
         }
 
-        public void add( AbcLearnGraphic graphic ) {
+        public void add( AimxcelGraphic graphic ) {
             _graphics.add( graphic );
         }
 
-        public void remove( AbcLearnGraphic graphic ) {
+        public void remove( AimxcelGraphic graphic ) {
             _graphics.remove( graphic );
         }
 
         protected Rectangle determineBounds() {
             Rectangle bounds = null;
             for ( int i = 0; i < _graphics.size(); i++ ) {
-                AbcLearnGraphic graphic = (AbcLearnGraphic) _graphics.get( i );
+                AimxcelGraphic graphic = (AimxcelGraphic) _graphics.get( i );
                 if ( bounds == null ) {
                     bounds = new Rectangle( graphic.getBounds() );
                 }
@@ -236,7 +236,7 @@ public class TestAbcLearnTextGraphic2 {
                 saveGraphicsState( g2 );
                 for ( int i = 0; i < _graphics.size(); i++ ) {
                     // Get the rendering details for the next graphic.
-                    AbcLearnGraphic graphic = (AbcLearnGraphic) _graphics.get( i );
+                    AimxcelGraphic graphic = (AimxcelGraphic) _graphics.get( i );
                     Rectangle bounds = graphic.getBounds();
                     Point location = graphic.getLocation();
 

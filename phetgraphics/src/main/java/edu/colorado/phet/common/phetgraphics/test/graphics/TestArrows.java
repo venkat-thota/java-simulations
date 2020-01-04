@@ -16,25 +16,25 @@ import java.awt.geom.Point2D;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockAdapter;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
-import com.aimxcel.abclearn.common.abclearncommon.view.graphics.Arrow;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationListener;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.RepaintDebugGraphic;
 import edu.colorado.phet.common.phetgraphics.view.util.BasicGraphicsSetup;
 
 public class TestArrows {
     static double theta = 0;
     private static Arrow arrow;
-    private static AbcLearnShapeGraphic shapeGraphic;
+    private static AimxcelShapeGraphic shapeGraphic;
 
     final static int x0 = 400;
     final static int y0 = 400;
@@ -50,7 +50,7 @@ public class TestArrows {
         p.addGraphic( compositeGraphic );
 
         arrow = new Arrow( new Point( 200, 300 ), new Point( x0, y0 ), 100, 100, 35, .5, false );
-        shapeGraphic = new AbcLearnShapeGraphic( p, arrow.getShape(), Color.blue );
+        shapeGraphic = new AimxcelShapeGraphic( p, arrow.getShape(), Color.blue );
         SwingClock clock = new SwingClock( 30, 1.0 );
 //        clock.addClockListener( new ClockAdapter() {
 //            public void clockTicked( AbstractClock c, double dt ) {
@@ -79,8 +79,8 @@ public class TestArrows {
             }
         } );
 
-        Font font = new AbcLearnFont( Font.BOLD, 24 );
-        AbcLearnTextGraphic textGraphic = new AbcLearnTextGraphic( p, font, "Hello PhET", Color.blue, 200, 100 );
+        Font font = new AimxcelFont( Font.BOLD, 24 );
+        AimxcelTextGraphic textGraphic = new AimxcelTextGraphic( p, font, "Hello Aimxcel", Color.blue, 200, 100 );
         compositeGraphic.addGraphic( textGraphic, 10 );
         compositeGraphic.addGraphic( shapeGraphic, 30 );
         frame.setContentPane( p );

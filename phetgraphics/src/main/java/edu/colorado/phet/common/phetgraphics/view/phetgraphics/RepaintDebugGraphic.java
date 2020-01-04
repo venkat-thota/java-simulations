@@ -19,9 +19,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.geom.AffineTransform;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockListener;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockListener;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 
@@ -31,7 +31,7 @@ import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
  * @author ?
  * @version $Revision:14674 $
  */
-public class RepaintDebugGraphic extends AbcLearnGraphic implements ClockListener {
+public class RepaintDebugGraphic extends AimxcelGraphic implements ClockListener {
     private int r = 255;
     private int g = 255;
     private int b = 255;

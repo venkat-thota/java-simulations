@@ -10,17 +10,17 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockAdapter;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
 
 /**
  * Created by IntelliJ IDEA.
@@ -44,7 +44,7 @@ public class TestApparatusPanel2Resize {
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
         Rectangle rectangle = new Rectangle( 0, 0, 200, 200 );
-        final AbcLearnShapeGraphic phetShapeGraphic = new AbcLearnShapeGraphic( panel, rectangle, Color.blue );
+        final AimxcelShapeGraphic phetShapeGraphic = new AimxcelShapeGraphic( panel, rectangle, Color.blue );
         phetShapeGraphic.setLocation( 50, 50 );
 
         panel.addGraphic( phetShapeGraphic );
@@ -54,7 +54,7 @@ public class TestApparatusPanel2Resize {
             }
         } );
 
-        AbcLearnTextGraphic textGraphic = new AbcLearnTextGraphic( panel, new AbcLearnFont( 0, 24 ), "Hello", Color.black, 0, 0 );
+        AimxcelTextGraphic textGraphic = new AimxcelTextGraphic( panel, new AimxcelFont( 0, 24 ), "Hello", Color.black, 0, 0 );
         textGraphic.setLocation( 400, 100 );
         panel.addGraphic( textGraphic );
 

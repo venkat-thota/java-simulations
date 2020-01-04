@@ -7,13 +7,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockAdapter;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
-import edu.colorado.phet.common.phetgraphics.view.phetcomponents.AbcLearnJComponent;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetcomponents.AimxcelJComponent;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 import edu.colorado.phet.common.phetgraphics.view.util.BasicGraphicsSetup;
 
 /**
@@ -23,12 +23,12 @@ import edu.colorado.phet.common.phetgraphics.view.util.BasicGraphicsSetup;
  * Time: 8:49:52 PM
  * To change this template use File | Settings | File Templates.
  */
-public class BasicAbcLearnJComponentTest {
+public class BasicAimxcelJComponentTest {
     private JFrame frame;
     private ApparatusPanel2 ap;
     private SwingClock swingClock;
 
-    public BasicAbcLearnJComponentTest() {
+    public BasicAimxcelJComponentTest() {
         /*Set up the application frame and apparatusPanel.*/
         frame = new JFrame( "Frame" );
         swingClock = new SwingClock( 30, 1.0 );
@@ -56,20 +56,20 @@ public class BasicAbcLearnJComponentTest {
             }
         } );
 
-        /**Wrap the JComponent in a AbcLearnGraphic called AbcLearnJComponent*/
-        AbcLearnGraphic buttonAbcLearnJ = AbcLearnJComponent.newInstance( ap, jb );
-        ap.addGraphic( buttonAbcLearnJ );
+        /**Wrap the JComponent in a AimxcelGraphic called AimxcelJComponent*/
+        AimxcelGraphic buttonAimxcelJ = AimxcelJComponent.newInstance( ap, jb );
+        ap.addGraphic( buttonAimxcelJ );
 
-        /**Now you can decorate or manipule the AbcLearnGraphic as per usual.*/
-        buttonAbcLearnJ.setCursorHand();
-        buttonAbcLearnJ.scale( 1.5 );
-        buttonAbcLearnJ.setLocation( 100, 100 );
+        /**Now you can decorate or manipule the AimxcelGraphic as per usual.*/
+        buttonAimxcelJ.setCursorHand();
+        buttonAimxcelJ.scale( 1.5 );
+        buttonAimxcelJ.setLocation( 100, 100 );
 
         /**That's all.*/
     }
 
     public static void main( String[] args ) {
-        new BasicAbcLearnJComponentTest().start();
+        new BasicAimxcelJComponentTest().start();
     }
 
     private void start() {

@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.view;
+ package edu.colorado.phet.common.phetgraphics.view;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -34,15 +25,15 @@ import javax.swing.JComponent;
 import javax.swing.SwingUtilities;
 import javax.swing.event.MouseInputListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockListener;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.util.EventChannel;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockListener;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.util.EventChannel;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphics2D;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphics2D;
 import edu.colorado.phet.common.phetgraphics.view.util.GraphicsState;
 import edu.colorado.phet.common.phetgraphics.view.util.TransformManager;
 
@@ -109,7 +100,7 @@ public class ApparatusPanel2 extends ApparatusPanel implements ClockListener {
     }
 
     /**
-     * This constructor adds a feature that allows AbcLearnGraphics to get mouse events
+     * This constructor adds a feature that allows AimxcelGraphics to get mouse events
      * when the model clock is paused.
      *
      * @param model
@@ -332,7 +323,7 @@ public class ApparatusPanel2 extends ApparatusPanel implements ClockListener {
     protected void paintComponent( Graphics graphics ) {
         super.doPaintSuper( graphics );
         Graphics2D g2 = (Graphics2D) graphics;
-        g2 = new AbcLearnGraphics2D( g2 );
+        g2 = new AimxcelGraphics2D( g2 );
         if ( repaintArea == null ) {
             repaintArea = this.getBounds();
         }
@@ -437,7 +428,7 @@ public class ApparatusPanel2 extends ApparatusPanel implements ClockListener {
     }
 
     /**
-     * Computes the size of the canvas on which AbcLearnGraphics attached to this panel are drawn.
+     * Computes the size of the canvas on which AimxcelGraphics attached to this panel are drawn.
      * If the size changed, an canvasSizeChanged is called on all ChangeListeners
      */
     private void determineCanvasSize() {

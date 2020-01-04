@@ -24,36 +24,30 @@ import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockAdapter;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.ImageLoader;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import edu.colorado.phet.common.phetgraphics.view.phetcomponents.AbcLearnJComponent;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetcomponents.AimxcelJComponent;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.RepaintDebugGraphic;
 import edu.colorado.phet.common.phetgraphics.view.util.BasicGraphicsSetup;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sam Reid
- * Date: Mar 8, 2005
- * Time: 8:49:52 PM
- * To change this template use File | Settings | File Templates.
- */
-public class FullAbcLearnJComponentTest {
+
+public class FullAimxcelJComponentTest {
     private JFrame frame;
     private ApparatusPanel2 ap;
     private SwingClock swingClock;
 
-    public FullAbcLearnJComponentTest() throws IOException {
+    public FullAimxcelJComponentTest() throws IOException {
 
         frame = new JFrame( "Frame" );
-        AbcLearnJComponent.init( frame );//todo integrate into AbcLearnFrame.
+        AimxcelJComponent.init( frame );//todo integrate into AimxcelFrame.
 
         SwingClock swingClock = new SwingClock( 30, 1.0 );
         ap = new ApparatusPanel2( swingClock );
@@ -64,15 +58,15 @@ public class FullAbcLearnJComponentTest {
                 System.out.println( "e = " + e );
             }
         } );
-        AbcLearnGraphic buttonAbcLearnJ = AbcLearnJComponent.newInstance( ap, jb );
-        ap.addGraphic( buttonAbcLearnJ );
+        AimxcelGraphic buttonAimxcelJ = AimxcelJComponent.newInstance( ap, jb );
+        ap.addGraphic( buttonAimxcelJ );
 
         frame.setContentPane( ap );
         frame.setSize( 600, 600 );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
-        buttonAbcLearnJ.setCursorHand();
-        buttonAbcLearnJ.scale( 2 );
+        buttonAimxcelJ.setCursorHand();
+        buttonAimxcelJ.scale( 2 );
 
         JTextField text = new JTextField( 10 );
         text.addActionListener( new ActionListener() {
@@ -81,20 +75,20 @@ public class FullAbcLearnJComponentTest {
             }
         } );
         text.setBorder( BorderFactory.createTitledBorder( "TextField" ) );
-        AbcLearnGraphic textFieldAbcLearnJ = AbcLearnJComponent.newInstance( ap, text );
-        ap.addGraphic( textFieldAbcLearnJ );
-        textFieldAbcLearnJ.setLocation( 100, 300 );
+        AimxcelGraphic textFieldAimxcelJ = AimxcelJComponent.newInstance( ap, text );
+        ap.addGraphic( textFieldAimxcelJ );
+        textFieldAimxcelJ.setLocation( 100, 300 );
 
-        AbcLearnGraphic checkBoxAbcLearnJ = AbcLearnJComponent.newInstance( ap, new JCheckBox( "Checkbox" ) );
-        ap.addGraphic( checkBoxAbcLearnJ );
-        checkBoxAbcLearnJ.setLocation( 300, 50 );
+        AimxcelGraphic checkBoxAimxcelJ = AimxcelJComponent.newInstance( ap, new JCheckBox( "Checkbox" ) );
+        ap.addGraphic( checkBoxAimxcelJ );
+        checkBoxAimxcelJ.setLocation( 300, 50 );
 
         JRadioButton jRadioButton = new JRadioButton( "Option A" );
         JRadioButton jRadioButton2 = new JRadioButton( "The other Option" );
         jRadioButton.setSelected( true );
 
-        AbcLearnGraphic radioButton1 = AbcLearnJComponent.newInstance( ap, jRadioButton );
-        AbcLearnGraphic radioButton2 = AbcLearnJComponent.newInstance( ap, jRadioButton2 );
+        AimxcelGraphic radioButton1 = AimxcelJComponent.newInstance( ap, jRadioButton );
+        AimxcelGraphic radioButton2 = AimxcelJComponent.newInstance( ap, jRadioButton2 );
         ap.addGraphic( radioButton1 );
         ap.addGraphic( radioButton2 );
         radioButton1.scale( 1.3 );
@@ -106,13 +100,13 @@ public class FullAbcLearnJComponentTest {
         buttonGroup.add( jRadioButton );
         buttonGroup.add( jRadioButton2 );
 
-        buttonAbcLearnJ.setLocation( 100, 100 );
+        buttonAimxcelJ.setLocation( 100, 100 );
         this.swingClock = swingClock;
         this.swingClock.addClockListener( new ClockAdapter() {
             public void clockTicked( ClockEvent event ) {
                 ap.handleUserInput();
 //                ap.paintImmediately( new Rectangle( 0, 0, ap.getWidth(), ap.getLength() ) );
-                AbcLearnJComponent.getRepaintManager().updateGraphics();
+                AimxcelJComponent.getRepaintManager().updateGraphics();
                 ap.paint();
 
             }
@@ -120,12 +114,12 @@ public class FullAbcLearnJComponentTest {
 
         final JButton pressIt = new JButton( "Play",
                                              new ImageIcon( ImageLoader.loadBufferedImage( "images/icons/java/media/Play24.gif" ) ) );
-        pressIt.setFont( new AbcLearnFont( Font.BOLD, 22 ) );
+        pressIt.setFont( new AimxcelFont( Font.BOLD, 22 ) );
         pressIt.setForeground( Color.blue );
         pressIt.setBackground( Color.green );
 
         final JButton pauseIt = new JButton( "Pause", new ImageIcon( ImageLoader.loadBufferedImage( "images/icons/java/media/Pause24.gif" ) ) );
-        pauseIt.setFont( new AbcLearnFont( Font.BOLD, 22 ) );
+        pauseIt.setFont( new AimxcelFont( Font.BOLD, 22 ) );
         pauseIt.setForeground( Color.red );
         pauseIt.setBackground( Color.green );
 
@@ -143,12 +137,12 @@ public class FullAbcLearnJComponentTest {
             }
         } );
 
-        AbcLearnGraphic phetJComponent = AbcLearnJComponent.newInstance( ap, pressIt );
+        AimxcelGraphic phetJComponent = AimxcelJComponent.newInstance( ap, pressIt );
         ap.addGraphic( phetJComponent );
         phetJComponent.setLocation( 300, 100 );
 
 
-        AbcLearnGraphic pauseComponent = AbcLearnJComponent.newInstance( ap, pauseIt );
+        AimxcelGraphic pauseComponent = AimxcelJComponent.newInstance( ap, pauseIt );
         ap.addGraphic( pauseComponent );
         pauseComponent.setLocation( phetJComponent.getX() + phetJComponent.getWidth() + 5, phetJComponent.getY() );
 
@@ -173,7 +167,7 @@ public class FullAbcLearnJComponentTest {
                 }
             } );
             slider.setLabelTable( labels );
-            AbcLearnGraphic zslider = AbcLearnJComponent.newInstance( ap, slider );
+            AimxcelGraphic zslider = AimxcelJComponent.newInstance( ap, slider );
             ap.addGraphic( zslider );
             zslider.setLocation( 400, 300 );
 
@@ -181,7 +175,7 @@ public class FullAbcLearnJComponentTest {
         {
 //        zslider.rotate( Math.PI / 32, 400, 300 );
             final JSlider slider = new JSlider( new DefaultBoundedRangeModel() );
-            slider.setBorder( BorderFactory.createTitledBorder( "AbcLearnGraphics can be transformed" ) );
+            slider.setBorder( BorderFactory.createTitledBorder( "AimxcelGraphics can be transformed" ) );
             slider.setPaintTicks( true );
             slider.setPaintTrack( true );
             slider.setPaintLabels( true );
@@ -198,7 +192,7 @@ public class FullAbcLearnJComponentTest {
                 }
             } );
             slider.setLabelTable( labels );
-            AbcLearnGraphic zslider = AbcLearnJComponent.newInstance( ap, slider );
+            AimxcelGraphic zslider = AimxcelJComponent.newInstance( ap, slider );
             ap.addGraphic( zslider );
             zslider.setLocation( 100, 400 );
             zslider.rotate( Math.PI / 32 );
@@ -207,7 +201,7 @@ public class FullAbcLearnJComponentTest {
 
         JButton draggableButton = new JButton( "DraggableButton" );
 //        JButton draggableButton = new JButton( "DraggableButton", new ImageIcon( ImageLoader.loadBufferedImage( "images/x-30.png" ) ) );
-        final AbcLearnGraphic phetJComponentDraggable = AbcLearnJComponent.newInstance( ap, draggableButton );
+        final AimxcelGraphic phetJComponentDraggable = AimxcelJComponent.newInstance( ap, draggableButton );
         phetJComponentDraggable.addTranslationListener( new TranslationListener() {
             public void translationOccurred( TranslationEvent translationEvent ) {
                 phetJComponentDraggable.setLocation( translationEvent.getX(), translationEvent.getY() );
@@ -217,14 +211,14 @@ public class FullAbcLearnJComponentTest {
 
 
         JSpinner spinner = new JSpinner();
-        AbcLearnGraphic spinnerGraphic = AbcLearnJComponent.newInstance( ap, spinner );
+        AimxcelGraphic spinnerGraphic = AimxcelJComponent.newInstance( ap, spinner );
         spinnerGraphic.setLocation( 50, 100 );
         ap.addGraphic( spinnerGraphic );
 
         JTextArea textArea = new JTextArea( "This land is your land\nThis land is my land.", 2, 15 );
         textArea.setBorder( BorderFactory.createTitledBorder( BorderFactory.createLineBorder( Color.blue, 2 ), "Text Area!" ) );
-        textArea.setFont( new AbcLearnFont( Font.BOLD, 22 ) );
-        AbcLearnGraphic pj = AbcLearnJComponent.newInstance( ap, textArea );
+        textArea.setFont( new AimxcelFont( Font.BOLD, 22 ) );
+        AimxcelGraphic pj = AimxcelJComponent.newInstance( ap, textArea );
         pj.setLocation( 15, 200 );
 //        pj.scale( 1.45);
         pj.scale( 0.8 );
@@ -238,12 +232,12 @@ public class FullAbcLearnJComponentTest {
 //        Component[] ch = jSpinner.getComponents();
 //        for( int i = 0; i < ch.length; i++ ) {
 //            JComponent component = (JComponent)ch[i];
-//            AbcLearnJComponent pjStar = AbcLearnJComponent.newInstance( ap, component );
+//            AimxcelJComponent pjStar = AimxcelJComponent.newInstance( ap, component );
 //            Point loc = component.getLocation();
 //            ap.addGraphic( pjStar );
 //            pjStar.setLocation( loc.x+i*10,loc.y );
 //        }
-//        AbcLearnJComponent pj = AbcLearnJComponent.newInstance( ap, jSpinner );
+//        AimxcelJComponent pj = AimxcelJComponent.newInstance( ap, jSpinner );
 //        ap.addGraphic( pj );
 //        pj.setLocation( 50, 350 );
 
@@ -254,7 +248,7 @@ public class FullAbcLearnJComponentTest {
     }
 
     public static void main( String[] args ) throws IOException {
-        new FullAbcLearnJComponentTest().start();
+        new FullAimxcelJComponentTest().start();
     }
 
     private void start() {

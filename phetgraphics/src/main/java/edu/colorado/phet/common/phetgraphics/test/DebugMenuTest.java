@@ -1,23 +1,14 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.test;
+ package edu.colorado.phet.common.phetgraphics.test;
 
 import java.awt.Color;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnTestApplication;
-import com.aimxcel.abclearn.common.abclearncommon.model.BaseModel;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelTestApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
-import edu.colorado.phet.common.phetgraphics.application.AbcLearnGraphicsModule;
+import edu.colorado.phet.common.phetgraphics.application.AimxcelGraphicsModule;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 
 /**
@@ -33,16 +24,16 @@ public class DebugMenuTest {
 //        ApplicationModel am = new ApplicationModel( "Debug Test", "", "" );
 //        am.setClock( clock );
 //        DebugMenuTestModule debugMenuTestModule = new DebugMenuTestModule( am.getClock() );
-//        am.setModules( new AbcLearnGraphicsModule[]{debugMenuTestModule} );
+//        am.setModules( new AimxcelGraphicsModule[]{debugMenuTestModule} );
 //        am.setInitialModule( debugMenuTestModule );
 
-        AbcLearnTestApplication app = new AbcLearnTestApplication( args );
+        AimxcelTestApplication app = new AimxcelTestApplication( args );
         DebugMenuTestModule debugMenuTestModule = new DebugMenuTestModule( clock );
         app.addModule( debugMenuTestModule );
         app.startApplication();
     }
 
-    static class DebugMenuTestModule extends AbcLearnGraphicsModule {
+    static class DebugMenuTestModule extends AimxcelGraphicsModule {
         protected DebugMenuTestModule( IClock clock ) {
             super( "Debug Menu Test", clock );
 

@@ -1,24 +1,24 @@
 
 package edu.colorado.phet.common.phetgraphics.application;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
-import com.aimxcel.abclearn.common.abclearncommon.simsharing.messages.IUserComponent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 
 /**
- * AbcLearngraphics module with sim-sharing messages for tab presses.
+ * Aimxcelgraphics module with sim-sharing messages for tab presses.
  *
  * @author Chris Malley (cmalley@pixelzoom.com)
  */
-public class SimSharingAbcLearnGraphicsModule extends AbcLearnGraphicsModule {
+public class SimSharingAimxcelGraphicsModule extends AimxcelGraphicsModule {
 
     private final IUserComponent tabUserComponent;
 
-    public SimSharingAbcLearnGraphicsModule( IUserComponent tabUserComponent, String name ) {
+    public SimSharingAimxcelGraphicsModule( IUserComponent tabUserComponent, String name ) {
         super( name );
         this.tabUserComponent = tabUserComponent;
     }
 
-    protected SimSharingAbcLearnGraphicsModule( IUserComponent tabUserComponent, String name, IClock clock ) {
+    protected SimSharingAimxcelGraphicsModule( IUserComponent tabUserComponent, String name, IClock clock ) {
         super( name, clock );
         this.tabUserComponent = tabUserComponent;
     }

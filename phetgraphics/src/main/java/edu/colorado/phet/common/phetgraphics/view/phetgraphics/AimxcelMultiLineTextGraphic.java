@@ -1,13 +1,3 @@
-
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author:samreid $
- * Revision : $Revision:14674 $
- * Date modified : $Date:2007-04-17 02:37:37 -0500 (Tue, 17 Apr 2007) $
- */
 package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
 
 import java.awt.Color;
@@ -17,28 +7,23 @@ import java.awt.FontMetrics;
 import java.awt.Point;
 import java.util.Arrays;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
-/**
- * AbcLearnMultiLineTextGraphic
- *
- * @author ?
- * @version $Revision:14674 $
- */
-public class AbcLearnMultiLineTextGraphic extends CompositeAbcLearnGraphic {
+
+public class AimxcelMultiLineTextGraphic extends CompositeAimxcelGraphic {
     private LineCreator lineCreator;
     private String[] text;
     private FontMetrics fontMetrics;
 
-    public AbcLearnMultiLineTextGraphic( Component component, Font font, String[] text, Color color ) {
+    public AimxcelMultiLineTextGraphic( Component component, Font font, String[] text, Color color ) {
         this( component, font, text, new Basic( component, font, color ) );
     }
 
-    public AbcLearnMultiLineTextGraphic( Component component, Font font, String[] text, Color color, int dx, int dy, Color backgroundColor ) {
+    public AimxcelMultiLineTextGraphic( Component component, Font font, String[] text, Color color, int dx, int dy, Color backgroundColor ) {
         this( component, font, text, new Shadowed( component, font, color, dx, dy, backgroundColor ) );
     }
 
-    public AbcLearnMultiLineTextGraphic( Component component, Font font, String[] text, LineCreator lineCreator ) {
+    public AimxcelMultiLineTextGraphic( Component component, Font font, String[] text, LineCreator lineCreator ) {
         super( component );
         this.text = text;
         this.lineCreator = lineCreator;
@@ -49,28 +34,28 @@ public class AbcLearnMultiLineTextGraphic extends CompositeAbcLearnGraphic {
     /**
      * @deprecated
      */
-    public AbcLearnMultiLineTextGraphic( Component component, String[] text, Font font, int x, int y, Color color ) {
+    public AimxcelMultiLineTextGraphic( Component component, String[] text, Font font, int x, int y, Color color ) {
         this( component, text, font, x, y, new Basic( component, font, color ) );
     }
 
     /**
      * @deprecated
      */
-    public AbcLearnMultiLineTextGraphic( Component component, String text, Font font, int x, int y, Color foreground, int dx, int dy, Color background ) {
+    public AimxcelMultiLineTextGraphic( Component component, String text, Font font, int x, int y, Color foreground, int dx, int dy, Color background ) {
         this( component, new String[] { text }, font, x, y, foreground, dx, dy, background );
     }
 
     /**
      * @deprecated
      */
-    public AbcLearnMultiLineTextGraphic( Component component, String[] text, Font font, int x, int y, Color foreground, int dx, int dy, Color background ) {
+    public AimxcelMultiLineTextGraphic( Component component, String[] text, Font font, int x, int y, Color foreground, int dx, int dy, Color background ) {
         this( component, text, font, x, y, new Shadowed( component, font, foreground, dx, dy, background ) );
     }
 
     /**
      * @deprecated
      */
-    public AbcLearnMultiLineTextGraphic( Component component, String[] text, Font font, int x, int y, LineCreator lineCreator ) {
+    public AimxcelMultiLineTextGraphic( Component component, String[] text, Font font, int x, int y, LineCreator lineCreator ) {
         super( component );
         this.text = text;
         this.lineCreator = lineCreator;
@@ -84,7 +69,7 @@ public class AbcLearnMultiLineTextGraphic extends CompositeAbcLearnGraphic {
         int currentY = 0;
         for ( int i = 0; i < text.length; i++ ) {
             String s = text[i];
-            AbcLearnGraphic g = lineCreator.createLine( s, 0, currentY );
+            AimxcelGraphic g = lineCreator.createLine( s, 0, currentY );
             addGraphic( g );
             currentY += fontMetrics.getDescent() + fontMetrics.getLeading() + fontMetrics.getAscent();
         }
@@ -116,7 +101,7 @@ public class AbcLearnMultiLineTextGraphic extends CompositeAbcLearnGraphic {
      * An interface for creating lines of text.  Provide your own implementation if you want.
      */
     public interface LineCreator {
-        AbcLearnGraphic createLine( String text, int x, int y );
+        AimxcelGraphic createLine( String text, int x, int y );
     }
 
     static class Shadowed implements LineCreator {
@@ -136,8 +121,8 @@ public class AbcLearnMultiLineTextGraphic extends CompositeAbcLearnGraphic {
             this.backgroundColor = backgroundColor;
         }
 
-        public AbcLearnGraphic createLine( String text, int x, int y ) {
-            AbcLearnShadowTextGraphic pstg = new AbcLearnShadowTextGraphic( component, font, text, foregroundColor, dx, dy, backgroundColor );
+        public AimxcelGraphic createLine( String text, int x, int y ) {
+            AimxcelShadowTextGraphic pstg = new AimxcelShadowTextGraphic( component, font, text, foregroundColor, dx, dy, backgroundColor );
             pstg.setLocation( x, y );
             return pstg;
         }
@@ -154,8 +139,8 @@ public class AbcLearnMultiLineTextGraphic extends CompositeAbcLearnGraphic {
             this.color = color;
         }
 
-        public AbcLearnGraphic createLine( String text, int x, int y ) {
-            return new AbcLearnTextGraphic( component, font, text, color, x, y );
+        public AimxcelGraphic createLine( String text, int x, int y ) {
+            return new AimxcelTextGraphic( component, font, text, color, x, y );
         }
     }
 
@@ -166,7 +151,7 @@ public class AbcLearnMultiLineTextGraphic extends CompositeAbcLearnGraphic {
     /**
      * Provided for Java Beans conformance
      */
-    public AbcLearnMultiLineTextGraphic() {
+    public AimxcelMultiLineTextGraphic() {
     }
 
 }

@@ -1,13 +1,5 @@
 
 
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author:samreid $
- * Revision : $Revision:14674 $
- * Date modified : $Date:2007-04-17 02:37:37 -0500 (Tue, 17 Apr 2007) $
- */
 package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
 
 import java.awt.Component;
@@ -31,7 +23,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.event.MouseInputAdapter;
 import javax.swing.event.MouseInputListener;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationHandler;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationListener;
@@ -40,18 +32,7 @@ import edu.colorado.phet.common.phetgraphics.view.util.CompositeMouseInputListen
 import edu.colorado.phet.common.phetgraphics.view.util.CursorControl;
 import edu.colorado.phet.common.phetgraphics.view.util.GraphicsState;
 
-/**
- * AbcLearnGraphic is the base class for all PhET graphics.
- * <p/>
- * This graphic class auto-magically repaints itself in the appropriate bounds,
- * using component.paint(int x,int y,int width,int height).
- * This class manages the current and previous bounds for painting, and whether
- * the region is dirty.
- *
- * @author ?
- * @version $Revision:14674 $
- */
-public abstract class AbcLearnGraphic {
+public abstract class AimxcelGraphic {
     public static boolean SKIP_RECTANGLE_COMPUTATION = false;
     //----------------------------------------------------------------------------
     // Instance data
@@ -91,18 +72,18 @@ public abstract class AbcLearnGraphic {
     //----------------------------------------------------------------------------
 
     /**
-     * Constructs a AbcLearnGraphic on the specified component.
+     * Constructs a AimxcelGraphic on the specified component.
      *
-     * @param component The component in which the AbcLearnGraphic will be drawn.
+     * @param component The component in which the AimxcelGraphic will be drawn.
      */
-    protected AbcLearnGraphic( Component component ) {
+    protected AimxcelGraphic( Component component ) {
         this.component = component;
     }
 
     /**
      * Provided for Java Beans conformance
      */
-    protected AbcLearnGraphic() {
+    protected AimxcelGraphic() {
         //noop
     }
 
@@ -111,7 +92,7 @@ public abstract class AbcLearnGraphic {
     //----------------------------------------------------------------------------
 
     /**
-     * Returns the Component within which this AbcLearnGraphic is contained.
+     * Returns the Component within which this AimxcelGraphic is contained.
      *
      * @return the component
      */
@@ -120,7 +101,7 @@ public abstract class AbcLearnGraphic {
     }
 
     /**
-     * Set the Component within which this AbcLearnGraphic is contained
+     * Set the Component within which this AimxcelGraphic is contained
      *
      * @param component
      */
@@ -319,7 +300,7 @@ public abstract class AbcLearnGraphic {
 
     protected void fireVisibilityChanged() {
         for ( int i = 0; i < listeners.size(); i++ ) {
-            AbcLearnGraphicListener phetGraphicListener = (AbcLearnGraphicListener) listeners.get( i );
+            AimxcelGraphicListener phetGraphicListener = (AimxcelGraphicListener) listeners.get( i );
             phetGraphicListener.phetGraphicVisibilityChanged( this );
         }
     }
@@ -437,7 +418,7 @@ public abstract class AbcLearnGraphic {
     /**
      * Determine the bounds of this graphic, as seen by the parent graphic layer set.
      *
-     * @see AbcLearnGraphic#getIntermediateTransform(GraphicLayerSet)
+     * @see AimxcelGraphic#getIntermediateTransform(GraphicLayerSet)
      */
     public Rectangle getBoundsInAncestor( GraphicLayerSet parent ) {
         return getIntermediateTransform( parent ).createTransformedShape( getLocalBounds() ).getBounds();
@@ -612,9 +593,9 @@ public abstract class AbcLearnGraphic {
      * Computes the Rectangle in which this graphic resides.
      * This is only called if the shape is dirty.
      * <p/>
-     * Subclasses of AbcLearnGraphic must implement this method.
+     * Subclasses of AimxcelGraphic must implement this method.
      * Proper computation of the bounds often involves application
-     * of the graphic's transform.  See AbcLearnShapeGraphic.determineBounds
+     * of the graphic's transform.  See AimxcelShapeGraphic.determineBounds
      * for an example.
      *
      * @return the Rectangle that contains this graphic.
@@ -622,9 +603,9 @@ public abstract class AbcLearnGraphic {
     protected abstract Rectangle determineBounds();
 
     /**
-     * Gets the rectangle within which this AbcLearnGraphic lies.
+     * Gets the rectangle within which this AimxcelGraphic lies.
      *
-     * @return the rectangle within which this AbcLearnGraphic lies.
+     * @return the rectangle within which this AimxcelGraphic lies.
      */
     public Rectangle getBounds() {
         syncBounds();
@@ -639,7 +620,7 @@ public abstract class AbcLearnGraphic {
     }
 
     /**
-     * Determine whether this AbcLearnGraphic has changed since its last paint.
+     * Determine whether this AimxcelGraphic has changed since its last paint.
      *
      * @return
      */
@@ -730,10 +711,10 @@ public abstract class AbcLearnGraphic {
     }
 
     /**
-     * Determine the Local Bounds of this AbcLearnGraphic, ie, the bounds of this
-     * AbcLearnGraphic without accounting for any parent transforms.
+     * Determine the Local Bounds of this AimxcelGraphic, ie, the bounds of this
+     * AimxcelGraphic without accounting for any parent transforms.
      *
-     * @return the bounds of this AbcLearnGraphic without accounting for parent transforms.
+     * @return the bounds of this AimxcelGraphic without accounting for parent transforms.
      */
 
     public Rectangle getLocalBounds() {
@@ -787,7 +768,7 @@ public abstract class AbcLearnGraphic {
      *
      * @param x X coordinate
      * @param y Y coordinate
-     * @see edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic#setLocation(java.awt.Point)
+     * @see edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic#setLocation(java.awt.Point)
      */
     public void setLocation( int x, int y ) {
         if ( location.x != x || location.y != y ) {
@@ -801,7 +782,7 @@ public abstract class AbcLearnGraphic {
      * Gets the location.
      *
      * @return the location
-     * @see edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic#setLocation(java.awt.Point)
+     * @see edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic#setLocation(java.awt.Point)
      */
     public Point getLocation() {
         return new Point( location );
@@ -864,24 +845,24 @@ public abstract class AbcLearnGraphic {
     //----------------------------------------------------------------------------
 
     /**
-     * Adds an Observer for changes in this AbcLearnGraphic.
+     * Adds an Observer for changes in this AimxcelGraphic.
      *
      * @param phetGraphicListener
      */
-    public void addAbcLearnGraphicListener( AbcLearnGraphicListener phetGraphicListener ) {
+    public void addAimxcelGraphicListener( AimxcelGraphicListener phetGraphicListener ) {
         listeners.add( phetGraphicListener );
     }
 
-    public void removeAbcLearnGraphicListener( AbcLearnGraphicListener phetGraphicListener ) {
+    public void removeAimxcelGraphicListener( AimxcelGraphicListener phetGraphicListener ) {
         listeners.remove( phetGraphicListener );
     }
 
     /**
-     * Notifies registered Observers that this AbcLearnGraphic has changed.
+     * Notifies registered Observers that this AimxcelGraphic has changed.
      */
     protected void notifyChanged() {
         for ( int i = 0; i < listeners.size(); i++ ) {
-            AbcLearnGraphicListener phetGraphicListener = (AbcLearnGraphicListener) listeners.get( i );
+            AimxcelGraphicListener phetGraphicListener = (AimxcelGraphicListener) listeners.get( i );
             phetGraphicListener.phetGraphicChanged( this );
         }
     }
@@ -1133,7 +1114,7 @@ public abstract class AbcLearnGraphic {
 
     /**
      * Paints the graphic. Subclasses must implement this method.
-     * For a good example, see AbcLearnShapeGraphic.paint.
+     * For a good example, see AimxcelShapeGraphic.paint.
      * <p/>
      * In general, a well-behaved paint method should:
      * <ul>

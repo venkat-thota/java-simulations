@@ -1,9 +1,9 @@
 
 package edu.colorado.phet.common.phetgraphics.view;
 
-import static com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplicationConfig.DEFAULT_FRAME_SETUP;
+import static com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationConfig.DEFAULT_FRAME_SETUP;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.IClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 
 /**
  * This class is a workaround for sims that have a problem resizing, see #2860.

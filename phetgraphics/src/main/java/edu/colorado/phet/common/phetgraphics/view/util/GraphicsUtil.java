@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.view.util;
+ package edu.colorado.phet.common.phetgraphics.view.util;
 
 import java.awt.AlphaComposite;
 import java.awt.Graphics2D;

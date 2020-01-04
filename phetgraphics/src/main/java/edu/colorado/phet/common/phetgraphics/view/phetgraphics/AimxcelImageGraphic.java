@@ -1,13 +1,4 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author:samreid $
- * Revision : $Revision:14674 $
- * Date modified : $Date:2007-04-17 02:37:37 -0500 (Tue, 17 Apr 2007) $
- */
 package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
 
 import java.awt.Component;
@@ -18,30 +9,25 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.ImageLoader;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
 
-/**
- * AbcLearnImageGraphic
- *
- * @author ?
- * @version $Revision:14674 $
- */
-public class AbcLearnImageGraphic extends AbcLearnGraphic {
+
+public class AimxcelImageGraphic extends AimxcelGraphic {
     private BufferedImage image;
     private boolean shapeDirty = true;
     private Shape shape;
     private String imageResourceName;
 
-    public AbcLearnImageGraphic( Component component ) {
+    public AimxcelImageGraphic( Component component ) {
         this( component, null, 0, 0 );
     }
 
     /**
      * @param component
      * @param imageResourceName
-     * @deprecated use one of the constructors that takes a BufferedImage, sims should load the image using AbcLearnResourceLoader to keep the image pathname transparent
+     * @deprecated use one of the constructors that takes a BufferedImage, sims should load the image using AimxcelResourceLoader to keep the image pathname transparent
      */
-    public AbcLearnImageGraphic( Component component, String imageResourceName ) {
+    public AimxcelImageGraphic( Component component, String imageResourceName ) {
         this( component, (BufferedImage) null );
         this.imageResourceName = imageResourceName;
 
@@ -55,11 +41,11 @@ public class AbcLearnImageGraphic extends AbcLearnGraphic {
         setImage( bufferedImage );
     }
 
-    public AbcLearnImageGraphic( Component component, BufferedImage image ) {
+    public AimxcelImageGraphic( Component component, BufferedImage image ) {
         this( component, image, 0, 0 );
     }
 
-    public AbcLearnImageGraphic( Component component, BufferedImage image, int x, int y ) {
+    public AimxcelImageGraphic( Component component, BufferedImage image, int x, int y ) {
         super( component );
         this.image = image;
         setLocation( x, y );
@@ -121,7 +107,7 @@ public class AbcLearnImageGraphic extends AbcLearnGraphic {
     // Persistence support
     //
 
-    public AbcLearnImageGraphic() {
+    public AimxcelImageGraphic() {
         // noop
     }
 

@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
+ package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
 
 import java.awt.Color;
 import java.awt.Composite;
@@ -35,21 +26,12 @@ import java.text.AttributedCharacterIterator;
 import java.util.Map;
 import java.util.Stack;
 
-/**
- * AbcLearnGraphics2D
- * <p/>
- * A decorator for Graphics2D that tracks whether its attribute have been changed. Used to
- * reduce overhead of getting and re-setting RenderingHints, Fonts, and clips.
- *
- * @author Ron LeMaster
- * @version $Revision$
- */
-public class AbcLearnGraphics2D extends Graphics2D {
+public class AimxcelGraphics2D extends Graphics2D {
     private Graphics2D wrappedGraphics;
     private Stack graphicsStates = new Stack();
     private StateDescriptor currentStateDescriptor = new StateDescriptor();
 
-    public AbcLearnGraphics2D( Graphics2D g2 ) {
+    public AimxcelGraphics2D( Graphics2D g2 ) {
         this.wrappedGraphics = g2;
     }
 

@@ -1,13 +1,5 @@
 
 
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author:samreid $
- * Revision : $Revision:14674 $
- * Date modified : $Date:2007-04-17 02:37:37 -0500 (Tue, 17 Apr 2007) $
- */
 package edu.colorado.phet.common.phetgraphics.view.phetcomponents;
 
 import java.awt.AlphaComposite;
@@ -54,19 +46,15 @@ import javax.swing.event.DocumentListener;
 import javax.swing.event.MouseInputAdapter;
 import javax.swing.text.JTextComponent;
 
-import com.aimxcel.abclearn.common.abclearncommon.application.AbcLearnApplication;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphics2D;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphics2D;
 
-/**
- * User: Sam Reid
- * Date: Mar 8, 2005
- * Time: 9:06:36 PM
- */
 
-public class AbcLearnJComponent extends AbcLearnGraphic {
+
+public class AimxcelJComponent extends AimxcelGraphic {
 
     private static JWindow offscreen;
     private static boolean inited = false;
@@ -83,24 +71,24 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
     private BufferedImage image;
     private MouseInputAdapter mouseListener;
     private KeyListener keyHandler;
-    private static AbcLearnJComponentRepaintManager repaintManagerAbcLearn = new AbcLearnJComponentRepaintManager();
-    private static AbcLearnJComponentManager manager = new AbcLearnJComponentManager();
+    private static AimxcelJComponentRepaintManager repaintManagerAimxcel = new AimxcelJComponentRepaintManager();
+    private static AimxcelJComponentManager manager = new AimxcelJComponentManager();
 
     static {
         getManager().addListener( new PJCFocusManager() );
     }
 
-    public static AbcLearnJComponentRepaintManager getRepaintManager() {
-        return repaintManagerAbcLearn;
+    public static AimxcelJComponentRepaintManager getRepaintManager() {
+        return repaintManagerAimxcel;
     }
 
-    public static AbcLearnGraphic newInstance( Component apparatusPanel, JComponent jComponent ) {
+    public static AimxcelGraphic newInstance( Component apparatusPanel, JComponent jComponent ) {
         return newInstance( apparatusPanel, jComponent, true );
     }
 
-    private static AbcLearnGraphic newInstance( Component apparatusPanel, JComponent jComponent, boolean topLevel ) {
+    private static AimxcelGraphic newInstance( Component apparatusPanel, JComponent jComponent, boolean topLevel ) {
         if ( !inited ) {
-            init( AbcLearnApplication.getInstance().getAbcLearnFrame() );
+            init( AimxcelApplication.getInstance().getAimxcelFrame() );
         }
 
         if ( topLevel ) {
@@ -127,7 +115,7 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
             Component[] children = jComponent.getComponents();
 
             validateSuperTree( jComponent );
-            graphicLayerSet.addGraphic( new AbcLearnJComponent( apparatusPanel, jComponent, topLevel ) );//the container is the background.
+            graphicLayerSet.addGraphic( new AimxcelJComponent( apparatusPanel, jComponent, topLevel ) );//the container is the background.
 
             for ( int i = 0; i < children.length; i++ ) {
                 if ( !( children[i] instanceof JComponent ) ) {
@@ -137,7 +125,7 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
                     JComponent child = (JComponent) children[i];
                     Point location = child.getLocation();
 //                System.out.println( "location@" + child.getClass() + " = " + location );
-                    AbcLearnGraphic pj = AbcLearnJComponent.newInstance( apparatusPanel, child, false );
+                    AimxcelGraphic pj = AimxcelJComponent.newInstance( apparatusPanel, child, false );
                     graphicLayerSet.addGraphic( pj );
                     //have to account for parent's locations.
 
@@ -148,7 +136,7 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
             return graphicLayerSet;
         }
         else {
-            return new AbcLearnJComponent( apparatusPanel, jComponent, topLevel );
+            return new AimxcelJComponent( apparatusPanel, jComponent, topLevel );
         }
     }
 
@@ -159,8 +147,8 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
             throw new RuntimeException( "Multiple inits." );
         }
 
-//        System.out.println( "Setting repaintManagerAbcLearn." );
-        RepaintManager.setCurrentManager( repaintManagerAbcLearn );
+//        System.out.println( "Setting repaintManagerAimxcel." );
+        RepaintManager.setCurrentManager( repaintManagerAimxcel );
 
         offscreen = new JWindow( applicationWindow ) {
             public void invalidate() {
@@ -200,7 +188,7 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
         }
     }
 
-    protected AbcLearnJComponent( Component ap, final JComponent component, boolean topLevel ) {
+    protected AimxcelJComponent( Component ap, final JComponent component, boolean topLevel ) {
         super( ap );
         this.component = component;
         this.topLevel = topLevel;
@@ -315,12 +303,12 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
 
         component.addFocusListener( new FocusAdapter() {
             public void focusGained( FocusEvent e ) {
-//                System.out.println( "AbcLearnJComponent.focusGained=" + component );
+//                System.out.println( "AimxcelJComponent.focusGained=" + component );
                 repaint();
             }
 
             public void focusLost( FocusEvent e ) {
-//                System.out.println( "AbcLearnJComponent.focusLost, copmonent=" + component );
+//                System.out.println( "AimxcelJComponent.focusLost, copmonent=" + component );
                 repaint();
             }
         } );
@@ -345,7 +333,7 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
             addTextComponentListeners( (JTextComponent) component );
         }
 
-        repaintManagerAbcLearn.put( this );
+        repaintManagerAimxcel.put( this );
         manager.phetJComponentCreated( this );
     }
 
@@ -403,7 +391,7 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
         t[0].start();
     }
 
-    public static AbcLearnJComponentManager getManager() {
+    public static AimxcelJComponentManager getManager() {
         return manager;
     }
 
@@ -439,7 +427,7 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
         MouseEvent newEvent = new MouseEvent( component, e.getID(), System.currentTimeMillis(), e.getModifiers(), pt.x, pt.y, e.getClickCount(), e.isPopupTrigger(), e.getButton() );
         //pass to all listeners, some will be no-ops.//could be rewritten for understandability.
         boolean changed = false;
-        if ( mouseMethod instanceof AbcLearnJComponent.MouseListenerMethod ) {
+        if ( mouseMethod instanceof AimxcelJComponent.MouseListenerMethod ) {
             MouseListenerMethod mle = (MouseListenerMethod) mouseMethod;
             for ( int i = 0; i < ml.length; i++ ) {
                 MouseListener mouseListener = ml[i];
@@ -519,7 +507,7 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
         }
 
         Graphics2D g2 = image.createGraphics();
-        g2 = new AbcLearnGraphics2D( g2 );
+        g2 = new AimxcelGraphics2D( g2 );
         g2.setRenderingHint( RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON );
         g2.setRenderingHint( RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC );
         g2.setRenderingHint( RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON );
@@ -580,15 +568,15 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
         return component;
     }
 
-    public static class AbcLearnJComponentRepaintManager extends RepaintManager {
-        private Hashtable table = new Hashtable();//key=JComponent, value=AbcLearnJComponent.
+    public static class AimxcelJComponentRepaintManager extends RepaintManager {
+        private Hashtable table = new Hashtable();//key=JComponent, value=AimxcelJComponent.
         private Set dirty = new HashSet();
         private boolean tooManyDirty = false;
 
         public synchronized void addDirtyRegion( JComponent c, int x, int y, int w, int h ) {
             super.addDirtyRegion( c, x, y, w, h );
             if ( table.containsKey( c ) ) {
-                AbcLearnJComponent phetJComponent = (AbcLearnJComponent) table.get( c );
+                AimxcelJComponent phetJComponent = (AimxcelJComponent) table.get( c );
                 boolean inRecursiveLoopOfDeath = ( new Exception().getStackTrace().length > 75 ); // HACK: ask Sam Reid why
                 if ( c.getComponentCount() == 0 && !inRecursiveLoopOfDeath ) {
                     if ( !dirty.contains( c ) ) {
@@ -603,13 +591,13 @@ public class AbcLearnJComponent extends AbcLearnGraphic {
             }
         }
 
-        public void put( AbcLearnJComponent phetJComponent ) {
+        public void put( AimxcelJComponent phetJComponent ) {
             table.put( phetJComponent.component, phetJComponent );
         }
 
         public void updateGraphics() {
             for ( Iterator iterator = dirty.iterator(); iterator.hasNext(); ) {
-                AbcLearnJComponent component = (AbcLearnJComponent) iterator.next();
+                AimxcelJComponent component = (AimxcelJComponent) iterator.next();
                 component.repaint();
             }
             dirty.clear();

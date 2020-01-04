@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.test.graphics;
+ package edu.colorado.phet.common.phetgraphics.test.graphics;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -18,22 +9,22 @@ import java.awt.Rectangle;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphic;
 
 /**
- * TestAbcLearnGraphics2D
+ * TestAimxcelGraphics2D
  *
  * @author Ron LeMaster
  * @version $Revision$
  */
-public class TestAbcLearnGraphics2D {
+public class TestAimxcelGraphics2D {
 
     public static void main( String[] args ) {
-        JFrame frame = new JFrame( "Test AbcLearnGraphics2D" );
+        JFrame frame = new JFrame( "Test AimxcelGraphics2D" );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         SwingClock clock = new SwingClock( 1, 25 );
         ApparatusPanel ap2 = new ApparatusPanel2( clock );
@@ -43,7 +34,7 @@ public class TestAbcLearnGraphics2D {
         frame.pack();
         frame.setVisible( true );
 
-        AbcLearnGraphic rect = new TestGraphic( ap2 );
+        AimxcelGraphic rect = new TestGraphic( ap2 );
         ap2.addGraphic( rect );
 
         ap2.setBackground( Color.black );
@@ -52,16 +43,16 @@ public class TestAbcLearnGraphics2D {
         ap2.paintImmediately( ap2.getBounds() );
     }
 
-    static class TestGraphic extends AbcLearnGraphic {
+    static class TestGraphic extends AimxcelGraphic {
         private Rectangle rect = new Rectangle( 50, 100, 100, 50 );
         Rectangle rect2 = new Rectangle( 150, 200, 100, 50 );
 
         public TestGraphic( Component ap2 ) {
             super( ap2 );
-//            AbcLearnShapeGraphic psg = new AbcLearnShapeGraphic( ap2, new Rectangle( 50, 100, 100, 50 ), Color.red );
+//            AimxcelShapeGraphic psg = new AimxcelShapeGraphic( ap2, new Rectangle( 50, 100, 100, 50 ), Color.red );
 //            rect.setLocation( 20, 20 );
 //            ap2.addGraphic( psg );
-//            AbcLearnShapeGraphic rect2 = new AbcLearnShapeGraphic( ap2, new Rectangle( 150, 200, 100, 50 ), Color.blue );
+//            AimxcelShapeGraphic rect2 = new AimxcelShapeGraphic( ap2, new Rectangle( 150, 200, 100, 50 ), Color.blue );
 //            ap2.addGraphic( rect2 );
 
         }

@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-
+ 
 package edu.colorado.phet.common.phetgraphics.application;
 
 import java.awt.event.ActionEvent;
@@ -16,8 +7,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.Timer;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockAdapter;
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 
 
 /**
@@ -31,7 +22,7 @@ import com.aimxcel.abclearn.common.abclearncommon.model.clock.ClockEvent;
  * not reflected in the apparatus panel until the mouse cursor was moved
  * into the apparatus panel, forcing a redraw.
  * <br>
- * (2) When the clock is paused, dirty AbcLearnJComponents were never
+ * (2) When the clock is paused, dirty AimxcelJComponents were never
  * repainted, and the list of dirty compononents would grow excessively
  * (and unnecessarilty) large.
  * <p/>
@@ -49,7 +40,7 @@ class ClockPausedHandler extends ClockAdapter {
 
     private static int DEFAULT_DELAY = 500; // time between refreshes, in milliseconds
 
-    private AbcLearnGraphicsModule module; // the Module that we're associated with
+    private AimxcelGraphicsModule module; // the Module that we're associated with
     private Timer timer;
 
     /**
@@ -57,7 +48,7 @@ class ClockPausedHandler extends ClockAdapter {
      *
      * @param module
      */
-    public ClockPausedHandler( AbcLearnGraphicsModule module ) {
+    public ClockPausedHandler( AimxcelGraphicsModule module ) {
         this( module, DEFAULT_DELAY );
     }
 
@@ -67,7 +58,7 @@ class ClockPausedHandler extends ClockAdapter {
      * @param module
      * @param delay  the delay, in milliseconds
      */
-    public ClockPausedHandler( AbcLearnGraphicsModule module, int delay ) {
+    public ClockPausedHandler( AimxcelGraphicsModule module, int delay ) {
         this.module = module;
         timer = new Timer( delay, new ActionListener() {
             public void actionPerformed( ActionEvent event ) {

@@ -18,13 +18,13 @@ import javax.swing.JFrame;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
 
-import com.aimxcel.abclearn.common.abclearncommon.model.clock.SwingClock;
+import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.RepaintDebugGraphic;
 
 public class TestGraphicLayerSet {
@@ -35,9 +35,9 @@ public class TestGraphicLayerSet {
             }
         };
 //        final GraphicLayerSet compositeGraphic = new GraphicLayerSet( ap );
-        final CompositeAbcLearnGraphic compositeGraphic = new CompositeAbcLearnGraphic( ap );
-        final AbcLearnShapeGraphic circleGraphic = new AbcLearnShapeGraphic( ap, new Ellipse2D.Double( 50, 50, 75, 300 ), Color.blue );
-        AbcLearnShapeGraphic squareGraphic = new AbcLearnShapeGraphic( ap, new Rectangle2D.Double( 400, 400, 50, 50 ), Color.red );
+        final CompositeAimxcelGraphic compositeGraphic = new CompositeAimxcelGraphic( ap );
+        final AimxcelShapeGraphic circleGraphic = new AimxcelShapeGraphic( ap, new Ellipse2D.Double( 50, 50, 75, 300 ), Color.blue );
+        AimxcelShapeGraphic squareGraphic = new AimxcelShapeGraphic( ap, new Rectangle2D.Double( 400, 400, 50, 50 ), Color.red );
         compositeGraphic.addGraphic( circleGraphic );
         compositeGraphic.addGraphic( squareGraphic );
 

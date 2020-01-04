@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
+ package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -27,13 +18,8 @@ import java.awt.geom.Rectangle2D;
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel2;
 import edu.colorado.phet.common.phetgraphics.view.util.GraphicsUtil;
 
-/**
- * AbcLearnShapeGraphic
- *
- * @author ?
- * @version $Revision$
- */
-public class AbcLearnShapeGraphic extends AbcLearnGraphic {
+
+public class AimxcelShapeGraphic extends AimxcelGraphic {
     private Shape shape;
     private Stroke stroke;
     private Paint fill;
@@ -43,7 +29,7 @@ public class AbcLearnShapeGraphic extends AbcLearnGraphic {
     private Shape strokedShape;
     private boolean shapeDirty = false;
 
-    public AbcLearnShapeGraphic( Component component, Shape shape, Paint fill, Stroke stroke, Paint border ) {
+    public AimxcelShapeGraphic( Component component, Shape shape, Paint fill, Stroke stroke, Paint border ) {
         super( component );
         this.shape = shape;
         this.fill = fill;
@@ -52,15 +38,15 @@ public class AbcLearnShapeGraphic extends AbcLearnGraphic {
         computeStrokedShape();
     }
 
-    public AbcLearnShapeGraphic( Component component, Shape shape, Paint fill ) {
+    public AimxcelShapeGraphic( Component component, Shape shape, Paint fill ) {
         this( component, shape, fill, null /* stroke */, null /* border */ );
     }
 
-    public AbcLearnShapeGraphic( Component component, Shape shape, Stroke stroke, Paint border ) {
+    public AimxcelShapeGraphic( Component component, Shape shape, Stroke stroke, Paint border ) {
         this( component, shape, null /* fill */, stroke, border );
     }
 
-    public AbcLearnShapeGraphic( Component component ) {
+    public AimxcelShapeGraphic( Component component ) {
         this( component, null, null, null, null );
     }
 
@@ -211,7 +197,7 @@ public class AbcLearnShapeGraphic extends AbcLearnGraphic {
     /**
      * Depending on specifics of the situation in which paint() has been called,
      * this method sets up the Graphics2D so that alpha is handled as the client
-     * code expects, irrespective of the OS and whether the AbcLearnShapeGraphic is being
+     * code expects, irrespective of the OS and whether the AimxcelShapeGraphic is being
      * drawn directly to the screen or to an opaque offscreen buffer. It is intimately
      * linked with restoreAlpha().
      *
@@ -315,12 +301,12 @@ public class AbcLearnShapeGraphic extends AbcLearnGraphic {
     }
 
     /**
-     * Returns true if any part of this AbcLearnGraphic contains the specified point.
+     * Returns true if any part of this AimxcelGraphic contains the specified point.
      * As of 2-6-2005, this includes the border.
      *
      * @param x
      * @param y
-     * @return true if this AbcLearnGraphic contains the specified point.
+     * @return true if this AimxcelGraphic contains the specified point.
      */
     public boolean contains( int x, int y ) {
         if ( isVisible() && shape != null ) {

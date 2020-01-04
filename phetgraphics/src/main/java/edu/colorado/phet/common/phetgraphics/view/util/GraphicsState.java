@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.view.util;
+ package edu.colorado.phet.common.phetgraphics.view.util;
 
 import java.awt.Color;
 import java.awt.Composite;
@@ -20,7 +11,7 @@ import java.awt.Shape;
 import java.awt.Stroke;
 import java.awt.geom.AffineTransform;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnGraphics2D;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelGraphics2D;
 
 /**
  * A utilitye class for saving and restoring the state of Graphics2D objects
@@ -43,8 +34,8 @@ public class GraphicsState {
     public GraphicsState( Graphics2D graphics2D ) {
         this.g2 = graphics2D;
 
-        if ( g2 instanceof AbcLearnGraphics2D ) {
-            AbcLearnGraphics2D phetGraphics2D = (AbcLearnGraphics2D) g2;
+        if ( g2 instanceof AimxcelGraphics2D ) {
+            AimxcelGraphics2D phetGraphics2D = (AimxcelGraphics2D) g2;
             phetGraphics2D.pushState();
         }
         else {
@@ -67,8 +58,8 @@ public class GraphicsState {
      */
     public void restoreGraphics() {
 
-        if ( g2 instanceof AbcLearnGraphics2D ) {
-            AbcLearnGraphics2D phetGraphics2D = (AbcLearnGraphics2D) g2;
+        if ( g2 instanceof AimxcelGraphics2D ) {
+            AimxcelGraphics2D phetGraphics2D = (AimxcelGraphics2D) g2;
             phetGraphics2D.popState();
         }
         else {

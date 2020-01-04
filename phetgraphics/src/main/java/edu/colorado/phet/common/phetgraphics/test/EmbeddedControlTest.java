@@ -1,14 +1,5 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
-package edu.colorado.phet.common.phetgraphics.test;
+ package edu.colorado.phet.common.phetgraphics.test;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -19,14 +10,14 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
 import edu.colorado.phet.common.phetgraphics.view.ApparatusPanel;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import edu.colorado.phet.common.phetgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import edu.colorado.phet.common.phetgraphics.view.phetcomponents.AbcLearnButton;
+import edu.colorado.phet.common.phetgraphics.view.phetcomponents.AimxcelButton;
 import edu.colorado.phet.common.phetgraphics.view.phetgraphics.GraphicLayerSet;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
 
 /**
  * User: Sam Reid
@@ -46,7 +37,7 @@ public class EmbeddedControlTest {
             }
         };
         BattGraphic battGraphic = new BattGraphic( apparatusPanel, translationListener );
-        AbcLearnShapeGraphic background = new AbcLearnShapeGraphic( apparatusPanel,
+        AimxcelShapeGraphic background = new AimxcelShapeGraphic( apparatusPanel,
                                                             RectangleUtils.expand( new Rectangle( battGraphic.getBounds() ), 15, 15 ), Color.green, new BasicStroke( 1 ), Color.black );
         background.addTranslationListener( translationListener );
         root.addGraphic( background );
@@ -62,10 +53,10 @@ public class EmbeddedControlTest {
     static class BattGraphic extends GraphicLayerSet {
         public BattGraphic( Component component, TranslationListener dragHandler ) {
             super( component );
-            AbcLearnShapeGraphic phetShapeGraphic = new AbcLearnShapeGraphic( component,
+            AimxcelShapeGraphic phetShapeGraphic = new AimxcelShapeGraphic( component,
                                                                       new Rectangle( 100, 100 ), Color.blue, new BasicStroke( 1 ), Color.black );
             addGraphic( phetShapeGraphic );
-            AbcLearnButton phetButton = new AbcLearnButton( component, "Hello" );
+            AimxcelButton phetButton = new AimxcelButton( component, "Hello" );
             addGraphic( phetButton );
             phetButton.addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {

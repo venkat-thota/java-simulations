@@ -1,13 +1,3 @@
-
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author:samreid $
- * Revision : $Revision:14674 $
- * Date modified : $Date:2007-04-17 02:37:37 -0500 (Tue, 17 Apr 2007) $
- */
 package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
 
 import java.awt.Color;
@@ -17,31 +7,26 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.geom.Rectangle2D;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
-/**
- * AbcLearnShadowTextGraphic
- *
- * @author ?
- * @version $Revision:14674 $
- */
-public class AbcLearnShadowTextGraphic extends AbcLearnGraphic {
-    private AbcLearnTextGraphic foreground;
-    private AbcLearnTextGraphic background;
 
-    public AbcLearnShadowTextGraphic( Component component, Font font, String text, Color foregroundColor, int dx, int dy, Color backgroundColor ) {
+public class AimxcelShadowTextGraphic extends AimxcelGraphic {
+    private AimxcelTextGraphic foreground;
+    private AimxcelTextGraphic background;
+
+    public AimxcelShadowTextGraphic( Component component, Font font, String text, Color foregroundColor, int dx, int dy, Color backgroundColor ) {
         super( component );
-        foreground = new AbcLearnTextGraphic( component, font, text, foregroundColor );
-        background = new AbcLearnTextGraphic( component, font, text, backgroundColor, dx, dy );
+        foreground = new AimxcelTextGraphic( component, font, text, foregroundColor );
+        background = new AimxcelTextGraphic( component, font, text, backgroundColor, dx, dy );
     }
 
     /**
      * @deprecated
      */
-    public AbcLearnShadowTextGraphic( Component component, String text, Font font, int x, int y, Color foregroundColor, int dx, int dy, Color backgroundColor ) {
+    public AimxcelShadowTextGraphic( Component component, String text, Font font, int x, int y, Color foregroundColor, int dx, int dy, Color backgroundColor ) {
         super( component );
-        foreground = new AbcLearnTextGraphic( component, font, text, foregroundColor, 0, 0 );
-        background = new AbcLearnTextGraphic( component, font, text, backgroundColor, 0 + dx, 0 + dy );
+        foreground = new AimxcelTextGraphic( component, font, text, foregroundColor, 0, 0 );
+        background = new AimxcelTextGraphic( component, font, text, backgroundColor, 0 + dx, 0 + dy );
         setLocation( x, y );
     }
 
@@ -101,22 +86,22 @@ public class AbcLearnShadowTextGraphic extends AbcLearnGraphic {
     // Provided for Java Beans conformance
     //-----------------------------------------------------------
 
-    public AbcLearnShadowTextGraphic() {
+    public AimxcelShadowTextGraphic() {
     }
 
-    public AbcLearnTextGraphic getForeground() {
+    public AimxcelTextGraphic getForeground() {
         return foreground;
     }
 
-    public void setForeground( AbcLearnTextGraphic foreground ) {
+    public void setForeground( AimxcelTextGraphic foreground ) {
         this.foreground = foreground;
     }
 
-    public AbcLearnTextGraphic getBackground() {
+    public AimxcelTextGraphic getBackground() {
         return background;
     }
 
-    public void setBackground( AbcLearnTextGraphic background ) {
+    public void setBackground( AimxcelTextGraphic background ) {
         this.background = background;
     }
 

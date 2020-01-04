@@ -14,12 +14,12 @@ import java.util.ArrayList;
 
 import javax.swing.event.MouseInputAdapter;
 
-import com.aimxcel.abclearn.common.abclearncommon.view.util.AbcLearnFont;
-import com.aimxcel.abclearn.common.abclearncommon.view.util.RectangleUtils;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAbcLearnGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnShapeGraphic;
-import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AimxcelTextGraphic;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,23 +28,23 @@ import edu.colorado.phet.common.phetgraphics.view.phetgraphics.AbcLearnTextGraph
  * Time: 12:28:11 AM
  * To change this template use File | Settings | File Templates.
  */
-public class AbcLearnButton extends CompositeAbcLearnGraphic {
+public class AimxcelButton extends CompositeAimxcelGraphic {
     private String text;
-    private AbcLearnTextGraphic textGraphic;
-    private AbcLearnShapeGraphic backgroundGraphic;
+    private AimxcelTextGraphic textGraphic;
+    private AimxcelShapeGraphic backgroundGraphic;
     private ArrayList listeners = new ArrayList();
     private Color backgroundColor = Color.lightGray;
     private Color textColor = Color.black;
     private Color clickColor = Color.gray;
     private Color borderColor = Color.black;
     private Stroke borderStroke = new BasicStroke( 2.0f );
-    private Font font = new AbcLearnFont( Font.BOLD, 18 );
+    private Font font = new AimxcelFont( Font.BOLD, 18 );
 
-    public AbcLearnButton( Component component, String text ) {
+    public AimxcelButton( Component component, String text ) {
         super( component );
         this.text = text;
-        this.textGraphic = new AbcLearnTextGraphic( component, font, text, textColor, 0, 0 );
-        this.backgroundGraphic = new AbcLearnShapeGraphic( component, null, backgroundColor, borderStroke, borderColor );
+        this.textGraphic = new AimxcelTextGraphic( component, font, text, textColor, 0, 0 );
+        this.backgroundGraphic = new AimxcelShapeGraphic( component, null, backgroundColor, borderStroke, borderColor );
         addMouseInputListener( new MouseInputAdapter() {
             public void mousePressed( MouseEvent e ) {
                 backgroundGraphic.setColor( clickColor );
@@ -72,7 +72,7 @@ public class AbcLearnButton extends CompositeAbcLearnGraphic {
     static int eventID = 0;
 
     private void fireEvent() {
-        ActionEvent event = new ActionEvent( this, eventID++, "AbcLearnButtonPress" );
+        ActionEvent event = new ActionEvent( this, eventID++, "AimxcelButtonPress" );
         for ( int i = 0; i < listeners.size(); i++ ) {
             ActionListener actionListener = (ActionListener) listeners.get( i );
             actionListener.actionPerformed( event );

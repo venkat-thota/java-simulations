@@ -1,19 +1,3 @@
-
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
-<<<<<<< AbcLearnTextGraphic.java
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
-=======
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
->>>>>>> 1.18
- */
 package edu.colorado.phet.common.phetgraphics.view.phetgraphics;
 
 import java.awt.Color;
@@ -24,20 +8,8 @@ import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Rectangle;
 
-/**
- * AbcLearnTextGraphic
- * <p/>
- * NOTE! This class has some serious problems with justification and
- * registration points.  If these problems were fixed, lots of code
- * would be broken (including the charts package), so we chose not
- * to fix the problems.  Be forewarned that it may be difficult for
- * you to accurately position a AbcLearnTextGraphic.  You should use
- * AbcLearnTextGraphic2 instead.
- *
- * @author ?
- * @version $Revision$
- */
-public class AbcLearnTextGraphic extends AbcLearnGraphic {
+
+public class AimxcelTextGraphic extends AimxcelGraphic {
 
     //----------------------------------------------------------------
     // Class data
@@ -60,15 +32,15 @@ public class AbcLearnTextGraphic extends AbcLearnGraphic {
     private int justification = NORTH_WEST;
 
     /**
-     * Create a AbcLearnTextGraphic at (0,0).  You can now set location easily with setLocation().
+     * Create a AimxcelTextGraphic at (0,0).  You can now set location easily with setLocation().
      *
      * @param component
      * @param font
      * @param text
      * @param color
-     * @deprecated use AbcLearnTextGraphic2
+     * @deprecated use AimxcelTextGraphic2
      */
-    public AbcLearnTextGraphic( Component component, Font font, String text, Color color ) {
+    public AimxcelTextGraphic( Component component, Font font, String text, Color color ) {
         this( component, font, text, color, 0, 0 );
     }
 
@@ -79,9 +51,9 @@ public class AbcLearnTextGraphic extends AbcLearnGraphic {
      * @param color
      * @param x
      * @param y
-     * @deprecated use AbcLearnTextGraphic2
+     * @deprecated use AimxcelTextGraphic2
      */
-    public AbcLearnTextGraphic( Component component, Font font, String text, Color color, int x, int y ) {
+    public AimxcelTextGraphic( Component component, Font font, String text, Color color, int x, int y ) {
         super( component );
         setFont( font );
         this.text = text;
@@ -218,7 +190,7 @@ public class AbcLearnTextGraphic extends AbcLearnGraphic {
     /**
      * Provided for Java Beans conformance
      */
-    public AbcLearnTextGraphic() {
+    public AimxcelTextGraphic() {
     }
 
     public void setFontMetrics( FontMetrics fontMetrics ) {
