@@ -166,7 +166,7 @@ public class AbstractMediaButton extends PNode {
     }
 
     private BufferedImage createImage( String resourceName ) {
-        BufferedImage image = new AimxcelResources( "piccolo-aimxcel" ).getImage( resourceName );
+        BufferedImage image = new AimxcelResources( "aimxcel-core" ).getImage( resourceName );
         return BufferedImageUtils.multiScaleToHeight( image, buttonHeight );
     }
 

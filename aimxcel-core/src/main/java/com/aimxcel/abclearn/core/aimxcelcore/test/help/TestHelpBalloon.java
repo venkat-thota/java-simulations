@@ -77,7 +77,7 @@ public class TestHelpBalloon extends AimxcelApplication {
                 }
             }
         };
-        AimxcelApplicationConfig aimxcelApplicationConfig = new AimxcelApplicationConfig( args, "piccolo-aimxcel" );
+        AimxcelApplicationConfig aimxcelApplicationConfig = new AimxcelApplicationConfig( args, "aimxcel-core" );
         new AimxcelApplicationLauncher().launchSim( aimxcelApplicationConfig, applicationConstructor );
     }
 

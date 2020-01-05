@@ -12,7 +12,7 @@ public class PiccoloAimxcelApplication extends AimxcelApplication {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public static final AimxcelResources RESOURCES = new AimxcelResources( "piccolo-aimxcel" );
+	public static final AimxcelResources RESOURCES = new AimxcelResources( "aimxcel-core" );
 
     public PiccoloAimxcelApplication( AimxcelApplicationConfig config ) {
         this( config, new TabbedModulePanePiccolo() );

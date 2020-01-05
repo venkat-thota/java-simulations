@@ -12,7 +12,7 @@ public class PiccoloAimxcelResources {
     private PiccoloAimxcelResources() {
     }
 
-    private static AimxcelResources INSTANCE = new AimxcelResources( "piccolo-aimxcel" );
+    private static AimxcelResources INSTANCE = new AimxcelResources( "aimxcel-core" );
 
     public static AimxcelResources getInstance() {
         return INSTANCE;

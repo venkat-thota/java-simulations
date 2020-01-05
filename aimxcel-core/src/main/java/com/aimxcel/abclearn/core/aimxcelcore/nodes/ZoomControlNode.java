@@ -36,7 +36,7 @@ public class ZoomControlNode extends PNode {
     private static final Point IN_LOCATION = new Point( 31, 13 );
     private static final Point OUT_LOCATION = new Point( 3, 13 );
 
-    private static final String IMAGES_DIRECTORY = "piccolo-aimxcel/images/";
+    private static final String IMAGES_DIRECTORY = "aimxcel-core/images/";
     public static final String ZOOM_BACKGROUND_HORIZONTAL_IMAGE = IMAGES_DIRECTORY + "zoomBackgroundHorizontal.png";
     public static final String ZOOM_BACKGROUND_VERTICAL_IMAGE = IMAGES_DIRECTORY + "zoomBackgroundVertical.png";
     public static final String ZOOM_IN_BUTTON_IMAGE = IMAGES_DIRECTORY + "zoomInButton.png";

@@ -41,7 +41,7 @@ public class MeasuringTape extends AimxcelPNode {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public static final String MEASURING_TAPE_IMAGE = "piccolo-aimxcel/images/measuringTape.gif";
+	public static final String MEASURING_TAPE_IMAGE = "aimxcel-core/images/measuringTape.gif";
 
     private ModelViewTransform2D modelViewTransform2D;
     private Point2D.Double modelSrc;

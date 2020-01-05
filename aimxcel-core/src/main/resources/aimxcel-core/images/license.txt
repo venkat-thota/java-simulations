@@ -1,4 +1,4 @@
-battery.png source=Aimxcel notes=reused from faraday
+battery.png source=Aimxcel notes=reused from magnet-and-compass
 button-template.png source=Aimxcel notes=NP
 button-template_pressed.png source=Aimxcel notes=NP
 button_pressed.png source=Aimxcel
@@ -8,9 +8,9 @@ button_unpressed_disabled.png source=Aimxcel
 faucet_front.png author=Aimxcel notes=NP
 faucet_pipe.png author=Aimxcel notes=NP
 gray-arrow.png author=Aimxcel notes=SR, modified from one in motion-series
-lightBulbBase.png source=Aimxcel notes=reused from faraday
-lightBulbGlass.png source=Aimxcel notes=reused from faraday
-lightBulbGlassMask.png source=Aimxcel notes=reused from faraday
+lightBulbBase.png source=Aimxcel notes=reused from magnet-and-compass
+lightBulbGlass.png source=Aimxcel notes=reused from magnet-and-compass
+lightBulbGlassMask.png source=Aimxcel notes=reused from magnet-and-compass
 lightBulbMask.png source=Aimxcel notes=masked version of lightBulbGlass.png
 measuringTape.gif source=Aimxcel
 measuringTape.png source=Aimxcel notes=NP

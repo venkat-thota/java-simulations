@@ -58,7 +58,7 @@ public class ConductivityTesterNode extends AimxcelPNode {
 
     //Utility method for loading the images used in this tester node
     private static BufferedImage getBufferedImage( String image ) {
-        return new AimxcelResources( "piccolo-aimxcel" ).getImage( image );
+        return new AimxcelResources( "aimxcel-core" ).getImage( image );
     }
 
     // light bulb properties

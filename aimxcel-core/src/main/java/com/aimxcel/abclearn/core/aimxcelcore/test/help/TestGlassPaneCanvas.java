@@ -81,7 +81,7 @@ public class TestGlassPaneCanvas extends AimxcelApplication {
                 }
             }
         };
-        AimxcelApplicationConfig applicationConfig = new AimxcelApplicationConfig( args, "piccolo-aimxcel" );
+        AimxcelApplicationConfig applicationConfig = new AimxcelApplicationConfig( args, "aimxcel-core" );
         new AimxcelApplicationLauncher().launchSim( applicationConfig, applicationConstructor );
     }
 
