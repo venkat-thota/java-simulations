@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.colorado.phet.faraday</groupId>
+  <groupId>edu.colorado.phet.magnet-and-compass</groupId>
   <artifactId>magnet-and-compass</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <url>http://maven.apache.org</url>
   <build>
     <resources>
       <resource>
-        <targetPath>faraday</targetPath>
-        <directory>src/main/resources/faraday</directory>
+        <targetPath>magnet-and-compass</targetPath>
+        <directory>src/main/resources/magnet-and-compass</directory>
         <includes>
           <include>*.properties</include>
         </includes>
       </resource>
       <resource>
-        <targetPath>faraday/bfield</targetPath>
-        <directory>src/main/resources/faraday/bfield</directory>
+        <targetPath>magnet-and-compass/bfield</targetPath>
+        <directory>src/main/resources/magnet-and-compass/bfield</directory>
         <includes>
           <include>*.csv</include>
         </includes>
       </resource>
       <resource>
-        <targetPath>faraday/images</targetPath>
-        <directory>src/main/resources/faraday/images</directory>
+        <targetPath>magnet-and-compass/images</targetPath>
+        <directory>src/main/resources/magnet-and-compass/images</directory>
         <includes>
           <include>*.png</include>
         </includes>
       </resource>
       <resource>
-        <targetPath>faraday/localization</targetPath>
-        <directory>src/main/resources/faraday/localization</directory>
+        <targetPath>magnet-and-compass/localization</targetPath>
+        <directory>src/main/resources/magnet-and-compass/localization</directory>
         <includes>
           <include>*.properties</include>
         </includes>
@@ -53,7 +53,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.colorado.phet.faraday.MagnetAndCompassApplication</mainClass>
+              <mainClass>edu.colorado.phet.magnet-and-compass.MagnetAndCompassApplication</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -88,7 +88,7 @@
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Main-Class>edu.colorado.phet.faraday.MagnetAndCompassApplication</Main-Class>
+                    <Main-Class>edu.colorado.phet.magnet-and-compass.MagnetAndCompassApplication</Main-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>

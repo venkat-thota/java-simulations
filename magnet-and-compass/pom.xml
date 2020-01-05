@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>edu.colorado.phet.faraday</groupId>
+	<groupId>com.aimxcel.abclearn.magnetandcompass</groupId>
 	<artifactId>magnet-and-compass</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
@@ -19,8 +19,8 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>edu.colorado.phet.common.phetgraphics.application</groupId>
-			<artifactId>phetgraphics</artifactId>
+			<groupId>com.aimxcel.abclearn.aimxcelgraphics</groupId>
+			<artifactId>aimxcel-graphics</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
@@ -44,7 +44,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>edu.colorado.phet.faraday.MagnetAndCompassApplication</mainClass>
+							<mainClass>com.aimxcel.abclearn.magnetandcompass.MagnetAndCompassApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -83,7 +83,7 @@
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<manifestEntries>
-										<Main-Class>edu.colorado.phet.faraday.MagnetAndCompassApplication</Main-Class>
+										<Main-Class>com.aimxcel.abclearn.magnetandcompass.MagnetAndCompassApplication</Main-Class>
 									</manifestEntries>
 								</transformer>
 							</transformers>
@@ -94,32 +94,32 @@
 		</plugins>
 		<resources>
 			<resource>
-				<directory>src/main/resources/faraday</directory>
+				<directory>src/main/resources/magnet-and-compass</directory>
 				<includes>
 					<include>*.properties</include>
 				</includes>
-				<targetPath>faraday</targetPath>
+				<targetPath>magnet-and-compass</targetPath>
 			</resource>
 			<resource>
-				<directory>src/main/resources/faraday/bfield</directory>
+				<directory>src/main/resources/magnet-and-compass/bfield</directory>
 				<includes>
 					<include>*.csv</include>
 				</includes>
-				<targetPath>faraday/bfield</targetPath>
+				<targetPath>magnet-and-compass/bfield</targetPath>
 			</resource>
 			<resource>
-				<directory>src/main/resources/faraday/images</directory>
+				<directory>src/main/resources/magnet-and-compass/images</directory>
 				<includes>
 					<include>*.png</include>
 				</includes>
-				<targetPath>faraday/images</targetPath>
+				<targetPath>magnet-and-compass/images</targetPath>
 			</resource>
 			<resource>
-				<directory>src/main/resources/faraday/localization</directory>
+				<directory>src/main/resources/magnet-and-compass/localization</directory>
 				<includes>
 					<include>*.properties</include>
 				</includes>
-				<targetPath>faraday/localization</targetPath>
+				<targetPath>magnet-and-compass/localization</targetPath>
 			</resource>
 		</resources>
 	</build>

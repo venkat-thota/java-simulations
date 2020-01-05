@@ -1,0 +1,33 @@
+###################################
+# License info for magnet-and-compass
+# Automatically generated on Fri Aug 08 00:08:01 MDT 2008
+###################################
+
+acPowerSupply.png author=Aimxcel 
+acPowerSupply_icon.png author=Aimxcel 
+acPowerSupply_icon_selected.png author=Aimxcel 
+barMagnet.png author=Aimxcel 
+battery.png author=Aimxcel 
+battery_icon.png author=Aimxcel 
+battery_icon_selected.png author=Aimxcel 
+earth.png source=http://www.clker.com/clipart-2123-large.html license=Creative Commons, royalty free, public domain 
+electron_background.png author=Aimxcel 
+electron_foreground.png author=Aimxcel 
+faucet.png author=Aimxcel 
+fieldMeter.png author=Aimxcel 
+license-orig.txt 
+lightbulb-base.png author=Aimxcel 
+lightbulb-cap.png author=Aimxcel 
+lightbulb-glass.png author=Aimxcel 
+lightbulb_icon.png author=Aimxcel 
+lightbulb_icon_selected.png author=Aimxcel 
+resistor.png author=Noah Podolefsky source=Aimxcel
+sliderKnob.png author=Aimxcel 
+sliderKnobHighlight.png author=Aimxcel 
+turbinePivot.png author=Aimxcel
+voltmeter.png author=Aimxcel 
+voltmeterProbeBlack.png author=Aimxcel 
+voltmeterProbeWhite.png author=Aimxcel 
+voltmeter_icon.png author=Aimxcel 
+voltmeter_icon_selected.png author=Aimxcel 
+waterWheel.png author=Aimxcel 
