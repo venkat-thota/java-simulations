@@ -47,7 +47,7 @@ public class SimSharingConfig {
     public static final SimSharingConfig ABS_SPRING_2012 = new SimSharingConfig( "acid-base-solutions-spring-2012", true, true, false, false );
 
     
-    public static final SimSharingConfig FARADAY_SPRING_2012 = new SimSharingConfig( "faraday-spring-2012", false, true, false, false );
+    public static final SimSharingConfig FARADAY_SPRING_2012 = new SimSharingConfig( "magnet-and-compass-spring-2012", false, true, false, false );
 
    
     public static final SimSharingConfig BALANCING_ACT_SPRING_2012 = new SimSharingConfig( "balancing-act-spring-2012", true, false,true, true, true, "Please enter your user ID:", WORDS );

@@ -94,7 +94,6 @@ public class AimxcelApplication implements IProguardKeepClass {
 	}
 
 	public ISimInfo getSimInfo() {
-		System.out.println(aimxcelApplicationConfig);
 		return aimxcelApplicationConfig;
 	}
 
@@ -115,7 +114,6 @@ public class AimxcelApplication implements IProguardKeepClass {
 	 * @return The AimxcelFrame
 	 */
 	protected AimxcelFrame createAimxcelFrame() {
-		System.out.println("this: "+this);
 		return new AimxcelFrame(this);
 	}
 

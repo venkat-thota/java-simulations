@@ -134,12 +134,12 @@ public class SessionCounter {
         private static final String SUFFIX_SINCE = ".since";
         private static final String KEY_TOTAL_COUNT = "total" + SUFFIX_COUNT;
 
-        // eg, faraday.magnet-and-compass.count
+        // eg, magnet-and-compass.magnet-and-compass.count
         private static String getCountKey( String project, String simulation ) {
             return project + "." + simulation + SUFFIX_COUNT;
         }
 
-        // eg, faraday.magnet-and-compass.since
+        // eg, magnet-and-compass.magnet-and-compass.since
         private static String getSinceKey( String project, String simulation ) {
             return project + "." + simulation + SUFFIX_SINCE;
         }

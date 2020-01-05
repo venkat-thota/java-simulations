@@ -123,12 +123,9 @@ public class AutomaticUpdatesManager {
         } );
 
         // send query in separate thread
-        final VersionInfoQuery finalQuery = query;
-        Thread t = new Thread( new Runnable() {
-            public void run() {
-                finalQuery.send();
-            }
-        } );
-        t.start();
+		/*
+		 * final VersionInfoQuery finalQuery = query; Thread t = new Thread( new
+		 * Runnable() { public void run() { finalQuery.send(); } } ); t.start();
+		 */
     }
 }
