@@ -4,7 +4,7 @@ package com.aimxcel.abclearn.signalcircuit;
 import java.awt.*;
 import java.util.Vector;
 
-import com.aimxcel.abclearn.electron.wire1d.WirePatch;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WirePatch;
 import com.aimxcel.abclearn.signalcircuit.paint.Painter;
 import com.aimxcel.abclearn.signalcircuit.paint.vector.DefaultVectorPainter;
 import com.aimxcel.abclearn.signalcircuit.paint.vector.VectorPainter;

@@ -3,7 +3,7 @@ package com.aimxcel.abclearn.signalcircuit;
 
 import java.util.Vector;
 
-import com.aimxcel.abclearn.electron.wire1d.*;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.*;
 
 public class SignalPropagator implements Propagator1d {
     Vector forces = new Vector();

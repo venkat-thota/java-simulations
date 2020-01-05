@@ -3,9 +3,9 @@ package com.aimxcel.abclearn.signalcircuit.electron.wire1d.paint;
 
 import java.awt.*;
 
-import com.aimxcel.abclearn.electron.wire1d.WireParticle;
-import com.aimxcel.abclearn.electron.wire1d.WirePatch;
-import com.aimxcel.abclearn.electron.wire1d.WireSystem;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireParticle;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WirePatch;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireSystem;
 import com.aimxcel.abclearn.signalcircuit.paint.Painter;
 import com.aimxcel.abclearn.signalcircuit.phys2d.DoublePoint;
 import com.aimxcel.abclearn.signalcircuit.phys2d.Particle;

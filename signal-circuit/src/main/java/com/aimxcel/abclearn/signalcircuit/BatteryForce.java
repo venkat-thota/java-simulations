@@ -1,9 +1,9 @@
 
 package com.aimxcel.abclearn.signalcircuit;
 
-import com.aimxcel.abclearn.electron.wire1d.Force1d;
-import com.aimxcel.abclearn.electron.wire1d.WireParticle;
-import com.aimxcel.abclearn.electron.wire1d.WireSystem;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.Force1d;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireParticle;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireSystem;
 import com.aimxcel.abclearn.signalcircuit.phys2d.Law;
 import com.aimxcel.abclearn.signalcircuit.phys2d.System2D;
 

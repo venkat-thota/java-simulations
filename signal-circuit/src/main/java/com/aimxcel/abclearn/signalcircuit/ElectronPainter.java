@@ -3,9 +3,9 @@ package com.aimxcel.abclearn.signalcircuit;
 
 import javax.swing.*;
 
-import com.aimxcel.abclearn.electron.wire1d.WireParticle;
-import com.aimxcel.abclearn.electron.wire1d.WirePatch;
-import com.aimxcel.abclearn.electron.wire1d.WireSystem;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireParticle;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WirePatch;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireSystem;
 import com.aimxcel.abclearn.signalcircuit.paint.Painter;
 import com.aimxcel.abclearn.signalcircuit.paint.particle.ParticlePainter;
 import com.aimxcel.abclearn.signalcircuit.paint.particle.ParticlePainterAdapter;

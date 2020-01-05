@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>edu.colorado.phet.signalcircuit</groupId>
+	<groupId>com.aimxcel.abclearn.signalcircuit</groupId>
 	<artifactId>signal-circuit</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
@@ -43,7 +43,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>edu.colorado.phet.signalcircuit.SignalCircuitApplication</mainClass>
+							<mainClass>com.aimxcel.abclearn.signalcircuit.SignalCircuitApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -82,7 +82,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<manifestEntries>
-										<Main-Class>edu.colorado.phet.signalcircuit.SignalCircuitApplication</Main-Class>
+										<Main-Class>com.aimxcel.abclearn.signalcircuit.SignalCircuitApplication</Main-Class>
 									</manifestEntries>
 								</transformer>
 

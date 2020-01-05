@@ -1,8 +1,8 @@
 
 package com.aimxcel.abclearn.signalcircuit;
 
-import com.aimxcel.abclearn.electron.wire1d.Propagator1d;
-import com.aimxcel.abclearn.electron.wire1d.WireParticle;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.Propagator1d;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireParticle;
 
 public class SignalPropagator3 implements Propagator1d, SwitchListener {
     boolean switchClosed;

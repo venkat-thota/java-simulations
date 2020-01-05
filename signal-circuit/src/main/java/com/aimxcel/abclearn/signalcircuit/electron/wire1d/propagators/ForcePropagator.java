@@ -3,9 +3,9 @@ package com.aimxcel.abclearn.signalcircuit.electron.wire1d.propagators;
 
 import java.util.Vector;
 
-import com.aimxcel.abclearn.electron.wire1d.Force1d;
-import com.aimxcel.abclearn.electron.wire1d.Propagator1d;
-import com.aimxcel.abclearn.electron.wire1d.WireParticle;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.Force1d;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.Propagator1d;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireParticle;
 
 public class ForcePropagator implements Propagator1d {
     Vector forces = new Vector();

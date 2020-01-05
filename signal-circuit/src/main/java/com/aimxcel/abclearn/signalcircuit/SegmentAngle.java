@@ -5,7 +5,7 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.electron.wire1d.WireSegment;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireSegment;
 import com.aimxcel.abclearn.signalcircuit.phys2d.DoublePoint;
 
 import java.util.Vector;

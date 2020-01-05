@@ -3,8 +3,8 @@ package com.aimxcel.abclearn.signalcircuit.electron.wire1d.propagators;
 
 import java.util.Vector;
 
-import com.aimxcel.abclearn.electron.wire1d.Propagator1d;
-import com.aimxcel.abclearn.electron.wire1d.WireParticle;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.Propagator1d;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireParticle;
 
 public class CompositePropagator1d implements Propagator1d {
     Vector v = new Vector();

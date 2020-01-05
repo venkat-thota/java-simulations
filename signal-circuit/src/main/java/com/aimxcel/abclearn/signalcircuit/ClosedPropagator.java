@@ -3,9 +3,9 @@ package com.aimxcel.abclearn.signalcircuit;
 
 import java.util.Vector;
 
-import com.aimxcel.abclearn.electron.wire1d.Propagator1d;
-import com.aimxcel.abclearn.electron.wire1d.WireParticle;
-import com.aimxcel.abclearn.electron.wire1d.WirePatch;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.Propagator1d;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireParticle;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WirePatch;
 import com.aimxcel.abclearn.signalcircuit.phys2d.Law;
 import com.aimxcel.abclearn.signalcircuit.phys2d.System2D;
 

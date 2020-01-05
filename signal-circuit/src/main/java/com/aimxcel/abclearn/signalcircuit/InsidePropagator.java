@@ -1,9 +1,9 @@
 
 package com.aimxcel.abclearn.signalcircuit;
 
-import com.aimxcel.abclearn.electron.wire1d.Propagator1d;
-import com.aimxcel.abclearn.electron.wire1d.WireParticle;
-import com.aimxcel.abclearn.electron.wire1d.WirePatch;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.Propagator1d;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WireParticle;
+import com.aimxcel.abclearn.signalcircuit.electron.wire1d.WirePatch;
 
 public class InsidePropagator implements Propagator1d {
     double v;
