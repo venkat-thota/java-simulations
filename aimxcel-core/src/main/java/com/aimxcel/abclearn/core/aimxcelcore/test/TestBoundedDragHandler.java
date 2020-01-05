@@ -30,12 +30,12 @@ public class TestBoundedDragHandler {
     public TestBoundedDragHandler() throws IOException {
 
         //Initialize Frame
-        frame = new JFrame( "Simple Piccolo Test" );
+        frame = new JFrame( "Simple Core Test" );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         frame.setSize( 600, 600 );
         SwingUtils.centerWindowOnScreen( frame );
 
-        //Initialize Piccolo Canvas
+        //Initialize Core Canvas
         piccoloCanvas = new PCanvas();
         frame.setContentPane( piccoloCanvas );
 //        piccoloCanvas.getLayer().setRenderingHint( RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON );
@@ -48,7 +48,7 @@ public class TestBoundedDragHandler {
         piccoloCanvas.getLayer().addChild( path );
 
         //Add content to Canvas
-        final PText pText = new PText( "Hello Piccolo" );
+        final PText pText = new PText( "Hello Core" );
         piccoloCanvas.getLayer().addChild( pText );
         pText.setOffset( 100, 100 );
 //        pText.addInputEventListener( new DefaultDragHandler() );

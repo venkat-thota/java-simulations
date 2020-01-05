@@ -3,7 +3,7 @@ package com.aimxcel.abclearn.eatingandexercise.view;
 
 import java.awt.*;
 
-import com.aimxcel.abclearn.core.aimxcelcore.test.PiccoloTestFrame;
+import com.aimxcel.abclearn.core.aimxcelcore.test.CoreTestFrame;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
@@ -74,7 +74,7 @@ public class HealthIndicator extends PNode {
     }
 
     public static void main( String[] args ) {
-        PiccoloTestFrame piccoloTestFrame = new PiccoloTestFrame( HealthIndicator.class.getName() );
+        CoreTestFrame piccoloTestFrame = new CoreTestFrame( HealthIndicator.class.getName() );
         HealthIndicator indicator = new HealthIndicator( new Human() );
         indicator.setOffset( 200, 200 );
         piccoloTestFrame.addNode( indicator );

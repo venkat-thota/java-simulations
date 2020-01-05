@@ -10,7 +10,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.PropertyRadioButt
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.RichPNode;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.layout.HBox;
-import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.PiccoloClockControlPanel;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.CoreClockControlPanel;
 
 import edu.umd.cs.piccolox.pswing.PSwing;
 
@@ -23,10 +23,10 @@ public class SlowMotionNormalTimeControlPanel extends RichPNode {
 	private static final long serialVersionUID = 1L;
 	private final Color BLANK = new Color( 0, 0, 0, 0 );
     private final AimxcelFont RADIO_BUTTON_FONT = new AimxcelFont( 16 );
-    protected final PiccoloClockControlPanel piccoloClockControlPanel;
+    protected final CoreClockControlPanel piccoloClockControlPanel;
 
       public SlowMotionNormalTimeControlPanel( IUserComponent slowMotionRadioButton, String slowMotionText, String normalSpeedText, IUserComponent normalSpeedRadioButton, SettableProperty<Boolean> normalSpeed, IClock clock ) {
-        piccoloClockControlPanel = new PiccoloClockControlPanel( clock ) {/**
+        piccoloClockControlPanel = new CoreClockControlPanel( clock ) {/**
 			 * 
 			 */
 			private static final long serialVersionUID = 1L;

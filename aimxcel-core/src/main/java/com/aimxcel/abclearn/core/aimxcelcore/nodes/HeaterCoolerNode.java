@@ -22,9 +22,9 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.DoubleRange;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ColorUtils;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
-import com.aimxcel.abclearn.core.aimxcelcore.PiccoloAimxcelResources;
+import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelResources;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.slider.VSliderNode;
-import com.aimxcel.abclearn.core.aimxcelcore.test.PiccoloTestFrame;
+import com.aimxcel.abclearn.core.aimxcelcore.test.CoreTestFrame;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 import edu.umd.cs.piccolo.PNode;
@@ -119,10 +119,10 @@ public class HeaterCoolerNode extends PNode {
         }};
 
         // Add the images for fire and ice that come out of the stove.
-        fireImage = new PImage( PiccoloAimxcelResources.getImage( "flame.png" ) );
+        fireImage = new PImage( CoreAimxcelResources.getImage( "flame.png" ) );
         fireImage.setScale( ( WIDTH * 0.8 ) / fireImage.getFullBoundsReference().getWidth() );
 
-        iceImage = new PImage( PiccoloAimxcelResources.getImage( "ice-cube-stack.png" ) );
+        iceImage = new PImage( CoreAimxcelResources.getImage( "ice-cube-stack.png" ) );
         iceImage.setScale( ( WIDTH * 0.8 ) / iceImage.getFullBoundsReference().getWidth() );
 
         // Add the various components in the order needed to achieve the
@@ -255,7 +255,7 @@ public class HeaterCoolerNode extends PNode {
     public static void main( String[] args ) {
         SwingUtilities.invokeLater( new Runnable() {
             public void run() {
-                new PiccoloTestFrame( "Heater-Cooler Node Test" ) {{
+                new CoreTestFrame( "Heater-Cooler Node Test" ) {{
                     addNode( new AimxcelPPath( new Rectangle2D.Double( 0, 0, 1000, 1000 ), Color.black ) );
                     addNode( new HeaterCoolerNode( new Property<Double>( 0.0 ), "Heat", "Cool" ) {{
                         setOffset( 100, 200 );

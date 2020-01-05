@@ -50,8 +50,8 @@ public class AimxcelCommonResources {
     private static AimxcelResources INSTANCE = new AimxcelResources( "aimxcelcommon" );
 
     //Values for translated strings
-    public static final String PICCOLO_AIMXCEL_VELOCITY_SENSOR_NODE_SPEED = getString( "PiccoloAimxcel.VelocitySensorNode.speed" );
-    public static final String PICCOLO_AIMXCEL_VELOCITY_SENSOR_NODE_UNKNOWN = getString( "PiccoloAimxcel.VelocitySensorNode.unknown" );
+    public static final String PICCOLO_AIMXCEL_VELOCITY_SENSOR_NODE_SPEED = getString( "CoreAimxcel.VelocitySensorNode.speed" );
+    public static final String PICCOLO_AIMXCEL_VELOCITY_SENSOR_NODE_UNKNOWN = getString( "CoreAimxcel.VelocitySensorNode.unknown" );
 
     /* not intended for instantiation */
     private AimxcelCommonResources() {

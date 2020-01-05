@@ -670,7 +670,7 @@ public class AimxcelTabbedPane extends JPanel {
     }
 
     /**
-     * The TabPane is the Piccolo PCanvas container for AbstractTabNode PNodes.
+     * The TabPane is the Core PCanvas container for AbstractTabNode PNodes.
      */
     private static class TabPane extends PSwingCanvas {
         private ArrayList tabs = new ArrayList();

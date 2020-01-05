@@ -25,7 +25,7 @@ import javax.swing.text.NumberFormatter;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.SliderNode;
-import com.aimxcel.abclearn.core.aimxcelcore.test.PiccoloTestFrame;
+import com.aimxcel.abclearn.core.aimxcelcore.test.CoreTestFrame;
 
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.nodes.PText;
@@ -342,7 +342,7 @@ public class LinearValueControlNode extends PNode {
     }
 
     public static void main( String[] args ) {
-        PiccoloTestFrame piccoloTestFrame = new PiccoloTestFrame( LinearValueControlNode.class.getName() );
+        CoreTestFrame piccoloTestFrame = new CoreTestFrame( LinearValueControlNode.class.getName() );
         LinearValueControlNode control = new LinearValueControlNode( "label", "units", 0, 1.0 / 50.0, 0.02, new DecimalFormat( "0.00000" ) );
         control.setOffset( 200, 200 );
         control.addListener( new Listener() {

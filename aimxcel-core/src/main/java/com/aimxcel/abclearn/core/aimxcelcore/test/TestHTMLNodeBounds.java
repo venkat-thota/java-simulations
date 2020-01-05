@@ -49,7 +49,7 @@ public class TestHTMLNodeBounds extends JFrame {
         super( TestHTMLNodeBounds.class.getName() );
         setSize( new Dimension( 800, 450 ) );
 
-        // Piccolo canvas
+        // Core canvas
         PSwingCanvas canvas = new PSwingCanvas();
         canvas.removeInputEventListener( canvas.getZoomEventHandler() );
         canvas.removeInputEventListener( canvas.getPanEventHandler() );
@@ -121,7 +121,7 @@ public class TestHTMLNodeBounds extends JFrame {
     }
 }
 
-//Sample application that mimics the above behavior, but using Swing only (no Piccolo).
+//Sample application that mimics the above behavior, but using Swing only (no Core).
 class Test2 {
     public static void main( String[] args ) {
         SwingUtilities.invokeLater( new Runnable() {

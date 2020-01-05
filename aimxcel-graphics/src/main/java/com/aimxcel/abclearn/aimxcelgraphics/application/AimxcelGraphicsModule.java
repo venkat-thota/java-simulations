@@ -16,7 +16,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ControlPanel;
-import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.PiccoloClockControlPanel;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.CoreClockControlPanel;
 
 /**
  * This class encapsulates the parts of an application that make up
@@ -214,6 +214,6 @@ public class AimxcelGraphicsModule extends Module {
     }
 
     protected JComponent createClockControlPanel( IClock clock ) {
-        return new PiccoloClockControlPanel( clock );
+        return new CoreClockControlPanel( clock );
     }
 }

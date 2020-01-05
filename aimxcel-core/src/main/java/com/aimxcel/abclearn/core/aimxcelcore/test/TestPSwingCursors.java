@@ -29,7 +29,7 @@ public class TestPSwingCursors extends JFrame {
     public TestPSwingCursors() {
 
         // JButton off the canvas.
-        // This demonstrates typical Swing cursor behavior, when Piccolo isn't involved.
+        // This demonstrates typical Swing cursor behavior, when Core isn't involved.
         JButton button1 = new JButton( "button1 with hand cursor" );
         button1.setCursor( HAND_CURSOR );
         JPanel controlPanel = new JPanel();

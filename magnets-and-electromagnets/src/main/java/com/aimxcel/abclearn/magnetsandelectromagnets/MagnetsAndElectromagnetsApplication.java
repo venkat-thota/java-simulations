@@ -3,7 +3,7 @@
 package com.aimxcel.abclearn.magnetsandelectromagnets;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.application.ApplicationConstructor;
-import com.aimxcel.abclearn.core.aimxcelcore.PiccoloAimxcelApplication;
+import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication;
 import com.aimxcel.abclearn.magnetsandelectromagnets.control.menu.MagnetsAndElectromagnetsOptionsMenu;
 import com.aimxcel.abclearn.magnetsandelectromagnets.module.BarMagnetModule;
 import com.aimxcel.abclearn.magnetsandelectromagnets.module.ElectromagnetModule;
@@ -12,7 +12,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationC
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationLauncher;
 
 
-public class MagnetsAndElectromagnetsApplication extends PiccoloAimxcelApplication {
+public class MagnetsAndElectromagnetsApplication extends CoreAimxcelApplication {
 
     //----------------------------------------------------------------------------
     // Constructors

@@ -95,7 +95,7 @@ public class ImageButtonNode extends AimxcelPNode {
 
     public static void main( String[] args ) {
 
-        // Use Piccolo to create some test images.
+        // Use Core to create some test images.
         Shape buttonShape = new Ellipse2D.Double( 0, 0, 100, 100 );
         Color buttonColor = Color.RED;
         PPath unarmedPathNode = new PPath( buttonShape );

@@ -10,11 +10,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationC
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationLauncher;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelFrame;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelFrameWorkaround;
-import com.aimxcel.abclearn.core.aimxcelcore.PiccoloAimxcelApplication;
+import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication;
 import com.aimxcel.abclearn.eatingandexercise.developer.DeveloperFrame;
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.EatingAndExerciseModule;
 
-public class EatingAndExerciseApplication extends PiccoloAimxcelApplication {
+public class EatingAndExerciseApplication extends CoreAimxcelApplication {
 
     /**
 	 * 

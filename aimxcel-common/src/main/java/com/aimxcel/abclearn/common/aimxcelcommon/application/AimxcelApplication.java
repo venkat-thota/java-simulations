@@ -176,7 +176,7 @@ public class AimxcelApplication implements IProguardKeepClass {
 	 * by default..
 	 * <p/>
 	 * This method appears to give the correct behavior in the test program:
-	 * TestPiccoloAimxcelApplication
+	 * TestCoreAimxcelApplication
 	 * <p/>
 	 * This method and functionality will be removed if is too awkward in practice
 	 * (for example, too confusing to override this default).

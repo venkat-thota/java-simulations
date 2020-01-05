@@ -257,7 +257,7 @@ public class AimxcelPCanvas extends PSwingCanvas implements Updatable {
             aimxcelRootNode.removeWorldChild( node );
         }
         catch ( ArrayIndexOutOfBoundsException e ) {
-            // Hack because Piccolo can't be modified
+            // Hack because Core can't be modified
             // It doesn't expose world children so we can't
             // safely check for their presence
         }
@@ -279,7 +279,7 @@ public class AimxcelPCanvas extends PSwingCanvas implements Updatable {
     }
 
     //----------------------------------------------------------------------------
-    // Convenience methods for setting Piccolo debug flags
+    // Convenience methods for setting Core debug flags
     //----------------------------------------------------------------------------
 
     public static void setDebugRegionManagement( boolean debugRegionManagement ) {

@@ -45,7 +45,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.TimingStrategy;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ControlPanel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
-import com.aimxcel.abclearn.core.aimxcelcore.PiccoloModule;
+import com.aimxcel.abclearn.core.aimxcelcore.CoreModule;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.help.GlassPaneCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
@@ -116,7 +116,7 @@ public class TestGlassPaneCanvas extends AimxcelApplication {
     }
 
     /* Module */
-    private static class TestModule extends PiccoloModule {
+    private static class TestModule extends CoreModule {
 
         public TestModule( String title, Color canvasColor ) {
             super( title, new TestClock(), true /* startsPaused */ );

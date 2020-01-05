@@ -12,7 +12,7 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowPText;
 import edu.umd.cs.piccolo.PNode;
 
 /**
- * These sliders should be Piccolo sliders for the following reasons:
+ * These sliders should be Core sliders for the following reasons:
  * 1. So we can color the thumbs
  * 2. So we can indicate when the value is out of range
  * 3. So we can easily identify when a change event is caused by the user vs. by a callback from the model.

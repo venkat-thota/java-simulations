@@ -3,7 +3,7 @@
 package com.aimxcel.abclearn.magnetandcompass;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.application.ApplicationConstructor;
-import com.aimxcel.abclearn.core.aimxcelcore.PiccoloAimxcelApplication;
+import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication;
 import com.aimxcel.abclearn.magnetandcompass.control.menu.MagnetAndCompassOptionsMenu;
 import com.aimxcel.abclearn.magnetandcompass.module.BarMagnetModule;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
@@ -11,7 +11,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationC
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationLauncher;
 
 
-public class MagnetAndCompassApplication extends PiccoloAimxcelApplication {
+public class MagnetAndCompassApplication extends CoreAimxcelApplication {
 
     //----------------------------------------------------------------------------
     // Constructors

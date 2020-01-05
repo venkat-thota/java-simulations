@@ -15,11 +15,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelFrame;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ResetAllButton;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
-import com.aimxcel.abclearn.core.aimxcelcore.PiccoloModule;
+import com.aimxcel.abclearn.core.aimxcelcore.CoreModule;
 import com.aimxcel.abclearn.core.aimxcelcore.help.DefaultWiggleMe;
 import com.aimxcel.abclearn.core.aimxcelcore.help.HelpPane;
 import com.aimxcel.abclearn.core.aimxcelcore.help.MotionHelpBalloon;
-import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.PiccoloClockControlPanel;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.CoreClockControlPanel;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseStrings;
 import com.aimxcel.abclearn.eatingandexercise.control.CaloricItem;
@@ -28,11 +28,11 @@ import com.aimxcel.abclearn.eatingandexercise.model.CalorieSet;
 import com.aimxcel.abclearn.eatingandexercise.model.EatingAndExerciseUnits;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-public class EatingAndExerciseModule extends PiccoloModule {
+public class EatingAndExerciseModule extends CoreModule {
 
     private EatingAndExerciseModel _model;
     private EatingAndExerciseCanvas _canvas;
-    private PiccoloClockControlPanel _clockControlPanel;
+    private CoreClockControlPanel _clockControlPanel;
     private JFrame parentFrame;
     private boolean inited = false;
     private boolean everStarted = false;
@@ -126,7 +126,7 @@ public class EatingAndExerciseModule extends PiccoloModule {
         setLogoPanelVisible( false );
 
         // Clock controls
-        _clockControlPanel = new PiccoloClockControlPanel( getClock() ) {
+        _clockControlPanel = new CoreClockControlPanel( getClock() ) {
             public void setTimeDisplay( double time ) {
                 super.setTimeDisplay( EatingAndExerciseUnits.secondsToYears( time ) );
             }

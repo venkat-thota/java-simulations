@@ -26,7 +26,7 @@ import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
  * This looks beautiful and comes built-in to jfreechart but has performance problems during dynamic data display, since the entire region
  * is repainted whenever a single point changes.
  * <p/>
- * 2. Piccolo renderer: This uses a PPath to render the path as a PNode child of the JFreeChartNode
+ * 2. Core renderer: This uses a PPath to render the path as a PNode child of the JFreeChartNode
  * This looks fine and reduces the clip region necessary for painting.  When combined with a buffered jfreechartnode, this can improve computation substantially.
  * This renderer is combined with a PClip to ensure no data is drawn outside the chart's data area (which could otherwise change the fullbounds of the jfreechartnode..
  * <p/>
@@ -180,9 +180,9 @@ public class DynamicJFreeChartNode extends JFreeChartNode {
     }
 
     /**
-     * Sets the rendering strategy to Piccolo style.
+     * Sets the rendering strategy to Core style.
      */
-    public void setPiccoloSeries() {
+    public void setCoreSeries() {
         setViewFactory( RENDERER_PICCOLO );
     }
 

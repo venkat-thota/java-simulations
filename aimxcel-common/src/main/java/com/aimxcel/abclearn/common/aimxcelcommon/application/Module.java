@@ -464,7 +464,7 @@ public abstract class Module implements Resettable {
         } );
     }
 
-    //Sims using simsharing should use SimSharingPiccoloModule to override this default dummy value (which is provided to prevent nullpointer exceptions in the tab node code).
+    //Sims using simsharing should use SimSharingCoreModule to override this default dummy value (which is provided to prevent nullpointer exceptions in the tab node code).
     public IUserComponent getTabUserComponent() {
         return UserComponents.tab;
     }

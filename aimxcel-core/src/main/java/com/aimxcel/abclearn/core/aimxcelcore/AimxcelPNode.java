@@ -191,9 +191,9 @@ public class AimxcelPNode extends RichPNode {
     }
 
     /**
-     * Workaround for Piccolo's broken implementation of removeChild.
+     * Workaround for Core's broken implementation of removeChild.
      * If we attempt to remove a node that is not a child, this method should
-     * return null.  Instead, Piccolo throws ArrayIndexOutOfBoundsException due
+     * return null.  Instead, Core throws ArrayIndexOutOfBoundsException due
      * to the internal data structure for managing children,
      */
     public PNode removeChild( PNode child ) {

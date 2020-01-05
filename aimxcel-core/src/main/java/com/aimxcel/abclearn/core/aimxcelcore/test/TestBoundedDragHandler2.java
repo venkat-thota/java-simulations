@@ -28,7 +28,7 @@ public class TestBoundedDragHandler2 {
     private PCanvas piccoloCanvas;
 
     public TestBoundedDragHandler2() throws IOException {
-        frame = new JFrame( "Simple Piccolo Test" );
+        frame = new JFrame( "Simple Core Test" );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         frame.setSize( 600, 600 );
         SwingUtils.centerWindowOnScreen( frame );
@@ -46,7 +46,7 @@ public class TestBoundedDragHandler2 {
         piccoloCanvas.getLayer().addChild( dragBoundsNode );
 
         // Draggable text node
-        final PText pText = new PText( "Hello Piccolo" );
+        final PText pText = new PText( "Hello Core" );
         piccoloCanvas.getLayer().addChild( pText );
         pText.setOffset( 100, 100 );
         pText.addInputEventListener( new BoundedDragHandler( pText, dragBoundsNode ) );

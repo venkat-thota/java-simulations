@@ -36,7 +36,7 @@ public class TestPSwingContainerResize extends JFrame {
     public TestPSwingContainerResize() {
 
         /*
-        * Swing control panel embedded in a Piccolo canvas using PSwing.
+        * Swing control panel embedded in a Core canvas using PSwing.
         * The red check box will have it's label changed dynamically.
         */
         final DynamicPanel playAreaPanel = new DynamicPanel();
@@ -47,13 +47,13 @@ public class TestPSwingContainerResize extends JFrame {
         wrapperNode.setOffset( 100, 100 );
 
         /*
-        * Swing control panel outside of Piccolo.
+        * Swing control panel outside of Core.
         * The red check box will have it's label changed dynamically.
         */
         final DynamicPanel dynamicSwingPanel = new DynamicPanel();
 
         /*
-        * Swing control panel outside of Piccolo.
+        * Swing control panel outside of Core.
         * Selecting one of the radio buttons changes the label on the
         * red check box in the play area.
         */

@@ -3,7 +3,7 @@ package com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons;
 
 import static com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponents.stepButton;
 
-import com.aimxcel.abclearn.core.aimxcelcore.test.PiccoloTestFrame;
+import com.aimxcel.abclearn.core.aimxcelcore.test.CoreTestFrame;
 
 
 public class StepButton extends DefaultIconButton {
@@ -18,7 +18,7 @@ public class StepButton extends DefaultIconButton {
     }
 
     public static void main( String[] args ) {
-        PiccoloTestFrame testFrame = new PiccoloTestFrame( "Button Test" );
+        CoreTestFrame testFrame = new CoreTestFrame( "Button Test" );
         PlayPauseButton playPauseButton = new PlayPauseButton( 75 );
         testFrame.addNode( playPauseButton );
 

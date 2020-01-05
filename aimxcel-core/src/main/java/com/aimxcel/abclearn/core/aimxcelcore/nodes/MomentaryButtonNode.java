@@ -17,7 +17,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserCompone
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
-import com.aimxcel.abclearn.core.aimxcelcore.PiccoloAimxcelResources;
+import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelResources;
 import com.aimxcel.abclearn.core.aimxcelcore.event.DynamicCursorHandler;
 
 import edu.umd.cs.piccolo.PCanvas;
@@ -116,8 +116,8 @@ public class MomentaryButtonNode extends PNode {
         }};
 
         PNode button = new MomentaryButtonNode( new UserComponent( "testButton"),
-                                                buttonOn, PiccoloAimxcelResources.getImage( "button_pressed.png" ), PiccoloAimxcelResources.getImage( "button_unpressed.png" ),
-                                                buttonEnabled, PiccoloAimxcelResources.getImage( "button_pressed_disabled.png" ), PiccoloAimxcelResources.getImage( "button_unpressed_disabled.png" ));
+                                                buttonOn, CoreAimxcelResources.getImage( "button_pressed.png" ), CoreAimxcelResources.getImage( "button_unpressed.png" ),
+                                                buttonEnabled, CoreAimxcelResources.getImage( "button_pressed_disabled.png" ), CoreAimxcelResources.getImage( "button_unpressed_disabled.png" ));
         PCanvas canvas = new PCanvas();
         canvas.setPreferredSize( new Dimension( 500, 500 ) );
         canvas.getLayer().addChild( button );

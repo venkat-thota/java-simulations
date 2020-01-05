@@ -9,7 +9,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterSe
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
 import com.aimxcel.abclearn.core.aimxcelcore.event.ButtonEventHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.event.ButtonEventHandler.ButtonEventAdapter;
-import com.aimxcel.abclearn.core.aimxcelcore.test.PiccoloTestFrame;
+import com.aimxcel.abclearn.core.aimxcelcore.test.CoreTestFrame;
 
 import static com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterKeys.isPlaying;
 import static com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserActions.pressed;
@@ -81,7 +81,7 @@ public class PlayPauseButton extends IconButton {
     }
 
     public static void main( String[] args ) {
-        PiccoloTestFrame testFrame = new PiccoloTestFrame( "Button Test" );
+        CoreTestFrame testFrame = new CoreTestFrame( "Button Test" );
         testFrame.addNode( new PlayPauseButton( 75 ) );
         testFrame.setVisible( true );
     }

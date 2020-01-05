@@ -727,7 +727,7 @@ public class WavelengthControl extends AimxcelPNode {
             panel.setOpaque( false );
             unitsLabel.setOpaque( false );
 
-            // Piccolo wrapper
+            // Core wrapper
             pswing = new PSwing( panel );
             addChild( pswing );
         }

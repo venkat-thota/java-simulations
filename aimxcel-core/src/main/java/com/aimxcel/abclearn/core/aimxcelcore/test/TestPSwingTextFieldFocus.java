@@ -28,8 +28,8 @@ public class TestPSwingTextFieldFocus extends JFrame {
 	public TestPSwingTextFieldFocus() {
 
         // JTextField off the canvas.
-        // This demonstrates typical Swing cursor behavior, when Piccolo isn't involved.
-        final JTextField textField1 = new JTextField( "textField1 outside of Piccolo" );
+        // This demonstrates typical Swing cursor behavior, when Core isn't involved.
+        final JTextField textField1 = new JTextField( "textField1 outside of Core" );
         textField1.setColumns( 20 );
         textField1.addFocusListener( new FocusListener() {
             public void focusGained( FocusEvent e ) {

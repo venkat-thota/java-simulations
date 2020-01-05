@@ -55,7 +55,7 @@ public class MotionHelpBalloon extends HelpBalloon {
      * @param x
      * @param y
      * @return the PActivity that was scheduled, or null if none was scheduled
-     * @throws IllegalStateException if this node is not yet in the Piccolo tree
+     * @throws IllegalStateException if this node is not yet in the Core tree
      */
     public PActivity animateTo( final double x, final double y ) {
         return animateTo( x, y, DEFAULT_DURATION );
@@ -70,7 +70,7 @@ public class MotionHelpBalloon extends HelpBalloon {
      * @param y
      * @param duration duration in milliseconds
      * @return the PActivity that was scheduled, or null if none was scheduled
-     * @throws IllegalStateException if this node is not yet in the Piccolo tree
+     * @throws IllegalStateException if this node is not yet in the Core tree
      */
     public PActivity animateTo( final double x, final double y, final long duration ) {
         if ( !started ) {
@@ -93,7 +93,7 @@ public class MotionHelpBalloon extends HelpBalloon {
      *
      * @param node
      * @return the PActivity that was scheduled, or null if none was scheduled
-     * @throws IllegalStateException if this node is not yet in the Piccolo tree
+     * @throws IllegalStateException if this node is not yet in the Core tree
      */
     public PActivity animateTo( final PNode node ) {
         return animateTo( node, DEFAULT_DURATION );
@@ -108,7 +108,7 @@ public class MotionHelpBalloon extends HelpBalloon {
      * @param node
      * @param duration duration in milliseconds
      * @return the PActivity that was scheduled, or null if none was scheduled
-     * @throws IllegalStateException if this node is not yet in the Piccolo tree
+     * @throws IllegalStateException if this node is not yet in the Core tree
      */
     public PActivity animateTo( final PNode node, long duration ) {
         if ( !started ) {

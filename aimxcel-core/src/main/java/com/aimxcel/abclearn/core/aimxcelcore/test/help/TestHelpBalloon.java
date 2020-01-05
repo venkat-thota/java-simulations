@@ -35,7 +35,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.TimingStrategy;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ControlPanel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
-import com.aimxcel.abclearn.core.aimxcelcore.PiccoloModule;
+import com.aimxcel.abclearn.core.aimxcelcore.CoreModule;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.help.HelpBalloon;
 import com.aimxcel.abclearn.core.aimxcelcore.help.HelpPane;
@@ -97,7 +97,7 @@ public class TestHelpBalloon extends AimxcelApplication {
     }
 
     /* Module */
-    private static class TestModule extends PiccoloModule {
+    private static class TestModule extends CoreModule {
 
         private HelpBalloon _helpBalloon;
 

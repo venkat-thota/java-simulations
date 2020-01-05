@@ -34,7 +34,7 @@ public class TestActivities {
         pCanvas.getCamera().addChild( sticky );
 
         pCanvas.getLayer().addChild( pText );
-        JFrame frame = new JFrame( "Test Piccolo" );
+        JFrame frame = new JFrame( "Test Core" );
         pCanvas.getCamera().translateView( 50, 50 );
 //        pText.animateToPositionScaleRotation( 0,0,1,Math.PI,5000);
 //        pText.animateToTransform( AffineTransform.getRotateInstance( Math.PI),1000 );

@@ -13,7 +13,7 @@ import javax.swing.Timer;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
-import com.aimxcel.abclearn.core.aimxcelcore.test.PiccoloTestFrame;
+import com.aimxcel.abclearn.core.aimxcelcore.test.CoreTestFrame;
 
 import edu.umd.cs.piccolo.PNode;
 import edu.umd.cs.piccolo.nodes.PPath;
@@ -82,7 +82,7 @@ public class MediaPlaybackBarNode extends PNode {
     }
 
     public static void main( String[] args ) {
-        PiccoloTestFrame testFrame = new PiccoloTestFrame( "Button Test" );
+        CoreTestFrame testFrame = new CoreTestFrame( "Button Test" );
         final PlayPauseButton node = new PlayPauseButton( 75 );
 
         node.setOffset( 100, 200 );

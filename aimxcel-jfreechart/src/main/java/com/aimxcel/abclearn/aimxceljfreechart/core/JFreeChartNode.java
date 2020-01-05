@@ -29,7 +29,7 @@ import edu.umd.cs.piccolo.util.PPaintContext;
 
 
 /**
- * JFreeChartNode is a Piccolo node for displaying a JFreeChart.
+ * JFreeChartNode is a Core node for displaying a JFreeChart.
  * <p/>
  * The bounds of the node determine the size of the chart.
  * The node registers with the chart to receive notification

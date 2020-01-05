@@ -120,7 +120,7 @@ public class OutlineTextNode extends PNode {
         outlineTextNode6.setOffset( xMargin, outlineTextNode5.getFullBoundsReference().getMaxY() + ySpacing );
         canvas.addWorldChild( outlineTextNode6 );
 
-        // Boiler plate Piccolo app stuff.
+        // Boiler plate Core app stuff.
         JFrame frame = new JFrame( "OutlineTextNode.main" );
         frame.setContentPane( canvas );
         frame.pack();

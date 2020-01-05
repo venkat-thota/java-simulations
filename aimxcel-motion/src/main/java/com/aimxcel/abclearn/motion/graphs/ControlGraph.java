@@ -177,7 +177,7 @@ public class ControlGraph extends PNode {
                     dynamicJFreeChartNode.setJFreeChartSeries();
                 }
                 else if ( event.getKeyCode() == KeyEvent.VK_2 ) {
-                    dynamicJFreeChartNode.setPiccoloSeries();
+                    dynamicJFreeChartNode.setCoreSeries();
                 }
                 else if ( event.getKeyCode() == KeyEvent.VK_3 ) {
                     dynamicJFreeChartNode.setBufferedSeries();

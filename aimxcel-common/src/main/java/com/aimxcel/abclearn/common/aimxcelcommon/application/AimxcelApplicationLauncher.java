@@ -93,7 +93,7 @@ public class AimxcelApplicationLauncher {
         /*
          * Wrap the body of main in invokeAndWait, so that all initialization occurs
          * in the event dispatch thread. Sun now recommends doing all Swing init in
-         * the event dispatch thread. And the Piccolo-based tabs in TabbedModulePanePiccolo
+         * the event dispatch thread. And the Core-based tabs in TabbedModulePaneCore
          * seem to cause startup deadlock problems if they aren't initialized in the
          * event dispatch thread. Since we don't have an easy way to separate Swing and
          * non-Swing init, we're stuck doing everything in invokeAndWait.

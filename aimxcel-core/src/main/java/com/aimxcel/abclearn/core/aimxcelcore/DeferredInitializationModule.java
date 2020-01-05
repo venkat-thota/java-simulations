@@ -5,10 +5,10 @@ import javax.swing.JPanel;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ControlPanel;
-import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.PiccoloClockControlPanel;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.CoreClockControlPanel;
 
 
-public abstract class DeferredInitializationModule extends PiccoloModule {
+public abstract class DeferredInitializationModule extends CoreModule {
     private boolean initialized;
 
     /**
@@ -35,7 +35,7 @@ public abstract class DeferredInitializationModule extends PiccoloModule {
         // properly initialized
         setSimulationPanel( new JPanel() );
         setControlPanel( new ControlPanel() );
-        setClockControlPanel( new PiccoloClockControlPanel( clock ) );
+        setClockControlPanel( new CoreClockControlPanel( clock ) );
     }
 
     /**

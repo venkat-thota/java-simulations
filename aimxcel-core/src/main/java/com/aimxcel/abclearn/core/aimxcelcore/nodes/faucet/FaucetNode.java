@@ -1,7 +1,7 @@
 
 package com.aimxcel.abclearn.core.aimxcelcore.nodes.faucet;
 
-import static com.aimxcel.abclearn.core.aimxcelcore.PiccoloAimxcelApplication.RESOURCES;
+import static com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication.RESOURCES;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

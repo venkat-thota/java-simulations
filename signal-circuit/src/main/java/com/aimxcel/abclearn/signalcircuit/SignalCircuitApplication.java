@@ -3,14 +3,14 @@ package com.aimxcel.abclearn.signalcircuit;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.FrameSetup;
-import com.aimxcel.abclearn.core.aimxcelcore.PiccoloAimxcelApplication;
+import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.ApplicationConstructor;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationConfig;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationLauncher;
 
-public class SignalCircuitApplication extends PiccoloAimxcelApplication {
+public class SignalCircuitApplication extends CoreAimxcelApplication {
 
     /**
 	 * 

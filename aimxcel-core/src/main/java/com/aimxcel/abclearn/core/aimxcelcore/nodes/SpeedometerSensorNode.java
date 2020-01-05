@@ -1,7 +1,7 @@
  
 package com.aimxcel.abclearn.core.aimxcelcore.nodes;
 
-import static com.aimxcel.abclearn.core.aimxcelcore.PiccoloAimxcelApplication.RESOURCES;
+import static com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication.RESOURCES;
 
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;

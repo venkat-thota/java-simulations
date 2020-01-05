@@ -28,9 +28,9 @@ public class DynamicJFreeChartNodeControlPanel extends JPanel {
         JPanel panel = this;
         ButtonGroup buttonGroup = new ButtonGroup();
         panel.add( createButton( "JFreeChart", buttonGroup, DynamicJFreeChartNode.RENDERER_JFREECHART ) );
-        panel.add( createButton( "Piccolo", buttonGroup, DynamicJFreeChartNode.RENDERER_PICCOLO ) );
-        panel.add( createButton( "Piccolo (incremental)", buttonGroup, DynamicJFreeChartNode.RENDERER_PICCOLO_INCREMENTAL ) );
-        panel.add( createButton( "Piccolo (incremental + immediate)", buttonGroup, DynamicJFreeChartNode.RENDERER_PICCOLO_INCREMENTAL_IMMEDIATE ) );
+        panel.add( createButton( "Core", buttonGroup, DynamicJFreeChartNode.RENDERER_PICCOLO ) );
+        panel.add( createButton( "Core (incremental)", buttonGroup, DynamicJFreeChartNode.RENDERER_PICCOLO_INCREMENTAL ) );
+        panel.add( createButton( "Core (incremental + immediate)", buttonGroup, DynamicJFreeChartNode.RENDERER_PICCOLO_INCREMENTAL_IMMEDIATE ) );
         panel.add( createButton( "Direct", buttonGroup, DynamicJFreeChartNode.RENDERER_BUFFERED ) );
         panel.add( createButton( "Direct (immediate)", buttonGroup, DynamicJFreeChartNode.RENDERER_BUFFERED_IMMEDIATE ) );
         final JCheckBox jCheckBox = new JCheckBox( "Buffered", dynamicJFreeChartNode.isBuffered() );

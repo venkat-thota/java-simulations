@@ -165,7 +165,7 @@ public class FaceNode extends PComposite {
         // test the "frown" feature
         face1.frown();
 
-        // add to a Piccolo canvas
+        // add to a Core canvas
         AimxcelPCanvas canvas = new AimxcelPCanvas();
         canvas.setPreferredSize( new Dimension( 400, 300 ) );
         canvas.getLayer().addChild( face1 );

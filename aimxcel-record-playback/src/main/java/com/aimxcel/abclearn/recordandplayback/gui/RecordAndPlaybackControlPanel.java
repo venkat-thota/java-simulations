@@ -17,7 +17,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.event.ToolTipHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.DefaultIconButton;
-import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.PiccoloTimeControlPanel;
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.CoreTimeControlPanel;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.PlayPauseButton;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.RewindButton;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.StepButton;
@@ -36,7 +36,7 @@ import edu.umd.cs.piccolox.pswing.PSwing;
 public class RecordAndPlaybackControlPanel<T> extends AimxcelPCanvas {
     private RecordAndPlaybackModel<T> model;
     private JComponent simPanel;//used to determine the size of this component
-    private PiccoloTimeControlPanel.BackgroundNode backgroundNode = new PiccoloTimeControlPanel.BackgroundNode();
+    private CoreTimeControlPanel.BackgroundNode backgroundNode = new CoreTimeControlPanel.BackgroundNode();
     private JButton clearButton = new JButton( AimxcelCommonResources.getString( "Common.clear" ) );
     private RewindButton rewind = new RewindButton( 50 );
     private PSwing clearButtonNode = new PSwing( clearButton );
