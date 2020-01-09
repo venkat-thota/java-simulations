@@ -1,0 +1,65 @@
+// Copyright 2002-2011, University of Colorado
+
+package com.aimxcel.abclearn.conductivity;
+
+import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.image.BufferedImage;
+
+import com.aimxcel.abclearn.conductivity.common.SimpleBufferedImageGraphic;
+import com.aimxcel.abclearn.conductivity.oldphetgraphics.Graphic;
+
+import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
+import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.TransformListener;
+
+// Referenced classes of package edu.colorado.phet.semiconductor.flashlight:
+//            Flashlight
+
+public class FlashlightGraphic implements Graphic {
+
+    private Flashlight light;
+    private BufferedImage lightImage;
+    private ModelViewTransform2D transform;
+    private SimpleBufferedImageGraphic imageGraphic;
+    private boolean visible;
+
+    public FlashlightGraphic( Flashlight flashlight, BufferedImage bufferedimage, ModelViewTransform2D modelviewtransform2d ) {
+        light = flashlight;
+        lightImage = bufferedimage;
+        transform = modelviewtransform2d;
+        imageGraphic = new SimpleBufferedImageGraphic( bufferedimage );
+        modelviewtransform2d.addTransformListener( new TransformListener() {
+
+            public void transformChanged( ModelViewTransform2D modelviewtransform2d1 ) {
+                doUpdate();
+            }
+
+        } );
+        flashlight.addObserver( new SimpleObserver() {
+            public void update() {
+                doUpdate();
+            }
+        } );
+    }
+
+    private void doUpdate() {
+        java.awt.Point point = transform.modelToView( light.getPosition() );
+        imageGraphic.setPosition( point );
+        AffineTransform affinetransform = imageGraphic.getTransform();
+        double d = light.getAngle();
+        affinetransform.rotate( d, lightImage.getWidth() / 2, lightImage.getHeight() / 2 );
+        imageGraphic.setTransform( affinetransform );
+    }
+
+    public void paint( Graphics2D graphics2d ) {
+        if ( visible ) {
+            imageGraphic.paint( graphics2d );
+        }
+    }
+
+    public void setVisible( boolean flag ) {
+        visible = flag;
+    }
+
+}
