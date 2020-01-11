@@ -39,5 +39,15 @@
 			<artifactId>aimxcel-poly2tri-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>lwjgl_util</groupId>
+			<artifactId>lwjgl_util</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>lwjgl</groupId>
+			<artifactId>lwjgl</artifactId>
+			<version>0.1</version>
+		</dependency>
 	</dependencies>
 </project>
