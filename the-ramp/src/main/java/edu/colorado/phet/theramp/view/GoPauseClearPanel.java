@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -17,11 +14,7 @@ import edu.colorado.phet.theramp.model.RampTimeSeriesModel;
 import edu.colorado.phet.theramp.timeseries.TimeSeriesModel;
 import edu.colorado.phet.theramp.timeseries.TimeSeriesModelListenerAdapter;
 
-/**
- * User: Sam Reid
- * Date: Apr 5, 2005
- * Time: 5:03:07 AM
- */
+
 
 public class GoPauseClearPanel extends VerticalLayoutPanel {
     private TimeSeriesModel module;
@@ -38,10 +31,9 @@ public class GoPauseClearPanel extends VerticalLayoutPanel {
         final ActionListener pauseHandler = new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 module.setPaused( true );
-//                module.requestEditInTextBox( GoPauseClearPanel.this );
             }
         };
-        goPauseButton = new ControlButton( TheRampStrings.getString( "time.pause" ) );//longer text
+        goPauseButton = new ControlButton( TheRampStrings.getString( "time.pause" ) );
         try {
             goIcon = new ImageIcon( ImageLoader.loadBufferedImage( "the-ramp/images/light3.png" ) );
             pauseIcon = new ImageIcon( ImageLoader.loadBufferedImage( "the-ramp/images/stop-20.png" ) );
@@ -109,7 +101,6 @@ public class GoPauseClearPanel extends VerticalLayoutPanel {
         }
         if ( pause ) {
             goPauseButton.setText( TheRampStrings.getString( "time.pause" ) );
-//            goPauseButton.setText( "" );
             goPauseButton.setIcon( pauseIcon );
             paintAll();
             itsAGoButton = false;
@@ -136,7 +127,6 @@ public class GoPauseClearPanel extends VerticalLayoutPanel {
         if ( module instanceof RampTimeSeriesModel ) {
             RampTimeSeriesModel rampTimeSeriesModel = (RampTimeSeriesModel) module;
             if ( rampTimeSeriesModel.getRampModule() != null && rampTimeSeriesModel.getRampModule().getRampPanel() != null ) {
-//                System.out.println( "rampTimeSeriesModel = " + rampTimeSeriesModel );
                 rampTimeSeriesModel.getRampModule().getRampPanel().repaint();
             }
         }

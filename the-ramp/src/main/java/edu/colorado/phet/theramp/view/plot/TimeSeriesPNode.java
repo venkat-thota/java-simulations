@@ -1,6 +1,5 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
+
 package edu.colorado.phet.theramp.view.plot;
 
 import java.awt.*;
@@ -21,11 +20,6 @@ import edu.colorado.phet.theramp.timeseries.TimeSeries;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * User: Sam Reid
- * Date: Aug 2, 2005
- * Time: 2:41:09 PM
- */
 
 public class TimeSeriesPNode {
     private TimePlotSuitePNode plotSuite;
@@ -38,8 +32,7 @@ public class TimeSeriesPNode {
     private Stroke stroke;
     private Color transparentColor;
     private boolean visible = true;
-    //    private ShadowHTMLGraphic readoutGraphic;
-    private DecimalFormat decimalFormat;
+        private DecimalFormat decimalFormat;
     private HTMLLabel htmlLabel;
     private double lastUpdateValue = Double.NaN;
 
@@ -60,25 +53,17 @@ public class TimeSeriesPNode {
         } );
         stroke = new BasicStroke( strokeSize, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER, 1.0f );
         transparentColor = new Color( color.getRGB() );
-//        readoutGraphic = new ShadowHTMLGraphic( "" );
-//        readoutGraphic = new ShadowPText();
-//        readoutGraphic.setShadowOffset( 1, 1 );
-//        readoutGraphic.setShadowColor( Color.darkGray );
-//        readoutGraphic.setColor( color );
-//        readoutGraphic.setFont( createDefaultFont() );
+
         decimalFormat = new DecimalFormat( "0.00" );
 
         String html = "<html>";
         html += valueAccessor.getHTML() + " = ";
-//        html += " = " + decimalFormat.format( value );
-//        html += " " + valueAccessor.getUnitsAbbreviation();
+
         html += "</html>";
         this.htmlLabel = new HTMLLabel( html, color, createDefaultFont(), 2 );
 
         updateReadout();
 
-//        readoutGraphic.setPickable( false );
-//        readoutGraphic.setChildrenPickable( false );
 
 
     }
@@ -116,7 +101,6 @@ public class TimeSeriesPNode {
             htmlNode.setFont( defaultFont );
             valueGraphic.setFont( defaultFont );
 
-//            addChild( htmlGraphic );
             addChild( valueGraphic );
             valueGraphic.setOffset( htmlNode.getFullBounds().getWidth(), textInsetDY );
 
@@ -145,16 +129,9 @@ public class TimeSeriesPNode {
         if ( lastUpdateValue != value ) {
             this.lastUpdateValue = value;
 
-//        readoutGraphic.setText( "" + valueAccessor.getName() + " = " + decimalFormat.format( value ) + " " + valueAccessor.getUnitsAbbreviation() );
-//        String html = "<html>";
-//        html += valueAccessor.getHTML();
-//        html += " = " + decimalFormat.format( value );
-//        html += " " + valueAccessor.getUnitsAbbreviation();
-//        html += "</html>";
-            //"" + valueAccessor.getName() + " = " + decimalFormat.format( value ) + " " + valueAccessor.getUnitsAbbreviation() );;
+
             htmlLabel.setValue( decimalFormat.format( value ) + " " + valueAccessor.getUnitsAbbreviation() );
-//        readoutGraphic.setHtml( html );
-//        readoutGraphic.setText( "" + valueAccessor.getA() + " = " + decimalFormat.format( value ) + " " + valueAccessor.getUnitsAbbreviation() );
+
         }
     }
 
@@ -197,7 +174,6 @@ public class TimeSeriesPNode {
     public void setVisible( boolean visible ) {
         this.visible = visible;
         htmlLabel.setVisible( visible );
-//        readoutGraphic.setVisible( visible );
     }
 
     public void repaintAll() {
@@ -218,7 +194,6 @@ public class TimeSeriesPNode {
     }
 
     public void setShadowOffset( int dx, int dy ) {
-//        readoutGraphic.setShadowOffset( dx, dy );
         htmlLabel.setShadowOffset( dx, dy );
     }
 }

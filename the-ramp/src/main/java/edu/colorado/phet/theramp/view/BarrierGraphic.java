@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -12,11 +9,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * User: Sam Reid
- * Date: May 30, 2005
- * Time: 10:20:33 PM
- */
 
 public abstract class BarrierGraphic extends PNode {
     private RampPanel rampPanel;
@@ -47,12 +39,10 @@ public abstract class BarrierGraphic extends PNode {
     }
 
     private void update() {
-//        setAutorepaint( false );
         AffineTransform transform = createTransform( getBarrierPosition(), 1, 1 );
         transform.concatenate( AffineTransform.getTranslateInstance( 0, getYOffset() ) );
         transform.concatenate( AffineTransform.getTranslateInstance( getOffsetX(), 0 ) );
         imageGraphic.setTransform( transform );
-//        repaint();
     }
 
     protected abstract int getOffsetX();

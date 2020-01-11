@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+
 package edu.colorado.phet.theramp.v2.model;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;

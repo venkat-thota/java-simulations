@@ -1,4 +1,4 @@
-// Copyright 2002-2011, University of Colorado
+
 package edu.colorado.phet.theramp.timeseries;
 
 import java.awt.event.ActionEvent;
@@ -10,11 +10,7 @@ import javax.swing.*;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
 import edu.colorado.phet.theramp.TheRampStrings;
 
-/**
- * User: Sam Reid
- * Date: Nov 6, 2004
- * Time: 3:21:19 PM
- */
+
 public class TimeSeriesPlaybackPanel extends JPanel {
     private JButton record;
     private JButton play;
@@ -46,7 +42,7 @@ public class TimeSeriesPlaybackPanel extends JPanel {
         pause = new JButton( TheRampStrings.getString( "time.pause" ), pauseIcon );
         pause.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
-                //pausing from playback leaves it alone
+              
                 timeSeriesModel.setPaused( true );
             }
         } );

@@ -1,4 +1,4 @@
-// Copyright 2002-2011, University of Colorado
+
 package edu.colorado.phet.theramp;
 
 import java.awt.image.BufferedImage;
@@ -6,17 +6,13 @@ import java.awt.image.BufferedImage;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelResources;
 
-/**
- * User: Sam Reid
- * Date: Aug 21, 2006
- * Time: 2:21:41 PM
- */
+
 
 public class TheRampStrings {
 
     private static final AimxcelResources RESOURCES = new AimxcelResources( TheRampConstants.PROJECT_NAME );
 
-    /* not intended for instantiation */
+  
     private TheRampStrings() {
     }
 

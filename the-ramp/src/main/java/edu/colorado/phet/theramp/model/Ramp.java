@@ -1,13 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.model;
 
-/**
- * User: Sam Reid
- * Date: May 17, 2005
- * Time: 1:26:22 AM
- */
 
 public class Ramp extends Surface {
     public Ramp( double angle, double length ) {

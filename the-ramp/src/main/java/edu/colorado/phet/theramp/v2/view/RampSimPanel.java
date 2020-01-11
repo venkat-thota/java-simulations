@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package edu.colorado.phet.theramp.v2.view;
 
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;

@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+
 package edu.colorado.phet.theramp.v2.model;
 
 import java.util.ArrayList;
@@ -59,7 +59,7 @@ public class RampModel {
         for ( int i = 0; i < objects.size(); i++ ) {
             newObjects.add( objects.get( i ) == oldObject ? newObject : oldObject );
         }
-        return new RampModel( tracks, newObjects );//should copy tracks?
+        return new RampModel( tracks, newObjects );
     }
 
     public boolean isInteracting() {

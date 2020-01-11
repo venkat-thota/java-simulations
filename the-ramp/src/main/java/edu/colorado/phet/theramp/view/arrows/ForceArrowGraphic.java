@@ -1,6 +1,3 @@
-// Copyright 2002-2012, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view.arrows;
 
 import java.awt.Color;
@@ -24,11 +21,7 @@ import edu.colorado.phet.theramp.view.SurfaceGraphic;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * User: Sam Reid
- * Date: Feb 13, 2005
- * Time: 8:22:35 PM
- */
+
 public class ForceArrowGraphic extends PNode {
     private double arrowTailWidth = 7;
     private double arrowHeadHeight = 14;
@@ -39,8 +32,7 @@ public class ForceArrowGraphic extends PNode {
     private AbstractArrowSet.ForceComponent forceComponent;
     private HTMLNode textGraphic;
     private PPath shapeGraphic;
-    //    private final Font font = new Font( AimxcelDefaultFont.LUCIDA_SANS, Font.BOLD, 18 );
-    private final Font font = RampFontSet.getFontSet().getForceArrowLabelFont();
+        private final Font font = RampFontSet.getFontSet().getForceArrowLabelFont();
     private Arrow lastArrow;
     private BlockGraphic blockGraphic;
     private boolean userVisible = true;
@@ -49,11 +41,9 @@ public class ForceArrowGraphic extends PNode {
     private static final double THRESHOLD = 10E-8;
     private Color baseColor;
     private double verticalOffset = 0;
-    //    private int textOffset=42;
-    private int textOffset = 30;
+        private int textOffset = 30;
     private int boundGraphicInsetX = 2;
-    //    private double boundGraphicInsetY=0.5;
-    private double boundGraphicInsetY = 0;
+        private double boundGraphicInsetY = 0;
 
     public ForceArrowGraphic( Component component, String name, Color color,
                               int dy, AbstractArrowSet.ForceComponent forceComponent,
@@ -94,8 +84,7 @@ public class ForceArrowGraphic extends PNode {
         boundGraphic.setPaint( Color.white );
         addChild( boundGraphic );
         addChild( textGraphic );
-        //setIgnoreMouse( true );
-        setPickable( false );
+                setPickable( false );
         setChildrenPickable( false );
         update();
     }
@@ -118,10 +107,8 @@ public class ForceArrowGraphic extends PNode {
         }
         RampWorld rampWorld = getRampWorld();
         if ( rampWorld == null ) {
-//            System.out.println( "rampWorld = " + rampWorld );
             return;
         }
-//        System.out.println( "blockGraphic.getBounds() = " + blockGraphic.getBlockBounds() );
         Point2D blockCenter = blockGraphic.getBlockBounds().getCenter2D();
 
         Point2D arrowTail = new Point2D.Double( blockCenter.getX(), blockCenter.getY() );
@@ -131,9 +118,6 @@ public class ForceArrowGraphic extends PNode {
         Arrow forceArrow = new Arrow( arrowTail, tip, arrowHeadHeight, arrowHeadHeight, arrowTailWidth, 0.5, false );
         Shape forceArrowShape = forceArrow.getShape();
 
-//        if (getName().toLowerCase().indexOf("applied" )>=0){
-//            System.out.println( "forceComponent.getForce() = " + forceComponent.getForce() );
-//        }
 
         if ( this.lastArrow == null || !this.lastArrow.equals( forceArrow ) ) {
             shapeGraphic.setPathTo( forceArrowShape );
@@ -166,7 +150,6 @@ public class ForceArrowGraphic extends PNode {
     private Point2D.Double translate( Point2D viewCtr ) {
         SurfaceGraphic surfaceGraphic = blockGraphic.getCurrentSurfaceGraphic();
         double viewAngle = surfaceGraphic.getViewAngle();
-//        System.out.println( "viewAngle = " + viewAngle );
         Point offset = new Point( (int) ( Math.sin( viewAngle ) * dy ), (int) ( Math.cos( viewAngle ) * dy ) );
         return new Point2D.Double( viewCtr.getX() + offset.x, viewCtr.getY() - offset.y );
     }

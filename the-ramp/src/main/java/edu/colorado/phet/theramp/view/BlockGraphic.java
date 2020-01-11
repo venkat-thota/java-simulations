@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -23,11 +20,7 @@ import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
-/**
- * User: Sam Reid
- * Date: Feb 11, 2005
- * Time: 10:55:39 AM
- */
+
 
 public class BlockGraphic extends PNode {
     private RampModule module;
@@ -102,7 +95,6 @@ public class BlockGraphic extends PNode {
 
         ThresholdedPDragAdapter thresholdedPDragAdapter = new ThresholdedPDragAdapter( dragHandler, 10, 0, 1000 );
 
-//        addInputEventListener( dragHandler );
         addInputEventListener( thresholdedPDragAdapter );
         addInputEventListener( new CursorHandler( Cursor.HAND_CURSOR ) );
 
@@ -130,17 +122,12 @@ public class BlockGraphic extends PNode {
             }
             wheelGraphic.setVisible( true );
             AffineTransform wheelTx = createTransform( block.getPositionInSurface(), 1.0, 1.0, wheelGraphic.getImage().getWidth( null ), wheelGraphic.getImage().getHeight( null ) );
-//            wheelTx.concatenate( AffineTransform.getScaleInstance( scale, sy ) );
-//            wheelTx.concatenate( AffineTransform.getTranslateInstance( 0, getYOffset() ) );
             wheelGraphic.setTransform( wheelTx );
-//            this.graphic.setVisible( false );
         }
         else {
             if ( isAncestorOf( wheelGraphic ) ) {
                 removeChild( wheelGraphic );
             }
-//            wheelGraphic.setVisible( false );
-//            this.graphic.setVisible( true );
         }
         repaint();
     }
@@ -167,7 +154,6 @@ public class BlockGraphic extends PNode {
     }
 
     private AffineTransform createTransform( double scaleX, double fracSize ) {
-//        return rampGraphic.createTransform( block.getPosition(), new Dimension( (int)( graphic.getImage().getWidth() * scaleX ), (int)( graphic.getImage().getHeight() * fracSize ) ) );
         return getCurrentSurfaceGraphic().createTransform( block.getPositionInSurface(), new Dimension( (int) ( imageGraphic.getImage().getWidth( null ) * scaleX ), (int) ( imageGraphic.getImage().getHeight( null ) * fracSize ) ) );
     }
 
@@ -177,7 +163,7 @@ public class BlockGraphic extends PNode {
     }
 
     public int getObjectWidthView() {
-        return (int) ( imageGraphic.getImage().getWidth( null ) * rampObject.getScale() );//TODO scaling will hurt this.
+        return (int) ( imageGraphic.getImage().getWidth( null ) * rampObject.getScale() );
     }
 
     public Block getBlock() {

@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.geom.Point2D;
@@ -8,11 +5,6 @@ import java.awt.geom.Point2D;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
-/**
- * User: Sam Reid
- * Date: Jan 25, 2005
- * Time: 3:01:28 AM
- */
 
 public class ThresholdedPDragAdapter extends PBasicInputEventHandler {
     private Point2D lastPressLocation;
@@ -51,7 +43,6 @@ public class ThresholdedPDragAdapter extends PBasicInputEventHandler {
     public void mouseReleased( PInputEvent e ) {
         lastPressLocation = null;
         target.mouseReleased( e );
-//        System.out.println( "mouse released" + e );
     }
 
     public void mouseDragged( PInputEvent e ) {
@@ -67,7 +58,6 @@ public class ThresholdedPDragAdapter extends PBasicInputEventHandler {
             isDragging = true;
         }
         if ( isDragging ) {
-//            System.out.println( "mouse dragged" + e );
             target.mouseDragged( e );
         }
         lastDragTime = System.currentTimeMillis();

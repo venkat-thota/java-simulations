@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp;
 
 import javax.swing.*;
@@ -10,11 +8,6 @@ import javax.swing.event.ChangeListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ModelSlider;
 
-/**
- * User: Sam Reid
- * Date: Oct 7, 2005
- * Time: 9:00:54 PM
- */
 
 public class RampAngleController {
     private RampModule rampModule;

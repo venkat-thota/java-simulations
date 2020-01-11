@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -8,11 +5,6 @@ import java.awt.*;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * User: Sam Reid
- * Date: May 8, 2005
- * Time: 8:15:23 AM
- */
 
 public class SkyGraphic extends PNode {
     private RampPanel rampPanel;

@@ -1,13 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.timeseries;
 
-/**
- * User: Sam Reid
- * Date: Apr 2, 2005
- * Time: 8:08:44 PM
- */
+
 
 public class TimePoint {
     private double value;

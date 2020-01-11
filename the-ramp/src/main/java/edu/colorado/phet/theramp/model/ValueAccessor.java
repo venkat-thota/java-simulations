@@ -1,6 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
+
+
 package edu.colorado.phet.theramp.model;
 
 import java.awt.*;
@@ -9,11 +9,6 @@ import java.text.MessageFormat;
 import edu.colorado.phet.theramp.TheRampStrings;
 import edu.colorado.phet.theramp.view.RampLookAndFeel;
 
-/**
- * User: Sam Reid
- * Date: May 16, 2005
- * Time: 9:42:43 PM
- */
 
 public abstract class ValueAccessor {
     private String name;

@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -8,11 +5,6 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.event.MouseInputListener;
 
-/**
- * User: Sam Reid
- * Date: Jan 25, 2005
- * Time: 3:01:28 AM
- */
 
 public class ThresholdedDragAdapter implements MouseInputListener {
     private Point lastPressLocation;
@@ -51,7 +43,6 @@ public class ThresholdedDragAdapter implements MouseInputListener {
     public void mouseReleased( MouseEvent e ) {
         lastPressLocation = null;
         target.mouseReleased( e );
-//        System.out.println( "mouse released" + e );
     }
 
     public void mouseDragged( MouseEvent e ) {
@@ -67,7 +58,6 @@ public class ThresholdedDragAdapter implements MouseInputListener {
             isDragging = true;
         }
         if ( isDragging ) {
-//            System.out.println( "mouse dragged" + e );
             target.mouseDragged( e );
         }
         lastDragTime = System.currentTimeMillis();

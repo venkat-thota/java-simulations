@@ -1,6 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
+
+
 package edu.colorado.phet.theramp.model;
 
 import java.awt.image.BufferedImage;
@@ -8,11 +8,7 @@ import java.io.IOException;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
 
-/**
- * User: Sam Reid
- * Date: Dec 15, 2004
- * Time: 12:19:35 PM
- */
+
 public class RampObject {
     private String location;
     private String name;

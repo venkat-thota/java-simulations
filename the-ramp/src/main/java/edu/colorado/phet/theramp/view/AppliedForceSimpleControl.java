@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import javax.swing.*;
@@ -15,11 +12,6 @@ import edu.colorado.phet.theramp.model.RampPhysicalModel;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * User: Sam Reid
- * Date: Aug 4, 2005
- * Time: 6:38:01 PM
- */
 
 public class AppliedForceSimpleControl extends PNode {
     private RampModule module;

@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -24,12 +21,6 @@ import edu.colorado.phet.theramp.view.plot.TimeSeriesPNode;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
-
-/**
- * User: Sam Reid
- * Date: Feb 11, 2005
- * Time: 10:01:59 AM
- */
 
 public class RampPanel extends AimxcelPCanvas {
     private RampModule module;
@@ -57,7 +48,6 @@ public class RampPanel extends AimxcelPCanvas {
     }
 
     public RampPanel( RampModule module ) {
-//        setRenderingSize( getDefaultRenderingSize() );//DEC_05
         super( getDefaultRenderSize() );
         addMouseListener( new MouseAdapter() {
             public void mousePressed( MouseEvent e ) {
@@ -82,12 +72,9 @@ public class RampPanel extends AimxcelPCanvas {
         getRampModule().getRampPhysicalModel().addListener( new RampPhysicalModel.Adapter() {
 
             public void stepFinished() {
-//                System.out.println( "<********RampPanel.stepFinished" );
-//                System.out.println( "getRampModule().getRampPhysicalModel().getThermalEnergy() = " + getRampModule().getRampPhysicalModel().getThermalEnergy() );
-//                System.out.println( "getOverheatEnergy() = " + getOverheatEnergy() );
+
                 if ( getRampModule().getRampPhysicalModel().getThermalEnergy() >= getOverheatEnergy() ) {
-                    //colorize heat.
-                    rampWorld.setHeatColor( true );
+                                        rampWorld.setHeatColor( true );
                 }
                 else {
                     rampWorld.setHeatColor( false );
@@ -97,8 +84,7 @@ public class RampPanel extends AimxcelPCanvas {
         getRampModule().getTimeSeriesModel().addPlaybackTimeChangeListener( new TimeSeriesModel.PlaybackTimeListener() {
             public void timeChanged() {
                 if ( getRampModule().getRampPhysicalModel().getThermalEnergy() >= getOverheatEnergy() ) {
-                    //colorize heat.
-                    rampWorld.setHeatColor( true );
+                                        rampWorld.setHeatColor( true );
                 }
                 else {
                     rampWorld.setHeatColor( false );
@@ -106,7 +92,6 @@ public class RampPanel extends AimxcelPCanvas {
             }
         } );
 
-//        AimxcelRootPNode.Layer layer = getAimxcelRootNode().addLayer();
         addScreenChild( new OverheatButton( this, module.getRampPhysicalModel(), module ) );
 
         timeGraphic = new TimeGraphic( module.getTimeSeriesModel() );
@@ -187,7 +172,7 @@ public class RampPanel extends AimxcelPCanvas {
                 barGraphSuite.setBarChartHeight( maxY );
             }
             catch ( RuntimeException r ) {
-                r.printStackTrace();//todo sometimes fails drawing arrow.
+                r.printStackTrace();
             }
             rampPlotSet.layoutChildren();
             recursing = false;

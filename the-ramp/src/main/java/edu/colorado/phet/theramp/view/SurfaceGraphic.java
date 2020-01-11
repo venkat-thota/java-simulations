@@ -1,6 +1,3 @@
-// Copyright 2002-2012, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.BasicStroke;
@@ -46,11 +43,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
-/**
- * User: Sam Reid
- * Date: Feb 11, 2005
- * Time: 10:17:00 AM
- */
 
 public class SurfaceGraphic extends PNode {
     private RampPanel rampPanel;
@@ -82,18 +74,15 @@ public class SurfaceGraphic extends PNode {
         catch ( IOException e ) {
             e.printStackTrace();
         }
-//        floorGraphic = new AimxcelShapeGraphic( getComponent(), null, stroke, Color.black );
         floorGraphic = new PPath( null, stroke );
         floorGraphic.setStrokePaint( Color.black );
 
         Paint bookFill = createBookFill();
-//        bookStackGraphic = new AimxcelShapeGraphic( getComponent(), null, bookFill );
         bookStackGraphic = new PPath( null );
         bookStackGraphic.setStrokePaint( null );
         bookStackGraphic.setStroke( null );
         bookStackGraphic.setPaint( bookFill );
 
-//        filledShapeGraphic = new AimxcelShapeGraphic( getComponent(), null, Color.lightGray );
         filledShapeGraphic = new PPath();
         filledShapeGraphic.setPaint( Color.lightGray );
         filledShapeGraphic.setVisible( false );
@@ -110,7 +99,6 @@ public class SurfaceGraphic extends PNode {
         heightExtentGraphic.setPaint( null );
         addChild( heightExtentGraphic );
 
-//        heightReadoutGraphic = new PText( rampPanel, new Font( AimxcelDefaultFont.LUCIDA_SANS, 0, 14 ), "h=0.0 m", Color.black, 1, 1, Color.gray );
         heightReadoutGraphic = new PText( TheRampStrings.getString( "indicator.height-zero" ) );
         heightReadoutGraphic.setFont( new AimxcelFont( 18, true ) );
         heightReadoutGraphic.setPaint( SkyGraphic.lightBlue );
@@ -153,17 +141,10 @@ public class SurfaceGraphic extends PNode {
 
     private void mouseDragged( PInputEvent pInputEvent ) {
         Point2D pt = pInputEvent.getCanvasPosition();
-//        Point2D o=getViewOrigin();
         Point2D o = getViewOrigin();
         localToGlobal( o );
         rampPanel.getCamera().globalToLocal( o );
-//        Point2D pt = pInputEvent.getPositionRelativeTo( this );
-////        localToGlobal( pt );
-//        Point2D o = ramp.getOrigin();
-////        localToGlobal( o );
-////        pt = getRampWorld().convertToWorld( pt );
-//        System.out.println( "o = " + o );
-//        System.out.println( "pt = " + pt );
+
         MutableVector2D vec = new MutableVector2D( o, pt );
 
         System.out.println( "vec = " + vec );
@@ -184,11 +165,8 @@ public class SurfaceGraphic extends PNode {
 
     private Paint createBookFill() {
         try {
-//            texture = ImageLoader.loadBufferedImage( "the-ramp/images/bookstack3.png" );
             texture = ImageLoader.loadBufferedImage( "the-ramp/images/bookstack3.gif" );
-//            Point rampEnd = getViewLocation( ramp.getLocation( ramp.getLength() * 0.8 ) );
             Point rampEnd = getEndLocation();
-//            System.out.println( "texture = " + texture );
             return new TexturePaint( texture, new Rectangle2D.Double( rampEnd.x - texture.getWidth() / 2, rampEnd.y, texture.getWidth(), texture.getHeight() ) );
         }
         catch ( IOException e ) {
@@ -326,7 +304,6 @@ public class SurfaceGraphic extends PNode {
     }
 
     public Point getViewLocation( Point2D location ) {
-//        return getRampWorld().convertToWorld( viewLoc );
         return getScreenTransform().modelToView( location );
     }
 
@@ -341,12 +318,9 @@ public class SurfaceGraphic extends PNode {
         Point viewLoc = getViewLocation( ramp.getLocation( dist ) );
         AffineTransform transform = new AffineTransform();
         transform.translate( viewLoc.x, viewLoc.y );
-//        transform.rotate( getViewAngle(), dim.width / 2, dim.height / 2 );
         transform.rotate( getViewAngle() );
-//        transform.translate( 0, -dim.height );
         int onRamp = 7;
         transform.translate( -dim.width / 2, -dim.height + onRamp );
-//        transform.translate( 0, -dim.height + onRamp );
         return transform;
     }
 

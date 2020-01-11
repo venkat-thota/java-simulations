@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.Dimension;
@@ -20,11 +17,6 @@ import edu.colorado.phet.theramp.model.RampPhysicalModel;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * User: Sam Reid
- * Date: Dec 6, 2004
- * Time: 8:53:15 AM
- */
 
 public class PusherGraphic extends PImage {
     private FrameSequence animation;
@@ -44,8 +36,7 @@ public class PusherGraphic extends PImage {
     private static final long CRUSH_TIME = 1000;
     private double lastAppliedForce = 0;
     private AimxcelAudioClip slapSound;
-//    private URL url0;
-//    private URL url1;
+
 
     public PusherGraphic( final RampPanel rampPanel, final PNode target, RampWorld rampWorld ) throws IOException {
         super();
@@ -125,10 +116,8 @@ public class PusherGraphic extends PImage {
         crushed = true;
         crushTime = System.currentTimeMillis();
         setImage( getCrushedManImage() );
-        //http://www.gratisnette.com/bruitages/hommes/cris/
-        slapSound.play();
-//        AudioSourceDataLinePlayer.playNoBlock( url0 );
-//        JSAudioPlayer.playNoBlock( url1 );
+                slapSound.play();
+
 
     }
 
@@ -190,11 +179,9 @@ public class PusherGraphic extends PImage {
         else {
             leanerX = getBlockLocation() + ( modelWidthLeaner + modelWidthObject ) / 2;
         }
-//        System.out.println( "rampPanel.getBlockGraphic().getBlock().getPosition() = " + rampPanel.getBlockGraphic().getBlock().getPosition() );
-//        System.out.println( "modelWidthObject = " + modelWidthObject );
-//        System.out.println( "leanerX = " + leanerX );
+
         if ( app == 0 ) {
-            //stay where you just were.
+          
         }
         else {
             this.modelLocation = leanerX;
@@ -209,7 +196,7 @@ public class PusherGraphic extends PImage {
         double positionInSurface = getPositionInSurface();
         AffineTransform tx = getSurfaceGraphic().createTransform( positionInSurface, new Dimension( getFrame().getWidth( null ), getFrame().getHeight( null ) ) );
         if ( !getTransform().equals( tx ) ) {
-            setTransform( tx );//!!working
+            setTransform( tx );
         }
     }
 
@@ -224,7 +211,7 @@ public class PusherGraphic extends PImage {
 
     private SurfaceGraphic getSurfaceGraphic() {
         return rampWorld.getSurfaceGraphic( modelLocation );
-//        return rampWorld.getBlockGraphic().getCurrentSurfaceGraphic();
+
     }
 
     private Image getFrame() {

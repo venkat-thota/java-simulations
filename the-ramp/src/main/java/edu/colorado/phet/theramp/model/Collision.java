@@ -1,13 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.model;
 
-/**
- * User: Sam Reid
- * Date: Aug 4, 2005
- * Time: 10:01:42 PM
- */
 
 public class Collision {
     private Block copy;

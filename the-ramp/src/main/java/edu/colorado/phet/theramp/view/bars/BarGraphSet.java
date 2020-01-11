@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view.bars;
 
 import java.awt.*;
@@ -33,11 +30,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * User: Sam Reid
- * Date: Jun 6, 2005
- * Time: 8:16:45 PM
- */
 
 public class BarGraphSet extends PNode {
     private RampPanel rampPanel;
@@ -151,7 +143,6 @@ public class BarGraphSet extends PNode {
 
         public XAxis() {
             int yValue = transform1D.modelToView( 0 );
-//            System.out.println( "yValue = " + yValue );
             path = new PPath( createLinePath() );
             addChild( path );
             path.setStrokePaint( new Color( 255, 150, 150 ) );
@@ -200,7 +191,7 @@ public class BarGraphSet extends PNode {
         return rampPanel.getLookAndFeel();
     }
 
-    public double getMaxDisplayableEnergy() {//TODO! trace dependencies on this (nondynamic ones)
+    public double getMaxDisplayableEnergy() {
         return Math.abs( transform1D.viewToModelDifferential( (int) ( barChartHeight - topY ) ) );
     }
 
@@ -210,7 +201,6 @@ public class BarGraphSet extends PNode {
 
     protected void finishInit( ValueAccessor[] workAccess ) {
         double w = workAccess.length * ( sep + dw ) - sep;
-//        System.out.println( "width = " + barWidth );
         background = new PPath( new Rectangle2D.Double( 0, topY, 2 + w, 1000 ) );
         background.setPaint( null );
         background.setStroke( new BasicStroke() );

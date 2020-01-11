@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp;
 
 import java.awt.*;
@@ -26,11 +24,6 @@ import edu.colorado.phet.theramp.timeseries.TimeSeriesPlaybackPanel;
 import edu.colorado.phet.theramp.view.FireDog;
 import edu.colorado.phet.theramp.view.RampPanel;
 
-/**
- * User: Sam Reid
- * Date: Feb 11, 2005
- * Time: 9:57:09 AM
- */
 
 public class RampModule extends CoreModule {
     private RampPanel rampPanel;
@@ -41,13 +34,13 @@ public class RampModule extends CoreModule {
 
     private ArrayList listeners = new ArrayList();
 
-    public static final double FORCE_LENGTH_SCALE = 0.06;//1.0;
+    public static final double FORCE_LENGTH_SCALE = 0.06;
     private AimxcelFrame phetFrame;
     public static final int MAX_TIME = 30;
-    //    public static final int MAX_TIME = 5;//testing only
+
     public static final boolean MINIMIZE_READOUT_TEXT_FOR_SMALL_SCREEN = false;
     private boolean firedogInProgress = false;
-//    private Timer timer;
+
 
     public RampModule( AimxcelFrame frame, IClock clock ) {
         this( TheRampStrings.getString( "module.more-features" ), frame, clock );
@@ -147,11 +140,9 @@ public class RampModule extends CoreModule {
         rampControlPanel.reset();
         setObject( rampObjects[0] );
         updateReadouts();
-//        resetPlotStates();
+
     }
 
-//    private void resetPlotStates() {
-//    }
 
     public void setObject( RampObject rampObject ) {
         rampModel.setObject( rampObject );

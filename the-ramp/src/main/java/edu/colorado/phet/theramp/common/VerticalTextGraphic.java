@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.common;
 
 import java.awt.*;
@@ -8,11 +6,7 @@ import java.awt.*;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowHTMLNode;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * User: Sam Reid
- * Date: Feb 12, 2005
- * Time: 9:47:54 AM
- */
+
 
 public class VerticalTextGraphic extends PNode {
     private Font font;

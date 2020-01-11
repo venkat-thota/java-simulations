@@ -1,15 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.common;
 
 import java.util.ArrayList;
 
-/**
- * User: Sam Reid
- * Date: Aug 7, 2005
- * Time: 2:09:16 PM
- */
 
 
 public class LayoutSet {

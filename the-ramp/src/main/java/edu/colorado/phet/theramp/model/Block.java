@@ -1,16 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.model;
 
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
-/**
- * User: Sam Reid
- * Date: Feb 11, 2005
- * Time: 10:14:01 AM
- */
 
 public class Block {
     private Surface surface;
@@ -30,7 +23,7 @@ public class Block {
 
     public Block copyState( RampPhysicalModel original, RampPhysicalModel newPhysicalModel ) {
         Block dataBlock = new Block( surface instanceof Ramp ? newPhysicalModel.getRamp() : newPhysicalModel.getGround() );
-//        Block dataBlock = new Block( surface == original.getRamp() ? newPhysicalModel.getRamp() : newPhysicalModel.getGround() );
+
         dataBlock.mass = mass;
         dataBlock.positionInSurface = positionInSurface;
         dataBlock.velocity = velocity;
@@ -43,9 +36,7 @@ public class Block {
 
     private void testRampOnly() {
         return;
-//        if( !getSurface().getName().equalsIgnoreCase( "ramp" ) ) {
-//            throw new RuntimeException( "NonRamp!!!" );//todo debug only!!!
-//        }
+
     }
 
     public void setState( Block state ) {
@@ -171,20 +162,14 @@ public class Block {
         if ( Math.abs( accValue ) < 0.0000001 ) {
             accValue = 0.0;
         }
-//        double origEnergy=rampModel.getTotalEnergy();
         velocity += accValue * dt;
         boolean changedVelSign = changedSign( origVelocity, velocity );
-//        System.out.println( "acc=" + acceleration + ", origVelocity = " + origVelocity + " velocity=" + velocity + " ch=" + changedVelSign );
         if ( changedVelSign ) {
             velocity = 0;
         }
         positionInSurface += velocity * dt;
 
-//        double finalEnergy=rampModel.getTotalEnergy();
-//        double dE=finalEnergy-origEnergy;
-//        System.out.println( "dE="+dE+", origEnergy = " + origEnergy+", finalEnergy="+finalEnergy );
 
-        //boundary conditions.
         applyBoundaryConditions( copy, rampPhysicalModel, dt );
 
         if ( positionInSurface != origPosition ) {
@@ -193,7 +178,7 @@ public class Block {
         if ( velocity != origVelocity ) {
             notifyVelocityChanged();
         }
-//        System.out.println( "positionInSurface = " + positionInSurface );
+
     }
 
     private void notifyVelocityChanged() {
@@ -311,25 +296,24 @@ public class Block {
     }
 
     public double getFrictionForce( double gravity, double otherForces ) {
-//        if (true)
-//        return 0;
+
         double N = this.getMass() * gravity * Math.cos( surface.getAngle() );
         if ( this.isMoving() ) {
             double sign = this.getVelocity() >= 0 ? -1 : 1;
             double kineticFrictionForce = sign * this.getKineticFriction() * N;
             return kineticFrictionForce;
         }
-        else {//this was stationary
+        else {
             double u = Math.max( this.getKineticFriction(), this.getStaticFriction() );
             double maxStaticFrictionForce = u * N;
             if ( Math.abs( maxStaticFrictionForce ) > Math.abs( otherForces ) ) {
-                //this stays at rest, friction balances applied force.
+                
                 return -otherForces;
             }
-            else { //applied force overcomes friction force, this starts moving
+            else { 
                 double sign = otherForces >= 0 ? -1 : 1;
                 double frictionForce = sign * u * N;
-                return frictionForce; //should be less than applied force
+                return frictionForce; 
             }
         }
     }

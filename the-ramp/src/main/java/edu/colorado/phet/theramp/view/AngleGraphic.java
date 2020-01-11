@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -14,11 +11,7 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * User: Sam Reid
- * Date: May 8, 2005
- * Time: 1:51:39 PM
- */
+
 
 public class AngleGraphic extends PNode {
     private SurfaceGraphic surfaceGraphic;
@@ -31,10 +24,8 @@ public class AngleGraphic extends PNode {
         phetShapeGraphic = new PPath( null );
         phetShapeGraphic.setStroke( new BasicStroke( 2 ) );
         phetShapeGraphic.setStrokePaint( Color.black );
-//        phetShapeGraphic = new AimxcelShapeGraphic( getComponent(), null, new BasicStroke( 2 ), Color.black );
         label = new HTMLNode( "test" );
         label.setFont( new AimxcelFont( 14 ) );
-//        label = new ShadowHTMLGraphic( getComponent(), "test", new Font( AimxcelDefaultFont.LUCIDA_SANS, 0, 14 ), Color.black, 1, 1, Color.gray );
         addChild( phetShapeGraphic );
         addChild( label );
         update();
@@ -42,9 +33,7 @@ public class AngleGraphic extends PNode {
 
     public void update() {
         Point origin = surfaceGraphic.getViewLocation( 0 );
-//        if( getRampWorld() != null ) {
-//            origin = getRampWorld().convertToWorld( origin );
-//        }
+
         Point twoMetersOver = getGroundLocationView( 5 );
 
         int squareWidth = ( twoMetersOver.x - origin.x ) * 2;

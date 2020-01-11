@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package edu.colorado.phet.theramp.view.arrows;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
@@ -8,11 +7,7 @@ import edu.colorado.phet.theramp.view.RampLookAndFeel;
 import edu.colorado.phet.theramp.view.RampPanel;
 
 
-/**
- * User: Sam Reid
- * Date: Nov 27, 2004
- * Time: 11:29:31 AM
- */
+
 public class CartesianArrowSet extends AbstractArrowSet {
 
     public CartesianArrowSet( final RampPanel rampPanel, BlockGraphic blockGraphic ) {
@@ -65,7 +60,7 @@ public class CartesianArrowSet extends AbstractArrowSet {
         addForceArrowGraphic( wallArrowGraphic );
 
         addForceArrowGraphic( totalArrowGraphic );
-        //setIgnoreMouse( true );
+       
     }
 
 }

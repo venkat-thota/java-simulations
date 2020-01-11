@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -8,27 +5,19 @@ import java.awt.*;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * User: Sam Reid
- * Date: May 8, 2005
- * Time: 8:11:05 AM
- */
+
 
 public class EarthGraphic extends PNode {
     private PPath phetShapeGraphic;
     private RampPanel rampPanel;
     private RampWorld rampWorld;
-    //    public static final Color earthGreen = new Color( 83, 175, 38 );
-    public static final Color earthGreen = new Color( 150, 200, 140 );
-//    public static final Color earthGreen = new Color( 110,210,100);
+        public static final Color earthGreen = new Color( 150, 200, 140 );
 
-//    public static final Color earthGreen = new Color( 0,160,0);
-//    public static final Color earthGreen = new Color( 40,180,40);
+
 
     public EarthGraphic( RampPanel rampPanel, RampWorld rampWorld ) {
         this.rampPanel = rampPanel;
         this.rampWorld = rampWorld;
-//        phetShapeGraphic = new AimxcelShapeGraphic( rampPanel, null, earthGreen, new BasicStroke( 1 ), Color.black );
         phetShapeGraphic = new PPath( null );
         phetShapeGraphic.setPaint( earthGreen );
         addChild( phetShapeGraphic );

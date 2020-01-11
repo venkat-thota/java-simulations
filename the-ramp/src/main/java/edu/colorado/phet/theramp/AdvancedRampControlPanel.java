@@ -24,19 +24,14 @@ import edu.colorado.phet.theramp.view.InitialConditionPanel;
 import edu.colorado.phet.theramp.view.RampPanel;
 import edu.colorado.phet.theramp.view.arrows.AbstractArrowSet;
 
-/**
- * User: Sam Reid
- * Date: Feb 13, 2005
- * Time: 1:31:12 PM
- */
 
 public class AdvancedRampControlPanel extends RampControlPanel {
-    private RampModule module;
+    
+	private static final long serialVersionUID = 1L;
+	private RampModule module;
     private ModelSlider massSlider;
 
-    /**
-     * @param module
-     */
+    
     public AdvancedRampControlPanel( final RampModule module ) {
         super( module );
         this.module = module;
@@ -52,7 +47,7 @@ public class AdvancedRampControlPanel extends RampControlPanel {
         ShowZeroPointPotentialControl showZeroPointPotentialCheckBox = new ShowZeroPointPotentialControl( module );
         addControl( showZeroPointPotentialCheckBox.getComponent() );
 
-//        addWorkEnergyBarGraphControls(  );
+
 
         JPanel coordinatePanel = new VerticalLayoutPanel();
         final RampPanel rampPanel = module.getRampPanel();
@@ -143,7 +138,7 @@ public class AdvancedRampControlPanel extends RampControlPanel {
         forcePanel.add( showGravity );
         forcePanel.add( showNormal );
 
-        //Shows a button "Forces >>" that expands into a control panel that shows all available forces for selection by the user
+       
         AdvancedPanel advancedPanel = new AdvancedPanel( TheRampStrings.getString( "controls.forces.maximize" ), TheRampStrings.getString( "controls.forces.minimize" ) );
         advancedPanel.addControlFullWidth( coordinatePanel );
         advancedPanel.addControlFullWidth( forcePanel );
@@ -155,7 +150,7 @@ public class AdvancedRampControlPanel extends RampControlPanel {
         addControl( ocb );
 
         addControl( super.getFrictionSlider() );
-//        frictionlessCheckbox = createFrictionlessCheckbox();
+
         addControl( getFrictionlessCheckBox() );
 
         massSlider = createMassSlider();
@@ -192,7 +187,10 @@ public class AdvancedRampControlPanel extends RampControlPanel {
 
 
     class GraphButtonSet extends VerticalLayoutPanel {
-        public GraphButtonSet() {
+       
+		private static final long serialVersionUID = 1L;
+
+		public GraphButtonSet() {
             setBorder( BorderFactory.createTitledBorder( BorderFactory.createRaisedBevelBorder(), TheRampStrings.getString( "display.graphs" ) ) );
             for ( int i = 0; i < module.getRampPlotSet().numDataUnits(); i++ ) {
                 final RampPlotSet.DataUnit unit = module.getRampPlotSet().dataUnitAt( i );

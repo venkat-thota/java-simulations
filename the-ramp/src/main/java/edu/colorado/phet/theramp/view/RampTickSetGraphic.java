@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -12,11 +9,6 @@ import java.util.ArrayList;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * User: Sam Reid
- * Date: May 6, 2005
- * Time: 4:06:59 PM
- */
 
 public class RampTickSetGraphic extends PNode {
     private SurfaceGraphic surfaceGraphic;
@@ -29,8 +21,7 @@ public class RampTickSetGraphic extends PNode {
             double x = i;
             addTickGraphic( x );
         }
-        //setIgnoreMouse( true );
-    }
+            }
 
     private void addTickGraphic( double x ) {
         RampTickSetGraphic.TickGraphic tickGraphic = new TickGraphic( x );
@@ -52,7 +43,6 @@ public class RampTickSetGraphic extends PNode {
         public TickGraphic( double x ) {
             super();
             this.x = x;
-//            phetShapeGraphic = new AimxcelShapeGraphic( component, new Line2D.Double( 0, 0, 0, 7 ), new BasicStroke( 2 ), Color.black );
             phetShapeGraphic = new PPath( new Line2D.Double( 0, 0, 0, 7 ) );
             phetShapeGraphic.setStroke( new BasicStroke( 2 ) );
             phetShapeGraphic.setPaint( Color.black );

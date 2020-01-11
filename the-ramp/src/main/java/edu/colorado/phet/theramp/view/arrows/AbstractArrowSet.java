@@ -1,6 +1,3 @@
-// Copyright 2002-2012, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view.arrows;
 
 import java.awt.Component;
@@ -11,11 +8,7 @@ import edu.colorado.phet.theramp.TheRampStrings;
 import edu.colorado.phet.theramp.view.BlockGraphic;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * User: Sam Reid
- * Date: Feb 13, 2005
- * Time: 9:02:45 PM
- */
+
 
 public class AbstractArrowSet extends PNode {
     public static final String APPLIED = TheRampStrings.getString( "forces.applied" );
@@ -62,7 +55,6 @@ public class AbstractArrowSet extends PNode {
             ForceArrowGraphic forceArrowGraphic = (ForceArrowGraphic) graphics.get( i );
             String name = forceArrowGraphic.getName();
             if ( name.toLowerCase().indexOf( force.toLowerCase() ) >= 0 ) {
-//                forceArrowGraphic.setVisible( selected );
                 forceArrowGraphic.setUserVisible( selected );
             }
         }

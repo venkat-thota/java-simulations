@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp;
 
 import javax.swing.*;
@@ -11,11 +9,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.ModelSlider;
 import edu.colorado.phet.theramp.model.Block;
 import edu.colorado.phet.theramp.model.Ramp;
 
-/**
- * User: Sam Reid
- * Date: Oct 7, 2005
- * Time: 9:00:54 PM
- */
+
 
 public class PositionController {
     private RampModule rampModule;
@@ -48,7 +42,7 @@ public class PositionController {
         }
         else {
             double distAlongSurface = getGroundLength() + modelSlider.getValue();
-//            System.out.println( "distAlongSurface = " + distAlongSurface );
+
             rampModule.getBlock().setSurface( rampModule.getRampPhysicalModel().getGround() );
             rampModule.getBlock().setPositionInSurface( distAlongSurface );
         }

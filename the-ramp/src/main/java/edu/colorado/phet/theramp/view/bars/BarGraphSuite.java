@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view.bars;
 
 import java.awt.*;
@@ -12,11 +9,6 @@ import edu.colorado.phet.theramp.model.RampPhysicalModel;
 import edu.colorado.phet.theramp.view.RampPanel;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * User: Sam Reid
- * Date: Feb 12, 2005
- * Time: 10:42:31 AM
- */
 
 public class BarGraphSuite extends PNode {
     private RampPanel rampPanel;

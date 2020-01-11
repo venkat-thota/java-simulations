@@ -1,13 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.model;
 
-/**
- * User: Sam Reid
- * Date: Feb 13, 2005
- * Time: 7:41:14 PM
- */
+
 
 public class Force {
     private String name;

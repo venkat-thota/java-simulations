@@ -1,16 +1,12 @@
-// Copyright 2002-2011, University of Colorado
 
-/*PhET, 2004.*/
+
+
 package edu.colorado.phet.theramp.timeseries;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockListener;
 
-/**
- * User: Sam Reid
- * Date: Jul 1, 2003
- * Time: 1:12:18 PM
- */
+
 public abstract class Mode implements ClockListener {
     private String name;
     private TimeSeriesModel module;

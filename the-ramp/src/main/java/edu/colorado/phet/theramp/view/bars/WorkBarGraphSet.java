@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view.bars;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.ModelViewTransform1D;
@@ -9,11 +6,7 @@ import edu.colorado.phet.theramp.model.RampPhysicalModel;
 import edu.colorado.phet.theramp.model.ValueAccessor;
 import edu.colorado.phet.theramp.view.RampPanel;
 
-/**
- * User: Sam Reid
- * Date: Jun 6, 2005
- * Time: 8:17:06 PM
- */
+
 
 public class WorkBarGraphSet extends BarGraphSet {
     public WorkBarGraphSet( RampPanel rampPanel, RampPhysicalModel rampPhysicalModel, ModelViewTransform1D transform1D ) {

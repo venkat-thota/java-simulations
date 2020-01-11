@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
@@ -10,11 +8,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication;
 
-/**
- * User: Sam Reid
- * Date: Feb 11, 2005
- * Time: 9:57:09 AM
- */
+
 
 public class TheRampApplication extends CoreAimxcelApplication {
 

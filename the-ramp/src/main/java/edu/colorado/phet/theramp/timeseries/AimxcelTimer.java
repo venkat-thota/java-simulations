@@ -1,15 +1,10 @@
-// Copyright 2002-2011, University of Colorado
 
-/*PhET, 2004.*/
+
+
 package edu.colorado.phet.theramp.timeseries;
 
 import java.util.ArrayList;
 
-/**
- * User: Sam Reid
- * Date: Jun 30, 2003
- * Time: 12:45:47 AM
- */
 public class AimxcelTimer {
     private String name;
     private double time = 0;

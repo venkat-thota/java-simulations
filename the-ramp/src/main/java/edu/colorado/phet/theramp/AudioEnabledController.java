@@ -1,6 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
+
+
 package edu.colorado.phet.theramp;
 
 import java.awt.event.ActionEvent;
@@ -10,11 +10,7 @@ import javax.swing.*;
 
 import edu.colorado.phet.theramp.common.AudioSourceDataLinePlayer;
 
-/**
- * User: Sam Reid
- * Date: Oct 9, 2005
- * Time: 4:34:59 PM
- */
+
 
 public class AudioEnabledController {
     private RampModule module;

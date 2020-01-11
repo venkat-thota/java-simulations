@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp;
 
 import java.awt.*;
@@ -17,11 +15,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import edu.colorado.phet.theramp.model.Block;
 import edu.colorado.phet.theramp.view.GoPauseClearPanel;
 
-/**
- * User: Sam Reid
- * Date: Aug 9, 2005
- * Time: 12:43:40 AM
- */
 
 public class RampControlPanel extends ControlPanel {
     private RampModule rampModule;
@@ -55,15 +48,12 @@ public class RampControlPanel extends ControlPanel {
         double[] ticks = new double[] { 0, 0.5, 1.0, 1.5 };
         this.frictionSlider = createFrictionSlider( ticks, rampModule );
 
-//        addWorkEnergyBarGraphControls( );
 
-//        ObjectSelectorComponent objectSelectorComponent=new ObjectSelectorComponent(rampModule);
 
         this.rampAngleSlider = new RampAngleController( rampModule );
         this.positionSlider = new PositionController( rampModule );
         this.goPauseClear = new GoPauseClearPanel( rampModule.getTimeSeriesModel() );
-//        addFullWidth( positionSlider.getComponent() );
-//        addFullWidth( rampAngleSlider.getComponent() );
+
         this.frictionlessCheckbox = createFrictionlessCheckbox();
     }
 
@@ -82,10 +72,7 @@ public class RampControlPanel extends ControlPanel {
     }
 
     protected ModelSlider createFrictionSlider( double[] ticks, final RampModule module ) {
-//        if( frictionSlider != null ) {
-//            return frictionSlider;
-//        }
-//        else {
+
         final ModelSlider frictionSlider = new ModelSlider( TheRampStrings.getString( "property.coefficient-of-friction" ), "", 0.1, 1.5, 0.5 );
         frictionSlider.addChangeListener( new ChangeListener() {
             public void stateChanged( ChangeEvent e ) {
@@ -95,7 +82,7 @@ public class RampControlPanel extends ControlPanel {
         module.getRampPhysicalModel().getBlock().addListener( new Block.Adapter() {
             public void staticFrictionChanged() {
                 frictionSlider.setValue( module.getRampPhysicalModel().getBlock().getStaticFriction() );
-//                frictionSlider.setValue( module.getRampModel().getBlock().getStaticFriction() );
+
             }
 
             public void kineticFrictionChanged() {
@@ -105,7 +92,7 @@ public class RampControlPanel extends ControlPanel {
         frictionSlider.setModelTicks( ticks );
         this.frictionSlider = frictionSlider;
         return frictionSlider;
-//        }
+      }
     }
 
     protected void setFriction( double f ) {
@@ -121,11 +108,6 @@ public class RampControlPanel extends ControlPanel {
                 getModule().record();
             }
         } );
-//        getModule().addListener( new RampModule.Listener() {
-//            public void objectChanged() {
-//                frictionless.setSelected( false );
-//            }
-//        } );
 
         getModule().addListener( new RampModule.Listener() {
             public void objectChanged() {

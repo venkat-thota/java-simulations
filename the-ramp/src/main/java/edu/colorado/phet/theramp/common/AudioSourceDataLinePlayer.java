@@ -1,4 +1,4 @@
-// Copyright 2002-2012, University of Colorado
+
 package edu.colorado.phet.theramp.common;
 
 import java.io.BufferedInputStream;
@@ -15,11 +15,7 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-/**
- * User: Sam Reid
- * Date: Apr 2, 2004
- * Time: 1:13:42 AM
- */
+
 public class AudioSourceDataLinePlayer {
     private static final int EXTERNAL_BUFFER_SIZE = 4000;
     private static boolean audioEnabled = true;
@@ -75,9 +71,7 @@ public class AudioSourceDataLinePlayer {
         t.start();
     }
 
-    /**
-     * Blocks until finished.
-     */
+    
     public static void play( URL url ) throws IOException, UnsupportedAudioFileException {
         if ( audioEnabled ) {
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream( new BufferedInputStream( url.openStream() ) );
@@ -90,10 +84,7 @@ public class AudioSourceDataLinePlayer {
             try {
                 line = (SourceDataLine) AudioSystem.getLine( info );
 
-                /*
-                  The line is there, but it is not yet ready to
-                  receive audio data. We have to open the line.
-                */
+              
                 line.open( audioFormat );
             }
             catch ( LineUnavailableException e ) {
@@ -105,24 +96,10 @@ public class AudioSourceDataLinePlayer {
                 System.exit( 1 );
             }
 
-            /*
-              Still not enough. The line now can receive data,
-              but will not pass them on to the audio output device
-              (which means to your sound card). This has to be
-              activated.
-            */
+           
             line.start();
 
-            /*
-              Ok, finally the line is prepared. Now comes the real
-              job: we have to write data to the line. We do this
-              in a loop. First, we read data from the
-              AudioInputStream to a buffer. Then, we write from
-              this buffer to the Line. This is done until the finish
-              of the file is reached, which is detected by a
-              return value of -1 from the read method of the
-              AudioInputStream.
-            */
+          
             int nBytesRead = 0;
 
             byte[] abData = new byte[EXTERNAL_BUFFER_SIZE];

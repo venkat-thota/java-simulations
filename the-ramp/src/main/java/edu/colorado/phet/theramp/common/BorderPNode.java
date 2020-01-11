@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.common;
 
 import java.awt.*;
@@ -10,11 +8,7 @@ import javax.swing.border.Border;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 
-/**
- * User: Sam Reid
- * Date: Oct 14, 2005
- * Time: 8:33:16 AM
- */
+
 
 public class BorderPNode extends PNode {
     private Border border;

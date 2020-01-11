@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view.plot;
 
 import java.awt.*;
@@ -56,11 +53,7 @@ import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwingCanvas;
 
-/**
- * User: Sam Reid
- * Date: Aug 2, 2005
- * Time: 2:17:06 PM
- */
+
 
 public class TimePlotSuitePNode extends AimxcelPNode {
     private RampModule module;
@@ -105,7 +98,6 @@ public class TimePlotSuitePNode extends AimxcelPNode {
         chart = createChart( range, dataset, name + " (" + units + ")" );
         this.plot = (XYPlot) chart.getPlot();
         chartGraphic = new PImage();
-//        chartGraphic.setRenderingHint( RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC );//DEC_05
         updateChartBuffer();
 
         addChild( chartGraphic );
@@ -313,8 +305,7 @@ public class TimePlotSuitePNode extends AimxcelPNode {
             thumb.addInputEventListener( new CursorHandler( Cursor.HAND_CURSOR ) );
             thumb.addInputEventListener( new ThumbDrag( this ) );
             setPickable( false );
-            //but leave children pickable
-            setChildrenPickable( true );
+                        setChildrenPickable( true );
 
             background.setPickable( false );
             background.setChildrenPickable( false );
@@ -351,7 +342,6 @@ public class TimePlotSuitePNode extends AimxcelPNode {
                 else if ( y < sliderGraphic.timePlotSuitePNode.getMinRangeValue() ) {
                     y = sliderGraphic.timePlotSuitePNode.getMinRangeValue();
                 }
-//                System.out.println( "y = " + y );
                 sliderGraphic.timePlotSuitePNode.getRampModule().getRampPhysicalModel().setAppliedForce( y );
             }
         }
@@ -359,8 +349,7 @@ public class TimePlotSuitePNode extends AimxcelPNode {
         private void update() {
             Point2D loc = timePlotSuitePNode.toImageLocation( 0,
                                                               timePlotSuitePNode.getRampModule().getRampPhysicalModel().getAppliedForceScalar() );
-            double y = loc.getY();// - thumb.getFullBounds().getHeight() / 2;
-//            System.out.println( "y = " + y );
+            double y = loc.getY();
             if ( y < rect.getY() ) {
                 y = rect.getY();
             }
@@ -490,8 +479,7 @@ public class TimePlotSuitePNode extends AimxcelPNode {
     }
 
     protected void paint( PPaintContext paintContext ) {
-//        System.out.println( "paintContext.getScale() = " + paintContext.getScale() );
-//        paintContext.getGraphics().scale( 1.0/paintContext.getScale(),1.0/paintContext.getScale());
+
         super.paint( paintContext );
     }
 
@@ -539,7 +527,6 @@ public class TimePlotSuitePNode extends AimxcelPNode {
             zoomInGraphic.setOffset( 5 + getDataArea().getX(), getDataArea().getMaxY() - zoomOutGraphic.getFullBounds().getHeight() - zoomInGraphic.getFullBounds().getHeight() - 2 );
             zoomOutGraphic.setOffset( zoomInGraphic.getOffset().getX(), zoomInGraphic.getOffset().getY() + zoomInGraphic.getFullBounds().getHeight() );
 
-//        System.out.println( System.currentTimeMillis() + ", Layout Children" );
             layoutCount++;
             if ( layoutCount > 100 ) {
                 System.out.println( "layoutCount = " + layoutCount );
@@ -568,13 +555,11 @@ public class TimePlotSuitePNode extends AimxcelPNode {
         updateGridlines();
         if ( chartWidth < 2000 && chartHeight < 2000 ) {
             bufferedImage = chart.createBufferedImage( chartWidth, chartHeight );
-//            System.out.println( "TimePlotSuitePNode.updateChartBuffer@" + System.currentTimeMillis() );
             decorateBuffer();
             chartGraphic.setImage( bufferedImage );
         }
         else {
-//            System.out.println( "chartWidth = " + chartWidth );
-//            System.out.println( "chartHeight = " + chartHeight );
+
         }
     }
 
@@ -595,8 +580,8 @@ public class TimePlotSuitePNode extends AimxcelPNode {
 
     private static JFreeChart createChart( Range2D range, XYDataset dataset, String title ) {
         JFreeChart chart = ChartFactory.createXYLineChart( "",
-                                                           "", // x-axis label
-                                                           "", // y-axis label
+                                                           "", 
+                                                           "", 
                                                            dataset, PlotOrientation.VERTICAL, false, false, false );
 
         chart.setBackgroundPaint( EarthGraphic.earthGreen );

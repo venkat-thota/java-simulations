@@ -1,6 +1,4 @@
-// Copyright 2002-2012, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.common;
 
 import java.awt.BasicStroke;
@@ -31,11 +29,7 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * User: Sam Reid
- * Date: May 20, 2005
- * Time: 10:42:18 PM
- */
+
 
 public class MeasuringTape extends PNode {
     private ModelViewTransform2D modelViewTransform2D;

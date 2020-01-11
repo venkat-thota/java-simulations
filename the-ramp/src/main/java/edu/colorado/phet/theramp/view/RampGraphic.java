@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -15,12 +12,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
-
-/**
- * User: Sam Reid
- * Date: Feb 11, 2005
- * Time: 10:17:00 AM
- */
 
 public class RampGraphic extends SurfaceGraphic {
     private PNode arrowGraphic;
@@ -60,8 +51,7 @@ public class RampGraphic extends SurfaceGraphic {
         }
         image = BufferedImageUtils.rescaleYMaintainAspectRatio( image, 100 );
         PImage phetImageGraphic = new PImage( image );
-        //phetImageGraphic.setIgnoreMouse( true );
-        phetImageGraphic.setPickable( false );
+                phetImageGraphic.setPickable( false );
         phetImageGraphic.setChildrenPickable( false );
         return phetImageGraphic;
     }

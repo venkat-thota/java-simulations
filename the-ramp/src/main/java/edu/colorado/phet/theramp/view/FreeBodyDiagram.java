@@ -1,6 +1,3 @@
-// Copyright 2002-2012, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.BasicStroke;
@@ -34,11 +31,7 @@ import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * User: Sam Reid
- * Date: Dec 16, 2004
- * Time: 5:57:05 PM
- */
+
 
 public class FreeBodyDiagram extends PNode {
     private RampModule module;
@@ -63,7 +56,6 @@ public class FreeBodyDiagram extends PNode {
     public FreeBodyDiagram( RampPanel component, final RampModule module, JComponent owner ) {
         this.component = component;
         this.owner = owner;
-//        super( component );
         this.model = module.getRampPhysicalModel();
         this.module = module;
         rect = new Rectangle( 0, 0, 200, 200 );
@@ -76,7 +68,6 @@ public class FreeBodyDiagram extends PNode {
         addChild( background );
         axes = new AxesGraphic();
         addChild( axes );
-//        axes.setVisible( false );
 
         mg = new ForceArrow( this, laf.getWeightColor(), ( TheRampStrings.getString( "force.subscript.gravity" ) ), new MutableVector2D( 0, 80 ) );
         addForceArrow( mg );
@@ -99,21 +90,17 @@ public class FreeBodyDiagram extends PNode {
         wallForce.setVerticalOffset( -30 );
 
         PBasicInputEventHandler mia = new PBasicInputEventHandler() {
-            // implements java.awt.event.MouseListener
-            public void mousePressed( PInputEvent e ) {
+                        public void mousePressed( PInputEvent e ) {
                 module.record();
                 setForce( e.getPositionRelativeTo( FreeBodyDiagram.this ) );
                 userClicked = true;
             }
 
             public void mouseDragged( PInputEvent e ) {
-//                System.out.println( "dragged: e = " + e );
                 setForce( e.getPositionRelativeTo( FreeBodyDiagram.this ) );
             }
 
-            // implements java.awt.event.MouseListener
-            public void mouseReleased( PInputEvent e ) {
-//                System.out.println( "released: e = " + e );
+                        public void mouseReleased( PInputEvent e ) {
                 model.setAppliedForce( 0.0 );
             }
         };
@@ -134,8 +121,7 @@ public class FreeBodyDiagram extends PNode {
     private void setForce( Point2D pt ) {
         double x = pt.getX();
 
-        //set the applied force
-        double dx = x - getCenter().getX();
+                double dx = x - getCenter().getX();
         double appliedForceRequest = dx / scale;
         model.setAppliedForce( appliedForceRequest );
     }
@@ -171,7 +157,6 @@ public class FreeBodyDiagram extends PNode {
 
     public void updateAll() {
         if ( owner.isVisible() ) {
-//        System.out.println( "FreeBodyDiagram.updateAll@"+System.currentTimeMillis() );
             updateXForces();
             updateMG();
             axes.update();
@@ -187,9 +172,7 @@ public class FreeBodyDiagram extends PNode {
         private PPath shapeGraphic;
         private HTMLNode textGraphic;
         private FreeBodyDiagram fbd;
-        //        private double dx;
-        //        private double dy;
-        private String name;
+           private String name;
         private Arrow lastArrow;
         private double verticalOffset = 0;
 
@@ -197,14 +180,11 @@ public class FreeBodyDiagram extends PNode {
             this.fbd = fbd;
             this.name = name;
             shapeGraphic = new PPath();
-//            component, null, RampUtil.transparify( color, 150 ), new BasicStroke( 2.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND ), RampUtil.transparify( Color.black, 128 ) );
             shapeGraphic.setStroke( new BasicStroke( 1.5f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND ) );
-            shapeGraphic.setPaint( color );
-//            shapeGraphic.setStrokePaint( RampUtil.transparify( Color.black, 150 ) );
+            shapeGraphic.setPaint( color );          
             shapeGraphic.setStrokePaint( Color.black );
             addChild( shapeGraphic );
             Font font = new Font( AimxcelFont.getDefaultFontName(), Font.BOLD, 16 );
-//            textGraphic = new AimxcelShadowTextGraphic( component, name, font, 0, 0, color, 1, 1, Color.black );
             textGraphic = new HTMLNode( name, color, font );
             addChild( textGraphic );
             setVector( v );
@@ -220,8 +200,6 @@ public class FreeBodyDiagram extends PNode {
             Point2D origin = fbd.getCenter();
             SurfaceGraphic surfaceGraphic = fbd.getRampPanel().getRampWorld().getBlockGraphic().getCurrentSurfaceGraphic();
             double viewAngle = surfaceGraphic.getViewAngle();
-
-//            origin = new Point2D.Double( origin.getX() + dx, origin.getY() + dy );
             origin = MutableVector2D.createPolar( verticalOffset, viewAngle ).getPerpendicularVector().getPerpendicularVector().getPerpendicularVector().getDestination( origin );
             Arrow arrow = new Arrow( origin, v.getDestination( origin ), 20, 20, 8, 0.5, true );
             Shape sh = arrow.getShape();
@@ -243,7 +221,6 @@ public class FreeBodyDiagram extends PNode {
             else if ( v.getY() > 0 ) {
                 this.textGraphic.setOffset( ctr.x - textGraphic.getWidth() / 2, b.y + b.height );
                 textGraphic.setVisible( true );
-//                System.out.println( name+", y>0" );
             }
             else if ( v.getY() < 0 ) {
                 this.textGraphic.setOffset( ctr.x - textGraphic.getWidth() / 2, b.y - textGraphic.getHeight() );
@@ -287,11 +264,7 @@ public class FreeBodyDiagram extends PNode {
             addChild( xAxis );
             addChild( yAxis );
 
-//            Font font = new Font( AimxcelDefaultFont.LUCIDA_SANS, Font.PLAIN, 16 );
-//            xLabel = new HTMLGraphic( ( "FreeBodyDiagram.fx" ), font, Color.black );
-//            yLabel = new HTMLGraphic( ( "FreeBodyDiagram.fy" ), font, Color.black );
-//            addChild( xLabel );
-//            addChild( yLabel );
+
 
             update();
         }
@@ -300,16 +273,13 @@ public class FreeBodyDiagram extends PNode {
 
             Line2D.Double xLine = new Line2D.Double( rect.x, rect.y + rect.height / 2, rect.x + rect.width, rect.y + rect.height / 2 );
             Line2D.Double yLine = new Line2D.Double( rect.x + rect.width / 2, rect.y, rect.x + rect.width / 2, rect.y + rect.height );
-//
             if ( this.xLine == null || !xLine.equals( this.xLine ) ) {
                 this.xLine = xLine;
                 xAxis.setPathTo( xLine );
-//                xLabel.setOffset( (int)xLine.getX2() - xLabel.getWidth(), (int)xLine.getY2() );
             }
             if ( this.yLine == null || !yLine.equals( this.yLine ) ) {
                 this.yLine = yLine;
                 yAxis.setPathTo( yLine );
-//                yLabel.setOffset( (int)yLine.getX1() + 3, (int)yLine.getY1() );
             }
 
         }

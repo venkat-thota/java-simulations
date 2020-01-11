@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp;
 
 import java.awt.*;
@@ -17,11 +15,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import edu.colorado.phet.theramp.model.RampObject;
 
-/**
- * User: Sam Reid
- * Date: Aug 9, 2005
- * Time: 12:58:15 AM
- */
 
 public class ObjectSelectionPanel extends JPanel {
 
@@ -76,10 +69,9 @@ public class ObjectSelectionPanel extends JPanel {
     }
 
     private String getIconText( final RampObject imageElement ) {
-//        char muChar = '\u00F6';
+
         char muChar = '\u03BC';
         return MessageFormat.format( TheRampStrings.getString( "readout.object-mass" ), new Object[] { imageElement.getName(), new Double( imageElement.getMass() ), new Character( muChar ), new Double( imageElement.getStaticFriction() ) } );
-//        return "<html>HELLO<sub>2</html>";
-//        return imageElement.getName() + " (" + imageElement.getMass() + " kg)";
+
     }
 }

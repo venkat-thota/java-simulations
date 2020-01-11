@@ -1,17 +1,10 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-/**
- * User: Sam Reid
- * Date: Aug 19, 2005
- * Time: 9:43:58 AM
- */
+
 
 public class RampFontSet {
     private Font normalButtonFont;
@@ -22,8 +15,7 @@ public class RampFontSet {
     private Font barFont;
 
     public static RampFontSet getFontSet() {
-        //use toolkit.getDimension to return an appropriate font set.
-        return new RampFontSet();
+                return new RampFontSet();
     }
 
     public RampFontSet() {

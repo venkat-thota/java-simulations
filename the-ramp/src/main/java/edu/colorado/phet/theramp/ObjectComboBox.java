@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp;
 
 import java.awt.*;
@@ -16,28 +14,24 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
 import edu.colorado.phet.theramp.model.RampObject;
 
-/**
- * User: Sam Reid
- * Date: Feb 4, 2005
- * Time: 7:55:21 AM
- */
+
 
 public class ObjectComboBox extends JComboBox {
     private AdvancedRampControlPanel controlPanel;
-//    private static Font font = new Font( AimxcelDefaultFont.LUCIDA_SANS, Font.BOLD, 10 );
+
 
     public ObjectComboBox( final RampObject[] rampObjects, final AdvancedRampControlPanel controlPanel ) {
         super( toLabelArray( rampObjects, controlPanel ) );
         setRenderer( new ComboBoxRenderer() );
         this.controlPanel = controlPanel;
-        //setBorder( createBorder( "Choose Object" ) );
+        
         addItemListener( new ItemListener() {
             public void itemStateChanged( ItemEvent e ) {
                 int index = getSelectedIndex();
                 controlPanel.setup( rampObjects[index] );
             }
         } );
-//        setFont( font );
+
     }
 
     private static ImageIcon[] toLabelArray( RampObject[] imageElements, Component component ) {
@@ -73,7 +67,7 @@ public class ObjectComboBox extends JComboBox {
             ImageIcon icon = (ImageIcon) value;
             setText( icon.getDescription() );
             setIcon( icon );
-//            setFont( font );
+
             return component;
         }
     }

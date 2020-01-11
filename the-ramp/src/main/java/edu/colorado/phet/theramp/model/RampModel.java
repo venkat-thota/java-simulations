@@ -1,18 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.model;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import edu.colorado.phet.theramp.RampModule;
 import edu.colorado.phet.theramp.timeseries.TimeSeriesModel;
-
-/**
- * User: Sam Reid
- * Date: Aug 4, 2005
- * Time: 5:35:10 PM
- */
-
 public class RampModel {
     private RampPhysicalModel rampPhysicalModel;
     private RampTimeSeriesModel rampTimeSeriesModel;

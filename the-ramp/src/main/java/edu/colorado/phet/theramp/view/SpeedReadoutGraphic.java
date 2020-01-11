@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.text.DecimalFormat;
@@ -12,11 +9,6 @@ import edu.colorado.phet.theramp.model.RampPhysicalModel;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * User: Sam Reid
- * Date: May 30, 2005
- * Time: 6:45:21 PM
- */
 
 public class SpeedReadoutGraphic extends PNode implements ModelElement {
     private DecimalFormat format = new DecimalFormat( "0.00" );
@@ -25,7 +17,6 @@ public class SpeedReadoutGraphic extends PNode implements ModelElement {
 
     public SpeedReadoutGraphic( RampPhysicalModel rampPhysicalModel ) {
         this.rampPhysicalModel = rampPhysicalModel;
-//        Font font = new Font( AimxcelDefaultFont.LUCIDA_SANS, Font.BOLD, 22 );
         phetTextGraphic = new PText( "" );
         phetTextGraphic.setFont( RampFontSet.getFontSet().getSpeedReadoutFont() );
         addChild( phetTextGraphic );

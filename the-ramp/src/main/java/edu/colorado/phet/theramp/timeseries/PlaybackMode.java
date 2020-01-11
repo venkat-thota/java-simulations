@@ -1,14 +1,10 @@
-// Copyright 2002-2011, University of Colorado
+
 package edu.colorado.phet.theramp.timeseries;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 
 
-/**
- * User: Sam Reid
- * Date: Aug 15, 2004
- * Time: 7:42:16 PM
- */
+
 public class PlaybackMode extends Mode {
     private double playbackSpeed;
     private AimxcelTimer timer;

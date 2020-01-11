@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -19,11 +16,6 @@ import edu.colorado.phet.theramp.model.RampPhysicalModel;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * User: Sam Reid
- * Date: Jun 6, 2005
- * Time: 11:34:54 PM
- */
 
 public class OverheatButton extends PNode {
     private RampPhysicalModel rampPhysicalModel;
@@ -60,23 +52,16 @@ public class OverheatButton extends PNode {
     private void update() {
 
         double max = rampPanel.getOverheatEnergy();
-//        System.out.println( "<----OverheatButton.update" );
-//        System.out.println( "rampPhysicalModel.getThermalEnergy() = " + rampPhysicalModel.getThermalEnergy() );
-//        System.out.println( "max=" + max );
-//        System.out.println( "" );
+
         if ( rampPhysicalModel.getThermalEnergy() >= max && !getVisible() && module.numMaximizedBarGraphs() > 0 ) {
             setVisible( true );
             setPickable( true );
             setChildrenPickable( true );
-//            setOffset( RampPanel.getDefaultRenderSize().width / 2, 50 );
+
             Rectangle2D r = rampPanel.getBarGraphSuite().getGlobalFullBounds();
-//            System.out.println( "r = " + r );
             globalToLocal( r );
 
-//            System.out.println( "globToLoc r=" + r );
             localToParent( r );
-//            System.out.println( "locToPar r="+r );
-//            setOffset( rampPanel.getBarGraphSuite().getXOffset(), rampPanel.getBarGraphSuite().getYOffset() + 100 );
             setOffset( r.getX() + 20, rampPanel.getHeight() / 2 );
         }
         else if ( rampPhysicalModel.getThermalEnergy() < max ) {

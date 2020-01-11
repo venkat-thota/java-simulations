@@ -1,6 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
+
+
 package edu.colorado.phet.theramp.view.plot;
 
 import java.awt.*;
@@ -14,11 +14,6 @@ import javax.swing.*;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 
-/**
- * User: Sam Reid
- * Date: Aug 8, 2005
- * Time: 11:23:40 PM
- */
 
 public class ZoomButton extends JButton {
     private double value;

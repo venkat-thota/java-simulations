@@ -1,4 +1,4 @@
-// Copyright 2002-2011, University of Colorado
+
 package edu.colorado.phet.theramp;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.FrameSetup;

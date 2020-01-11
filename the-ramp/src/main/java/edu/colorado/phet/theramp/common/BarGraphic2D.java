@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.common;
 
 import java.awt.*;
@@ -10,11 +8,7 @@ import edu.colorado.phet.theramp.view.RampFontSet;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * User: Sam Reid
- * Date: Feb 12, 2005
- * Time: 9:32:14 AM
- */
+
 
 public class BarGraphic2D extends PNode {
     private ModelViewTransform1D transform1D;
@@ -53,9 +47,9 @@ public class BarGraphic2D extends PNode {
     private void updateBar() {
         int height = computeHeight();
         Rectangle rect = new Rectangle( x, y - height, width, height );
-//        label.setOffset( rect.x + 7 - labelWidth, (int)( 5 + y + labelHeight ) );
+
         label.setOffset( rect.x + 2 - labelWidth, (int) ( 5 + y + labelHeight ) );
-//        label.setOffset( rect.x + 7 - labelWidth, (int)( y + labelHeight ) );
+
         rectangle3DGraphic.setPathTo( rect );
     }
 
@@ -63,7 +57,7 @@ public class BarGraphic2D extends PNode {
         if ( value != this.value && Math.abs( value ) != Math.abs( this.value ) ) {
             this.value = value;
             if ( value < 0 ) {
-                rectangle3DGraphic.setOffset( 0, -computeHeight() );//a big hack to make negative values work.
+                rectangle3DGraphic.setOffset( 0, -computeHeight() );
             }
             else {
                 rectangle3DGraphic.setOffset( 0, 0 );

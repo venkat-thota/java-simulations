@@ -1,15 +1,7 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
 
-/**
- * User: Sam Reid
- * Date: May 30, 2005
- * Time: 10:20:22 PM
- */
 
 public class LeftBarrierGraphic extends BarrierGraphic {
     public LeftBarrierGraphic( Component component, RampPanel rampPanel, SurfaceGraphic surfaceGraphic ) {

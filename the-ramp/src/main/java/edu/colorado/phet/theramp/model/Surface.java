@@ -1,6 +1,6 @@
-// Copyright 2002-2012, University of Colorado
 
-/*  */
+
+
 package edu.colorado.phet.theramp.model;
 
 import java.awt.geom.Point2D;
@@ -10,11 +10,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
 
-/**
- * User: Sam Reid
- * Date: Feb 11, 2005
- * Time: 10:12:53 AM
- */
 
 public abstract class Surface extends SimpleObservable {
     private double angle;
@@ -81,7 +76,7 @@ public abstract class Surface extends SimpleObservable {
         this.y0 = state.y0;
         this.length = state.length;
         this.distanceOffset = state.distanceOffset;
-        //todo notify observers
+       
     }
 
     public abstract boolean applyBoundaryConditions( RampPhysicalModel rampPhysicalModel, Block block );

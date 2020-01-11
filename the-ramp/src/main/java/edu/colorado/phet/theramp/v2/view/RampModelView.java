@@ -1,4 +1,4 @@
-// Copyright 2002-2011, University of Colorado
+
 package edu.colorado.phet.theramp.v2.view;
 
 import java.awt.*;
@@ -27,7 +27,7 @@ public class RampModelView extends PNode {
 
     private void update() {
         boolean createNewNodes = true;
-//        boolean createNewNodes = false;
+
         if ( createNewNodes ) {
             updateNewNodes();
         }
@@ -56,33 +56,26 @@ public class RampModelView extends PNode {
 
     private PNode createNode( final RampObject object ) {
         Rectangle2D.Double aDouble = new Rectangle2D.Double( object.getPosition().getX(), object.getPosition().getY(), 20, 20 );
-//        System.out.println( "aDouble = " + aDouble );
         final PPath pPath = new PPath( aDouble );
         pPath.setPaint( Color.blue );
         PBasicInputEventHandler listener = new PBasicInputEventHandler() {
             public void mousePressed( PInputEvent event ) {
                 super.mousePressed( event );
                 module.updateCurrentState( object, object.setInteracting( true ) );
-//                pPath.removeInputEventListener( this );
             }
 
             public void mouseDragged( PInputEvent event ) {
                 super.mouseDragged( event );
                 RampObject newObject = object.setPosition( event.getCanvasPosition().getX(), event.getCanvasPosition().getY() );
                 module.updateCurrentState( object, newObject );
-//                pPath.removeInputEventListener( this );
             }
 
             public void mouseReleased( PInputEvent event ) {
                 super.mouseReleased( event );
                 module.updateCurrentState( object, object.setInteracting( false ) );
-//                pPath.removeInputEventListener( this );
             }
         };
-        //with immutable model object and new scene graph constructed at each instance,
-        //need to handle transfer of mouse handling state
-        //not sure this is possible without reinventing the wheel
-        //alternatively, we could try using a mutable scene graph to communicate with immutable model...
+
         pPath.addInputEventListener( listener );
         pPath.addInputEventListener( new CursorHandler() );
         return pPath;

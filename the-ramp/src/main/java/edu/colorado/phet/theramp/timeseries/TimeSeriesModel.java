@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp.timeseries;
 
 import java.util.ArrayList;
@@ -9,21 +7,17 @@ import javax.swing.*;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 
-/**
- * User: Sam Reid
- * Date: Mar 24, 2005
- * Time: 11:00:14 AM
- */
+
 
 public abstract class TimeSeriesModel extends ClockTickListener {
     private ArrayList listeners = new ArrayList();
     private boolean paused = true;
 
-    private Mode mode;//the current mode.
+    private Mode mode;
     private RecordMode recordMode;
     private PlaybackMode playbackMode;
 
-    public static double TIME_SCALE = 1.0;// for dynamic model.
+    public static double TIME_SCALE = 1.0;
     private static boolean dynamicTime;
     private double maxAllowedTime;
 

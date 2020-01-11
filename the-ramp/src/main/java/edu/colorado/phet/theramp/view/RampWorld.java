@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.awt.*;
@@ -17,12 +14,6 @@ import edu.colorado.phet.theramp.model.RampPhysicalModel;
 import edu.colorado.phet.theramp.model.Surface;
 import edu.colorado.phet.theramp.view.arrows.*;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
-
-/**
- * User: Sam Reid
- * Date: Jun 1, 2005
- * Time: 2:56:14 PM
- */
 
 public class RampWorld extends PNode {
     private ArrayList arrowSets = new ArrayList();
@@ -52,7 +43,6 @@ public class RampWorld extends PNode {
         earthGraphic = new EarthGraphic( rampPanel, this );
         skyGraphic = new SkyGraphic( rampPanel, this );
         groundGraphic = new FloorGraphic( rampPanel, rampPhysicalModel.getGround() );
-//        BoundGraphic groundBounds=new BoundGraphic( groundGraphic,2,2);
         blockGraphic = new BlockGraphic( module, rampPanel, rampGraphic, groundGraphic, rampPhysicalModel.getBlock(), module.getRampObjects()[0] );
         rightBarrierGraphic = new RightBarrierGraphic( rampPanel, rampPanel, rampGraphic );
         leftBarrierGraphic = new LeftBarrierGraphic( rampPanel, rampPanel, groundGraphic );
@@ -99,8 +89,7 @@ public class RampWorld extends PNode {
         addChild( measuringTape );
 
         setPotentialEnergyZeroGraphicVisible( false );
-//        groundBounds.setPaint( Color.blue);
-//        addChild( groundBounds);
+
     }
 
     void updateArrowSetGraphics() {

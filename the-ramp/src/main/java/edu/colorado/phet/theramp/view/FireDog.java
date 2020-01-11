@@ -1,6 +1,6 @@
-// Copyright 2002-2012, University of Colorado
 
-/*  */
+
+
 package edu.colorado.phet.theramp.view;
 
 import java.awt.geom.AffineTransform;
@@ -20,11 +20,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * User: Sam Reid
- * Date: Aug 3, 2005
- * Time: 8:11:45 AM
- */
 
 public class FireDog extends PNode {
     private PImage image;
@@ -48,7 +43,6 @@ public class FireDog extends PNode {
     private void initImage() {
         image.setTransform( new AffineTransform() );
         image.setOffset( -image.getWidth(), getFloorY() - image.getFullBounds().getHeight() + 3 );
-//        image.setOffset( -image.getWidth(), getFloorY() );
     }
 
     private double getFloorYNew() {
@@ -132,8 +126,7 @@ public class FireDog extends PNode {
 
         protected void activityStep( long elapsedTime ) {
             super.activityStep( elapsedTime );
-            //fire a water particle.
-            addWaterDrop();
+                        addWaterDrop();
             addWaterDrop();
             addWaterDrop();
         }
@@ -172,9 +165,7 @@ public class FireDog extends PNode {
 
             if ( dropImage == null ) {
                 try {
-//                    dropImage = ImageLoader.loadBufferedImage( "the-ramp/images/drop.gif" );
                     dropImage = ImageLoader.loadBufferedImage( "the-ramp/images/drop3.gif" );
-//                    dropImage = BufferedImageUtils.rescaleYMaintainAspectRatio( null, dropImage, 14 );
                 }
                 catch ( IOException e ) {
                     e.printStackTrace();
@@ -190,7 +181,6 @@ public class FireDog extends PNode {
             double dy = random.nextGaussian() * 20;
             particle.setVelocity( 200.0 + dx, -120 - dy );
             particle.setAcceleration( 0, 200 );
-//            setRenderingHint( RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC );//DEC_05
         }
 
         public void finishInit() {
@@ -203,7 +193,6 @@ public class FireDog extends PNode {
         }
 
         public void propagate( double dt ) {
-//            System.out.println( "dt = " + dt );
             particle.stepInTime( dt );
             update();
         }

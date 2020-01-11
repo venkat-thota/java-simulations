@@ -1,14 +1,9 @@
-// Copyright 2002-2011, University of Colorado
+
 package edu.colorado.phet.theramp.timeseries;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 
 
-/**
- * User: Sam Reid
- * Date: Aug 15, 2004
- * Time: 7:42:04 PM
- */
 public class RecordMode extends Mode {
     private AimxcelTimer timer;
     private TimeSeriesModel timeSeriesModel;
@@ -40,11 +35,11 @@ public class RecordMode extends Mode {
         double maxTime = timeSeriesModel.getMaxAllowedTime();
         if ( !timeSeriesModel.isPaused() ) {
 
-            double newTime = recorderTime + dt;// * timer.getTimerScale();
+            double newTime = recorderTime + dt;
             if ( newTime > maxTime ) {
-                dt = ( maxTime - recorderTime );// / timer.getTimerScale();
+                dt = ( maxTime - recorderTime );
             }
-            timer.stepInTime( dt, maxTime );//this could go over the max.
+            timer.stepInTime( dt, maxTime );
 
             timeSeriesModel.updateModel( event );
 

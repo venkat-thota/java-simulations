@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package edu.colorado.phet.theramp.view;
 
 import java.text.DecimalFormat;
@@ -16,19 +13,12 @@ import edu.colorado.phet.theramp.TheRampStrings;
 import edu.colorado.phet.theramp.model.Block;
 import edu.colorado.phet.theramp.model.RampPhysicalModel;
 
-/**
- * User: Sam Reid
- * Date: Aug 6, 2005
- * Time: 4:23:38 AM
- */
 
 public class InitialConditionPanel extends VerticalLayoutPanel {
     public InitialConditionPanel( final RampModule rampModule ) {
         double maxValue = 3000;
         final ModelSlider modelSlider = new ModelSlider( TheRampStrings.getString( "forces.applied-force" ), TheRampStrings.getString( "units.newtons" ), -maxValue, maxValue, 0, new DecimalFormat( "0.00" ) );
         modelSlider.setModelTicks( new double[] { -maxValue, 0, maxValue } );
-//        PSwing pSwing = new PSwing( rampPanel, modelSlider );
-//        addChild( pSwing );
         modelSlider.addChangeListener( new ChangeListener() {
             public void stateChanged( ChangeEvent e ) {
                 rampModule.setAppliedForce( modelSlider.getValue() );
@@ -76,7 +66,6 @@ public class InitialConditionPanel extends VerticalLayoutPanel {
         } );
         addFullWidth( blockPosition );
 
-//        final ModelSlider blockVelocity = new ModelSlider( "Velocity", "meters/second", -20, 20, rampModule.getBlock().getVelocity() );
         final ModelSlider blockVelocity = new ModelSlider( TheRampStrings.getString( "controls.velocity" ), TheRampStrings.getString( "units.meters-per-second" ), -20, 20, rampModule.getBlock().getVelocity() );
         blockVelocity.setModelTicks( new double[] { -20, 0, 20 } );
         blockVelocity.addChangeListener( new ChangeListener() {
@@ -92,7 +81,5 @@ public class InitialConditionPanel extends VerticalLayoutPanel {
         addFullWidth( blockVelocity );
     }
 
-//    private void addFullWidth( ModelSlider modelSlider ) {
-//        add( modelSlider );
-//    }
+
 }

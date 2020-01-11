@@ -1,6 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/*  */
 package edu.colorado.phet.theramp;
 
 import java.awt.*;
@@ -21,11 +19,7 @@ import edu.colorado.phet.theramp.view.plot.TimePlotSuitePNode;
 import edu.colorado.phet.theramp.view.plot.TimeSeriesPNode;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * User: Sam Reid
- * Date: May 16, 2005
- * Time: 10:49:44 AM
- */
+
 
 public class RampPlotSet extends PNode {
     private RampModule module;
@@ -35,7 +29,7 @@ public class RampPlotSet extends PNode {
     private TimePlotSuitePNode workPlot;
     private TimePlotSuitePNode parallelForcePlot;
     private int plotOffsetX = 120;
-//    private int chartWidth = TimePlotSuitePNode.DEFAULT_CHART_WIDTH;
+
 
     public RampPlotSet( RampModule module, final RampPanel rampPanel ) {
         this.module = module;
@@ -71,8 +65,7 @@ public class RampPlotSet extends PNode {
         addChild( parallelForcePlot );
         parallelForcePlot.setMinimized( true );
 
-//        getRampPanel().addChild( energyPlot );
-//        getRampPanel().addChild( workPlot );
+
         TimePlotSuitePNode.Listener listener = new TimePlotSuitePNode.Listener() {
             public void minimizeStateChanged() {
                 invalidateLayout();
@@ -171,10 +164,9 @@ public class RampPlotSet extends PNode {
 
         public void setVisible( boolean b ) {
             if ( !b ) {
-//                System.out.println( "Chart too small to be shown, needs error handling." );
-                ///todo System.out.println( "Chart too small to be shown, needs error handling." );
+
             }
-//            plot.setVisible( b );
+
         }
     }
 
@@ -204,7 +196,7 @@ public class RampPlotSet extends PNode {
 
         int availableWidth = (int) getAvailableWidth();
         if ( availableWidth > 0 ) {
-//            if( layoutY != getLayoutStartY() || layoutHeight != getAvailableHeight() || layoutWidth != availableWidth )
+
             if ( true ) {
                 layoutSet.addItem( toPlotLayoutItem( availableWidth, parallelForcePlot ) );
                 layoutSet.addItem( toPlotLayoutItem( availableWidth, energyPlot ) );
@@ -250,12 +242,10 @@ public class RampPlotSet extends PNode {
 
     private double getAvailableWidth() {
         return rampPanel.getChartLayoutMaxX() - plotOffsetX;
-//        return rampPanel.getSize().width / 2;
-//        return TimePlotSuitePNode.DEFAULT_CHART_WIDTH;
+
     }
 
-    //Todo; This was super tricky to figure out.   I'll email the chat list.
-    //TODO: Just thought I'd mention it twice.
+    
     private double getLayoutStartY() {
         Point2D point = rampPanel.getRampWorld().getEarthGraphic().getGlobalFullBounds().getOrigin();
         globalToLocal( point );
