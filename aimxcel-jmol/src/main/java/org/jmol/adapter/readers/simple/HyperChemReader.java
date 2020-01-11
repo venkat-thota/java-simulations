@@ -1,0 +1,98 @@
+
+package org.jmol.adapter.readers.simple;
+
+import org.jmol.adapter.smarter.*;
+
+import org.jmol.api.JmolAdapter;
+public class HyperChemReader extends AtomSetCollectionReader {
+  
+  @Override
+  protected boolean checkLine() throws Exception {
+    if (line.length() == 0 || line.charAt(0) == ';') // comment
+      return true;
+    if (line.startsWith("mol ")) {
+      // we have reached the start of a molecule
+      if (!doGetModel(++modelNumber))
+        return checkLastModel();
+      processMol();
+      return true;
+    }
+    if (!doProcessLines)
+      return true;
+    
+    if (line.startsWith("atom ")) {
+      processAtom();
+      return true;
+    }
+    if (line.startsWith("endmol ")) {
+      applySymmetryAndSetTrajectory();
+      return true;
+    }
+    return true;
+  }
+  
+  private int atomIndex;
+  private int baseAtomIndex;
+
+  private void processMol() throws Exception {
+    atomSetCollection.newAtomSet();
+    String molName = getMolName();
+    atomSetCollection.setAtomSetName(molName);
+    atomIndex = 0;
+    baseAtomIndex = atomSetCollection.getAtomCount();
+  }
+
+  private String getMolName() {
+    parseToken(line);
+    parseToken();
+    return parseToken();
+  }
+
+  private void processAtom() throws Exception {
+
+    int fileAtomNumber = parseInt(line, 5);
+    if (fileAtomNumber - 1 != atomIndex) {
+      throw new Exception ("bad atom number sequence ... expected:" +
+        (atomIndex + 1) + " found:" + fileAtomNumber);
+    }
+
+    Atom atom = atomSetCollection.addNewAtom();
+    parseToken(); // discard
+    atom.elementSymbol = parseToken();
+    parseToken(); // discard
+    parseToken(); // discard
+    atom.partialCharge = parseFloat();
+    setAtomCoord(atom, parseFloat(), parseFloat(), parseFloat());
+    
+    int bondCount = parseInt();
+    for (int i = 0; i < bondCount; ++i) {
+      int otherAtomNumber = parseInt();
+      String bondTypeToken = parseToken();
+      if (otherAtomNumber > atomIndex)
+        continue;
+      int bondOrder;
+      switch(bondTypeToken.charAt(0)) {
+      case 's': 
+        bondOrder = 1;
+        break;
+      case 'd': 
+        bondOrder = 2;
+        break;
+      case 't': 
+        bondOrder = 3;
+        break;      
+      case 'a':
+        bondOrder = JmolAdapter.ORDER_AROMATIC;
+        break;
+      default:
+        throw new Exception ("unrecognized bond type:" + bondTypeToken +
+          " atom #" + fileAtomNumber);
+      }
+      atomSetCollection.addNewBond(baseAtomIndex + atomIndex,
+                       baseAtomIndex + otherAtomNumber - 1,
+                       bondOrder);
+    }
+    ++atomIndex;
+  }
+
+}
