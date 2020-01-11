@@ -7,8 +7,8 @@ import java.awt.geom.AffineTransform;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
 
 public class ThreeImageNode extends PNode {

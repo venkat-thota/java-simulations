@@ -3,8 +3,8 @@ package com.aimxcel.abclearn.core.aimxcelcore.nodes;
 
 import java.awt.Image;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
 
 public class HorizontalTiledNode extends PImage {

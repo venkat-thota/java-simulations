@@ -27,13 +27,13 @@ import com.aimxcel.abclearn.eatingandexercise.view.HealthIndicator;
 import com.aimxcel.abclearn.eatingandexercise.view.HumanNode;
 import com.aimxcel.abclearn.eatingandexercise.view.ScaleNode;
 
-import edu.umd.cs.piccolo.PCamera;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PDragEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.util.PDimension;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PCamera;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PDragEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 public class EatingAndExerciseCanvas extends BufferedAimxcelPCanvas {
 
@@ -41,7 +41,12 @@ public class EatingAndExerciseCanvas extends BufferedAimxcelPCanvas {
     // Instance data
     //----------------------------------------------------------------------------
 
-    // Model
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	// Model
     private EatingAndExerciseModel _model;
 
     // View

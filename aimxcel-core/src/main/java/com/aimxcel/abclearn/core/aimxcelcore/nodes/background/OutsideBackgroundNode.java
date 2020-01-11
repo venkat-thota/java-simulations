@@ -6,7 +6,7 @@ import java.awt.geom.Rectangle2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.ImmutableRectangle2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform;
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 public class OutsideBackgroundNode extends PNode {
 

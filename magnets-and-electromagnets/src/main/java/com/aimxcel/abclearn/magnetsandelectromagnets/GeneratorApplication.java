@@ -10,15 +10,15 @@ import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationConfig;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationLauncher;
 
-/**
- * GeneratorApplication is the main application for the 
- * "Generator" simulation.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class GeneratorApplication extends CoreAimxcelApplication {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Constructors
     //----------------------------------------------------------------------------
 

@@ -1,15 +1,7 @@
 
 package com.aimxcel.abclearn.motion.model;
 
-/**
- * It's necessary to keep some data for performing time series based computations.
- * It's also necessary to keep all data that will be visible in playback area.
- * <p/>
- * However, if we keep all data, then the simulation will crash with OutOfMemoryException; therefore we try to prune the irrelevant data.
- * <p/>
- * Created by: Sam
- * Dec 3, 2007 at 10:57:08 PM
- */
+
 public class HeuristicPrunedTimeSeries extends DefaultTimeSeries {
     private double maxTime;
 

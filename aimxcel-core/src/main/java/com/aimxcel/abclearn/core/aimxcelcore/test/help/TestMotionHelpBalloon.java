@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.core.aimxcelcore.help.MotionHelpBalloon;
 
-import edu.umd.cs.piccolo.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
 
 public class TestMotionHelpBalloon {
     private JFrame frame;

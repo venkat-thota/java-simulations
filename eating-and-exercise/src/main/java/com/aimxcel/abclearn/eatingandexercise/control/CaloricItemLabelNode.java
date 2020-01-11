@@ -10,10 +10,14 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 public class CaloricItemLabelNode extends PNode {
-    private HTMLNode htmlNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private HTMLNode htmlNode;
 
     public CaloricItemLabelNode( String s ) {
         htmlNode = new HTMLNode( s );

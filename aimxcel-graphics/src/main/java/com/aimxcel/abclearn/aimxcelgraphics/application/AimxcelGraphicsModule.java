@@ -18,15 +18,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ControlPanel;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.CoreClockControlPanel;
 
-/**
- * This class encapsulates the parts of an application that make up
- * a complete virtual experiment. This includes, but is not limited to, the
- * on-screen controls and view elements that go along with the
- * experiment. Each module has its own model.
- *
- * @author ?
- * @version $Revision$
- */
+
 public class AimxcelGraphicsModule extends Module {
 
     private ApparatusPanel apparatusPanel;

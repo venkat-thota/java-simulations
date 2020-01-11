@@ -18,13 +18,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsRes
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsStrings;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.Voltmeter;
 
-/**
- * VoltmeterGraphic is the graphic representation of a voltmeter.
- * The meter's needle moves on a relative scale.
- * Registration point is at bottom-center of the meter body.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class VoltmeterGraphic extends CompositeAimxcelGraphic implements SimpleObserver {
     
     //----------------------------------------------------------------------------

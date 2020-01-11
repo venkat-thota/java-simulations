@@ -7,16 +7,12 @@ import java.awt.event.ComponentEvent;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolox.nodes.PClip;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+//import com.aimxcel.abclearn.aimxcel2dextra.nodes.PClip;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PClip;
 
-/**
- * DISCLAIMER: This class is under development and not ready for general use.
- * Renderer for DynamicJFreeChartNode
- *
- * @author Sam Reid
- */
+
 public class PPathSeriesView extends SeriesView {
     private PPath pathNode;
     private BasicStroke stroke = new BasicStroke( 3 );

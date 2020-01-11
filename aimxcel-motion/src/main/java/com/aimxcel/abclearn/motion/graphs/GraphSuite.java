@@ -1,11 +1,7 @@
 
 package com.aimxcel.abclearn.motion.graphs;
 
-/**
- * The GraphSuite represents a collection of MinimizableControlGraphs, so that the set of visible graphs can be easily selected and changed.
- *
- * @author Sam Reid
- */
+
 public class GraphSuite {
     private MinimizableControlGraph[] minimizableControlGraphs;
 

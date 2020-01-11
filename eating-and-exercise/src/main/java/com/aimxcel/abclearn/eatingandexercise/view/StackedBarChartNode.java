@@ -14,14 +14,15 @@ import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.ZoomControlNode;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseStrings;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Apr 17, 2008 at 6:24:50 PM
- */
+
 public class StackedBarChartNode extends PNode {
-    private PNode barLayer = new PNode();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PNode barLayer = new PNode();
     private Function.LinearFunction function;
     private String title;
     private int spacing;

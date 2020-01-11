@@ -13,9 +13,9 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ColorUtils;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.VisibleColor;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PImage;
-import edu.umd.cs.piccolo.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 
 public class PhotonNode extends AimxcelPNode {

@@ -1,10 +1,5 @@
 package com.aimxcel.abclearn.aimxcel2dcore.util;
 
-/**
- * This class is used to encapsulate exceptions that may occur while performing transform operations.
- *
- * @since 1.3
- */
 public class PAffineTransformException extends RuntimeException {
     /**
      * Allows for future serialization code to understand versioned binary

@@ -11,7 +11,7 @@ import java.awt.geom.RoundRectangle2D;
 
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
 
-import edu.umd.cs.piccolo.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 
 public class HandleNode extends AimxcelPNode {

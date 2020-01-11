@@ -12,15 +12,16 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Created by: Sam
- * Jun 6, 2008 at 1:39:30 PM
- */
+
 public class BMIReadout extends PNode {
-    private PText pText;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PText pText;
     private Human human;
     private AimxcelPPath background;
 

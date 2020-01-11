@@ -21,13 +21,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sam Reid
- * Date: Dec 30, 2004
- * Time: 11:18:57 AM
- * To change this template use File | Settings | File Templates.
- */
+
 public class TestApparatusPanel2Resize {
     public static void main( String[] args ) {
         JFrame frame = new JFrame( "Test AP2" );

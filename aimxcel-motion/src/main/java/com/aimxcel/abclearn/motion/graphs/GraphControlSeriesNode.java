@@ -7,15 +7,16 @@ import java.awt.Font;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowPText;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * Author: Sam Reid
- * Jul 20, 2007, 11:47:17 AM
- */
+
 public class GraphControlSeriesNode extends PNode {
-    private ShadowPText shadowPText;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ShadowPText shadowPText;
     private PSwing textBox;
     private GraphControlTextBox boxGraphControl;
     public static final Font LABEL_FONT = new AimxcelFont( Font.BOLD, 18 );

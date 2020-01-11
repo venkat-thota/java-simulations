@@ -29,12 +29,12 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 
-import edu.umd.cs.piccolo.PComponent;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PComponent;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 
 public class SliderNode extends PNode {

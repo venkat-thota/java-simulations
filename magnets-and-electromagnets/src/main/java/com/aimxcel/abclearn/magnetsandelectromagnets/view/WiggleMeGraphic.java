@@ -22,16 +22,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 
-/**
- * WiggleMeGraphic is the graphic that display a "Wiggle Me".
- * A wiggle me is provides help in situations where the user may not
- * know how to get started.  There is typically a piece of text,
- * along with one or more arrows that point to objects in the
- * apparatus panel.  The wiggle me directs the user to do something,
- * and it disappears as soon as the user does it.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class WiggleMeGraphic extends GraphicLayerSet implements ModelElement {
 
     //----------------------------------------------------------------------------

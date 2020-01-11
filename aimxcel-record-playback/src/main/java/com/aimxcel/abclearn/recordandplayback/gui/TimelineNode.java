@@ -21,21 +21,18 @@ import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.recordandplayback.model.RecordAndPlaybackModel;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * The TimelineNode is a piccolo node that graphically indicates the amount of data that has been recorded,
- * indicates to the user the current playback time, and allows the user to "seek" to a new playback time.  It is
- * similar to timeline graphics in a variety of media players.
- *
- * @param <T> the type for the state that is recorded.
- * @author Sam Reid
- */
+
 public class TimelineNode<T> extends PNode {
-    private RecordAndPlaybackModel<T> model;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private RecordAndPlaybackModel<T> model;
     private AimxcelPCanvas canvas;
     private double maxTime;
 
@@ -155,7 +152,11 @@ public class TimelineNode<T> extends PNode {
     }
 
     public static class Track extends AimxcelPPath {
-        private AimxcelPPath topShade;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private AimxcelPPath topShade;
         private AimxcelPPath bottomShade;
         private AimxcelPPath leftShade;
         private AimxcelPPath rightShade;

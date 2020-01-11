@@ -14,10 +14,7 @@ import javax.swing.JLabel;
 
 import com.aimxcel.abclearn.motion.MotionResources;
 
-/**
- * Author: Sam Reid
- * Aug 6, 2007, 2:41:56 PM
- */
+
 public class ColorArrows {
 
     /**

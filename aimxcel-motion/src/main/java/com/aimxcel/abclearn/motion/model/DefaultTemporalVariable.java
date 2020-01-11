@@ -6,10 +6,7 @@ import java.util.ArrayList;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
 import com.aimxcel.abclearn.motion.MotionMath;
 
-/**
- * Author: Sam Reid
- * Jul 26, 2007, 8:04:10 PM
- */
+
 public class DefaultTemporalVariable implements ITemporalVariable {
     private DefaultVariable variable;
     private DefaultTimeSeries series;

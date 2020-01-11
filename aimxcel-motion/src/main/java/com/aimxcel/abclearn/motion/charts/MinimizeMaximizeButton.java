@@ -9,13 +9,14 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserCompon
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.MinimizeMaximizeNode;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * @author Sam Reid
- */
 public class MinimizeMaximizeButton extends PNode {
-    private MinimizeMaximizeNode node;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private MinimizeMaximizeNode node;
     private BooleanProperty maximized;
     private final boolean defaultMaximizedValue;
 

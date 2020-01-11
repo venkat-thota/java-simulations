@@ -14,10 +14,6 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 
-/**
- * Draws a rectangle centered at (100,100) for purposes of aligning
- * a AimxcelTextGraphic and its bounding box.
- */
 
 public class TestTextGraphic {
     public static void main( String[] args ) {

@@ -12,14 +12,13 @@ import com.aimxcel.abclearn.motion.model.UpdateableObject;
 import com.aimxcel.abclearn.timeseries.model.TimeSeriesModel;
 import com.aimxcel.abclearn.aimxceljfreechart.core.JFreeChartCursorNode;
 
-/**
- * This subclass of ControlGraph is automatically connected to the supplied MotionModel
- * for update/notification messaging.
- *
- * @author Sam Reid
- */
+
 public class MotionControlGraph extends ControlGraph {
-    private ArrayList<Listener> listeners = new ArrayList<Listener>();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ArrayList<Listener> listeners = new ArrayList<Listener>();
     private JFreeChartCursorNode jFreeChartCursorNode;
     private UpdateableObject updateableObject;
     private UpdateStrategy updateStrategy;

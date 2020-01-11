@@ -6,10 +6,7 @@ import java.awt.geom.AffineTransform;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.eatingandexercise.model.EatingAndExerciseUnits;
 
-/**
- * Created by: Sam
- * Apr 18, 2008 at 1:14:25 AM
- */
+
 public class EatingAndExerciseRenderingSizeStrategy implements AimxcelPCanvas.TransformStrategy {
     private EatingAndExerciseCanvas canvas;
 

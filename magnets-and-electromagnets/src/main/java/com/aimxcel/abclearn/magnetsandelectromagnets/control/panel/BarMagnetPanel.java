@@ -33,14 +33,14 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.view.BFieldOutsideGraphic;
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.EarthGraphic;
 
 
-/**
- * BarMagnetPanel contains the controls for the bar magnet.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class BarMagnetPanel extends MagnetsAndElectromagnetsPanel {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
 

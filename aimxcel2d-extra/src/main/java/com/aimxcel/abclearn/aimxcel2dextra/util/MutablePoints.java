@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2008-2010, Piccolo2D project, http://piccolo2d.org
+ * Copyright (c) 2008-2010, Core2D project, http://piccolo2d.org
  * Copyright (c) 1998-2008, University of Maryland
  * All rights reserved.
  *
@@ -13,7 +13,7 @@
  * and the following disclaimer in the documentation and/or other materials provided with the
  * distribution.
  *
- * None of the name of the University of Maryland, the name of the Piccolo2D project, or the names of its
+ * None of the name of the University of Maryland, the name of the Core2D project, or the names of its
  * contributors may be used to endorse or promote products derived from this software without specific
  * prior written permission.
  *

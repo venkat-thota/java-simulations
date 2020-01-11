@@ -27,8 +27,8 @@ import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.event.ConstrainedDragHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
 
 public class TestConstrainedDragHandler extends JFrame {

@@ -7,7 +7,7 @@ import java.awt.Shape;
 
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 /**
  * Draws an icon Shape over the button.

@@ -6,10 +6,7 @@ import java.awt.image.BufferedImage;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelResources;
 
-/**
- * Author: Sam Reid
- * May 15, 2007, 8:12:31 PM
- */
+
 public class TimeseriesResources {
     private static AimxcelResources timeseriesresources = new AimxcelResources( "timeseries" );
 

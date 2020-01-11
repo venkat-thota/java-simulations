@@ -7,14 +7,17 @@ import java.awt.Shape;
 
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.util.PPaintContext;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 
-/**
- * @author Sam Reid
- */
+
 public class HighQualityAimxcelPPath extends AimxcelPPath {
 
-    public HighQualityAimxcelPPath( Shape shape, Color color ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public HighQualityAimxcelPPath( Shape shape, Color color ) {
         super( shape, color );
     }
 

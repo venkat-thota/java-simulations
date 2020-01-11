@@ -7,14 +7,15 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Jun 26, 2008 at 3:50:22 PM
- */
+
 public class HeadNode extends PNode {
-    private AimxcelPPath headPath;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private AimxcelPPath headPath;
     private Human human;
     private PNode eyeGraphics;
     private AimxcelPPath leftEye;

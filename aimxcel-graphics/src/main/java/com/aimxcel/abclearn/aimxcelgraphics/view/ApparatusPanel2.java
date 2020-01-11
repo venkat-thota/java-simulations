@@ -36,33 +36,19 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.EventChannel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
-/**
- * This is a base class for panels that contain graphic representations
- * of elements in the PhysicalSystem.
- * <p/>
- * The graphic objects to be displayed are maintained in "layers". Each layer can
- * contain any number of Graphic objects, and each layer has an integer "level"
- * associated with it. Layers are drawn in ascending order of their levels. The order
- * in which objects in a given level are drawn is undefined.
- * <p/>
- * The differences between this class and ApparatusPanel are:
- * <ul>
- * <li>The graphic objects in the panel setReferenceSize when the panel is resized
- * <li>Mouse events are handled in the model loop, not the Swing event dispatch thread
- * <li>An option allows drawing to be done to an offscreen buffer, then the whole buffer
- * written at one time to the graphics card
- * </ul>
- *
- * @author Ron LeMaster
- * @version $Revision$
- */
+
 public class ApparatusPanel2 extends ApparatusPanel implements ClockListener {
 
     //----------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------
 
-    private static final boolean DEBUG_OUTPUT_ENABLED = false;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final boolean DEBUG_OUTPUT_ENABLED = false;
 
     // Identifiers for different painting strategies
     public static final int DEFAULT_PAINT_STRATEGY = 1;
@@ -589,7 +575,11 @@ public class ApparatusPanel2 extends ApparatusPanel implements ClockListener {
     // Event-related classes
     //-----------------------------------------------------------------
     public static class ChangeEvent extends EventObject {
-        private ApparatusPanel2 apparatusPanel;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private ApparatusPanel2 apparatusPanel;
 
         public ChangeEvent( ApparatusPanel2 source ) {
             super( source );

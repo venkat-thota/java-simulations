@@ -9,10 +9,7 @@ import javax.swing.*;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelFrame;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-/**
- * Created by: Sam
- * Jun 26, 2008 at 4:37:47 PM
- */
+
 public class GameOverDialog {
     private AimxcelFrame parentFrame;
     private Human human;

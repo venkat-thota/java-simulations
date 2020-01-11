@@ -1,11 +1,4 @@
 
-
-/**
- * Class: TestCompositeGraphic
- * Package: edu.colorado.phet.common.tests.basicgraphics
- * Author: Another Guy
- * Date: Nov 12, 2004
- */
 package com.aimxcel.abclearn.aimxcelgraphics.test.graphics;
 
 import java.awt.Color;

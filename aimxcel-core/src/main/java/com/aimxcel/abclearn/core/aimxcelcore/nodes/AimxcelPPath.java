@@ -9,8 +9,8 @@ import java.awt.Stroke;
 import java.awt.geom.Point2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.AimxcelUtilities;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.util.PPaintContext;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 
 
 

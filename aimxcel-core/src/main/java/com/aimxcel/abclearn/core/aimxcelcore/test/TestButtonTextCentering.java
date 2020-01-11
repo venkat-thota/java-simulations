@@ -19,10 +19,10 @@ import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLImageButtonNode;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolo.util.PDebug;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDebug;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 public class TestButtonTextCentering {
 

@@ -17,15 +17,16 @@ import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResource
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.motion.util.GraphicsUtil;
 
-/**
- * User: Sam Reid
- * Date: Dec 28, 2006
- * Time: 8:16:34 AM
- */
+
 
 public class GraphSelectionControl extends JPanel {
 
-    public GraphSelectionControl( GraphSuiteSet graphSuiteSet, final GraphSetModel graphSetModel ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public GraphSelectionControl( GraphSuiteSet graphSuiteSet, final GraphSetModel graphSetModel ) {
         setLayout( new GridBagLayout() );
         GridBagConstraints gridBagConstraints = new GridBagConstraints( 0, GridBagConstraints.RELATIVE, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 0, 0, 0, 0 ), 0, 0 );
         JLabel label = new JLabel( AimxcelCommonResources.getString( "charts.show-graphs" ) );
@@ -37,7 +38,11 @@ public class GraphSelectionControl extends JPanel {
     }
 
     public static class GraphSuiteRadioButton extends JRadioButton {
-        private GraphSetModel graphSetPanel;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private GraphSetModel graphSetPanel;
         private GraphSuite graphSuite;
 
         public GraphSuiteRadioButton( final GraphSetModel graphSetModel, final GraphSuite graphSuite ) {

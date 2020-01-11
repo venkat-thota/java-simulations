@@ -7,16 +7,7 @@ import java.util.Comparator;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
 
-/**
- * This is the main model class for sims that support recording and playing back.  This is done by recording discrete states,
- * then being able to set re-apply them to the model.  This library does not currently provide support for interpolation between states.
- * <p/>
- * This mixture of side-effects and state capturing seems to simplify graphics updating of normal model updating,
- * though it can create additional complexity during playback.
- *
- * @param <T> the type of state that is recorded and restored, should be immutable.
- * @author Sam Reid
- */
+
 public abstract class RecordAndPlaybackModel<T> extends SimpleObservable {
 
     /**

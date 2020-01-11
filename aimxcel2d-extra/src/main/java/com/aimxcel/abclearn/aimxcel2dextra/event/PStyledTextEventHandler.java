@@ -245,7 +245,7 @@ public class PStyledTextEventHandler extends PBasicInputEventHandler {
     }
 
     /**
-     * Intercepts Piccolo2D events and dispatches the underlying swing one to
+     * Intercepts Core2D events and dispatches the underlying swing one to
      * the current editor.
      * 
      * @param event the swing event being intercepted

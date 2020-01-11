@@ -3,16 +3,16 @@ package com.aimxcel.abclearn.eatingandexercise.control;
 
 import com.aimxcel.abclearn.eatingandexercise.model.CalorieSet;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
-/**
- * Created by: Sam
- * Apr 23, 2008 at 11:35:09 AM
- */
 public class PlateTopSummaryNode extends PNode {
-    private PNode layer = new PNode();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PNode layer = new PNode();
     private CalorieSet calorieSet;
     private PNode plate;
     private boolean showItems = false;

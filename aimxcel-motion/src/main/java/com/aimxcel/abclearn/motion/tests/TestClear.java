@@ -6,10 +6,6 @@ import junit.framework.TestCase;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 import com.aimxcel.abclearn.motion.model.SingleBodyMotionModel;
 
-/**
- * Author: Sam Reid
- * Jun 26, 2007, 8:48:19 PM
- */
 public class TestClear extends TestCase {
     public void testClear() {
         ConstantDtClock swingClock = new ConstantDtClock( 30, 1 );

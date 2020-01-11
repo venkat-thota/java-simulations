@@ -32,12 +32,12 @@ import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.layout.HBox;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.layout.VBox;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PComponent;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PComponent;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
 import static java.util.Arrays.asList;
 

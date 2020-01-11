@@ -11,12 +11,13 @@ import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.EatingAndExerciseCanvas;
 
-/**
- * Created by: Sam
- * Jul 1, 2008 at 2:18:21 PM
- */
 public class ActivityLevelControl extends JPanel {
-    public ActivityLevelControl( final EatingAndExerciseCanvas canvas, Human human ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ActivityLevelControl( final EatingAndExerciseCanvas canvas, Human human ) {
         add( new ActivityLevelComboBox( canvas, human ) );
         final JButton button = new JButton( "?" );
         add( button );

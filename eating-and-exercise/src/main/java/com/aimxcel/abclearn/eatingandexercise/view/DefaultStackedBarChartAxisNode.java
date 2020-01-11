@@ -12,16 +12,16 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Created by: Sam
- * Apr 17, 2008 at 9:33:00 PM
- */
 public class DefaultStackedBarChartAxisNode extends PNode {
-    private Function function;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Function function;
     private double minorTickSpacing;
     private double majorTickSpacing;
     private double max;
@@ -61,7 +61,12 @@ public class DefaultStackedBarChartAxisNode extends PNode {
     }
 
     public class MinorTick extends PNode {
-        public MinorTick( double width, double y ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public MinorTick( double width, double y ) {
             AimxcelPPath path = new AimxcelPPath( new Line2D.Double( -width / 2, -modelToView( y ), width / 2, -modelToView( y ) ), new BasicStroke( 1 ), Color.black );
             addChild( path );
         }
@@ -72,7 +77,12 @@ public class DefaultStackedBarChartAxisNode extends PNode {
     }
 
     public class MajorTick extends PNode {
-        public MajorTick( double width, double y, boolean textOnLeft ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public MajorTick( double width, double y, boolean textOnLeft ) {
             AimxcelPPath path = new AimxcelPPath( new Line2D.Double( -width / 2, -modelToView( y ), width / 2, -modelToView( y ) ), new BasicStroke( 2 ), Color.black );
             addChild( path );
             PText textLabel = new EatingAndExercisePText( new DecimalFormat( "0" ).format( y ) );

@@ -6,10 +6,7 @@ import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseStrings;
 import com.aimxcel.abclearn.eatingandexercise.model.EatingAndExerciseUnits;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-/**
- * Created by: Sam
- * Apr 30, 2008 at 9:01:42 AM
- */
+
 public class ExerciseItem extends CaloricItem {
     private double weightDependence;
     private double referenceWeightPounds;

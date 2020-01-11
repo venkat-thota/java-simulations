@@ -3,10 +3,7 @@ package com.aimxcel.abclearn.eatingandexercise.model;
 
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.CaloricFoodItem;
 
-/**
- * Created by: Sam
- * Jul 14, 2008 at 8:12:19 PM
- */
+
 public class MuscleAndFatMassLoss2 implements HumanUpdate {
 
     public static double FRACTION_FAT_LOST = 0.5;

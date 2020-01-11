@@ -1,13 +1,6 @@
 
 package com.aimxcel.abclearn.motion.tests;
 
-/**
- * User: Sam Reid
- * Date: Dec 30, 2006
- * Time: 1:01:08 AM
- *
- */
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;

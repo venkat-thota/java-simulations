@@ -3,12 +3,7 @@ package com.aimxcel.abclearn.aimxceljfreechart.core.dynamic;
 
 import org.jfree.data.xy.XYSeriesCollection;
 
-/**
- * DISCLAIMER: This class is under development and not ready for general use.
- * Renderer for DynamicJFreeChartNode
- *
- * @author Sam Reid
- */
+
 public class JFreeChartSeriesView extends SeriesView {
 
     //todo: provide support for invisible jfreechart series view  

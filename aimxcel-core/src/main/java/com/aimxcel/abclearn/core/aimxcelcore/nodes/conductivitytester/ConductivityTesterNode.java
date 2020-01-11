@@ -30,12 +30,12 @@ import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.conductivitytester.IConductivityTester.ConductivityTesterChangeListener;
 import com.aimxcel.abclearn.core.aimxcelcore.simsharing.SimSharingDragHandler;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.nodes.PImage;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
 import static com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil.clamp;
 

@@ -11,17 +11,17 @@ import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.motion.model.TimeData;
 
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolox.nodes.PClip;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PClip;
 
-/**
- * This is the vertical cursor graphic that appears in charts to indicate playback time.
- *
- * @author Sam Reid
- */
+
 public class CursorNode extends PClip {
-    private ChartCursor cursor;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ChartCursor cursor;
     private TemporalChart chart;
     private AimxcelPPath path;
 

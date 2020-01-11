@@ -16,9 +16,9 @@ import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 public class TestRenderingSize {
     private JFrame frame;

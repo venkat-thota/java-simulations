@@ -7,11 +7,7 @@ import java.awt.geom.Point2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
-/**
- * AbstractMagnet is the abstract base class for all magnets.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public abstract class AbstractMagnet extends MagnetsAndElectromagnetsObservable {
 
     //----------------------------------------------------------------------------

@@ -26,8 +26,8 @@ import javax.swing.border.AbstractBorder;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelTitledBorder;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolo.util.PPaintContext;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 
 
 public class AimxcelTitledPanel2 extends VerticalLayoutPanel {

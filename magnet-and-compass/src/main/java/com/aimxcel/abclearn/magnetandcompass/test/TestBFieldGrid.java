@@ -22,10 +22,10 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.ArrowNode;
 import com.aimxcel.abclearn.magnetandcompass.MagnetAndCompassConstants;
 import com.aimxcel.abclearn.magnetandcompass.MagnetAndCompassResources;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
 
 public class TestBFieldGrid extends JFrame {

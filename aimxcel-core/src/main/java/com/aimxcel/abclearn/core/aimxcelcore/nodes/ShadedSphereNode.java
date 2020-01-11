@@ -14,7 +14,7 @@ import javax.swing.WindowConstants;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.TriColorRoundGradientPaint;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
 
-import edu.umd.cs.piccolo.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
 
 
 public class ShadedSphereNode extends AimxcelPNode {

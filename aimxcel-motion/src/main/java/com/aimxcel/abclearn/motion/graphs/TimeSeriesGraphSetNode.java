@@ -11,17 +11,16 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.timeseries.model.TimeSeriesModel;
 import com.aimxcel.abclearn.timeseries.ui.TimeSeriesControlPanel;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * User: Sam Reid
- * Date: Jan 9, 2007
- * Time: 7:52:23 AM
- */
 
 public class TimeSeriesGraphSetNode extends PNode {
-    private GraphSetNode graphSetNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private GraphSetNode graphSetNode;
     private PSwing timeSeriesControlPanelNode;
     private boolean constructed = false;
     private AimxcelPPath background;

@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolo.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 
 

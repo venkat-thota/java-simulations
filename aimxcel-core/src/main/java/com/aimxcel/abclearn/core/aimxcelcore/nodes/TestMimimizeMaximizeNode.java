@@ -13,8 +13,8 @@ import javax.swing.event.ChangeListener;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 
 public class TestMimimizeMaximizeNode {

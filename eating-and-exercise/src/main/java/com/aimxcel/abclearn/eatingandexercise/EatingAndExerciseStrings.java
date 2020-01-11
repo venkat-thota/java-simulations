@@ -4,10 +4,7 @@ package com.aimxcel.abclearn.eatingandexercise;
 
 import java.text.DecimalFormat;
 
-/**
- * The collection of localized strings used by this simulations.
- * We load all strings as statics so that we will be warned at startup time of any missing strings.
- */
+
 public class EatingAndExerciseStrings {
     public static String TITLE_EATING_AND_EXERCISE_MODULE = EatingAndExerciseResources.getString( "eating-and-exercise.name" );
 

@@ -26,11 +26,6 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.control.GraphicSlider;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.Battery;
 
 
-/**
- * BatteryGraphic is the graphical representation of a battery.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class BatteryGraphic extends GraphicLayerSet implements SimpleObserver {
 
     //----------------------------------------------------------------------------

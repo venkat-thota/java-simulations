@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 
 public class PeriodicTableNode extends PNode {

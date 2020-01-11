@@ -8,7 +8,7 @@ import javax.swing.ComboBoxModel;
 
 import com.aimxcel.abclearn.core.aimxcelcore.swing.AimxcelJComboBox;
 
-import edu.umd.cs.piccolox.pswing.PComboBox;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PComboBox;
 
 
 public class AimxcelPComboBox extends PComboBox {

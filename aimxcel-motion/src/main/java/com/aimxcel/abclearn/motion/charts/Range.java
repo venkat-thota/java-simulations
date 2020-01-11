@@ -4,9 +4,7 @@ package com.aimxcel.abclearn.motion.charts;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
 
-/**
- * @author Sam Reid
- */
+
 public class Range extends SimpleObservable {
     private double min;
     private double max;

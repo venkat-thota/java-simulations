@@ -9,11 +9,11 @@ import java.awt.Point;
 
 import javax.swing.JFrame;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.activities.PActivity;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolox.handles.PBoundsHandle;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dextra.handles.PBoundsHandle;
 
 
 

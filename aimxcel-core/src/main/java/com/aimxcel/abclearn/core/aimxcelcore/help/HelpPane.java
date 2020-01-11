@@ -8,7 +8,7 @@ import java.util.ListIterator;
 
 import javax.swing.JFrame;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 
 public class HelpPane extends GlassPaneCanvas {

@@ -28,9 +28,9 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolox.pswing.PSwingCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwingCanvas;
 
 public class TestHTMLNodeBounds extends JFrame {
 

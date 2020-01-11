@@ -13,12 +13,13 @@ import com.aimxcel.abclearn.eatingandexercise.model.CalorieSet;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.CaloricFoodItem;
 
-/**
- * Created by: Sam
- * Apr 29, 2008 at 7:53:15 AM
- */
+
 public class FoodSelectionPanel extends JPanel implements ICalorieSelectionPanel {
-    private CalorieSelectionPanel selectionPanel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private CalorieSelectionPanel selectionPanel;
     private Human human;
 
     public FoodSelectionPanel( Human human, CalorieSet available, CalorieSet calorieSet, String availableTitle, String selectedTitle ) {
@@ -36,7 +37,12 @@ public class FoodSelectionPanel extends JPanel implements ICalorieSelectionPanel
     }
 
     private class ActivityLevelsPanel extends JPanel {
-        private ActivityLevelsPanel() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		private ActivityLevelsPanel() {
             setBorder( CalorieSelectionPanel.createTitledBorder( EatingAndExerciseResources.getString( "diet.base" ) ) );
             ButtonGroup bg = new ButtonGroup();
             final CaloricFoodItem[] baseDiets = new CaloricFoodItem[]{

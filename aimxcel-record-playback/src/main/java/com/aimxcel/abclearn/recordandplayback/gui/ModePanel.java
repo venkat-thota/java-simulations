@@ -14,16 +14,15 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.recordandplayback.model.RecordAndPlaybackModel;
 
-/**
- * The ModePanel indicates whether the sim is in record or playback mode; the record or playback text is highlighted
- * in red if the sim is indeed recording or playing back (may not be if recording time is full or sim is paused).
- *
- * @param <T> the model type
- * @author Sam Reid
- */
+
 public class ModePanel<T> extends JPanel {
 
-    public ModePanel( final RecordAndPlaybackModel<T> model ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ModePanel( final RecordAndPlaybackModel<T> model ) {
         setLayout( new BoxLayout( this, BoxLayout.Y_AXIS ) );
         setBackground( new Color( 0, 0, 0, 0 ) );
         final JRadioButton recordingButton = new JRadioButton( AimxcelCommonResources.getString( "Common.record" ), model.isRecord() );

@@ -14,17 +14,16 @@ import javax.swing.JComponent;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.motion.MotionResources;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * User: Sam Reid
- * Date: Dec 28, 2006
- * Time: 8:22:10 AM
- */
-//Decorator pattern?
+
 public class MinimizableControlGraph extends PNode {
-    private String label;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String label;
     private boolean minimized = false;
     private PNode graphChild;
     private PNode stubChild;

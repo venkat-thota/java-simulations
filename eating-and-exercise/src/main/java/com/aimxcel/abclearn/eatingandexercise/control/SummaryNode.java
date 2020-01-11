@@ -7,14 +7,15 @@ import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.eatingandexercise.model.CalorieSet;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Apr 23, 2008 at 11:35:09 AM
- */
+
 public class SummaryNode extends PNode {
-    private PNode layer = new PNode();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PNode layer = new PNode();
     private CalorieSet calorieSet;
 
     public SummaryNode( CalorieSet calorieSet ) {

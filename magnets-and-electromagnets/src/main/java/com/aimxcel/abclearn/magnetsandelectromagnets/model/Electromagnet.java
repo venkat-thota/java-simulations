@@ -7,12 +7,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsConstants;
 
 
-/**
- * Electromagnet is the model of an electromagnet.
- * It is derived from the CoilMagnet model.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Electromagnet extends CoilMagnet implements SimpleObserver {
     
     //----------------------------------------------------------------------------

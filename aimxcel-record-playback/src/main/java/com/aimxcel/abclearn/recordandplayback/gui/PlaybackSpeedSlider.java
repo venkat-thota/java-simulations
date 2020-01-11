@@ -15,17 +15,16 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.recordandplayback.model.RecordAndPlaybackModel;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * The PlaybackSpeedSlider allows the user to view and modify the playback speed for a recorded sequence.
- *
- * @param <T>
- * @author Sam Reid
- */
+
 public class PlaybackSpeedSlider<T> extends PNode {
-    private RecordAndPlaybackModel<T> model;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private RecordAndPlaybackModel<T> model;
 
     public PlaybackSpeedSlider( final RecordAndPlaybackModel<T> model ) {
         this.model = model;

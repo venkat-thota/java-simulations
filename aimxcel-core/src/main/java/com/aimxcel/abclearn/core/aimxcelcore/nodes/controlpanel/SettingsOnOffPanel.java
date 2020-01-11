@@ -19,10 +19,10 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.kit.ZeroOffsetNode;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.layout.HBox;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.layout.VBox;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 import static com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources.getString;
 

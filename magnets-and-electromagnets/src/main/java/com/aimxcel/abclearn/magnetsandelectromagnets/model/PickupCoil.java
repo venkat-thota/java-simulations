@@ -13,12 +13,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsConstants;
 
 
-/**
- * PickupCoil is the model of a pickup coil.
- * Its behavior follows MagnetsAndElectromagnets's Law for electromagnetic induction.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class PickupCoil extends AbstractCoil implements ModelElement, SimpleObserver {
 
     //----------------------------------------------------------------------------

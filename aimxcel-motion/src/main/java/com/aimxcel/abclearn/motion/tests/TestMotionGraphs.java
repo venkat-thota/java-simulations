@@ -1,12 +1,6 @@
 
 package com.aimxcel.abclearn.motion.tests;
 
-/**
- * User: Sam Reid
- * Date: Dec 30, 2006
- * Time: 1:11:33 AM
- *
- */
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;

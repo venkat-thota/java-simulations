@@ -18,15 +18,16 @@ import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseStrings;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Created by: Sam
- * Apr 17, 2008 at 6:19:17 PM
- */
+
 public class StackedBarNode extends PNode {
-    private Function function;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Function function;
     private int barWidth;
     private PNode barChartElementNodeLayer = new PNode();
     private ReadoutNode readoutNode;
@@ -123,7 +124,12 @@ public class StackedBarNode extends PNode {
     }
 
     public static class BarChartElementControl extends LinearValueControl {
-        public BarChartElementControl( final BarChartElement elm ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public BarChartElementControl( final BarChartElement elm ) {
             super( 0, 200, elm.getName(), "0.00", "Calories" );
             setValue( elm.getValue() );
             addChangeListener( new ChangeListener() {
@@ -213,7 +219,11 @@ public class StackedBarNode extends PNode {
     }
 
     private class ReadoutNode extends PNode {
-        private PText child;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private PText child;
 
         private ReadoutNode() {
             child = new EatingAndExercisePText( "Text" );

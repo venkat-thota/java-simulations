@@ -3,9 +3,7 @@ package com.aimxcel.abclearn.motion.charts;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
 
-/**
- * @author Sam Reid
- */
+
 public class MutableDimension extends SimpleObservable {
     private double width;
     private double height;

@@ -46,7 +46,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
 
 public class TestAimxcelGraphics extends JFrame {
-    private ApparatusPanel panel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ApparatusPanel panel;
     private IClock clock;
 
     static interface TestAimxcelGraphicSource {

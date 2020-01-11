@@ -7,12 +7,7 @@ import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
 
-/**
- * GraphicsUtil
- *
- * @author ?
- * @version $Revision$
- */
+
 public class GraphicsUtil {
 
     /**

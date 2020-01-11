@@ -44,14 +44,14 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.view.CoilGraphic;
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.ElectromagnetGraphic;
 
 
-/**
- * ElectromagnetPanel contains the controls related to the electromagnet.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class ElectromagnetPanel extends MagnetsAndElectromagnetsPanel {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
 

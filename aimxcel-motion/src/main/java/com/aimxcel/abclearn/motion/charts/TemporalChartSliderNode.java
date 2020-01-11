@@ -8,14 +8,16 @@ import java.beans.PropertyChangeListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.motion.tests.ColorArrows;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * @author Sam Reid
- */
+
 public class TemporalChartSliderNode extends MotionSliderNode.Vertical {
-    private final TemporalChart temporalChart;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final TemporalChart temporalChart;
 
     public TemporalChartSliderNode( final TemporalChart temporalChart, Color highlightColor ) {
         this( temporalChart, new PImage( ColorArrows.createArrow( highlightColor ) ), highlightColor );

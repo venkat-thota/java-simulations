@@ -3,9 +3,6 @@ package com.aimxcel.abclearn.motion.charts;
 
 import java.util.ArrayList;
 
-/**
- * @author Sam Reid
- */
 public class ChartCursor {
     private double time;
     private ArrayList<Listener> listeners = new ArrayList<Listener>();

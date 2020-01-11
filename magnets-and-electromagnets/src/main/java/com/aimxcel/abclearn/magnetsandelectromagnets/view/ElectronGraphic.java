@@ -14,11 +14,6 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.model.Electron;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.ElectronPathDescriptor;
 
 
-/**
- * ElectronGraphic is the graphic represention of an electron.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ElectronGraphic extends AimxcelImageGraphic implements SimpleObserver {
     
     //----------------------------------------------------------------------------

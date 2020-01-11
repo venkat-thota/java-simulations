@@ -7,7 +7,7 @@ import java.awt.Font;
 import java.text.NumberFormat;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
 
 public class FormattedNumberNode extends PComposite {

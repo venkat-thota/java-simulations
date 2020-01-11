@@ -10,8 +10,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResource
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.clock.SimSpeedControl;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 
 public class SimSpeedControlPNode extends PNode {

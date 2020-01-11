@@ -17,8 +17,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction0;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLImageButtonNode;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
 
 public class FloatingClockControlNode extends PNode {

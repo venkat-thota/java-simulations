@@ -8,7 +8,7 @@ import java.awt.geom.Point2D;
 
 import javax.swing.SwingConstants;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 
 public class RegisterablePNode extends PNode {

@@ -8,12 +8,13 @@ import java.util.StringTokenizer;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.EatingAndExerciseUnits;
 
-/**
- * Created by: Sam
- * May 7, 2008 at 11:27:55 AM
- */
+
 public class YearMonthFormat extends NumberFormat {
-    private DecimalFormat format = new DecimalFormat( "0" );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private DecimalFormat format = new DecimalFormat( "0" );
 
     public Number parse( String source, ParsePosition parsePosition ) {
         StringTokenizer st = new StringTokenizer( source.substring( parsePosition.getIndex() ), "'\" /" );

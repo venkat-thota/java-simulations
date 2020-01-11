@@ -8,14 +8,15 @@ import javax.swing.*;
 
 import com.aimxcel.abclearn.eatingandexercise.view.LabelNode;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Jun 24, 2008 at 11:48:26 AM
- */
+
 public class TimeoutWarningMessage extends PNode {
-    private long lastVisibilityRestart;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private long lastVisibilityRestart;
 
     public TimeoutWarningMessage( String message ) {
         LabelNode labelNode = new LabelNode( message );

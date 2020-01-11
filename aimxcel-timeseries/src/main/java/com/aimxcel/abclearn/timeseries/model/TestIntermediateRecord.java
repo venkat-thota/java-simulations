@@ -5,10 +5,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 
 import junit.framework.TestCase;
 
-/**
- * Created by: Sam
- * Dec 2, 2007 at 10:33:17 PM
- */
+
 public class TestIntermediateRecord extends TestCase {
     public void testIntermediateRecord() throws InterruptedException {
         RecordableModel recordableModel = new RecordableModel() {

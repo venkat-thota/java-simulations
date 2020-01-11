@@ -14,13 +14,8 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGr
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.magnetandcompass.model.PickupCoil;
 
-/**
- * SamplePointsGraphic is the graphical representation of the
- * points on the coil where the magnetic field is sampled.
- * This graphic is used for debugging, and is intended to be a child of PickupCoilGraphic.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
+
 public class PickupCoilSamplePointsGraphic extends CompositeAimxcelGraphic implements SimpleObserver {
     
     private static final Color POINT_COLOR = Color.YELLOW;

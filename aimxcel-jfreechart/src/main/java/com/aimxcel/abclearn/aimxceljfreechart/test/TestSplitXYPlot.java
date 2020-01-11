@@ -24,11 +24,12 @@ import org.jfree.chart.renderer.xy.XYItemRenderer;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.ui.RectangleInsets;
 
-/**
- * 'Split' refers to the ability to draw just the chart, just the data or both.
- */
 public class TestSplitXYPlot extends XYPlot {
-    private boolean renderData = true;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private boolean renderData = true;
     private boolean backgroundIsBuffered = false;
     private BufferedImage buffer;
 

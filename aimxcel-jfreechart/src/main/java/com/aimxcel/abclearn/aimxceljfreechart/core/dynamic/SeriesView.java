@@ -7,12 +7,7 @@ import java.awt.geom.Rectangle2D;
 
 import org.jfree.data.xy.XYSeries;
 
-/**
- * DISCLAIMER: This class and subclasses are under development and not ready for general use.
- * Base class strategy for painting a data series.
- *
- * @author Sam Reid
- */
+
 public abstract class SeriesView {
     private DynamicJFreeChartNode dynamicJFreeChartNode;
     private SeriesData seriesData;

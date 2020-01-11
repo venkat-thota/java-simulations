@@ -17,16 +17,6 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translat
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelMultiLineTextGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
-
-/**
- * This example tests how GraphicLayerSet handles mouse events.
- * When a mouse event is received, children are given first crack at the event.
- * If no child handles the event, then the parent has the opportunity to
- * handle the event.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- * @version $Revision$
- */
 public class TestGraphicLayerSetMouseHandling extends JFrame {
 
     /**

@@ -12,7 +12,7 @@ import com.aimxcel.abclearn.core.aimxcelcore.RichPNode;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.layout.HBox;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.CoreClockControlPanel;
 
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 
 public class SlowMotionNormalTimeControlPanel extends RichPNode {

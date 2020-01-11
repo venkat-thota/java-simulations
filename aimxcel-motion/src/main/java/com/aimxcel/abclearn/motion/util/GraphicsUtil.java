@@ -5,11 +5,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-/**
- * User: Sam Reid
- * Date: Dec 28, 2006
- * Time: 9:32:26 AM
- */
+
 
 public class GraphicsUtil {
     public static boolean antialias( Graphics g, boolean antialias ) {

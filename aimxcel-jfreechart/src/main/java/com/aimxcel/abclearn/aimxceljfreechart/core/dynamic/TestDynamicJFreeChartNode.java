@@ -24,14 +24,10 @@ import org.jfree.data.xy.XYSeriesCollection;
 
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolo.util.PDebug;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDebug;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * Demonstration of usage and behavior of JFreeChartNode
- *
- * @author Sam Reid
- */
+
 public class TestDynamicJFreeChartNode {
     private JFrame frame;
     private Timer timer;

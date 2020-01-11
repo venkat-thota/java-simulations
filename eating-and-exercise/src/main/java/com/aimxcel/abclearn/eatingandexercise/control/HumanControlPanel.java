@@ -22,12 +22,12 @@ import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.EatingAnd
 import com.aimxcel.abclearn.eatingandexercise.util.FeetInchesFormat;
 import com.aimxcel.abclearn.eatingandexercise.util.YearMonthFormat;
 
-/**
- * Created by: Sam
- * Apr 3, 2008 at 1:14:21 PM
- */
 public class HumanControlPanel extends VerticalLayoutPanel {
-    private EatingAndExerciseModel model;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private EatingAndExerciseModel model;
     private Human human;
 
     private ArrayList listeners = new ArrayList();

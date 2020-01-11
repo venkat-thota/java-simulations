@@ -10,10 +10,10 @@ import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
 
 public class ZPNodeShowHideControlTester {

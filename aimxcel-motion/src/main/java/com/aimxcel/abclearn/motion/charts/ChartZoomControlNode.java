@@ -14,13 +14,15 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.AbstractMediaButton;
 import com.aimxcel.abclearn.motion.MotionResources;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * @author Sam Reid
- */
+
 public class ChartZoomControlNode extends PNode {
-    private VerticalZoomControl verticalZoomControl;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private VerticalZoomControl verticalZoomControl;
     private HorizontalZoomControl horizontalZoomControl;
 
     public ChartZoomControlNode( final TemporalChart chart ) {
@@ -56,11 +58,20 @@ public class ChartZoomControlNode extends PNode {
     }
 
     private static class ZoomButton extends PNode {
-        protected AbstractMediaButton button;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		protected AbstractMediaButton button;
 
         private ZoomButton( final String imageName, final Listener zoomListener ) {
             button = new AbstractMediaButton( 30 ) {
-                protected BufferedImage createImage() {
+                /**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+				protected BufferedImage createImage() {
                     try {
                         return BufferedImageUtils.multiScaleToHeight( MotionResources.loadBufferedImage( imageName ), 30 );
                     }
@@ -90,7 +101,12 @@ public class ChartZoomControlNode extends PNode {
     }
 
     private static class VerticalZoomControl extends PNode {
-        private VerticalZoomControl( final TemporalChart chart ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		private VerticalZoomControl( final TemporalChart chart ) {
             final ZoomButton zoomInButton = new ZoomButton( "magnify-plus.png", new Listener() {
                 public void actionPerformed() {
                     chart.zoomInVertical();
@@ -134,7 +150,12 @@ public class ChartZoomControlNode extends PNode {
 
     private static class HorizontalZoomControl extends PNode {
 
-        private HorizontalZoomControl( final TemporalChart chart ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		private HorizontalZoomControl( final TemporalChart chart ) {
             final ZoomButton zoomInButton = new ZoomButton( "magnify-plus.png", new Listener() {
                 public void actionPerformed() {
                     chart.zoomInHorizontal();
@@ -178,7 +199,11 @@ public class ChartZoomControlNode extends PNode {
     }
 
     public static class TriangleIcon extends PNode {
-        private double triangleHeight = 6;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private double triangleHeight = 6;
         private double triangleWidth = 6;
 
         public TriangleIcon() {

@@ -8,14 +8,10 @@ import java.awt.event.KeyEvent;
 
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Demonstration of usage and behavior of JFreeChartNode nested in a piccolo scene graph.
- *
- * @author Sam Reid
- */
+
 public class TestDynamicJFreeChartNodeTree extends TestDynamicJFreeChartNode {
     private PNode root;
     private boolean constructed = false;

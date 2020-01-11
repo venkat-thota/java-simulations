@@ -5,14 +5,9 @@ import java.awt.geom.Rectangle2D;
 
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.IncrementalPPath;
 
-import edu.umd.cs.piccolo.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * DISCLAIMER: This class is under development and not ready for general use.
- * Renderer for DynamicJFreeChartNode
- *
- * @author Sam Reid
- */
+
 public class BoundedPPathSeriesView extends PPathSeriesView {
     public BoundedPPathSeriesView( DynamicJFreeChartNode dynamicJFreeChartNode, SeriesData seriesData ) {
         super( dynamicJFreeChartNode, seriesData );

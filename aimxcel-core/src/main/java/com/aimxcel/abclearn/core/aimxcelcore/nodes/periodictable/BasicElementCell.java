@@ -11,7 +11,7 @@ import java.awt.geom.Rectangle2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
 
 public class BasicElementCell extends ElementCell {

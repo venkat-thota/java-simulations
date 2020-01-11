@@ -18,11 +18,6 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphi
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
-/**
- * User: Sam Reid
- * Date: Mar 2, 2005
- * Time: 2:26:36 PM
- */
 
 public class EmbeddedControlTest {
     JFrame frame = new JFrame();

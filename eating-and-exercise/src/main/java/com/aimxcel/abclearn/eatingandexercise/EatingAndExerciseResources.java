@@ -7,13 +7,9 @@ import java.awt.image.BufferedImage;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelResources;
 
-import edu.umd.cs.piccolo.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * TemplateResources is a wrapper around the Aimxcel resource loader.
- * If we decide to use a different technique to load resources in the
- * future, all changes will be encapsulated here.
- */
+
 public class EatingAndExerciseResources {
 
     private static final AimxcelResources RESOURCES = new AimxcelResources( EatingAndExerciseConstants.PROJECT_NAME );

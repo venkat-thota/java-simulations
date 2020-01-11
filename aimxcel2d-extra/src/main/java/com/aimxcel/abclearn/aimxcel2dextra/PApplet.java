@@ -26,10 +26,10 @@ public class PApplet extends JApplet {
         canvas.requestFocus();
         beforeInitialize();
 
-        // Manipulation of Piccolo's scene graph should be done from Swings
-        // event dispatch thread since Piccolo is not thread safe. This code
+        // Manipulation of Core's scene graph should be done from Swings
+        // event dispatch thread since Core is not thread safe. This code
         // calls initialize() from that thread once the PFrame is initialized,
-        // so you are safe to start working with Piccolo in the initialize()
+        // so you are safe to start working with Core in the initialize()
         // method.
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
@@ -66,7 +66,7 @@ public class PApplet extends JApplet {
     }
 
     /**
-     * Subclasses should override this method and add their Piccolo2d
+     * Subclasses should override this method and add their Core2d
      * initialization code there. This method will be called on the swing event
      * dispatch thread. Note that the constructors of PFrame subclasses may not
      * be complete when this method is called. If you need to initailize some

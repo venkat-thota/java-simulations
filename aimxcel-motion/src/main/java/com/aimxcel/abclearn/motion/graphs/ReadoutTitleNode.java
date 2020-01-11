@@ -16,16 +16,15 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowHTMLNode;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowPText;
 import com.aimxcel.abclearn.motion.model.IVariable;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Author: Sam Reid
- * Jul 20, 2007, 8:59:23 PM
- */
+
 public class ReadoutTitleNode extends PNode {
-    //8-13-2007: Rotation sim's performance has 50% memory allocation and 30% processor usage in HTMLNode.update
-    //Therefore, we just set the HTMLNode once, and update the text in piccolo without swing 
-    private ShadowHTMLNode titleNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ShadowHTMLNode titleNode;
     private ShadowPText valueNode;
     private ShadowHTMLNode unitsNode;
 
@@ -47,7 +46,11 @@ public class ReadoutTitleNode extends PNode {
     }
 
     public static class OutlinePText extends PNode implements ITextNode {
-        private String text;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private String text;
         private Font font;
         private FontRenderContext fontRenderContext;
         private AimxcelPPath render;

@@ -17,7 +17,11 @@ public class MagnetsAndElectromagnetsPanel extends JPanel {
     // Class data
     //----------------------------------------------------------------------------
 
-    public static final Dimension SLIDER_SIZE = new Dimension( 100, 20 );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static final Dimension SLIDER_SIZE = new Dimension( 100, 20 );
     public static final Dimension SPINNER_SIZE = new Dimension( 50, 20 );
     public static final String UNKNOWN_VALUE = "??";
     

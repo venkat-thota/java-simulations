@@ -202,7 +202,7 @@ public class PSwing extends PNode implements Serializable, PropertyChangeListene
      * The transform, clip, and composite will be set appropriately when this
      * object is rendered. It is up to this object to restore the transform,
      * clip, and composite of the Graphics2D if this node changes any of them.
-     * However, the color, font, and stroke are unspecified by Piccolo. This
+     * However, the color, font, and stroke are unspecified by Core. This
      * object should set those things if they are used, but they do not need to
      * be restored.
      * 
@@ -343,10 +343,10 @@ public class PSwing extends PNode implements Serializable, PropertyChangeListene
     }
 
     /**
-     * We need to turn off double buffering of Swing components within Piccolo
+     * We need to turn off double buffering of Swing components within Core
      * since all components contained within a native container use the same
      * buffer for double buffering. With normal Swing widgets this is fine, but
-     * for Swing components within Piccolo this causes problems. This function
+     * for Swing components within Core this causes problems. This function
      * recurses the component tree rooted at c, and turns off any double
      * buffering in use. It also updates the minimum font size based on the font
      * size of c and adds a property change listener to listen for changes to

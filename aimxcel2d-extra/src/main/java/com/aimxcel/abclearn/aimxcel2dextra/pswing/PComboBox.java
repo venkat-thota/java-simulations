@@ -46,7 +46,7 @@ public class PComboBox extends JComboBox implements Serializable {
      * 
      * @param items The items to populate the PComboBox list
      */
-    public PComboBox(final Vector items) {
+    public PComboBox(final Vector<?> items) {
         super(items);
         init();
     }
@@ -98,7 +98,7 @@ public class PComboBox extends JComboBox implements Serializable {
     }
 
     /**
-     * The substitute ComboPopupMenu that places itself correctly in Piccolo2d.
+     * The substitute ComboPopupMenu that places itself correctly in Core2d.
      */
     protected class PBasicComboPopup extends BasicComboPopup {
         private static final long serialVersionUID = 1L;
@@ -109,12 +109,12 @@ public class PComboBox extends JComboBox implements Serializable {
          * 
          * @param combo The associated ComboBox
          */
-        public PBasicComboPopup(final JComboBox combo) {
+        public PBasicComboPopup(final JComboBox<?> combo) {
             super(combo);
         }
 
         /**
-         * Computes the bounds for the Popup in Piccolo2D if a PMouseEvent has
+         * Computes the bounds for the Popup in Core2D if a PMouseEvent has
          * been received. Otherwise, it uses the default algorithm for placing
          * the popup.
          * 

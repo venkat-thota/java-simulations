@@ -19,12 +19,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.motion.model.IVariable;
 
-/**
- * Author: Sam Reid
- * Jul 20, 2007, 11:45:49 AM
- */
+
 public class GraphControlTextBox extends JPanel {
-    private JTextField textField;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JTextField textField;
     private DecimalFormat decimalFormat = new DefaultDecimalFormat( "0.00" );
     private ControlGraphSeries series;
 

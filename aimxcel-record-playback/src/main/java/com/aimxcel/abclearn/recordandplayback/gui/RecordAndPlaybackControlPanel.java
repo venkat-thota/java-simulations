@@ -23,18 +23,16 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.RewindButton;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.StepButton;
 import com.aimxcel.abclearn.recordandplayback.model.RecordAndPlaybackModel;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * The RecordAndPlaybackControlPanel is a replacement for the time control panel in phet simulations that
- * uses a RecordAndPlaybackModel to allow recording and playback of a sim.
- *
- * @param <T> the type of model state that is being recorded, typically immutable
- * @author Sam Reid
- */
+
 public class RecordAndPlaybackControlPanel<T> extends AimxcelPCanvas {
-    private RecordAndPlaybackModel<T> model;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private RecordAndPlaybackModel<T> model;
     private JComponent simPanel;//used to determine the size of this component
     private CoreTimeControlPanel.BackgroundNode backgroundNode = new CoreTimeControlPanel.BackgroundNode();
     private JButton clearButton = new JButton( AimxcelCommonResources.getString( "Common.clear" ) );

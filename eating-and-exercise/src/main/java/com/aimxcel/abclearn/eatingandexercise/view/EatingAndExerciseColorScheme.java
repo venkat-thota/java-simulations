@@ -3,10 +3,7 @@ package com.aimxcel.abclearn.eatingandexercise.view;
 
 import java.awt.*;
 
-/**
- * Created by: Sam
- * Apr 17, 2008 at 8:32:19 PM
- */
+
 public class EatingAndExerciseColorScheme {
     public static final Color BMR = new Color( 189, 46, 13 );
     public static final Color ACTIVITY = new Color( 248, 125, 17 );

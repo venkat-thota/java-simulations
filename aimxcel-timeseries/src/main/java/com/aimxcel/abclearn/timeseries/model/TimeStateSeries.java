@@ -1,15 +1,10 @@
 
 
-/*Aimxcel, 2004.*/
 package com.aimxcel.abclearn.timeseries.model;
 
 import java.util.ArrayList;
 
-/**
- * User: Sam Reid
- * Date: Jun 30, 2003
- * Time: 12:38:31 AM
- */
+
 public class TimeStateSeries {
     private ArrayList<TimeState> pts = new ArrayList<TimeState>();
 

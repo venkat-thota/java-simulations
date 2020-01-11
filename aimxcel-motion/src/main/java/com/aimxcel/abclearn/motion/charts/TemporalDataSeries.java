@@ -6,9 +6,7 @@ import java.util.Arrays;
 
 import com.aimxcel.abclearn.motion.model.TimeData;
 
-/**
- * @author Sam Reid
- */
+
 public class TemporalDataSeries {
     private ArrayList<TimeData> data = new ArrayList<TimeData>();
     private ArrayList<Listener> listeners = new ArrayList<Listener>();

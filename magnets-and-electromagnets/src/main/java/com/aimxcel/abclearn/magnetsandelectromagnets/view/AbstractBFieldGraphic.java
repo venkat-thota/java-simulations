@@ -18,16 +18,6 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsCon
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsSimSharing.Components;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.AbstractMagnet;
 
-
-/**
- * AbstractBFieldGraphic is the base class for our visualization of a B-Field.
- * As an alternative to a field diagram, the grid shows the strength and orientation
- * of a magnetic field (B-field) at a 2D grid of compass needles.
- * <p/>
- * See paint for important assumptions about the implementation of this class.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public abstract class AbstractBFieldGraphic extends AimxcelGraphic {
 
     //----------------------------------------------------------------------------

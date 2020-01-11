@@ -7,8 +7,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
 
 public abstract class NextPreviousNavigationNode extends PNode {

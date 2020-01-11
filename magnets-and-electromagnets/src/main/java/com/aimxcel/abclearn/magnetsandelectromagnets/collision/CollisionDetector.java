@@ -7,17 +7,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.Area;
 import java.util.HashSet;
 
-/**
- * CollisionDetector handles collision detection.
- * <b>
- * Each object can specify a set of Shapes that define its collision bounds.
- * Two objects collide if any of the Shapes in their collision bounds intersect.
- * <p>
- * This strategy is not scaleable. It works OK for this sim because we have
- * a very small number of objects that may collide.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class CollisionDetector {
 
     //----------------------------------------------------------------------------

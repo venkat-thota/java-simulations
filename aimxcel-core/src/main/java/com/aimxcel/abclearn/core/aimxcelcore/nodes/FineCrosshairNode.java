@@ -9,8 +9,8 @@ import java.awt.geom.Line2D;
 
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
 
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 
 public class FineCrosshairNode extends AimxcelPNode {

@@ -1,8 +1,8 @@
 
 package com.aimxcel.abclearn.core.aimxcelcore.nodes;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 
 public abstract class ToolNode extends PNode {

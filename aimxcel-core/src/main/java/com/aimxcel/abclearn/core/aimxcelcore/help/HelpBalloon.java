@@ -21,13 +21,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 
-import edu.umd.cs.piccolo.PCamera;
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.util.PAffineTransform;
-import edu.umd.cs.piccolox.nodes.PComposite;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PCamera;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PAffineTransform;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 
 public class HelpBalloon extends AbstractHelpItem {

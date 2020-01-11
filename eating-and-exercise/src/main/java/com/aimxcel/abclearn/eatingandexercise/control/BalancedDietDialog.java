@@ -17,16 +17,23 @@ import com.aimxcel.abclearn.eatingandexercise.control.valuenode.LinearValueContr
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.CaloricFoodItem;
 
-/**
- * Created by: Sam
- * Jun 26, 2008 at 8:55:58 AM
- */
+
 public class BalancedDietDialog extends PaintImmediateDialog {
-    public BalancedDietDialog( final CaloricFoodItem item ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public BalancedDietDialog( final CaloricFoodItem item ) {
         JPanel contentPane = new VerticalLayoutPanel();
 //        contentPane.setLayout( new GridBagLayout() );
         JLabel label = new JLabel( item.getLabelText(), new ImageIcon( EatingAndExerciseResources.getImage( item.getImage() ) ), SwingConstants.CENTER ) {
-            protected void paintComponent( Graphics g ) {
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			protected void paintComponent( Graphics g ) {
                 Graphics2D g2 = (Graphics2D) g;
                 g2.setRenderingHint( RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON );
                 super.paintComponent( g );

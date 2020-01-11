@@ -8,17 +8,18 @@ import java.awt.geom.Rectangle2D;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
-/**
- * Particle node graphic class for example application.
- *
- * @author Sam Reid
- */
+
 public class ParticleNode extends PNode {
-    ParticleNode( final Particle particle ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	ParticleNode( final Particle particle ) {
         final AimxcelPPath path = new AimxcelPPath( new Rectangle2D.Double( 0, 0, 100, 100 ), Color.blue, new BasicStroke( 4 ), Color.black );
         addChild( path );
         path.setOffset( particle.getX(), particle.getY() );

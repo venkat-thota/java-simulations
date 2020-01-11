@@ -19,12 +19,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
-/**
- * TestMouseHandling is a simple simulation that is useful for testing of mouse event handling.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- * @version $Revision$
- */
+
 public class TestMouseHandling {
 
     /**

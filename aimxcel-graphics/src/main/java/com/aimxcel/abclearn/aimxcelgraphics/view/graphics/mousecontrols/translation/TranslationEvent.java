@@ -4,14 +4,13 @@
 import java.awt.event.MouseEvent;
 import java.util.EventObject;
 
-/**
- * TranslationEvent
- *
- * @author ?
- * @version $Revision$
- */
+
 public class TranslationEvent extends EventObject {
-    private MouseEvent event;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private MouseEvent event;
     private int x;
     private int y;
     private int dx;

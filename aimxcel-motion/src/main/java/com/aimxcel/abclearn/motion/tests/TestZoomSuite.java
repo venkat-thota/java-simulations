@@ -1,12 +1,6 @@
 
 package com.aimxcel.abclearn.motion.tests;
 
-/**
- * User: Sam Reid
- * Date: Jan 1, 2007
- * Time: 10:10:09 PM
- *
- */
 
 import javax.swing.JFrame;
 

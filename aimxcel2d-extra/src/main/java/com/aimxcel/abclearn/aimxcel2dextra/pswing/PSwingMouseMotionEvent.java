@@ -18,7 +18,7 @@ public class PSwingMouseMotionEvent extends PSwingMouseEvent {
      * 
      * @param id The event type (MOUSE_MOVED, MOUSE_DRAGGED)
      * @param swingEvent The original Java mouse event when in MOUSE_DRAGGED events
-     * @param piccoloEvent Piccolo2d event to use when querying about the event's
+     * @param piccoloEvent Core2d event to use when querying about the event's
      *            piccolo2d context
      */
     protected PSwingMouseMotionEvent(final int id, final MouseEvent swingEvent, final PInputEvent piccoloEvent) {

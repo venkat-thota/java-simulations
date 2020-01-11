@@ -6,13 +6,6 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGr
 import com.aimxcel.abclearn.magnetsandelectromagnets.util.QuadBezierSpline;
 
 
-/**
- * ElectronPathDescriptor contains a description of one segment of an Electron's path.
- * This description is used exclusively by the view to describe the visual representation
- * of segments of the a coil, for the purposes of animating the flow of electrons in the coil.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ElectronPathDescriptor {
 
     //----------------------------------------------------------------------------

@@ -14,12 +14,6 @@ import java.util.ArrayList;
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
-
-/**
- * LightRaysGraphic is the graphical representation of a set of light rays.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 class LightRaysGraphic extends AimxcelGraphic {
 
     //----------------------------------------------------------------------------

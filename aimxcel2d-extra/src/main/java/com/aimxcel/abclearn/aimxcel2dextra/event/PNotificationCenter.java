@@ -1,38 +1,3 @@
-/*
- * Copyright (c) 2008-2010, Piccolo2D project, http://piccolo2d.org
- * Copyright (c) 1998-2008, University of Maryland
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification, are permitted provided
- * that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of conditions
- * and the following disclaimer.
- *
- * Redistributions in binary form must reproduce the above copyright notice, this list of conditions
- * and the following disclaimer in the documentation and/or other materials provided with the
- * distribution.
- *
- * None of the name of the University of Maryland, the name of the Piccolo2D project, or the names of its
- * contributors may be used to endorse or promote products derived from this software without specific
- * prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
- * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
- * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
- * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-/*
- * This class PNotificationCenter center is derived from the class
- * NSNotificationCenter from:
- * 
- * Wotonomy: OpenStep design patterns for pure Java
- * applications. Copyright (C) 2000 Blacksmith, Inc.
- */
 package com.aimxcel.abclearn.aimxcel2dextra.event;
 
 import java.lang.ref.ReferenceQueue;
@@ -47,20 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * <b>PNotificationCenter</b> provides a way for objects that don't know about
- * each other to communicate. It receives PNotification objects and broadcasts
- * them to all interested listeners. Unlike standard Java events, the event
- * listeners don't need to know about the event source, and the event source
- * doesn't need to maintain the list of listeners.
- * <p>
- * Listeners of the notifications center are held by weak references. So the
- * notification center will not create garbage collection problems as standard
- * java event listeners do.
- * </p>
- * 
- * @author Jesse Grosjean
- */
+
 public class PNotificationCenter {
     /** Used as a place holder for null names or objects. */
     public static final Object NULL_MARKER = new Object();

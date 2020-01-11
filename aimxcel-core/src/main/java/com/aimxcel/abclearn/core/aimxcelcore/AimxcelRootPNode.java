@@ -10,8 +10,8 @@ import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 public class AimxcelRootPNode extends PNode {
 

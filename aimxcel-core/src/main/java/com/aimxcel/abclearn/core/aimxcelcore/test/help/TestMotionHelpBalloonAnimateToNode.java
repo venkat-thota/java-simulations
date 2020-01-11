@@ -11,10 +11,10 @@ import javax.swing.Timer;
 
 import com.aimxcel.abclearn.core.aimxcelcore.help.MotionHelpBalloon;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolo.util.PUtil;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PUtil;
 
 public class TestMotionHelpBalloonAnimateToNode {
     private JFrame frame;

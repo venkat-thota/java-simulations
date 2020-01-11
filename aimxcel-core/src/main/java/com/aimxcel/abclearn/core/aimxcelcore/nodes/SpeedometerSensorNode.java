@@ -14,9 +14,9 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.Option.Some;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PImage;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 
 public class SpeedometerSensorNode extends ToolNode {

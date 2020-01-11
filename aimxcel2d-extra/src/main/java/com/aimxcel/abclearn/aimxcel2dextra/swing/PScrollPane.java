@@ -212,9 +212,9 @@ public class PScrollPane extends JScrollPane {
     }
 
     /**
-     * Overridden to create the Piccolo2D viewport.
+     * Overridden to create the Core2D viewport.
      * 
-     * @return the Piccolo2D version of the viewport
+     * @return the Core2D version of the viewport
      */
     protected JViewport createViewport() {
         return new PViewport();

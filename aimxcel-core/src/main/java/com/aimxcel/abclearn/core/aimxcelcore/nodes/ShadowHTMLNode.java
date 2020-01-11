@@ -5,7 +5,7 @@ package com.aimxcel.abclearn.core.aimxcelcore.nodes;
 import java.awt.Color;
 import java.awt.Font;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 /**
  * Draws html text with a drop shadow.

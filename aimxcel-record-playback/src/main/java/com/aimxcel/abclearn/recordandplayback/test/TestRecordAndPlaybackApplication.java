@@ -12,17 +12,18 @@ import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.recordandplayback.gui.RecordAndPlaybackControlPanel;
 import com.aimxcel.abclearn.recordandplayback.model.RecordAndPlaybackModel;
 
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
-/**
- * This application shows the minimal setup required to configure and use the recordandplayback library in a AimxcelApplication.
- *
- * @author Sam Reid
- */
+
 public class TestRecordAndPlaybackApplication extends AimxcelApplication {
 
-    public TestRecordAndPlaybackApplication( AimxcelApplicationConfig config ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public TestRecordAndPlaybackApplication( AimxcelApplicationConfig config ) {
         super( config );
         addModule( new TestRecordAndPlaybackModule() );
     }
@@ -69,7 +70,12 @@ public class TestRecordAndPlaybackApplication extends AimxcelApplication {
     }
 
     private class TestRecordAndPlaybackSimulationPanel extends AimxcelPCanvas {
-        private TestRecordAndPlaybackSimulationPanel( final TestRecordAndPlaybackModel model ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		private TestRecordAndPlaybackSimulationPanel( final TestRecordAndPlaybackModel model ) {
             ParticleNode particleNode = new ParticleNode( model.getParticle() );
 
             //when the user starts dragging the object, start recording

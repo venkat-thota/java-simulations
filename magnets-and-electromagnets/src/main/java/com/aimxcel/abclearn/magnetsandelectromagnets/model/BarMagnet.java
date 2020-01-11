@@ -17,54 +17,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsResources;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsStrings;
 
-/**
- * Model of a bar magnet that uses a grid of precomputed B-field values.
- * This model was motivated by Unfuddle #2236.
- * <p/>
- * It was not feasible to implement a numerical model directly in Java, as it relies on double integrals.
- * So the model was implemented in MathCAD, and MathCAD was used to create 3 grids of B-field vectors.
- * The MathCAD model can be found at magnets-and-electromagnets/doc/BarMagnet-MathCAD.pdf.
- * <p/>
- * The 3 B-field grids are:
- * <ul>
- * <li>internal: field internal to the magnet
- * <li>external-near: field near the magnet
- * <li>external-far: field far from the magnet
- * </ul>
- * <p/>
- * In order to model the discontinuity that appears at the top and bottom magnet edges,
- * internal and external-near have points that lie exactly on those edges, and have different
- * values for those points.
- * <p/>
- * The external-far grid is a sparse grid, and provides an approximate B-field for use by the compass.
- * <p/>
- * The 3 grids overlap such that external-near contains internal, and external-far contains external-near.
- * Each grid assumes that the magnet's center is at the origin, starts are xy=(0,0), and includes
- * only the quadrant where x and y are both positive (lower-right quadrant in our coordinate system).
- * <p/>
- * Each grid is stored in 2 files - one for Bx, one for By.
- * This simulation reads those files, and computes the B-field at a specified point
- * using a linear interpolation algorithm.
- * <p/>
- * Our coordinate system has +x to the left, and +y down, with quadrants numbered like this:
- * <code>
- * Q3 | Q2
- * -------
- * Q4 | Q1
- * </code>
- * The grid files contain the B-field components for Q1, with values in column-major order.
- * (This means that the x coordinate changes more slowly than the y coordinate.)
- * x and y coordinates both start at 0.
- * <p/>
- * After locating a B-field vector in Q1, here's how to map it to one of the other quadrants:
- * <ul>
- * <li>Q2: reflect about the x axis, so multiply By by -1
- * <li>Q3: reflect through the origin, so no change
- * <li>Q4: reflect about the x axis and reflect through the origin, so so multiply By by -1
- * </ul>
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class BarMagnet extends AbstractMagnet {
 
     // values used in MathCAD for generating the grid files

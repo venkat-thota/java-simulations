@@ -7,10 +7,7 @@ import java.util.Arrays;
 import com.aimxcel.abclearn.eatingandexercise.control.CaloricItem;
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.CaloricFoodItem;
 
-/**
- * Created by: Sam
- * Apr 23, 2008 at 1:39:44 PM
- */
+
 public class CalorieSet {
     private ArrayList list = new ArrayList();
     private ArrayList listeners = new ArrayList();

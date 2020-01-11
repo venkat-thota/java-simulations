@@ -21,16 +21,14 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsCon
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.PickupCoil;
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.*;
 
-
-/**
- * DeveloperControlsPanel contains developer controls.
- * The contents of this panel are not localized.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class DeveloperControlsPanel extends MagnetsAndElectromagnetsPanel {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Constructors
     //----------------------------------------------------------------------------
 

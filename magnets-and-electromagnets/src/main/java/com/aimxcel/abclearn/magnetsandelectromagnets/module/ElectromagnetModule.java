@@ -28,11 +28,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.view.ElectromagnetGraphic;
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.FieldMeterGraphic;
 
 
-/**
- * ElectromagnetModule is the "Electromagnet" module.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class ElectromagnetModule extends MagnetsAndElectromagnetsModule {
 
     //----------------------------------------------------------------------------

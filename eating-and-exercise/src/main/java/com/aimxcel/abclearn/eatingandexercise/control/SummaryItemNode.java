@@ -6,16 +6,17 @@ import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseStrings;
 import com.aimxcel.abclearn.eatingandexercise.view.EatingAndExercisePText;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PImage;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Created by: Sam
- * May 27, 2008 at 7:56:11 AM
- */
+
 public class SummaryItemNode extends PNode {
-    private CaloricItem item;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private CaloricItem item;
 
     public SummaryItemNode( CaloricItem item, int count ) {
         this.item = item;

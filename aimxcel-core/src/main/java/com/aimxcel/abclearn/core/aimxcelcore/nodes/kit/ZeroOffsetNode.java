@@ -6,8 +6,8 @@ import java.awt.Rectangle;
 import com.aimxcel.abclearn.core.aimxcelcore.RichPNode;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolox.PFrame;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dextra.PFrame;
 
 
 public class ZeroOffsetNode extends RichPNode {

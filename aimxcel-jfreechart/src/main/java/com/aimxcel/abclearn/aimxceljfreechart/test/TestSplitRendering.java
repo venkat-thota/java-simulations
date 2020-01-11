@@ -29,11 +29,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 
-/**
- * User: Sam Reid
- * Date: Dec 14, 2005
- * Time: 4:50:58 PM
- */
+
 
 public class TestSplitRendering {
     private XYSeriesCollection dataset = new XYSeriesCollection();

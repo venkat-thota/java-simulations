@@ -5,14 +5,15 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.BooleanProperty;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * @author Sam Reid
- */
 public class MinimizableControlChart extends PNode {
 
-    private ControlChart controlChart;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ControlChart controlChart;
     private MinimizeMaximizeButton minimizeMaximizeButton;
 
     public MinimizableControlChart( IUserComponent minimizeButtonComponent, IUserComponent maximizeButtonComponent, String title, final ControlChart controlChart ) {

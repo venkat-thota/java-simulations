@@ -4,13 +4,9 @@ package com.aimxcel.abclearn.motion.charts;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Layouts for MinimizableControlCharts
- *
- * @author Sam Reid
- */
+
 public interface ControlChartLayout {
     void updateLayout( MinimizableControlChart[] charts, double width, double height );
 

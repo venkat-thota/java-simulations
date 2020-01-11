@@ -2,11 +2,7 @@
 
 package com.aimxcel.abclearn.magnetsandelectromagnets.model;
 
-/**
- * AbstractCoil is the abstract base class for all coils.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public abstract class AbstractCoil extends MagnetsAndElectromagnetsObservable {
     
     //----------------------------------------------------------------------------

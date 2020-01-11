@@ -9,14 +9,15 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.Function;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Jun 27, 2008 at 8:37:27 AM
- */
+
 public class HealthBar extends PNode {
-    private Function.LinearFunction modelToView;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Function.LinearFunction modelToView;
     private double min;
     private double max;
     private double minOptimal;

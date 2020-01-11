@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.RulerNode;
 
-import edu.umd.cs.piccolo.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
 
 public class TestRulerNode {
 

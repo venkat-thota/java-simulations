@@ -18,7 +18,7 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.ControlPanelNode;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.kit.ZeroOffsetNode;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.layout.HBox;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 
 public class RadioButtonStripControlPanelNode<T> extends ControlPanelNode {

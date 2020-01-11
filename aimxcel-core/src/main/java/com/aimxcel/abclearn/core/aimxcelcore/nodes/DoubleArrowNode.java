@@ -12,7 +12,7 @@ import javax.swing.WindowConstants;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolo.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 public class DoubleArrowNode extends PPath {
 

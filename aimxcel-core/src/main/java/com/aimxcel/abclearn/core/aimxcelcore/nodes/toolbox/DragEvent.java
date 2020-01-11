@@ -1,8 +1,8 @@
 
 package com.aimxcel.abclearn.core.aimxcelcore.nodes.toolbox;
 
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 
 public class DragEvent {

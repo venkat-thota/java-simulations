@@ -20,10 +20,7 @@ import com.aimxcel.abclearn.eatingandexercise.control.ExerciseItem;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.CaloricFoodItem;
 
-/**
- * Created by: Sam
- * Apr 24, 2008 at 5:08:30 PM
- */
+
 public class EatingAndExerciseFileParser {
 
     public static CaloricFoodItem[] getFoodItems( Human human ) {

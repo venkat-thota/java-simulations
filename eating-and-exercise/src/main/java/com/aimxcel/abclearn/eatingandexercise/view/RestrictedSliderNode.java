@@ -7,15 +7,16 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.SliderNode;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Apr 24, 2008 at 6:48:47 PM
- */
+
 public class RestrictedSliderNode extends SliderNode {
 
-    private double dragmin;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private double dragmin;
     private double dragmax;
     private RestrictedRangeNode lowerRestrictedRange;
     private RestrictedRangeNode upperRestrictedRange;
@@ -38,7 +39,11 @@ public class RestrictedSliderNode extends SliderNode {
     }
 
     private class RestrictedRangeNode extends PNode {
-        private AimxcelPPath path;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private AimxcelPPath path;
         private double min;
         private double max;
 

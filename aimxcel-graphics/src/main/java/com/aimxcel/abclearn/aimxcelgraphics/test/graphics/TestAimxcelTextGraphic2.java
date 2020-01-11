@@ -26,13 +26,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.FrameSetup;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-/**
- * TestAimxcelTextGraphic2 test the bounds, justifications, and registration point
- * features of AimxcelTextGraphic22.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- * @version $Revision$
- */
+
 public class TestAimxcelTextGraphic2 {
 
     public static void main( String args[] ) throws IOException {

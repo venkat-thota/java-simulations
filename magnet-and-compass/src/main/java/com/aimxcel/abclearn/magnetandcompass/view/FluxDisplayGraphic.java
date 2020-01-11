@@ -14,12 +14,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.magnetandcompass.model.PickupCoil;
 
-/**
- * FluxDisplayGraphic displays flux and emf information related to a pickup coil.
- * This is used for debugging and is not localized.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class FluxDisplayGraphic extends GraphicLayerSet implements SimpleObserver {
 
     //----------------------------------------------------------------------------

@@ -12,8 +12,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.DoubleRange;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 import com.aimxcel.abclearn.core.aimxcelcore.simsharing.SimSharingDragHandler;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
 
 public class SliderThumbDragHandler extends SimSharingDragHandler {

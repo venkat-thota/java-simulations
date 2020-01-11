@@ -18,9 +18,9 @@ import javax.swing.event.ChangeListener;
 
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolox.pswing.PSwing;
-import edu.umd.cs.piccolox.pswing.PSwingCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwingCanvas;
 
 
 public class DebugPSwingComponentAdapter extends JFrame {

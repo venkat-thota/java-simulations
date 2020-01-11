@@ -8,14 +8,7 @@ import java.awt.geom.Rectangle2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
-/**
- * CoilMagnet is the model of a coil magnet.
- * The shape of the model is a circle, and the calculation of the magnetic field
- * at some point of interest varies depending on whether the point is inside or
- * outside the circle.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public abstract class CoilMagnet extends AbstractMagnet {
 
     //----------------------------------------------------------------------------

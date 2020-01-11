@@ -18,14 +18,14 @@ import com.aimxcel.abclearn.eatingandexercise.view.StackedBarNode;
 import com.aimxcel.abclearn.motion.model.DefaultTemporalVariable;
 import com.aimxcel.abclearn.motion.model.IVariable;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Apr 9, 2008 at 8:59:34 PM
- */
 public class CaloriePanel extends PNode {
-    private EatingAndExerciseCanvas phetPCanvas;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private EatingAndExerciseCanvas phetPCanvas;
     private StackedBarChartNode stackedBarChart;
     private CalorieNode foodNode;
     private CalorieNode exerciseNode;
@@ -60,7 +60,12 @@ public class CaloriePanel extends PNode {
         foodNode = new CalorieNode( parentFrame, EatingAndExerciseResources.getString( "edit.diet" ),
                                     new Color( 100, 100, 255 ), model.getAvailableFoods(),
                                     model.getHuman().getSelectedFoods(), EatingAndExerciseResources.getString( "food.sources" ), EatingAndExerciseResources.getString( "diet" ), "plate-2.png" ) {
-            protected ICalorieSelectionPanel createCalorieSelectionPanel() {
+            /**
+										 * 
+										 */
+										private static final long serialVersionUID = 1L;
+
+			protected ICalorieSelectionPanel createCalorieSelectionPanel() {
                 return new FoodSelectionPanel( model.getHuman(), getAvailable(), getCalorieSet(), getAvailableTitle(), getSelectedTitle() );
             }
         };
@@ -71,7 +76,12 @@ public class CaloriePanel extends PNode {
                                         Color.red, model.getAvailableExercise(),
                                         model.getHuman().getSelectedExercise(),
                                         EatingAndExerciseResources.getString( "menu.options" ), EatingAndExerciseResources.getString( "exercise.daily" ), "planner.png" ) {
-            protected ICalorieSelectionPanel createCalorieSelectionPanel() {
+            /**
+											 * 
+											 */
+											private static final long serialVersionUID = 1L;
+
+			protected ICalorieSelectionPanel createCalorieSelectionPanel() {
                 return new ExerciseSelectionPanel( model.getHuman(), getAvailable(), getCalorieSet(), getAvailableTitle(), getSelectedTitle() );
             }
         };

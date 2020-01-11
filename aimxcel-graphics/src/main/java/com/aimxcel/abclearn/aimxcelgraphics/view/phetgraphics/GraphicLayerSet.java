@@ -1,13 +1,5 @@
 
 
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author:samreid $
- * Revision : $Revision:14674 $
- * Date modified : $Date:2007-04-17 02:37:37 -0500 (Tue, 17 Apr 2007) $
- */
 package com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics;
 
 import java.awt.Component;
@@ -25,14 +17,7 @@ import javax.swing.event.MouseInputListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.MultiMap;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
-/**
- * GraphicLayerSet is a collection of AimxcelGraphics (referred to as "children").
- * Children are painted in the order that they are added.
- * Mouse events received by a GraphicLayer are forwarded to all children.
- *
- * @author ?
- * @version $Revision:14674 $
- */
+
 public class GraphicLayerSet extends AimxcelGraphic {
 
     private MultiMap graphicMap = new MultiMap();

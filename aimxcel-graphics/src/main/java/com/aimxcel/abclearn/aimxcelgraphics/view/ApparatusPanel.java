@@ -25,24 +25,14 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.util.GraphicsSetup;
 import com.aimxcel.abclearn.aimxcelgraphics.view.util.GraphicsState;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 
-/**
- * This is a base class for panels that contain graphic representations
- * of elements in the PhysicalSystem.
- * <p/>
- * The graphic objects to be displayed are maintained in "layers". Each layer can
- * contain any number of Graphic objects, and each layer has an integer "level"
- * associated with it. Layers are drawn in ascending order of their levels. The order
- * in which objects in a given level are drawn is undefined.
- * Test Comment.
- * <p/>
- *
- * @author Ron LeMaster
- * @version $Revision$
- * @see com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic
- */
+
 public class ApparatusPanel extends JPanel {
 
-    //
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//
     // Statics
     //
     public static final double LAYER_TOP = Double.POSITIVE_INFINITY;

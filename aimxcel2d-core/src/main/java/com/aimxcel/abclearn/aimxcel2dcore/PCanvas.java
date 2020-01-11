@@ -1,31 +1,3 @@
-/*
- * Copyright (c) 2008-2010, Piccolo2D project, http://piccolo2d.org
- * Copyright (c) 1998-2008, University of Maryland
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification, are permitted provided
- * that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of conditions
- * and the following disclaimer.
- *
- * Redistributions in binary form must reproduce the above copyright notice, this list of conditions
- * and the following disclaimer in the documentation and/or other materials provided with the
- * distribution.
- *
- * None of the name of the University of Maryland, the name of the Piccolo2D project, or the names of its
- * contributors may be used to endorse or promote products derived from this software without specific
- * prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
- * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
- * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
- * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
 package com.aimxcel.abclearn.aimxcel2dcore;
 
 import java.awt.Color;
@@ -59,17 +31,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.util.PDebug;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PStack;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PUtil;
-
-/**
- * <b>PCanvas</b> is a simple Swing component that can be used to embed Piccolo
- * into a Java Swing application. Canvases view the Piccolo scene graph through
- * a camera. The canvas manages screen updates coming from this camera, and
- * forwards swing mouse and keyboard events to the camera.
- * <P>
- * 
- * @version 1.0
- * @author Jesse Grosjean
- */
 public class PCanvas extends JComponent implements PComponent {
     /**
      * Allows for future serialization code to understand versioned binary
@@ -458,7 +419,7 @@ public class PCanvas extends JComponent implements PComponent {
     // Code to manage connection to Swing. There appears to be a bug in
     // swing where it will occasionally send too many mouse pressed or mouse
     // released events. Below we attempt to filter out those cases before
-    // they get delivered to the Piccolo framework.
+    // they get delivered to the Core framework.
     // ****************************************************************
 
     /**

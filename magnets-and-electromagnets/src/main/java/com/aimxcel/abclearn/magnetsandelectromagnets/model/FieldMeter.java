@@ -8,11 +8,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 
-/**
- * FieldMeter is the model of a B-field meter.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class FieldMeter extends MagnetsAndElectromagnetsObservable implements SimpleObserver {
 
     //----------------------------------------------------------------------------

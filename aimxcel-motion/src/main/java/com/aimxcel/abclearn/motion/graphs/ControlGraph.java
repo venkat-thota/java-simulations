@@ -37,22 +37,21 @@ import com.aimxcel.abclearn.aimxceljfreechart.core.JFreeChartNode;
 import com.aimxcel.abclearn.aimxceljfreechart.core.dynamic.DynamicJFreeChartNode;
 import com.aimxcel.abclearn.aimxceljfreechart.core.dynamic.SeriesData;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.nodes.PImage;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * The ControlGraph displays a graph of data for (multiple) time series data,
- * including horziontal and vertical zoom in/out and (optionally) a slider control for changing the data.
- *
- * @author Sam Reid
- */
+
 public class ControlGraph extends PNode {
-    private JFreeChart jFreeChart;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JFreeChart jFreeChart;
     private DynamicJFreeChartNode dynamicJFreeChartNode;
 
     private GraphTimeControlNode graphTimeControlNode;
@@ -411,7 +410,12 @@ public class ControlGraph extends PNode {
     }
 
     public static class TitleLayer extends AimxcelPNode {
-        public TitleLayer() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public TitleLayer() {
         }
 
         public void addReadoutNode( ReadoutTitleNode titleNode ) {

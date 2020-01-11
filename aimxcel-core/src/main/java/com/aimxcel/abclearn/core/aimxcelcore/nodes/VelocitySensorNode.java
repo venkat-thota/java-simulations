@@ -13,7 +13,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.Option;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.Function1;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform;
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 import static com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources.PICCOLO_AIMXCEL_VELOCITY_SENSOR_NODE_SPEED;
 import static com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources.PICCOLO_AIMXCEL_VELOCITY_SENSOR_NODE_UNKNOWN;

@@ -27,17 +27,17 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.SliderNode;
 import com.aimxcel.abclearn.core.aimxcelcore.test.CoreTestFrame;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * Created by: Sam
- * Jun 24, 2008 at 4:01:47 PM
- * <p/>
- */
+
 public class LinearValueControlNode extends PNode {
-    private PText labelNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PText labelNode;
     private PSwing readoutNode;
     private SliderNode sliderNode;
     private PText unitsNode;

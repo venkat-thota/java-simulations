@@ -31,11 +31,6 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.view.FieldMeterGraphic;
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.PickupCoilGraphic;
 
 
-/**
- * PickupCoilModule is the "Pickup Coil" module.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class PickupCoilModule extends MagnetsAndElectromagnetsModule {
 
     //----------------------------------------------------------------------------

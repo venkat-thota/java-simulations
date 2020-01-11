@@ -7,14 +7,15 @@ import java.awt.geom.GeneralPath;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Jun 27, 2008 at 12:03:24 PM
- */
+
 public class HealthLevel extends PNode {
-    private HealthBar bar;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private HealthBar bar;
     private AimxcelPPath path;
 
     public HealthLevel( HealthBar bar ) {

@@ -47,7 +47,7 @@ public class PSwingRepaintManager extends RepaintManager {
     /**
      * This is the method "repaint" now calls in the Swing components.
      * Overridden to capture repaint calls from those Swing components which are
-     * being used as Piccolo visual components and to call the Piccolo repaint
+     * being used as Core visual components and to call the Core repaint
      * mechanism rather than the traditional Component hierarchy repaint
      * mechanism. Otherwise, behaves like the superclass.
      * 
@@ -97,7 +97,7 @@ public class PSwingRepaintManager extends RepaintManager {
     /**
      * This is the method "invalidate" calls in the Swing components. Overridden
      * to capture invalidation calls from those Swing components being used as
-     * Piccolo visual components and to update Piccolo's visual component
+     * Core visual components and to update Core's visual component
      * wrapper bounds (these are stored separately from the Swing component).
      * Otherwise, behaves like the superclass.
      * 

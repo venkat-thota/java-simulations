@@ -3,12 +3,7 @@
 package com.aimxcel.abclearn.magnetsandelectromagnets.model;
 
 
-/**
- * AbstractCurrentSource is the abstract base class for all things that are 
- * capable of acting as a current source.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public abstract class AbstractCurrentSource extends MagnetsAndElectromagnetsObservable {
 
     //----------------------------------------------------------------------------

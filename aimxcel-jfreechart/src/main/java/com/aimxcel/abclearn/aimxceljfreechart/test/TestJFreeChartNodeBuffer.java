@@ -12,10 +12,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 
 import com.aimxcel.abclearn.aimxceljfreechart.core.JFreeChartNode;
 
-/**
- * Author: Sam Reid
- * Jun 5, 2007, 7:52:28 PM
- */
+
 public class TestJFreeChartNodeBuffer {
     public static void main( String[] args ) {
         XYSeries series = new XYSeries( "a" );

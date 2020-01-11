@@ -5,16 +5,14 @@ import static com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelAppli
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 
-/**
- * This class is a workaround for sims that have a problem resizing, see #2860.
- * The strategy is to sample the canvas size to ApparatusPanel2 and print out the reference size set by the TransformManager.
- * Then that reference size is provided as width x height for this constructor, and that value is used for the reference size.
- *
- * @author Sam Reid
- */
+
 public class ApparatusPanel3 extends ApparatusPanel2 {
 
-    private final int referenceWidth;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final int referenceWidth;
     private final int referenceHeight;
 
     //Construct an ApparatusPanel3 with the specified reference size

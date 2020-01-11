@@ -6,12 +6,7 @@ import java.util.ArrayList;
 
 import javax.swing.event.MouseInputListener;
 
-/**
- * CompositeMouseInputListener
- *
- * @author ?
- * @version $Revision$
- */
+
 public class CompositeMouseInputListener implements MouseInputListener {
     private ArrayList listeners = new ArrayList();
 

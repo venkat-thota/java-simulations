@@ -4,12 +4,9 @@ package com.aimxcel.abclearn.motion.model;
 import java.util.ArrayList;
 
 import com.aimxcel.abclearn.motion.MotionMath;
+import com.aimxcel.abclearn.motion.model.UpdateStrategy.DefaultUpdateStrategy.Listener;
 
-/**
- * User: Sam Reid
- * Date: Dec 29, 2006
- * Time: 11:36:26 PM
- */
+
 public interface UpdateStrategy {
     void update( IMotionBody motionBody, double dt, double time );
 
@@ -17,7 +14,7 @@ public interface UpdateStrategy {
         private double min;
         private double max;
 
-        private ArrayList listeners = new ArrayList();
+        private ArrayList<Listener> listeners = new ArrayList<Listener>();
 
         protected DefaultUpdateStrategy() {
             this( Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY );

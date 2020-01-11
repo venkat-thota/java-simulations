@@ -23,11 +23,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-/**
- * User: Sam Reid
- * Date: Jun 26, 2004
- * Time: 4:06:35 AM
- */
 public class CollisionTest {
     static class Sphere extends Particle {
         double radius;

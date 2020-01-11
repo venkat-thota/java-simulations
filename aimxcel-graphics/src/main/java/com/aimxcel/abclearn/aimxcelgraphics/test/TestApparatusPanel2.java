@@ -21,18 +21,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
-/**
- * Class: TestApparatusPanel2
- * Package: edu.colorado.phet.common.tests
- * Author: Another Guy
- * Date: Dec 13, 2004
- * <p/>
- * CVS Info:
- * Current revision:   $Revision$
- * On branch:          $Name$
- * Latest change by:   $Author$
- * On date:            $Date$
- */
+
 public class TestApparatusPanel2 {
 
 //    static class TestAppModel extends ApplicationModel {

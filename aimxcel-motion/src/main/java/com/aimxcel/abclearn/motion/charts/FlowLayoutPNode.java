@@ -4,13 +4,16 @@ package com.aimxcel.abclearn.motion.charts;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * @author Sam Reid
- */
+
 public class FlowLayoutPNode extends PNode {
-    public FlowLayoutPNode() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public FlowLayoutPNode() {
         addPropertyChangeListener( PNode.PROPERTY_CHILDREN, new PropertyChangeListener() {
             public void propertyChange( PropertyChangeEvent evt ) {
                 relayout();

@@ -1,13 +1,4 @@
 
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author:samreid $
- * Revision : $Revision:14674 $
- * Date modified : $Date:2007-04-17 02:37:37 -0500 (Tue, 17 Apr 2007) $
- */
 package com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics;
 
 import java.awt.Color;
@@ -23,13 +14,6 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
-
-/**
- * RepaintDebugGraphic
- *
- * @author ?
- * @version $Revision:14674 $
- */
 public class RepaintDebugGraphic extends AimxcelGraphic implements ClockListener {
     private int r = 255;
     private int g = 255;

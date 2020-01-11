@@ -3,12 +3,13 @@ package com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise;
 
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-/**
- * Created by: Sam
- * Jun 24, 2008 at 11:48:26 AM
- */
+
 public class StarvingMessage extends WarningMessage {
-    private Human human;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Human human;
 
     public StarvingMessage( final Human human ) {
         super( "<html>Starving!<html>" );

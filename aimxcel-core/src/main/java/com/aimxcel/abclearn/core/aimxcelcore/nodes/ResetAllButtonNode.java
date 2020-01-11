@@ -16,7 +16,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResource
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponents;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ResetAllDelegate;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
-import edu.umd.cs.piccolo.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
 
 
 public class ResetAllButtonNode extends TextButtonNode {

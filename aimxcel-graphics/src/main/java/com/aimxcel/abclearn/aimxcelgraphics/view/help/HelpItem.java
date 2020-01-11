@@ -18,12 +18,6 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphi
 import com.aimxcel.abclearn.aimxcelgraphics.view.util.GraphicsUtil;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-/**
- * HelpItem
- *
- * @author ?
- * @version $Revision$
- */
 public class HelpItem extends AimxcelGraphic {
 
     //----------------------------------------------------------------

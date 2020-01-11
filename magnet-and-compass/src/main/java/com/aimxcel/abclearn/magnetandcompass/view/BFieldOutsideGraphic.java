@@ -12,11 +12,7 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2.ChangeEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.magnetandcompass.model.AbstractMagnet;
 
-/**
- * BFieldOutsideGraphic is the B-field outside the magnet, which fills the apparatus panel.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class BFieldOutsideGraphic extends AbstractBFieldGraphic implements SimpleObserver, ApparatusPanel2.ChangeListener{
 
     private AbstractMagnet _magnetModel;

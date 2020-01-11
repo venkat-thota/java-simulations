@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.MeasuringTape;
 
-import edu.umd.cs.piccolo.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
 
 
 public class TestMeasuringTape {

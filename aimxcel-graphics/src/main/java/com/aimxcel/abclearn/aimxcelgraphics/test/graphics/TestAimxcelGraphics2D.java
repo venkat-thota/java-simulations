@@ -14,12 +14,7 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
-/**
- * TestAimxcelGraphics2D
- *
- * @author Ron LeMaster
- * @version $Revision$
- */
+
 public class TestAimxcelGraphics2D {
 
     public static void main( String[] args ) {

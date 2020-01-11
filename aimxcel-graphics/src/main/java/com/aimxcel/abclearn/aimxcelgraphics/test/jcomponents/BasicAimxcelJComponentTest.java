@@ -15,13 +15,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sam Reid
- * Date: Mar 8, 2005
- * Time: 8:49:52 PM
- * To change this template use File | Settings | File Templates.
- */
+
 public class BasicAimxcelJComponentTest {
     private JFrame frame;
     private ApparatusPanel2 ap;

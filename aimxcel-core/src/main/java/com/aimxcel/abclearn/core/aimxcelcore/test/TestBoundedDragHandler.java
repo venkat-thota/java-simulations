@@ -15,11 +15,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.event.BoundedDragHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.activities.PActivity;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolo.util.PBounds;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
 
 

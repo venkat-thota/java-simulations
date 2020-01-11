@@ -3,9 +3,7 @@ package com.aimxcel.abclearn.motion.model;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 
-/**
- * This class contains a single MotionBody, and convenience methods for interacting with it.
- */
+
 public class SingleBodyMotionModel extends MotionModel implements IPositionDriven, UpdateableObject {
 
     private MotionBody motionBody;

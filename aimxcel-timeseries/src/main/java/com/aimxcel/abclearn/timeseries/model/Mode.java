@@ -1,16 +1,7 @@
-
-
-/*Aimxcel, 2004.*/
 package com.aimxcel.abclearn.timeseries.model;
 
 import java.util.ArrayList;
 
-
-/**
- * User: Sam Reid
- * Date: Jul 1, 2003
- * Time: 1:12:18 PM
- */
 public abstract class Mode {
     private TimeSeriesModel timeSeriesModel;
 

@@ -5,10 +5,8 @@ import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseStrings;
 import com.aimxcel.abclearn.eatingandexercise.control.CaloricItem;
 
-/**
- * Created by: Sam
- * Apr 23, 2008 at 6:31:17 PM
- */
+
+
 public class CaloricFoodItem extends CaloricItem {
     private double lipids;//grams
     private double carbs;

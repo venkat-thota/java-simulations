@@ -3,11 +3,7 @@
 package com.aimxcel.abclearn.magnetandcompass.model;
 
 
-/**
- * SourceCoil is the model of the source coil used in an electromagnet.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class SourceCoil extends AbstractCoil {
     
     //----------------------------------------------------------------------------

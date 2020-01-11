@@ -7,8 +7,8 @@ import java.awt.Font;
 import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 
 public class OutlineHTMLNode extends PNode {

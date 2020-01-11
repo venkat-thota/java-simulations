@@ -6,10 +6,7 @@ import javax.swing.JFrame;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 import com.aimxcel.abclearn.timeseries.ui.TimeSeriesControlPanel;
 
-/**
- * Author: Sam Reid
- * May 15, 2007, 9:27:10 PM
- */
+
 public class TestTimeSeries {
     private JFrame frame;
 

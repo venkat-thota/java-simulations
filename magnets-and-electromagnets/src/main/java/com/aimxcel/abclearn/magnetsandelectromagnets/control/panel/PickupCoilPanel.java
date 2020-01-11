@@ -41,14 +41,14 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.view.CoilGraphic;
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.PickupCoilGraphic;
 
 
-/**
- * PickupCoilPanel contains the controls for the pickup coil.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class PickupCoilPanel extends MagnetsAndElectromagnetsPanel {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
 

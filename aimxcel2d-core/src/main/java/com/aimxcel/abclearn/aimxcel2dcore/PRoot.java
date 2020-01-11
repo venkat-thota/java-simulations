@@ -1,31 +1,3 @@
-/*
- * Copyright (c) 2008-2010, Piccolo2D project, http://piccolo2d.org
- * Copyright (c) 1998-2008, University of Maryland
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification, are permitted provided
- * that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of conditions
- * and the following disclaimer.
- *
- * Redistributions in binary form must reproduce the above copyright notice, this list of conditions
- * and the following disclaimer in the documentation and/or other materials provided with the
- * distribution.
- *
- * None of the name of the University of Maryland, the name of the Piccolo2D project, or the names of its
- * contributors may be used to endorse or promote products derived from this software without specific
- * prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
- * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
- * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
- * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
 package com.aimxcel.abclearn.aimxcel2dcore;
 
 import java.awt.event.ActionListener;
@@ -41,15 +13,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivityScheduler;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PDebug;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PNodeFilter;
 
-/**
- * <b>PRoot</b> serves as the top node in Piccolo2D's runtime structure. The
- * PRoot responsible for running the main UI loop that processes input from
- * activities and external events.
- * <P>
- * 
- * @version 1.1
- * @author Jesse Grosjean
- */
 public class PRoot extends PNode {
 
     /**
@@ -258,7 +221,7 @@ public class PRoot extends PNode {
     /**
      * Advanced. If you want to add additional input sources to the roots UI
      * process you can do that here. You will seldom do this unless you are
-     * making additions to the Piccolo2D framework.
+     * making additions to the Core2D framework.
      * 
      * @param inputSource An input source that should be added
      */
@@ -270,7 +233,7 @@ public class PRoot extends PNode {
     /**
      * Advanced. If you want to remove the default input source from the roots
      * UI process you can do that here. You will seldom do this unless you are
-     * making additions to the Piccolo2D framework.
+     * making additions to the Core2D framework.
      * 
      * @param inputSource input source that should no longer be asked about
      *            input events
@@ -283,7 +246,7 @@ public class PRoot extends PNode {
 
     /**
      * Returns a new timer. This method allows subclasses, such as PSWTRoot to
-     * create custom timers that will be used transparently by the Piccolo2D
+     * create custom timers that will be used transparently by the Core2D
      * framework.
      * 
      * @param delay # of milliseconds before action listener is invoked
@@ -296,11 +259,11 @@ public class PRoot extends PNode {
     }
 
     // ****************************************************************
-    // UI Loop - Methods for running the main UI loop of Piccolo2D.
+    // UI Loop - Methods for running the main UI loop of Core2D.
     // ****************************************************************
 
     /**
-     * Get the global Piccolo2D time. This is set to System.currentTimeMillis()
+     * Get the global Core2D time. This is set to System.currentTimeMillis()
      * at the beginning of the roots <code>processInputs</code> method.
      * Activities should usually use this global time instead of System.
      * currentTimeMillis() so that multiple activities will be synchronized.
@@ -312,7 +275,7 @@ public class PRoot extends PNode {
     }
 
     /**
-     * This is the heartbeat of the Piccolo2D framework. Pending input events
+     * This is the heartbeat of the Core2D framework. Pending input events
      * are processed. Activities are given a chance to run, and the bounds
      * caches and any paint damage is validated.
      */
@@ -373,7 +336,7 @@ public class PRoot extends PNode {
          */
         if (!SwingUtilities.isEventDispatchThread()) {
             /*
-             * Piccolo2D is not thread safe and should almost always be called
+             * Core2D is not thread safe and should almost always be called
              * from the Swing event dispatch thread. It should only reach this
              * point when a new canvas is being created.
              */
@@ -407,7 +370,7 @@ public class PRoot extends PNode {
 
     /**
      * This interfaces is for advanced use only. If you want to implement a
-     * different kind of input framework then Piccolo2D provides you can hook it
+     * different kind of input framework then Core2D provides you can hook it
      * in here.
      */
     public static interface InputSource {

@@ -14,7 +14,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.util.PNodeLayoutUtils;
 
-import edu.umd.cs.piccolo.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 public class TestAlignInside extends JFrame {
 

@@ -18,8 +18,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.AimxcelUtilities;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 
 public class TestJButtonAlignment extends JFrame {

@@ -1,11 +1,7 @@
 
 package com.aimxcel.abclearn.timeseries.model;
 
-/**
- * User: Sam Reid
- * Date: Apr 2, 2005
- * Time: 8:08:44 PM
- */
+
 
 public class TimeState {
     private Object value;

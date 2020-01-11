@@ -8,12 +8,13 @@ import javax.swing.*;
 
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-/**
- * Created by: Sam
- * Jun 27, 2008 at 10:13:56 AM
- */
 public class AliveCheckBox extends JCheckBox {
-    public AliveCheckBox( final Human human ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public AliveCheckBox( final Human human ) {
         super( "Alive", human.isAlive() );
         human.addListener( new Human.Adapter() {
             public void aliveChanged() {

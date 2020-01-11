@@ -7,8 +7,8 @@ import java.util.Comparator;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.Function1;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.util.PBounds;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
 import static java.util.Collections.max;
 

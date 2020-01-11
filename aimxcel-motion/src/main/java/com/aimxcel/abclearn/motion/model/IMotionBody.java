@@ -1,10 +1,7 @@
 
 package com.aimxcel.abclearn.motion.model;
 
-/**
- * Created by: Sam
- * Dec 5, 2007 at 10:24:20 AM
- */
+
 public interface IMotionBody {
     double getVelocity();
 

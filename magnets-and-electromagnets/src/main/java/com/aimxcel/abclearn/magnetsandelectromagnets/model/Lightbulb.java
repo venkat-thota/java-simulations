@@ -6,12 +6,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsConstants;
 
 
-/**
- * Lightbulb is the model of a lightbulb.
- * Its intensity is a function of the current in the pickup coil.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Lightbulb extends MagnetsAndElectromagnetsObservable implements SimpleObserver {
     
     //----------------------------------------------------------------------------

@@ -18,12 +18,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.collision.CollisionDetector
 import com.aimxcel.abclearn.magnetsandelectromagnets.collision.ICollidable;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.BarMagnet;
 
-/**
- * BarMagnetGraphic is the graphical representation of a bar magnet.
- * The registration point is at the center of the image.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class BarMagnetGraphic extends AimxcelImageGraphic
         implements SimpleObserver, ICollidable, ApparatusPanel2.ChangeListener {
 

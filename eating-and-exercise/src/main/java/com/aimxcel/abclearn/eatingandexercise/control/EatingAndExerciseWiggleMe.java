@@ -9,17 +9,18 @@ import com.aimxcel.abclearn.core.aimxcelcore.help.DefaultWiggleMe;
 import com.aimxcel.abclearn.core.aimxcelcore.help.MotionHelpBalloon;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.activities.PActivity;
-import edu.umd.cs.piccolo.util.PBounds;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
-/**
- * Created by: Sam
- * May 7, 2008 at 2:41:45 PM
- */
+
 public class EatingAndExerciseWiggleMe extends DefaultWiggleMe {
-    private PActivity activity;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PActivity activity;
     private PNode target;
     private PCanvas canvas;
 

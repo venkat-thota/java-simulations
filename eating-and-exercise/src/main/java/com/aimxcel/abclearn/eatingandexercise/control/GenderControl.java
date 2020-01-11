@@ -10,12 +10,14 @@ import javax.swing.*;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-/**
- * Created by: Sam
- * Jun 27, 2008 at 10:13:45 AM
- */
+
 public class GenderControl extends JPanel {
-    public GenderControl( final Human human ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public GenderControl( final Human human ) {
         setLayout( new FlowLayout() );
         final JRadioButton femaleButton = new JRadioButton( EatingAndExerciseResources.getString( "gender.female" ), human.getGender() == Human.Gender.FEMALE );
         femaleButton.addActionListener( new ActionListener() {

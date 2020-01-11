@@ -6,9 +6,9 @@ import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelTestApplicat
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 import com.aimxcel.abclearn.core.aimxcelcore.help.MotionHelpBalloon;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.util.PPaintContext;
-import edu.umd.cs.piccolo.util.PUtil;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PUtil;
 
 public class TestMotionHelpBalloonStartTime extends AimxcelTestApplication {
 

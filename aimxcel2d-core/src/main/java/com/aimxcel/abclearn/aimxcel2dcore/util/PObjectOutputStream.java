@@ -1,31 +1,3 @@
-/*
- * Copyright (c) 2008-2010, Piccolo2D project, http://piccolo2d.org
- * Copyright (c) 1998-2008, University of Maryland
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification, are permitted provided
- * that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of conditions
- * and the following disclaimer.
- *
- * Redistributions in binary form must reproduce the above copyright notice, this list of conditions
- * and the following disclaimer in the documentation and/or other materials provided with the
- * distribution.
- *
- * None of the name of the University of Maryland, the name of the Piccolo2D project, or the names of its
- * contributors may be used to endorse or promote products derived from this software without specific
- * prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
- * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
- * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
- * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
 package com.aimxcel.abclearn.aimxcel2dcore.util;
 
 import java.io.ByteArrayOutputStream;
@@ -33,38 +5,6 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.util.HashMap;
-
-/**
- * <b>PObjectOutputStream</b> is an extension of ObjectOutputStream to handle
- * optional elements. This is similar to the concept of Java's
- * "weak references", but applied to object serialization rather than garbage
- * collection. Here, PObjectOutputStream provides a method,
- * <code>writeConditionalObject</code>, which only serializes the specified
- * object to the stream if there is a strong reference (if it has been written
- * somewhere else using writeObject()) to that object elsewhere in the stream.
- * <p>
- * To discover strong references to objects, PObjectOutputStream uses a
- * two-phase writing process. First, a "discovery" phase is used to find out
- * what objects are about to be serialized. This works by effectively
- * serializing the object graph to /dev/null, recording which objects are
- * unconditionally written using the standard writeObject method. Then, in the
- * second "write" phase, ObjectOutputStream actually serializes the data to the
- * output stream. During this phase, calls to writeConditionalObject() will only
- * write the specified object if the object was found to be serialized during
- * the discovery stage. If the object was not recorded during the discovery
- * stage, a an optional null (the default) is unconditionally written in place
- * of the object. To skip writting out the null use
- * <code>writeConditionalObject(object, false)</code>
- * <p>
- * By careful implementation of readObject and writeObject methods, streams
- * serialized using PObjectOutputStream can be deserialized using the standard
- * ObjectInputStream.
- * <p>
- * 
- * @version 1.0
- * @author Jon Meyer
- * @author Jesse Grosjean
- */
 public class PObjectOutputStream extends ObjectOutputStream {
 
     private boolean writingRoot;

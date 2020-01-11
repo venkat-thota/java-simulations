@@ -6,12 +6,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsConstants;
 
 
-/**
- * Turbine is the model of a simple turbine. It rotates at some speed, and its 
- * rotation is measured in RPMs (rotations per minute).
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Turbine extends BarMagnet implements ModelElement {
     
     //----------------------------------------------------------------------------

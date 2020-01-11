@@ -3,12 +3,13 @@ package com.aimxcel.abclearn.eatingandexercise.view;
 
 import java.awt.*;
 
-/**
- * Created by: Sam
- * Jun 27, 2008 at 12:16:16 PM
- */
+
 public class IndicatorHealthBar extends HealthBar {
-    private HealthLevel healthLevel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private HealthLevel healthLevel;
 
     public IndicatorHealthBar( String name, double min, double max, double minOptimal, double maxOptimal, double viewHeight, Color minColor, Color maxColor ) {
         super( name, min, max, minOptimal, maxOptimal, viewHeight, minColor, maxColor );

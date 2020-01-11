@@ -8,13 +8,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsConstants;
 
 
-/**
- * Voltmeter is the model of an analog voltmeter.
- * It's needle deflection is a function of the current in the pickup coil.
- * It uses an ad hoc algorithm that makes the needle wobble around the zero point.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Voltmeter extends MagnetsAndElectromagnetsObservable implements ModelElement, SimpleObserver {
   
     //----------------------------------------------------------------------------

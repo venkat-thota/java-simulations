@@ -11,14 +11,14 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-import edu.umd.cs.piccolo.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * Created by: Sam
- * Apr 18, 2008 at 1:10:26 AM
- */
 public class HeartNode extends PImage {
-    private PImage heart;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PImage heart;
     private Human human;
     private AimxcelPPath smilePath;
 

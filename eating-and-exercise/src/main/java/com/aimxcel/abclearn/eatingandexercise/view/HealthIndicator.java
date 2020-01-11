@@ -7,14 +7,15 @@ import com.aimxcel.abclearn.core.aimxcelcore.test.CoreTestFrame;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Jun 27, 2008 at 8:36:43 AM
- */
+
 public class HealthIndicator extends PNode {
-    private IndicatorHealthBar heartStrengthIndicator;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private IndicatorHealthBar heartStrengthIndicator;
     private IndicatorHealthBar heartStrainIndicator;
     private Human human;
     private static final int INDICATOR_BAR_HEIGHT = 150;
@@ -36,7 +37,11 @@ public class HealthIndicator extends PNode {
     }
 
     private static class HeartStrengthIndicatorBar extends IndicatorHealthBar {
-        private Human human;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private Human human;
 
         public HeartStrengthIndicatorBar( final Human human ) {
             super( "<html>" + EatingAndExerciseResources.getString( "heart.strength" ) + "</html>", 0, 1, 250 / 1000.0, 1000 / 1000.0, INDICATOR_BAR_HEIGHT, Color.red, Color.green );
@@ -55,7 +60,11 @@ public class HealthIndicator extends PNode {
     }
 
     private static class HeartStrainIndicatorBar extends IndicatorHealthBar {
-        private Human human;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private Human human;
 
         public HeartStrainIndicatorBar( Human human ) {
             super( "<html>" + EatingAndExerciseResources.getString( "heart.strain" ) + "</html>", 0, 1, 16 / 100.0, 31 / 100.0, INDICATOR_BAR_HEIGHT, Color.green, Color.red );

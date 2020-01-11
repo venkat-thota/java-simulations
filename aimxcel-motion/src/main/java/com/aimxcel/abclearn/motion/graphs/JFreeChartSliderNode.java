@@ -16,19 +16,17 @@ import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
 import com.aimxcel.abclearn.aimxceljfreechart.core.JFreeChartNode;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
-/**
- * This component contains both a JFreeChartNode (supplied by the caller) and a vertical Slider node,
- * which spans the data range of the JFreeChart.
- * This component can be used to display and control an xy dataset.
- *
- * @author Sam Reid
- */
+
 public class JFreeChartSliderNode extends PNode {
-    private AimxcelPPath trackPPath;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private AimxcelPPath trackPPath;
     private PNode sliderThumb;
     private Color highlightColor;
     private double value = 0.0;

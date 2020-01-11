@@ -22,7 +22,7 @@ import com.aimxcel.abclearn.aimxceljfreechart.core.JFreeChartNode;
 import com.aimxcel.abclearn.aimxceljfreechart.core.dynamic.DynamicJFreeChartNode;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 public class TestDataAreaChange {
     private JFrame frame;

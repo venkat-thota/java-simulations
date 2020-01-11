@@ -4,12 +4,7 @@ package com.aimxcel.abclearn.aimxceljfreechart.core.dynamic;
 import java.awt.Rectangle;
 import java.awt.geom.Rectangle2D;
 
-/**
- * DISCLAIMER: This class is under development and not ready for general use.
- * Renderer for DynamicJFreeChartNode
- *
- * @author Sam Reid
- */
+
 public class BufferedImmediateSeriesView extends BufferedSeriesView {
 
     public BufferedImmediateSeriesView( DynamicJFreeChartNode dynamicJFreeChartNode, SeriesData seriesData ) {

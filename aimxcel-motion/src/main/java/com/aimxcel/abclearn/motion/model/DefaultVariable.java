@@ -3,10 +3,7 @@ package com.aimxcel.abclearn.motion.model;
 
 import java.util.ArrayList;
 
-/**
- * Author: Sam Reid
- * Jun 26, 2007, 12:20:50 PM
- */
+
 public class DefaultVariable implements IVariable {
     private double value;
     private ArrayList<Listener> listeners = new ArrayList<Listener>();

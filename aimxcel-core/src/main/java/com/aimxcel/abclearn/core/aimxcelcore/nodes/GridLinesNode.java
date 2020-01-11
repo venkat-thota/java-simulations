@@ -6,10 +6,10 @@ import java.awt.Paint;
 import java.awt.Stroke;
 import java.awt.geom.GeneralPath;
 
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.util.PBounds;
-import edu.umd.cs.piccolo.util.PDimension;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
 
 public class GridLinesNode extends PComposite {

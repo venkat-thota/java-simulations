@@ -9,17 +9,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-/**
- * Compass is the model of a compass.
- * <p/>
- * Several types of compass behavior can be specified using setBehavior.
- * In the case of KINEMATIC_BEHAVIOR, the compass needle attempts to be
- * physically accurate with respect to force, friction, inertia, etc.
- * Instead of jumping to an orientation, the needle will overshoot,
- * then gradually reach equilibrium.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Compass extends MagnetsAndElectromagnetsObservable implements ModelElement, SimpleObserver {
 
     //----------------------------------------------------------------------------

@@ -7,7 +7,7 @@ import java.awt.geom.Point2D;
 
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolo.activities.PActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
 
 public class PanZoomWorldKeyHandler implements KeyListener {
     private AimxcelPCanvas aimxcelPCanvas;

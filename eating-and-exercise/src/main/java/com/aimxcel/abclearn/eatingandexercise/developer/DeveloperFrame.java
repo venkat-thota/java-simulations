@@ -10,12 +10,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.Line
 import com.aimxcel.abclearn.eatingandexercise.model.MuscleAndFatMassLoss2;
 import com.aimxcel.abclearn.eatingandexercise.model.MuscleGainedFromExercising;
 
-/**
- * Created by: Sam
- * Aug 5, 2008 at 3:01:31 PM
- */
 public class DeveloperFrame extends JFrame {
-    public DeveloperFrame() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public DeveloperFrame() {
         VerticalLayoutPanel verticalLayoutPanel = new VerticalLayoutPanel();
         final LinearValueControl slider = new LinearValueControl( 0, 1, MuscleAndFatMassLoss2.FRACTION_FAT_LOST, "fraction fat", "0.0000", "" );
         slider.addChangeListener( new ChangeListener() {

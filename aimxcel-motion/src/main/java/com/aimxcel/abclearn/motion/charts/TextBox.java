@@ -11,16 +11,16 @@ import java.util.ArrayList;
 
 import javax.swing.JTextField;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * This component allows the user to enter data for a series, and it reads out values for series.
- *
- * @author Sam Reid
- */
+
 public class TextBox extends PNode {
-    private JTextField swingTextField;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JTextField swingTextField;
     private ArrayList<Listener> listeners = new ArrayList<Listener>();
     protected final PSwing textField;
 

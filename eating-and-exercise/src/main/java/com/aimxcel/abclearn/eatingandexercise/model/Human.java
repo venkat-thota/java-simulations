@@ -16,10 +16,7 @@ import com.aimxcel.abclearn.motion.model.DefaultTemporalVariable;
 import com.aimxcel.abclearn.motion.model.ITemporalVariable;
 import com.aimxcel.abclearn.motion.model.IVariable;
 
-/**
- * Created by: Sam
- * Apr 3, 2008 at 1:05:20 PM
- */
+
 public class Human {
 
     private String name;

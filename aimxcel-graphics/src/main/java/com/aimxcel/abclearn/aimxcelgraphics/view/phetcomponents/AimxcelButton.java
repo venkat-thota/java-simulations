@@ -20,13 +20,6 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGr
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sam Reid
- * Date: Dec 24, 2004
- * Time: 12:28:11 AM
- * To change this template use File | Settings | File Templates.
- */
 public class AimxcelButton extends CompositeAimxcelGraphic {
     private String text;
     private AimxcelTextGraphic textGraphic;

@@ -12,18 +12,19 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseStrings;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.nodes.PImage;
-import edu.umd.cs.piccolox.nodes.PClip;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PClip;
 
-/**
- * Created by: Sam
- * Aug 18, 2008 at 10:09:21 AM
- */
+
 public class BarChartElementNode extends PNode {
-    private BarChartElement barChartElement;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private BarChartElement barChartElement;
     private PClip clip;
     private AimxcelPPath barNode;
     private AimxcelPPath barThumb;

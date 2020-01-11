@@ -20,16 +20,18 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.motion.MotionResources;
 import com.aimxcel.abclearn.motion.tests.ColorArrows;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * @author Sam Reid
- */
+
 public abstract class MotionSliderNode extends PNode {
-    private AimxcelPPath trackPPath;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private AimxcelPPath trackPPath;
     protected AimxcelPPath tickMarkAtZero;
     private PNode sliderThumb;
     private double value = 0.0;
@@ -321,7 +323,12 @@ public abstract class MotionSliderNode extends PNode {
     }
 
     public static class Vertical extends MotionSliderNode {
-        public Vertical( Range modelRange, double value, Range viewRange, Color color ) throws IOException {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public Vertical( Range modelRange, double value, Range viewRange, Color color ) throws IOException {
             super( modelRange, value, viewRange, color );
         }
 
@@ -371,7 +378,12 @@ public abstract class MotionSliderNode extends PNode {
 
     public static class Horizontal extends MotionSliderNode {
 
-        public Horizontal( Range modelRange, double value, Range viewRange, Color color ) throws IOException {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public Horizontal( Range modelRange, double value, Range viewRange, Color color ) throws IOException {
             this( modelRange, value, viewRange, new PImage( BufferedImageUtils.flipY( BufferedImageUtils.getRotatedImage( getBarImage( color ), -Math.PI / 2 ) ) ), color );
         }
 

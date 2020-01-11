@@ -32,11 +32,6 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.view.FieldMeterGraphic;
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.WiggleMeGraphic;
 
 
-/**
- * BarMagnetModule is the "Bar Magnet" module.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class BarMagnetModule extends MagnetsAndElectromagnetsModule {
 
     //----------------------------------------------------------------------------

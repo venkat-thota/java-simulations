@@ -3,10 +3,7 @@ package com.aimxcel.abclearn.eatingandexercise.control;
 
 import java.util.ArrayList;
 
-/**
- * Created by: Sam
- * Apr 23, 2008 at 1:34:08 PM
- */
+
 public abstract class CaloricItem implements Cloneable {
     private String name;
     private String image;

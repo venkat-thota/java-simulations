@@ -9,12 +9,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
 import com.aimxcel.abclearn.magnetsandelectromagnets.util.QuadBezierSpline;
 
 
-/**
- * Electron is the model of an electron, capable of moving along some path.
- * The path is described by an ordered set of ElectronPathDescriptors.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class Electron extends MagnetsAndElectromagnetsObservable implements ModelElement {
     
     //----------------------------------------------------------------------------

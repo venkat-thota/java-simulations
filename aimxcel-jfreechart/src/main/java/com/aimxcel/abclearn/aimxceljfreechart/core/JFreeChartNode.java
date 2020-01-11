@@ -24,30 +24,18 @@ import org.jfree.chart.plot.Plot;
 import org.jfree.chart.plot.PlotRenderingInfo;
 import org.jfree.chart.plot.XYPlot;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.util.PPaintContext;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 
 
-/**
- * JFreeChartNode is a Core node for displaying a JFreeChart.
- * <p/>
- * The bounds of the node determine the size of the chart.
- * The node registers with the chart to receive notification
- * of changes to any component of the chart.  The chart is
- * redrawn automatically whenever this notification is received.
- * <p/>
- * The node can be buffered or unbuffered. If buffered, the
- * chart is drawn using an off-screen image that is updated
- * whenever the chart or node changes.  If unbuffered, the
- * chart is drawn directly to the screen whenever paint is
- * called; this can be unnecessarily costly if the paint request
- * is not the result of changes to the chart or node.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class JFreeChartNode extends PNode implements ChartChangeListener {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
 

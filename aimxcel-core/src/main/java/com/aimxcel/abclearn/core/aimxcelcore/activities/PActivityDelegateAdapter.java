@@ -1,7 +1,7 @@
  
 package com.aimxcel.abclearn.core.aimxcelcore.activities;
 
-import edu.umd.cs.piccolo.activities.PActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
 
 /**
  * Adapter pattern for PActivityDelegate.

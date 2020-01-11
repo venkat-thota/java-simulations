@@ -10,7 +10,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.SimSharingManager;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterKeys;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 import static com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterKeys.*;
 import static com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterSet.parameterSet;

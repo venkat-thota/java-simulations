@@ -15,7 +15,7 @@ import javax.swing.border.TitledBorder;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 
 public class TestPSwingCursors extends JFrame {

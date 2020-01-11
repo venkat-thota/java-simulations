@@ -5,7 +5,7 @@ package com.aimxcel.abclearn.core.aimxcelcore.nodes;
 import java.awt.geom.Point2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
-import edu.umd.cs.piccolo.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 
 public class ArrowNode extends PPath {

@@ -22,13 +22,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.model.Lightbulb;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.PickupCoil;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.Voltmeter;
 
-/**
- * PickupCoilGraphic is the graphical representation of a pickup coil,
- * with indicators (lightbulb and voltmeter ) for displaying the effect
- * of electromagnetic induction.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class PickupCoilGraphic extends GraphicLayerSet
         implements SimpleObserver, ICollidable, ApparatusPanel2.ChangeListener {
 

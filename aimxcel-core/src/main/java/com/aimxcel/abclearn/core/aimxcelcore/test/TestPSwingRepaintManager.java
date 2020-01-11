@@ -12,9 +12,9 @@ import javax.swing.Timer;
 
 import com.aimxcel.abclearn.core.aimxcelcore.event.PDebugKeyHandler;
 
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolox.pswing.PSwing;
-import edu.umd.cs.piccolox.pswing.PSwingCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwingCanvas;
 
 public class TestPSwingRepaintManager {
     private JFrame frame = new JFrame( getClass().getName().substring( getClass().getName().lastIndexOf( '.' ) + 1 ) );

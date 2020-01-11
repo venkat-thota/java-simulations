@@ -8,8 +8,8 @@ import javax.swing.JPopupMenu;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.SimSharingManager;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
 import static com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserActions.popupTriggered;
 

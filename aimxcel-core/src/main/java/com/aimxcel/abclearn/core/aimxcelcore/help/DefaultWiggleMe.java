@@ -10,7 +10,7 @@ import java.awt.Paint;
 import java.awt.Stroke;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
-import edu.umd.cs.piccolo.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
 
 
 

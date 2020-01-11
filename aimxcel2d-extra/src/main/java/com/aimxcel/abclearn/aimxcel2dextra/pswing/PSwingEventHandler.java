@@ -150,13 +150,13 @@ public class PSwingEventHandler implements PInputEventListener {
     }
 
     /**
-     * Determines if any Swing components in Piccolo2D should receive the given
+     * Determines if any Swing components in Core2D should receive the given
      * MouseEvent and forwards the event to that component. However,
      * mouseEntered and mouseExited are independent of the buttons. Also, notice
      * the notes on mouseEntered and mouseExited.
      * 
      * @param pSwingMouseEvent event being dispatched
-     * @param aEvent Piccolo2D event translation of the pSwingMouseEvent
+     * @param aEvent Core2D event translation of the pSwingMouseEvent
      */
     void dispatchEvent(final PSwingEvent pSwingMouseEvent, final PInputEvent aEvent) {
         final MouseEvent mEvent = pSwingMouseEvent.asMouseEvent();
@@ -427,10 +427,10 @@ public class PSwingEventHandler implements PInputEventListener {
     }
 
     /**
-     * Process a Piccolo2D event and (if active) dispatch the corresponding
+     * Process a Core2D event and (if active) dispatch the corresponding
      * Swing event.
      * 
-     * @param aEvent Piccolo2D event being tested for dispatch to swing
+     * @param aEvent Core2D event being tested for dispatch to swing
      * @param type is not used in this method
      */
     public void processEvent(final PInputEvent aEvent, final int type) {

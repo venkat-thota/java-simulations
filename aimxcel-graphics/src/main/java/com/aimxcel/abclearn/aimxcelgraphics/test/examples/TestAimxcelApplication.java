@@ -1,11 +1,6 @@
 
 
-/**
- * Class: TestAimxcelApplication
- * Package: edu.colorado.phet.common.examples
- * Author: Another Guy
- * Date: May 12, 2004
- */
+
 package com.aimxcel.abclearn.aimxcelgraphics.test.examples;
 
 import java.awt.Color;

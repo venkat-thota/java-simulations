@@ -21,8 +21,8 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.event.PInputEventListener;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEventListener;
 
 
 public class GlassPaneCanvas extends PCanvas {

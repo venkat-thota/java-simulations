@@ -16,17 +16,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
-/**
- * TestOffscreenBufferAlpha tests support for alpha blending in the
- * offscreen buffer of ApparatusPanel2.
- * <p/>
- * If this buffer is a BufferedImage of TYPE_INT_RGB, then alpha blending
- * does not occur on Macintosh. Using TYPE_INT_RGBA results in a performance
- * hit (on all platforms?)
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- * @version $Revision$
- */
+
 public class TestOffscreenBufferAlpha {
 
     private static final boolean USE_OFFSCREEN_BUFFER = true;

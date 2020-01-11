@@ -5,15 +5,15 @@ import java.util.ArrayList;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * A MultiControlChart is a collection of MinimizableControlCharts.  It manages their layout, visibility of shared components such as zoom buttons and domain axis labels.
- *
- * @author Sam Reid
- */
+
 public class MultiControlChart extends PNode {
-    private ArrayList<MinimizableControlChart> children = new ArrayList<MinimizableControlChart>();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ArrayList<MinimizableControlChart> children = new ArrayList<MinimizableControlChart>();
     private double width;
     private double height;
 

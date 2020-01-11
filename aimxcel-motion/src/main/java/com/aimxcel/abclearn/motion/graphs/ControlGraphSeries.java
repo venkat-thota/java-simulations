@@ -11,10 +11,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
 import com.aimxcel.abclearn.motion.model.ITemporalVariable;
 import com.aimxcel.abclearn.aimxceljfreechart.core.dynamic.BufferedSeriesView;
 
-/**
- * Author: Sam Reid
- * Jul 13, 2007, 2:50:27 PM
- */
+
 public class ControlGraphSeries {
     private String title;
     private Color color;

@@ -26,17 +26,6 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsStr
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsSimSharing.Components;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.FieldMeter;
 
-
-/**
- * FieldMeterGraphic is a meter that measure a magnetic field.
- * It displays the magnitude (total and X/Y components) and direction of
- * the magnetic field at a point in 2D space. Values are displayed in
- * a coordinate system in which +X is to the right, +Y is up, and
- * +direction is counterclockwise, and 0 degrees points down the
- * positive X axis.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class FieldMeterGraphic extends CompositeAimxcelGraphic
         implements SimpleObserver, ApparatusPanel2.ChangeListener {
 

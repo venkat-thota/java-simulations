@@ -4,8 +4,8 @@ package com.aimxcel.abclearn.core.aimxcelcore.test;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import edu.umd.cs.piccolox.pswing.PSwing;
-import edu.umd.cs.piccolox.pswing.PSwingCanvas;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwingCanvas;
 
 
 public class TestDualPSwing {

@@ -24,7 +24,7 @@ public class PSwingMouseEvent extends MouseEvent implements Serializable, PSwing
      *            MOUSE_ENTERED, MOUSE_EXITED)
      * @param swingEvent The original swing mouse event when in MOUSE_RELEASED
      *            events.
-     * @param piccoloEvent used to query about the event's Piccolo context
+     * @param piccoloEvent used to query about the event's Core context
      */
     protected PSwingMouseEvent(final int id, final MouseEvent swingEvent, final PInputEvent piccoloEvent) {
         super((Component) swingEvent.getSource(), swingEvent.getID(), swingEvent.getWhen(), swingEvent.getModifiers(),
@@ -40,7 +40,7 @@ public class PSwingMouseEvent extends MouseEvent implements Serializable, PSwing
      *            MOUSE_ENTERED, MOUSE_EXITED, MOUSE_MOVED, MOUSE_DRAGGED)
      * @param swingEvent The original swing mouse event when in
      *            MOUSE_DRAGGED and MOUSE_RELEASED events.
-     * @param pEvent used to query about the event's Piccolo2d context
+     * @param pEvent used to query about the event's Core2d context
      * 
      * @return the constructed PSwingEvent
      */

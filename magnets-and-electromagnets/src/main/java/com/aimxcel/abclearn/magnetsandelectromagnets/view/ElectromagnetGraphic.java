@@ -26,11 +26,6 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.model.Electromagnet;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.SourceCoil;
 
 
-/**
- * ElectromagnetGraphic is the graphical representation of an electromagnet.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ElectromagnetGraphic extends GraphicLayerSet
         implements SimpleObserver, ICollidable, ApparatusPanel2.ChangeListener {
 

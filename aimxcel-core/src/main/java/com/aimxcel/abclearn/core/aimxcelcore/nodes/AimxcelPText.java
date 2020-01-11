@@ -6,7 +6,7 @@ import java.awt.Paint;
 import java.awt.geom.Point2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
 
 public class AimxcelPText extends PText {

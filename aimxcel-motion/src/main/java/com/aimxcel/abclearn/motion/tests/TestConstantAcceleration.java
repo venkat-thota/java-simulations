@@ -8,11 +8,7 @@ import com.aimxcel.abclearn.motion.model.SingleBodyMotionModel;
 import com.aimxcel.abclearn.motion.model.TimeData;
 import com.aimxcel.abclearn.motion.model.UpdateStrategy;
 
-/**
- * User: Sam Reid
- * Date: Dec 29, 2006
- * Time: 11:47:31 PM
- */
+
 
 public class TestConstantAcceleration extends TestCase {
     public void testConstantAcceleration() {

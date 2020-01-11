@@ -10,12 +10,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
-/**
- * DebugMenuTest
- *
- * @author Ron LeMaster
- * @version $Revision$
- */
+
 public class DebugMenuTest {
 
     public static void main( String[] args ) {

@@ -6,12 +6,7 @@ import java.awt.Component;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
 
-/**
- * HelpManager
- *
- * @author ?
- * @version $Revision$
- */
+
 public class HelpManager extends GraphicLayerSet {
     private static double HELP_LAYER = Double.POSITIVE_INFINITY;
 

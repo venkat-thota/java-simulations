@@ -17,7 +17,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserCompone
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponents;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.Option;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 
 class KitControlNode extends PNode {

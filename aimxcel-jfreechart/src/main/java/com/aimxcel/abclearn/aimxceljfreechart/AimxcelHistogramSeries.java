@@ -8,18 +8,15 @@ import java.util.List;
 
 import org.jfree.data.general.Series;
 
-/**
- * AimxcelHistogramSeries is a JFreeChart series for histogram observations.
- * <p/>
- * A histogram series has an immutable range, which is divided into equal-width bins.
- * When a one-dimensional data point (referred to as an observation) is added to a series,
- * it is placed in the bin that corresponds to its value.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class AimxcelHistogramSeries extends Series {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Inner classes
     //----------------------------------------------------------------------------
 

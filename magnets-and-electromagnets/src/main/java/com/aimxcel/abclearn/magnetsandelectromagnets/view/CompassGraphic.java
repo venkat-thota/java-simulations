@@ -26,13 +26,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.collision.CollisionDetector
 import com.aimxcel.abclearn.magnetsandelectromagnets.collision.ICollidable;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.Compass;
 
-/**
- * CompassGraphic is the graphical representation of a compass.
- * It can be dragged around, and will indicate the direction of the magnetic field.
- * Its registration point is at the center of the needle.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class CompassGraphic extends CompositeAimxcelGraphic
         implements SimpleObserver, ICollidable, ApparatusPanel2.ChangeListener {
 

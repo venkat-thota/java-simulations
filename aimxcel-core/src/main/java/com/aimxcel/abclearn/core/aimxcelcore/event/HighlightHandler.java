@@ -6,10 +6,10 @@ import java.awt.Image;
 import java.awt.Paint;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
 
 public abstract class HighlightHandler extends PBasicInputEventHandler {

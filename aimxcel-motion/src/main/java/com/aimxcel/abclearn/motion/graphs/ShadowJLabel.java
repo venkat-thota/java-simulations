@@ -11,15 +11,15 @@ import javax.swing.JFrame;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowPText;
 
-import edu.umd.cs.piccolo.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
 
-/**
- * Author: Sam Reid
- * Jul 19, 2007, 4:46:07 PM
- */
-//todo: cache for performance reasons?
 public class ShadowJLabel extends PCanvas {
-    public ShadowJLabel( String text, Color foreground, Font font ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ShadowJLabel( String text, Color foreground, Font font ) {
         ShadowPText shadowPText = new ShadowPText( text );
         shadowPText.setTextPaint( foreground );
         shadowPText.setFont( font );

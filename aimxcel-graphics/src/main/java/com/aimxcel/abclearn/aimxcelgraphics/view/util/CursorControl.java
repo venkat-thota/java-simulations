@@ -6,12 +6,7 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.event.MouseInputListener;
 
-/**
- * CursorControl
- *
- * @author ?
- * @version $Revision$
- */
+
 public class CursorControl implements MouseInputListener {
     private Cursor cursor;
     private Cursor exitCursor;

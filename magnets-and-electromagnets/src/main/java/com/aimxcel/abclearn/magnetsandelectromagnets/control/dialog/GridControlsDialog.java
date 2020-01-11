@@ -35,20 +35,18 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.control.panel.MagnetsAndEle
 import com.aimxcel.abclearn.magnetsandelectromagnets.module.ICompassGridModule;
 
 
-/**
- * GridControlDialog is a non-model dialog that contains controls for
- * the "compass grid" (CompassGridGraphic).  The controls affect all
- * grids in the entire application.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class GridControlsDialog extends PaintImmediateDialog implements ActionListener, ChangeListener {
 
     //----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
 
-    private AimxcelApplication _app;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private AimxcelApplication _app;
     private JSlider _spacingSlider, _needleSizeSlider;
     private JLabel _gridSpacingValue, _needleSizeValue;
     private JButton _okButton, _cancelButton;

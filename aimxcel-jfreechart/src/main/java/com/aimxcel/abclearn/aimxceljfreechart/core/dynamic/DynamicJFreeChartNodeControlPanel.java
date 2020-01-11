@@ -12,16 +12,14 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-import edu.umd.cs.piccolo.util.PDebug;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDebug;
 
-/**
- * DISCLAIMER: This class is under development and not ready for general use.
- * Controls for setting and observing state for a DynamicJFreeChartNode
- *
- * @author Sam Reid
- */
 public class DynamicJFreeChartNodeControlPanel extends JPanel {
-    private DynamicJFreeChartNode dynamicJFreeChartNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private DynamicJFreeChartNode dynamicJFreeChartNode;
 
     public DynamicJFreeChartNodeControlPanel( final DynamicJFreeChartNode dynamicJFreeChartNode ) {
         this.dynamicJFreeChartNode = dynamicJFreeChartNode;

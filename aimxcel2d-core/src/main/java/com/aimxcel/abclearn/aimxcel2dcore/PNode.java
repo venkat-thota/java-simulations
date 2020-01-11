@@ -1,31 +1,3 @@
-/*
- * Copyright (c) 2008-2010, Piccolo2D project, http://piccolo2d.org
- * Copyright (c) 1998-2008, University of Maryland
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification, are permitted provided
- * that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of conditions
- * and the following disclaimer.
- *
- * Redistributions in binary form must reproduce the above copyright notice, this list of conditions
- * and the following disclaimer in the documentation and/or other materials provided with the
- * distribution.
- *
- * None of the name of the University of Maryland, the name of the Piccolo2D project, or the names of its
- * contributors may be used to endorse or promote products derived from this software without specific
- * prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
- * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
- * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
- * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
 package com.aimxcel.abclearn.aimxcel2dcore;
 
 import java.awt.Color;
@@ -82,18 +54,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PPickPath;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PUtil;
 
-/**
- * <b>PNode</b> is the central abstraction in Piccolo. All objects that are
- * visible on the screen are instances of the node class. All nodes may have
- * other "child" nodes added to them.
- * <p>
- * See edu.umd.piccolo.examples.NodeExample.java for demonstrations of how nodes
- * can be used and how new types of nodes can be created.
- * <P>
- * 
- * @version 1.0
- * @author Jesse Grosjean
- */
 public class PNode implements Cloneable, Serializable, Printable {
     /**
      * The minimum difference in transparency required before the transparency
@@ -2535,7 +2495,7 @@ public class PNode implements Cloneable, Serializable, Printable {
     // painted.
     // 
     // Generally you will not need to call these invalidate methods
-    // when starting out with Piccolo2d because methods such as setPaint
+    // when starting out with Core2d because methods such as setPaint
     // already automatically call them for you. You will need to call
     // them when you start creating your own nodes.
     // 
@@ -3743,8 +3703,8 @@ public class PNode implements Cloneable, Serializable, Printable {
 
     /**
      * <b>PSceneGraphDelegate</b> is an interface to receive low level node
-     * events. It together with PNode.SCENE_GRAPH_DELEGATE gives Piccolo2d users
-     * an efficient way to learn about low level changes in Piccolo's scene
+     * events. It together with PNode.SCENE_GRAPH_DELEGATE gives Core2d users
+     * an efficient way to learn about low level changes in Core's scene
      * graph. Most users will not need to use this.
      */
     public interface PSceneGraphDelegate {

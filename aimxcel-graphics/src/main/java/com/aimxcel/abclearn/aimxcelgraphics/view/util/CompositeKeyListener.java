@@ -5,13 +5,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sam Reid
- * Date: Dec 24, 2004
- * Time: 5:42:17 PM
- * To change this template use File | Settings | File Templates.
- */
+
 public class CompositeKeyListener implements KeyListener {
     private ArrayList listeners = new ArrayList();
 

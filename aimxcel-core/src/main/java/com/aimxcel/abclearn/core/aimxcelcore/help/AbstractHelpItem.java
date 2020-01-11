@@ -13,11 +13,11 @@ import java.util.Iterator;
 import javax.swing.JComponent;
 import javax.swing.SwingUtilities;
 
-import edu.umd.cs.piccolo.PCamera;
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.util.PAffineTransform;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PCamera;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PAffineTransform;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 
 public abstract class AbstractHelpItem extends PNode {

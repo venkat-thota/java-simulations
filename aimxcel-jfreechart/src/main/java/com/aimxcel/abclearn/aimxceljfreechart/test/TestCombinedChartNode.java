@@ -1,9 +1,6 @@
 
 package com.aimxcel.abclearn.aimxceljfreechart.test;
 
-/**
- * See also: http://www.java2s.com/Code/Java/Chart/JFreeChartCombinedXYPlotDemo1.htm
- */
 
 import java.awt.BasicStroke;
 import java.awt.Color;

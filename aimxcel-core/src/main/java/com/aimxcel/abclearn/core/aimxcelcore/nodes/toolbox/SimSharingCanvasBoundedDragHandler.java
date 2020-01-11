@@ -9,9 +9,9 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserCompon
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponentType;
 import com.aimxcel.abclearn.core.aimxcelcore.simsharing.SimSharingDragHandler;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 
 public abstract class SimSharingCanvasBoundedDragHandler extends SimSharingDragHandler {

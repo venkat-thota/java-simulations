@@ -96,10 +96,10 @@ public class PFrame extends JFrame {
         this.canvas.requestFocus();
         beforeInitialize();
 
-        // Manipulation of Piccolo's scene graph should be done from Swings
-        // event dispatch thread since Piccolo2D is not thread safe. This code
+        // Manipulation of Core's scene graph should be done from Swings
+        // event dispatch thread since Core2D is not thread safe. This code
         // calls initialize() from that thread once the PFrame is initialized,
-        // so you are safe to start working with Piccolo2D in the initialize()
+        // so you are safe to start working with Core2D in the initialize()
         // method.
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
@@ -284,7 +284,7 @@ public class PFrame extends JFrame {
     }
 
     /**
-     * Subclasses should override this method and add their Piccolo2D
+     * Subclasses should override this method and add their Core2D
      * initialization code there. This method will be called on the swing event
      * dispatch thread. Note that the constructors of PFrame subclasses may not
      * be complete when this method is called. If you need to initialize some

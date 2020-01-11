@@ -3,14 +3,16 @@ package com.aimxcel.abclearn.eatingandexercise.view;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Created by: Sam
- * May 21, 2008 at 10:53:52 AM
- */
+
 public class EatingAndExercisePText extends PText {
-    public EatingAndExercisePText() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public EatingAndExercisePText() {
         setFont( new AimxcelFont() );
     }
 

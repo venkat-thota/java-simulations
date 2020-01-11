@@ -7,11 +7,7 @@ import java.util.ArrayList;
 
 import org.jfree.data.xy.XYSeries;
 
-/**
- * Represents the series that can be painted on a DynamicJFreeChartNode
- *
- * @author Sam Reid
- */
+
 public class SeriesData {
     private String title;
     private Color color;

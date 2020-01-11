@@ -1,10 +1,6 @@
 
 package com.aimxcel.abclearn.eatingandexercise.control;
 
-/**
- * Created by: Sam
- * Apr 17, 2008 at 11:41:43 AM
- */
 public class FoodItem implements Cloneable {
     private String image;
     private double calories;

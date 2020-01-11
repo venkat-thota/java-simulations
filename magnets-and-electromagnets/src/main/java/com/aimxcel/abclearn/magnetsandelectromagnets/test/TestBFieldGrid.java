@@ -22,22 +22,18 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.ArrowNode;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsConstants;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsResources;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
-/**
- * Unfuddle #2236.
- * Test the B-field grid files that Mike Dubson provided, by reading the files and displaying as vectors.
- * The red box is the outline of the bar magnet.
- * Use PCanvas zoom/pan controls to examine the vectors more closely.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class TestBFieldGrid extends JFrame {
 
-    private static final Dimension CANVAS_SIZE = new Dimension( 1024, 768 ); // similar to Aimxcel sims
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final Dimension CANVAS_SIZE = new Dimension( 1024, 768 ); // similar to Aimxcel sims
     private static final Dimension MAGNET_SIZE = MagnetsAndElectromagnetsConstants.BAR_MAGNET_SIZE; // value used when generating data files in MathCAD
     private static final Dimension GRID_SPACING = new Dimension( 4, 4 ); // value used when generating data files in MathCAD
     private static final Dimension GRID_SIZE = new Dimension( 125, 50 ); // value used when generating data files in MathCAD
@@ -108,7 +104,12 @@ public class TestBFieldGrid extends JFrame {
      */
     private static class GridNode extends PComposite {
 
-        public GridNode( Grid grid ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public GridNode( Grid grid ) {
             double[][] bx = grid.getBx();
             double[][] by = grid.getBy();
             int x = 0;
@@ -133,7 +134,12 @@ public class TestBFieldGrid extends JFrame {
      */
     public static class ScaledVector2DNode extends PComposite {
 
-        public ScaledVector2DNode( MutableVector2D vector ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public ScaledVector2DNode( MutableVector2D vector ) {
 
             MutableVector2D scaledVector = scaleVector( vector );
 
@@ -165,7 +171,11 @@ public class TestBFieldGrid extends JFrame {
      */
     public static class MagnetNode extends PPath {
 
-        private static final Color FILL_COLOR = new Color( 0, 0, 0, 0 ); // transparent
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private static final Color FILL_COLOR = new Color( 0, 0, 0, 0 ); // transparent
         private static final Color STROKE_COLOR = new Color( 255, 0, 0, 180 ); // translucent red
         private static final Stroke STROKE = new BasicStroke( 1f );
 
@@ -179,7 +189,12 @@ public class TestBFieldGrid extends JFrame {
 
     public static class TestCanvas extends PCanvas {
 
-        public TestCanvas() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public TestCanvas() {
             setPreferredSize( CANVAS_SIZE );
 
             PComposite parentNode = new PComposite();

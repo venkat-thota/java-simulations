@@ -22,21 +22,17 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.motion.model.TimeData;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolox.nodes.PClip;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PClip;
 
-/**
- * Working directly with JFreeChart has been problematic for the motion-series sim since we need more flexibility + performance than it provides.
- * We need the following features:
- * 1. Ability to show labels on each chart when the horizontal axis is shared
- * 2. Ability to easily position controls within or next to the chart, and to have their axes synchronized
- * 3. Ability to draw custom curves by dragging directly on the chart.
- * 4. Ability to line up charts with each other and minimize to put "expand" buttons between charts
- * 5. Improved performance.
- */
+
 public class TemporalChart extends PNode {
-    private static final int DOMAIN_TICK_HEIGHT = 4;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final int DOMAIN_TICK_HEIGHT = 4;
     private static final Stroke DOMAIN_TICK_MARK_STROKE = new BasicStroke( 1.5f );
     private static final Paint DOMAIN_TICK_MARK_COLOR = Color.black;
 
@@ -270,7 +266,11 @@ public class TemporalChart extends PNode {
     }
 
     public static class DomainTickMark extends PNode {
-        private PText text;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private PText text;
 
         public DomainTickMark( double x ) {
             AimxcelPPath tick = new AimxcelPPath( new Line2D.Double( 0, 0, 0, DOMAIN_TICK_HEIGHT ), DOMAIN_TICK_MARK_STROKE, DOMAIN_TICK_MARK_COLOR );
@@ -298,7 +298,12 @@ public class TemporalChart extends PNode {
     }
 
     private static class RangeTickMark extends PNode {
-        private RangeTickMark( double y ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		private RangeTickMark( double y ) {
             AimxcelPPath tick = new AimxcelPPath( new Line2D.Double( 0, 0, -DOMAIN_TICK_HEIGHT, 0 ), DOMAIN_TICK_MARK_STROKE, DOMAIN_TICK_MARK_COLOR );
             addChild( tick );
             PText text = new PText( new DecimalFormat( "0.0" ).format( y ) );
@@ -310,7 +315,12 @@ public class TemporalChart extends PNode {
     }
 
     private static class DomainGridLine extends PNode {
-        private DomainGridLine( final double x, final TemporalChart chart ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		private DomainGridLine( final double x, final TemporalChart chart ) {
             final AimxcelPPath tick = new AimxcelPPath( new BasicStroke( 1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_ROUND, 0, new float[] { 10, 3 }, 0 ), Color.lightGray );
             final SimpleObserver update = new SimpleObserver() {
                 public void update() {
@@ -324,7 +334,12 @@ public class TemporalChart extends PNode {
     }
 
     private static class RangeGridLine extends PNode {
-        private RangeGridLine( final double y, final TemporalChart chart ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		private RangeGridLine( final double y, final TemporalChart chart ) {
             final AimxcelPPath tick = new AimxcelPPath( new BasicStroke( y == 0 ? 1.25f : 1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_ROUND, 0, new float[] { 10, 3 }, 0 ), y == 0 ? Color.black : Color.lightGray );
             addChild( tick );
             final SimpleObserver pathUpdate = new SimpleObserver() {
@@ -348,7 +363,11 @@ public class TemporalChart extends PNode {
     }
 
     private class LineSeriesNode extends PNode {
-        private TemporalDataSeries dataSeries;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private TemporalDataSeries dataSeries;
 
         public LineSeriesNode( final TemporalDataSeries dataSeries, Color color ) {
             this.dataSeries = dataSeries;
@@ -375,7 +394,12 @@ public class TemporalChart extends PNode {
 
             final AimxcelPPath path = new AimxcelPPath( new GeneralPath(), new BasicStroke( 3 ), color ) {//todo: is performance dependent on stroke width here?
 
-                //Stroke.createStrokedPath was by far the highest allocation in JProfiler
+                /**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+				//Stroke.createStrokedPath was by far the highest allocation in JProfiler
                 //And severe lag during GC suggested this workaround
                 //I'm not sure whether/how much this helps, perhaps GC's are less frequent or less severe?
                 //Fixing this really changes the distribution of memory allocation as seen by JProfiler
@@ -462,7 +486,11 @@ public class TemporalChart extends PNode {
     }
 
     private class TickMarkAndGridLineNode extends PNode {
-        private PNode domainTickMarks;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private PNode domainTickMarks;
         private PNode rangeTickMarks = new PNode();
         private boolean domainTickMarksVisible;
 

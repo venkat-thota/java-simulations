@@ -19,12 +19,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsSim
 import com.aimxcel.abclearn.magnetsandelectromagnets.module.ICompassGridModule;
 
 
-/**
- * BackgroundColorHandler displays a color dialog for setting the background color
- * of the apparatus panel.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class BackgroundColorHandler implements ColorChooserFactory.Listener {
 
     //----------------------------------------------------------------------------

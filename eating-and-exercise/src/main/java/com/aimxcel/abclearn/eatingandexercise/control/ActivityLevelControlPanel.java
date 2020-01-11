@@ -10,12 +10,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-/**
- * Created by: Sam
- * Jun 26, 2008 at 11:57:34 AM
- */
 public class ActivityLevelControlPanel extends JPanel {
-    public ActivityLevelControlPanel( final Human human ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ActivityLevelControlPanel( final Human human ) {
         setBorder( CalorieSelectionPanel.createTitledBorder( EatingAndExerciseResources.getString( "exercise.lifestyle" ) ) );
         ButtonGroup bg = new ButtonGroup();
         for ( int i = 0; i < Activity.DEFAULT_ACTIVITY_LEVELS.length; i++ ) {

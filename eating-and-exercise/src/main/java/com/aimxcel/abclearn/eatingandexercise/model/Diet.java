@@ -1,10 +1,7 @@
 
 package com.aimxcel.abclearn.eatingandexercise.model;
 
-/**
- * Created by: Sam
- * Apr 18, 2008 at 9:07:29 AM
- */
+
 public class Diet {
     private String name;
     private double fat;

@@ -1,31 +1,3 @@
-/*
- * Copyright (c) 2008-2010, Piccolo2D project, http://piccolo2d.org
- * Copyright (c) 1998-2008, University of Maryland
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification, are permitted provided
- * that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of conditions
- * and the following disclaimer.
- *
- * Redistributions in binary form must reproduce the above copyright notice, this list of conditions
- * and the following disclaimer in the documentation and/or other materials provided with the
- * distribution.
- *
- * None of the name of the University of Maryland, the name of the Piccolo2D project, or the names of its
- * contributors may be used to endorse or promote products derived from this software without specific
- * prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
- * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
- * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
- * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
 package com.aimxcel.abclearn.aimxcel2dcore.util;
 
 import java.awt.geom.Dimension2D;
@@ -40,28 +12,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEventListener;
 
-/**
- * <b>PPickPath</b> represents a ordered list of nodes that have been picked.
- * The topmost ancestor node is the first node in the list (and should be a
- * camera), the bottommost child node is at the end of the list. It is this
- * bottom node that is given first chance to handle events, and that any active
- * event handlers usually manipulate.
- * <p>
- * Note that because of layers (which can be picked by multiple camera's) the
- * ordered list of nodes in a pick path do not all share a parent child
- * relationship with the nodes in the list next to them. This means that the
- * normal localToGlobal methods don't work when trying to transform geometry up
- * and down the pick path, instead you should use the pick paths canvasToLocal
- * methods to get the mouse event points into your local coord system.
- * <p>
- * Note that PInputEvent wraps most of the useful PPickPath methods, so often
- * you can use a PInputEvent directly instead of having to access its pick path.
- * <p>
- * 
- * @see com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent
- * @version 1.0
- * @author Jesse Grosjean
- */
 public class PPickPath implements PInputEventListener {
     /** Global pick path. */
     public static PPickPath CURRENT_PICK_PATH;

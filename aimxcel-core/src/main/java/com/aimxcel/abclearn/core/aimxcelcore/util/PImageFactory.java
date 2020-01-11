@@ -9,7 +9,7 @@ import java.awt.image.BufferedImageOp;
 import java.io.IOException;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
-import edu.umd.cs.piccolo.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
 
 public class PImageFactory {

@@ -34,11 +34,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.view.FieldMeterGraphic;
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.PickupCoilGraphic;
 
 
-/**
- * TransformerModule is the "Transformer" module.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class TransformerModule extends MagnetsAndElectromagnetsModule {
 
     //----------------------------------------------------------------------------

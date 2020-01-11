@@ -13,7 +13,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.ObservableProper
 import com.aimxcel.abclearn.common.aimxcelcommon.util.Option;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 
 public class SpeedometerNode extends PNode {

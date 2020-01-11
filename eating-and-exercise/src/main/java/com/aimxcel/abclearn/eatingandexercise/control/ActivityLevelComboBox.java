@@ -16,12 +16,12 @@ import com.aimxcel.abclearn.core.aimxcelcore.swing.AimxcelJComboBox;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.EatingAndExerciseCanvas;
 
-/**
- * Created by: Sam
- * Jun 26, 2008 at 11:57:34 AM
- */
 public class ActivityLevelComboBox extends AimxcelJComboBox {
-    private EatingAndExerciseCanvas canvas;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private EatingAndExerciseCanvas canvas;
     private Human human;
 
     public ActivityLevelComboBox( EatingAndExerciseCanvas canvas, final Human human ) {
@@ -63,7 +63,12 @@ public class ActivityLevelComboBox extends AimxcelJComboBox {
     }
 
     protected class MyComboPopup extends BasicComboPopup {
-        public MyComboPopup( JComboBox combo ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public MyComboPopup( JComboBox combo ) {
             super( combo );
         }
 

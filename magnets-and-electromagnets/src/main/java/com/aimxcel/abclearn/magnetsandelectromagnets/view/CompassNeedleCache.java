@@ -10,18 +10,7 @@ import java.awt.geom.GeneralPath;
 
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.NeedleColorStrategy.AlphaColorStrategy;
 
-/**
- * CompassNeedleCache is a cache of the graphics components needed to draw a needle.
- * It contains Shapes for various "directions", and Colors for various "strengths".
- * The cache is populated as Shapes and Colors are requested, or you can call
- * populate to populate the entire cache immediately.
- * <p>
- * Changing the needle size clears the Shape cache.
- * <p>
- * Changing the needle color strategy setting clears the Color cache.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 class CompassNeedleCache {
 
     //----------------------------------------------------------------------------

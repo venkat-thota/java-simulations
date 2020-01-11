@@ -13,12 +13,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsCon
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsResources;
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.BarMagnet;
 
-/**
- * EarthGraphic draws a representation of planet earth.
- * The south pole of the Earth is aligned with the north pole of the magnet, and visa versa. 
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class EarthGraphic extends AimxcelImageGraphic implements SimpleObserver {
 
     // the image is opaque, this operator is used to make it transparent

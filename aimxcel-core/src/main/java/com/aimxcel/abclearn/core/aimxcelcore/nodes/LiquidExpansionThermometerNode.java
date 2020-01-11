@@ -24,12 +24,12 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelColorScheme;
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.util.PDimension;
-import edu.umd.cs.piccolox.nodes.PClip;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PClip;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
 public class LiquidExpansionThermometerNode extends PComposite {
 

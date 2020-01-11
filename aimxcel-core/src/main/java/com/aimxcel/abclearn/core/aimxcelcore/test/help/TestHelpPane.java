@@ -26,11 +26,11 @@ import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.help.HelpBalloon;
 import com.aimxcel.abclearn.core.aimxcelcore.help.HelpPane;
 
-import edu.umd.cs.piccolo.event.PDragEventHandler;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolox.nodes.PComposite;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PDragEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 
 public class TestHelpPane extends AimxcelApplication {

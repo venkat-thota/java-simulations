@@ -3,16 +3,16 @@ package com.aimxcel.abclearn.motion.graphs;
 
 import java.util.ArrayList;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * User: Sam Reid
- * Date: Dec 28, 2006
- * Time: 8:21:40 AM
- */
+
 
 public class GraphSetNode extends PNode {
-    private GraphSetModel graphSetModel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private GraphSetModel graphSetModel;
     private ArrayList<MinimizableControlGraph> graphComponents = new ArrayList<MinimizableControlGraph>();
     private MinimizableControlGraph.Listener graphComponentListener;
     private double width;

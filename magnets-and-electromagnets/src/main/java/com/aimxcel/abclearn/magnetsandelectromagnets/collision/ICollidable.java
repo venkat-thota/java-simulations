@@ -4,12 +4,7 @@ package com.aimxcel.abclearn.magnetsandelectromagnets.collision;
 
 import java.awt.Shape;
 
-/**
- * ICollidable is the interface implemented by all objects that 
- * participate in collision detection.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public interface ICollidable {
 
     /**

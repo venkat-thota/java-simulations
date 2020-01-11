@@ -4,7 +4,7 @@ package com.aimxcel.abclearn.core.aimxcelcore.nodes.kit;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.Option;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.Option.None;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.Option.Some;
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 
 public class Kit<T extends PNode> {

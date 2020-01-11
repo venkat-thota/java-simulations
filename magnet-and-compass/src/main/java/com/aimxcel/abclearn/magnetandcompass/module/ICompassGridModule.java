@@ -5,14 +5,6 @@ package com.aimxcel.abclearn.magnetandcompass.module;
 import java.awt.Color;
 import java.awt.Dimension;
 
-
-/**
- * ICompassGridModule is the interface that is implemented by all Modules
- * that require external configuration of their "compass grid".  Any Module
- * that contains a CompassGridGraphic should implement this interface.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public interface ICompassGridModule {
 
     /**

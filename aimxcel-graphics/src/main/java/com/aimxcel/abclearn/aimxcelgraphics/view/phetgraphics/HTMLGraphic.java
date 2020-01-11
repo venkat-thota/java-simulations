@@ -16,9 +16,6 @@ import javax.swing.text.View;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-/**
- * Class for rendering HTML Text.
- */
 public class HTMLGraphic extends CompositeAimxcelGraphic {
 
     private static final Color DEFAULT_COLOR = Color.BLACK;

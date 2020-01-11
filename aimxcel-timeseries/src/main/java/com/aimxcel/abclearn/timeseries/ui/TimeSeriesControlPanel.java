@@ -20,12 +20,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.clock.SimSpeedControl;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
 import com.aimxcel.abclearn.timeseries.model.TimeSeriesModel;
 
-/**
- * Author: Sam Reid
- * Jun 27, 2007, 10:05:59 AM
- */
+
 public class TimeSeriesControlPanel extends JPanel {
-    protected MultiStateButton recordButton;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	protected MultiStateButton recordButton;
     protected ConstantDtClock clock;
     protected TimeSeriesModel timeSeriesModel;
     protected JButton rewindButton;

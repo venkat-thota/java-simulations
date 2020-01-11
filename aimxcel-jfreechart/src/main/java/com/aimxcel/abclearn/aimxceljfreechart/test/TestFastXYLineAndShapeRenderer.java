@@ -16,12 +16,14 @@ import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.ui.RectangleEdge;
 
-/**
- * Avoids using AffineTransform.createTransformedShape().
- * Instead, translation is assumed, and done manually.
- */
+
 public class TestFastXYLineAndShapeRenderer extends XYLineAndShapeRenderer {
-    public TestFastXYLineAndShapeRenderer( boolean lines, boolean shapes ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public TestFastXYLineAndShapeRenderer( boolean lines, boolean shapes ) {
         super( lines, shapes );
     }
 

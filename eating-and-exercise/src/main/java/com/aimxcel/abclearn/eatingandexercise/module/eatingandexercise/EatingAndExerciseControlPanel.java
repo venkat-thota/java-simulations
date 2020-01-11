@@ -18,6 +18,11 @@ public class EatingAndExerciseControlPanel extends ControlPanel {
     //----------------------------------------------------------------------------
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * Constructor.
      *
      * @param module

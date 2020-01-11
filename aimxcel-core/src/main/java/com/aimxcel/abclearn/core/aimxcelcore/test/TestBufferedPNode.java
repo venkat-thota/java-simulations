@@ -15,9 +15,9 @@ import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.BufferedPNode;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PPanEventHandler;
-import edu.umd.cs.piccolo.event.PZoomEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PPanEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PZoomEventHandler;
 
 public class TestBufferedPNode {
     private JFrame frame;

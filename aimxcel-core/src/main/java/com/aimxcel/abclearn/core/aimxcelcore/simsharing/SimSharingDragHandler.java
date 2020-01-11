@@ -13,8 +13,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterKe
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserActions;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
-import edu.umd.cs.piccolo.event.PDragSequenceEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PDragSequenceEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
 
 public class SimSharingDragHandler extends PDragSequenceEventHandler {

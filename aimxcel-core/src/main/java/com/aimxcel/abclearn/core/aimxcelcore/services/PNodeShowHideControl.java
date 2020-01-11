@@ -14,9 +14,9 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.util.PBounds;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
 
 public class PNodeShowHideControl {

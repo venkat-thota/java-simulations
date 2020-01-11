@@ -2,8 +2,8 @@
 package com.aimxcel.abclearn.core.aimxcelcore.activities;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.Function.LinearFunction;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.activities.PInterpolatingActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PInterpolatingActivity;
 
 
 public class AnimateToScale extends PInterpolatingActivity {

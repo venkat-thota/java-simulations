@@ -7,8 +7,8 @@ import java.awt.Color;
 
 import javax.swing.JFrame;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 
 public class ZFineCrosshairNodeTester {

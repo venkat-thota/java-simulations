@@ -1,10 +1,7 @@
 
 package com.aimxcel.abclearn.motion.model;
 
-/**
- * Author: Sam Reid
- * Jun 25, 2007, 11:31:03 PM
- */
+
 public interface ITemporalVariable extends IVariable {
     TimeData[] getData( double startTime, double endTime );
 

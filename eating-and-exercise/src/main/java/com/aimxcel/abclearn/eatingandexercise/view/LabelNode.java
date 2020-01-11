@@ -10,14 +10,15 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Jun 24, 2008 at 11:43:12 AM
- */
+
 public class LabelNode extends PNode {
-    private HTMLNode htmlNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private HTMLNode htmlNode;
     private AimxcelPPath background;
 
     public LabelNode( String text ) {

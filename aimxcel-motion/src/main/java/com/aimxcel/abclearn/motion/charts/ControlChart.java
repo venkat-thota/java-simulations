@@ -1,15 +1,15 @@
 
 package com.aimxcel.abclearn.motion.charts;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * This contains a control panel, slider, chart and zoom controls.
- *
- * @author Sam Reid
- */
+
 public class ControlChart extends PNode {
-    private PNode controlPanel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PNode controlPanel;
     private PNode sliderNode;
     private TemporalChart chartNode;
     private ChartZoomControlNode zoomButtonNode;

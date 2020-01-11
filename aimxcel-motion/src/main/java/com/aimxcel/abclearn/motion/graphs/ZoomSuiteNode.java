@@ -3,16 +3,16 @@ package com.aimxcel.abclearn.motion.graphs;
 
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.ZoomControlNode;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * User: Sam Reid
- * Date: Jan 1, 2007
- * Time: 10:07:45 PM
- */
+
 
 public class ZoomSuiteNode extends PNode {
-    private ZoomControlNode verticalZoomControlNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ZoomControlNode verticalZoomControlNode;
     private ZoomControlNode horizontalZoomControlNode;
 
     public ZoomSuiteNode() {

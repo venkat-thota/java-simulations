@@ -7,11 +7,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 
-/**
- * User: Sam Reid
- * Date: Mar 24, 2005
- * Time: 11:00:14 AM
- */
+
 
 public class TimeSeriesModel extends ClockAdapter {
     private RecordableModel recordableModel;

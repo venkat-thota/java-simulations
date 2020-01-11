@@ -4,12 +4,6 @@
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-/**
- * Convenience class for common rendering options.
- *
- * @author ?
- * @version $Revision$
- */
 public class BasicGraphicsSetup implements GraphicsSetup {
     RenderingHints renderingHints;
 

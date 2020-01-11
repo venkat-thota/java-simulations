@@ -12,9 +12,6 @@ import java.util.StringTokenizer;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
 
-/**
- * @author Sam Reid
- */
 public class TestParser {
     public static void main(String[] args) throws IOException {
         double[] allocatedArray = new double[1000000 * 4];

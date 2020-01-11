@@ -6,21 +6,7 @@ import java.awt.Color;
 
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsConstants;
 
-/**
- * NeedleColorStrategy is the base class for strategies that convert B-field strength to Colors.
- * B-field strength is a scale value between 0 and 1.
- * <p>
- * Two strategies are provided.
- * <p>
- * AlphaColorStrategy modulates the alpha channel, with stronger B-field being more opaque.
- * This strategy works on any background color, but has a performance cost associated with
- * using the alpha channel.
- * <p>
- * Saturation modulates the RGB channels, with stronger B-fields being more saturated.
- * This strategy works only on black backgrounds.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public abstract class NeedleColorStrategy {
     
     // Colors for north and south poles

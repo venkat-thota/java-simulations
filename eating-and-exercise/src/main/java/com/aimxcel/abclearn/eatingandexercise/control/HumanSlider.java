@@ -10,12 +10,13 @@ import javax.swing.event.ChangeListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
 import com.aimxcel.abclearn.eatingandexercise.control.valuenode.LinearValueControlNode;
 
-/**
- * Created by: Sam
- * Jun 27, 2008 at 10:14:13 AM
- */
+
 public class HumanSlider extends JPanel {
-    private LinearValueControlNode linearValueControlNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private LinearValueControlNode linearValueControlNode;
     private PNodeComponent pNodeComponent;
 
     public HumanSlider( double min, double max, double value, String label, String textFieldPattern, String units ) {

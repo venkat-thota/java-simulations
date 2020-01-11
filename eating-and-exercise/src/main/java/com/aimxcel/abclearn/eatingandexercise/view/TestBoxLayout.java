@@ -8,7 +8,12 @@ import java.awt.event.WindowEvent;
 import javax.swing.*;
 
 public class TestBoxLayout extends JFrame {
-    public TestBoxLayout() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public TestBoxLayout() {
         super( "Demostrating BoxLayout" );
         final int SIZE = 3;
 

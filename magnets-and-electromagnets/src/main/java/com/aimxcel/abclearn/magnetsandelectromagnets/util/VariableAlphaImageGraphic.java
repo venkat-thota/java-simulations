@@ -10,13 +10,7 @@ import java.awt.image.BufferedImage;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
 
-/**
- * VariableAlphaImageGraphic is an image graphic whose alpha can be varied.
- * Note that this will not make an image opaque if the image has alpha in it;
- * it will simply modulate the existing alpha in the image.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class VariableAlphaImageGraphic extends AimxcelImageGraphic {
 
     private AlphaComposite _composite;

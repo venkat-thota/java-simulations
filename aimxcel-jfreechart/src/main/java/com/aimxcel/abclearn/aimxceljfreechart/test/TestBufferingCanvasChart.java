@@ -25,23 +25,20 @@ import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
 import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PDragEventHandler;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.util.PDebug;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PDragEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDebug;
 
-/**
- * For debugging Unfuddle #1404.
- * <p/>
- * When an unbuffered JFreeChartNode is displayed on a BufferedAimxcelPCanvas,
- * rendering doesn't work correctly on Mac OS 10.5 with Java 1.5.0_16.
- * In this example, the red circles disappear.  They are still in the scene,
- * because the cursor changes and they are visible while dragging.
- */
+
 public class TestBufferingCanvasChart extends JFrame {
 
-    // bug occurs when BUFFERED_CANVAS == true && BUFFERED_CHART == false
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// bug occurs when BUFFERED_CANVAS == true && BUFFERED_CHART == false
     private static final boolean BUFFERED_CANVAS = true;
     private static final boolean BUFFERED_CHART = false;
 
@@ -89,7 +86,12 @@ public class TestBufferingCanvasChart extends JFrame {
     }
 
     private static class MyWidgetNode extends AimxcelPNode {
-        public MyWidgetNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public MyWidgetNode() {
             // chart
             PNode chartNode = new MyChartNode();
             addChild( chartNode );
@@ -107,7 +109,12 @@ public class TestBufferingCanvasChart extends JFrame {
     }
 
     private static class MyChartNode extends PNode {
-        public MyChartNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public MyChartNode() {
             super();
             JFreeChart chart = ChartFactory.createXYLineChart( "title", "x", "y", new XYSeriesCollection(), PlotOrientation.VERTICAL, false /* legend */, false /* tooltips */, false /* urls */ );
             chart.setBorderVisible( true );
@@ -118,7 +125,12 @@ public class TestBufferingCanvasChart extends JFrame {
     }
 
     private static class MyCircleNode extends PPath {
-        public MyCircleNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public MyCircleNode() {
             super();
             setPathTo( new Ellipse2D.Double( 0, 0, CIRCLE_DIAMETER, CIRCLE_DIAMETER ) );
             setPaint( Color.RED );

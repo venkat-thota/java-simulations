@@ -7,12 +7,9 @@ import java.util.ArrayList;
 
 import com.aimxcel.abclearn.motion.MotionResources;
 
-/**
- * Author: Sam Reid
- * May 23, 2007, 1:42:02 AM
- */
+
 public class GraphSuiteSet {
-    protected ArrayList suites = new ArrayList();
+    protected ArrayList<GraphSuite> suites = new ArrayList<GraphSuite>();
     private MotionControlGraph.Listener zoomListener = new MotionControlGraph.Listener() {
         public void horizontalZoomChanged( MotionControlGraph source ) {
             setDomainUpperBound( source.getMaxDataX() );
@@ -37,7 +34,7 @@ public class GraphSuiteSet {
     }
 
     public MinimizableControlGraph[] getAllGraphs() {
-        ArrayList graphs = new ArrayList();
+        ArrayList<MinimizableControlGraph> graphs = new ArrayList<MinimizableControlGraph>();
         for ( int i = 0; i < suites.size(); i++ ) {
             GraphSuite graphSuite = (GraphSuite) suites.get( i );
             for ( int k = 0; k < graphSuite.getGraphComponentCount(); k++ ) {

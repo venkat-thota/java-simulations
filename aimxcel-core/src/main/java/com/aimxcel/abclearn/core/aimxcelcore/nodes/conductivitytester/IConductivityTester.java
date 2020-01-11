@@ -4,7 +4,7 @@ package com.aimxcel.abclearn.core.aimxcelcore.nodes.conductivitytester;
 import java.awt.geom.Point2D;
 import java.util.EventListener;
 
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 
 public interface IConductivityTester {

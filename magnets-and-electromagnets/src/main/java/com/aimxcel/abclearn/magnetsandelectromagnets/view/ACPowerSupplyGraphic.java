@@ -36,11 +36,6 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.control.MagnetsAndElectroma
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.ACPowerSupply;
 
 
-/**
- * ACPowerSupplyGraphic is the graphical representation of an AC power supply.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObserver {
 
     //----------------------------------------------------------------------------

@@ -6,12 +6,6 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.event.MouseInputListener;
 
-/**
- * TranslationHandler
- *
- * @author ?
- * @version $Revision$
- */
 public class TranslationHandler implements MouseInputListener {
 
     TranslationListener translationListener;

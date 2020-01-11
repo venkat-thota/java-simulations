@@ -17,13 +17,10 @@ import org.jfree.chart.plot.XYPlot;
 
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolo.util.PPaintContext;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 
-/**
- * Created by: Sam
- * Dec 5, 2007 at 4:58:41 PM
- */
+
 public class JFreeChartDecorator extends JFreeChart {
     private ArrayList<JFreeChartDecoration> decorations = new ArrayList<JFreeChartDecoration>();
 

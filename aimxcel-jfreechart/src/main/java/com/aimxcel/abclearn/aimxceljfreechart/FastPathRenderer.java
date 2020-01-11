@@ -17,20 +17,13 @@ import org.jfree.chart.renderer.xy.XYItemRendererState;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.ui.RectangleEdge;
 
-
-/**
- * FastPathRenderer draws a JFreeChart data series as an antialiased GeneralPath.
- * For performance optimization, the entire path is constructed and drawn in one shot.
- * <p/>
- * NOTE: Many of JFreeChart's features (eg, entities) are not supported by this class.
- * If you need full features, use JFreeChart's XYLineAndShapeRenderer.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- * @version $Revision$
- */
 public class FastPathRenderer extends AbstractXYItemRenderer {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
 

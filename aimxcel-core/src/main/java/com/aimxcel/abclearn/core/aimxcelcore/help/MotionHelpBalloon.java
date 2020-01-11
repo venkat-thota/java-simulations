@@ -11,11 +11,11 @@ import javax.swing.JComponent;
 import javax.swing.Timer;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.activities.PActivity;
-import edu.umd.cs.piccolo.activities.PTransformActivity;
-import edu.umd.cs.piccolo.util.PAffineTransform;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PTransformActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PAffineTransform;
 
 
 public class MotionHelpBalloon extends HelpBalloon {

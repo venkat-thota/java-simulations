@@ -3,10 +3,7 @@ package com.aimxcel.abclearn.eatingandexercise.model;
 
 import junit.framework.TestCase;
 
-/**
- * Created by: Sam
- * Jul 15, 2008 at 10:10:00 AM
- */
+
 public class ZMuscleAndFatMassLossTester extends TestCase {
     public void testWeightLoss( HumanUpdate update ) {
 
@@ -22,9 +19,4 @@ public class ZMuscleAndFatMassLossTester extends TestCase {
     public void testWeightLoss2() {
         testWeightLoss( new MuscleAndFatMassLoss2() );
     }
-
-    //known failure, use MuscleAndFatMassLoss2 instead 
-//    public void testWeightLoss() {
-//        testWeightLoss( new MuscleAndFatMassLoss() );
-//    }
 }

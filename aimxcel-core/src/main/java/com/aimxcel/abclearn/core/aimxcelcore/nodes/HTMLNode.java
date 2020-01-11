@@ -11,8 +11,8 @@ import javax.swing.JLabel;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.HTMLUtils;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.util.PPaintContext;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 
 
 public class HTMLNode extends PNode {

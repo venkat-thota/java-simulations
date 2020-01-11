@@ -10,14 +10,11 @@ import com.aimxcel.abclearn.timeseries.model.RecordableModel;
 import com.aimxcel.abclearn.timeseries.model.TimeSeriesModel;
 import com.aimxcel.abclearn.timeseries.model.TimeState;
 
-/**
- * Represents a base model which can be used for managing collections of MotionBody objects.
- * See SingleBodyMotionModel as an example.
- */
+
 public class MotionModel {
     private TimeSeriesModel timeSeriesModel;
     private ITemporalVariable timeVariable;
-    private ArrayList temporalVariables = new ArrayList();
+    private ArrayList<ITemporalVariable> temporalVariables = new ArrayList<ITemporalVariable>();
     private ConstantDtClock clock;
 
     public MotionModel( ConstantDtClock clock, TimeSeriesFactory timeSeriesFactory ) {

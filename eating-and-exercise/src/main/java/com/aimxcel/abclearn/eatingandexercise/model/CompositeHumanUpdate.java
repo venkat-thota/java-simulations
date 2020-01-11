@@ -3,10 +3,6 @@ package com.aimxcel.abclearn.eatingandexercise.model;
 
 import java.util.ArrayList;
 
-/**
- * Created by: Sam
- * Jul 14, 2008 at 8:07:51 PM
- */
 public class CompositeHumanUpdate implements HumanUpdate {
     private ArrayList list = new ArrayList();
 

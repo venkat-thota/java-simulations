@@ -22,12 +22,13 @@ import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.EatingAnd
 import com.aimxcel.abclearn.eatingandexercise.view.EatingAndExerciseColorScheme;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-/**
- * Created by: Sam
- * Apr 23, 2008 at 10:35:43 AM
- */
+
 public class CalorieSelectionPanel extends JPanel implements ICalorieSelectionPanel {
-    private ArrayList listeners = new ArrayList();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ArrayList listeners = new ArrayList();
 
     public CalorieSelectionPanel( final CalorieSet available, final CalorieSet selected, String availableTitle, String selectedTitle ) {
         setLayout( new GridBagLayout() );
@@ -113,7 +114,12 @@ public class CalorieSelectionPanel extends JPanel implements ICalorieSelectionPa
 
     public static TitledBorder createTitledBorder( String title ) {
         return new TitledBorder( new BevelBorder( BevelBorder.LOWERED ), title, TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION, new AimxcelFont( 16, true ) ) {
-            public void paintBorder( Component c, Graphics g, int x, int y, int width, int height ) {
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			public void paintBorder( Component c, Graphics g, int x, int y, int width, int height ) {
                 Graphics2D g2 = (Graphics2D) g;
                 g2.setRenderingHint( RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON );
                 super.paintBorder( c, g, x, y, width, height );
@@ -122,7 +128,11 @@ public class CalorieSelectionPanel extends JPanel implements ICalorieSelectionPa
     }
 
     private class DietComponent extends JPanel {
-        int maxImageW = 60;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		int maxImageW = 60;
 
         private DietComponent( String image, String jlabelText ) {
             setLayout( new BoxLayout( this, BoxLayout.X_AXIS ) );
@@ -163,7 +173,11 @@ public class CalorieSelectionPanel extends JPanel implements ICalorieSelectionPa
     }
 
     private class SelectedComponent extends DietComponent {
-        private CalorieSet set;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private CalorieSet set;
         private CaloricItem item;
 
         public SelectedComponent( final CalorieSet set, final CaloricItem item ) {

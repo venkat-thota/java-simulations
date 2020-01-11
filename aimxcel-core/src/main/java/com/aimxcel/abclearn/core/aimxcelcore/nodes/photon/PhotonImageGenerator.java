@@ -25,10 +25,10 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.Line
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.VisibleColor;
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PImage;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
 
 public class PhotonImageGenerator extends JFrame {

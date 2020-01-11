@@ -8,8 +8,8 @@ import javax.swing.WindowConstants;
 
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.layout.VBox;
 
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
 
 public class TestBox extends JFrame {

@@ -1,8 +1,8 @@
  
 package com.aimxcel.abclearn.core.aimxcelcore.nodes;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.util.PBounds;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
 public class PadBoundsNode extends PNode {
 

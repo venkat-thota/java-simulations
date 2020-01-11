@@ -28,11 +28,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.control.MagnetsAndElectroma
 import com.aimxcel.abclearn.magnetsandelectromagnets.model.Turbine;
 
 
-/**
- * TurbineGraphic is the graphical representation of a simple turbine.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, ApparatusPanel2.ChangeListener {
 
     //----------------------------------------------------------------------------

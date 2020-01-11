@@ -11,17 +11,17 @@ import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResource
 import com.aimxcel.abclearn.timeseries.model.TimeSeriesModel;
 import com.aimxcel.abclearn.timeseries.ui.TimeseriesResources;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * User: Sam Reid
- * Date: Dec 29, 2006
- * Time: 8:55:43 AM
- */
+
 
 public class GraphTimeControlNode extends PNode {
-    private PSwing goStopButton;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PSwing goStopButton;
     private PSwing clearButton;
     private PNode seriesLayer = new PNode();
     private boolean editable = true;
@@ -86,7 +86,11 @@ public class GraphTimeControlNode extends PNode {
     }
 
     public static class ClearButton extends JButton {
-        private TimeSeriesModel graphTimeSeries;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private TimeSeriesModel graphTimeSeries;
 
         public ClearButton( final TimeSeriesModel graphTimeSeries ) {
             super( AimxcelCommonResources.getString( "Common.clear" ) );
@@ -111,7 +115,11 @@ public class GraphTimeControlNode extends PNode {
     }
 
     public static class GoStopButton extends JButton {
-        private boolean goButton = true;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private boolean goButton = true;
         private TimeSeriesModel timeSeriesModel;
 
         public GoStopButton( final TimeSeriesModel timeSeriesModel ) {

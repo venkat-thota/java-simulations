@@ -22,12 +22,12 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.layout.VBox;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.activities.PActivity;
-import edu.umd.cs.piccolo.activities.PTransformActivity;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolox.PFrame;
-import edu.umd.cs.piccolox.nodes.PClip;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PTransformActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dextra.PFrame;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PClip;
 
 import static com.aimxcel.abclearn.core.aimxcelcore.nodes.ControlPanelNode.DEFAULT_ARC;
 import static java.lang.Math.max;

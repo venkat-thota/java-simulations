@@ -1,12 +1,6 @@
 
 package com.aimxcel.abclearn.timeseries.ui;
 
-/**
- * User: Sam Reid
- * Date: Jan 9, 2007
- * Time: 12:50:48 PM
- *
- */
 
 import javax.swing.JFrame;
 

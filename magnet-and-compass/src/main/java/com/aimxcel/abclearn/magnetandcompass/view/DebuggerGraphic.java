@@ -8,14 +8,8 @@ import java.util.Hashtable;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
 
-/**
- * DebuggerGraphic displays the bounds and location marker for a set of AimxcelGraphics.
- * It is intended for use in debugging phetcommon and client applications.
- * The bounds is drawn as a rectangle outline.
- * The location marker is drawn as a crosshair.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
+
 public class DebuggerGraphic extends AimxcelGraphic {
     
     //----------------------------------------------------------------------------

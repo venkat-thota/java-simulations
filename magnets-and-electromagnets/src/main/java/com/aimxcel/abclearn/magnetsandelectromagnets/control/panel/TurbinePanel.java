@@ -29,14 +29,14 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.model.Turbine;
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.BFieldOutsideGraphic;
 
 
-/**
- * TurbinePanel contains the controls for the turbine.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class TurbinePanel extends MagnetsAndElectromagnetsPanel {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
 

@@ -12,12 +12,13 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLImageButtonNode;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-/**
- * Created by: Sam
- * May 4, 2008 at 11:16:09 PM
- */
+
 public class BMIHelpButtonNode extends HTMLImageButtonNode {
-    private Human human;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Human human;
 
     public BMIHelpButtonNode( final Component parentComponent, final Human human ) {
         super( "?", new AimxcelFont( Font.BOLD, 14 ), Color.red );

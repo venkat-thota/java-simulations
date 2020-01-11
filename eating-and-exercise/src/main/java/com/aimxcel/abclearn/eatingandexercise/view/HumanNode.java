@@ -30,18 +30,18 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLImageButtonNode;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PZoomEventHandler;
-import edu.umd.cs.piccolo.nodes.PImage;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PZoomEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
-/**
- * Created by: Sam
- * Apr 3, 2008 at 8:43:08 PM
- * Todo: factor out limb class
- */
+
 public class HumanNode extends PNode {
-    private Human human;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Human human;
     private HeadNode head;
     private PImage heartNode;
     private BasicStroke stroke = new BasicStroke( 0.02f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER );

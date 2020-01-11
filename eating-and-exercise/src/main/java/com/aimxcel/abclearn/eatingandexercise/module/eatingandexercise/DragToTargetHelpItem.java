@@ -6,12 +6,9 @@ import com.aimxcel.abclearn.core.aimxcelcore.help.MotionHelpBalloon;
 import com.aimxcel.abclearn.eatingandexercise.control.CaloricItem;
 import com.aimxcel.abclearn.eatingandexercise.model.CalorieSet;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Created by: Sam
- * Aug 15, 2008 at 2:41:17 PM
- */
+
 public class DragToTargetHelpItem {
     private MotionHelpBalloon motionHelpBalloon;
     private EatingAndExerciseModule module;

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 public class RichPNode extends PNode {
 

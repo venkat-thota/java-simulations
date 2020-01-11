@@ -2,8 +2,8 @@
 
 package com.aimxcel.abclearn.core.aimxcelcore.activities;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.activities.PActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
 
 
 public class FadeOutActivity extends PActivity {

@@ -15,8 +15,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.HTMLUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
 
 public class ChemicalSymbolNode extends PComposite {

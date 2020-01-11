@@ -9,18 +9,15 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadowPText;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * These sliders should be Core sliders for the following reasons:
- * 1. So we can color the thumbs
- * 2. So we can indicate when the value is out of range
- * 3. So we can easily identify when a change event is caused by the user vs. by a callback from the model.
- *
- * @author Sam Reid
- */
+
 public class PlayAreaSliderControl extends PNode {
-    private MotionSliderNode slider;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private MotionSliderNode slider;
     private TextBox textBox;
     final DefaultDecimalFormat decimalFormat = new DefaultDecimalFormat( "0.00" );
 

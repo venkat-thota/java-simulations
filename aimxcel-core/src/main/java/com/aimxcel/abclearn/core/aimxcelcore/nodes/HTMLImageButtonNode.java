@@ -16,10 +16,10 @@ import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelResources;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PImage;
-import edu.umd.cs.piccolo.util.PBounds;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
 
 public class HTMLImageButtonNode extends ButtonNode {

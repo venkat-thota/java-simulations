@@ -5,10 +5,10 @@ import java.awt.geom.Dimension2D;
 import java.awt.geom.Point2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.ImmutableRectangle2D;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 
 public abstract class CanvasBoundedDragHandler extends PBasicInputEventHandler {

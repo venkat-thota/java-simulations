@@ -9,8 +9,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
-import edu.umd.cs.piccolo.PCanvas;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
 
 public class TextButtonNode extends ButtonNode {

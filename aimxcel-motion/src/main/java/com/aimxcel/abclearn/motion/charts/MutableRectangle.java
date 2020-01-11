@@ -5,9 +5,6 @@ import java.awt.geom.Rectangle2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
 
-/**
- * @author Sam Reid
- */
 public class MutableRectangle extends SimpleObservable {
     private double x;
     private double y;

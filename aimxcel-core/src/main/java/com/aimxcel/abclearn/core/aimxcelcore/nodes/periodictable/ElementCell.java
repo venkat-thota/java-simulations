@@ -1,7 +1,7 @@
 
 package com.aimxcel.abclearn.core.aimxcelcore.nodes.periodictable;
 
-import edu.umd.cs.piccolo.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 
 public abstract class ElementCell extends PNode {

@@ -20,16 +20,17 @@ import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 import com.aimxcel.abclearn.eatingandexercise.model.CalorieSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PImage;
-import edu.umd.cs.piccolo.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
-/**
- * Created by: Sam
- * Apr 23, 2008 at 11:55:28 AM
- */
+	
 public class CalorieNode extends PNode {
-    private Frame parentFrame;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Frame parentFrame;
     private CalorieSet available;
     private CalorieSet calorieSet;
     private JDialog dialog;

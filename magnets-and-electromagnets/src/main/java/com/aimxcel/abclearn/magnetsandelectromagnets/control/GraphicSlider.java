@@ -31,15 +31,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterSe
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserActions;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
 
-/**
- * GraphicSlider is a AimxcelGraphic UI component that is similar to a JSlider.
- * <p/>
- * The default orientation is horizontal.
- * Unlike JSlider, there is no setOrientation method.
- * Use the rotate method to set an arbitrary orientation.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class GraphicSlider extends GraphicLayerSet {
 
     //----------------------------------------------------------------------------

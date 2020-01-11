@@ -6,7 +6,7 @@ import java.awt.Cursor;
 
 import javax.swing.JComponent;
 
-import edu.umd.cs.piccolo.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
 
 public class DynamicCursorHandler extends CursorHandler {

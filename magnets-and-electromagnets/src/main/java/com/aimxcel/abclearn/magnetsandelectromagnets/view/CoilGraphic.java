@@ -18,34 +18,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.model.ElectronPathDescripto
 import com.aimxcel.abclearn.magnetsandelectromagnets.util.QuadBezierSpline;
 
 
-/**
- * CoilGraphic is the graphical representation of a coil of wire.
- * In order to simulate objects passing "through" the coil, the coil graphic
- * consists of two layers, called the "foreground" and "background".
- * <p>
- * The coil is drawn as a set of curves, with a "wire end" joined at the each
- * end of the coil.  The wire ends is where things can be connected to the coil
- * (eg, a lightbulb or voltmeter). 
- * <p>
- * The coil optionally shows electrons flowing. The number of electrons is 
- * a function of the coil radius and number of loops.  Electrons are part of 
- * the simulation model, and they know about the path that they need to follow.
- * The path is a describe by a set of ElectronPathDescriptors.
- * <p>
- * The set of ElectronPathDescriptors contains the information that the electrons
- * need to determine which layer that are in (foreground or background) 
- * and how to adjust ("scale") their speed so that they appear to flow at
- * the same rate in all curve segments.  (For example, the wire ends are
- * significantly shorter curves that the other segments in the coil.) 
- * <p>
- * WARNING!  The updateCoil method in particular is very complicated, and
- * the curves that it creates have been tuned so that all curve segments 
- * are smoothly joined to form a 3D-looking coil.  If you change values,
- * do so with caution, test frequently, and perform a close visual 
- * inspection of your changes.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class CoilGraphic implements SimpleObserver {
 
     //----------------------------------------------------------------------------

@@ -21,23 +21,17 @@ import com.aimxcel.abclearn.eatingandexercise.model.Human;
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.EatingAndExerciseModel;
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.EatingAndExerciseModel.Units;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolox.pswing.PSwing;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * Scale that the human is standing on, used to show his/her weight.
- * The scale has a pseudo-3D look, and weight and BMI are displayed on the front face.
- * Radio buttons are provides for switching between English and Metric units.
- * WARNING: While these radio buttons are part of the scale, they don't affect just the
- * scale, they change units for the entire sim.
- * 
- * Created by: Sam
- * Apr 9, 2008 at 8:35:03 PM
- */
 public class ScaleNode extends PNode {
     
-    private static final double FACE_WIDTH = 0.9;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final double FACE_WIDTH = 0.9;
     private static final double FACE_HEIGHT = 0.13;
     private static final double FACE_Y = 0.05;
     private static final double DEPTH_DX = 0.06;

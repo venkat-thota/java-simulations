@@ -13,12 +13,7 @@ import java.awt.geom.AffineTransform;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphics2D;
 
-/**
- * A utilitye class for saving and restoring the state of Graphics2D objects
- *
- * @author ?
- * @version $Revision$
- */
+
 public class GraphicsState {
     private Graphics2D g2;
     private RenderingHints renderingHints;

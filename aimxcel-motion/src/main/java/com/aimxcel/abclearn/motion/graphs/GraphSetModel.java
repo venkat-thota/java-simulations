@@ -3,15 +3,11 @@ package com.aimxcel.abclearn.motion.graphs;
 
 import java.util.ArrayList;
 
-/**
- * User: Sam Reid
- * Date: Dec 28, 2006
- * Time: 8:21:40 AM
- */
+
 
 public class GraphSetModel {
     private GraphSuite graphSuite;
-    private ArrayList listeners = new ArrayList();
+    private ArrayList<Listener> listeners = new ArrayList<Listener>();
 
     public GraphSetModel( GraphSuite graphSuite ) {
         this.graphSuite = graphSuite;

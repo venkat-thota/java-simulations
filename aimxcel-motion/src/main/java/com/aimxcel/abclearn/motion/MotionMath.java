@@ -7,11 +7,7 @@ import com.aimxcel.abclearn.motion.model.TimeData;
 import JSci.maths.LinearMath;
 import JSci.maths.vectors.AbstractDoubleVector;
 
-/**
- * User: Sam Reid
- * Date: Dec 30, 2006
- * Time: 12:04:24 AM
- */
+
 
 public class MotionMath {
     public static double estimateDerivative( TimeData[] timeSeries ) {

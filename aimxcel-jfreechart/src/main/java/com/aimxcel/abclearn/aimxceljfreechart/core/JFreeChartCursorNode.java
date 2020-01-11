@@ -13,17 +13,17 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 
-/**
- * This class shows a draggable cursor overlaid on a JFreeChartNode
- *
- * @author Sam Reid
- */
+
 public class JFreeChartCursorNode extends PNode {
-    private JFreeChartNode jFreeChartNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JFreeChartNode jFreeChartNode;
     private AimxcelPPath path;
     private double time;
     private double width = 9;

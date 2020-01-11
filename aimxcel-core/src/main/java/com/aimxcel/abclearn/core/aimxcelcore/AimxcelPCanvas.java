@@ -21,14 +21,14 @@ import javax.swing.BorderFactory;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.patterns.Updatable;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.activities.PActivity;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.util.PBounds;
-import edu.umd.cs.piccolo.util.PDebug;
-import edu.umd.cs.piccolo.util.PDimension;
-import edu.umd.cs.piccolo.util.PPaintContext;
-import edu.umd.cs.piccolox.pswing.PSwingCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDebug;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
+import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwingCanvas;
 
 
 public class AimxcelPCanvas extends PSwingCanvas implements Updatable {

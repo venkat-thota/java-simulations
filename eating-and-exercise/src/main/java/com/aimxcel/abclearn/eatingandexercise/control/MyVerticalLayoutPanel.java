@@ -7,12 +7,13 @@ import javax.swing.*;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
 
-/**
- * This component makes sure that items are added from the top down instead of centered vertically.
- * I'm not sure of a more elegant way to do this using swing layout managers.
- */
+
 public class MyVerticalLayoutPanel extends VerticalLayoutPanel {
-    private Component strut = Box.createVerticalStrut( 10 );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Component strut = Box.createVerticalStrut( 10 );
 
     public MyVerticalLayoutPanel() {
         addStrut();

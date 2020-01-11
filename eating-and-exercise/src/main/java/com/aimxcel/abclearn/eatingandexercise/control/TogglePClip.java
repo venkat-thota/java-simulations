@@ -4,20 +4,19 @@ package com.aimxcel.abclearn.eatingandexercise.control;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.util.PBounds;
-import edu.umd.cs.piccolo.util.PPaintContext;
-import edu.umd.cs.piccolo.util.PPickPath;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPickPath;
 
-/**
- * This class can behave like a PPath or PClip depending on whether clipEnabled is set to false or true.
- * <p/>
- * Copied from PClip.  One way to design this to avoid code duplication would be to name the overriden methods in PClip to e.g. clipComputeFullBounds(),
- * and have computeFullBounds() call it.
- */
+
 public class TogglePClip extends PPath {
-    private boolean clipEnabled = false;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private boolean clipEnabled = false;
 
     public boolean isClipEnabled() {
         return clipEnabled;

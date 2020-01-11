@@ -1,11 +1,3 @@
-
-
-/**
- * Class: TestArrows
- * Package: edu.colorado.phet.common.examples
- * Author: Another Guy
- * Date: May 10, 2004
- */
 package com.aimxcel.abclearn.aimxcelgraphics.test.graphics;
 
 import java.awt.Color;

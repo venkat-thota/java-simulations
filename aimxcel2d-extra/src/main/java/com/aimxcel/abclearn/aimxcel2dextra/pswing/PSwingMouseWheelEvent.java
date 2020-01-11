@@ -24,7 +24,7 @@ public class PSwingMouseWheelEvent extends MouseWheelEvent implements PSwingEven
      * 
      * @param id The event type (MOUSE_WHEEL)
      * @param swingEvent The original swing mouse wheel event.
-     * @param piccoloEvent Piccolo2D event for use when querying about the
+     * @param piccoloEvent Core2D event for use when querying about the
      *            event's piccolo2d context
      */
     protected PSwingMouseWheelEvent(final int id, final MouseWheelEvent swingEvent, final PInputEvent piccoloEvent) {

@@ -21,18 +21,19 @@ import com.aimxcel.abclearn.eatingandexercise.model.Human;
 import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.CaloricFoodItem;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.event.PBasicInputEventHandler;
-import edu.umd.cs.piccolo.event.PDragSequenceEventHandler;
-import edu.umd.cs.piccolo.event.PInputEvent;
-import edu.umd.cs.piccolo.nodes.PImage;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PDragSequenceEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * Created by: Sam
- * May 26, 2008 at 10:14:57 AM
- */
+
 public class CalorieDragStrip extends PNode {
-    private static Random random = new Random();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static Random random = new Random();
     private ArrayList listeners = new ArrayList();
     private static final int HEIGHT = 45;
     private PNode tooltipLayer = new PNode();
@@ -284,7 +285,11 @@ public class CalorieDragStrip extends PNode {
     }
 
     private class DefaultDragNode extends PNode implements DragNode {
-        private CaloricItem item;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private CaloricItem item;
         private PNode node;
         private boolean dragging = false;//todo: could coalesce with PDragSequenceEventHandler.isDragging
         private CaloricItemLabelNode labelNode;

@@ -30,11 +30,7 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.view.PickupCoilGraphic;
 import com.aimxcel.abclearn.magnetsandelectromagnets.view.TurbineGraphic;
 
 
-/**
- * GeneratorModule is the "Generator" module.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class GeneratorModule extends MagnetsAndElectromagnetsModule {
 
     //----------------------------------------------------------------------------

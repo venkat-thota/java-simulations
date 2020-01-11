@@ -1,10 +1,6 @@
 
 package com.aimxcel.abclearn.eatingandexercise.model;
 
-/**
- * Created by: Sam
- * Apr 17, 2008 at 11:47:59 PM
- */
 public class BasalMetabolicRate {
     public static double getBasalMetabolicRateHarrisBenedict( double weight, double height, double age, Human.Gender gender ) {
         double w = weight;

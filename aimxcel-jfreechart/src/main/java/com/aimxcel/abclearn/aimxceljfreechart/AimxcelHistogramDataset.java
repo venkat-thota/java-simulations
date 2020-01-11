@@ -13,20 +13,14 @@ import org.jfree.data.xy.IntervalXYDataset;
 import org.jfree.util.ObjectUtilities;
 import org.jfree.util.PublicCloneable;
 
-/**
- * AimxcelHistogramDataset is a JFreeChart dataset for creating histograms.
- * It is loosely based on org.jfree.data.statistics.HistogramDataset,
- * which was unfortunately not written to be extensible or dynamic.
- * <p/>
- * This dataset can contain multiple histogram series.
- * When a histogram series is rendered, each bin is drawn as a vertical bar,
- * where the height of the bar corresponds to the number of observations in the bin.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class AimxcelHistogramDataset extends AbstractIntervalXYDataset implements IntervalXYDataset, Cloneable, PublicCloneable, Serializable {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
 

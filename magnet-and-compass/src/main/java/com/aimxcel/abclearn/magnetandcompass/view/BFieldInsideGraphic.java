@@ -13,16 +13,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.magnetandcompass.model.BarMagnet;
 import com.aimxcel.abclearn.magnetandcompass.view.NeedleColorStrategy.AlphaColorStrategy;
 
-/**
- * BFieldInsideGraphic is the view of the B-field inside the bar magnet.
- * This implementation is a bit hard-wired.
- * If you change the bar magnet image, you'll need to change X_SPACING, Y_SPACING and COLUMNS.
- * <p/>
- * NOTE: This graphic, by request, is not connected to the Options>Field Controls feature.
- * The size of the needles and their spacing is fixed.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
+
 public class BFieldInsideGraphic extends AbstractBFieldGraphic implements SimpleObserver {
 
     private static final int X_SPACING = 34;

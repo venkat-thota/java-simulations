@@ -11,17 +11,8 @@ import java.awt.geom.GeneralPath;
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
 
 
-/**
- * SinWaveGraphic is the graphical representation of a sine wave.
- * <p>
- * A set of line segments is draw to approximate the curve.
- * The curve is constrained to be drawn within some viewport.
- * The amplitude determines the height of the curve, while
- * the frequency determines how many cycles of the curve will
- * be drawn.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
+
 public class SineWaveGraphic extends AimxcelShapeGraphic {
     
     //----------------------------------------------------------------------------

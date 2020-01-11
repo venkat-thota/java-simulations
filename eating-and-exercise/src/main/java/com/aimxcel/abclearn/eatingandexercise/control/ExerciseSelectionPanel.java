@@ -8,12 +8,13 @@ import javax.swing.*;
 import com.aimxcel.abclearn.eatingandexercise.model.CalorieSet;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-/**
- * Created by: Sam
- * Apr 24, 2008 at 2:39:39 AM
- */
+
 public class ExerciseSelectionPanel extends JPanel implements ICalorieSelectionPanel {
-    private Human human;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Human human;
     private CalorieSelectionPanel calorieSelectionPanel;
 
     public ExerciseSelectionPanel( final Human human, final CalorieSet available, final CalorieSet selected, String availableTitle, String selectedTitle ) {

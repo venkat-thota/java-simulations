@@ -14,13 +14,6 @@ import com.aimxcel.abclearn.magnetsandelectromagnets.model.Lightbulb;
 import com.aimxcel.abclearn.magnetsandelectromagnets.util.VariableAlphaImageGraphic;
 
 
-/**
- * LightBulbGraphic is the graphical representation of a lightbulb.
- * The bulb's relative intensity can be set.
- * Registration point is at bottom center.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class LightbulbGraphic extends CompositeAimxcelGraphic implements SimpleObserver {
 
     //----------------------------------------------------------------------------

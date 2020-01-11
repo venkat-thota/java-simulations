@@ -38,15 +38,15 @@ import com.aimxcel.abclearn.motion.model.MotionTimeSeriesModel;
 import com.aimxcel.abclearn.timeseries.model.TestTimeSeries;
 import com.aimxcel.abclearn.timeseries.model.TimeSeriesModel;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Created by: Sam
- * May 5, 2008 at 7:40:13 AM
- */
 public class ChartNode extends PNode {
-    private MinimizableControlGraph weightChart;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private MinimizableControlGraph weightChart;
     private MinimizableControlGraph calorieChart;
 
     private DefaultTemporalVariable massVar = new DefaultTemporalVariable();
@@ -287,7 +287,11 @@ public class ChartNode extends PNode {
     }
 
     private class EatingAndExerciseControlGraph extends ControlGraph {
-        private HTMLImageButtonNode gradientButtonNode;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private HTMLImageButtonNode gradientButtonNode;
         private PNode axisLabel;
 
         public EatingAndExerciseControlGraph( AimxcelPCanvas canvas, ControlGraphSeries series, String title, int minY, int maxY, TimeSeriesModel timeSeriesModel ) {

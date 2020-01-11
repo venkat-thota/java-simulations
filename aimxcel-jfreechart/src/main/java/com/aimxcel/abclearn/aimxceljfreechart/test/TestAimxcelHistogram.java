@@ -17,15 +17,15 @@ import org.jfree.chart.renderer.xy.XYBarRenderer;
 import com.aimxcel.abclearn.aimxceljfreechart.AimxcelHistogramDataset;
 import com.aimxcel.abclearn.aimxceljfreechart.AimxcelHistogramSeries;
 
-/**
- * Test application for AimxcelHistogramSeries and AimxcelHistogramDataset.
- * This test is not exhaustive, and the data is identical to the HistogramData1 demo in jfreechart.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class TestAimxcelHistogram extends JFrame {
 
-    public TestAimxcelHistogram() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public TestAimxcelHistogram() {
         super();
 
         // Series 1

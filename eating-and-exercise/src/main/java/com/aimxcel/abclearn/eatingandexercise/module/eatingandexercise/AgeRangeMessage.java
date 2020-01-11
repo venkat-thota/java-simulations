@@ -4,12 +4,13 @@ package com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise;
 import com.aimxcel.abclearn.eatingandexercise.model.EatingAndExerciseUnits;
 import com.aimxcel.abclearn.eatingandexercise.model.Human;
 
-/**
- * Created by: Sam
- * Jun 24, 2008 at 11:48:26 AM
- */
+
 public class AgeRangeMessage extends TimeoutWarningMessage {
-    private Human human;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Human human;
 
     public AgeRangeMessage( final Human human ) {
         super( "<html>This simulation is based on data<br>from 20-60 year olds.<html>" );

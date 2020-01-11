@@ -3,11 +3,7 @@ package com.aimxcel.abclearn.recordandplayback.test;
 
 import java.util.ArrayList;
 
-/**
- * Example Particle model class for sample application.
- *
- * @author Sam Reid
- */
+
 public class Particle {
     private double x;
     private double y;

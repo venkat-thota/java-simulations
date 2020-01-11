@@ -4,10 +4,7 @@ package com.aimxcel.abclearn.motion.tests;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 import com.aimxcel.abclearn.motion.model.SingleBodyMotionModel;
 
-/**
- * Author: Sam Reid
- * Jun 20, 2007, 12:26:53 AM
- */
+
 public class TestDerivativeOffsets {
     private SingleBodyMotionModel motionModel;
     private ConstantDtClock clock;

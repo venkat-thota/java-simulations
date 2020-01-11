@@ -5,11 +5,7 @@ import JSci.maths.LinearMath;
 import JSci.maths.polynomials.RealPolynomial;
 import JSci.maths.vectors.AbstractDoubleVector;
 
-/**
- * User: Sam Reid
- * Date: Dec 30, 2006
- * Time: 12:30:09 AM
- */
+
 
 public class TestLinearRegression {
 

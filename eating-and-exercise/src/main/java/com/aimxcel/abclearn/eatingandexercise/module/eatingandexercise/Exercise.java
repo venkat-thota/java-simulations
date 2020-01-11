@@ -3,10 +3,7 @@ package com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise;
 
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 
-/**
- * Created by: Sam
- * Apr 18, 2008 at 9:39:53 AM
- */
+
 public class Exercise {
     private String name;
     private double calories;

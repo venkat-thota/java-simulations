@@ -3,10 +3,7 @@ package com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise;
 
 import com.aimxcel.abclearn.eatingandexercise.model.CalorieSet;
 
-/**
- * Created by: Sam
- * Apr 23, 2008 at 6:42:31 PM
- */
+
 public class FoodCalorieSet extends CalorieSet {
     public FoodCalorieSet() {
     }

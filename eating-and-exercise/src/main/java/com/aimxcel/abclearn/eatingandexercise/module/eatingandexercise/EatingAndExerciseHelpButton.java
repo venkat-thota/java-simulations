@@ -11,12 +11,14 @@ import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResource
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
 import com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseResources;
 
-/**
- * Created by: Sam
- * Aug 15, 2008 at 11:11:24 AM
- */
+
 public class EatingAndExerciseHelpButton extends JButton {
-    public EatingAndExerciseHelpButton() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public EatingAndExerciseHelpButton() {
         super( getHelpString() );
         addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ) {

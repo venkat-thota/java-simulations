@@ -1,36 +1,12 @@
 
 package com.aimxcel.abclearn.eatingandexercise.model;
 
-/**
- * Created by: Sam
- * Jul 17, 2008 at 11:44:06 AM
- */
+
 public class MuscleGainedFromExercising implements HumanUpdate {
     private static boolean debug = false;
     public static boolean enabled = true;
 
-    /**
-     * >>>Model for muscle building from exercise:
-     * <p/>
-     * Muscle_mass_gained = 0.1 * Cal_exercise * (LBM_0 - LBM)
-     * <p/>
-     * ...where LBM is lean body mass, LBM_0 is 0.96 * sqrt(height / 30),
-     * or the lean body mass of a person with 4% body fat and a BMI of 30.
-     * <p/>
-     * >>>These two features above will effectively make BMR vary according to
-     * your caloric intake (if you undereat, your BMR should drop some to compensate, vice versa for eating more and exercising).
-     * <p/>
-     * >>> all other weight gained is added fat mass.
-     * <p/>
-     * Wendy said:
-     * The equations below for muscle gained due to exercise still have the
-     * algebra error.  LBM_O = W *96% = BMI*h2 * 96%  You also don't mention this
-     * is for men and that women would be 91% and BMI 26 I think you found.  I also
-     * don't see the muscle mass loss due to lack of exercise.
-     *
-     * @param human
-     * @param dt
-     */
+   
     public void update( Human human, double dt ) {
         if ( !enabled ) {
             return;

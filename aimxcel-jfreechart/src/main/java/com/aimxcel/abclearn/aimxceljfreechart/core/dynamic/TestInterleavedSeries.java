@@ -9,13 +9,7 @@ import java.awt.geom.Point2D;
 import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
-import edu.umd.cs.piccolo.event.PDragEventHandler;
-
-/**
- * Demonstration of usage and behavior of JFreeChartNode with multiple series.
- *
- * @author Sam Reid
- */
+import com.aimxcel.abclearn.aimxcel2dcore.event.PDragEventHandler;
 public class TestInterleavedSeries extends TestDynamicJFreeChartNode {
 
     public TestInterleavedSeries() {

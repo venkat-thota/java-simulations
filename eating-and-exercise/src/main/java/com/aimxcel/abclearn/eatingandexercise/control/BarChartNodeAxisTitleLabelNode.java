@@ -14,15 +14,16 @@ import com.aimxcel.abclearn.eatingandexercise.module.eatingandexercise.EatingAnd
 import com.aimxcel.abclearn.eatingandexercise.view.EatingAndExercisePText;
 import com.aimxcel.abclearn.eatingandexercise.view.StackedBarChartNode;
 
-import edu.umd.cs.piccolo.PNode;
-import edu.umd.cs.piccolo.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * Created by: Sam
- * Aug 18, 2008 at 11:21:02 AM
- */
+
 public class BarChartNodeAxisTitleLabelNode extends PNode {
-    private EatingAndExerciseCanvas canvas;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private EatingAndExerciseCanvas canvas;
     private StackedBarChartNode stackedBarChart;
     private PNode parent;
     private PPath backgroundCoverup;

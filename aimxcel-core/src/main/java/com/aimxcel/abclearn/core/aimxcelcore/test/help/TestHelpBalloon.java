@@ -41,10 +41,10 @@ import com.aimxcel.abclearn.core.aimxcelcore.help.HelpBalloon;
 import com.aimxcel.abclearn.core.aimxcelcore.help.HelpPane;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-import edu.umd.cs.piccolo.event.PDragEventHandler;
-import edu.umd.cs.piccolo.nodes.PPath;
-import edu.umd.cs.piccolo.nodes.PText;
-import edu.umd.cs.piccolox.nodes.PComposite;
+import com.aimxcel.abclearn.aimxcel2dcore.event.PDragEventHandler;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
+import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
+import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
 
 public class TestHelpBalloon extends AimxcelApplication {
