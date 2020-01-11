@@ -27,6 +27,16 @@
 			<artifactId>aimxcel2d-extra</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>jfreechart</groupId>
+			<artifactId>jfreechart</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>jcommon</groupId>
+			<artifactId>jcommon</artifactId>
+			<version>0.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
