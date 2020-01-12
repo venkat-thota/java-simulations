@@ -1,6 +1,6 @@
 
 
-package com.aimxcel.abclearn.aimxcelgraphics.view.phetcomponents;
+package com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelcomponents;
 
 import java.awt.Component;
 import java.awt.Cursor;
@@ -13,8 +13,8 @@ import javax.swing.event.EventListenerList;
 import javax.swing.event.MouseInputAdapter;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 
 
 public class AimxcelZoomControl extends GraphicLayerSet {

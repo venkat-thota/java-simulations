@@ -1,6 +1,6 @@
 
 
-package com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics;
+package com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics;
 
 import java.awt.Component;
 import java.awt.Graphics2D;
@@ -49,8 +49,8 @@ public class GraphicLayerSet extends AimxcelGraphic {
         while ( gIt.hasNext() ) {
             Object o = gIt.next();
             if ( o instanceof AimxcelGraphic ) {
-                AimxcelGraphic phetGraphic = (AimxcelGraphic) o;
-                phetGraphic.setComponent( component );
+                AimxcelGraphic aimxcelGraphic = (AimxcelGraphic) o;
+                aimxcelGraphic.setComponent( component );
             }
         }
     }
@@ -391,11 +391,11 @@ public class GraphicLayerSet extends AimxcelGraphic {
 
     }
 
-    public void childBecameInvisible( AimxcelGraphic phetGraphic ) {
-        if ( keyFocusUnit == phetGraphic ) {
+    public void childBecameInvisible( AimxcelGraphic aimxcelGraphic ) {
+        if ( keyFocusUnit == aimxcelGraphic ) {
             setKeyFocus( null );
         }
-        if ( activeUnit == phetGraphic ) {
+        if ( activeUnit == aimxcelGraphic ) {
             MouseEvent mouseEvent = new MouseEvent( getComponent(), mouseEventID++, System.currentTimeMillis(), 0, 0, 0, 0, false );
             activeUnit.fireMouseExitedBecauseInvisible( mouseEvent );
             activeUnit = null;

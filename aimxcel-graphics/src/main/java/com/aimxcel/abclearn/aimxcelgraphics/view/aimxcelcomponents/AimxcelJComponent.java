@@ -1,6 +1,6 @@
 
 
-package com.aimxcel.abclearn.aimxcelgraphics.view.phetcomponents;
+package com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelcomponents;
 
 import java.awt.AlphaComposite;
 import java.awt.Component;
@@ -46,9 +46,9 @@ import javax.swing.event.DocumentListener;
 import javax.swing.event.MouseInputAdapter;
 import javax.swing.text.JTextComponent;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphics2D;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphics2D;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 
 
@@ -333,7 +333,7 @@ public class AimxcelJComponent extends AimxcelGraphic {
         }
 
         repaintManagerAimxcel.put( this );
-        manager.phetJComponentCreated( this );
+        manager.aimxcelJComponentCreated( this );
     }
 
     /*
@@ -372,7 +372,7 @@ public class AimxcelJComponent extends AimxcelGraphic {
      * repaint for much further out in time for some reason.
      * <p/>
      * This workaround schedules 10 repaints over a second, and appears to work properly without demanding significantly more from the system.
-     * See https://phet.unfuddle.com/projects/9404/tickets/by_number/906?cycle=true
+     * See https://aimxcel.unfuddle.com/projects/9404/tickets/by_number/906?cycle=true
      */
     private void fireRepaintBurst() {
         final int[] count = new int[] { 0 };
@@ -575,11 +575,11 @@ public class AimxcelJComponent extends AimxcelGraphic {
         public synchronized void addDirtyRegion( JComponent c, int x, int y, int w, int h ) {
             super.addDirtyRegion( c, x, y, w, h );
             if ( table.containsKey( c ) ) {
-                AimxcelJComponent phetJComponent = (AimxcelJComponent) table.get( c );
+                AimxcelJComponent aimxcelJComponent = (AimxcelJComponent) table.get( c );
                 boolean inRecursiveLoopOfDeath = ( new Exception().getStackTrace().length > 75 ); // HACK: ask Sam Reid why
                 if ( c.getComponentCount() == 0 && !inRecursiveLoopOfDeath ) {
                     if ( !dirty.contains( c ) ) {
-                        dirty.add( phetJComponent );
+                        dirty.add( aimxcelJComponent );
                         if ( dirty.size() > 1000 && !tooManyDirty ) {
                             // This stack trace will only be printed once, as a warning.
                             new RuntimeException( "Too many dirty components: " + dirty.size() ).printStackTrace();
@@ -590,8 +590,8 @@ public class AimxcelJComponent extends AimxcelGraphic {
             }
         }
 
-        public void put( AimxcelJComponent phetJComponent ) {
-            table.put( phetJComponent.component, phetJComponent );
+        public void put( AimxcelJComponent aimxcelJComponent ) {
+            table.put( aimxcelJComponent.component, aimxcelJComponent );
         }
 
         public void updateGraphics() {

@@ -1,6 +1,6 @@
 
 
-package com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics;
+package com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics;
 
 import java.awt.Component;
 import java.awt.Cursor;
@@ -299,8 +299,8 @@ public abstract class AimxcelGraphic {
 
     protected void fireVisibilityChanged() {
         for ( int i = 0; i < listeners.size(); i++ ) {
-            AimxcelGraphicListener phetGraphicListener = (AimxcelGraphicListener) listeners.get( i );
-            phetGraphicListener.phetGraphicVisibilityChanged( this );
+            AimxcelGraphicListener aimxcelGraphicListener = (AimxcelGraphicListener) listeners.get( i );
+            aimxcelGraphicListener.aimxcelGraphicVisibilityChanged( this );
         }
     }
 
@@ -628,7 +628,7 @@ public abstract class AimxcelGraphic {
     }
 
     /**
-     * Determines whether this phetGraphic contains the appropriate point.
+     * Determines whether this aimxcelGraphic contains the appropriate point.
      *
      * @param x
      * @param y
@@ -767,7 +767,7 @@ public abstract class AimxcelGraphic {
      *
      * @param x X coordinate
      * @param y Y coordinate
-     * @see com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic#setLocation(java.awt.Point)
+     * @see com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic#setLocation(java.awt.Point)
      */
     public void setLocation( int x, int y ) {
         if ( location.x != x || location.y != y ) {
@@ -781,7 +781,7 @@ public abstract class AimxcelGraphic {
      * Gets the location.
      *
      * @return the location
-     * @see com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic#setLocation(java.awt.Point)
+     * @see com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic#setLocation(java.awt.Point)
      */
     public Point getLocation() {
         return new Point( location );
@@ -846,14 +846,14 @@ public abstract class AimxcelGraphic {
     /**
      * Adds an Observer for changes in this AimxcelGraphic.
      *
-     * @param phetGraphicListener
+     * @param aimxcelGraphicListener
      */
-    public void addAimxcelGraphicListener( AimxcelGraphicListener phetGraphicListener ) {
-        listeners.add( phetGraphicListener );
+    public void addAimxcelGraphicListener( AimxcelGraphicListener aimxcelGraphicListener ) {
+        listeners.add( aimxcelGraphicListener );
     }
 
-    public void removeAimxcelGraphicListener( AimxcelGraphicListener phetGraphicListener ) {
-        listeners.remove( phetGraphicListener );
+    public void removeAimxcelGraphicListener( AimxcelGraphicListener aimxcelGraphicListener ) {
+        listeners.remove( aimxcelGraphicListener );
     }
 
     /**
@@ -861,8 +861,8 @@ public abstract class AimxcelGraphic {
      */
     protected void notifyChanged() {
         for ( int i = 0; i < listeners.size(); i++ ) {
-            AimxcelGraphicListener phetGraphicListener = (AimxcelGraphicListener) listeners.get( i );
-            phetGraphicListener.phetGraphicChanged( this );
+            AimxcelGraphicListener aimxcelGraphicListener = (AimxcelGraphicListener) listeners.get( i );
+            aimxcelGraphicListener.aimxcelGraphicChanged( this );
         }
     }
 
@@ -1160,7 +1160,7 @@ public abstract class AimxcelGraphic {
      * Forces a repaint of this graphic.
      */
     protected void forceRepaint() {
-        syncBounds();//possibly fires a phet graphic moved event.
+        syncBounds();//possibly fires a aimxcel graphic moved event.
         //TODO we should fire bounds change events right when setLocation(), or transform() is called, rather
         //than waiting for forceRepaint() to (hopefully) get called.
         if ( SKIP_RECTANGLE_COMPUTATION ) {

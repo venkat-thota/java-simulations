@@ -1,5 +1,5 @@
 
- package com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics;
+ package com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics;
 
 import java.awt.Component;
 import java.awt.Point;

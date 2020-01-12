@@ -1,4 +1,4 @@
-package com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics;
+package com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics;
 
 import java.awt.Color;
 import java.awt.Component;

@@ -1,5 +1,5 @@
 
- package com.aimxcel.abclearn.aimxcelgraphics.view.phetcomponents;
+ package com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelcomponents;
 
 import java.awt.FocusTraversalPolicy;
 import java.util.ArrayList;
@@ -16,15 +16,15 @@ public class PJCFocusManager implements AimxcelJComponentManager.Listener {
     private ArrayList list = new ArrayList();
     private FocusTraversalPolicy policy = new PJCFocusManager.MyPolicy();
 
-    public void phetJComponentCreated( AimxcelJComponent phetJComponent ) {
+    public void aimxcelJComponentCreated( AimxcelJComponent aimxcelJComponent ) {
         if ( list.size() >= 1 ) {
             AimxcelJComponent prev = (AimxcelJComponent) list.get( list.size() - 1 );
-            prev.getSourceComponent().setNextFocusableComponent( phetJComponent.getSourceComponent() );
+            prev.getSourceComponent().setNextFocusableComponent( aimxcelJComponent.getSourceComponent() );
 
             AimxcelJComponent first = (AimxcelJComponent) list.get( 0 );
-            phetJComponent.getSourceComponent().setNextFocusableComponent( first.getSourceComponent() );
+            aimxcelJComponent.getSourceComponent().setNextFocusableComponent( first.getSourceComponent() );
         }
-        list.add( phetJComponent );
+        list.add( aimxcelJComponent );
     }
 
     public class MyPolicy extends SortingFocusTraversalPolicy {
@@ -46,8 +46,8 @@ public class PJCFocusManager implements AimxcelJComponentManager.Listener {
 
     private int indexOf( JComponent jComponent ) {
         for ( int i = 0; i < list.size(); i++ ) {
-            AimxcelJComponent phetJComponent = (AimxcelJComponent) list.get( i );
-            if ( phetJComponent.getSourceComponent() == jComponent ) {
+            AimxcelJComponent aimxcelJComponent = (AimxcelJComponent) list.get( i );
+            if ( aimxcelJComponent.getSourceComponent() == jComponent ) {
                 return i;
             }
         }
