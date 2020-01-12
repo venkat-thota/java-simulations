@@ -4,7 +4,7 @@
 import java.awt.Component;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 
 
 public class HelpManager extends GraphicLayerSet {

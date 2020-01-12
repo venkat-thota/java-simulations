@@ -7,7 +7,7 @@ import java.awt.Component;
 import java.awt.Composite;
 import java.awt.Graphics2D;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.magnetandcompass.MagnetAndCompassConstants;
 import com.aimxcel.abclearn.magnetandcompass.MagnetAndCompassResources;

@@ -24,16 +24,16 @@ public class TestGraphControlNode {
         frame.setSize( 600, 600 );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
-        AimxcelPCanvas phetPCanvas = new BufferedAimxcelPCanvas();
+        AimxcelPCanvas aimxcelPCanvas = new BufferedAimxcelPCanvas();
         swingClock = new ConstantDtClock( 30, 1.0 );
         TimeSeriesModel timeSeriesModel = new TimeSeriesModel( new TestTimeSeries.MyRecordableModel(), swingClock );
 
         swingClock.addClockListener( timeSeriesModel );
         GraphTimeControlNode graphTimeControlNode = new GraphTimeControlNode( timeSeriesModel );
         graphTimeControlNode.addVariable( new ControlGraphSeries( "title", Color.blue, "abbr", "units", null, new DefaultTemporalVariable() ) );
-        phetPCanvas.addScreenChild( graphTimeControlNode );
+        aimxcelPCanvas.addScreenChild( graphTimeControlNode );
 
-        frame.setContentPane( phetPCanvas );
+        frame.setContentPane( aimxcelPCanvas );
     }
 
     public static void main( String[] args ) {

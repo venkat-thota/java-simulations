@@ -2,7 +2,7 @@
 
 /**
  * Class: PhotonGlassPaneCollisionModel
- * Package: edu.colorado.phet.greenhouse
+ * Package: edu.colorado.aimxcel.greenhouse
  * Author: Another Guy
  * Date: Oct 30, 2003
  */

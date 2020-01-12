@@ -5,8 +5,8 @@ package com.aimxcel.abclearn.magnetandcompass.view;
 import java.awt.Component;
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.CompositeAimxcelGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.magnetandcompass.MagnetAndCompassConstants;
 import com.aimxcel.abclearn.magnetandcompass.MagnetAndCompassResources;

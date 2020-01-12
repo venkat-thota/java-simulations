@@ -15,18 +15,18 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 public class AngleGraphic extends PNode {
     private SurfaceGraphic surfaceGraphic;
-    private PPath phetShapeGraphic;
+    private PPath aimxcelShapeGraphic;
     private HTMLNode label;
 
     public AngleGraphic( SurfaceGraphic surfaceGraphic ) {
         super();
         this.surfaceGraphic = surfaceGraphic;
-        phetShapeGraphic = new PPath( null );
-        phetShapeGraphic.setStroke( new BasicStroke( 2 ) );
-        phetShapeGraphic.setStrokePaint( Color.black );
+        aimxcelShapeGraphic = new PPath( null );
+        aimxcelShapeGraphic.setStroke( new BasicStroke( 2 ) );
+        aimxcelShapeGraphic.setStrokePaint( Color.black );
         label = new HTMLNode( "test" );
         label.setFont( new AimxcelFont( 14 ) );
-        addChild( phetShapeGraphic );
+        addChild( aimxcelShapeGraphic );
         addChild( label );
         update();
     }
@@ -44,7 +44,7 @@ public class AngleGraphic extends PNode {
         double extent = surfaceGraphic.getSurface().getAngle() * 180 / Math.PI;
         extent = Math.max( extent, 0.00001 );
         Arc2D.Double arc = new Arc2D.Double( ellipseBounds, 0, extent, Arc2D.OPEN );
-        phetShapeGraphic.setPathTo( arc );
+        aimxcelShapeGraphic.setPathTo( arc );
 
         label.setOffset( arc.getBounds().getMaxX(), arc.getBounds().getY() + arc.getBounds().getHeight() / 2 + 20 );
         label.setHTML( "" + getAngleMessage() );

@@ -20,8 +20,8 @@ import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetcomponents.AimxcelJComponent;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelcomponents.AimxcelJComponent;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.util.BasicGraphicsSetup;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;

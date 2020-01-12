@@ -25,11 +25,11 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelcomponents.AimxcelJComponent;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.RepaintDebugGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetcomponents.AimxcelJComponent;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.RepaintDebugGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.util.BasicGraphicsSetup;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
@@ -136,14 +136,14 @@ public class FullAimxcelJComponentTest {
             }
         } );
 
-        AimxcelGraphic phetJComponent = AimxcelJComponent.newInstance( ap, pressIt );
-        ap.addGraphic( phetJComponent );
-        phetJComponent.setLocation( 300, 100 );
+        AimxcelGraphic aimxcelJComponent = AimxcelJComponent.newInstance( ap, pressIt );
+        ap.addGraphic( aimxcelJComponent );
+        aimxcelJComponent.setLocation( 300, 100 );
 
 
         AimxcelGraphic pauseComponent = AimxcelJComponent.newInstance( ap, pauseIt );
         ap.addGraphic( pauseComponent );
-        pauseComponent.setLocation( phetJComponent.getX() + phetJComponent.getWidth() + 5, phetJComponent.getY() );
+        pauseComponent.setLocation( aimxcelJComponent.getX() + aimxcelJComponent.getWidth() + 5, aimxcelJComponent.getY() );
 
 //        JSlider slider = new JSlider( 0, 100 );
 //        JSlider slider = new JSlider( new DefaultBoundedRangeModel( 5, 0, 0, 100 ) );
@@ -158,7 +158,7 @@ public class FullAimxcelJComponentTest {
             slider.setMinorTickSpacing( 5 );
             Hashtable labels = new Hashtable();
             labels.put( new Integer( 9 ), new JLabel( "<html><italics>Earth</italics></html>" ) );
-            labels.put( new Integer( 48 ), new JLabel( "phetland" ) );
+            labels.put( new Integer( 48 ), new JLabel( "aimxcelland" ) );
             slider.addChangeListener( new ChangeListener() {
                 public void stateChanged( ChangeEvent e ) {
                     int value = slider.getValue();
@@ -200,13 +200,13 @@ public class FullAimxcelJComponentTest {
 
         JButton draggableButton = new JButton( "DraggableButton" );
 //        JButton draggableButton = new JButton( "DraggableButton", new ImageIcon( ImageLoader.loadBufferedImage( "images/x-30.png" ) ) );
-        final AimxcelGraphic phetJComponentDraggable = AimxcelJComponent.newInstance( ap, draggableButton );
-        phetJComponentDraggable.addTranslationListener( new TranslationListener() {
+        final AimxcelGraphic aimxcelJComponentDraggable = AimxcelJComponent.newInstance( ap, draggableButton );
+        aimxcelJComponentDraggable.addTranslationListener( new TranslationListener() {
             public void translationOccurred( TranslationEvent translationEvent ) {
-                phetJComponentDraggable.setLocation( translationEvent.getX(), translationEvent.getY() );
+                aimxcelJComponentDraggable.setLocation( translationEvent.getX(), translationEvent.getY() );
             }
         } );
-        ap.addGraphic( phetJComponentDraggable );
+        ap.addGraphic( aimxcelJComponentDraggable );
 
 
         JSpinner spinner = new JSpinner();

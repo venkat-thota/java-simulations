@@ -774,7 +774,7 @@ public class ControlGraph extends PNode {
      *
      * @param label the text to display
      */
-    public void addTimeAxisLabel( String label ) {//label specified by client so we don't have to put it in phetcommon (could make it harder for translators to find), and so it can vary (e.g. msec, sec, etc).
+    public void addTimeAxisLabel( String label ) {//label specified by client so we don't have to put it in aimxcelcommon (could make it harder for translators to find), and so it can vary (e.g. msec, sec, etc).
         final PText timeAxisLabel = new PText( label );
         final int dy = 4;
         final int dx = 2;

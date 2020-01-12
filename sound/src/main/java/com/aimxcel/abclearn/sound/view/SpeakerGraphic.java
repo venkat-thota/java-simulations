@@ -11,8 +11,8 @@ import com.aimxcel.abclearn.sound.model.WaveMedium;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.CompositeAimxcelGraphic;
 
 public class SpeakerGraphic extends CompositeAimxcelGraphic {
 

@@ -9,7 +9,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelLookAndFeel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.FrameSetup;
 
 public class BatteryResistorCircuitApplication extends AimxcelApplication {
-    private BatteryResistorCircuitModule module;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private BatteryResistorCircuitModule module;
 
     public BatteryResistorCircuitApplication( AimxcelApplicationConfig config ) {
         super( config );

@@ -9,8 +9,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
 public class Battery extends LinearBranch {
 
-    public Battery( MutableVector2D phetvector, MutableVector2D phetvector1 ) {
-        super( phetvector, phetvector1 );
+    public Battery( MutableVector2D aimxcelvector, MutableVector2D aimxcelvector1 ) {
+        super( aimxcelvector, aimxcelvector1 );
         volts = 0.0D;
         obs = new ArrayList();
     }

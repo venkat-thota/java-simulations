@@ -6,8 +6,8 @@ import java.awt.Point;
 import java.awt.geom.AffineTransform;
 import java.io.IOException;
 
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.Graphic;
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.ImageGraphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.Graphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.ImageGraphic;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.AbstractVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;

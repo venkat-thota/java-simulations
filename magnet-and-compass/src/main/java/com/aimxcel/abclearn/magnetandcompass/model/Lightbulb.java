@@ -109,7 +109,7 @@ public class Lightbulb extends MagnetAndCompassObservable implements SimpleObser
     //----------------------------------------------------------------------------
     
     /*
-     * @see edu.colorado.phet.common.util.SimpleObserver#update()
+     * @see edu.colorado.aimxcel.common.util.SimpleObserver#update()
      */
     public void update() {
         if ( isEnabled() ) {

@@ -35,7 +35,7 @@ public class RampModule extends CoreModule {
     private ArrayList listeners = new ArrayList();
 
     public static final double FORCE_LENGTH_SCALE = 0.06;
-    private AimxcelFrame phetFrame;
+    private AimxcelFrame aimxcelFrame;
     public static final int MAX_TIME = 30;
 
     public static final boolean MINIMIZE_READOUT_TEXT_FOR_SMALL_SCREEN = false;
@@ -46,9 +46,9 @@ public class RampModule extends CoreModule {
         this( TheRampStrings.getString( "module.more-features" ), frame, clock );
     }
 
-    public RampModule( String name, AimxcelFrame phetFrame, final IClock clock ) {
+    public RampModule( String name, AimxcelFrame aimxcelFrame, final IClock clock ) {
         super( name, clock );
-        this.phetFrame = phetFrame;
+        this.aimxcelFrame = aimxcelFrame;
         setModel( new BaseModel() );
         rampModel = new RampModel( this, clock );
         rampObjects = new RampObject[] {
@@ -92,7 +92,7 @@ public class RampModule extends CoreModule {
     }
 
     public AimxcelFrame getAimxcelFrame() {
-        return phetFrame;
+        return aimxcelFrame;
     }
 
     public void updateGraphics( ClockEvent event ) {

@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 import com.aimxcel.abclearn.aimxcelgraphics.application.SimSharingAimxcelGraphicsModule;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsConstants;

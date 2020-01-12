@@ -17,8 +17,8 @@ import java.util.ArrayList;
 
 import com.aimxcel.abclearn.aimxcelgraphics.application.AimxcelGraphicsModule;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic2;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelTextGraphic2;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelTestApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
@@ -178,7 +178,7 @@ public class TestAimxcelTextGraphic2 {
 
     /**
      * BoundsDebugger displays the bounds and locations of a set of AimxcelGraphics.
-     * It is intended for use in debugging phetcommon and client applications.
+     * It is intended for use in debugging aimxcelcommon and client applications.
      */
     public class BoundsDebugger extends AimxcelGraphic {
 

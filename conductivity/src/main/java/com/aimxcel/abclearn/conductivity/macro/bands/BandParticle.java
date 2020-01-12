@@ -65,15 +65,15 @@ public class BandParticle extends SimpleObservable
         state = state.stepInTime( this, d );
     }
 
-    public void setPosition( MutableVector2D phetvector ) {
-        x = phetvector.getX();
-        y = phetvector.getY();
+    public void setPosition( MutableVector2D aimxcelvector ) {
+        x = aimxcelvector.getX();
+        y = aimxcelvector.getY();
         notifyObservers();
     }
 
     public double getDistanceFromOwnedSite() {
-        MutableVector2D phetvector = cell.getPosition();
-        return getPosition().minus( phetvector ).magnitude();
+        MutableVector2D aimxcelvector = cell.getPosition();
+        return getPosition().minus( aimxcelvector ).magnitude();
     }
 
     public void detach() {

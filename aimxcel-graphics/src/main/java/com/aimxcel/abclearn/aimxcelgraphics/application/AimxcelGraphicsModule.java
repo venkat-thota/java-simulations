@@ -7,9 +7,9 @@ import javax.swing.JPanel;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelcomponents.AimxcelJComponent;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.help.HelpManager;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetcomponents.AimxcelJComponent;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
@@ -154,8 +154,8 @@ public class AimxcelGraphicsModule extends Module {
 //        while( it.hasNext() ) {
 //            Object obj = it.next();
 //            if( obj instanceof AimxcelGraphic ) {
-//                AimxcelGraphic phetGraphic = (AimxcelGraphic)obj;
-//                phetGraphic.setComponent( getApparatusPanel() );
+//                AimxcelGraphic aimxcelGraphic = (AimxcelGraphic)obj;
+//                aimxcelGraphic.setComponent( getApparatusPanel() );
 //            }
 //        }
 //        getApparatusPanel().getGraphic().setGraphicMap( sd.getGraphicMap() );

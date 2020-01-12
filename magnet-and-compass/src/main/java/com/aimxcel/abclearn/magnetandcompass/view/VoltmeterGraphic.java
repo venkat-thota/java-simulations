@@ -9,7 +9,7 @@ import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.*;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.*;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.Arrow;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
@@ -116,7 +116,7 @@ public class VoltmeterGraphic extends CompositeAimxcelGraphic implements SimpleO
     //----------------------------------------------------------------------------
 
     /*
-     * @see edu.colorado.phet.common.util.SimpleObserver#update()
+     * @see edu.colorado.aimxcel.common.util.SimpleObserver#update()
      */
     public void update() {
         setVisible( _voltmeterModel.isEnabled() );

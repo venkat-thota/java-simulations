@@ -11,11 +11,10 @@ import com.aimxcel.abclearn.sound.SoundConfig;
 import com.aimxcel.abclearn.sound.SoundModule;
 import com.aimxcel.abclearn.sound.model.SoundListener;
 import com.aimxcel.abclearn.sound.model.SoundModel;
-
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.CompositeAimxcelGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
 
 public class ListenerGraphic extends CompositeAimxcelGraphic {
     protected static int s_earOffsetX = 10;

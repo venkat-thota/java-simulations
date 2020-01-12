@@ -19,8 +19,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.help.HelpItem;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 

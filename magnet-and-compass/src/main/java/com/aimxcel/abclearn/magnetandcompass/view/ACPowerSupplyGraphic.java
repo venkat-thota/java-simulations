@@ -19,11 +19,11 @@ import java.text.MessageFormat;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic2;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelTextGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelTextGraphic2;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentChain;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
@@ -226,7 +226,7 @@ public class ACPowerSupplyGraphic extends GraphicLayerSet implements SimpleObser
     //----------------------------------------------------------------------------
 
     /*
-    * @see edu.colorado.phet.common.util.SimpleObserver#update()
+    * @see edu.colorado.aimxcel.common.util.SimpleObserver#update()
     *
     * NOTES:<br>
     * If maxAmplitude and frequency are both unchanged, then we assume that

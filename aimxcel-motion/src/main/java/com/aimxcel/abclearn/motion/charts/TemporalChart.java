@@ -43,7 +43,7 @@ public class TemporalChart extends PNode {
     private PNode chartContents;//layer for chart pnodes, for minimize/maximize support
     private ModelViewTransform2D modelViewTransform2D;
     private TickMarkAndGridLineNode tickMarksAndGridLines;
-    //This string is a hack to allow sims to pass in the string translation instead of requiring it to appear in phetcommon
+    //This string is a hack to allow sims to pass in the string translation instead of requiring it to appear in aimxcelcommon
     public static String SEC_TEXT = "sec";
     public static String TIME_LABEL_PATTERN = "{0} {1}";
     private ArrayList<LineSeriesNode> lineSeriesNodes = new ArrayList<LineSeriesNode>();

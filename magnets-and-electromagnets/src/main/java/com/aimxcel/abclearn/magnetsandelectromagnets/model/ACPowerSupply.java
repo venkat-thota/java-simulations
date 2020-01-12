@@ -115,7 +115,7 @@ public class ACPowerSupply extends AbstractCurrentSource implements ModelElement
      * Varies the amplitude over time, based on maxAmplitude and frequency.
      * Guaranteed to hit all peaks and zero crossings.
      * 
-     * @see edu.colorado.phet.common.model.ModelElement#stepInTime(double)
+     * @see edu.colorado.aimxcel.common.model.ModelElement#stepInTime(double)
      */
     public void stepInTime( double dt ) {
         if ( isEnabled() ) {

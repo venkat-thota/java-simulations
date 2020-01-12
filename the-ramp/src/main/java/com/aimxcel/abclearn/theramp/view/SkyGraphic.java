@@ -9,20 +9,20 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 public class SkyGraphic extends PNode {
     private RampPanel rampPanel;
     private RampWorld rampWorld;
-    private PPath phetShapeGraphic;
+    private PPath aimxcelShapeGraphic;
     public static final Color lightBlue = new Color( 165, 220, 252 );
 
     public SkyGraphic( RampPanel rampPanel, RampWorld rampWorld ) {
         this.rampPanel = rampPanel;
         this.rampWorld = rampWorld;
-        phetShapeGraphic = new PPath();
-        phetShapeGraphic.setPaint( lightBlue );
-        addChild( phetShapeGraphic );
+        aimxcelShapeGraphic = new PPath();
+        aimxcelShapeGraphic.setPaint( lightBlue );
+        addChild( aimxcelShapeGraphic );
         update();
     }
 
     private void update() {
-        phetShapeGraphic.setPathTo( createShape() );
+        aimxcelShapeGraphic.setPathTo( createShape() );
     }
 
     private Shape createShape() {

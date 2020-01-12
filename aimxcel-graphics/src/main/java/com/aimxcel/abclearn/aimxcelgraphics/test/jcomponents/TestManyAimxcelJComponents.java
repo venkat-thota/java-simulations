@@ -9,8 +9,8 @@ import javax.swing.JPanel;
 
 import com.aimxcel.abclearn.aimxcelgraphics.application.AimxcelGraphicsModule;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetcomponents.AimxcelJComponent;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelcomponents.AimxcelJComponent;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelTestApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
@@ -43,12 +43,12 @@ public class TestManyAimxcelJComponents extends AimxcelGraphicsModule {
     public static void main( String[] args ) {
         QuickProfiler main = new QuickProfiler( "main" );
         SwingClock clock = new SwingClock( 30, 1.0 );
-        AimxcelTestApplication phetApplication = new AimxcelTestApplication( args, new FrameSetup.CenteredWithSize( 600, 600 ) );
+        AimxcelTestApplication aimxcelApplication = new AimxcelTestApplication( args, new FrameSetup.CenteredWithSize( 600, 600 ) );
 
-        phetApplication.startApplication();
+        aimxcelApplication.startApplication();
         TestManyAimxcelJComponents module = new TestManyAimxcelJComponents( "name", clock );
-        phetApplication.setModules( new AimxcelGraphicsModule[] { module } );
-        System.out.println( "time to make & display " + numComponents + ", phetJComponents= " + main + " ms" );
+        aimxcelApplication.setModules( new AimxcelGraphicsModule[] { module } );
+        System.out.println( "time to make & display " + numComponents + ", aimxcelJComponents= " + main + " ms" );
 
         QuickProfiler swing = new QuickProfiler( "frame" );
         JFrame f = new JFrame();

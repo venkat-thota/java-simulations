@@ -25,8 +25,8 @@ import javax.swing.JComponent;
 import javax.swing.SwingUtilities;
 import javax.swing.event.MouseInputListener;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphics2D;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphics2D;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.aimxcelgraphics.view.util.GraphicsState;
 import com.aimxcel.abclearn.aimxcelgraphics.view.util.TransformManager;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;

@@ -13,9 +13,9 @@ import java.text.NumberFormat;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2.ChangeEvent;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelTextGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.CompositeAimxcelGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
@@ -181,7 +181,7 @@ public class FieldMeterGraphic extends CompositeAimxcelGraphic
     //----------------------------------------------------------------------------
 
     /*
-    * @see edu.colorado.phet.common.util.SimpleObserver#update()
+    * @see edu.colorado.aimxcel.common.util.SimpleObserver#update()
     */
     public void update() {
         super.setVisible( _fieldMeterModel.isEnabled() );

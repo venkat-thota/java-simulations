@@ -111,7 +111,7 @@ public class EatingAndExerciseFileParser {
             System.out.println( name );
         }
 
-        File[] f = new File( "C:\\workingcopy\\phet\\svn\\trunk\\simulations-java\\simulations\\eating-and-exercise\\data\\eating-and-exercise\\images" ).listFiles( new FileFilter() {
+        File[] f = new File( "C:\\workingcopy\\aimxcel\\svn\\trunk\\simulations-java\\simulations\\eating-and-exercise\\data\\eating-and-exercise\\images" ).listFiles( new FileFilter() {
             public boolean accept( File pathname ) {
                 return pathname.isFile() && pathname.getName().toLowerCase().endsWith( ".png" );
             }

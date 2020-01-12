@@ -52,7 +52,7 @@ public class Signal extends JApplet {
     public Signal( int width, int height, IClock clock ) {
 
         BufferedImage bi = SignalCircuitResources.loadBufferedImage( "electron9.gif" );
-        BufferedImage phetBattery = SignalCircuitResources.loadBufferedImage( "AimxcelBattery1.gif" );
+        BufferedImage aimxcelBattery = SignalCircuitResources.loadBufferedImage( "AimxcelBattery1.gif" );
 
         bi= BufferedImageUtils.multiScaleToHeight( bi,20 );
         ParticlePainter painter = new ImagePainter( bi );
@@ -242,7 +242,7 @@ public class Signal extends JApplet {
         s.getPanel().addMouseListener( switchCover );
         switchBox.addActionListener( switchCover );
         s.getPanel().addPainter( switchCover, 9 );
-        s.getPanel().addPainter( new BufferedImagePainter( phetBattery, 400, 175 ), 10 );
+        s.getPanel().addPainter( new BufferedImagePainter( aimxcelBattery, 400, 175 ), 10 );
 
         this.controlPanel = new JPanel();
         controlPanel.add( showElectrons );

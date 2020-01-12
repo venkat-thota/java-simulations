@@ -50,9 +50,9 @@ public class RampGraphic extends SurfaceGraphic {
             e.printStackTrace();
         }
         image = BufferedImageUtils.rescaleYMaintainAspectRatio( image, 100 );
-        PImage phetImageGraphic = new PImage( image );
-                phetImageGraphic.setPickable( false );
-        phetImageGraphic.setChildrenPickable( false );
-        return phetImageGraphic;
+        PImage aimxcelImageGraphic = new PImage( image );
+                aimxcelImageGraphic.setPickable( false );
+        aimxcelImageGraphic.setChildrenPickable( false );
+        return aimxcelImageGraphic;
     }
 }

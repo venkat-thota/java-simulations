@@ -7,8 +7,8 @@ import com.aimxcel.abclearn.theramp.view.RampPanel;
 
 
 public class SimpleRampModule extends RampModule {
-    public SimpleRampModule( AimxcelFrame phetFrame, IClock clock ) {
-        super( TheRampStrings.getString( "module.introduction" ), phetFrame, clock );
+    public SimpleRampModule( AimxcelFrame aimxcelFrame, IClock clock ) {
+        super( TheRampStrings.getString( "module.introduction" ), aimxcelFrame, clock );
     }
 
     protected RampControlPanel createRampControlPanel() {

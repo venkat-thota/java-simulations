@@ -7,8 +7,8 @@ import java.awt.Component;
 import java.awt.Font;
 import java.text.DecimalFormat;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic2;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelTextGraphic2;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;

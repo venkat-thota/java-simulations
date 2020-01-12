@@ -26,7 +26,11 @@ public class GlaciersApplication extends CoreAimxcelApplication {
     // Instance data
     //----------------------------------------------------------------------------
 
-    private IntroModule _introModule;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private IntroModule _introModule;
     private AdvancedModule _advancedModule;
 
     // Used to save/load simulation configurations.

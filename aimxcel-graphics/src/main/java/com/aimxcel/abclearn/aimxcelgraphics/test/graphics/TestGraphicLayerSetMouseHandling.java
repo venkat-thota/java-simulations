@@ -12,11 +12,11 @@ import java.awt.geom.Ellipse2D;
 import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelMultiLineTextGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelMultiLineTextGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
 public class TestGraphicLayerSetMouseHandling extends JFrame {
 
     /**

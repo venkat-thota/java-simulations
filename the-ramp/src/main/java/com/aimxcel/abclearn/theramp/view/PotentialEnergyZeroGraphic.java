@@ -21,16 +21,16 @@ public class PotentialEnergyZeroGraphic extends PNode {
     private RampPhysicalModel rampPhysicalModel;
     private RampWorld rampWorld;
     private RampPanel rampPanel;
-    private PPath phetShapeGraphic;
+    private PPath aimxcelShapeGraphic;
     private PText label;
 
     public PotentialEnergyZeroGraphic( RampPanel component, final RampPhysicalModel rampPhysicalModel, final RampWorld rampWorld ) {
         this.rampPanel = component;
         this.rampPhysicalModel = rampPhysicalModel;
         this.rampWorld = rampWorld;
-        phetShapeGraphic = new PPath( new Line2D.Double( 0, 0, 1000, 0 ), new BasicStroke( 4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 1, new float[] { 20, 20 }, 0 ) );
-        phetShapeGraphic.setPaint( Color.black );
-        addChild( phetShapeGraphic );
+        aimxcelShapeGraphic = new PPath( new Line2D.Double( 0, 0, 1000, 0 ), new BasicStroke( 4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 1, new float[] { 20, 20 }, 0 ) );
+        aimxcelShapeGraphic.setPaint( Color.black );
+        addChild( aimxcelShapeGraphic );
 
         addInputEventListener( new PBasicInputEventHandler() {
             public void mouseDragged( PInputEvent event ) {

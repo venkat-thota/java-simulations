@@ -25,9 +25,9 @@ import com.aimxcel.abclearn.conductivity.macro.circuit.MacroCircuit;
 import com.aimxcel.abclearn.conductivity.macro.circuit.MacroCircuitGraphic;
 import com.aimxcel.abclearn.conductivity.macro.particles.WireParticle;
 import com.aimxcel.abclearn.conductivity.macro.particles.WireParticleGraphic;
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.ApparatusPanel;
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.Graphic;
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.ShapeGraphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.ApparatusPanel;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.Graphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.ShapeGraphic;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.application.ApplicationConstructor;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
@@ -149,8 +149,8 @@ public class ConductivityApplication {
         addCableGraphic();
         setConductor();
         java.awt.geom.Rectangle2D.Double double2 = model.getBandSet().getBounds();
-        MutableVector2D phetvector = new MutableVector2D( double2.x, double2.y );
-        EnergyTextGraphic energytextgraphic = new EnergyTextGraphic( transform, phetvector );
+        MutableVector2D aimxcelvector = new MutableVector2D( double2.x, double2.y );
+        EnergyTextGraphic energytextgraphic = new EnergyTextGraphic( transform, aimxcelvector );
         getApparatusPanel().addGraphic( energytextgraphic, 1000D );
     }
 
@@ -174,8 +174,8 @@ public class ConductivityApplication {
         BufferedImage bufferedimage = imageloader.loadImage( "conductivity/images/light.gif" );
         flashlightGraphic = new FlashlightGraphic( light, bufferedimage, transform );
         getApparatusPanel().addGraphic( flashlightGraphic, 100D );
-        Vector2D phetvector = getResistorCenter();
-        pointAt( phetvector );
+        Vector2D aimxcelvector = getResistorCenter();
+        pointAt( aimxcelvector );
         ModelElement modelelement = new ModelElement() {
 
             public void stepInTime( double d ) {
@@ -216,17 +216,17 @@ public class ConductivityApplication {
     }
 
     private Vector2D getResistorCenter() {
-        MutableVector2D phetvector = circuit.getResistor().getStartPosition();
-        MutableVector2D phetvector1 = circuit.getResistor().getEndPosition();
-        Vector2D phetvector2 = phetvector1.minus( phetvector ).times( 0.5D );
-        Vector2D phetvector3 = phetvector.plus( phetvector2 );
-        return phetvector3;
+        MutableVector2D aimxcelvector = circuit.getResistor().getStartPosition();
+        MutableVector2D aimxcelvector1 = circuit.getResistor().getEndPosition();
+        Vector2D aimxcelvector2 = aimxcelvector1.minus( aimxcelvector ).times( 0.5D );
+        Vector2D aimxcelvector3 = aimxcelvector.plus( aimxcelvector2 );
+        return aimxcelvector3;
     }
 
-    public void pointAt( Vector2D phetvector ) {
-        MutableVector2D phetvector1 = light.getPosition();
-        Vector2D phetvector2 = phetvector.minus( phetvector1 ).normalized();
-        double d = phetvector2.getAngle();
+    public void pointAt( Vector2D aimxcelvector ) {
+        MutableVector2D aimxcelvector1 = light.getPosition();
+        Vector2D aimxcelvector2 = aimxcelvector.minus( aimxcelvector1 ).normalized();
+        double d = aimxcelvector2.getAngle();
         double d1 = Math.toRadians( 126D );
         double d2 = -d + d1;
         light.setAngle( d2 );
@@ -237,10 +237,10 @@ public class ConductivityApplication {
         final GeneralPath cablePath = new GeneralPath();
         cablePath.moveTo( (float) double1.getX() + (float) double1.getWidth() / 2.0F, (float) double1.getY() );
         MacroCircuit macrocircuit = model.getCircuit();
-        Vector2D phetvector = macrocircuit.getResistor().getLocation( macrocircuit.getResistor().getLength() / 2D );
-        MutableVector2D phetvector1 = new MutableVector2D( double1.getX() + 0.29999999999999999D, double1.getY() - 0.20000000000000001D );
-        Vector2D phetvector2 = phetvector.minus( 0.0D, 0.10000000000000001D );
-        cablePath.curveTo( (float) phetvector1.getX(), (float) phetvector1.getY(), (float) phetvector2.getX(), (float) phetvector2.getY(), (float) phetvector.getX(), (float) phetvector.getY() );
+        Vector2D aimxcelvector = macrocircuit.getResistor().getLocation( macrocircuit.getResistor().getLength() / 2D );
+        MutableVector2D aimxcelvector1 = new MutableVector2D( double1.getX() + 0.29999999999999999D, double1.getY() - 0.20000000000000001D );
+        Vector2D aimxcelvector2 = aimxcelvector.minus( 0.0D, 0.10000000000000001D );
+        cablePath.curveTo( (float) aimxcelvector1.getX(), (float) aimxcelvector1.getY(), (float) aimxcelvector2.getX(), (float) aimxcelvector2.getY(), (float) aimxcelvector.getX(), (float) aimxcelvector.getY() );
         final ShapeGraphic curveShape = new ShapeGraphic( cablePath, Color.black, new BasicStroke( 2.0F ) );
         transform.addTransformListener( new TransformListener() {
 
@@ -348,12 +348,12 @@ public class ConductivityApplication {
     }
 
     public void firePhoton() {
-        Vector2D phetvector = getResistorCenter();
+        Vector2D aimxcelvector = getResistorCenter();
         Photon photon = new Photon();
         photon.setPosition( light.getPosition() );
         double d = 0.01D;
-        Vector2D phetvector1 = phetvector.minus( photon.getPosition() ).getInstanceOfMagnitude( d );
-        photon.setVelocity( phetvector1 );
+        Vector2D aimxcelvector1 = aimxcelvector.minus( photon.getPosition() ).getInstanceOfMagnitude( d );
+        photon.setVelocity( aimxcelvector1 );
         PhotonArrowGraphic photonarrowgraphic = new PhotonArrowGraphic( photon, transform );
         getApparatusPanel().addGraphic( photonarrowgraphic, 3D );
         photons.add( photon );

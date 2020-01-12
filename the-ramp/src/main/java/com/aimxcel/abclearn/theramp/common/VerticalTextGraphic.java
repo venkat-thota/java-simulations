@@ -16,15 +16,15 @@ public class VerticalTextGraphic extends PNode {
         super();
         this.font = font;
         this.text = text;
-        ShadowHTMLNode phetTextNode = new ShadowHTMLNode( text );//, font, color, 1, 1, outline );
-        phetTextNode.setColor( color );
-        phetTextNode.setShadowColor( outline );
-        phetTextNode.setFont( font );
+        ShadowHTMLNode aimxcelTextNode = new ShadowHTMLNode( text );//, font, color, 1, 1, outline );
+        aimxcelTextNode.setColor( color );
+        aimxcelTextNode.setShadowColor( outline );
+        aimxcelTextNode.setFont( font );
 
-        phetTextNode.translate( -3, -10 );
-        phetTextNode.rotate( -Math.PI / 2 );
+        aimxcelTextNode.translate( -3, -10 );
+        aimxcelTextNode.rotate( -Math.PI / 2 );
 
-        addChild( phetTextNode );
+        addChild( aimxcelTextNode );
     }
 
     public String getText() {

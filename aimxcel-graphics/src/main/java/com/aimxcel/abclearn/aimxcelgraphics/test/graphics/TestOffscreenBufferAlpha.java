@@ -9,8 +9,8 @@ import java.io.IOException;
 
 import com.aimxcel.abclearn.aimxcelgraphics.application.AimxcelGraphicsModule;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelTextGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelTestApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;

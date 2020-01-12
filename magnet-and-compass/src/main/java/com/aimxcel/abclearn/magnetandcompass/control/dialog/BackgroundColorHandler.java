@@ -62,14 +62,14 @@ public class BackgroundColorHandler implements ColorChooserFactory.Listener {
     //----------------------------------------------------------------------------
 
     /*
-     * @see edu.colorado.phet.magnet-and-compass.control.ColorChooserFactory.Listener#colorChanged(java.awt.Color)
+     * @see edu.colorado.aimxcel.magnet-and-compass.control.ColorChooserFactory.Listener#colorChanged(java.awt.Color)
      */
     public void colorChanged( Color color ) {
         handleColorChange( color );
     }
 
     /*
-     * @see edu.colorado.phet.magnet-and-compass.control.ColorChooserFactory.Listener#ok(java.awt.Color)
+     * @see edu.colorado.aimxcel.magnet-and-compass.control.ColorChooserFactory.Listener#ok(java.awt.Color)
      */
     public void ok( Color color ) {
         SimSharingManager.sendUserMessage( UserComponentChain.chain( Components.backgroundColorDialog, Components.okButton ), UserComponentTypes.button, UserActions.pressed );
@@ -77,7 +77,7 @@ public class BackgroundColorHandler implements ColorChooserFactory.Listener {
     }
 
     /*
-     * @see edu.colorado.phet.magnet-and-compass.control.ColorChooserFactory.Listener#cancelled(java.awt.Color)
+     * @see edu.colorado.aimxcel.magnet-and-compass.control.ColorChooserFactory.Listener#cancelled(java.awt.Color)
      */
     public void cancelled( Color originalColor ) {
         SimSharingManager.sendUserMessage( UserComponentChain.chain( Components.backgroundColorDialog, Components.cancelButton ), UserComponentTypes.button, UserActions.pressed );

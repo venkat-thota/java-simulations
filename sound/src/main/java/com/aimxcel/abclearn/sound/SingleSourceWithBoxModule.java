@@ -12,6 +12,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
 import com.aimxcel.abclearn.sound.coreadditions.ScalarObservable;
 import com.aimxcel.abclearn.sound.model.AttenuationFunction;
 import com.aimxcel.abclearn.sound.model.SoundModel;
@@ -19,8 +20,6 @@ import com.aimxcel.abclearn.sound.model.WaveMedium;
 import com.aimxcel.abclearn.sound.view.DialGauge;
 import com.aimxcel.abclearn.sound.view.SoundApparatusPanel;
 import com.aimxcel.abclearn.sound.view.SoundControlPanel;
-
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
 
 public class SingleSourceWithBoxModule extends SingleSourceListenModule {
     private AirBoxGraphic boxInteriorGraphic;

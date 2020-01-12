@@ -6,10 +6,10 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 
 public class LinearBranch {
 
-    public LinearBranch( MutableVector2D phetvector, MutableVector2D phetvector1 ) {
-        start = phetvector;
-        end = phetvector1;
-        dv = phetvector1.minus( phetvector );
+    public LinearBranch( MutableVector2D aimxcelvector, MutableVector2D aimxcelvector1 ) {
+        start = aimxcelvector;
+        end = aimxcelvector1;
+        dv = aimxcelvector1.minus( aimxcelvector );
     }
 
     public double getLength() {

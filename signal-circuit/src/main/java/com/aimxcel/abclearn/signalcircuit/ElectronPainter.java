@@ -61,7 +61,7 @@ public class ElectronPainter implements ActionListener, SwitchListener, Painter 
     }
 
     public void setSwitchClosed( boolean c ) {
-        //Find the edu.colorado.phet.electron to paint.
+        //Find the edu.colorado.aimxcel.electron to paint.
         if( !c ) {
             if( taggedParticle != null ) {
                 taggedParticle.setPainter( normal );

@@ -8,7 +8,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.geom.GeneralPath;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
 
 
 public class SineWaveGraphic extends AimxcelShapeGraphic {

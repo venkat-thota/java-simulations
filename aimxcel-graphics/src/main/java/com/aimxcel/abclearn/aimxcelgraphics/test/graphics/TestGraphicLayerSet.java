@@ -12,11 +12,11 @@ import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.CompositeAimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.RepaintDebugGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.RepaintDebugGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
 public class TestGraphicLayerSet {

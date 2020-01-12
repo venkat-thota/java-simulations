@@ -22,7 +22,7 @@ import com.aimxcel.abclearn.motion.model.SingleBodyMotionModel;
 public class TestMotionGraphs {
     private JFrame frame;
     private Timer timer;
-    private AimxcelPCanvas phetPCanvas;
+    private AimxcelPCanvas aimxcelPCanvas;
 
     private SingleBodyMotionModel singleBodyMotionModel;
 
@@ -37,41 +37,41 @@ public class TestMotionGraphs {
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
         singleBodyMotionModel = new SingleBodyMotionModel( new ConstantDtClock( 30, 1 ) );
-        phetPCanvas = new BufferedAimxcelPCanvas();
-        phetPCanvas.setBackground( new Color( 200, 240, 200 ) );
+        aimxcelPCanvas = new BufferedAimxcelPCanvas();
+        aimxcelPCanvas.setBackground( new Color( 200, 240, 200 ) );
 
-        xGraph = new ControlGraph( phetPCanvas, new ControlGraphSeries( singleBodyMotionModel.getXVariable() ), "Angle", -10, 10, singleBodyMotionModel.getTimeSeriesModel() );
+        xGraph = new ControlGraph( aimxcelPCanvas, new ControlGraphSeries( singleBodyMotionModel.getXVariable() ), "Angle", -10, 10, singleBodyMotionModel.getTimeSeriesModel() );
         xGraph.addListener( new ControlGraph.Adapter() {
             public void controlFocusGrabbed() {
                 singleBodyMotionModel.setPositionDriven();
             }
         } );
 
-        vGraph = new ControlGraph( phetPCanvas, new ControlGraphSeries( singleBodyMotionModel.getVVariable() ), "Angular Velocity", -5, 5, singleBodyMotionModel.getTimeSeriesModel() );
+        vGraph = new ControlGraph( aimxcelPCanvas, new ControlGraphSeries( singleBodyMotionModel.getVVariable() ), "Angular Velocity", -5, 5, singleBodyMotionModel.getTimeSeriesModel() );
         vGraph.addListener( new ControlGraph.Adapter() {
             public void controlFocusGrabbed() {
                 singleBodyMotionModel.setVelocityDriven();
             }
         } );
 
-        aGraph = new ControlGraph( phetPCanvas, new ControlGraphSeries( singleBodyMotionModel.getAVariable() ), "Angular Acceleration", -1, 1, singleBodyMotionModel.getTimeSeriesModel() );
+        aGraph = new ControlGraph( aimxcelPCanvas, new ControlGraphSeries( singleBodyMotionModel.getAVariable() ), "Angular Acceleration", -1, 1, singleBodyMotionModel.getTimeSeriesModel() );
         aGraph.addListener( new ControlGraph.Adapter() {
             public void controlFocusGrabbed() {
                 singleBodyMotionModel.setAccelerationDriven();
             }
         } );
 
-        phetPCanvas.addScreenChild( xGraph );
-        phetPCanvas.addScreenChild( vGraph );
-        phetPCanvas.addScreenChild( aGraph );
+        aimxcelPCanvas.addScreenChild( xGraph );
+        aimxcelPCanvas.addScreenChild( vGraph );
+        aimxcelPCanvas.addScreenChild( aGraph );
 
-        frame.setContentPane( phetPCanvas );
+        frame.setContentPane( aimxcelPCanvas );
         timer = new Timer( 30, new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 step();
             }
         } );
-        phetPCanvas.addComponentListener( new ComponentAdapter() {
+        aimxcelPCanvas.addComponentListener( new ComponentAdapter() {
             public void componentResized( ComponentEvent e ) {
                 relayout();
             }
@@ -80,9 +80,9 @@ public class TestMotionGraphs {
     }
 
     private void relayout() {
-        xGraph.setBounds( 0, 0.0 * phetPCanvas.getHeight() / 3.0, phetPCanvas.getWidth(), phetPCanvas.getHeight() / 3.0 );
-        vGraph.setBounds( 0, 1.0 * phetPCanvas.getHeight() / 3.0, phetPCanvas.getWidth(), phetPCanvas.getHeight() / 3.0 );
-        aGraph.setBounds( 0, 2.0 * phetPCanvas.getHeight() / 3.0, phetPCanvas.getWidth(), phetPCanvas.getHeight() / 3.0 );
+        xGraph.setBounds( 0, 0.0 * aimxcelPCanvas.getHeight() / 3.0, aimxcelPCanvas.getWidth(), aimxcelPCanvas.getHeight() / 3.0 );
+        vGraph.setBounds( 0, 1.0 * aimxcelPCanvas.getHeight() / 3.0, aimxcelPCanvas.getWidth(), aimxcelPCanvas.getHeight() / 3.0 );
+        aGraph.setBounds( 0, 2.0 * aimxcelPCanvas.getHeight() / 3.0, aimxcelPCanvas.getWidth(), aimxcelPCanvas.getHeight() / 3.0 );
     }
 
     private void step() {

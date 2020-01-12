@@ -75,7 +75,7 @@ public class H2O extends Molecule {
     // ------------------------------------------------------------------------
 
     /* (non-Javadoc)
-     * @see edu.colorado.phet.common.photonabsorption.model.Molecule#initializeCogOffsets()
+     * @see edu.colorado.aimxcel.common.photonabsorption.model.Molecule#initializeCogOffsets()
      */
     @Override
     protected void initializeAtomOffsets() {

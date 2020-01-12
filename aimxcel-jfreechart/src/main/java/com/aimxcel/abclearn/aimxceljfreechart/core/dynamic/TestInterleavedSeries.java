@@ -17,10 +17,10 @@ public class TestInterleavedSeries extends TestDynamicJFreeChartNode {
         getDynamicJFreeChartNode().addSeries( "Series 1", Color.green );
         getDynamicJFreeChartNode().addSeries( "Series 2", Color.red );
         getDynamicJFreeChartNode().addSeries( "Series 3", Color.black );
-        AimxcelPPath phetPPath = new AimxcelPPath( new Rectangle( 0, 0, 100, 100 ), new BasicStroke( 2 ), Color.green );
-        phetPPath.addInputEventListener( new PDragEventHandler() );
-        phetPPath.addInputEventListener( new CursorHandler() );
-        getAimxcelPCanvas().addScreenChild( phetPPath );
+        AimxcelPPath aimxcelPPath = new AimxcelPPath( new Rectangle( 0, 0, 100, 100 ), new BasicStroke( 2 ), Color.green );
+        aimxcelPPath.addInputEventListener( new PDragEventHandler() );
+        aimxcelPPath.addInputEventListener( new CursorHandler() );
+        getAimxcelPCanvas().addScreenChild( aimxcelPPath );
     }
 
     protected void updateGraph() {

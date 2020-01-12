@@ -38,13 +38,13 @@ public class TestCombinedChartNode {
 
         jFreeChartNode.updateChartRenderingInfo();
 
-        AimxcelPCanvas phetPCanvas = new AimxcelPCanvas();
-        phetPCanvas.addScreenChild( jFreeChartNode );
+        AimxcelPCanvas aimxcelPCanvas = new AimxcelPCanvas();
+        aimxcelPCanvas.addScreenChild( jFreeChartNode );
 
-        phetPCanvas.addScreenChild( new AimxcelPPath( jFreeChartNode.getDataArea( 0 ), new BasicStroke( 5 ), Color.blue ) );
-        phetPCanvas.addScreenChild( new AimxcelPPath( jFreeChartNode.getDataArea( 1 ), new BasicStroke( 5 ), Color.red ) );
+        aimxcelPCanvas.addScreenChild( new AimxcelPPath( jFreeChartNode.getDataArea( 0 ), new BasicStroke( 5 ), Color.blue ) );
+        aimxcelPCanvas.addScreenChild( new AimxcelPPath( jFreeChartNode.getDataArea( 1 ), new BasicStroke( 5 ), Color.red ) );
 
-        frame.setContentPane( phetPCanvas );
+        frame.setContentPane( aimxcelPCanvas );
     }
 
     private static JFreeChart createCombinedChart() {

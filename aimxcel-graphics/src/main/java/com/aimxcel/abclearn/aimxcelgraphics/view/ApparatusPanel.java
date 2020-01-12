@@ -18,9 +18,9 @@ import java.util.Iterator;
 import javax.swing.JPanel;
 import javax.swing.event.MouseInputListener;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.RepaintDebugGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.RepaintDebugGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.util.GraphicsSetup;
 import com.aimxcel.abclearn.aimxcelgraphics.view.util.GraphicsState;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
@@ -79,8 +79,8 @@ public class ApparatusPanel extends JPanel {
         while ( gIt.hasNext() ) {
             Object obj = gIt.next();
             if ( obj instanceof AimxcelGraphic ) {
-                AimxcelGraphic phetGraphic = (AimxcelGraphic) obj;
-                phetGraphic.setComponent( this );
+                AimxcelGraphic aimxcelGraphic = (AimxcelGraphic) obj;
+                aimxcelGraphic.setComponent( this );
             }
         }
     }

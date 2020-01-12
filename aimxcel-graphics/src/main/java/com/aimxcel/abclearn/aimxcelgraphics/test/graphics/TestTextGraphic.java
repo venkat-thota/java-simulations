@@ -9,8 +9,8 @@ import java.awt.Rectangle;
 import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelTextGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 
@@ -25,8 +25,8 @@ public class TestTextGraphic {
         SwingUtils.centerWindowOnScreen( frame );
         frame.setVisible( true );
 
-        AimxcelShapeGraphic phetShapeGraphic = new AimxcelShapeGraphic( apparatusPanel, new Rectangle( 98, 98, 4, 4 ), Color.red );
-        apparatusPanel.addGraphic( phetShapeGraphic );
+        AimxcelShapeGraphic aimxcelShapeGraphic = new AimxcelShapeGraphic( apparatusPanel, new Rectangle( 98, 98, 4, 4 ), Color.red );
+        apparatusPanel.addGraphic( aimxcelShapeGraphic );
 
         AimxcelTextGraphic textGraphic = new AimxcelTextGraphic( apparatusPanel, new AimxcelFont( Font.BOLD, 24 ), "Test Aimxcel Text & graphics", Color.blue, 0, 0 );
         apparatusPanel.addGraphic( textGraphic );

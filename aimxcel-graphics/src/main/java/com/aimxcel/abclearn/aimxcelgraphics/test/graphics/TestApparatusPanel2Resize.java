@@ -11,10 +11,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelTextGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
@@ -37,13 +37,13 @@ public class TestApparatusPanel2Resize {
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
         Rectangle rectangle = new Rectangle( 0, 0, 200, 200 );
-        final AimxcelShapeGraphic phetShapeGraphic = new AimxcelShapeGraphic( panel, rectangle, Color.blue );
-        phetShapeGraphic.setLocation( 50, 50 );
+        final AimxcelShapeGraphic aimxcelShapeGraphic = new AimxcelShapeGraphic( panel, rectangle, Color.blue );
+        aimxcelShapeGraphic.setLocation( 50, 50 );
 
-        panel.addGraphic( phetShapeGraphic );
-        phetShapeGraphic.addTranslationListener( new TranslationListener() {
+        panel.addGraphic( aimxcelShapeGraphic );
+        aimxcelShapeGraphic.addTranslationListener( new TranslationListener() {
             public void translationOccurred( TranslationEvent translationEvent ) {
-                phetShapeGraphic.setLocation( translationEvent.getX(), translationEvent.getY() );
+                aimxcelShapeGraphic.setLocation( translationEvent.getX(), translationEvent.getY() );
             }
         } );
 
@@ -63,7 +63,7 @@ public class TestApparatusPanel2Resize {
         panel.add( button );
 
 
-        phetShapeGraphic.setCursorHand();
+        aimxcelShapeGraphic.setCursorHand();
         clock.addClockListener( new ClockAdapter() {
             public void clockTicked( ClockEvent clockEvent ) {
                 model.update( clockEvent );

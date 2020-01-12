@@ -61,8 +61,8 @@ public class DoublePoint {
     }
 
 //    public static DoublePoint average( DoublePoint[] dp ) {
-//        phet.phys2d.util.Averager x = new phet.phys2d.util.Averager();
-//        phet.phys2d.util.Averager y = new phet.phys2d.util.Averager();
+//        aimxcel.phys2d.util.Averager x = new aimxcel.phys2d.util.Averager();
+//        aimxcel.phys2d.util.Averager y = new aimxcel.phys2d.util.Averager();
 //        for( int i = 0; i < dp.length; i++ ) {
 //            x.update( dp[i].getX() );
 //            y.update( dp[i].getY() );

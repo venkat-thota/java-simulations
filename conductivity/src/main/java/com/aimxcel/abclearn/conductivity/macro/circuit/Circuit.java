@@ -18,26 +18,26 @@ public class Circuit {
     }
 
     public Wire wireTo( double d, double d1 ) {
-        MutableVector2D phetvector = new MutableVector2D( d, d1 );
-        Wire wire = new Wire( at, phetvector );
+        MutableVector2D aimxcelvector = new MutableVector2D( d, d1 );
+        Wire wire = new Wire( at, aimxcelvector );
         circuit.addBranch( wire );
-        at = phetvector;
+        at = aimxcelvector;
         return wire;
     }
 
     public Resistor resistorTo( double d, double d1 ) {
-        MutableVector2D phetvector = new MutableVector2D( d, d1 );
-        Resistor resistor = new Resistor( at, phetvector );
+        MutableVector2D aimxcelvector = new MutableVector2D( d, d1 );
+        Resistor resistor = new Resistor( at, aimxcelvector );
         circuit.addBranch( resistor );
-        at = phetvector;
+        at = aimxcelvector;
         return resistor;
     }
 
     public Battery batteryTo( double d, double d1 ) {
-        MutableVector2D phetvector = new MutableVector2D( d, d1 );
-        Battery battery = new Battery( at, phetvector );
+        MutableVector2D aimxcelvector = new MutableVector2D( d, d1 );
+        Battery battery = new Battery( at, aimxcelvector );
         circuit.addBranch( battery );
-        at = phetvector;
+        at = aimxcelvector;
         return battery;
     }
 

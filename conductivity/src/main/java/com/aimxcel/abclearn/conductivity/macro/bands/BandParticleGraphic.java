@@ -27,8 +27,8 @@ public class BandParticleGraphic extends TransformGraphic {
     }
 
     public void paint( Graphics2D graphics2d ) {
-        MutableVector2D phetvector = bandParticle.getPosition();
-        java.awt.Point point = getTransform().modelToView( phetvector );
+        MutableVector2D aimxcelvector = bandParticle.getPosition();
+        java.awt.Point point = getTransform().modelToView( aimxcelvector );
         graphic.setPosition( point );
         graphic.paint( graphics2d );
     }

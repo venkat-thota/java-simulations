@@ -25,15 +25,15 @@ public class CaloriePanel extends PNode {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private EatingAndExerciseCanvas phetPCanvas;
+	private EatingAndExerciseCanvas aimxcelPCanvas;
     private StackedBarChartNode stackedBarChart;
     private CalorieNode foodNode;
     private CalorieNode exerciseNode;
     private ChartNode chartNode;
 
-    public CaloriePanel( final EatingAndExerciseModel model, final EatingAndExerciseCanvas phetPCanvas, Frame parentFrame ) {
-        this.phetPCanvas = phetPCanvas;
-        this.chartNode = new ChartNode( model, phetPCanvas );
+    public CaloriePanel( final EatingAndExerciseModel model, final EatingAndExerciseCanvas aimxcelPCanvas, Frame parentFrame ) {
+        this.aimxcelPCanvas = aimxcelPCanvas;
+        this.chartNode = new ChartNode( model, aimxcelPCanvas );
         addChild( chartNode );
 
         Function.LinearFunction transform = new Function.LinearFunction( 0, 3000, 0, 250 );
@@ -54,7 +54,7 @@ public class CaloriePanel extends PNode {
         stackedBarChart.addStackedBarNode( exerciseBars );
         addChild( stackedBarChart );
 
-        BarChartNodeAxisTitleLabelNode barChartNodeAxisTitleLabelNode = new BarChartNodeAxisTitleLabelNode( phetPCanvas, stackedBarChart, this );
+        BarChartNodeAxisTitleLabelNode barChartNodeAxisTitleLabelNode = new BarChartNodeAxisTitleLabelNode( aimxcelPCanvas, stackedBarChart, this );
         addChild( barChartNodeAxisTitleLabelNode );
 
         foodNode = new CalorieNode( parentFrame, EatingAndExerciseResources.getString( "edit.diet" ),
@@ -93,7 +93,7 @@ public class CaloriePanel extends PNode {
 
         relayout();
 
-        phetPCanvas.addComponentListener( new ComponentAdapter() {
+        aimxcelPCanvas.addComponentListener( new ComponentAdapter() {
             public void componentShown( ComponentEvent e ) {
                 relayout();
             }
@@ -171,14 +171,14 @@ public class CaloriePanel extends PNode {
     }
 
     private void relayout() {
-        double width = phetPCanvas.getWidth() - getOffset().getX();
+        double width = aimxcelPCanvas.getWidth() - getOffset().getX();
         stackedBarChart.setOffset( width / 2 - stackedBarChart.getFullBounds().getWidth() / 2, foodNode.getPlateBottomY() );
 
         foodNode.setOffset( stackedBarChart.getFullBounds().getX() - foodNode.getDropTarget().getWidth(), 0 );
         exerciseNode.setOffset( stackedBarChart.getFullBounds().getMaxX() + 25, 0 );
 
-        double w = phetPCanvas.getWidth() - phetPCanvas.getControlPanelWidth();
-        chartNode.relayout( w, phetPCanvas.getHeight() - foodNode.getPlateBottomY() );
+        double w = aimxcelPCanvas.getWidth() - aimxcelPCanvas.getControlPanelWidth();
+        chartNode.relayout( w, aimxcelPCanvas.getHeight() - foodNode.getPlateBottomY() );
         chartNode.setOffset( 0, foodNode.getPlateBottomY() );
     }
 }

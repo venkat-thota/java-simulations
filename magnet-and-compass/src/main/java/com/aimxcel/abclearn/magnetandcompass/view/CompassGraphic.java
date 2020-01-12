@@ -14,10 +14,10 @@ import java.awt.image.BufferedImage;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2.ChangeEvent;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.CompositeAimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
@@ -162,14 +162,14 @@ public class CompassGraphic extends CompositeAimxcelGraphic
     //----------------------------------------------------------------------------
 
     /*
-     * @see edu.colorado.phet.magnet-and-compass.view.ICollidable#getCollisionDetector()
+     * @see edu.colorado.aimxcel.magnet-and-compass.view.ICollidable#getCollisionDetector()
      */
     public CollisionDetector getCollisionDetector() {
         return _collisionDetector;
     }
 
     /*
-     * @see edu.colorado.phet.magnet-and-compass.view.ICollidable#getCollisionBounds()
+     * @see edu.colorado.aimxcel.magnet-and-compass.view.ICollidable#getCollisionBounds()
      */
     public Shape[] getCollisionBounds() {
         if ( isVisible() ) {

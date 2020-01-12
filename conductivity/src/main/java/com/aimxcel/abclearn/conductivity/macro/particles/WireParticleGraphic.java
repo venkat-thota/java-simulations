@@ -31,8 +31,8 @@ public class WireParticleGraphic extends TransformGraphic {
     }
 
     public void paint( Graphics2D graphics2d ) {
-        Vector2D phetvector = particle.getPosition();
-        java.awt.Point point = getTransform().modelToView( new Point2D.Double( phetvector.getX(), phetvector.getY() ) );
+        Vector2D aimxcelvector = particle.getPosition();
+        java.awt.Point point = getTransform().modelToView( new Point2D.Double( aimxcelvector.getX(), aimxcelvector.getY() ) );
         imageGraphic.setPosition( point );
         imageGraphic.paint( graphics2d );
     }

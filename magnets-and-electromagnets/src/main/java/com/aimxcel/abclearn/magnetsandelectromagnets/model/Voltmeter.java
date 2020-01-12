@@ -152,7 +152,7 @@ public class Voltmeter extends MagnetsAndElectromagnetsObservable implements Mod
      * Updates the needle deflection angle.
      * If rotational kinematics are enabled, jiggle the needle around the zero point.
      * 
-     * @see edu.colorado.phet.common.model.ModelElement#stepInTime(double)
+     * @see edu.colorado.aimxcel.common.model.ModelElement#stepInTime(double)
      */
     public void stepInTime( double dt ) {
        if ( isEnabled() ) {
@@ -194,7 +194,7 @@ public class Voltmeter extends MagnetsAndElectromagnetsObservable implements Mod
     //----------------------------------------------------------------------------
     
     /*
-     * @see edu.colorado.phet.common.util.SimpleObserver#update()
+     * @see edu.colorado.aimxcel.common.util.SimpleObserver#update()
      */
     public void update() {
         // Do nothing, handled by stepInTime.       

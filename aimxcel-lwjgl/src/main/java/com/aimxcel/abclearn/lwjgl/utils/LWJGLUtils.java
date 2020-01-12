@@ -336,9 +336,9 @@ public class LWJGLUtils {
                                          setFont( new AimxcelFont( 20, true ) );
                                          setForeground( Color.RED );
                                      }} );
-                                     String troubleshootingUrl = "http://phet.colorado.edu/en/troubleshooting#3d-driver";
+                                     String troubleshootingUrl = "http://aimxcel.colorado.edu/en/troubleshooting#3d-driver";
                                      String troubleshootingLink = "<a href=\"" + troubleshootingUrl + "\">" + troubleshootingUrl + "</a>";
-                                     String email = "phethelp@colorado.edu";
+                                     String email = "aimxcelhelp@colorado.edu";
                                      String emailLink = "<a href=\"mailto:" + email + "\">" + email + "</a>";
                                      String body = AimxcelCommonResources.getString( "Jme.moreInformation" );
                                      add( new HTMLUtils.InteractiveHTMLPane( MessageFormat.format( body, troubleshootingLink, emailLink ) ) {/**

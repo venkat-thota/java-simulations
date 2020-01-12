@@ -23,7 +23,7 @@ public class LayeredPanel extends JPanel {
     }
 
     public void addPainter( Painter p, int level ) {
-        //edu.colorado.phet.util.Debug.traceln("Painter added: "+p+", "+p.getClass());
+        //edu.colorado.aimxcel.util.Debug.traceln("Painter added: "+p+", "+p.getClass());
         //new Exception().printStackTrace();
 
         Vector v = (Vector)painters.get( new Integer( level ) );
@@ -44,8 +44,8 @@ public class LayeredPanel extends JPanel {
             Vector next = (Vector)painters.get( key );
             for( int i = 0; i < next.size(); i++ ) {
                 Painter p = (Painter)next.get( i );
-                //edu.colorado.phet.util.Debug.traceln("num graphics painters: "+graphicsPainters.size());
-                //edu.colorado.phet.util.Debug.traceln("Painter["+i+"]="+p);
+                //edu.colorado.aimxcel.util.Debug.traceln("num graphics painters: "+graphicsPainters.size());
+                //edu.colorado.aimxcel.util.Debug.traceln("Painter["+i+"]="+p);
                 p.paint( g2 );
             }
         }

@@ -22,9 +22,9 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 public class EnergyTextGraphic extends TransformGraphic {
 
-    public EnergyTextGraphic( ModelViewTransform2D modelviewtransform2d, MutableVector2D phetvector ) {
+    public EnergyTextGraphic( ModelViewTransform2D modelviewtransform2d, MutableVector2D aimxcelvector ) {
         super( modelviewtransform2d );
-        loc = phetvector;
+        loc = aimxcelvector;
         text = ConductivityResources.getString( "EnergyTextGraphic.EnergyText" );
         font = new AimxcelFont( Font.PLAIN, 36 );
         smallFont = new AimxcelFont( Font.PLAIN, 18 );
@@ -55,16 +55,16 @@ public class EnergyTextGraphic extends TransformGraphic {
         affinetransform.translate( point.x - 15, point.y );
         affinetransform.rotate( -1.5707963267948966D );
         trfShape = affinetransform.createTransformedShape( shape );
-        AbstractVector2D phetvector = getTopCenter( trfShape.getBounds2D() );
-        phetvector = phetvector.minus( 0.0D, 40D );
-        Vector2D phetvector1 = phetvector.plus( 0.0D, -200D );
-        arrowShape = ( new ArrowShape( phetvector, phetvector1, 50D, 50D, 20D ) ).getArrowPath();
+        AbstractVector2D aimxcelvector = getTopCenter( trfShape.getBounds2D() );
+        aimxcelvector = aimxcelvector.minus( 0.0D, 40D );
+        Vector2D aimxcelvector1 = aimxcelvector.plus( 0.0D, -200D );
+        arrowShape = ( new ArrowShape( aimxcelvector, aimxcelvector1, 50D, 50D, 20D ) ).getArrowPath();
         highShape = smallFont.createGlyphVector( graphics2D.getFontRenderContext(),
-                                                 ConductivityResources.getString( "EnergyTextGraphic.HighText" ) ).getOutline( (float) phetvector1.getX() - 20F,
-                                                                                                                               (float) phetvector1.getY() - 20F );
+                                                 ConductivityResources.getString( "EnergyTextGraphic.HighText" ) ).getOutline( (float) aimxcelvector1.getX() - 20F,
+                                                                                                                               (float) aimxcelvector1.getY() - 20F );
         lowShape = smallFont.createGlyphVector( graphics2D.getFontRenderContext(),
-                                                ConductivityResources.getString( "EnergyTextGraphic.LowText" ) ).getOutline( (float) phetvector.getX() - 20F,
-                                                                                                                             (float) phetvector.getY() + 20F );
+                                                ConductivityResources.getString( "EnergyTextGraphic.LowText" ) ).getOutline( (float) aimxcelvector.getX() - 20F,
+                                                                                                                             (float) aimxcelvector.getY() + 20F );
     }
 
     public void update() {

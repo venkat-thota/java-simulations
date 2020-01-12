@@ -10,10 +10,9 @@ import com.aimxcel.abclearn.sound.model.SoundListener;
 import com.aimxcel.abclearn.sound.model.SoundModel;
 import com.aimxcel.abclearn.sound.model.Wavefront;
 import com.aimxcel.abclearn.sound.view.InteractiveSpeakerGraphic.InteractiveSpeakerChangeListener;
-
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
 
 public class InterferenceListenerGraphic extends ListenerGraphic {
 

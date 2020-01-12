@@ -10,9 +10,8 @@ import java.awt.image.BufferedImage;
 import com.aimxcel.abclearn.sound.SoundConfig;
 import com.aimxcel.abclearn.sound.model.WaveMedium;
 import com.aimxcel.abclearn.sound.model.Wavefront;
-
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
 
 public class BufferedWaveMediumGraphic extends AimxcelImageGraphic implements SimpleObserver {
 

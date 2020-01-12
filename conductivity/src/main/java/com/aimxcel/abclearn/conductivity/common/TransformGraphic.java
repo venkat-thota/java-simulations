@@ -1,7 +1,7 @@
 
 package com.aimxcel.abclearn.conductivity.common;
 
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.Graphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.Graphic;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.TransformListener;

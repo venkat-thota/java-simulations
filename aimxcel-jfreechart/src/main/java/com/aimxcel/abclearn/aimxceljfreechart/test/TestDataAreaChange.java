@@ -27,7 +27,7 @@ import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 public class TestDataAreaChange {
     private JFrame frame;
     private Timer timer;
-    private AimxcelPCanvas phetPCanvas;
+    private AimxcelPCanvas aimxcelPCanvas;
     private JFreeChartNode dynamicJFreeChartNode;
     private PSwing pSwing;
 
@@ -36,12 +36,12 @@ public class TestDataAreaChange {
         frame.setSize( 1280, 768 - 100 );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
-        phetPCanvas = new AimxcelPCanvas();
-        frame.setContentPane( phetPCanvas );
+        aimxcelPCanvas = new AimxcelPCanvas();
+        frame.setContentPane( aimxcelPCanvas );
 
         JFreeChart chart = ChartFactory.createXYLineChart( "title", "x", "y", new XYSeriesCollection(), PlotOrientation.VERTICAL, false, false, false );
-//        dynamicJFreeChartNode = new DynamicJFreeChartNode2( phetPCanvas, chart );
-        dynamicJFreeChartNode = new DynamicJFreeChartNode( phetPCanvas, chart );
+//        dynamicJFreeChartNode = new DynamicJFreeChartNode2( aimxcelPCanvas, chart );
+        dynamicJFreeChartNode = new DynamicJFreeChartNode( aimxcelPCanvas, chart );
 //        dynamicJFreeChartNode = new JFreeChartNode( chart);
 
         chart.getXYPlot().getRangeAxis().setAutoRange( false );
@@ -49,7 +49,7 @@ public class TestDataAreaChange {
         chart.getXYPlot().getDomainAxis().setAutoRange( false );
         chart.getXYPlot().getDomainAxis().setRange( 0, 1 );
 
-        phetPCanvas.addScreenChild( dynamicJFreeChartNode );
+        aimxcelPCanvas.addScreenChild( dynamicJFreeChartNode );
 
         JPanel panel = new JPanel();
 
@@ -66,14 +66,14 @@ public class TestDataAreaChange {
         } );
         panel.add( jCheckBox );
         pSwing = new PSwing( panel );
-        phetPCanvas.addScreenChild( pSwing );
+        aimxcelPCanvas.addScreenChild( pSwing );
 
         timer = new Timer( 30, new ActionListener() {
             public void actionPerformed( ActionEvent e ) {
                 System.out.println( "dynamicJFreeChartNode.getDataArea( ) = " + dynamicJFreeChartNode.getDataArea() );
             }
         } );
-        phetPCanvas.addComponentListener( new ComponentAdapter() {
+        aimxcelPCanvas.addComponentListener( new ComponentAdapter() {
             public void componentResized( ComponentEvent e ) {
                 relayout();
             }
@@ -83,13 +83,13 @@ public class TestDataAreaChange {
 
     protected void relayout() {
         pSwing.setOffset( 0, 0 );
-        dynamicJFreeChartNode.setBounds( 0, pSwing.getFullBounds().getHeight(), phetPCanvas.getWidth(), phetPCanvas.getHeight() - pSwing.getFullBounds().getHeight() );
+        dynamicJFreeChartNode.setBounds( 0, pSwing.getFullBounds().getHeight(), aimxcelPCanvas.getWidth(), aimxcelPCanvas.getHeight() - pSwing.getFullBounds().getHeight() );
     }
 
     public void start() {
         frame.setVisible( true );
         timer.start();
-        phetPCanvas.requestFocus();
+        aimxcelPCanvas.requestFocus();
     }
 
     public static void main( String[] args ) {

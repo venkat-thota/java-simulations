@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.SwingClock;
 
 

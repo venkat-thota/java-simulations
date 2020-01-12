@@ -17,7 +17,7 @@ public class System2D {
     }
 
     public void addLaw( Law lx ) {
-        //edu.colorado.phet.util.Debug.traceln("adding law: "+lx+", "+lx.getClass().getName());
+        //edu.colorado.aimxcel.util.Debug.traceln("adding law: "+lx+", "+lx.getClass().getName());
         if( !( lx instanceof Law ) ) {
             throw new RuntimeException( "What?!" );
         }

@@ -22,19 +22,19 @@ public class MoveTo
             bandparticle.setX( bandparticle.getEnergyLevel().getLine().getX2() + d1 );
         }
         double d2 = speed.getSpeed() * d;
-        MutableVector2D phetvector = target.getPosition();
-        MutableVector2D phetvector1 = bandparticle.getPosition();
-        Vector2D phetvector2 = phetvector.minus( phetvector1 );
-        double d3 = phetvector2.magnitude();
+        MutableVector2D aimxcelvector = target.getPosition();
+        MutableVector2D aimxcelvector1 = bandparticle.getPosition();
+        Vector2D aimxcelvector2 = aimxcelvector.minus( aimxcelvector1 );
+        double d3 = aimxcelvector2.magnitude();
         if ( d3 <= d2 ) {
-            bandparticle.setPosition( phetvector );
+            bandparticle.setPosition( aimxcelvector );
             return new Waiting();
         }
         else {
-            Vector2D phetvector3 = phetvector2.getInstanceOfMagnitude( d2 );
-            phetvector3 = new Vector2D( -Math.abs( phetvector3.getX() ), phetvector3.getY() );
-            Vector2D phetvector4 = phetvector1.plus( phetvector3 );
-            bandparticle.setPosition( new MutableVector2D( phetvector4.getX(), phetvector4.getY() ) );
+            Vector2D aimxcelvector3 = aimxcelvector2.getInstanceOfMagnitude( d2 );
+            aimxcelvector3 = new Vector2D( -Math.abs( aimxcelvector3.getX() ), aimxcelvector3.getY() );
+            Vector2D aimxcelvector4 = aimxcelvector1.plus( aimxcelvector3 );
+            bandparticle.setPosition( new MutableVector2D( aimxcelvector4.getX(), aimxcelvector4.getY() ) );
             return this;
         }
     }

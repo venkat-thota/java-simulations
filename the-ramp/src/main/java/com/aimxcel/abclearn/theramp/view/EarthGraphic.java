@@ -8,7 +8,7 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 
 public class EarthGraphic extends PNode {
-    private PPath phetShapeGraphic;
+    private PPath aimxcelShapeGraphic;
     private RampPanel rampPanel;
     private RampWorld rampWorld;
         public static final Color earthGreen = new Color( 150, 200, 140 );
@@ -18,14 +18,14 @@ public class EarthGraphic extends PNode {
     public EarthGraphic( RampPanel rampPanel, RampWorld rampWorld ) {
         this.rampPanel = rampPanel;
         this.rampWorld = rampWorld;
-        phetShapeGraphic = new PPath( null );
-        phetShapeGraphic.setPaint( earthGreen );
-        addChild( phetShapeGraphic );
+        aimxcelShapeGraphic = new PPath( null );
+        aimxcelShapeGraphic.setPaint( earthGreen );
+        addChild( aimxcelShapeGraphic );
         update();
     }
 
     private void update() {
-        phetShapeGraphic.setPathTo( createShape() );
+        aimxcelShapeGraphic.setPathTo( createShape() );
     }
 
     private Shape createShape() {

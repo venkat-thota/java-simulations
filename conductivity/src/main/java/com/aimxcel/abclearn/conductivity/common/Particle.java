@@ -26,10 +26,10 @@ public class Particle extends SimpleObservable
     }
 
     public void stepInTime( double d ) {
-        Vector2D phetvector = acceleration.times( d );
-        velocity = velocity.plus( phetvector );
-        Vector2D phetvector1 = velocity.times( d );
-        position = position.plus( phetvector1 );
+        Vector2D aimxcelvector = acceleration.times( d );
+        velocity = velocity.plus( aimxcelvector );
+        Vector2D aimxcelvector1 = velocity.times( d );
+        position = position.plus( aimxcelvector1 );
         notifyObservers();
     }
 

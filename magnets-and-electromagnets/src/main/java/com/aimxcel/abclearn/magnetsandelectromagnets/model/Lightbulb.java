@@ -108,7 +108,7 @@ public class Lightbulb extends MagnetsAndElectromagnetsObservable implements Sim
     //----------------------------------------------------------------------------
     
     /*
-     * @see edu.colorado.phet.common.util.SimpleObserver#update()
+     * @see edu.colorado.aimxcel.common.util.SimpleObserver#update()
      */
     public void update() {
         if ( isEnabled() ) {

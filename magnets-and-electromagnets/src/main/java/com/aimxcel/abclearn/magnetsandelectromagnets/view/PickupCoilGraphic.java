@@ -8,9 +8,9 @@ import java.awt.Shape;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2.ChangeEvent;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.CompositeAimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.NonInteractiveEventListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
@@ -263,14 +263,14 @@ public class PickupCoilGraphic extends GraphicLayerSet
     //----------------------------------------------------------------------------
 
     /*
-    * @see edu.colorado.phet.magnets-and-electromagnets.view.ICollidable#getCollisionDetector()
+    * @see edu.colorado.aimxcel.magnets-and-electromagnets.view.ICollidable#getCollisionDetector()
     */
     public CollisionDetector getCollisionDetector() {
         return _collisionDetector;
     }
 
     /*
-    * @see edu.colorado.phet.magnets-and-electromagnets.view.ICollidable#getCollisionBounds()
+    * @see edu.colorado.aimxcel.magnets-and-electromagnets.view.ICollidable#getCollisionBounds()
     */
     public Shape[] getCollisionBounds() {
         return _coilGraphic.getCollisionBounds();

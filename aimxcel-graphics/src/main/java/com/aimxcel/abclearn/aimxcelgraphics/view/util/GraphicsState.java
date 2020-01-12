@@ -11,7 +11,7 @@ import java.awt.Shape;
 import java.awt.Stroke;
 import java.awt.geom.AffineTransform;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphics2D;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphics2D;
 
 
 public class GraphicsState {
@@ -30,8 +30,8 @@ public class GraphicsState {
         this.g2 = graphics2D;
 
         if ( g2 instanceof AimxcelGraphics2D ) {
-            AimxcelGraphics2D phetGraphics2D = (AimxcelGraphics2D) g2;
-            phetGraphics2D.pushState();
+            AimxcelGraphics2D aimxcelGraphics2D = (AimxcelGraphics2D) g2;
+            aimxcelGraphics2D.pushState();
         }
         else {
             renderingHints = graphics2D.getRenderingHints();
@@ -54,8 +54,8 @@ public class GraphicsState {
     public void restoreGraphics() {
 
         if ( g2 instanceof AimxcelGraphics2D ) {
-            AimxcelGraphics2D phetGraphics2D = (AimxcelGraphics2D) g2;
-            phetGraphics2D.popState();
+            AimxcelGraphics2D aimxcelGraphics2D = (AimxcelGraphics2D) g2;
+            aimxcelGraphics2D.popState();
         }
         else {
             if ( g2.getRenderingHints() != renderingHints ) {

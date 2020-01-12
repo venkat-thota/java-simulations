@@ -104,7 +104,7 @@ public class MoleculeReader {
                                 builder.append( allLine ).append( "\n" );
                             }
                             return new MoleculeFile( cid, builder.toString() );
-                            //FileUtils.writeString( new File( "/home/jon/phet/molecules/full3d/" + cid + ".sdf" ), builder.toString() );
+                            //FileUtils.writeString( new File( "/home/jon/aimxcel/molecules/full3d/" + cid + ".sdf" ), builder.toString() );
                         }
                         else {
                             // if we weren't OK, reset the lines and OK flag

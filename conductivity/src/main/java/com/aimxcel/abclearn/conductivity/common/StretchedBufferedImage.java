@@ -4,7 +4,7 @@ package com.aimxcel.abclearn.conductivity.common;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.Graphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.Graphic;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
 

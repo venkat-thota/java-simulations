@@ -3,9 +3,8 @@ package com.aimxcel.abclearn.sound.view;
 import java.awt.*;
 import java.awt.geom.*;
 
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
 import com.aimxcel.abclearn.sound.SoundConfig;
-
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
 
 public class ReflectingWallGraphic extends AimxcelShapeGraphic {
 

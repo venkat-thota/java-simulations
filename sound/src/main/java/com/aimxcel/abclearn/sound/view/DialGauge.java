@@ -10,8 +10,8 @@ import com.aimxcel.abclearn.sound.coreadditions.ScalarObservable;
 import com.aimxcel.abclearn.sound.coreadditions.ScalarObserver;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.CompositeAimxcelGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.util.GraphicsUtil;
 
 public class DialGauge extends CompositeAimxcelGraphic implements ScalarObserver {

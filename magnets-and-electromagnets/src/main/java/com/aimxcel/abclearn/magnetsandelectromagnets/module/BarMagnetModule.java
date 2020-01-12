@@ -299,7 +299,7 @@ public class BarMagnetModule extends MagnetsAndElectromagnetsModule {
         }
 
         /*
-         * @see edu.colorado.phet.common.util.SimpleObserver#update()
+         * @see edu.colorado.aimxcel.common.util.SimpleObserver#update()
          * 
          * If the bar magnet or compass is moved, disable and unwire the wiggle me.
          */

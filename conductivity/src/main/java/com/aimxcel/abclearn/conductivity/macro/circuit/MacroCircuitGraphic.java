@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 import com.aimxcel.abclearn.conductivity.common.StretchedBufferedImage;
 import com.aimxcel.abclearn.conductivity.macro.battery.Battery;
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.Graphic;
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.ShapeGraphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.Graphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.ShapeGraphic;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
@@ -68,12 +68,12 @@ public class MacroCircuitGraphic {
                 transform.addTransformListener( new TransformListener() {
 
                     public void transformChanged( ModelViewTransform2D modelviewtransform2d ) {
-                        MutableVector2D phetvector = b.getEndPosition();
-                        MutableVector2D phetvector1 = b.getStartPosition();
+                        MutableVector2D aimxcelvector = b.getEndPosition();
+                        MutableVector2D aimxcelvector1 = b.getStartPosition();
                         int height = (int) ( batteryImage.getHeight() * 0.8 );
-                        int x = transform.modelToViewX( phetvector.getX() );
-                        int w = transform.modelToViewX( phetvector1.getX() ) - x;
-                        int y0 = transform.modelToViewY( phetvector.getY() );
+                        int x = transform.modelToViewX( aimxcelvector.getX() );
+                        int w = transform.modelToViewX( aimxcelvector1.getX() ) - x;
+                        int y0 = transform.modelToViewY( aimxcelvector.getY() );
                         Rectangle rectangle = new Rectangle( x, y0 - height / 2, w, height );
                         sbi.setOutputRect( rectangle );
                     }

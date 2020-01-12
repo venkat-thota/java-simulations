@@ -6,7 +6,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
 public class Wire extends LinearBranch {
 
-    public Wire( MutableVector2D phetvector, MutableVector2D phetvector1 ) {
-        super( phetvector, phetvector1 );
+    public Wire( MutableVector2D aimxcelvector, MutableVector2D aimxcelvector1 ) {
+        super( aimxcelvector, aimxcelvector1 );
     }
 }

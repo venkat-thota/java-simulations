@@ -8,37 +8,37 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 
 public class ArrowShape {
 
-    public ArrowShape( AbstractVector2D phetvector, AbstractVector2D phetvector1, double d, double d1, double d2 ) {
-        direction = phetvector1.minus( phetvector ).normalized();
-        double d3 = phetvector1.minus( phetvector ).magnitude();
+    public ArrowShape( AbstractVector2D aimxcelvector, AbstractVector2D aimxcelvector1, double d, double d1, double d2 ) {
+        direction = aimxcelvector1.minus( aimxcelvector ).normalized();
+        double d3 = aimxcelvector1.minus( aimxcelvector ).magnitude();
         if ( d3 < d ) {
             throw new RuntimeException( "Head too big." );
         }
         else {
             norm = direction.getPerpendicularVector();
-            tipLocation = phetvector1;
-            Vector2D phetvector2 = getPoint( -1D * d, -d1 / 2D );
-            Vector2D phetvector3 = getPoint( -1D * d, d1 / 2D );
-            Vector2D phetvector4 = getPoint( -1D * d, -d2 / 2D );
-            Vector2D phetvector5 = getPoint( -1D * d, d2 / 2D );
-            Vector2D phetvector6 = getPoint( -1D * d3, -d2 / 2D );
-            Vector2D phetvector7 = getPoint( -1D * d3, d2 / 2D );
-            DoubleGeneralPath doublegeneralpath = new DoubleGeneralPath( phetvector1.getX(), phetvector1.getY() );
-            doublegeneralpath.lineTo( phetvector2 );
-            doublegeneralpath.lineTo( phetvector4 );
-            doublegeneralpath.lineTo( phetvector6 );
-            doublegeneralpath.lineTo( phetvector7 );
-            doublegeneralpath.lineTo( phetvector5 );
-            doublegeneralpath.lineTo( phetvector3 );
-            doublegeneralpath.lineTo( phetvector1.getX(), phetvector1.getY() );
+            tipLocation = aimxcelvector1;
+            Vector2D aimxcelvector2 = getPoint( -1D * d, -d1 / 2D );
+            Vector2D aimxcelvector3 = getPoint( -1D * d, d1 / 2D );
+            Vector2D aimxcelvector4 = getPoint( -1D * d, -d2 / 2D );
+            Vector2D aimxcelvector5 = getPoint( -1D * d, d2 / 2D );
+            Vector2D aimxcelvector6 = getPoint( -1D * d3, -d2 / 2D );
+            Vector2D aimxcelvector7 = getPoint( -1D * d3, d2 / 2D );
+            DoubleGeneralPath doublegeneralpath = new DoubleGeneralPath( aimxcelvector1.getX(), aimxcelvector1.getY() );
+            doublegeneralpath.lineTo( aimxcelvector2 );
+            doublegeneralpath.lineTo( aimxcelvector4 );
+            doublegeneralpath.lineTo( aimxcelvector6 );
+            doublegeneralpath.lineTo( aimxcelvector7 );
+            doublegeneralpath.lineTo( aimxcelvector5 );
+            doublegeneralpath.lineTo( aimxcelvector3 );
+            doublegeneralpath.lineTo( aimxcelvector1.getX(), aimxcelvector1.getY() );
             arrowPath = doublegeneralpath.getGeneralPath();
             return;
         }
     }
 
     private Vector2D getPoint( double d, double d1 ) {
-        Vector2D phetvector = direction.times( d ).plus( norm.times( d1 ) );
-        return tipLocation.plus( phetvector );
+        Vector2D aimxcelvector = direction.times( d ).plus( norm.times( d1 ) );
+        return tipLocation.plus( aimxcelvector );
     }
 
     public GeneralPath getArrowPath() {

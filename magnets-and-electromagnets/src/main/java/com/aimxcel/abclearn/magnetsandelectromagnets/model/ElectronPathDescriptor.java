@@ -2,7 +2,7 @@
 
 package com.aimxcel.abclearn.magnetsandelectromagnets.model;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.CompositeAimxcelGraphic;
 import com.aimxcel.abclearn.magnetsandelectromagnets.util.QuadBezierSpline;
 
 

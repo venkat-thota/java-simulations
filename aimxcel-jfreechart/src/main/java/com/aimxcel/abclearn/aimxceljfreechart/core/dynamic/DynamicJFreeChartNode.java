@@ -21,16 +21,16 @@ public class DynamicJFreeChartNode extends JFreeChartNode {
 	private static final long serialVersionUID = 1L;
 	private ArrayList<SeriesData> seriesDataList = new ArrayList<SeriesData>();
     private ArrayList<SeriesView> seriesViewList = new ArrayList<SeriesView>();
-    private AimxcelPCanvas phetPCanvas;
+    private AimxcelPCanvas aimxcelPCanvas;
 //    private AimxcelPPath debugBufferRegion;//internal debugging tool for deciphering screen output regions
 
     //The default SeriesView is JFreeChart rendering.
     private SeriesViewFactory viewFactory = RENDERER_JFREECHART;
     private boolean autoUpdateAll = true;//require user to force repaints to reduce redundant calls
 
-    public DynamicJFreeChartNode( AimxcelPCanvas phetPCanvas, JFreeChart chart ) {
+    public DynamicJFreeChartNode( AimxcelPCanvas aimxcelPCanvas, JFreeChart chart ) {
         super( chart );
-        this.phetPCanvas = phetPCanvas;
+        this.aimxcelPCanvas = aimxcelPCanvas;
 //        debugBufferRegion = new AimxcelPPath( new BasicStroke( 1.0f ), Color.green );
 //        addChild( debugBufferRegion );//this can destroy the bounds of the graph, use with care
     }
@@ -222,7 +222,7 @@ public class DynamicJFreeChartNode extends JFreeChartNode {
     }
 
     public AimxcelPCanvas getAimxcelPCanvas() {
-        return phetPCanvas;
+        return aimxcelPCanvas;
     }
 
     public void addBufferedImagePropertyChangeListener( PropertyChangeListener listener ) {

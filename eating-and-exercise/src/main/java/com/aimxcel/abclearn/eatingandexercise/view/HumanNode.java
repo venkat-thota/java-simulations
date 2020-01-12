@@ -190,15 +190,15 @@ public class HumanNode extends PNode {
         JFrame frame = new JFrame( "Test Frame" );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         frame.setSize( 800, 600 );
-        AimxcelPCanvas phetPCanvas = new BufferedAimxcelPCanvas( new PDimension( 3, 3 ) );
-        phetPCanvas.setZoomEventHandler( new PZoomEventHandler() );
+        AimxcelPCanvas aimxcelPCanvas = new BufferedAimxcelPCanvas( new PDimension( 3, 3 ) );
+        aimxcelPCanvas.setZoomEventHandler( new PZoomEventHandler() );
         //todo: update layout
-        frame.setContentPane( phetPCanvas );
+        frame.setContentPane( aimxcelPCanvas );
 
         final Human human = new Human();
         HumanNode humanNode = new HumanNode( human );
         humanNode.setOffset( 1, 2 );
-        phetPCanvas.addWorldChild( humanNode );
+        aimxcelPCanvas.addWorldChild( humanNode );
         frame.setVisible( true );
         JFrame controlFrame = new JFrame();
         JPanel contentPane = new VerticalLayoutPanel();

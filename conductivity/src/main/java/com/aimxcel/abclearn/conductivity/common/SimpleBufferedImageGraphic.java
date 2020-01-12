@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.Graphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.Graphic;
 
 
 public class SimpleBufferedImageGraphic

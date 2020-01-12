@@ -1,9 +1,9 @@
 
 
 /*
-  cd E:\java\projects\phets\data
-  C:\j2sdk1.4.0_01\bin\java phet.edu.colorado.phet.signal.SignalApplet
-  java phet.edu.colorado.phet.signal.SignalApplet
+  cd E:\java\projects\aimxcels\data
+  C:\j2sdk1.4.0_01\bin\java aimxcel.edu.colorado.aimxcel.signal.SignalApplet
+  java aimxcel.edu.colorado.aimxcel.signal.SignalApplet
 */
 
 package com.aimxcel.abclearn.signalcircuit;

@@ -5,10 +5,10 @@ import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelResources;
 
 public class SoundResources {
 
-    private static AimxcelResources phetResources = new AimxcelResources( SoundConfig.PROJECT_NAME );
+    private static AimxcelResources aimxcelResources = new AimxcelResources( SoundConfig.PROJECT_NAME );
 
     public static AimxcelResources getResourceLoader() {
-        return phetResources;
+        return aimxcelResources;
     }
 
     public static String getString( String key ) {

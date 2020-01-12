@@ -17,9 +17,9 @@ import javax.swing.JTextArea;
 
 import com.aimxcel.abclearn.aimxcelgraphics.application.AimxcelGraphicsModule;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.help.HelpItem;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelTestApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;

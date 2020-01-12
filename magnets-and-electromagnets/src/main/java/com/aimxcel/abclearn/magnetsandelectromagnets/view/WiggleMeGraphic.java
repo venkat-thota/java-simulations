@@ -12,9 +12,9 @@ import java.awt.RenderingHints;
 import java.awt.Stroke;
 import java.awt.geom.Point2D;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelTextGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.BaseModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
@@ -42,7 +42,7 @@ public class WiggleMeGraphic extends GraphicLayerSet implements ModelElement {
     public static final int CLOCKWISE = 0;
     public static final int COUNTER_CLOCKWISE = 1;
 
-    // Arrow "look" - see edu.colorado.phet.common.view.graphics.shapes.Arrow
+    // Arrow "look" - see edu.colorado.aimxcel.common.view.graphics.shapes.Arrow
     private static final double ARROW_HEAD_HEIGHT = 15;
     private static final double ARROW_HEAD_WIDTH = 10;
     private static final double ARROW_TAIL_WIDTH = 3;
@@ -290,7 +290,7 @@ public class WiggleMeGraphic extends GraphicLayerSet implements ModelElement {
     //----------------------------------------------------------------------------
 
     /*
-    * @see edu.colorado.phet.common.model.ModelElement#stepInTime(double)
+    * @see edu.colorado.aimxcel.common.model.ModelElement#stepInTime(double)
     *
     * Steps the graphic through its wiggle cycle.
     */

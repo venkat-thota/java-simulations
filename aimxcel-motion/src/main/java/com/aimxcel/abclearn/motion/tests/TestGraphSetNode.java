@@ -22,29 +22,29 @@ import com.aimxcel.abclearn.timeseries.model.TimeSeriesModel;
 
 public class TestGraphSetNode {
     private JFrame frame = new JFrame( getClass().getName().substring( getClass().getName().lastIndexOf( '.' ) + 1 ) );
-    private AimxcelPCanvas phetPCanvas;
+    private AimxcelPCanvas aimxcelPCanvas;
     private GraphSetNode graphSetNode;
 
     public TestGraphSetNode() {
-        phetPCanvas = new BufferedAimxcelPCanvas();
+        aimxcelPCanvas = new BufferedAimxcelPCanvas();
 
 
-        frame.setContentPane( phetPCanvas );
+        frame.setContentPane( aimxcelPCanvas );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         frame.setSize( 800, 600 );
 
         TimeSeriesModel timeSeriesModel = new TimeSeriesModel( new TestTimeSeries.MyRecordableModel(), new ConstantDtClock( 30, 1 ) );
         MinimizableControlGraph minimizableControlGraphA = new MinimizableControlGraph( "labelA", new ControlGraph(
-                phetPCanvas, new ControlGraphSeries( new DefaultTemporalVariable() ), "titleA", 0, 10, timeSeriesModel ) );
+                aimxcelPCanvas, new ControlGraphSeries( new DefaultTemporalVariable() ), "titleA", 0, 10, timeSeriesModel ) );
         MinimizableControlGraph minimizableControlGraphB = new MinimizableControlGraph( "Long labelB", new ControlGraph(
-                phetPCanvas, new ControlGraphSeries( new DefaultTemporalVariable() ), "Long titleB", 0, 10, timeSeriesModel ) );
+                aimxcelPCanvas, new ControlGraphSeries( new DefaultTemporalVariable() ), "Long titleB", 0, 10, timeSeriesModel ) );
 
 
         graphSetNode = new GraphSetNode( new GraphSetModel( new GraphSuite( new MinimizableControlGraph[] { minimizableControlGraphA, minimizableControlGraphB } ) ) );
         graphSetNode.setAlignedLayout();
-        phetPCanvas.addScreenChild( graphSetNode );
+        aimxcelPCanvas.addScreenChild( graphSetNode );
 
-        phetPCanvas.addComponentListener( new ComponentAdapter() {
+        aimxcelPCanvas.addComponentListener( new ComponentAdapter() {
             public void componentResized( ComponentEvent e ) {
                 relayout();
             }
@@ -53,7 +53,7 @@ public class TestGraphSetNode {
     }
 
     private void relayout() {
-        graphSetNode.setBounds( 0, 0, phetPCanvas.getWidth(), phetPCanvas.getHeight() );
+        graphSetNode.setBounds( 0, 0, aimxcelPCanvas.getWidth(), aimxcelPCanvas.getHeight() );
     }
 
     private void start() {

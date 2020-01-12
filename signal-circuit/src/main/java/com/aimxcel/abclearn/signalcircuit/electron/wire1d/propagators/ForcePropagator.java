@@ -27,23 +27,23 @@ public class ForcePropagator implements Propagator1d {
         double m = wp.getMass();
         double v = wp.getVelocity();
         double x = wp.getPosition();
-        //edu.colorado.phet.util.Debug.traceln("Started propagate,: x="+x+", v="+v+", a="+a+",this="+this);
+        //edu.colorado.aimxcel.util.Debug.traceln("Started propagate,: x="+x+", v="+v+", a="+a+",this="+this);
 
         //o.O.d("Force="+force);
         double a = f / m;
 
         //v=v+a*dt;
         v = v + a * dt;
-        //edu.colorado.phet.util.Debug.traceln("After accel,: x="+x+", v="+v+", a="+a+",this="+this);
+        //edu.colorado.aimxcel.util.Debug.traceln("After accel,: x="+x+", v="+v+", a="+a+",this="+this);
         boolean positive = v >= 0;
         v = Math.abs( v );
         v = Math.min( vMax, v );
         if( !positive ) {
             v *= -1;
         }
-        //edu.colorado.phet.util.Debug.traceln("After abs and min,: x="+x+", v="+v+", a="+a+",this="+this);
+        //edu.colorado.aimxcel.util.Debug.traceln("After abs and min,: x="+x+", v="+v+", a="+a+",this="+this);
         x = x + v * dt;
-        //edu.colorado.phet.util.Debug.traceln("Propagating wire particle: x="+x+", v="+v+", a="+a+",this="+this);
+        //edu.colorado.aimxcel.util.Debug.traceln("Propagating wire particle: x="+x+", v="+v+", a="+a+",this="+this);
         double newX = x;
         wp.setVelocity( v );
         wp.setPosition( newX );

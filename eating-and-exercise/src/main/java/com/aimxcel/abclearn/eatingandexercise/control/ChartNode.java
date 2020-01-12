@@ -60,7 +60,7 @@ public class ChartNode extends PNode {
     private EatingAndExerciseModel.Units previousUnits;
     private ArrayList listeners = new ArrayList();
 
-    public ChartNode( final EatingAndExerciseModel model, AimxcelPCanvas phetPCanvas ) {
+    public ChartNode( final EatingAndExerciseModel model, AimxcelPCanvas aimxcelPCanvas ) {
         this.model = model;
         GraphSuiteSet graphSuiteSet = new GraphSuiteSet();
 
@@ -101,7 +101,7 @@ public class ChartNode extends PNode {
                 weightSeries.setUnits( model.getUnits().getMassUnit() );
             }
         } );
-        weightGraph = new EatingAndExerciseControlGraph( phetPCanvas, weightSeries, EatingAndExerciseResources.getString( "weight" ), 0, 250, tsm );
+        weightGraph = new EatingAndExerciseControlGraph( aimxcelPCanvas, weightSeries, EatingAndExerciseResources.getString( "weight" ), 0, 250, tsm );
         weightGraph.setEditable( false );
 //        weightGraph.getJFreeChartNode().getChart().getXYPlot().getDomainAxis().setLabel( "Label" );//takes up too much vertical space
         updateWeightMassLabel();
@@ -113,7 +113,7 @@ public class ChartNode extends PNode {
         ControlGraphSeries burnSeries = new ControlGraphSeries( EatingAndExerciseResources.getString( "calories.burned" ), Color.red, EatingAndExerciseResources.getString( "calories.burned" ), EatingAndExerciseStrings.KCAL_PER_DAY, new BasicStroke( 2, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER ), "", calBurnVar );
         burnSeries.setDecimalFormat( new DefaultDecimalFormat( EatingAndExerciseStrings.KCAL_PER_DAY_FORMAT ) );
 
-        calorieGraph = new EatingAndExerciseControlGraph( phetPCanvas, intakeSeries, EatingAndExerciseResources.getString( "units.calories" ), 0, 6000, tsm );
+        calorieGraph = new EatingAndExerciseControlGraph( aimxcelPCanvas, intakeSeries, EatingAndExerciseResources.getString( "units.calories" ), 0, 6000, tsm );
         calorieGraph.getJFreeChartNode().getChart().getXYPlot().getRangeAxis().setLabel( EatingAndExerciseResources.getString( "units.cal-day" ) );
         calorieGraph.addSeries( burnSeries );
         updateGraphDomains( DEFAULT_RANGE_YEARS );

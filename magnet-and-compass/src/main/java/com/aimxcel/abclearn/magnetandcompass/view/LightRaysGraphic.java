@@ -11,7 +11,7 @@ import java.awt.RenderingHints;
 import java.awt.geom.Line2D;
 import java.util.ArrayList;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
 
@@ -92,7 +92,7 @@ class LightRaysGraphic extends AimxcelGraphic {
      * Sets the intensity.
      * This generates the stroke and lines needed to represent the intensity.
      * The algorithm was adapted from
-     * edu.colorado.phet.cck3.circuit.components.LightBulbGraphic.setIntensity.
+     * edu.colorado.aimxcel.cck3.circuit.components.LightBulbGraphic.setIntensity.
      *
      * @param intensity
      */

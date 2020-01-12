@@ -38,7 +38,7 @@ public class StartupUtils {
             // libraries not loaded via JNLP, so we need to load them here.
 
             // create a temporary directory to hold native libs
-            final File tempDir = new File( System.getProperty( "java.io.tmpdir" ), "phet-lwjgl-libs" );
+            final File tempDir = new File( System.getProperty( "java.io.tmpdir" ), "aimxcel-lwjgl-libs" );
             tempDir.mkdirs();
             final String path = tempDir.getAbsolutePath();
 

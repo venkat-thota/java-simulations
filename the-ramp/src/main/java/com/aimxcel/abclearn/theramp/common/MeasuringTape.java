@@ -126,30 +126,30 @@ public class MeasuringTape extends PNode {
     }
 
     class TapeGraphic extends PNode {
-        public PPath phetShapeGraphic;
+        public PPath aimxcelShapeGraphic;
 
         public TapeGraphic() {
-            phetShapeGraphic = new PPath( null );
-            phetShapeGraphic.setStroke( new BasicStroke( 2 ) );
-            phetShapeGraphic.setPaint( Color.black );
-            addChild( phetShapeGraphic );
+            aimxcelShapeGraphic = new PPath( null );
+            aimxcelShapeGraphic.setStroke( new BasicStroke( 2 ) );
+            aimxcelShapeGraphic.setPaint( Color.black );
+            addChild( aimxcelShapeGraphic );
 
         }
 
         public void setLine( Line2D.Double line ) {
-            phetShapeGraphic.setPathTo( line );
+            aimxcelShapeGraphic.setPathTo( line );
         }
     }
 
     class EndGraphic extends PNode {
-        private PPath phetShapeGraphic;
+        private PPath aimxcelShapeGraphic;
 
         public EndGraphic() {
             Ellipse2D.Double shape = new Ellipse2D.Double( 0, 0, 15, 15 );
 
-            phetShapeGraphic = new PPath( shape );
-            phetShapeGraphic.setPaint( Color.black );
-            addChild( phetShapeGraphic );
+            aimxcelShapeGraphic = new PPath( shape );
+            aimxcelShapeGraphic.setPaint( Color.black );
+            addChild( aimxcelShapeGraphic );
             addInputEventListener( new PBasicInputEventHandler() {
                 public void mouseDragged( PInputEvent event ) {
                     Dimension2D dx = getDelta( event );
@@ -163,11 +163,11 @@ public class MeasuringTape extends PNode {
             crossHairGraphic.setPaint( Color.yellow );
             addChild( crossHairGraphic );
 
-            crossHairGraphic.setOffset( phetShapeGraphic.getWidth() / 2 - crossHairSize / 2, phetShapeGraphic.getHeight() / 2 - crossHairSize / 2 );
+            crossHairGraphic.setOffset( aimxcelShapeGraphic.getWidth() / 2 - crossHairSize / 2, aimxcelShapeGraphic.getHeight() / 2 - crossHairSize / 2 );
         }
 
         public PPath getShapeGraphic() {
-            return phetShapeGraphic;
+            return aimxcelShapeGraphic;
         }
     }
 
@@ -182,25 +182,25 @@ public class MeasuringTape extends PNode {
     class ReadoutGraphic extends PNode {
         DecimalFormat decimalFormat = new DecimalFormat( "0.00" );
         private String units;
-        public PText phetShadowTextGraphic;
+        public PText aimxcelShadowTextGraphic;
 
         public ReadoutGraphic( String units ) {
             this.units = units;
-            phetShadowTextGraphic = new PText( "" );
-            phetShadowTextGraphic.setFont( new Font( AimxcelFont.getDefaultFontName(), Font.BOLD, 14 ) );
-            phetShadowTextGraphic.setTextPaint( Color.black );
+            aimxcelShadowTextGraphic = new PText( "" );
+            aimxcelShadowTextGraphic.setFont( new Font( AimxcelFont.getDefaultFontName(), Font.BOLD, 14 ) );
+            aimxcelShadowTextGraphic.setTextPaint( Color.black );
 
-            BoundNode boundGraphic = new BoundNode( phetShadowTextGraphic, 2, 2 );
+            BoundNode boundGraphic = new BoundNode( aimxcelShadowTextGraphic, 2, 2 );
             boundGraphic.setStroke( new BasicStroke() );
             boundGraphic.setStrokePaint( Color.black );
             boundGraphic.setPaint( Color.green );
             addChild( boundGraphic );
-            addChild( phetShadowTextGraphic );
+            addChild( aimxcelShadowTextGraphic );
         }
 
         public void setDistance( double modelDistance ) {
             String text = decimalFormat.format( modelDistance ) + " " + units;
-            phetShadowTextGraphic.setText( text );
+            aimxcelShadowTextGraphic.setText( text );
         }
     }
 

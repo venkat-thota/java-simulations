@@ -12,7 +12,11 @@ import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication;
 
 public class TheRampApplication extends CoreAimxcelApplication {
 
-    private final RampModule simpleRampModule;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final RampModule simpleRampModule;
     private final RampModule advancedFeatureModule;
 
     public TheRampApplication( AimxcelApplicationConfig config ) {

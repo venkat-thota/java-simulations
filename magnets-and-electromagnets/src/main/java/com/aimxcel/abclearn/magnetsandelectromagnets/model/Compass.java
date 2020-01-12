@@ -143,7 +143,7 @@ public class Compass extends MagnetsAndElectromagnetsObservable implements Model
     /**
      * If rotational kinematics is enabled (see setRotationalKinematicsEnabled),
      * the compass needle's behavior is based on a Verlet algorithm.
-     * The algorithm was reused from edu.colorado.phet.microwave.model.WaterMolecule
+     * The algorithm was reused from edu.colorado.aimxcel.microwave.model.WaterMolecule
      * in Ron LeMaster's "microwaves" simulation, with some minor changes.
      * The algorithm was verified by Mike Dubson.
      *

@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 import com.aimxcel.abclearn.lwjgl.StartupUtils;
 
 /**
- * LWJGL (slightly modified) startup implementation, so we can be compatible with PhET's simulation startup through JNLP
+ * LWJGL (slightly modified) startup implementation, so we can be compatible with Aimxcel's simulation startup through JNLP
  */
 public class LWJGLStartupImplementation {
     public static enum Platform {

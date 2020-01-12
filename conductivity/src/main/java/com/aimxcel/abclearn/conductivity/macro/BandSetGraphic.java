@@ -9,8 +9,8 @@ import com.aimxcel.abclearn.conductivity.common.ClipGraphic;
 import com.aimxcel.abclearn.conductivity.common.TransformGraphic;
 import com.aimxcel.abclearn.conductivity.macro.bands.*;
 import com.aimxcel.abclearn.conductivity.macro.circuit.MacroCircuitGraphic;
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.CompositeInteractiveGraphic;
-import com.aimxcel.abclearn.conductivity.oldphetgraphics.Graphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.CompositeInteractiveGraphic;
+import com.aimxcel.abclearn.conductivity.oldaimxcelgraphics.Graphic;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
 

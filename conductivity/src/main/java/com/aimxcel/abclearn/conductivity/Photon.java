@@ -22,8 +22,8 @@ public class Photon extends SimpleObservable
         notifyObservers();
     }
 
-    public void setVelocity( Vector2D phetvector ) {
-        particle.setVelocity( phetvector.getX(), phetvector.getY() );
+    public void setVelocity( Vector2D aimxcelvector ) {
+        particle.setVelocity( aimxcelvector.getX(), aimxcelvector.getY() );
         notifyObservers();
     }
 
@@ -37,8 +37,8 @@ public class Photon extends SimpleObservable
         notifyObservers();
     }
 
-    public void setPosition( MutableVector2D phetvector ) {
-        setPosition( phetvector.getX(), phetvector.getY() );
+    public void setPosition( MutableVector2D aimxcelvector ) {
+        setPosition( aimxcelvector.getX(), aimxcelvector.getY() );
     }
 
     public AbstractVector2D getVelocity() {

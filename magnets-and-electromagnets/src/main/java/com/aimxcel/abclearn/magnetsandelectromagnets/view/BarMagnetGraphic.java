@@ -8,7 +8,7 @@ import java.awt.Shape;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2.ChangeEvent;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.UserComponentTypes;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.magnetsandelectromagnets.MagnetsAndElectromagnetsConstants;
@@ -121,14 +121,14 @@ public class BarMagnetGraphic extends AimxcelImageGraphic
     //----------------------------------------------------------------------------
 
     /*
-     * @see edu.colorado.phet.magnets-and-electromagnets.view.ICollidable#getCollisionDetector()
+     * @see edu.colorado.aimxcel.magnets-and-electromagnets.view.ICollidable#getCollisionDetector()
      */
     public CollisionDetector getCollisionDetector() {
         return _collisionDetector;
     }
 
     /*
-     * @see edu.colorado.phet.magnets-and-electromagnets.view.ICollidable#getCollisionBounds()
+     * @see edu.colorado.aimxcel.magnets-and-electromagnets.view.ICollidable#getCollisionBounds()
      */
     public Shape[] getCollisionBounds() {
         if ( isVisible() ) {

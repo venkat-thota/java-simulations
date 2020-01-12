@@ -8,8 +8,8 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 
 public class DoubleGeneralPath {
 
-    public DoubleGeneralPath( MutableVector2D phetvector ) {
-        this( phetvector.getX(), phetvector.getY() );
+    public DoubleGeneralPath( MutableVector2D aimxcelvector ) {
+        this( aimxcelvector.getX(), aimxcelvector.getY() );
     }
 
     public DoubleGeneralPath( double d, double d1 ) {
@@ -25,13 +25,13 @@ public class DoubleGeneralPath {
         return path;
     }
 
-    public void lineTo( MutableVector2D phetvector ) {
-        lineTo( phetvector.getX(), phetvector.getY() );
+    public void lineTo( MutableVector2D aimxcelvector ) {
+        lineTo( aimxcelvector.getX(), aimxcelvector.getY() );
     }
 
     GeneralPath path;
 
-    public void lineTo( Vector2D phetvector2 ) {
-        lineTo( phetvector2.getX(), phetvector2.getY() );
+    public void lineTo( Vector2D aimxcelvector2 ) {
+        lineTo( aimxcelvector2.getX(), aimxcelvector2.getY() );
     }
 }

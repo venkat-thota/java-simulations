@@ -6,7 +6,7 @@ import java.awt.*;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelGraphic;
 
 
 public class DebuggerGraphic extends AimxcelGraphic {

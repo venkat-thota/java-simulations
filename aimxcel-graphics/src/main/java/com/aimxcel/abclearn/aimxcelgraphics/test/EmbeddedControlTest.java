@@ -11,11 +11,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelcomponents.AimxcelButton;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationEvent;
 import com.aimxcel.abclearn.aimxcelgraphics.view.graphics.mousecontrols.translation.TranslationListener;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetcomponents.AimxcelButton;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
 
@@ -47,17 +47,17 @@ public class EmbeddedControlTest {
     static class BattGraphic extends GraphicLayerSet {
         public BattGraphic( Component component, TranslationListener dragHandler ) {
             super( component );
-            AimxcelShapeGraphic phetShapeGraphic = new AimxcelShapeGraphic( component,
+            AimxcelShapeGraphic aimxcelShapeGraphic = new AimxcelShapeGraphic( component,
                                                                       new Rectangle( 100, 100 ), Color.blue, new BasicStroke( 1 ), Color.black );
-            addGraphic( phetShapeGraphic );
-            AimxcelButton phetButton = new AimxcelButton( component, "Hello" );
-            addGraphic( phetButton );
-            phetButton.addActionListener( new ActionListener() {
+            addGraphic( aimxcelShapeGraphic );
+            AimxcelButton aimxcelButton = new AimxcelButton( component, "Hello" );
+            addGraphic( aimxcelButton );
+            aimxcelButton.addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     System.out.println( "e = " + e );
                 }
             } );
-            phetShapeGraphic.addTranslationListener( dragHandler );
+            aimxcelShapeGraphic.addTranslationListener( dragHandler );
         }
     }
 

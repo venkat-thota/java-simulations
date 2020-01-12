@@ -38,15 +38,15 @@ public class RampTickSetGraphic extends PNode {
 
     public class TickGraphic extends PNode {
         private double x;
-        private PPath phetShapeGraphic;
+        private PPath aimxcelShapeGraphic;
 
         public TickGraphic( double x ) {
             super();
             this.x = x;
-            phetShapeGraphic = new PPath( new Line2D.Double( 0, 0, 0, 7 ) );
-            phetShapeGraphic.setStroke( new BasicStroke( 2 ) );
-            phetShapeGraphic.setPaint( Color.black );
-            addChild( phetShapeGraphic );
+            aimxcelShapeGraphic = new PPath( new Line2D.Double( 0, 0, 0, 7 ) );
+            aimxcelShapeGraphic.setStroke( new BasicStroke( 2 ) );
+            aimxcelShapeGraphic.setPaint( Color.black );
+            addChild( aimxcelShapeGraphic );
             update();
         }
 

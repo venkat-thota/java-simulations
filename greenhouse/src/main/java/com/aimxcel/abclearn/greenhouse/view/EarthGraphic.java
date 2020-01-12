@@ -160,7 +160,7 @@ public class EarthGraphic implements Graphic, ReflectivityAssessor {
             apparatusPanel.removeGraphic( backdropGraphic );
         }
         //Scale the currentBackdropImage so that it fills the width of the apparatus panel
-        //phetgraphics API was confusing and difficult to get it right,
+        //aimxcelgraphics API was confusing and difficult to get it right,
         //so we just clear the AffineTransform so that we can set it up ourselves, see #2453
         backdropGraphic = new GreenhouseBackgroundImageGraphic(currentBackdropImage, location,apparatusPanel );
         apparatusPanel.addGraphic( backdropGraphic, GreenhouseConfig.EARTH_BACKDROP_LAYER );

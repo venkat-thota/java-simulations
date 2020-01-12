@@ -55,7 +55,7 @@ public class TimelineNode<T> extends PNode {
 
         BufferedImage img = null;
         try {
-            img = ImageLoader.loadBufferedImage( "piccolo-phet/images/button-template.png" );
+            img = ImageLoader.loadBufferedImage( "piccolo-aimxcel/images/button-template.png" );
         }
         catch ( IOException e ) {
             e.printStackTrace();

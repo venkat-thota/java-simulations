@@ -18,7 +18,7 @@ public class WirePatch {
 
     public void add( WireSegment ws ) {
         segments.add( ws );
-        //edu.colorado.phet.util.Debug.traceln("Added segment: "+ws);
+        //edu.colorado.aimxcel.util.Debug.traceln("Added segment: "+ws);
     }
 
     public DoublePoint getPosition( double dist ) {
@@ -31,7 +31,7 @@ public class WirePatch {
         }
         for( int i = 0; i < numSegments(); i++ ) {
             if( segmentAt( i ).contains( dist ) ) {
-                //edu.colorado.phet.util.Debug.traceln("Contained at segment: "+i+", segment="+segmentAt(i));
+                //edu.colorado.aimxcel.util.Debug.traceln("Contained at segment: "+i+", segment="+segmentAt(i));
                 return segmentAt( i ).getPosition( dist );
             }
         }

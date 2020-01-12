@@ -17,7 +17,7 @@ public class LWJGLCanvas extends Canvas {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public static final String LWJGL_THREAD_NAME = "PhET LWJGL Main Loop Thread";
+	public static final String LWJGL_THREAD_NAME = "Aimxcel LWJGL Main Loop Thread";
 
     private Thread renderThread;
     private boolean running;

@@ -20,8 +20,8 @@ import com.aimxcel.abclearn.sound.view.TwoSourceInterferenceControlPanel;
 import com.aimxcel.abclearn.sound.view.InteractiveSpeakerGraphic.InteractiveSpeakerChangeListener;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.help.HelpItem;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
 
 public class TwoSpeakerInterferenceModule extends SoundModule {
 

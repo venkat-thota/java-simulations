@@ -30,7 +30,7 @@ public class WireParticlePainter implements Painter {
         if( dp == null ) {
             return;
         }
-        //edu.colorado.phet.util.Debug.traceln("Got position="+p.getPosition()+"->"+dp+"\n");
+        //edu.colorado.aimxcel.util.Debug.traceln("Got position="+p.getPosition()+"->"+dp+"\n");
         Particle px = new Particle();
         px.setPosition( dp );
         p.getPainter().paint( px, g );

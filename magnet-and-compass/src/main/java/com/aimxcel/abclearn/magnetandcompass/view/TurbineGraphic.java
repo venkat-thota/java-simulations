@@ -12,10 +12,10 @@ import java.awt.image.BufferedImage;
 import javax.swing.event.ChangeListener;
 
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelTextGraphic;
-import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.GraphicLayerSet;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelImageGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelShapeGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.AimxcelTextGraphic;
+import com.aimxcel.abclearn.aimxcelgraphics.view.aimxcelgraphics.GraphicLayerSet;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.NonInteractiveEventListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
@@ -189,7 +189,7 @@ public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, A
     //----------------------------------------------------------------------------
 
     /*
-    * @see edu.colorado.phet.common.util.SimpleObserver#update()
+    * @see edu.colorado.aimxcel.common.util.SimpleObserver#update()
     */
     public void update() {
 
@@ -262,7 +262,7 @@ public class TurbineGraphic extends GraphicLayerSet implements SimpleObserver, A
     //----------------------------------------------------------------------------
 
     /*
-    * @see edu.colorado.phet.common.view.ApparatusPanel2.ChangeListener#canvasSizeChanged(edu.colorado.phet.common.view.ApparatusPanel2.ChangeEvent)
+    * @see edu.colorado.aimxcel.common.view.ApparatusPanel2.ChangeListener#canvasSizeChanged(edu.colorado.aimxcel.common.view.ApparatusPanel2.ChangeEvent)
     */
     public void canvasSizeChanged( ApparatusPanel2.ChangeEvent event ) {
         _parentBounds.setBounds( 0, 0, event.getCanvasSize().width, event.getCanvasSize().height );

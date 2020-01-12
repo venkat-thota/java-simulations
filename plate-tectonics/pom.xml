@@ -30,7 +30,7 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.aimxcel.abclearn.lwjglphet</groupId>
+			<groupId>com.aimxcel.abclearn.lwjglaimxcel</groupId>
 			<artifactId>aimxcel-lwjgl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
