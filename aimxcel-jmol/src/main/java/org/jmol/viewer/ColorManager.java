@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2011-01-22 17:20:13 -0800 (Sat, 22 Jan 2011) $
- * $Revision: 15020 $
- *
- * Copyright (C) 2003-2006  Miguel, Jmol Development, www.jmol.org
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 package org.jmol.viewer;
 
 import org.jmol.script.Token;
@@ -39,13 +16,6 @@ import org.jmol.util.ColorEncoder;
 
 class ColorManager {
 
-  /*
-   * propertyColorEncoder is a "master" colorEncoded. It will be used
-   * for all atom-based schemes (Jmol, Rasmol, shapely, etc.)
-   * and it will be the 
-   * 
-   * 
-   */
 
   private ColorEncoder propertyColorEncoder = new ColorEncoder(null);
   private Viewer viewer;

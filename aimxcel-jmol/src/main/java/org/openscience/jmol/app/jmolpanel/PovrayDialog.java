@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: nicove $
- * $Date: 2010-08-04 22:33:23 -0700 (Wed, 04 Aug 2010) $
- * $Revision: 13833 $
- *
- * Copyright (C) 2002-2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 package org.openscience.jmol.app.jmolpanel;
 
 import org.jmol.api.*;
@@ -53,17 +30,15 @@ import javax.swing.JComponent;
 import javax.swing.InputVerifier;
 import java.io.File;
 
-/**
- * A dialog for controling the creation of a povray input file from a
- * Chemframe and a display. The actual leg work of writing the file
- * out is done by PovrayWriter.java.
- * <p>Borrows code from org.openscience.jmol.Vibrate (Thanks!).
- * @author Thomas James Grey (tjg1@ch.ic.ac.uk)
- * @author Matthew A. Meineke (mmeineke@nd.edu)
- */
+
 public class PovrayDialog extends JDialog {
 
-  private transient JmolViewer viewer;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+private transient JmolViewer viewer;
   
   protected JButton    povrayPathButton;
   //protected JTextField commandLineField;

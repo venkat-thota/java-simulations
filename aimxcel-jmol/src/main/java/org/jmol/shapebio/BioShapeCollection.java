@@ -1,27 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2010-10-02 16:11:05 -0700 (Sat, 02 Oct 2010) $
- * $Revision: 14386 $
-
- *
- * Copyright (C) 2003-2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 
 package org.jmol.shapebio;
 
@@ -40,20 +16,7 @@ import org.jmol.shape.Shape;
 import org.jmol.util.ArrayUtil;
 import org.jmol.util.BitSetUtil;
 import org.jmol.viewer.JmolConstants;
-/****************************************************************
- * Mps stands for Model-Polymer-Shape
- * 
- * When a Cartoon is instantiated with a call to setSize(),
- * it creates an MpsShape for each BioPolymer in the model set.
- * 
- * It is these shapes that are the real "shapes". Unlike other
- * shapes, which are indexed by atom and throughout the entire
- * model set, these shapes are indexed by residue and are 
- * restricted to a given BioPolymer within a given Model.
- * 
- * Model 
- * 
- ****************************************************************/
+
 public abstract class BioShapeCollection extends Shape {
 
   Atom[] atoms;

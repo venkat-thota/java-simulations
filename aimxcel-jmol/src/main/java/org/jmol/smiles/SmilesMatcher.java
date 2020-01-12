@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2007-04-26 16:57:51 -0500 (Thu, 26 Apr 2007) $
- * $Revision: 7502 $
- *
- * Copyright (C) 2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 
 package org.jmol.smiles;
 
@@ -30,61 +7,6 @@ import java.util.List;
 import org.jmol.api.JmolNode;
 import org.jmol.api.SmilesMatcherInterface;
 
-/**
- * Originating author: Nicholas Vervelle
- * 
- * A class to handle a variety of SMILES/SMARTS-related functions, including:
- *  -- determining if two SMILES strings are equivalent
- *  -- determining the molecular formula of a SMILES or SMARTS string
- *  -- searching for specific runs of atoms in a 3D model
- *  -- searching for specific runs of atoms in a SMILES description
- *  -- generating valid (though not canonical) SMILES and bioSMILES strings
- *  -- getting atom-atom correlation maps to be used with biomolecular alignment methods
- *  
- * <p>
- * The original SMILES description can been found at the
- * <a href="http://www.daylight.com/smiles/">SMILES Home Page</a>.
- * 
- * Specification for this implementation can be found in package.html.
- * 
- * <p>
- * <pre><code>
- * public methods:
- * 
- * int areEqual  -- checks a SMILES string against a reference (-1 for error; 0 for no finds; >0 for number of finds)
- * 
- * BitSet[] find  -- finds one or more occurances of a SMILES or SMARTS string within a SMILES string
- * 
- * int[][] getCorrelationMaps  -- returns correlated arrays of atoms
- * 
- * String getLastError  -- returns any error that was last encountered.
- * 
- * String getMolecularFormula   -- returns the MF of a SMILES or SMARTS string
- * 
- * String getSmiles  -- returns a standard SMILES string or a
- *                  Jmol BIOSMILES string with comment header.
- * 
- * BitSet getSubstructureSet  -- returns a single BitSet with all found atoms included
- *   
- *   
- *   in Jmol script:
- *   
- *   string2.find("SMILES", string1)
- *   string2.find("SMARTS", string1)
- *   
- *   e.g.
- *   
- *     print "CCCC".find("SMILES", "C[C]")
- *
- *   select search("smartsString")
- *   
- *   All bioSMARTS strings begin with ~ (tilde).
- *   
- * </code></pre>
- * 
- * @author Bob Hanson
- * 
- */
 public class SmilesMatcher implements SmilesMatcherInterface {
 
   private final static int MODE_BITSET = 1;
@@ -98,21 +20,7 @@ public class SmilesMatcher implements SmilesMatcherInterface {
   public String getMolecularFormula(String pattern, boolean isSmarts) {
     InvalidSmilesException.setLastError(null);
     try {
-      // note: Jmol may undercount the number of hydrogen atoms
-      // for aromatic amines where the ring bonding to N is 
-      // not explicit. Each "n" will be assigned a bonding count
-      // of two unless explicitly indicated as -n-.
-      // Thus, we take the position that "n" is the 
-      // N of pyridine unless otherwise indicated.
-      //
-      // For example:
-      //   $ print "c1ncccc1C".find("SMILES","MF")
-      //   H 7 C 5 N 1   (correct)
-      //   $ print "c1nc-n-c1C".find("SMILES","MF")
-      //   H 6 C 4 N 2   (correct)
-      // but
-      //   $ print "c1ncnc1C".find("SMILES","MF")
-      //   H 5 C 4 N 2   (incorrect)
+     
       SmilesSearch search = SmilesParser.getMolecule(pattern, isSmarts);
       search.createTopoMap(null);
       search.nodes = search.jmolAtoms;

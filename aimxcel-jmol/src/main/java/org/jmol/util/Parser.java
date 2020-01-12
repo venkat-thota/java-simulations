@@ -1,27 +1,3 @@
-/* $RCSfile$
- * $Author$
- * $Date$
- * $Revision$
- *
- * Copyright (C) 2006  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- *  02110-1301, USA.
- */
 
 package org.jmol.util;
 
@@ -30,22 +6,7 @@ import java.util.BitSet;
 
 public class Parser {
 
-  /// general static string-parsing class ///
-
-  // next[0] tracks the pointer within the string so these can all be static.
-  // but the methods parseFloat, parseInt, parseToken, parseTrimmed, and getTokens do not require this.
-
-  /**
-   * parses a "dirty" string for floats. If there are non-float tokens, 
-   * they are ignored. A bitset is used to assign values only to specific 
-   * atoms in the set, not changing the values of the data array for other atoms.
-   * thus, a data set can be incrementally added to in this way.
-   * 
-   *  @param str     the string to parse
-   *  @param bs      the atom positions to assign
-   *  @param data    the (sparce) array to fill
-   * @return  number of floats
-   */
+  
   public static int parseStringInfestedFloatArray(String str, BitSet bs, float[] data) {
     return parseFloatArray(getTokens(str), bs, data);
   }

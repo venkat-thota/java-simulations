@@ -1,27 +1,3 @@
-/* $RCSfile$
- * $Author jonathan gutow$
- * $Date Aug 5, 2007 9:19:06 AM $
- * $Revision$
- *
- * Copyright (C) 2005-2007  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- *  02110-1301, USA.
- */
 package org.openscience.jmol.app.webexport;
 
 
@@ -75,11 +51,7 @@ import org.jmol.util.TextFormat;
 import org.jmol.viewer.FileManager;
 import org.openscience.jmol.app.jmolpanel.HelpDialog;
 
-/*
- * an abstract class used as the basis for the tabbed panels in WebExport.
- * (PopInJmol and ScriptButtons)
- * 
- */
+
 abstract class WebPanel extends JPanel implements ActionListener,
     ListSelectionListener, ItemListener {
 

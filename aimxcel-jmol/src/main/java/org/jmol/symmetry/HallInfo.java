@@ -1,56 +1,7 @@
-/* $RCSfile$
- * $Author: egonw $
- * $Date: 2005-11-10 09:52:44 -0600 (Thu, 10 Nov 2005) $
- * $Revision: 4255 $
- *
- * Copyright (C) 2003-2005  Miguel, Jmol Development, www.jmol.org
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 
 
 package org.jmol.symmetry;
 
-/*
- * Bob Hanson 9/2006
- * 
- * references: International Tables for Crystallography Vol. A. (2002) 
- *
- * http://www.iucr.org/iucr-top/cif/cifdic_html/1/cif_core.dic/Ispace_group_symop_operation_xyz.html
- * http://www.iucr.org/iucr-top/cif/cifdic_html/1/cif_core.dic/Isymmetry_equiv_pos_as_xyz.html
- *
- * LATT : http://macxray.chem.upenn.edu/LATT.pdf thank you, Patrick Carroll
- * 
- * Hall symbols:
- * 
- * http://cci.lbl.gov/sginfo/hall_symbols.html
- * 
- * and
- * 
- * http://cci.lbl.gov/cctbx/explore_symmetry.html
- * 
- * (-)L   [N_A^T_1]   [N_A^T_2]   ...  [N_A^T_P]   V(Nx Ny Nz)
- * 
- * lattice types S and T are not supported here
- * 
- * NEVER ACCESS THESE METHODS OUTSIDE OF THIS PACKAGE
- * 
- *
- */
 
 import javax.vecmath.Point3i;
 import javax.vecmath.Matrix4f;

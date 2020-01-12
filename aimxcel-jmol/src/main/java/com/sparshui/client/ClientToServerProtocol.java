@@ -13,33 +13,15 @@ import com.sparshui.gestures.GestureType;
 
 public class ClientToServerProtocol extends ClientProtocol {
 
-	/**
-	 * Constructor calls ClientProtocol's constructor and sets up data input and
-	 * output streams for the specified socket.
-	 * 
-	 * @param socket
-	 *            The socket that is connected to the Gesture Server.
-	 * @throws IOException
-	 *             If there is a communication error.
-	 */
+	
 	public ClientToServerProtocol(Socket socket) throws IOException {
 		super(socket);
 	}
 
-	/**
-	 * Processes a request from the Gesture Server
-	 * 
-	 * @param client
-	 *            The Client object that the server wants to communicate with.
-	 * @return true for success, false for failure
-	 */
+	
 	public boolean processRequest(SparshClient client) {
 		try {
-			// Read the message type
-		  // SparshUI client waits here for server message:
-		  // byte TYPE
-		  // int LENGTH
-		  // byte[] DATA
+		
 		  
 	    int type = _in.readByte();
 			int length = _in.readInt();
@@ -134,40 +116,14 @@ public class ClientToServerProtocol extends ClientProtocol {
 
 	}
 
-	/**
-	 * Handle the get group ID message.
-	 * 
-	 * @param client
-	 *            The client the server wants to request group ID for.
-	 * @param data
-	 *            The data specific to the group ID message.
-	 * @throws IOException
-	 *             If there is a connection error.
-	 */
+	
 	private void handleGetGroupID(SparshClient client, byte[] data)
 			throws IOException {
     _out.writeInt(client.getGroupID(new Location(Converter.byteArrayToFloat(data, 0),
         Converter.byteArrayToFloat(data, 4))));
 	}
 
-	/**
-   * Returns a list of valid gesture IDs to the gesture server. The message
-   * protocol format is adapted by Bob Hanson to allow user-defined classes as
-   * follows:
-   * 
-   * - 4 byte int n >= 0 --> one of the known SparshUI gesture IDs 
-   * - 4 byte int n < 0  --> a string follows of negative this length 
-   * - [-n bytes follow]
-   * 
-   * adapted by Bob Hanson for Jmol 11/29/2009
-   * 
-   * @param client
-   *          The client that this call is pushed to.
-   * @param data
-   *          The data that holds the groupID for the call.
-   * @throws IOException
-   *           If there is a connection error.
-   */
+	
   private void handleGetAllowedGestures(SparshClient client, byte[] data)
       throws IOException {
     GestureType gType;

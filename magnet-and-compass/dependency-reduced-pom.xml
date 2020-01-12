@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.colorado.phet.magnet-and-compass</groupId>
+  <groupId>com.aimxcel.abclearn.magnetandcompass</groupId>
   <artifactId>magnet-and-compass</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <url>http://maven.apache.org</url>
@@ -53,7 +53,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.colorado.phet.magnet-and-compass.MagnetAndCompassApplication</mainClass>
+              <mainClass>com.aimxcel.abclearn.magnetandcompass.MagnetAndCompassApplication</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -88,7 +88,7 @@
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Main-Class>edu.colorado.phet.magnet-and-compass.MagnetAndCompassApplication</Main-Class>
+                    <Main-Class>com.aimxcel.abclearn.magnetandcompass.MagnetAndCompassApplication</Main-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>

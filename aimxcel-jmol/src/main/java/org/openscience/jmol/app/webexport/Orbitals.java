@@ -1,27 +1,3 @@
-/* $RCSfile$
- * $Author jonathan gutow$
- * $Date Aug 5, 2007 9:19:06 AM $
- * $Revision$
- *
- * Copyright (C) 2005-2007  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- *  02110-1301, USA.
- */
 package org.openscience.jmol.app.webexport;
 
 import java.io.*;
@@ -31,9 +7,6 @@ import javax.swing.*;
 
 public class Orbitals extends JPanel implements ActionListener {
 
-  /*
-   * old code -- not implemented in Jmol 11.3 -- needs clean-up
-   */
   
     private static final long serialVersionUID = 1L;
     static private final String newline = "\n";
@@ -43,37 +16,17 @@ public class Orbitals extends JPanel implements ActionListener {
     JList OrbList;
     JComboBox RenderMode, FormatBox;
 
-    //set some constants for page formats.
-    //private static final int OneOrb = 1; 
-    //private static final int TwoOrb =2; 
-    //private static final int ThreeOrb=3; 
-    //private static final int FourOrb =4;
-    //private static final int WideOneOrb =5; //not yet implemented
-    //private static final int WideTwoOrb =6;  //not yet implemented
-
-    //set some constants for the molecule or atom rendering mode
     private static final int SmallAtomDot = 1;
     private static final int Wireframe = 2;
 
-    //private static final int BallandStick = 3;
+ 
 
     public JComponent getPanel() {
-
-      //Create the brief discription text
-      JLabel Description = new JLabel(
+  JLabel Description = new JLabel(
           "Create a web page with one Jmol Applet to display orbitals on one molecule or atom.");
-/*
-      //Create the text field for the path to the JMol applet
-      //not considering remote/local business here
-      appletPath = new JTextField(20);
-      appletPath.addActionListener(this);
-      appletPath.setText(WebExport.getAppletPath(true));
-*/
-      //Path to applet panel
+
       JPanel pathPanel = new JPanel();
       pathPanel.setLayout(new BorderLayout());
-      //    JLabel pathLabel = new JLabel("Relative Path to Jmol Applet:");
-      //    pathPanel.add(pathLabel, BorderLayout.PAGE_START);
       pathPanel.add(appletPath, BorderLayout.PAGE_END);
       pathPanel.setBorder(BorderFactory
           .createTitledBorder("Relative Path to Jmol Applet:"));

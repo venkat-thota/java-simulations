@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2008-04-26 01:52:03 -0500 (Sat, 26 Apr 2008) $
- * $Revision: 9314 $
- *
- * Copyright (C) 2003-2005  Miguel, Jmol Development, www.jmol.org
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 
 package org.jmol.util;
 
@@ -32,21 +9,11 @@ import javax.vecmath.Vector3f;
 
 public class Quadric {
 
-  //////////  Ellipsoid Code ///////////
-  //
-  // Bob Hanson, 4/2008
-  //
-  // several useful methods designed for Jmol
-  //
-  // but of potentially many uses
-  //
-  //////////////////////////////////////
+ 
 
   public static void getAxesForEllipsoid(double[] coef, Vector3f[] unitVectors, float[] lengths) {
     
-    // assumes an ellipsoid centered on 0,0,0
-    // called by UnitCell for the initial creation of Object[] ellipsoid
-    
+      
     double[][] mat = new double[3][3];
     mat[0][0] = coef[0]; //XX
     mat[1][1] = coef[1]; //YY

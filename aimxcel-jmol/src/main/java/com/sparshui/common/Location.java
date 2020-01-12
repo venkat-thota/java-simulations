@@ -14,22 +14,12 @@ public class Location implements Serializable {
 	private float _x;
 	private float _y;
 
-	/**
-	 * Cosntruct a default location.  Values are initialized
-	 * as the coordinates (0, 0).
-	 */
+	
 	public Location() {
 		_x = 0;
 		_y = 0;
 	}
 	
-	/**
-	 * Construct a specific location.
-	 * @param x
-	 * 		The x coordinate value of the location.
-	 * @param y
-	 * 		The y coordinate value of the location.
-	 */
 	public Location(float x, float y) {
 		_x = x;
 		_y = y;

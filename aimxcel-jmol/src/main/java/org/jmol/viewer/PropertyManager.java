@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2011-03-23 20:46:59 -0700 (Wed, 23 Mar 2011) $
- * $Revision: 15335 $
- *
- * Copyright (C) 2003-2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 package org.jmol.viewer;
 
 
@@ -41,13 +18,7 @@ import org.jmol.util.Logger;
 import org.jmol.util.Parser;
 import org.jmol.util.TextFormat;
 
-/**
- * 
- * The PropertyManager handles all operations relating to delivery of
- * properties with the getProperty() method, or its specifically cast 
- * forms getPropertyString() or getPropertyJSON().
- *
- */
+
 
 public class PropertyManager {
 

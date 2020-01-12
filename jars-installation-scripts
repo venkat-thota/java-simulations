@@ -1,4 +1,4 @@
-phetcommon:
+aimxcel-common:
 ----------
 mvn install:install-file -Dfile=functionaljava-3.1.jar -DgroupId=functionaljava -DartifactId=functionaljava -Dversion=3.1 -Dpackaging=jar
 mvn install:install-file -Dfile=jnlp.jar -DgroupId=jnlp -DartifactId=jnlp -Dversion=0.1 -Dpackaging=jar
@@ -6,7 +6,7 @@ mvn install:install-file -Dfile=junit.jar -DgroupId=junit -DartifactId=junit -Dv
 mvn install:install-file -Dfile=lombok-0.11.8.jar -DgroupId=lombok -DartifactId=lombok -Dversion=0.11.8 -Dpackaging=jar
 mvn install:install-file -Dfile=mongo-2.7.2.jar -DgroupId=mongo -DartifactId=mongo -Dversion=2.7.2 -Dpackaging=jar
 
-piccolophet:
+aimxcel-core:
 -----------
 mvn install:install-file -Dfile=functionaljava-3.1.jar -DgroupId=functionaljava -DartifactId=functionaljava -Dversion=3.1 -Dpackaging=jar
 mvn install:install-file -Dfile=lombok-0.11.8.jar -DgroupId=lombok -DartifactId=lombok -Dversion=0.11.8 -Dpackaging=jar
@@ -18,13 +18,13 @@ eating-and-exercise:
 mvn install:install-file -Dfile=junit.jar -DgroupId=junit -DartifactId=junit -Dversion=0.1 -Dpackaging=jar
 mvn install:install-file -Dfile=jfreechart.jar -DgroupId=jfreechart -DartifactId=jfreechart -Dversion=0.1 -Dpackaging=jar
 
-jfreechart-phet:
+aimxcel-jfreechart:
 ---------------
 mvn install:install-file -Dfile=junit.jar -DgroupId=junit -DartifactId=junit -Dversion=0.1 -Dpackaging=jar
 mvn install:install-file -Dfile=jfreechart.jar -DgroupId=jfreechart -DartifactId=jfreechart -Dversion=0.1 -Dpackaging=jar
 mvn install:install-file -Dfile=jcommon.jar -DgroupId=jcommon -DartifactId=jcommon -Dversion=0.1 -Dpackaging=jar
 
-motion:
+aimxcel-motion:
 -------
 mvn install:install-file -Dfile=junit.jar -DgroupId=junit -DartifactId=junit -Dversion=0.1 -Dpackaging=jar
 mvn install:install-file -Dfile=jfreechart.jar -DgroupId=jfreechart -DartifactId=jfreechart -Dversion=0.1 -Dpackaging=jar
@@ -42,6 +42,47 @@ mvn install:install-file -Dfile=jsci-sci.jar -DgroupId=jsci-sci -DartifactId=jsc
 mvn install:install-file -Dfile=jsci-wavelet.jar -DgroupId=jsci-wavelet -DartifactId=jsci-wavelet -Dversion=0.1 -Dpackaging=jar
 mvn install:install-file -Dfile=jsci-xtra.jar -DgroupId=jsci-xtra -DartifactId=jsci-xtra -Dversion=0.1 -Dpackaging=jar
 
-timeseries:
+aimxcel-timeseries:
 -----------
 mvn install:install-file -Dfile=junit.jar -DgroupId=junit -DartifactId=junit -Dversion=0.1 -Dpackaging=jar
+
+aimxcel-lwjgl:
+-------------
+mvn install:install-file -Dfile=lwjgl_util.jar -DgroupId=lwjgl_util -DartifactId=lwjgl_util -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=lwjgl.jar -DgroupId=lwjgl -DartifactId=lwjgl -Dversion=0.1 -Dpackaging=jar
+
+aimxcel-poly2tri-core:
+---------------------
+mvn install:install-file -Dfile=slf4j-api-1.6.0.jar -DgroupId=slf4j-api -DartifactId=slf4j-api -Dversion=1.6.0 -Dpackaging=jar
+
+glaciers:
+--------
+mvn install:install-file -Dfile=jfreechart.jar -DgroupId=jfreechart -DartifactId=jfreechart -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jcommon.jar -DgroupId=jcommon -DartifactId=jcommon -Dversion=0.1 -Dpackaging=jar
+
+the-ramp:
+--------
+mvn install:install-file -Dfile=jfreechart.jar -DgroupId=jfreechart -DartifactId=jfreechart -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=jcommon.jar -DgroupId=jcommon -DartifactId=jcommon -Dversion=0.1 -Dpackaging=jar
+
+aimxcel-common:
+--------------
+mvn clean install
+
+aimxcel2d-core
+aimxcel2d-extra
+aimxcel-core
+aimxcel-apple
+aimxcel-chemistry
+aimxcel-games
+aimxcel-graphics
+aimxcel-jfreechart
+aimxcel-jmol
+aimxcel-poly2tri-core
+aimxcel-lwjgl
+aimxcel-mechanics
+aimxcel-record-playback
+aimxcel-timeseries
+aimxcel-motion
+aimxcel-photon-absorption
+build-a-molecule

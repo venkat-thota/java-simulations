@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: turnera $
- * $Date: 2007-05-08 22:52:24 +0100 (Tue, 08 May 2007) $
- * $Revision: 7642 $
- *
- * Copyright (C) 2002-2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software        
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 package org.openscience.jmol.app.jmolpanel;
 
 import org.jmol.api.*;
@@ -62,12 +39,13 @@ import javax.swing.JScrollPane;
 public class GaussianDialog extends JDialog implements ActionListener,
                                                        ChangeListener {
 
-  /*
-   * By Andy Turner, atrog@sourceforge.net
-   * modified and integrated into Jmol by Bob Hanson, hansonr@stolaf.edu, 10/12/2008
-   */
   
-  JmolViewer viewer;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+JmolViewer viewer;
 
   private JPanel container;
   private JTextField checkField, optsField, fileField, selectField;

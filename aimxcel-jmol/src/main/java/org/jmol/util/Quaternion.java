@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2007-04-05 09:07:28 -0500 (Thu, 05 Apr 2007) $
- * $Revision: 7326 $
- *
- * Copyright (C) 2003-2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 package org.jmol.util;
 
 import javax.vecmath.AxisAngle4f;
@@ -30,24 +7,6 @@ import javax.vecmath.Point4f;
 import javax.vecmath.Tuple3f;
 import javax.vecmath.Vector3f;
 
-
-/*
- * Standard UNIT quaternion math -- for rotation.
- * 
- * All rotations can be represented as two identical quaternions. 
- * This is because any rotation can be considered from either end of the
- * rotational axis -- either as a + rotation or a - rotation. This code
- * is designed to always maintain the quaternion with a rotation in the
- * [0, PI) range. 
- * 
- * This ensures that the reported theta is always positive, and the normal
- * reported is always associated with a positive theta.  
- * 
- * By Bob Hanson, hansonr@stolaf.edu 6/2008
- * 
- * 
- * 
- */
 
 public class Quaternion {
   public float q0, q1, q2, q3;

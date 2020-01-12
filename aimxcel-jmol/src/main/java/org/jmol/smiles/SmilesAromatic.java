@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2010-05-08 19:20:44 -0500 (Sat, 08 May 2010) $
- * $Revision: 13038 $
- *
- * Copyright (C) 2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 
 package org.jmol.smiles;
 
@@ -33,83 +10,11 @@ import org.jmol.api.JmolEdge;
 import org.jmol.api.JmolNode;
 
 public class SmilesAromatic {
-  /** 
-   * 3D-SEARCH aromaticity test.
-   * 
-   * A simple and unambiguous test for aromaticity based on 3D geometry 
-   * and connectivity only, not Hueckel theory.
-   * @param atoms
-   *       a set of atoms with coordinate positions and associated bonds.
-   * @param bs
-   *       a bitset of atoms within the set of atoms, defining the ring 
-   * @param bsSelected
-   *       must not be null 
-   * @param cutoff
-   *       an arbitrary value to test the standard deviation against. 
-   *       0.01 is appropriate here.   
-   * @return
-   *        true if standard deviation of vNorm.dot.vMean is less than cutoff
-   */
-
+ 
   public final static boolean isFlatSp2Ring(JmolNode[] atoms,
                                             BitSet bsSelected, BitSet bs,
                                             float cutoff) {
-    /*
-     * 
-     * Bob Hanson, hansonr@stolaf.edu
-     * 
-     *   Given a ring of N atoms...
-     *   
-     *                 1
-     *               /   \
-     *              2     6 -- 6a
-     *              |     |
-     *        5a -- 5     4
-     *               \   /
-     *                 3  
-     *   
-     *   with arbitrary order and up to N substituents
-     *   
-     *   1) Check to see if all ring atoms have no more than 3 connections.
-     *      Note: An alternative definition might include "and no substituent
-     *      is explicitly double-bonded to its ring atom, as in quinone.
-     *      Here we opt to allow the atoms of quinone to be called "aromatic."
-     *   2) Select a cutoff value close to zero. We use 0.01 here. 
-     *   3) Generate a set of normals as follows:
-     *      a) For each ring atom, construct the normal associated with the plane
-     *         formed by that ring atom and its two nearest ring-atom neighbors.
-     *      b) For each ring atom with a substituent, construct a normal 
-     *         associated with the plane formed by its connecting substituent
-     *         atom and the two nearest ring-atom neighbors.
-     *      c) If this is the first normal, assign vMean to it. 
-     *      d) If this is not the first normal, check vNorm.dot.vMean. If this
-     *         value is less than zero, scale vNorm by -1.
-     *      e) Add vNorm to vMean. 
-     *   4) Calculate the standard deviation of the dot products of the 
-     *      individual vNorms with the normalized vMean. 
-     *   5) The ring is deemed flat if this standard deviation is less 
-     *      than the selected cutoff value. 
-     *      
-     *   Efficiencies:
-     *   
-     *   1) Precheck bond counts.
-     *   
-     *   2) Each time a normal is added to the running mean, test to see if 
-     *      its dot product with the mean is within 5 standard deviations. 
-     *      If it is not, return false. Note that it can be shown that for 
-     *      a set of normals, even if all are aligned except one, with dot product
-     *      to the mean x, then the standard deviation will be (1 - x) / sqrt(N).
-     *      Given even an 8-membered ring, this still
-     *      results in a minimum value of x of about 1-4c (allowing for as many as
-     *      8 substituents), considerably better than our 1-5c. 
-     *      So 1-5c is a very conservative test.   
-     *      
-     *   3) One could probably dispense with the actual standard deviation 
-     *      calculation, as it is VERY unlikely that an actual nonaromatic rings
-     *      (other than quinones and other such compounds)
-     *      would have any chance of passing the first two tests.
-     *   
-     */
+    
 
     if (cutoff <= 0)
       cutoff = 0.01f;

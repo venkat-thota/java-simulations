@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2011-03-23 22:23:54 -0700 (Wed, 23 Mar 2011) $
- * $Revision: 15337 $
- *
- * Copyright (C) 2002-2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 package org.openscience.jmol.app.jmolpanel;
 
 import java.util.Hashtable;
@@ -47,10 +24,7 @@ class GuiMap {
   
   Map<String, String> labels;
   
-  // keys here refer to keys listed in org.openscience.jmol.Properties.Jmol-resources.properties
-  // actions are either defined there, as xxxScript=, or by 
-  // Actions created in DisplayPanel.java
-  
+   
   private void setupLabels() {
     labels = new Hashtable<String, String>();
     labels.put("macros", GT._("&Macros"));

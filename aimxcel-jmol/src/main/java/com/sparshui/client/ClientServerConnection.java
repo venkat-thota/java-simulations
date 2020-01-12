@@ -13,19 +13,6 @@ public class ClientServerConnection extends Thread {
 	private Socket _socket;
 	private ClientToServerProtocol _protocol;
 	
-	/**
-	 * Instantiate a Server Connection object.
-	 * 
-	 * @param address 
-	 * 		The ip address of the server to connect to.
-	 * @param client 
-	 * 		The client object that the gesture client is using to
-	 * 		listen for messages from the server.
-	 * @throws UnknownHostException
-	 * 		If "address" is an unknwown host.
-	 * @throws IOException
-	 * 		If a communication error ocurrs.
-	 */
 	public ClientServerConnection(String address, SparshClient client) throws UnknownHostException, IOException {
 		_client = client;
 		_socket = new Socket(address, NetworkConfiguration.CLIENT_PORT);

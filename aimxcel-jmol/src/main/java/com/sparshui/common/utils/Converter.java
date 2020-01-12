@@ -3,11 +3,7 @@ package com.sparshui.common.utils;
 
 public class Converter {
 
-  /**
-	 * Converts an integer intBits into a byte array.
-	 * @param intBits The integer in network byte order.
-	 * @return A byte array in network byte order.
-	 */
+  
 	public static byte[] intToByteArray(int intBits) {
 		byte[] ret = new byte[4];
 		

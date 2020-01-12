@@ -1,34 +1,3 @@
-// Version 1.0a
-// Copyright (C) 1998, James R. Weeks and BioElectroMech.
-// Visit BioElectroMech at www.obrador.com.  Email James@obrador.com.
-
-// See license.txt for details about the allowed used of this software.
-// This software is based in part on the work of the Independent JPEG Group.
-// See IJGreadme.txt for details about the Independent JPEG Group's license.
-
-// This encoder is inspired by the Java Jpeg encoder by Florian Raemy,
-// studwww.eurecom.fr/~raemy.
-// It borrows a great deal of code and structure from the Independent
-// Jpeg Group's Jpeg 6a library, Copyright Thomas G. Lane.
-// See license.txt for details 
-
-
-/*
- * JpegEncoder and its associated classes are Copyright (c) 1998, James R. Weeks and BioElectroMech
- * see(Jmol/src/com/obrador/license.txt)
- * 
- * Jmol.src.org.jmol.util.JpegEncoder.java was adapted by Bob Hanson
- * for Jmol in the following ways:
- * 
- * 1) minor coding efficiencies were made in some for() loops.
- * 2) methods not used by Jmol were commented out
- * 3) method and variable signatures were modified to provide 
- *    more appropriate method privacy. 
- * 
- * Original files are maintained in the Jmol.src.com.obrador package, but
- * these original files are not distributed with Jmol.
- *   
-*/
 
 package org.jmol.util;
 
@@ -37,25 +6,16 @@ import java.awt.image.*;
 import java.io.*;
 
 
-/*
- * JpegEncoder - The JPEG main program which performs a jpeg compression of
- * an image.
- * 
- * See org.com.obrador.license.txt
- * 
- */
 
 public class JpegEncoder extends Frame
 {
-  // A system to allow the full Jmol state -- regardless of length -- 
-  // to be encoded in a set of APP1 (FFE1) tags.
-  // But we have to be careful about line ends for backward compatibility. 
-  // This solution is not 100% effective, because some data lines may in principle be 
-  // Very large and may not contain new lines for more than 65500 characters, 
-  // But that would be very unusual. Perhaps a huge data set loaded from a 
-  // string. Introduced in Jmol 12.1.36. 
   
-  public static final String CONTINUE_STRING = " #Jmol...\0"; 
+  
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+public static final String CONTINUE_STRING = " #Jmol...\0"; 
   // this string will GENERALLY appear at the end of lines and escape the 
   private static final int CONTINUE_MAX = 65500;  // some room to spare here. 
   private static final int CONTINUE_MAX_BUFFER = CONTINUE_MAX + 10; // never break up last 10 bytes

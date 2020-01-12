@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2009-06-26 23:35:44 -0500 (Fri, 26 Jun 2009) $
- * $Revision: 11131 $
- *
- * Copyright (C) 2000-2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 package org.openscience.jmol.app.jmolpanel;
 
 import org.jmol.api.*;
@@ -36,26 +13,7 @@ import java.util.*;
 
 class StatusListener implements JmolStatusListener {
 
-  /*
-   * starting with Jmol 11.7.27, JmolStatusListener extends JmolCallbackListener
-   * 
-   * providing a simpler interface if all that is wanted is callback
-   * functionality.
-   * 
-   * Only three methods are involved:
-   * 
-   * boolean notifyEnabled(int type) -- lets the statusManager know if there is
-   * an implementation of a given callback type
-   * 
-   * void notifyCallback(int type, Object[] data) -- callback action; data
-   * varies with callback type -- see org.jmol.viewer.StatusManager for details
-   * 
-   * void setCallbackFunction(String callbackType, String callbackFunction) --
-   * called by statusManager in response to the "set callback" script command --
-   * also used by the Jmol application to change menus and languages -- can
-   * remain unimplemented if no such user action is intended
-   */
-
+  
   JmolPanel jmol;
   DisplayPanel display;
 

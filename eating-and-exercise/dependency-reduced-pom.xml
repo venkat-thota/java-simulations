@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.colorado.phet.eatingandexercise</groupId>
+  <groupId>com.aimxcel.abclearn.eatingandexercise</groupId>
   <artifactId>eating-and-exercise</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <url>http://maven.apache.org</url>
@@ -55,7 +55,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.colorado.phet.eatingandexercise.EatingAndExerciseApplication</mainClass>
+              <mainClass>com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseApplication</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -90,7 +90,7 @@
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Main-Class>edu.colorado.phet.eatingandexercise.EatingAndExerciseApplication</Main-Class>
+                    <Main-Class>com.aimxcel.abclearn.eatingandexercise.EatingAndExerciseApplication</Main-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>

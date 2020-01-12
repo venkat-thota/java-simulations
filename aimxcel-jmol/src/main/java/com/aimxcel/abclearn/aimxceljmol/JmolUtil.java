@@ -5,12 +5,7 @@ import org.jmol.api.JmolViewer;
 
 public class JmolUtil {
 
-    /*
-     * Unbinds the mouse from all Jmol actions.
-     * Actions are enumerated at http://chemapps.stolaf.edu/jmol/docs/#bind
-     * Jmol does not provide a way to unbind all actions, or to specify only those actions to bind.
-     * So we're stuck with this brute-force method of unbinding each action separately.
-     */
+   
     public static void unbindMouse( JmolViewer viewer ) {
         String[] actions = {
                 "_clickFrank",

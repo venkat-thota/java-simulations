@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2010-11-24 16:27:22 -0800 (Wed, 24 Nov 2010) $
- * $Revision: 14707 $
- *
- * Copyright (C) 2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 
 package org.jmol.smiles;
 
@@ -34,84 +11,10 @@ import org.jmol.util.Elements;
 import org.jmol.util.TextFormat;
 import org.jmol.util.Logger;
 
-/**
- * Parses a SMILES String to create a <code>SmilesMolecule</code>.
- * The SMILES specification has been found at the
- * <a href="http://www.daylight.com/smiles/">SMILES Home Page</a>.
- * An other explanation can be found in the
- * <a href="http://www.daylight.com/dayhtml/doc/theory/index.html">Daylight Theory Manual</a>. <br>
- * 
- * Currently this parser supports only parts of the SMILES specification. <br>
- * 
- * An example on how to use it:
- * <pre><code>
- * try {
- *   SmilesParser sp = new SmilesParser();
- *   SmilesMolecule sm = sp.parseSmiles("CC(C)C(=O)O");
- *   // Use the resulting molecule 
- * } catch (InvalidSmilesException e) {
- *   // Exception management
- * }
- * </code></pre>
- * 
- * @see <a href="http://www.daylight.com/smiles/">SMILES Home Page</a>
- */
+
 public class SmilesParser {
 
-  /*
-   * see package.html for details
-   *
-   * Bob Hanson, Jmol 12.0.RC10, 5/8/2010
-   * 
-   */
-
-  /*
-   * implicit hydrogen calculation
-   * 
-   * For a match to a SMILES string, as in "CCC".find("[Ch2]")
-   * Jmol will return no match, because "CCC" refers to a structure
-   * with a specific set of H atoms. Just because the H atoms are 
-   * "implicit" in "CCC" is irrelevant.
-   * 
-   * For a match to a 3D model, [*h2] refers to all atoms such 
-   * that the "calculate hydrogens" command would add two hydrogens,
-   * and [*h] refers to cases where Jmol would add at least one hydrogen.
-   * 
-   * Jmol calculates the number of implicit hydrogens as follows:
-   * 
-   *  int targetValence = getTargetValence();
-   *  int charge = getFormalCharge();
-   *  if (charge != 0)
-   targetValence += (targetValence == 4 ? -Math.abs(charge) : charge);
-   * int n = targetValence - getValence();
-   * nImplicitHydrogens = (n < 0 ? 0 : n);
-   * 
-   * Where getTargetValence() returns:
-   *     switch (getElementNumber()) {
-   *     case 6: //C
-   *     case 14: //Si      
-   *       return 4;
-   *     case 5:  // B
-   *     case 7:  // N
-   *     case 15: // P
-   *       return 3;
-   *     case 8: //O
-   *     case 16: //S
-   *       return 2;
-   *     default:
-   *       return -1;
-   *     }
-   *     
-   * Thus the implicit hydrogen count is:
-   * 
-   * a) 0 for all atoms other than {B,C,N,O,P,Si,S}
-   * b) 0 for BR3
-   * c) 0 for NR3, 1 for NR2, 2 for NR
-   * d) 0 for RN=R, 1 for R=N, 0 for R=NR2(+), 0 for R2N(-)
-   * e) 0 for CR4, 1 for CR3, 2 for CR2, 3 for CR
-   * f) 0 for CR3(+), 0 for CR3(-)
-   * 
-   */
+  
   private boolean isSmarts;
   private boolean isBioSequence;
   private char bioType;
@@ -127,15 +30,6 @@ public class SmilesParser {
   private SmilesParser(boolean isSmarts) {
     this.isSmarts = isSmarts;
   }
-
-  /**
-   * Parses a SMILES String
-   * 
-   * @param pattern
-   *          SMILES String
-   * @return Molecule corresponding to <code>pattern</code>
-   * @throws InvalidSmilesException
-   */
   SmilesSearch parse(String pattern) throws InvalidSmilesException {
     // if (Logger.debugging)
     // Logger.debug("Smiles Parser: " + pattern);

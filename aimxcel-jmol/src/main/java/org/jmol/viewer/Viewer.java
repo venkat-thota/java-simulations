@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2011-03-31 11:39:51 -0700 (Thu, 31 Mar 2011) $
- * $Revision: 15365 $
- *
- * Copyright (C) 2002-2006  Miguel, Jmol Development, www.jmol.org
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 package org.jmol.viewer;
 
 import org.jmol.popup.JmolPopup;
@@ -111,38 +88,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Reader;
 import java.io.StringReader;
-
-/*
- * 
- * ****************************************************************
- * The JmolViewer can be used to render client molecules. Clients implement the
- * JmolAdapter. JmolViewer uses this interface to extract information from the
- * client data structures and render the molecule to the supplied
- * java.awt.Component
- * 
- * The JmolViewer runs on Java 1.5+ virtual machines. The 3d graphics rendering
- * package is a software implementation of a z-buffer. It does not use Java3D
- * and does not use Graphics2D from Java 1.2. 
- * 
- * public here is a test for applet-applet and JS-applet communication the idea
- * being that applet.getProperty("jmolViewer") returns this Viewer object,
- * allowing direct inter-process access to public methods.
- * 
- * e.g.
- * 
- * applet.getProperty("jmolApplet").getFullPathName()
- * 
- * 
- * This viewer can also be used with JmolData.jar, which is a 
- * frameless version of Jmol that can be used to batch-process
- * scripts from the command line. No shapes, no labels, no export
- * to JPG -- just raw data checking and output. 
- * 
- * 
- * 
- * ****************************************************************
- */
-
 public class Viewer extends JmolViewer implements AtomDataServer {
 
   @Override

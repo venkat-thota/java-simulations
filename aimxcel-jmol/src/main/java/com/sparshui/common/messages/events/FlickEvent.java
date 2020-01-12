@@ -4,37 +4,20 @@ import com.sparshui.common.Event;
 import com.sparshui.common.utils.Converter;
 
 public class FlickEvent implements Event {
-	
-	
- // constructor coding error fixed by Bob Hanson for Jmol 11/29/2009
-	
 	private static final long serialVersionUID = -2305607021385835330L;		
-//	private float _absx;
-//	private float _absy;	
-	
-	//private Velocity[] runningVelocities;
+
 	private float xDirection;
 	private float yDirection;
 	private float speedLevel;
 	
 	
 	public FlickEvent() {
-//		_absx = 0;
-//		_absy = 0;
-		//runningVelocities = null;
 		xDirection = 0;
 		yDirection = 0;
 		speedLevel = 0;
 	}
-	
-	/**
-	 * 
-	 * @param absx
-	 * @param absy
-	 */
 	public FlickEvent(float absx, float absy) {
-//		_absx = absx;
-//		_absy = absy;
+
 	}
 	
 	public FlickEvent(int _speedLevel, int _xDirection, int _yDirection){
@@ -44,16 +27,6 @@ public class FlickEvent implements Event {
 	}
 	
 
-	/**
-	 * Constructs a flickEvent from a complete serialized version of the drag
-	 * event.
-	 *  - 4 bytes : dx 
-	 *  - 4 bytes : dy 
-	 *  - 8 bytes total
-	 *  
-   * @param data
-   *            The byte array that represents a serialized Drag Event.
-   */
   public FlickEvent(byte[] data) {
     if (data.length < 12) {
       // TODO add error handling

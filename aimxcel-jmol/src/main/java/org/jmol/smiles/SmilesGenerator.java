@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2010-06-05 21:50:17 -0500 (Sat, 05 Jun 2010) $
- * $Revision: 13295 $
- *
- * Copyright (C) 2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 
 package org.jmol.smiles;
 
@@ -39,18 +16,6 @@ import org.jmol.api.JmolEdge;
 import org.jmol.util.Elements;
 import org.jmol.util.Logger;
 import org.jmol.smiles.SmilesSearch.VTemp;
-
-/**
- * Double bond, allene, square planar and tetrahedral stereochemistry only
- * not octahedral or trigonal bipyramidal.
- * 
- * No attempt at canonicalization -- unnecessary for model searching.
- * 
- * see SmilesMatcher and package.html for details
- *
- * Bob Hanson, Jmol 12.0.RC17 2010.06.5
- *
- */
 public class SmilesGenerator {
 
   // inputs:

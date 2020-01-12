@@ -1,45 +1,6 @@
-/* $RCSfile$
- * $Author: egonw $
- * $Date: 2005-11-10 09:52:44f -0600 (Thu, 10 Nov 2005) $
- * $Revision: 4255 $
- *
- * Copyright (C) 2003-2005  Miguel, Jmol Development, www.jmol.org
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 
 package org.jmol.util;
 
-//import org.jmol.util.Escape;
-
-/** Eigenvalues and eigenvectors of a real (n x n) symmetric matrix. 
-
- adapted by Bob Hanson from http://math.nist.gov/javanumerics/jama/ (public domain)
-
- <P>
- If A is symmetric, then A = V*D*V' where the eigenvalue matrix D is
- diagonal and the eigenvector matrix V is orthogonal.
- I.e. A = V.times(D.times(V.transpose())) and 
- V.times(V.transpose()) equals the identity matrix.
- 
- output is as a set of double[n] columns, but for Jmol we use getEigenvectorsFloatTransformed
- to return them as a set of rows for easier use as A[0], A[1], etc. 
-  
- **/
 
 public class Eigen {
 

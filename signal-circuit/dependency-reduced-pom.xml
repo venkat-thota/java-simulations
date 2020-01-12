@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.colorado.phet.signalcircuit</groupId>
+  <groupId>com.aimxcel.abclearn.signalcircuit</groupId>
   <artifactId>signal-circuit</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <url>http://maven.apache.org</url>
@@ -48,7 +48,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.colorado.phet.signalcircuit.SignalCircuitApplication</mainClass>
+              <mainClass>com.aimxcel.abclearn.signalcircuit.SignalCircuitApplication</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -83,7 +83,7 @@
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Main-Class>edu.colorado.phet.signalcircuit.SignalCircuitApplication</Main-Class>
+                    <Main-Class>com.aimxcel.abclearn.signalcircuit.SignalCircuitApplication</Main-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>

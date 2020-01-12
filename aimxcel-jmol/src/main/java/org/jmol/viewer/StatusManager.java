@@ -1,26 +1,3 @@
-/* $RCSfile$
- * $Author: hansonr $
- * $Date: 2010-09-22 15:30:45 -0700 (Wed, 22 Sep 2010) $
- * $Revision: 14362 $
- *
- * Copyright (C) 2003-2005  The Jmol Development Team
- *
- * Contact: jmol-developers@lists.sf.net
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 package org.jmol.viewer;
 
 import org.jmol.script.ScriptContext;
@@ -43,41 +20,6 @@ import org.jmol.api.JmolCallbackListener;
 import org.jmol.api.JmolDialogInterface;
 import org.jmol.api.JmolStatusListener;
 
-/**
- * 
- * The StatusManager class handles all details of status reporting, including:
- * 
- * 1) saving the message in a queue that replaces the "callback" mechanism,
- * 2) sending messages off to the console, and
- * 3) delivering messages back to the main Jmol.java class in app or applet
- *    to handle differences in capabilities, including true callbacks.
-
-atomPicked
-
-fileLoaded
-fileLoadError
-frameChanged
-
-measureCompleted
-measurePending
-measurePicked
-
-newOrientation 
-
-scriptEcho
-scriptError
-scriptMessage
-scriptStarted
-scriptStatus
-scriptTerminated
-
-userAction
-viewerRefreshed
-
-   
- * Bob Hanson hansonr@stolaf.edu  2/2006
- * 
- */
 
 class StatusManager {
 
