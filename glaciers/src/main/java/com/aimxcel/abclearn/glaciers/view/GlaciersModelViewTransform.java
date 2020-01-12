@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -6,11 +5,6 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
-/**
- * Transforms between model and view coordinate systems.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlaciersModelViewTransform {
 
     //----------------------------------------------------------------------------

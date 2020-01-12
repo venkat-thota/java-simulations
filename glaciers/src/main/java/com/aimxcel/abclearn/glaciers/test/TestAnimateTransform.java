@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.test;
 
@@ -11,15 +10,13 @@ import com.aimxcel.abclearn.glaciers.GlaciersImages;
 import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
-
-/**
- * TestShrinkActivity tests animation of a node's transform.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class TestAnimateTransform extends JFrame {
     
-    private PNode imageNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PNode imageNode;
     
     public TestAnimateTransform() {
         super( "TestShrinkActivity" );

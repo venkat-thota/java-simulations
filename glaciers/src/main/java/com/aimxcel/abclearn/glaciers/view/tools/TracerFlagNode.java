@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
@@ -10,14 +9,14 @@ import com.aimxcel.abclearn.glaciers.view.GlaciersModelViewTransform;
 
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * TracerFlagNode is the visual representation of a tracer flag.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class TracerFlagNode extends AbstractToolNode {
 
-    private TracerFlag _tracerFlag;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private TracerFlag _tracerFlag;
     
     //----------------------------------------------------------------------------
     // Constructors

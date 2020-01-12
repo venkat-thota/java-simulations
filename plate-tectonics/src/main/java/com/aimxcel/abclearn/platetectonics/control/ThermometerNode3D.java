@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import java.awt.*;
@@ -32,9 +31,6 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
-/**
- * Displays a thermometer in the 3D play area space
- */
 public class ThermometerNode3D extends ThreadedPlanarCoreNode implements DraggableTool2D {
 
     // fired when the sensor is permanently removed from the model, so we can detach the necessary listeners

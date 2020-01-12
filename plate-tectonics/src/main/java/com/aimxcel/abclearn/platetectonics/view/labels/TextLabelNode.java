@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view.labels;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.Matrix4F;
@@ -18,9 +17,6 @@ import com.aimxcel.abclearn.platetectonics.model.PlateTectonicsModel;
 import com.aimxcel.abclearn.platetectonics.model.labels.TextLabel;
 import com.aimxcel.abclearn.platetectonics.view.ColorMode;
 
-/**
- * The view for a TextLabel, which just displays text
- */
 public class TextLabelNode extends BaseLabelNode {
 
     private TextLabel textLabel;

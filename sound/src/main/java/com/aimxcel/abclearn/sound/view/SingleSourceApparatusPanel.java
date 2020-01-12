@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: SingleSourceApparatusPanel
- * Package: edu.colorado.phet.sound.view
- * Author: Another Guy
- * Date: Aug 4, 2004
- */
 package com.aimxcel.abclearn.sound.view;
 
 import com.aimxcel.abclearn.sound.SoundConfig;
@@ -17,7 +9,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
 public class SingleSourceApparatusPanel extends SoundApparatusPanel {
 
-    private SpeakerGraphic speakerGraphic;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private SpeakerGraphic speakerGraphic;
 
 
     /**

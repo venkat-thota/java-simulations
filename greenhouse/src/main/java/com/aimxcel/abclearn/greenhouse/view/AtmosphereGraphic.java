@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: AtmosphereGraphic
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 13, 2003
- */
 package com.aimxcel.abclearn.greenhouse.view;
 
 import java.awt.AlphaComposite;
@@ -29,10 +21,6 @@ import com.aimxcel.abclearn.greenhouse.common.graphics.CompositeGraphic;
 import com.aimxcel.abclearn.greenhouse.common.graphics.ImageGraphic;
 import com.aimxcel.abclearn.greenhouse.model.Atmosphere;
 
-/**
- * An overlay graphic that is supposed to look like polluted air. It fades in and out depending on the
- * amount of junk in the atmosphere.
- */
 public class AtmosphereGraphic extends CompositeGraphic implements Observer {
 
 	private double Y_OFFSET = -1.0;

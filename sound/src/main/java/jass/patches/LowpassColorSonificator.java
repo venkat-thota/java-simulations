@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.patches;
 
 import jass.engine.BufferNotAvailableException;
@@ -8,21 +7,6 @@ import jass.engine.Source;
 import jass.generators.Butter2LowFilter;
 import jass.generators.ColorSonificator;
 import jass.generators.FilterContainer;
-
-/**
- * Map HSB color to [pitch reson-width lowpass-cutoff]
- * Represent a color (h,s,b) by a noise source of maximum freq~b,
- * filtered through a reson bank with Shepard frequencies
- * (i.e. octaves apart covering the audible range) and some damping d = 1*freq/freq_lowest.
- * The hue h [0 1] will be mapped to an octave range in freq. (Note the dampings
- * are also scaled when freq. is scaled to preserve scale invariance of octaves.) The saturation
- * s [0 1] will be mapped to the "material" (i.e., the width of the resonances will be
- * multiplied by a factor depending on the saturation.
- * This is a patch using ColorSonificator (with b==1) and then filter through Butterworth filter.
- * So brightness is mapped to surface roughness if we think of the sound as being scrpe sounds.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class LowpassColorSonificator extends InOut {
 
     protected float srate = 44100;

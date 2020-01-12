@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.control;
 
@@ -20,15 +19,13 @@ import com.aimxcel.abclearn.glaciers.model.Glacier;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.DoubleSpinner;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 
-/**
- * Provides developers with ability to tweak various model constants.
- * This panel is for debugging purposes and is not localized.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ModelConstantsPanel extends JPanel {
     
-    // controls
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// controls
     private final double _defaultAccelerationM, _defaultAccelerationB;
     
     public ModelConstantsPanel( final Glacier glacier ) {

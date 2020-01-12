@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.tabs;
 
 import java.awt.*;
@@ -63,10 +62,6 @@ import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
 import static com.aimxcel.abclearn.platetectonics.PlateTectonicsConstants.FRAMES_PER_SECOND_LIMIT;
 import static com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector3F.X_UNIT;
 import static org.lwjgl.opengl.GL11.*;
-
-/**
- * Abstract plate tectonics module that consolidates common behavior between the tabs
- */
 public abstract class PlateTectonicsTab extends LWJGLTab {
 
     // tool z-coordinates, so that they do not intersect (causes visual artifacts due to the rounding error in the OpenGL depth map)

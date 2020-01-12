@@ -1,15 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
 import java.awt.geom.Point2D;
-
-/**
- * IToolProducer is the interface implemented by any object
- * that is capable of creating tool model elements.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public interface IToolProducer {
     
     public BoreholeDrill addBoreholeDrill( Point2D position );

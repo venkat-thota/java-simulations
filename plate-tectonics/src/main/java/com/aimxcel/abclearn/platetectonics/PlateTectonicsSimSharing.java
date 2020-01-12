@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IModelAction;
@@ -6,12 +5,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IModelCompo
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IParameterKey;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserAction;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
-
-/**
- * Sim-sharing enums that are specific to this sim.
- *
- * @author Sam Reid
- */
 public class PlateTectonicsSimSharing {
     public static enum UserComponents implements IUserComponent {
         plateMotionTab, crustTab, zoomSlider, timeSpeedSlider, newCrustButton,

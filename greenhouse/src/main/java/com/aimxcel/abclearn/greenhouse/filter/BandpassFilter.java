@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: BandpassFilter
- * Class: edu.colorado.phet.filter
- * User: Ron LeMaster
- * Date: Oct 12, 2003
- * Time: 4:52:57 PM
- */
 package com.aimxcel.abclearn.greenhouse.filter;
 
 public class BandpassFilter extends Filter1D {

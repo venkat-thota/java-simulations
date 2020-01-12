@@ -1,11 +1,3 @@
-// Copyright 2002-2012, University of Colorado
-
-/**
- * Class: Body
- * Package: edu.colorado.phet.coreadditions
- * Author: Another Guy
- * Date: Aug 22, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.awt.geom.Point2D;

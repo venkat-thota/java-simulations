@@ -10,9 +10,6 @@ import com.aimxcel.abclearn.platetectonics.view.ColorMode;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.lwjgl.nodes.GLNode;
 
-/**
- * Base class for the label nodes. Mainly used for the color switching between display modes
- */
 public class BaseLabelNode extends GLNode {
     private final Property<ColorMode> colorMode;
     private final boolean dark;

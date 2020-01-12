@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.persistence;
 
@@ -6,15 +5,14 @@ import java.awt.geom.Point2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.IProguardKeepClass;
 
-
-/**
- * IntroConfig is a Java Bean compliant configuration of IntroModule.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class IntroConfig implements IProguardKeepClass {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
     

@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.model.molecules;
 
@@ -10,12 +9,6 @@ import com.aimxcel.abclearn.photonabsorption.model.atoms.NitrogenAtom;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
-
-/**
- * Class that represents N2 (nitrogen) in the model.
- *
- * @author John Blanco
- */
 public class N2 extends Molecule {
 
     // ------------------------------------------------------------------------

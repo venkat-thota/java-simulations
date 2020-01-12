@@ -1,13 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.InOut;
-
-/**
- * Mixer UG.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class Mixer extends InOut {
     // gains of sources
     protected float[] gains;

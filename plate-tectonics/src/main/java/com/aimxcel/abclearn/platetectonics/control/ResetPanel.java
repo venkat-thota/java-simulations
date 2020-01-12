@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import com.aimxcel.abclearn.platetectonics.PlateTectonicsConstants;
@@ -15,11 +14,13 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.TextButtonNode;
 import com.aimxcel.abclearn.lwjgl.utils.GLActionListener;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Panel with a Reset button, and for the 2nd tab, a Rewind button
- */
 public class ResetPanel extends PNode {
-    public ResetPanel( final PlateTectonicsTab tab, final Runnable resetAll ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ResetPanel( final PlateTectonicsTab tab, final Runnable resetAll ) {
 
         // maxWidth updated every time something is added, so we can position things nicely at the end
         final Property<Double> maxWidth = new Property<Double>( 0.0 );
@@ -33,7 +34,12 @@ public class ResetPanel extends PNode {
         PNode newCrustNode = null;
         if ( isMotionTab ) {
             final PlateMotionTab motionTab = (PlateMotionTab) tab;
-            rewindNode = new TextButtonNode( Strings.REWIND, PlateTectonicsConstants.BUTTON_FONT, PlateTectonicsConstants.BUTTON_COLOR ) {{
+            rewindNode = new TextButtonNode( Strings.REWIND, PlateTectonicsConstants.BUTTON_FONT, PlateTectonicsConstants.BUTTON_COLOR ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setUserComponent( UserComponents.rewindButton );
                 setOffset( 0, y.get() + 15 );
                 y.set( getFullBounds().getMaxY() );
@@ -56,7 +62,12 @@ public class ResetPanel extends PNode {
             }};
             addChild( rewindNode );
 
-            newCrustNode = new TextButtonNode( Strings.NEW_CRUST, PlateTectonicsConstants.BUTTON_FONT, PlateTectonicsConstants.BUTTON_COLOR ) {{
+            newCrustNode = new TextButtonNode( Strings.NEW_CRUST, PlateTectonicsConstants.BUTTON_FONT, PlateTectonicsConstants.BUTTON_COLOR ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setUserComponent( PlateTectonicsSimSharing.UserComponents.newCrustButton );
                 setOffset( 0, y.get() + 15 );
                 y.set( getFullBounds().getMaxY() );
@@ -78,7 +89,12 @@ public class ResetPanel extends PNode {
             addChild( newCrustNode );
         }
 
-        PNode resetAllNode = new TextButtonNode( Strings.RESET_ALL, PlateTectonicsConstants.BUTTON_FONT, PlateTectonicsConstants.BUTTON_COLOR ) {{
+        PNode resetAllNode = new TextButtonNode( Strings.RESET_ALL, PlateTectonicsConstants.BUTTON_FONT, PlateTectonicsConstants.BUTTON_COLOR ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setUserComponent( UserComponents.resetAllButton );
             setOffset( 0, y.get() + 15 );
             y.set( getFullBounds().getMaxY() );

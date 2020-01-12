@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl.utils;
 
 import java.util.HashMap;
@@ -10,11 +9,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 
-/**
- * Handles forwarding clock events between the EDT and LWJGL threads.
- * <p/>
- * This is needed when a clock needs to be passed to a Swing component that will send events to the clock
- */
 public class GLSwingForwardingClock implements IClock {
     private final IClock clock;
 

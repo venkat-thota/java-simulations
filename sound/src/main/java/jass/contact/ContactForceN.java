@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.contact;
 
 import jass.engine.BufferNotAvailableException;
@@ -9,16 +8,7 @@ import jass.generators.FilterContainer;
 import jass.generators.LoopBuffer;
 import jass.generators.LoopNBuffers;
 
-/**
- * A force model with impact, slide, and slide modes based on looping wav files.
- * Roll force is fed through lowpass filter.
- * It allows for N scraping textures, represented by N wav files. You can set which
- * wav file you want to use for scraping, or any linear superposition of the N wav files.
- * Since rolling still has only one wav file this generator is really useful only for
- * scraping at present.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
+
 public class ContactForceN extends Out {
 
     // Has these protected sources:

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view;
 
 import java.nio.FloatBuffer;
@@ -17,10 +16,6 @@ import com.aimxcel.abclearn.lwjgl.math.LWJGLTransform;
 
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * Displays the top terrain of a plate model, within the bounds of the specified grid
- * <p/>
- */
 public class TerrainNode extends GridStripNode {
     private final Terrain terrainStrip;
 

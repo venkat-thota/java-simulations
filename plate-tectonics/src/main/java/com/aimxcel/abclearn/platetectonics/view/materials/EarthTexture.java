@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view.materials;
 
 import java.awt.image.BufferedImage;
@@ -13,10 +12,6 @@ import org.lwjgl.util.glu.GLU;
 import static com.aimxcel.abclearn.platetectonics.PlateTectonicsResources.RESOURCES;
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * Actual speckled "texture" for the cross-section of the earth. Uses a tiled "noise" PNG as a main source. This texture is then colored
- * with the relevant EarthMaterial to create the appearance for the Earth cross-sections
- */
 public class EarthTexture {
     private static final int WIDTH = 512;
     private static final int HEIGHT = 512;
@@ -37,12 +32,7 @@ public class EarthTexture {
                 data[i + 2] = (byte) ( data[i + 2] & 0x7F | 0x80 );
                 data[i + 3] = (byte) ( 0xFF );
 
-                /* Used for debugging texture issues. makes the unit texture square be composed of 4 uniquely-identifiable colored quads
-                int idx = i / 4;
-
-                data[i + 1] = (byte) ( idx % ( image.getWidth() ) > 256 ? 0 : 255 );
-                data[i + 2] = (byte) ( idx / ( image.getHeight() ) > 256 ? 0 : 255 );
-                */
+          
             }
             buffer.clear();
             buffer.put( data, 0, data.length );

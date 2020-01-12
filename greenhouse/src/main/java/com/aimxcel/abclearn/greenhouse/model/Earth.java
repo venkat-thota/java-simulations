@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: Earth
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.awt.geom.Point2D;
@@ -15,7 +7,7 @@ import com.aimxcel.abclearn.greenhouse.util.ModelViewTx1D;
 
 import com.aimxcel.abclearn.photonabsorption.model.WavelengthConstants;
 
-public class Earth extends Disk implements TemperatureReporter, PhotonEmitter, PhotonAbsorber, PhotonEmitter.Listener<Photon> {
+public class Earth extends Disk implements TemperatureReporter, PhotonEmitter<Object>, PhotonAbsorber, PhotonEmitter.Listener<Photon> {
 
 	private static final double PHOTON_EMISSION_TIME = GreenhouseClock.DEFAULT_TIME_DELTA_PER_TICK;
     public static double radius = 6370;

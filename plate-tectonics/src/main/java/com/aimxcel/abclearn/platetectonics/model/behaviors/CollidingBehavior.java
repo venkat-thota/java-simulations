@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model.behaviors;
 
 import java.util.List;
@@ -13,9 +12,6 @@ import com.aimxcel.abclearn.platetectonics.util.Side;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector3F;
 
-/**
- * Plate behavior for continental collision (plates pushing towards each other and creating mountains)
- */
 public class CollidingBehavior extends PlateBehavior {
 
     private float timeElapsed = 0;

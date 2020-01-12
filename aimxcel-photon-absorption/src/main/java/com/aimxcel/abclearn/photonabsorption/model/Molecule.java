@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.model;
 
@@ -17,13 +16,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.RectangleUtils;
 
-/**
- * Class that represents a molecule in the model.  This, by its nature, is
- * essentially a composition of other objects, generally atoms and atomic
- * bonds.
- *
- * @author John Blanco
- */
 public abstract class Molecule {
 
     //------------------------------------------------------------------------

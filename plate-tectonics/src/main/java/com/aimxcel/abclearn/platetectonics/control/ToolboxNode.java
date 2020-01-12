@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
@@ -19,17 +18,23 @@ import com.aimxcel.abclearn.platetectonics.PlateTectonicsResources.Strings;
 import com.aimxcel.abclearn.platetectonics.control.RulerNode3D.RulerNode2D;
 import com.aimxcel.abclearn.platetectonics.model.ToolboxState;
 import com.aimxcel.abclearn.platetectonics.tabs.PlateTectonicsTab;
-
-/**
- * Displays a toolbox that contains meters (ruler, thermometer, density meter), and display options
- */
 public class ToolboxNode extends OrthoCoreNode {
     private static final double INSET = 5;
 
     public ToolboxNode( final PlateTectonicsTab tab, final ToolboxState toolboxState ) {
-        super( new ControlPanelNode( new PNode() {{
+        super( new ControlPanelNode( new PNode() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             final float kmToViewUnit = 0.75f;
-            final ZeroOffsetNode rulerNode2D = new ZeroOffsetNode( new RulerNode2D( kmToViewUnit, tab ) {{
+            final ZeroOffsetNode rulerNode2D = new ZeroOffsetNode( new RulerNode2D( kmToViewUnit, tab ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 // make the ruler visible when it is in the toolbox
                 toolboxState.rulerInToolbox.addObserver( swingObserver( new Runnable() {
                     public void run() {
@@ -53,7 +58,12 @@ public class ToolboxNode extends OrthoCoreNode {
 
             addChild( rulerNode2D ); // approximate scaling to get the size right
 
-            final PNode thermometer = new ZeroOffsetNode( new com.aimxcel.abclearn.platetectonics.control.ThermometerNode3D.ThermometerNode2D( kmToViewUnit ) ) {{
+            final PNode thermometer = new ZeroOffsetNode( new com.aimxcel.abclearn.platetectonics.control.ThermometerNode3D.ThermometerNode2D( kmToViewUnit ) ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
 
                 //Move it to the right of the ruler
                 setOffset( rulerNode2D.getFullBounds().getWidth() + INSET, rulerNode2D.getFullBounds().getMaxY() - getFullBounds().getHeight() );
@@ -78,7 +88,12 @@ public class ToolboxNode extends OrthoCoreNode {
             }};
             addChild( thermometer );
 
-            final PNode densitySensor = new ZeroOffsetNode( new com.aimxcel.abclearn.platetectonics.control.DensitySensorNode3D.DensitySensorNode2D( kmToViewUnit, tab ) ) {{
+            final PNode densitySensor = new ZeroOffsetNode( new com.aimxcel.abclearn.platetectonics.control.DensitySensorNode3D.DensitySensorNode2D( kmToViewUnit, tab ) ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setOffset( thermometer.getFullBounds().getMaxX() + INSET, rulerNode2D.getFullBounds().getMaxY() - getFullBounds().getHeight() );
 
                 // make it visible when it is in the toolbox
@@ -102,7 +117,12 @@ public class ToolboxNode extends OrthoCoreNode {
 
             addChild( densitySensor );
 
-            addChild( new PText( Strings.TOOLBOX ) {{
+            addChild( new PText( Strings.TOOLBOX ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setFont( PANEL_TITLE_FONT );
                 setOffset( rulerNode2D.getFullBounds().getWidth() + 10, 0 ); // TODO: change positioning once we have added other toolbox elements
             }} );

@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: SoundApparatusPanel
- * Package: edu.colorado.phet.sound.view
- * Author: Another Guy
- * Date: Aug 4, 2004
- */
 package com.aimxcel.abclearn.sound.view;
 
 import java.awt.geom.Point2D;
@@ -13,12 +5,15 @@ import java.awt.geom.Point2D;
 import com.aimxcel.abclearn.sound.model.SoundModel;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
-import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel2;
 import com.aimxcel.abclearn.aimxcelgraphics.view.ApparatusPanel3;
 
 //Use ApparatusPanel3 to improve scaling for low res screens, see #2860
 public class SoundApparatusPanel extends ApparatusPanel3 {
-    private int audioSource = SPEAKER_SOURCE;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int audioSource = SPEAKER_SOURCE;
     private double frequency = 0;
     private double amplitude = 0;
     // The point for which audio shoud be generated

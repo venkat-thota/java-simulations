@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl;
 
 import java.awt.*;
@@ -12,12 +11,6 @@ import org.lwjgl.input.Mouse;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction0;
 import com.aimxcel.abclearn.lwjgl.contrib.LWJGLSwingEventHandler;
-
-/**
- * An image backed by a Swing component that can be rendered as a texture in OpenGL
- * <p/>
- * NOTE: Much of the ugly ugly code is copied and slightly tweaked with necessary licensing. Not my own.
- */
 public class SwingImage extends TextureImage {
     private final JComponent component;
 

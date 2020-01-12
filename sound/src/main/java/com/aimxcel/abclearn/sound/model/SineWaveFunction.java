@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: SineWaveFunction
- * Package: edu.colorado.phet.sound.model
- * Author: Another Guy
- * Date: Aug 4, 2004
- */
 package com.aimxcel.abclearn.sound.model;
 
 public class SineWaveFunction implements WaveFunction {
@@ -15,11 +7,6 @@ public class SineWaveFunction implements WaveFunction {
     public SineWaveFunction( Wavefront wavefront ) {
         this.wavefront = wavefront;
     }
-
-    /**
-     * @param time
-     * @return
-     */
     public double waveAmplitude( double time ) {
         double amplitude = 0.0;
         if( wavefront.getFrequency() != 0 ) {

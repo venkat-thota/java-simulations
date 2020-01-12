@@ -21,7 +21,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.EventChannel;
 
 public class ClockPanelLarge extends JPanel {
 
-    private JTextField readoutTextField = new JTextField();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JTextField readoutTextField = new JTextField();
     private NumberFormat clockFormat = new DecimalFormat( "0.0000" );
     private String[] startStopStr = new String[]{AimxcelCommonResources.getString( "Common.StopwatchPanel.start" ),
             AimxcelCommonResources.getString( "Common.StopwatchPanel.stop" )};
@@ -160,7 +164,11 @@ public class ClockPanelLarge extends JPanel {
     }
 
     public class ClockPanelEvent extends EventObject {
-        boolean isRunning = true;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		boolean isRunning = true;
         boolean isReset;
 
         public ClockPanelEvent( Object source ) {

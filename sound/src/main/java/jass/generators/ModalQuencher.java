@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.InOut;
@@ -6,12 +5,6 @@ import jass.engine.Out;
 
 import java.util.Vector;
 
-/**
- * UG that maintains a list of sources and QuenchableModalObjectWithOneContact's and
- * estimates excitations and turns off inaudible modes according to a masking analysis.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class ModalQuencher extends InOut {
 
     /**

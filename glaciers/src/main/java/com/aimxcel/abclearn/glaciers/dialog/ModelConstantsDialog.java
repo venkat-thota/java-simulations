@@ -1,11 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.dialog;
 
 import java.awt.Dimension;
 import java.awt.Frame;
-
-import javax.swing.JDialog;
 
 import com.aimxcel.abclearn.glaciers.control.ModelConstantsPanel;
 import com.aimxcel.abclearn.glaciers.model.Glacier;
@@ -16,7 +13,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 
 public class ModelConstantsDialog extends PaintImmediateDialog {
     
-    private final ModelConstantsPanel _panel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final ModelConstantsPanel _panel;
 
     public ModelConstantsDialog( Frame owner, Glacier glacier, String moduleName ) {
         super( owner, "Model Constants (" + moduleName + ")" );

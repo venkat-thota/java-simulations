@@ -1,16 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.model.atoms;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-
-/**
- * Class that represents an atomic bond between two atoms.
- *
- * @author John Blanco
- */
 public class AtomicBond extends SimpleObservable {
 
     // ------------------------------------------------------------------------

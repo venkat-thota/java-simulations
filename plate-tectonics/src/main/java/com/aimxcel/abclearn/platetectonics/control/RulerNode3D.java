@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import java.awt.*;
@@ -29,9 +28,7 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import static com.aimxcel.abclearn.common.aimxcelcommon.util.FunctionalUtils.map;
 import static com.aimxcel.abclearn.common.aimxcelcommon.util.FunctionalUtils.rangeInclusive;
 
-/**
- * Displays a ruler in the 3D play area space
- */
+
 public class RulerNode3D extends ThreadedPlanarCoreNode implements DraggableTool2D {
 
     // fired when the sensor is permanently removed from the model, so we can detach the necessary listeners

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers;
 
@@ -21,12 +20,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.persistence.XMLPersistence
 import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelFrame;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
 import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication;
-
-/**
- * GlaciersApplication is the main application for this simulation.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlaciersApplication extends CoreAimxcelApplication {
 
     //----------------------------------------------------------------------------

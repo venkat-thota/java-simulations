@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.chemistry.molecules;
 
@@ -7,15 +6,14 @@ import static com.aimxcel.abclearn.chemistry.model.Element.H;
 
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 import com.aimxcel.abclearn.core.aimxcelcore.util.PNodeLayoutUtils;
-
-/**
- * C2H2 molecule
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class C2H2Node extends PComposite {
 
-    public C2H2Node() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public C2H2Node() {
 
         AtomNode bigLeftNode = new AtomNode( C );
         AtomNode bigRightNode = new AtomNode( C );

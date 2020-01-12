@@ -1,18 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 package jass.contact;
 
 import jass.engine.BufferNotAvailableException;
 import jass.engine.Out;
 import jass.engine.SinkIsFullException;
 import jass.generators.*;
-
-/**
- * A force model with impact, slide, and slide modes based on looping wav files,
- * fed through Reson.
- * Roll force is fed through modal filter.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class FilteredWavContactForce extends Out {
 
     // impact

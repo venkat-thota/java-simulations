@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
@@ -21,23 +20,17 @@ import com.aimxcel.abclearn.aimxcel2dcore.event.PDragEventHandler;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
-
-/**
- * ToolIconNode is the base class for all tool icons in the toolbox.
- * It handles the layout of the icon's image and text.
- * <p>
- * InteractiveToolNode adds interactivity to tool icons, resulting in
- * the creation of new tools.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public abstract class AbstractToolIconNode extends PNode {
     
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     
-    private static final int VERTICAL_SPACING = 2; // vertical space between a tool's icon and label
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final int VERTICAL_SPACING = 2; // vertical space between a tool's icon and label
     private static final Font LABEL_FONT = new AimxcelFont( 12 );
     private static final Color LABEL_COLOR = Color.BLACK;
     private static final Point2D DEFAULT_DRAG_OFFSET = new Point2D.Double( 0, 0 );
@@ -109,7 +102,11 @@ public abstract class AbstractToolIconNode extends PNode {
      */
     protected static abstract class InteractiveToolIconNode extends AbstractToolIconNode {
 
-        private final IToolProducer _toolProducer;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private final IToolProducer _toolProducer;
         private final GlaciersModelViewTransform _mvt;
         private final Point2D _pModel, _pView; // reusable point for model-view transforms
 

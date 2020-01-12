@@ -1,13 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 package jass.contact;
 
 import jass.engine.Out;
 
-/**
- * A force model based on stick slip model.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class StickSlip0 extends Out {
 
     private float srate; // sampling rate in Hertz
@@ -19,27 +13,14 @@ public class StickSlip0 extends Out {
     private float v = 1; // external slidevelocity in m/s / srate
     private float fn = 1; // external; normal force/srate
 
-    /**
-     * Construct force.
-     *
-     * @param srate      sampling rate in Hertz.
-     * @param bufferSize bufferSize of this Out.
-     */
+    
     public StickSlip0( float srate, int bufferSize ) {
         super( bufferSize );
         this.srate = srate;
         reset();
     }
 
-    /**
-     * Set stick-slip model parameters (all in S.I. units).
-     *
-     * @param k_damp     damping of spring system
-     * @param dummy      not used
-     * @param mu_static  static friction coeff
-     * @param mu_dynamic dynamic friction coeff
-     * @param v_crit     critical velocity for transition from dyn. to static friction
-     */
+    
     public void setStickSlipParameters( float k_damp, float dummy, float mu_static, float mu_dynamic, float v_crit ) {
         this.k_damp = k_damp / srate;
         this.mu_static = mu_static;
@@ -47,20 +28,12 @@ public class StickSlip0 extends Out {
         this.v_crit = v_crit / srate;
     }
 
-    /**
-     * Set normal force magnitude.
-     *
-     * @param val normal force in Newton
-     */
+   
     public void setNormalForce( float val ) {
         fn = val / srate;
     }
 
-    /**
-     * Set velocity.
-     *
-     * @param v velocity in m/s
-     */
+    
     public void setSpeed( float v ) {
         this.v = v / srate;
     }
@@ -72,10 +45,7 @@ public class StickSlip0 extends Out {
         qt_1 = qt_2 = 0;
     }
 
-    /**
-     * Compute the next buffer.
-     * q(t+1) = (1-k_damp)q(t)+fn mu[(v - (q(t)-q(t-1)))] * sign(v - (q(t)-q(t-1))
-     */
+   
     public void computeBuffer() {
         float factor = ( 1 - k_damp );
         int bufsz = getBufferSize();

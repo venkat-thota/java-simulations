@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import static com.aimxcel.abclearn.platetectonics.util.Side.RIGHT;
@@ -8,12 +7,7 @@ import java.util.List;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
 
-/**
- * Describes a simple terrain as connecting the edges of two other terrains
- * <p/>
- * Left and right terrains to conenct should have the same number of Z samples,
- * and the Z samples should be equal to each other
- */
+
 public class TerrainConnectorStrip extends Terrain {
     private final Terrain left;
     private final Terrain right;

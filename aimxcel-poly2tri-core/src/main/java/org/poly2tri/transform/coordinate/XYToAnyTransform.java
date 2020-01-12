@@ -1,13 +1,6 @@
 package org.poly2tri.transform.coordinate;
 
-/**
- * A transform that aligns the XY plane normal [0,0,1] with any given target normal
- * 
- * http://www.cs.brown.edu/~jfh/papers/Moller-EBA-1999/paper.pdf
- * 
- * @author thahlen@gmail.com
- *
- */
+
 public class XYToAnyTransform extends Matrix3Transform
 {
     /**

@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: ImageGraphicType
- * Package: edu.colorado.phet.microwave
- * Author: Another Guy
- * Date: Oct 19, 2003
- */
 package com.aimxcel.abclearn.greenhouse.common.graphics;
 
 import java.awt.*;

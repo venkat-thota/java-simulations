@@ -1,19 +1,5 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: MessageFormatter
- * Package: edu.colorado.phet.coreadditions
- * Author: Another Guy
- * Date: Aug 21, 2003
- */
 package com.aimxcel.abclearn.greenhouse.util;
 
-/**
- * This class has a single static method that turns Java
- * strings into HTML that is Java-printable. The primary
- * use of this is to put line breaks in messages with '\n'
- * characters.
- */
 public class MessageFormatter {
 
     public static String format( String msg ) {

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import java.util.ArrayList;
@@ -18,17 +17,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.Option;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 import com.aimxcel.abclearn.lwjgl.math.LWJGLTransform;
 
-/**
- * Base class for plate tectonics models. All units in SI unless otherwise noted
- * <p/>
- * Each model is generally composed of the basic building blocks:
- * |    Terrain instances, which model a patch of the surface of the earth
- * |    CrossSectionStrip instances, which model a (generally) horizontal strip of the earth cross-section
- * |    Region instances which are composed of CrossSectionStrips stacked vertically, each separated by boundaries
- * |    Plate instances, which have references to their relevant terrain and crust / lithosphere regions
- * <p/>
- * Each model also allows querying the temperature / density at arbitrary points (for user-controlled sensors, etc.)
- */
+
 public abstract class PlateTectonicsModel {
     // event notification
     public final VoidNotifier modelChanged = new VoidNotifier();

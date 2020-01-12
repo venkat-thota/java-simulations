@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model.behaviors;
 
 import java.util.ArrayList;
@@ -22,10 +21,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 
 import static com.aimxcel.abclearn.common.aimxcelcommon.util.FunctionalUtils.repeat;
 
-/**
- * Behavior for a plate that is going over a subducting plate. This plate should be placed behind the subducting plate in the z-order,
- * and most notably features volcanoes above where the subducting plate's melt forms.
- */
+
 public class OverridingBehavior extends PlateBehavior {
 
     // the x position at the center of where the magma channel (and thus volcanoes) should be

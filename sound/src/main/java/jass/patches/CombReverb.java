@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.patches;
 
 import jass.engine.BufferNotAvailableException;
@@ -6,23 +5,6 @@ import jass.engine.InOut;
 import jass.engine.SinkIsFullException;
 import jass.engine.Source;
 import jass.generators.Mixer;
-
-/**
- * CombReverb as Moorers reverb. See e.g.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- * @book{Steiglitz96, title        = {A Digital Signal Processing Primer with
- * Applications to Digital Audio and Computer Music},
- * author          =  {Ken Steiglitz},
- * publisher	= {Addison-Wesley},
- * address		= {New York},
- * year		= {1996},
- * pages = {290--295}}
- * <p/>
- * Must have delays greater than the bufferSize.
- * Defaults are for 25Khz sampling rate from Steiglitz book.
- * BUGS: Does not support removal of source.
- */
 public class CombReverb extends InOut {
 
     protected float srate;

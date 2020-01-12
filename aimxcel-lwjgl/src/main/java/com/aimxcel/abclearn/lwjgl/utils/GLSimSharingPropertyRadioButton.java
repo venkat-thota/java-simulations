@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl.utils;
 
 import java.awt.event.ActionEvent;
@@ -12,15 +11,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.components.SimSharin
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-/**
- * Radio button with correct threading between the LWJGL and Swing threads, so that we display a component in the Swing thread that deals with
- * a property that is only modified in the LWJGL thread.
- * <p/>
- * NOTE: not completely thread-safe. if concurrent modifications to the property happen approximately when the user clicks on this, there may be issues
- *
- * @param <T> Type that the radio buttons are selecting over
- * @author Jonathan Olson
- */
 public class GLSimSharingPropertyRadioButton<T> extends SimSharingJRadioButton {
 
     public GLSimSharingPropertyRadioButton( IUserComponent userComponent, String text, final SettableProperty<T> lwjglProperty, final T value ) {

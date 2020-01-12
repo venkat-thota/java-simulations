@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -21,17 +20,13 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
-
-/**
- * ElevationAxisNode draws the elevation (vertical) axis.
- * The elevation axis is intended to be built once, then repositioned (using setOffset)
- * as the bounds of the zoomed viewport change.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ElevationAxisNode extends PComposite {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

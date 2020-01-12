@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.MODEL_PADDING;
@@ -6,9 +5,6 @@ import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.MODEL_
 
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
-/**
- * Contains layout information relevant to where the kits are placed, where molecules can exist in the play area, etc.
- */
 public class LayoutBounds {
     private PBounds availableKitBounds;
     private PBounds availablePlayAreaBounds;

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
@@ -31,19 +30,18 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * GPSReceiverNode is the visual representation of a GPS receiver.
- * This node is primarily for use during development as a debugging tool.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class GPSReceiverNode extends AbstractToolNode {
 
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     
-    private static final NumberFormat DISTANCE_FORMAT = new DefaultDecimalFormat( "0" );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final NumberFormat DISTANCE_FORMAT = new DefaultDecimalFormat( "0" );
     private static final NumberFormat ELEVATION_FORMAT = new DefaultDecimalFormat( "0" );
     
     //----------------------------------------------------------------------------
@@ -106,7 +104,12 @@ public class GPSReceiverNode extends AbstractToolNode {
      * Image of the GPS receiver.
      */
     private static class ReceiverNode extends PComposite {
-        public ReceiverNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public ReceiverNode() {
             super();
             PImage imageNode = new PImage( GlaciersImages.GPS_RECEIVER );
             addChild( imageNode );
@@ -118,7 +121,11 @@ public class GPSReceiverNode extends AbstractToolNode {
      */
     private static class ValueNode extends PComposite {
         
-        private JLabel _distanceLabel;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private JLabel _distanceLabel;
         private JLabel _elevationLabel;
         private PSwing _pswing;
         private boolean _englishUnits;

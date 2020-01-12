@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import java.util.ArrayList;
@@ -23,9 +22,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.function.Function2;
 import static com.aimxcel.abclearn.platetectonics.model.PlateMotionModel.*;
 import static com.aimxcel.abclearn.platetectonics.util.Side.LEFT;
 
-/**
- * Convenience class with functions that deal with plates in the Plate Motion tab
- */
+
 public class PlateMotionPlate extends Plate {
     private final PlateMotionModel model;
     private final TextureStrategy textureStrategy;

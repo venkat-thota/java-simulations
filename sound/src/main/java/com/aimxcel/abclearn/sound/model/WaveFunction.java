@@ -1,20 +1,6 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: WaveFunction
- * Package: edu.colorado.phet.sound.model
- * Author: Another Guy
- * Date: Aug 3, 2004
- */
 package com.aimxcel.abclearn.sound.model;
 
 public interface WaveFunction {
 
-    /**
-     * Gives the amplitude of the wave funtion at a specified time
-     *
-     * @param time
-     * @return
-     */
     double waveAmplitude( double time );
 }

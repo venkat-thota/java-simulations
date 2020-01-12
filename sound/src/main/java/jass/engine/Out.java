@@ -1,12 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 package jass.engine;
 
-/**
- * Output-only unit. Will produce audio-rate buffers. Needs
- * only implementation of computeBuffer().
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
+
 
 public abstract class Out implements Source {
 

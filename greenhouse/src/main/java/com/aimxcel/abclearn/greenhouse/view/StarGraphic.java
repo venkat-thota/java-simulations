@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: StarGraphic
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Nov 26, 2003
- */
 package com.aimxcel.abclearn.greenhouse.view;
 
 import java.awt.*;

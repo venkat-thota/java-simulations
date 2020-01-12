@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.photonabsorption.view;
 
 import java.awt.FlowLayout;
@@ -17,13 +16,6 @@ import javax.swing.JRadioButton;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-/**
- * Class that defines a panel that has a radio button on the left and an
- * image on the right.  This is designed to be fairly general, and
- * therefore potentially reusable in other sims.
- *
- * @author John Blanco
- */
 class SelectionPanelWithImage extends JPanel {
 
     private static final Font LABEL_FONT = new AimxcelFont( 14 );

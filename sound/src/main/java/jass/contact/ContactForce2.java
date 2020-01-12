@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.contact;
 
 import jass.engine.BufferNotAvailableException;
@@ -8,12 +7,7 @@ import jass.generators.LoopBuffer;
 import jass.generators.ModalModel;
 import jass.generators.ModalObjectWithOneContact;
 
-/**
- * A force model with impact, slide, and slide modes based on looping wav files
- * Roll force is fed through modal filter.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
+
 public class ContactForce2 extends Out {
 
     // Has these protected sources:

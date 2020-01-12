@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -13,14 +12,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.PolarCartesianConverter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 
-/**
- * Glacier is the model of the glacier.
- * The model was developed by Archie Paulson.
- * The model is a not physical; it is a "Hollywood" model that approximates published data.
- * Documentation is in glaciers/doc/model.txt.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Glacier extends ClockAdapter {
 
     //----------------------------------------------------------------------------

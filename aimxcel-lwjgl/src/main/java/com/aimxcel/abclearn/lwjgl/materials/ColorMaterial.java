@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl.materials;
 
 import java.awt.*;
@@ -7,10 +6,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.lwjgl.GLOptions;
 import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
 
-/**
- * Simple material, useful for LWJGL-related issues
- * NOTE: remember to put "setQueueBucket( Bucket.Transparent );" on geometry that uses this material! Otherwise transparency won't work
- */
 public class ColorMaterial extends GLMaterial {
     private final Property<Color> colorProperty;
 

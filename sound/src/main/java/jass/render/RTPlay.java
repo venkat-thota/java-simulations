@@ -1,13 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 package jass.render;
 
 import javax.sound.sampled.*;
 
-/**
- * Utility class for real-time audio play.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class RTPlay extends Thread {
     private float srate;
     private int bitsPerFrame;

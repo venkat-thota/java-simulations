@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl;
 
 import java.awt.*;
@@ -7,11 +6,6 @@ import javax.swing.*;
 
 import com.aimxcel.abclearn.aimxcel2dcore.event.PBasicInputEventHandler;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
-
-/**
- * Custom cursor handler for LWJGL-related business (Core cursor support looks broken?)
- * TODO: fix this (or get rid of this, since it was copied from JME)
- */
 public class LWJGLCursorHandler extends PBasicInputEventHandler {
     private final Cursor cursor;
 

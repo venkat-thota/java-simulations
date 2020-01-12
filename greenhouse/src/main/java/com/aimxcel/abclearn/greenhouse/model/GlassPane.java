@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: GlassPane
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 24, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.awt.geom.Rectangle2D;

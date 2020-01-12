@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import static com.aimxcel.abclearn.platetectonics.PlateTectonicsConstants.PANEL_TITLE_FONT;
@@ -23,7 +22,12 @@ import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
  * Gives the user a list of "View" options
  */
 public class ViewOptionsPanel extends PNode {
-    public ViewOptionsPanel( final Property<Boolean> showLabels, Property<ColorMode> colorMode ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ViewOptionsPanel( final Property<Boolean> showLabels, Property<ColorMode> colorMode ) {
         this( showLabels, false, new Property<Boolean>( false ), new Property<Boolean>( false ), colorMode );
     }
 
@@ -32,7 +36,12 @@ public class ViewOptionsPanel extends PNode {
                              final Property<Boolean> showWater,
                              final Property<Boolean> showWaterEnabled,
                              final Property<ColorMode> colorMode ) {
-        final PNode title = new PText( PlateTectonicsResources.Strings.OPTIONS ) {{
+        final PNode title = new PText( PlateTectonicsResources.Strings.OPTIONS ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setFont( PANEL_TITLE_FONT );
         }};
         addChild( title );
@@ -41,7 +50,12 @@ public class ViewOptionsPanel extends PNode {
         final Property<Double> y = new Property<Double>( title.getFullBounds().getMaxY() );
 
         // "Density" radio button
-        final PSwing densityMode = new PSwing( new GLSimSharingPropertyRadioButton<ColorMode>( UserComponents.densityView, Strings.DENSITY_VIEW, colorMode, ColorMode.DENSITY ) ) {{
+        final PSwing densityMode = new PSwing( new GLSimSharingPropertyRadioButton<ColorMode>( UserComponents.densityView, Strings.DENSITY_VIEW, colorMode, ColorMode.DENSITY ) ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setOffset( 0, y.get() + 5 );
             y.set( getFullBounds().getMaxY() );
             maxWidth.set( Math.max( maxWidth.get(), getFullBounds().getWidth() ) );
@@ -49,7 +63,12 @@ public class ViewOptionsPanel extends PNode {
         addChild( densityMode );
 
         // "Temperature" radio button
-        final PSwing temperatureMode = new PSwing( new GLSimSharingPropertyRadioButton<ColorMode>( UserComponents.temperatureView, Strings.TEMPERATURE_VIEW, colorMode, ColorMode.TEMPERATURE ) ) {{
+        final PSwing temperatureMode = new PSwing( new GLSimSharingPropertyRadioButton<ColorMode>( UserComponents.temperatureView, Strings.TEMPERATURE_VIEW, colorMode, ColorMode.TEMPERATURE ) ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setOffset( 0, y.get() );
             y.set( getFullBounds().getMaxY() );
             maxWidth.set( Math.max( maxWidth.get(), getFullBounds().getWidth() ) );
@@ -57,7 +76,12 @@ public class ViewOptionsPanel extends PNode {
         addChild( temperatureMode );
 
         // "Both" radio button
-        final PSwing combinedMode = new PSwing( new GLSimSharingPropertyRadioButton<ColorMode>( UserComponents.bothView, Strings.BOTH_VIEW, colorMode, ColorMode.COMBINED ) ) {{
+        final PSwing combinedMode = new PSwing( new GLSimSharingPropertyRadioButton<ColorMode>( UserComponents.bothView, Strings.BOTH_VIEW, colorMode, ColorMode.COMBINED ) ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setOffset( 0, y.get() );
             y.set( getFullBounds().getMaxY() );
             maxWidth.set( Math.max( maxWidth.get(), getFullBounds().getWidth() ) );
@@ -67,7 +91,12 @@ public class ViewOptionsPanel extends PNode {
         y.set( y.get() + 5 );
 
         // "Show Labels" check box
-        final PSwing showLabelCheckBox = new PSwing( new GLSimSharingPropertyCheckBox( UserComponents.showLabels, Strings.SHOW_LABELS, showLabels ) ) {{
+        final PSwing showLabelCheckBox = new PSwing( new GLSimSharingPropertyCheckBox( UserComponents.showLabels, Strings.SHOW_LABELS, showLabels ) ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setOffset( 0, y.get() );
             y.set( getFullBounds().getMaxY() );
             maxWidth.set( Math.max( maxWidth.get(), getFullBounds().getWidth() ) );
@@ -76,7 +105,12 @@ public class ViewOptionsPanel extends PNode {
 
         // "Show Seawater" check box
         if ( containsWaterOption ) {
-            addChild( new PSwing( new GLSimSharingPropertyCheckBox( UserComponents.showWater, Strings.SHOW_SEAWATER, showWater ) {{
+            addChild( new PSwing( new GLSimSharingPropertyCheckBox( UserComponents.showWater, Strings.SHOW_SEAWATER, showWater ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 showWaterEnabled.addObserver( new SimpleObserver() {
                     public void update() {
                         // access property in the LWJGL thread
@@ -90,7 +124,12 @@ public class ViewOptionsPanel extends PNode {
                         } );
                     }
                 } );
-            }} ) {{
+            }} ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setOffset( 0, y.get() );
                 y.set( getFullBounds().getMaxY() );
                 maxWidth.set( Math.max( maxWidth.get(), getFullBounds().getWidth() ) );

@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.tabs;
 
 import static com.aimxcel.abclearn.platetectonics.PlateTectonicsResources.Strings.CONTINENTAL_CRUST;
@@ -36,10 +35,6 @@ import com.aimxcel.abclearn.lwjgl.nodes.GLNode;
 import com.aimxcel.abclearn.lwjgl.nodes.OrthoCoreNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Represents the 1st tab, which has a modifiable section of crust surrounded by oceanic and continental crusts, all
- * on top of the mantle.
- */
 public class CrustTab extends PlateTectonicsTab {
 
     // relative scale multiplier of how large items at the origin appear to be

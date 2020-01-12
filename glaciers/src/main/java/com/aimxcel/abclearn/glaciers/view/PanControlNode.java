@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -13,18 +12,14 @@ import com.aimxcel.abclearn.aimxcel2dcore.event.PDragEventHandler;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * PanControlNode is a node used to control the horizontal position of the zoomed viewport.
- * An image is displayed, and can be dragged horizontally.
- * The location of the node is used to adjust the center of the zoomed viewport.
- * Horizontal dragging is limited such that the left and right edges of the zoomed viewport are
- * always within the birds-eye viewport.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class PanControlNode extends PImage {
     
-    private static final double X_UNDEFINED = -1;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final double X_UNDEFINED = -1;
     
     //----------------------------------------------------------------------------
     // Instance data

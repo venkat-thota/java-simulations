@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.photonabsorption.view;
 
 import java.awt.event.ActionEvent;
@@ -8,15 +7,7 @@ import java.awt.image.BufferedImage;
 import com.aimxcel.abclearn.photonabsorption.model.PhotonAbsorptionModel;
 import com.aimxcel.abclearn.photonabsorption.model.PhotonAbsorptionModel.PhotonTarget;
 
-/**
- * Class that defines a panel that allows the user to select a specific
- * target molecule in the photon absorption model.  This class takes care
- * of wiring up the button to the model.  This particular version takes a
- * string for the caption and another string for the "tool tip", i.e. some
- * text that appears when the user hovers the mouse over the button.
- *
- * @author John Blanco
- */
+
 public class MoleculeSelectorPanelWithToolTip extends SelectionPanelWithImage {
 
     /**

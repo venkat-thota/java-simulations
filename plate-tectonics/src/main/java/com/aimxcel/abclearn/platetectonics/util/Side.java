@@ -1,14 +1,7 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.util;
 
 import java.util.Collection;
 import java.util.List;
-
-/**
- * Makes handling of mirror cases and directionality much easier.
- * <p/>
- * Generally assumes the left-to-right ordering of arrays with indices 0 to size-1, and that coordinates increase from left to right
- */
 public enum Side {
     LEFT,
     RIGHT;

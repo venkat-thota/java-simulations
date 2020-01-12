@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.view;
 
@@ -22,17 +21,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * PNode that represents the photon emitter in the view.  The graphical
- * representation of the emitter changes based on the wavelength of photons
- * that the model is set to emit.
- * <p/>
- * This node is set up such that setting its offset at on the photon emission
- * point in the model should position it correctly.  This assumes that photons
- * are emitted to the right.
- *
- * @author John Blanco
- */
 public class PhotonEmitterNode extends PNode {
 
     // ------------------------------------------------------------------------

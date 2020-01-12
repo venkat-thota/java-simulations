@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: PhotonAbsorber
- * Class: edu.colorado.phet.greenhouse
- * User: Ron LeMaster
- * Date: Oct 12, 2003
- * Time: 9:13:53 AM
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 

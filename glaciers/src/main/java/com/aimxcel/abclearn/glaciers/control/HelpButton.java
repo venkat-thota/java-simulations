@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.control;
 
@@ -11,14 +10,13 @@ import javax.swing.JButton;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
 
-/**
- * HelpButton is a button for toggling module help.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class HelpButton extends JButton {
     
-    public static final String SHOW_HELP = AimxcelCommonResources.getInstance().getLocalizedString( "Common.HelpPanel.ShowHelp" );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static final String SHOW_HELP = AimxcelCommonResources.getInstance().getLocalizedString( "Common.HelpPanel.ShowHelp" );
     public static final String HIDE_HELP = AimxcelCommonResources.getInstance().getLocalizedString( "Common.HelpPanel.HideHelp" );
 
     private final Module _module;

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model.behaviors;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
@@ -17,9 +16,7 @@ import com.aimxcel.abclearn.platetectonics.model.regions.Boundary;
 import com.aimxcel.abclearn.platetectonics.model.regions.Region;
 import com.aimxcel.abclearn.platetectonics.util.Side;
 
-/**
- * Behavior for the subducting plate (bends then sinks down)
- */
+
 public class SubductingBehavior extends PlateBehavior {
 
     private float timeElapsed = 0;

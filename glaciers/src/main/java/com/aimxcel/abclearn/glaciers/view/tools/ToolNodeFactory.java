@@ -1,27 +1,14 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
 import com.aimxcel.abclearn.glaciers.model.*;
 import com.aimxcel.abclearn.glaciers.view.GlaciersModelViewTransform;
 
-/**
- * ToolNodeFactory uses the Factory design pattern to create tool nodes.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class ToolNodeFactory {
 
-    /* not intended for instantiation */
     private ToolNodeFactory() {}
-    
-    /**
-     * Creates a tool node for a specified tool.
-     * 
-     * @param tool
-     * @param mvt
-     * @return
-     */
+   
     public static AbstractToolNode createNode( AbstractTool tool, GlaciersModel model, GlaciersModelViewTransform mvt, TrashCanDelegate trashCan, boolean englishUnits ) {
         AbstractToolNode node = null;
         if ( tool instanceof Thermometer ) {

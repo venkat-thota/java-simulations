@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -9,18 +8,6 @@ import java.util.Iterator;
 import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierAdapter;
 import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierListener;
 
-/**
- * EndMoraine is a pile of debris at the terminus.
- * <p>
- * In this sim, this class serves one purpose: to prevent an infinite number of Debris objects
- * from accumulating when the glacier is in the steady state. While the glacier is evolving,
- * the terminus is moving and 9stretching the definition of end moraine?) there is no debris 
- * in the end moraine. When the glacier is in steady state, the terminus does not move,
- * and debris is added to the moraine.  Any debris that falls on the same location as another
- * piece of debris is deleted.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class EndMoraine {
     
     //----------------------------------------------------------------------------

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view;
 
 import com.aimxcel.abclearn.platetectonics.PlateTectonicsResources.Strings;
@@ -7,9 +6,6 @@ import com.aimxcel.abclearn.platetectonics.view.materials.DensityMaterial;
 import com.aimxcel.abclearn.platetectonics.view.materials.EarthMaterial;
 import com.aimxcel.abclearn.platetectonics.view.materials.TemperatureMaterial;
 
-/**
- * Enum covering the different ways we can false-color the cross-section of earth
- */
 public enum ColorMode {
     // darker == more dense
     DENSITY( new DensityMaterial(), Strings.LESS_DENSE, Strings.MORE_DENSE ),

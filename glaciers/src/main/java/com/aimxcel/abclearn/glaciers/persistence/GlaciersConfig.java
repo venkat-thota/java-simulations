@@ -1,18 +1,15 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.persistence;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.IProguardKeepClass;
 
-/**
- * GlaciersConfig describes a configuration of this simulation.
- * It encapsulates all of the settings that the user can change.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlaciersConfig implements IProguardKeepClass {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
     

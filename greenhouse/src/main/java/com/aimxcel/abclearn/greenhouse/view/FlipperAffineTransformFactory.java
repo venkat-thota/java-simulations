@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: FlipperAffineTransformFactory
- * Package: edu.colorado.phet.common.view
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.greenhouse.view;
 
 
@@ -15,10 +7,7 @@ import java.awt.geom.Rectangle2D;
 
 import com.aimxcel.abclearn.greenhouse.common.graphics.AffineTransformFactory;
 
-/**
- * Produces affine transforms that map from model to view coordinates,
- * and invert the y axis.
- */
+
 public class FlipperAffineTransformFactory implements AffineTransformFactory {
     private Rectangle2D modelBounds;
 

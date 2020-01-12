@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: Photon
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.awt.geom.Point2D;

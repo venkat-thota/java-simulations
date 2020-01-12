@@ -1,15 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import java.net.URL;
 
-/**
- * A force model based on looping through a buffer, loaded from an audio
- * file or provided by caller.  Adds a probablility to "misfire", i.e.,
- * skip a section of the loop.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class ErraticLoopBuffer extends LoopBuffer {
     /**
      * misfire probability per buffer

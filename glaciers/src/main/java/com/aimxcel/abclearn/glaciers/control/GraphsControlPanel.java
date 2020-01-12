@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.control;
 
@@ -22,15 +21,14 @@ import com.aimxcel.abclearn.glaciers.view.UnitsChangeListener;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
-
-/**
- * GraphsControlPanel is the control panel for creating graphs.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GraphsControlPanel extends AbstractSubPanel implements UnitsChangeListener {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
 

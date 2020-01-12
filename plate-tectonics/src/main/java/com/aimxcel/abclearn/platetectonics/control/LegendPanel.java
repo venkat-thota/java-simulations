@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import static com.aimxcel.abclearn.platetectonics.PlateTectonicsConstants.PANEL_TITLE_FONT;
@@ -13,12 +12,19 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Displays a legend for a particular coloring method of the earth, with labels
- */
 public class LegendPanel extends PNode {
-    public LegendPanel( ColorMode colorMode ) {
-        final PNode title = new PText( PlateTectonicsResources.Strings.LEGEND ) {{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public LegendPanel( ColorMode colorMode ) {
+        final PNode title = new PText( PlateTectonicsResources.Strings.LEGEND ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setFont( PANEL_TITLE_FONT );
         }};
         addChild( title );

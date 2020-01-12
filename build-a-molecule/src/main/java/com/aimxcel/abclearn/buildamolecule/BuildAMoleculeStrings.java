@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.buildamolecule;
 
@@ -7,10 +6,7 @@ import java.util.Map;
 
 import com.aimxcel.abclearn.chemistry.model.Element;
 
-/**
- * A collection of localized strings used by this simulations.
- * We load all strings as statics so that we will be warned at startup time of any missing strings.
- */
+
 public class BuildAMoleculeStrings {
 
     /* not intended for instantiation */

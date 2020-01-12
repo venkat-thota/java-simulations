@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.control;
 
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.MODEL_VIEW_TRANSFORM;
@@ -25,12 +24,13 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
-/**
- * Contains the kit background and controls for switching between kits
- */
 public class KitPanel extends PNode {
 
-    private static final double KIT_ARROW_Y_OFFSET = 5; // vertical offset of the kit arrows from the top of the kit
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final double KIT_ARROW_Y_OFFSET = 5; // vertical offset of the kit arrows from the top of the kit
 
     public KitPanel( final KitCollection kitCollectionModel, PBounds availableKitBounds ) {
 
@@ -51,7 +51,12 @@ public class KitPanel extends PNode {
         * label and next/previous
         *----------------------------------------------------------------------------*/
 
-        addChild( new NextPreviousNavigationNode( new PText() {{
+        addChild( new NextPreviousNavigationNode( new PText() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             // this is our label
             setFont( new AimxcelFont( 18, true ) );
             kitCollectionModel.getCurrentKitProperty().addObserver( new SimpleObserver() {
@@ -60,7 +65,12 @@ public class KitPanel extends PNode {
                 }
             } );
         }}, BuildAMoleculeConstants.KIT_ARROW_BACKGROUND_ENABLED, BuildAMoleculeConstants.KIT_ARROW_BORDER_ENABLED, 17, 24 ) {
-            {
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			{
                 // hook up listeners
                 kitCollectionModel.getCurrentKitProperty().addObserver( new SimpleObserver() {
                     public void update() {
@@ -86,7 +96,11 @@ public class KitPanel extends PNode {
         *----------------------------------------------------------------------------*/
 
         addChild( new HTMLImageButtonNode( BuildAMoleculeStrings.KIT_REFILL, new AimxcelFont( Font.BOLD, 12 ), Color.ORANGE ) {
-            private SimpleObserver observer; // makes sure that we are enabled or disabled whenever the current kit is
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+			private SimpleObserver observer; // makes sure that we are enabled or disabled whenever the current kit is
 
             {
                 setUserComponent( UserComponent.refillKit );

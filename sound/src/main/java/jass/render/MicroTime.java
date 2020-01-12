@@ -1,11 +1,5 @@
-// Copyright 2002-2011, University of Colorado
 package jass.render;
 
-/**
- * Utility class to provide time, using native accurate timers whenever availabel
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class MicroTime {
     private static boolean useNative = false;
 

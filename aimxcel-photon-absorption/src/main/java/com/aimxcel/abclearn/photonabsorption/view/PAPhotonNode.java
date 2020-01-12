@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.view;
 
@@ -13,13 +12,6 @@ import com.aimxcel.abclearn.photonabsorption.model.WavelengthConstants;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
-
-//TODO #2620: subclass PhotonNode, override getPhotonColor and getSparkleColor, delete image files
-/**
- * PNode that represents a photon in the view.
- *
- * @author John Blanco
- */
 public class PAPhotonNode extends PNode implements Observer {
 
     // ------------------------------------------------------------------------

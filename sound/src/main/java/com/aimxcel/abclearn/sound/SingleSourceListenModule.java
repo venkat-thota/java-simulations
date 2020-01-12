@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: SingleSourceListenModule
- * Package: edu.colorado.phet.sound
- * Author: Another Guy
- * Date: Aug 6, 2004
- */
 package com.aimxcel.abclearn.sound;
 
 import java.awt.Color;

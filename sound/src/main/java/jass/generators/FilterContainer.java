@@ -1,16 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.InOut;
 import jass.engine.SinkIsFullException;
 import jass.engine.Source;
-
-/**
- * Filter UG. One input only. Processes input through filter. Output is
- * mix of filtered and dry signal.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class FilterContainer extends InOut {
 
     /**

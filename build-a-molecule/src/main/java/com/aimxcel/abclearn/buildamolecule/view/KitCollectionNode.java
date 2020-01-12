@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.view;
 
 import com.aimxcel.abclearn.buildamolecule.control.KitPanel;
@@ -9,12 +8,14 @@ import com.aimxcel.abclearn.buildamolecule.model.KitCollection;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Contains the kits and atoms in the play area.
- */
 public class KitCollectionNode extends PNode {
 
-    public KitCollectionNode( final CollectionList collectionList, final KitCollection collection, BuildAMoleculeCanvas canvas ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public KitCollectionNode( final CollectionList collectionList, final KitCollection collection, BuildAMoleculeCanvas canvas ) {
         /*---------------------------------------------------------------------------*
         * layers
         *----------------------------------------------------------------------------*/

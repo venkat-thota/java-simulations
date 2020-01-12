@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.control;
 
 import java.awt.geom.Rectangle2D;
@@ -20,14 +19,29 @@ import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
  */
 public class SingleCollectionBoxNode extends CollectionBoxNode {
 
-    public SingleCollectionBoxNode( final CollectionBox box, Function1<PNode, Rectangle2D> toModelBounds ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public SingleCollectionBoxNode( final CollectionBox box, Function1<PNode, Rectangle2D> toModelBounds ) {
         super( box, toModelBounds );
         assert ( box.getCapacity() == 1 );
 
-        addHeaderNode( new PNode() {{
+        addHeaderNode( new PNode() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             final HTMLNode nameAndFormula = new HTMLNode( MessageFormat.format( BuildAMoleculeStrings.COLLECTION_SINGLE_FORMAT,
                                                                                 box.getMoleculeType().getGeneralFormulaFragment(),
-                                                                                box.getMoleculeType().getDisplayName() ) ) {{
+                                                                                box.getMoleculeType().getDisplayName() ) ) {/**
+																					 * 
+																					 */
+																					private static final long serialVersionUID = 1L;
+
+																				{
                 setFont( new AimxcelFont( 15, true ) );
             }};
             addChild( nameAndFormula );

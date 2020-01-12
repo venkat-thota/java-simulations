@@ -1,28 +1,9 @@
-// Copyright 2002-2012, University of Colorado
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
 package com.aimxcel.abclearn.mechanics;
 
 import java.awt.geom.Point2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
-/**
- * DefaultBody
- * <p/>
- * A concrete extension of Body that provides default implementations
- * of teh abstract methods in Body.
- *
- * @author Ron LeMaster
- * @version $Revision$
- */
 public class DefaultBody extends Body {
 
     protected DefaultBody() {

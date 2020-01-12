@@ -1,23 +1,6 @@
-// Copyright 2002-2012, University of Colorado
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
 package com.aimxcel.abclearn.mechanics;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
-
-/**
- * Vector3D
- *
- * @author Ron LeMaster
- * @version $Revision$
- */
 public class Vector3D extends PhysicalVector {
 
     public static Vector3D createCrossProduct( MutableVector2D v1, MutableVector2D v2 ) {

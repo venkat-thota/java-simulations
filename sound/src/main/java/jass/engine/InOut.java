@@ -1,17 +1,12 @@
-// Copyright 2002-2011, University of Colorado
 package jass.engine;
 
 import java.util.Vector;
 
-/**
- * Input/output unit. Needs only implementation of computeBuffer().
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
+
 
 public abstract class InOut extends Out implements Sink {
 
-    protected Vector sourceContainer;
+    protected Vector<Source> sourceContainer;
 
     /**
      * add source to Sink.
@@ -45,7 +40,7 @@ public abstract class InOut extends Out implements Sink {
 
     public InOut( int bufferSize ) {
         super( bufferSize );
-        sourceContainer = new Vector();
+        sourceContainer = new Vector<Source>();
         srcBuffers = new float[1][];
     }
 

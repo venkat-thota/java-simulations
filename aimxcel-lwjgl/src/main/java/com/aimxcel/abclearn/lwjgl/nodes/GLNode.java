@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl.nodes;
 
 import java.util.ArrayList;
@@ -13,11 +12,7 @@ import com.aimxcel.abclearn.lwjgl.math.LWJGLTransform;
 
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * General scene-graph node for our LWJGL usage
- * <p/>
- * TODO: add selection names for use with glLoadName
- */
+
 public class GLNode {
     private GLNode parent = null;
     private final List<GLNode> children = new ArrayList<GLNode>();

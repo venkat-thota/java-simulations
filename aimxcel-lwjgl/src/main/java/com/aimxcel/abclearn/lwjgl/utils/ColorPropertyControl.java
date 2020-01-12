@@ -7,13 +7,6 @@ import javax.swing.event.ChangeListener;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.ColorControl;
-
-/**
- * Convenience control that handles a color property in the LWJGL thread, while the interface is handled in the Swing EDT. Otherwise, the access
- * to the color property would not be properly synchronized and code from both threads could access/modify it at the same time for undefined behavior.
- * <p/>
- * See lwjgl-implementation-notes.txt for more detailed notes on threading issues.
- */
 public class ColorPropertyControl extends ColorControl {
     public ColorPropertyControl( Frame parentFrame, String labelString, final Property<Color> color ) {
         super( parentFrame, labelString, color.get() );

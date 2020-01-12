@@ -1,16 +1,17 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
 import com.aimxcel.abclearn.glaciers.GlaciersImages;
 import com.aimxcel.abclearn.glaciers.model.IToolProducer;
 
-/**
- * TrashCanIconNode shows a picture of a trash can.
- */
+
 public class TrashCanIconNode extends AbstractToolIconNode {
     
-    private final TrashCanDelegate _trashCanDelegate;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final TrashCanDelegate _trashCanDelegate;
     
     /**
      * Constructor.

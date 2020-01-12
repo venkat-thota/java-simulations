@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: AbstractPhotonEmitter
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 10, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.util.HashSet;
@@ -13,12 +5,13 @@ import java.util.Iterator;
 import java.util.Observable;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
+import com.aimxcel.abclearn.greenhouse.model.PhotonEmitter.Listener;
 
 public abstract class AbstractPhotonEmitter extends Observable implements ModelElement, PhotonEmitter<Photon> {
 
     private double productionRate;
     private double timeSincePhotonsProduced;
-    private HashSet listeners = new HashSet();
+    private HashSet<Listener<?>> listeners = new HashSet<Listener<?>>();
 
     public void addListener( PhotonEmitter.Listener listener ) {
         listeners.add( listener );
@@ -49,8 +42,8 @@ public abstract class AbstractPhotonEmitter extends Observable implements ModelE
 
     // Notify all listeners
     protected void notifyListeners( Photon photon ) {
-        for ( Iterator iterator = listeners.iterator(); iterator.hasNext(); ) {
-            Listener listener = (Listener) iterator.next();
+        for ( Iterator<Listener<?>> iterator = listeners.iterator(); iterator.hasNext(); ) {
+            Listener<Photon> listener = (Listener<Photon>) iterator.next();
             listener.photonEmitted( photon );
         }
     }

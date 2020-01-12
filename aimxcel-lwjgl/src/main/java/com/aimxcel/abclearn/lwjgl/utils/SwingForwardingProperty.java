@@ -1,17 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl.utils;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.ChangeObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 
-/**
- * A property that can be handled by the Swing EDT directly, that forwards to an underlying property controlled by the LWJGL thread.
- * This is especially useful where phetcommon controls take a Property as a parameter (like VSliderNode) and modify it within the Swing EDT, while we
- * want to make changes to our property in the LWJGL thread. To remedy this situation, wrap our original (LWJGL-threaded property) in a
- * SwingForwardingProperty and pass it to the phetcommon control.
- * <p/>
- * NOTE: to sidestep other threading issues, changes to the underlying property (for now) will not be reflected in this property.
- */
 public class SwingForwardingProperty<T> extends Property<T> {
     public SwingForwardingProperty( final Property<T> property ) {
         super( property.get() );

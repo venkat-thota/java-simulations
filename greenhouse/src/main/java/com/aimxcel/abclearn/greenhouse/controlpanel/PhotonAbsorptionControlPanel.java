@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.greenhouse.controlpanel;
 
@@ -42,18 +41,18 @@ import com.aimxcel.abclearn.photonabsorption.view.MoleculeNode;
 import com.aimxcel.abclearn.photonabsorption.view.MoleculeSelectorPanelWithToolTip;
 import com.aimxcel.abclearn.core.aimxcelcore.CoreModule;
 
-/**
- * Control panel for the Photon Absorption tab of this application.
- *
- * @author John Blanco
- */
 public class PhotonAbsorptionControlPanel extends ControlPanel {
 
     // ------------------------------------------------------------------------
     // Class Data
     // ------------------------------------------------------------------------
 
-    // Font to use on this panel.
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	// Font to use on this panel.
     private static final Font LABEL_FONT = new AimxcelFont( 14 );
 
     // Model view transform used for creating images of the various molecules.
@@ -193,7 +192,12 @@ public class PhotonAbsorptionControlPanel extends ControlPanel {
      */
     private static class MoleculeQuantitySlider extends JPanel {
 
-        private MoleculeQuantitySlider( String labelID, final Class<? extends Molecule> moleculeClass,
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		private MoleculeQuantitySlider( String labelID, final Class<? extends Molecule> moleculeClass,
                                         final PhotonAbsorptionModel model, Map<Class<? extends Molecule>, LinearValueControl> moleculeToSliderMap ) {
             setLayout( new FlowLayout( FlowLayout.LEFT, 0, 0 ) );
             // The overall width of this panel needs to be a little less that the

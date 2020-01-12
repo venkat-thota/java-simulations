@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.view;
 
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.MODEL_VIEW_TRANSFORM;
@@ -21,11 +20,14 @@ import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
-/**
- * Labeled arrow pointing the user to move the molecule into the collection box
- */
+
 public class CollectionBoxHintNode extends PNode {
-    public CollectionBoxHintNode( final Molecule molecule, final CollectionBox box ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public CollectionBoxHintNode( final Molecule molecule, final CollectionBox box ) {
 
         PBounds moleculeDestinationBounds = molecule.getDestinationBounds();
 
@@ -34,15 +36,30 @@ public class CollectionBoxHintNode extends PNode {
 
         final Rectangle2D moleculeViewBounds = MODEL_VIEW_TRANSFORM.modelToViewRectangle( moleculeDestinationBounds );
 
-        PNode labelNode = new PNode() {{
-            PText textNode = new PText( BuildAMoleculeStrings.COLLECTION_HINT ) {{
+        PNode labelNode = new PNode() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
+            PText textNode = new PText( BuildAMoleculeStrings.COLLECTION_HINT ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setFont( new AimxcelFont( 16, true ) );
                 setTextPaint( Color.BLACK );
             }};
             double verticalPad = 5;
             double horizontalPad = 5;
             PBounds textBounds = textNode.getFullBounds();
-            addChild( new AimxcelPPath( new RoundRectangle2D.Double( textBounds.x - horizontalPad, textBounds.y - verticalPad, textBounds.getWidth() + horizontalPad * 2, textBounds.getHeight() + verticalPad * 2, 15, 15 ) ) {{
+            addChild( new AimxcelPPath( new RoundRectangle2D.Double( textBounds.x - horizontalPad, textBounds.y - verticalPad, textBounds.getWidth() + horizontalPad * 2, textBounds.getHeight() + verticalPad * 2, 15, 15 ) ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setPaint( Color.WHITE );
                 setStrokePaint( Color.BLACK );
             }} );
@@ -54,7 +71,12 @@ public class CollectionBoxHintNode extends PNode {
         Vector2D textEnd = new Vector2D( labelNode.getFullBounds().getMaxX() - 5, labelNode.getFullBounds().getCenterY() );
         Vector2D direction = tipTarget.minus( textEnd ).normalized();
 
-        final ArrowNode blueArrow = new ArrowNode( textEnd.plus( direction.times( 15 ) ).toPoint2D(), tipTarget.toPoint2D(), 30, 40, 20 ) {{
+        final ArrowNode blueArrow = new ArrowNode( textEnd.plus( direction.times( 15 ) ).toPoint2D(), tipTarget.toPoint2D(), 30, 40, 20 ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setPaint( Color.BLUE );
         }};
         addChild( blueArrow );

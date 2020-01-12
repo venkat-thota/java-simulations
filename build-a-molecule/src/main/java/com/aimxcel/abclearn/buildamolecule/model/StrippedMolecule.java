@@ -1,23 +1,11 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import java.util.*;
 
 import com.aimxcel.abclearn.chemistry.model.Atom;
 import com.aimxcel.abclearn.chemistry.model.Element;
-
-/**
- * Molecule structure with the hydrogens stripped out (but with the hydrogen count of an atom saved)
- * <p/>
- * This class was motivated by a need for efficient molecule comparison. It brought down the cost
- * of filtering molecules from months to minutes, along with significant reductions in the structures file size.
- */
 public class StrippedMolecule<AtomT extends Atom> {
     public final MoleculeStructure<AtomT> stripped;
-
-    /**
-     * Array indexed the same way as stripped.getAtoms() for efficiency. It's essentially immutable, so this works
-     */
     private final int[] hydrogenCount;
 
     public StrippedMolecule( MoleculeStructure<AtomT> original ) {

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -6,11 +5,6 @@ import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/**
- * Movable is the model of a movable object, having position and orientation.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public abstract class Movable {
     
     //----------------------------------------------------------------------------

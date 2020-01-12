@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.tests;
 
 import java.awt.*;
@@ -18,15 +17,13 @@ import com.aimxcel.abclearn.buildamolecule.model.MoleculeList;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
-
-/**
- * Displays a table that shows all of the different possible complete molecules, along with their names and formulas.
- *
- * @author Sam Reid
- * @author Jon Olson
- */
 public class MoleculeTableDialog extends JDialog {
-    public MoleculeTableDialog( final Frame owner ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public MoleculeTableDialog( final Frame owner ) {
         super( owner, false );
         final List<CompleteMolecule> list = new ArrayList<CompleteMolecule>( MoleculeList.getMasterInstance().getAllCompleteMolecules() );
         Collections.sort( list, new Comparator<CompleteMolecule>() {
@@ -98,7 +95,12 @@ public class MoleculeTableDialog extends JDialog {
             public void removeTableModelListener( TableModelListener l ) {
             }
         } ) {
-            {
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			{
                 setRowHeight( 75 );
             }
         };
@@ -112,13 +114,22 @@ public class MoleculeTableDialog extends JDialog {
     }
 
     public static void main( String[] args ) {
-        new MoleculeTableDialog( null ) {{
+        new MoleculeTableDialog( null ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setDefaultCloseOperation( DISPOSE_ON_CLOSE );
         }}.setVisible( true );
     }
 
     private static class MoleculeCellRenderer extends AimxcelPCanvas implements TableCellRenderer {
-        private PNode node = null;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private PNode node = null;
 
         private MoleculeCellRenderer() {
             setBorder( null );

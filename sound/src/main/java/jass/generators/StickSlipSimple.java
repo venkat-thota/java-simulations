@@ -1,12 +1,5 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
-
-/**
- * A force model based on stick slip model. Just load a period of sawtooth.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class StickSlipSimple extends Impulse {
 
     private float srate; // sampling rate in Hertz

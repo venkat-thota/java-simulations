@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -36,28 +35,14 @@ import com.aimxcel.abclearn.glaciers.view.tools.ToolboxNode;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.aimxcel2dcore.PLayer;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
-
-/**
- * GlaciersPlayArea is "play area" for the glaciers sim.
- * It contains the birds-eye and zoomed views of the world.  
- * <p>
- * The birds-eye view appears at the top of the play area, and shows a tiny
- * overview picture of the world. A viewport shown in the birds-eye view indicates the 
- * portion of the world shown in the zoomed view. A pan control can be dragged 
- * horizontally to move the zoomed viewport.
- * <p>
- * The zoomed view appears below the birds-eye view, and displays a zoomed-in 
- * view of a portion of the world.
- * <p>
- * The two views are implemented as separate Core canvases.  The canvases
- * share common layers, and their cameras are manipulated (scales and translated)
- * to display the appropriate portions of the world.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlaciersPlayArea extends JPanel implements IToolProducerListener, IBoreholeProducerListener, IDebrisProducerListener, IIceRippleProducerListener, UnitsChangeListener {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

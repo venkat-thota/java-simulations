@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl.nodes;
 
 import java.awt.*;
@@ -13,12 +12,7 @@ import com.aimxcel.abclearn.lwjgl.CanvasTransform;
 import com.aimxcel.abclearn.lwjgl.LWJGLTab;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Allows overlaying a Core-based GUI onto LWJGL. This should only be rendered in an orthographic mode.
- * <p/>
- * NOTE: Any updates to the Core node should be done exclusively within the Swing Event Dispatch Thread, since this is backed by a PCanvas
- * See lwjgl-implementation-notes.txt
- */
+
 public class OrthoCoreNode extends OrthoSwingNode {
     private final PNode node;
 

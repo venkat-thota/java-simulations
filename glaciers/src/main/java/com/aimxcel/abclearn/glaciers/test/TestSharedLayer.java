@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.test;
 
@@ -17,11 +16,7 @@ import com.aimxcel.abclearn.aimxcel2dcore.PLayer;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * TestSharedLayer tests sharing of a layer between 2 canvases.
- * 
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class TestSharedLayer {
     
     private static final Dimension FRAME_SIZE = new Dimension( 640, 480 );

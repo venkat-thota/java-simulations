@@ -1,12 +1,3 @@
-// Copyright 2002-2012, University of Colorado
-
-/**
- * Class: PhotonCloudCollisionModel
- * Class: edu.colorado.phet.greenhouse
- * User: Ron LeMaster
- * Date: Oct 12, 2003
- * Time: 5:14:53 PM
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.awt.geom.Ellipse2D;

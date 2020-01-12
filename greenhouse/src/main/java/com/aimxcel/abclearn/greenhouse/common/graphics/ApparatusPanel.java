@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*
- * Class: ApparatusPanel
- * Package: edu.colorado.phet.common.view.graphics
- *
- * Created by: Ron LeMaster
- * Date: Nov 6, 2002
- */
 package com.aimxcel.abclearn.greenhouse.common.graphics;
 
 
@@ -23,31 +14,13 @@ import java.util.Observer;
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
 
-/**
- * This is a base class for panels that contain graphic representations
- * of elements in the PhysicalSystem.
- * <p/>
- * The graphic objects to be displayed are maintained in "layers". Each layer can
- * contain any number of Graphic objects, and each layer has an integer "level"
- * associated with it. Layers are drawn in ascending order of their levels. The order
- * in which objects in a given level are drawn in undefined.
- * <p/>
- * Levels less than 0 are reserved for items that are always to be displayed. This
- * could, for example, be used for a fixture or instrument that is always to appear as
- * part of the apparatus, such as a table or meter. When this class' removeAllModelElements() method is
- * executed these objects are not destroyed.
- * <p/>
- * Levels 1 and higher are used for objects that can be created and destroyed as the
- * application runs. All objects in these layers are destroyed when the removeAllModelElements() method
- * is executed.
- * <p/>
- * Instances of this class are Observers of the application's PhysicalSystem
- *
- * @see com.aimxcel.abclearn.greenhouse.common.graphics.Graphic
- */
 public class ApparatusPanel extends JPanel implements Observer {
 
-    //
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//
     // Statics
     //
     public static final double LAYER_TOP = Double.POSITIVE_INFINITY;

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view;
 
 import java.awt.*;
@@ -23,9 +22,6 @@ import com.aimxcel.abclearn.lwjgl.nodes.GLNode;
 
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * Displays a strip of earth cross-section (we use strips both for model convenience and because we can efficiently render these)
- */
 public class CrossSectionStripNode extends GLNode {
     private LWJGLTransform modelViewTransform;
     private Property<ColorMode> colorMode;

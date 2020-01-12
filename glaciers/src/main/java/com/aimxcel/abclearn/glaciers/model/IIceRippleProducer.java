@@ -1,26 +1,10 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
 import java.awt.Dimension;
-
-
-
-/**
- * IIceRippleProducer is the interface implemented by objects that create IceRipple model elements.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public interface IIceRippleProducer {
 
-    /**
-     * Adds ripple at a specified x coordinate.
-     * The 2D position will always be on the surface of the ice, so we only specify x.
-     * @param x initial x position of the ripple (meters)
-     * @param size (x and z dimensions, in meters)
-     * @param zOffset offset of the ripple from the far wall of the valley (z dimension, i meters)
-     * @return
-     */
+   
     public IceRipple addIceRipple( double x, Dimension size, double zOffset );
     
     /**

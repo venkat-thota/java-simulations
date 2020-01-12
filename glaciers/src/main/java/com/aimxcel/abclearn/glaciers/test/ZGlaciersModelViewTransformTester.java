@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.test;
 
@@ -9,13 +8,7 @@ import com.aimxcel.abclearn.glaciers.view.GlaciersModelViewTransform;
 
 import junit.framework.TestCase;
 
-/**
- * ZModelViewTransformTester is the JUnit test for ModelViewTransform.
- * Tests a representative sample of common transforms, but is in no way complete.
- * Correct answers were calculated manually.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class ZGlaciersModelViewTransformTester extends TestCase {
     
     //----------------------------------------------------------------------------

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.greenhouse;
 
 import java.awt.*;
@@ -26,15 +25,16 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 
 public class GreenhouseControlPanel extends JPanel implements Resettable {
 
-    private static Color adjustableGGColor = Color.black;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static Color adjustableGGColor = Color.black;
     private static Color iceAgeColor = new Color( 0, 28, 229 );
     private static Color preIndRevColor = new Color( 176, 0, 219 );
     private static Color todayColor = new Color( 11, 142, 0 );
 
-    // This font is used for the titled borders on this control panel.  It
-    // is needed because the titles are long, so the default font made the
-    // control panel too wide.
-    private static Font BORDER_TITLE_FONT = new AimxcelFont(12, true);
+     private static Font BORDER_TITLE_FONT = new AimxcelFont(12, true);
 
     private final ModelSlider greenhouseGasConcentrationControl;
     String[] iceAgeConcentrations = new String[]{" ?",
@@ -285,7 +285,11 @@ public class GreenhouseControlPanel extends JPanel implements Resettable {
     //----------------------------------------------------------------
 
     private class AtmosphereSelectionPanel extends JPanel {
-        private final JRadioButton todayGGRB;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private final JRadioButton todayGGRB;
         private final JRadioButton adjustableGGRB;
 
         AtmosphereSelectionPanel() {
@@ -387,13 +391,23 @@ public class GreenhouseControlPanel extends JPanel implements Resettable {
         //----------------------------------------------------------------
 
         AbstractAction pickAdjustableGG = new AbstractAction() {
-            public void actionPerformed( ActionEvent e ) {
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			public void actionPerformed( ActionEvent e ) {
                 setAdjustableAtmosphere();
             }
         };
 
         private final AbstractAction pickIceAgeGG = new AbstractAction() {
-            public void actionPerformed( ActionEvent e ) {
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			public void actionPerformed( ActionEvent e ) {
                 greenhouseGasConcentrationControl.setModelValue( GreenhouseConfig.greenhouseGasConcentrationIceAge );
 //                greenhouseGasConcentrationControl.setEnabled( false );
                 GreenhouseControlPanel.this.module.setIceAge();
@@ -404,7 +418,12 @@ public class GreenhouseControlPanel extends JPanel implements Resettable {
         };
 
         private final AbstractAction pickPreIndRevGG = new AbstractAction() {
-            public void actionPerformed( ActionEvent e ) {
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			public void actionPerformed( ActionEvent e ) {
                 greenhouseGasConcentrationControl.setModelValue( GreenhouseConfig.greenhouseGasConcentration1750 );
 //                greenhouseGasConcentrationControl.setEnabled( false );
                 GreenhouseControlPanel.this.module.setPreIndRev();
@@ -415,7 +434,12 @@ public class GreenhouseControlPanel extends JPanel implements Resettable {
         };
 
         private final AbstractAction pickTodayGG = new AbstractAction() {
-            public void actionPerformed( ActionEvent e ) {
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			public void actionPerformed( ActionEvent e ) {
                 greenhouseGasConcentrationControl.setModelValue( GreenhouseConfig.greenhouseGasConcentrationToday );
 //                greenhouseGasConcentrationControl.setEnabled( false );
                 GreenhouseControlPanel.this.module.setToday();
@@ -432,7 +456,11 @@ public class GreenhouseControlPanel extends JPanel implements Resettable {
      */
     private class GreenhouseCompositionPane extends AimxcelTitledPanel {
 
-        JTextField h2oTF = new GreenhouseTextField();
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		JTextField h2oTF = new GreenhouseTextField();
         JTextField co2TF = new GreenhouseTextField();
         JTextField ch4TF = new GreenhouseTextField();
         JTextField n2oTF = new GreenhouseTextField();
@@ -498,7 +526,11 @@ public class GreenhouseControlPanel extends JPanel implements Resettable {
      *
      */
     class ModelSlider extends JPanel {
-        private final JSlider slider;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private final JSlider slider;
         private final ModelViewTx1D tx;
 
         ModelSlider( String title, double minModelValue, double maxModelValue, double defaultModelValue ) {
@@ -599,7 +631,11 @@ public class GreenhouseControlPanel extends JPanel implements Resettable {
 
 
     class SliderWithReadout extends JPanel {
-        private final JTextField modelValueTF;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private final JTextField modelValueTF;
         private final JSlider slider;
         private final ModelViewTx1D tx;
         private final String units;
@@ -675,7 +711,12 @@ public class GreenhouseControlPanel extends JPanel implements Resettable {
      */
     public class GreenhouseTextField extends JTextField {
 
-        public GreenhouseTextField(){
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public GreenhouseTextField(){
             super( 10 );
             // Make this transparent so that the background of the control
             // panel shows through.

@@ -1,11 +1,3 @@
-// Copyright 2002-2012, University of Colorado
-
-/**
- * Class: PhotonEarthCollisionModel
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 10, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;

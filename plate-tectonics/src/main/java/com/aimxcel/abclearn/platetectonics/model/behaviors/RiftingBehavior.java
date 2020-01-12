@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model.behaviors;
 
 import static com.aimxcel.abclearn.platetectonics.PlateTectonicsResources.Strings;
@@ -25,9 +24,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.FunctionalUtils;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 
-/**
- * Plate behavior where the plate moves away from the boundary, creating young oceanic crust from the center.
- */
+
 public class RiftingBehavior extends PlateBehavior {
 
     private float timeElapsed = 0;

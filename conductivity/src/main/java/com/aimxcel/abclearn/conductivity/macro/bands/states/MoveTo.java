@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro.bands.states;
 
@@ -8,9 +7,6 @@ import com.aimxcel.abclearn.conductivity.macro.bands.EnergyCell;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
-
-// Referenced classes of package edu.colorado.phet.semiconductor.macro.bands.states:
-//            Waiting, Speed
 
 public class MoveTo
         implements BandParticleState {

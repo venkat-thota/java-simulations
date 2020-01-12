@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: Wavefront
- * Package: edu.colorado.phet.sound.model
- * Author: Another Guy
- * Date: Aug 3, 2004
- */
 package com.aimxcel.abclearn.sound.model;
 
 import java.awt.geom.Point2D;

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import static com.aimxcel.abclearn.platetectonics.PlateTectonicsConstants.PANEL_TITLE_FONT;
@@ -27,13 +26,14 @@ import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Time control for the motion tab. When in manual mode, only displays a time readout. When in auto mode, displays the play/pause button,
- * step button, and a slider to control speed.
- */
 public class TectonicsTimeControl extends PNode {
 
-    // this property is handled in the Swing EDT
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	// this property is handled in the Swing EDT
     private Property<Double> speedProperty = new Property<Double>( 1.0 );
 
     private static final double SLIDER_MIN = 0.1;
@@ -50,7 +50,12 @@ public class TectonicsTimeControl extends PNode {
         final PNode timeSlider = new TimeSlider( lwjglClock, isAutoMode );
 
         // play/pause button.
-        final PlayPauseButton playPauseButton = new PlayPauseButton( (int) ( 100 * 0.7 * 0.7 ) ) {{
+        final PlayPauseButton playPauseButton = new PlayPauseButton( (int) ( 100 * 0.7 * 0.7 ) ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             // initial state
             setPlaying( !swingClock.isPaused() );
 
@@ -99,7 +104,12 @@ public class TectonicsTimeControl extends PNode {
         }};
 
         // step button
-        final StepButton stepButton = new StepButton( (int) ( playPauseButton.getButtonDimension().width * 0.8 ) ) {{
+        final StepButton stepButton = new StepButton( (int) ( playPauseButton.getButtonDimension().width * 0.8 ) ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
 
             // control the clock
             addListener( new Listener() {
@@ -139,11 +149,21 @@ public class TectonicsTimeControl extends PNode {
 
         container = new HBox( 12, HBox.CENTER_ALIGNED,
                               new VBox( VBox.CENTER_ALIGNED,
-                                        new PText( Strings.TIME_ELAPSED ) {{
+                                        new PText( Strings.TIME_ELAPSED ) {/**
+											 * 
+											 */
+											private static final long serialVersionUID = 1L;
+
+										{
                                             setFont( PANEL_TITLE_FONT );
                                         }},
                                         new HBox( 12, HBox.CENTER_ALIGNED,
-                                                  new PText( "0" ) {{
+                                                  new PText( "0" ) {/**
+													 * 
+													 */
+													private static final long serialVersionUID = 1L;
+
+												{
                                                       // update the time readout whenever the clock changes
                                                       lwjglClock.addClockListener( new ClockAdapter() {
                                                           @Override public void simulationTimeChanged( ClockEvent clockEvent ) {
@@ -157,7 +177,12 @@ public class TectonicsTimeControl extends PNode {
                                                           }
                                                       } );
                                                   }},
-                                                  new PText( Strings.MILLION_YEARS ) {{
+                                                  new PText( Strings.MILLION_YEARS ) {/**
+													 * 
+													 */
+													private static final long serialVersionUID = 1L;
+
+												{
                                                       setFont( new AimxcelFont( 12 ) );
                                                   }}
                                         ) ),
@@ -216,7 +241,12 @@ public class TectonicsTimeControl extends PNode {
     }
 
     private class TimeSlider extends HSliderNode {
-        public TimeSlider( final TectonicsClock clock, final Property<Boolean> isAutoMode ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public TimeSlider( final TectonicsClock clock, final Property<Boolean> isAutoMode ) {
             super( UserComponents.timeSpeedSlider, SLIDER_MIN, SLIDER_MAX, 5, 100, speedProperty, new Property<Boolean>( true ) );
 
             addLabel( SLIDER_MIN, new PText( Strings.TIME_SLOW ) );

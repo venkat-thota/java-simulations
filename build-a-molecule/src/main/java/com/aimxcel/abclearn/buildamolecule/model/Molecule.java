@@ -1,12 +1,7 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
-
-/**
- * Represents a "Build a Molecule" molecule. Also useful as a type alias for code readability
- */
 public class Molecule extends MoleculeStructure<Atom2D> {
 
     /**

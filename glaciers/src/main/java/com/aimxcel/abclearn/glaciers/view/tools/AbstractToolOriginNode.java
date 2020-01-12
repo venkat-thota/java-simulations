@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
@@ -10,15 +9,13 @@ import java.awt.geom.GeneralPath;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
-/**
- * AbstractToolOriginNode is a collection of nodes used to visually indicate
- * where the origin is on various measurement tools.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public abstract class AbstractToolOriginNode extends PComposite {
 
-    private static final float SIZE = 10f;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final float SIZE = 10f;
     private static final Color FILL_COLOR = Color.WHITE;
     private static final Color STROKE_COLOR = Color.BLACK;
     private static final Stroke STROKE = new BasicStroke( 1f );
@@ -41,25 +38,45 @@ public abstract class AbstractToolOriginNode extends PComposite {
     }
     
     public static class LeftToolOriginNode extends AbstractToolOriginNode {
-        public LeftToolOriginNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public LeftToolOriginNode() {
             super( 0 );
         }
     }
     
     public static class RightToolOriginNode extends AbstractToolOriginNode {
-        public RightToolOriginNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public RightToolOriginNode() {
             super( Math.PI );
         }
     }
     
     public static class UpToolOriginNode extends AbstractToolOriginNode {
-        public UpToolOriginNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public UpToolOriginNode() {
             super( Math.PI / 2 );
         }
     }
     
     public static class DownToolOriginNode extends AbstractToolOriginNode {
-        public DownToolOriginNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public DownToolOriginNode() {
            super( Math.PI / 2 );
         }
     }

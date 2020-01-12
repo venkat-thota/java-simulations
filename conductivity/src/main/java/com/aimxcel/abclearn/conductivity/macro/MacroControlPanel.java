@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro;
 
@@ -11,13 +10,13 @@ import javax.swing.event.ChangeListener;
 
 import com.aimxcel.abclearn.conductivity.ConductivityApplication;
 import com.aimxcel.abclearn.conductivity.ConductivityResources;
-
-// Referenced classes of package edu.colorado.phet.semiconductor.macro:
-//            MacroModule
-
 public class MacroControlPanel extends JPanel {
 
-    private JCheckBox lightOn;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JCheckBox lightOn;
     private JButton onePhoton;
 
     public MacroControlPanel( final ConductivityApplication conductivityApplication ) {

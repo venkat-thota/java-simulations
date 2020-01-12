@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl.shapes;
 
 import static org.lwjgl.opengl.GL11.GL_QUADS;

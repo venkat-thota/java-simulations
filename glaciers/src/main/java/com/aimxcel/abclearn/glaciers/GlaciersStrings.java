@@ -1,16 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
 
 
-/**
- * GlaciersStrings is a collection of localized strings used by this simulation.
- * All strings are loaded statically so that we can easily test for missing strings on start up.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlaciersStrings {
 
     /* not intended for instantiation */

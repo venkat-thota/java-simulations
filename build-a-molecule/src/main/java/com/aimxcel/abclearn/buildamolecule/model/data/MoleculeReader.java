@@ -1,14 +1,8 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model.data;
 
 import java.io.*;
 import java.util.*;
 import java.util.zip.GZIPInputStream;
-
-/**
- * Is able to separate molecules in order from a series of gzip-compressed composite SDF files, with some decently
- * fast filtering
- */
 public class MoleculeReader {
 
     /*---------------------------------------------------------------------------*

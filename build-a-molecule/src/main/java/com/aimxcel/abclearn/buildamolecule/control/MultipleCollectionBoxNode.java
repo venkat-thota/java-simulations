@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.control;
 
 import java.awt.geom.Rectangle2D;
@@ -16,26 +15,40 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
-/**
- * Displays a collection box that can collect multiple molecules with two text labels above. One shows the "goal", and the other shows the current
- * quantity present in the box.
- */
+
 public class MultipleCollectionBoxNode extends CollectionBoxNode {
 
-    public MultipleCollectionBoxNode( final CollectionBox box, Function1<PNode, Rectangle2D> toModelBounds ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public MultipleCollectionBoxNode( final CollectionBox box, Function1<PNode, Rectangle2D> toModelBounds ) {
         super( box, toModelBounds );
 
-        addHeaderNode( new PNode() {{
-            HTMLNode goalNode = new HTMLNode( MessageFormat.format( BuildAMoleculeStrings.COLLECTION_MULTIPLE_GOAL_FORMAT, box.getCapacity(), box.getMoleculeType().getGeneralFormulaFragment() ) ) {{
+        addHeaderNode( new PNode() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
+            HTMLNode goalNode = new HTMLNode( MessageFormat.format( BuildAMoleculeStrings.COLLECTION_MULTIPLE_GOAL_FORMAT, box.getCapacity(), box.getMoleculeType().getGeneralFormulaFragment() ) ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setFont( new AimxcelFont( 15, true ) );
             }};
             addChild( goalNode );
         }} );
-        addHeaderNode( new HTMLNode() {{
-            /*
-             * Adding this text in will make text the same height (generally) whether or not they contain subscripts.
-             * Before, the general positioning would be different on molecules which do not involve subscripts (HCN, NO, etc.)
-             */
+        addHeaderNode( new HTMLNode() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
+           
             final String subscriptFix = "<sub> </sub>";
 
             setFont( new AimxcelFont( 14 ) );

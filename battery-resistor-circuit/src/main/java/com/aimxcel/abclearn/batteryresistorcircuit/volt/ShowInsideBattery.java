@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Created by IntelliJ IDEA.
- * User: Sam Reid
- * Date: Nov 13, 2002
- * Time: 10:22:17 PM
- * To change this template use Options | File Templates.
- */
 package com.aimxcel.abclearn.batteryresistorcircuit.volt;
 
 import java.awt.event.ActionEvent;

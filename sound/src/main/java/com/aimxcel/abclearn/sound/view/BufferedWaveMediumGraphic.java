@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: WaveMediumGraphic
- * Package: edu.colorado.phet.sound.view
- * Author: Another Guy
- * Date: Aug 4, 2004
- */
 package com.aimxcel.abclearn.sound.view;
 
 import java.awt.*;
@@ -22,10 +14,6 @@ import com.aimxcel.abclearn.sound.model.Wavefront;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
 
-/**
- * This variant of the WaveMediumGraphic is used for the movable speaker in the Two
- * Source Intereference module
- */
 public class BufferedWaveMediumGraphic extends AimxcelImageGraphic implements SimpleObserver {
 
     //

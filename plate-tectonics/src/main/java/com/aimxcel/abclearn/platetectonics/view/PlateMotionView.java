@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view;
 
 import java.util.ArrayList;
@@ -14,9 +13,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 import com.aimxcel.abclearn.lwjgl.nodes.GLNode;
 
-/**
- * Specialized view with additional behavior for the Plate Motion tab.
- */
 public class PlateMotionView extends PlateTectonicsView {
     public PlateMotionView( final PlateMotionModel model, final PlateMotionTab tab, final Property<Boolean> showWater ) {
         super( model, tab, showWater );

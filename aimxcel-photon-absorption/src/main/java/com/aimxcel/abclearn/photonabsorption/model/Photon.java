@@ -1,22 +1,7 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: Photon
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.photonabsorption.model;
 
 import java.awt.geom.Point2D;
 import java.util.Observable;
-
-/**
- * Class that represents a photon.  Primarily keeps track of wavelength,
- * position, and velocity (as odd as that may seem) and can be stepped in
- * order to make the photon move in model space.
- *
- * @author John Blanco
- */
 public class Photon extends Observable {
 
     private final double wavelength;

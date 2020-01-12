@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl;
 
 import java.awt.*;
@@ -14,10 +13,6 @@ import static org.lwjgl.opengl.GL11.GL_PROJECTION;
 import static org.lwjgl.opengl.GL11.glLoadIdentity;
 import static org.lwjgl.opengl.GL11.glMatrixMode;
 import static org.lwjgl.opengl.GL11.glOrtho;
-
-/**
- * Conceptual tab unit for LWJGL-based simulations.
- */
 public abstract class LWJGLTab implements Tab {
     private final LWJGLCanvas canvas;
     private final String title;

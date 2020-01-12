@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import java.util.ArrayList;
@@ -16,14 +15,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.Option;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.Option.None;
 import com.aimxcel.abclearn.lwjgl.math.LWJGLTransform;
 
-/**
- * A rectangular grid of terrain vertices that represents the terrain on top of the earth. Each column has the same X value and each
- * row has the same Z value for performance needs (simplifies trigonometric calculations for radial transformations from O(rows*cols) to
- * O(rows+cols))
- * <p/>
- * The number of samples in the Z position is fixed, however the number of samples in the X is not (terrain can be added or removed from
- * the sides)
- */
+
 public class Terrain {
 
     public final List<Float> xPositions = new ArrayList<Float>();

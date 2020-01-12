@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.batteryresistorcircuit.gui;
 
 import java.awt.*;
@@ -11,7 +10,11 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 public class CoreCountSlider extends JPanel implements ChangeListener {
-    // Transform transform;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// Transform transform;
     JSlider js;
     JTextField jtf;
     String name;

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view;
 
 import java.util.ArrayList;
@@ -20,11 +19,6 @@ import com.aimxcel.abclearn.lwjgl.GLOptions.RenderPass;
 import com.aimxcel.abclearn.lwjgl.nodes.GLNode;
 import com.aimxcel.abclearn.lwjgl.shapes.UnitMarker;
 
-/**
- * A view (node) that displays everything physical related to a plate model, within the bounds
- * of the specified grid
- * <p/>
- */
 public class PlateTectonicsView extends GLNode {
 
     // keep track of which object corresponds to which node, so we can remove them later

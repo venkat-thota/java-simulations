@@ -1,13 +1,3 @@
-// Copyright 2002-2012, University of Colorado
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
 package com.aimxcel.abclearn.mechanics;
 
 import java.awt.geom.Point2D;
@@ -15,12 +5,6 @@ import java.awt.geom.Point2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.Particle;
 
-/**
- * Body
- *
- * @author Ron LeMaster
- * @version $Revision$
- */
 public abstract class Body extends Particle {
 
     private Particle lastColidedBody = null;

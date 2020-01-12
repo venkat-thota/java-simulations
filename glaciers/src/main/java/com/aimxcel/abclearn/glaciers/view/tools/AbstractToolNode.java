@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
@@ -18,16 +17,13 @@ import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PDragEventHandler;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
-
-/**
- * AbstractToolNode is the base class for all tool nodes.
- * Base functionality includes updating the tool's position as the node is dragged.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public abstract class AbstractToolNode extends PNode {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

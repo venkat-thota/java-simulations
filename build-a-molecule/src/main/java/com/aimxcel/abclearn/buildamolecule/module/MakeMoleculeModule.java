@@ -1,5 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.buildamolecule.module;
 
 import java.awt.Frame;
@@ -22,9 +20,7 @@ import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeSimSharing.UserComponent.makeMoleculesTab;
 import static com.aimxcel.abclearn.chemistry.model.Element.*;
 
-/**
- * Module for the 1st tab: collection boxes only take 1 molecule, and our 1st kit collection is always the same
- */
+
 public class MakeMoleculeModule extends AbstractBuildAMoleculeModule {
 
     public MakeMoleculeModule( Frame parentFrame ) {

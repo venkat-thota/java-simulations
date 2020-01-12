@@ -1,26 +1,14 @@
-// Copyright 2002-2011, University of Colorado
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
 package com.aimxcel.abclearn.sound.coreadditions;
 
 import javax.swing.*;
-
-/**
- * A subclass of JSpinner that moves up and down through orders of magnitude
- *
- * @author ?
- * @version $Revision$
- */
 public class OrderOfMagnitudeSpinner extends JSpinner {
 
-    public OrderOfMagnitudeSpinner( float minFactor, float maxFactor ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public OrderOfMagnitudeSpinner( float minFactor, float maxFactor ) {
         super();
         final SpinnerModel model = new OrderOfMagnitudeListModel( minFactor, maxFactor );
         setModel( model );
@@ -35,7 +23,11 @@ public class OrderOfMagnitudeSpinner extends JSpinner {
      */
     private class OrderOfMagnitudeListModel extends SpinnerNumberModel {
 
-        private float maxFactor;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private float maxFactor;
         private float minFactor;
 
         OrderOfMagnitudeListModel( float minFactor, float maxFactor ) {

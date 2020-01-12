@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.charts;
 
@@ -27,16 +26,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.application.PaintImmediateDialo
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockListener;
-
-/**
- * ELAVersusTimeChart displays a "Equilibrium Line Altitude versus Time" chart.
- * The chart updates when the climate changes.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ELAVersusTimeChart extends PaintImmediateDialog {
     
-    private static final Range ELEVATION_RANGE_METRIC = new Range( 2000, 6000 ); // meters
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final Range ELEVATION_RANGE_METRIC = new Range( 2000, 6000 ); // meters
     private static final Range ELEVATION_RANGE_ENGLISH = new Range( 
             UnitsConverter.metersToFeet( ELEVATION_RANGE_METRIC.getLowerBound() ), 
             UnitsConverter.metersToFeet( ELEVATION_RANGE_METRIC.getUpperBound() ) ); // feet

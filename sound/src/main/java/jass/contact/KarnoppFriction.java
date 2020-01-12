@@ -1,18 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 package jass.contact;
 
 import jass.engine.Out;
 
-/**
- * A force model based on stick slip model.
- * Karnopp model.
- * <p/>
- * Model is in terms of q(t):
- * <p/>
- * Md^2q/dt^2 + k_d dq/dt + k_s q(t) = G(dq/dt)  FOR |v-dq/dt| > vc
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class KarnoppFriction extends Out {
 
     private float srate; // sampling rate in Hertz

@@ -1,13 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.Out;
-
-/**
- * Output sine wave. (Highly inefficient implementation.)
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 
 public class Sine extends Out {
     /**

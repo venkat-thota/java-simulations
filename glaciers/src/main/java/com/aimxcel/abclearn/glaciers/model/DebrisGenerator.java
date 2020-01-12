@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -7,14 +6,6 @@ import java.util.Random;
 import com.aimxcel.abclearn.glaciers.GlaciersConstants;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.Point3D;
-
-/**
- * DebrisGenerator generates a 3D position for debris, 
- * based on the current state of the glacier.
- * Points are weighted so that more of them are generated in the cross-section (z=0).
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class DebrisGenerator {
     
     private static final int DEBRIS_CROSS_SECTION_RATIO = 5; // 1 out of this many debris are created in the ice cross-section

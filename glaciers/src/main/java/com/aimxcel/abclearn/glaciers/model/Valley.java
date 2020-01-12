@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -6,34 +5,6 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 
 import com.aimxcel.abclearn.glaciers.view.GlaciersModelViewTransform;
-
-
-/**
- * Valley is the model of the valley where the glacier forms.
- * Documentation is in glaciers/doc/model.txt.
- * <p>
- * For the purposes of this simulation, the valley is a static entity 
- * that does not change over time.
- * <p>
- * The coordinate system is:
- * <ul>
- * <li>x : position downvalley (meters)
- * <li>y : width across the valley floor (meters)
- * <li>z : elevation above sea level (meters)
- * </ul>
- * <p>
- * Downvalley indicates increasing x and decreasing z.
- * Upvalley indicates decreasing x and increasing z.
- * The headwall is the highest cliff, where the glacier begins to form.
- * <p>
- * WARNING WARNING WARNING WARNING WARNING !!!
- * If you change anything in this class, you will likely break this simulation.
- * The Glacier model is a Hollywood model that was created to work for a single
- * Valley profile. And the image used to draw the valley floor and mountains 
- * (see MountainsAndValleyNode) was drawn for a specific Valley profile.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Valley {
 
     //----------------------------------------------------------------------------

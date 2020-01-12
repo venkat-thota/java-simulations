@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: WaveMediumGraphic
- * Package: edu.colorado.phet.sound.view
- * Author: Another Guy
- * Date: Aug 4, 2004
- */
 package com.aimxcel.abclearn.sound.view;
 
 import java.awt.*;

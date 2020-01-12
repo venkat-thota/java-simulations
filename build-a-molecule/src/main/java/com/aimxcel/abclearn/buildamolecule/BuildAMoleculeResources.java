@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.buildamolecule;
 
@@ -8,11 +7,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResource
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelResources;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 
-/**
- * A wrapper around the PhET resource loader.
- * If we decide to use a different technique to load resources in the
- * future, all changes will be encapsulated here.
- */
+
 public class BuildAMoleculeResources {
 
     private static final AimxcelResources RESOURCES = new AimxcelResources( BuildAMoleculeConstants.PROJECT_NAME );

@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- *
- * Class: CompositeInteractiveGraphic
- * Package: edu.colorado.phet.common.view
- * Author: Another Guy
- * Date: Dec 19, 2003
- */
 package com.aimxcel.abclearn.conductivity.oldphetgraphics;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.MultiMap;

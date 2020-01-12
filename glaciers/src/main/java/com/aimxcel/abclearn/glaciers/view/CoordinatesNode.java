@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -22,7 +21,12 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
 public class CoordinatesNode extends AimxcelPNode {
     
-    private static final Color AXIS_COLOR = Color.BLACK;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final Color AXIS_COLOR = Color.BLACK;
 
     private final GlaciersModelViewTransform _mvt;
     private final ElevationAxisNode _leftElevationAxisNode, _rightElevationAxisNode;

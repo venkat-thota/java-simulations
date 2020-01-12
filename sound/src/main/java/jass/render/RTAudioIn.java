@@ -1,13 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 package jass.render;
 
 import javax.sound.sampled.*;
-
-/**
- * Utility class to read audio in real-time. Use appropriate constructor to use JavaSound or native sound support
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class RTAudioIn extends Thread {
     private float srate;
     private int bitsPerFrame;

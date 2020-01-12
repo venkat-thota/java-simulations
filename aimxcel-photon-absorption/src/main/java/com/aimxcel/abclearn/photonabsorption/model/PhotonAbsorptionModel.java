@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.model;
 
@@ -26,19 +25,6 @@ import com.aimxcel.abclearn.photonabsorption.model.molecules.O3;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
-
-/**
- * Primary model for the Photon Absorption tab.  This models photons being
- * absorbed (or often NOT absorbed) by various molecules.  The scale for this
- * model is picometers (10E-12 meters).
- * <p/>
- * The basic idea for this model is that there is some sort of photon emitter
- * that emits photons, and some sort of photon target that could potentially
- * some of the emitted photons and react in some way.  In many cases, the
- * photon target can re-emit one or more photons after absorption.
- *
- * @author John Blanco
- */
 public class PhotonAbsorptionModel {
 
     //----------------------------------------------------------------------------

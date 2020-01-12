@@ -1,15 +1,4 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: MeterStickGraphic
- * Package: edu.colorado.phet.sound.view
- * Author: Another Guy
- * Date: Aug 9, 2004
- */
 package com.aimxcel.abclearn.sound.view;
-
-//import edu.colorado.phet.common.view.graphics.DefaultInteractiveGraphic;
-//import edu.colorado.phet.common.view.graphics.mousecontrols.Translatable;
 
 import java.awt.Component;
 import java.awt.geom.Point2D;

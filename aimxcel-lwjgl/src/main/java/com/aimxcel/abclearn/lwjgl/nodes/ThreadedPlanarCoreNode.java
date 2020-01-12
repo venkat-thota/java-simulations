@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl.nodes;
 
 import java.awt.*;
@@ -23,14 +22,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.util.PPickPath;
 
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * An alternative to PlanarCoreNode that attempts to minimize the thread message passing and
- * frame latency issues experienced by having to pass rendering to be done at a later time in the
- * Swing EDT.
- * <p/>
- * Also, don't add any sort of PSwing under this node. I haven't tried it, but it seems like the
- * perfect way to create an evil threading heisenbug.
- */
 public class ThreadedPlanarCoreNode extends AbstractGraphicsNode {
 
     // the node that we are displaying

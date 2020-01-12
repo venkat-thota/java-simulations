@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view.labels;
 
 import java.awt.geom.AffineTransform;
@@ -30,13 +29,6 @@ import static org.lwjgl.opengl.GL11.GL_LINE_STRIP;
 import static org.lwjgl.opengl.GL11.glBegin;
 import static org.lwjgl.opengl.GL11.glEnd;
 
-/**
- * A label that shows a range that it is associated with (usually a top and bottom point) with a textual label. The range is indicated in
- * the "error bars" style, looking like an extended capital I.
- * <p/>
- * However if there is not enough room for the label to show up, it instead puts the label off to the side and has a marking line that goes
- * from the label to the center of the range (halfway between top and bottom).  This is the "collapsed" style.
- */
 public class RangeLabelNode extends BaseLabelNode {
 
     // dimensions for the collapsed view

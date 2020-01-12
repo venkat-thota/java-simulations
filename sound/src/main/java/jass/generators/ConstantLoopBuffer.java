@@ -1,16 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.Out;
 
 import java.net.URL;
-
-/**
- * Loop through a buffer, loaded from an audio
- * file or provided by caller. No speed or volume control is provided.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class ConstantLoopBuffer extends Out {
     /**
      * Buffer to loop

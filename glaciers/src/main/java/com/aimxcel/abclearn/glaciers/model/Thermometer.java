@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -10,12 +9,6 @@ import com.aimxcel.abclearn.glaciers.GlaciersConstants;
 import com.aimxcel.abclearn.glaciers.model.Climate.ClimateAdapter;
 import com.aimxcel.abclearn.glaciers.model.Climate.ClimateListener;
 
-/**
- * Thermometer is the model of a thermometer.
- * It measure temperature of the climate at an elevation.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Thermometer extends AbstractTool {
     
     //----------------------------------------------------------------------------

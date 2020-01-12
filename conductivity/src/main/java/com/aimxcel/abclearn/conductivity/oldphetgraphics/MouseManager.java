@@ -1,6 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*, 2003.*/
 package com.aimxcel.abclearn.conductivity.oldphetgraphics;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.MultiMap;
@@ -12,11 +9,6 @@ import com.aimxcel.abclearn.conductivity.oldphetgraphics.Boundary;
 import java.awt.event.MouseEvent;
 import java.util.Iterator;
 
-/**
- * User: Sam Reid
- * Date: Nov 3, 2003
- * Time: 2:14:33 AM
- */
 public class MouseManager implements MouseInputListener /*, Boundary*/ {
     MultiMap am;
     MouseInputListener activeUnit;

@@ -1,17 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.batteryresistorcircuit.volt;
 
 import com.aimxcel.abclearn.batteryresistorcircuit.Electron;
 import com.aimxcel.abclearn.batteryresistorcircuit.common.wire1d.WireSystem;
 import com.aimxcel.abclearn.batteryresistorcircuit.gui.VoltageListener;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sam Reid
- * Date: Dec 25, 2002
- * Time: 9:27:53 PM
- * To change this template use Options | File Templates.
- */
 public class ResetScatterability implements VoltageListener {
     boolean pos = true;
     private WireSystem ws;

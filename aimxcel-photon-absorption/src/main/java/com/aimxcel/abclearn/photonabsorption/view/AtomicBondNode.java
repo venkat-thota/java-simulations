@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.view;
 
@@ -17,12 +16,6 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-
-/**
- * Class that represents an atomic bond in the view.
- *
- * @author John Blanco
- */
 public class AtomicBondNode extends PNode {
 
     // ------------------------------------------------------------------------

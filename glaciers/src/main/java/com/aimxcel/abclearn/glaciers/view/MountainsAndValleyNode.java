@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -10,29 +9,13 @@ import com.aimxcel.abclearn.glaciers.model.Valley;
 
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PAffineTransform;
-
-/**
- * MountainsNode is a background image of the mountains and valley.
- * This image was created for a specific valley profile, as described
- * by the Valley class.
- * <p>
- * HOW TO ALIGN THE IMAGE:
- * The original SVG image file (glaciers/assets/mountains.svg) contains small
- * red rings that mark these positions on the valley floor: F(0), F(10000) and F(70000).
- * Create a PNG file with these rings visible, and put it in data/glaciers/images/mountains.png.
- * Open the PNG file in Photoshop (or other similar program), note the exact locations
- * of the F(0) and F(70000) markers in the file, and set constants F_O and F_70000 to those values.
- * <p>
- * TO VERIFY ALIGNMENT:
- * In the PlayArea, set DEBUG_BACKGROUND_IMAGE_ALIGNMENT=true to draw blue circles
- * to these same locations. The image is properly aligned when the blue circles
- * fall inside the red rings.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class MountainsAndValleyNode extends PImage {
 
-    // These are absolute x,y coordinates of the markers in the image file
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// These are absolute x,y coordinates of the markers in the image file
     private static final Point2D F_0 = new Point2D.Double( 313, 138 );   // marker at x=0, y=F(0)
     private static final Point2D F_70000 = new Point2D.Double( F_0.getX() + 4940, F_0.getY() + 201 ); // marker at x=70000, y=F(70000)
     

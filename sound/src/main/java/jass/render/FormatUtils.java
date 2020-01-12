@@ -1,36 +1,18 @@
-// Copyright 2002-2011, University of Colorado
 package jass.render;
 
-/**
- * Utility class to convert sample types.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
+
 public final class FormatUtils {
-    /**
-     * Endianness.
-     */
+    
     public static boolean bigEndian = false;
 
-    /**
-     * Convert short array to float array.
-     *
-     * @param buf   User provided float array to return result in.
-     * @param sbuf  User provided sort array to convert.
-     * @param bufsz Sumber of float samples to write.
-     */
+   
     static final public void shortToFloat( float[] buf, short[] sbuf, int bufsz ) {
         for( int i = 0; i < bufsz; i++ ) {
             buf[i] = (float)( sbuf[i] / 32768. );
         }
     }
 
-    /**
-     * Convert float array (in range [-1 1]) to short array.
-     *
-     * @param shortSound User provided short array to return result in.
-     * @param dbuf       User provided float array to convert.
-     */
+    
     static final public void floatToShort( short[] shortSound, float[] dbuf ) {
         int bufsz = dbuf.length;
         for( int i = 0; i < bufsz; i++ ) {
@@ -38,12 +20,7 @@ public final class FormatUtils {
         }
     }
 
-    /**
-     * Convert float array to byte array.
-     *
-     * @param byteSound User provided byte array to return result in.
-     * @param dbuf      User provided float array to convert.
-     */
+   
     static final public void floatToByte( byte[] byteSound, float[] dbuf ) {
         int bufsz = dbuf.length;
         int ib = 0;

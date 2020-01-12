@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: WavefrontType
- * Package: edu.colorado.phet.sound.model
- * Author: Another Guy
- * Date: Aug 3, 2004
- */
 package com.aimxcel.abclearn.sound.model;
 
 public interface WavefrontType {

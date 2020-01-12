@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl.nodes;
 
 import static com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils.vertex2fxy;

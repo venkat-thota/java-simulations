@@ -1,14 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.Out;
 
-/**
- * A force model based on looping through N buffers, loaded from audio
- * files or provided by caller. Speed can be set as an N-vector. Volume is same.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class LoopNBuffers extends Out {
     /**
      * Number of buffers.

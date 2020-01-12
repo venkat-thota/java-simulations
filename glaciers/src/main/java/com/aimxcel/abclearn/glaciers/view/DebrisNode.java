@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -19,18 +18,18 @@ import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
-/**
- * DebrisNode is the visual representation of debris moving in and on the glacier ice.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class DebrisNode extends PComposite {
     
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     
-    private static final boolean DEBUG_3D = false;  // see debug3D method
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final boolean DEBUG_3D = false;  // see debug3D method
     private static final boolean DEBUG_ON_VALLEY_FLOOR = false; // see debugOnValleyFloor method
     private static final boolean DEBUG_DELETED_SELF = false; // see debugDeleted
     private static final boolean DEBUG_CLICK_FOR_INFO = false; // mouse click on this node to get info about the debris
@@ -134,7 +133,12 @@ public class DebrisNode extends PComposite {
      */
     private static class BoulderNode extends PPath {
         
-        public BoulderNode( double radius ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public BoulderNode( double radius ) {
             super();
             Shape shape = new Ellipse2D.Double( -radius, -radius, 2 * radius, 2 * radius );
             setPathTo( shape );

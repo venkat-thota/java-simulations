@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import java.awt.geom.Point2D;
@@ -11,10 +10,6 @@ import com.aimxcel.abclearn.chemistry.model.Atom;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.Option;
 
-/**
- * Represents the lewis-dot directional connections between atoms. Holds information for all atoms within a particular kit, but it is generic
- * enough to handle other situations
- */
 public class LewisDotModel {
     private Map<Atom, LewisDotAtom> atomMap = new HashMap<Atom, LewisDotAtom>();
 

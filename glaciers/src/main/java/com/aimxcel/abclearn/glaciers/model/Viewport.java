@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -7,11 +6,6 @@ import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/**
- *  Viewport describes a rectangular portion of the model that is visible. 
- *  
- *  @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Viewport {
     
     //----------------------------------------------------------------------------

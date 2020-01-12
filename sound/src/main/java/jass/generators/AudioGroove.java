@@ -1,21 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.Out;
 
 import java.net.URL;
 
-/**
- * Position  based playback  of audio  date (gramophone  model). Wavfile
- * (mono) is indexed  with position of needle on  record.  Every call to
- * getBuffer this UG  polls for position of needle  in seconds, and uses
- * this with the previous saved value to index a wav file and compute an
- * audio buffer for the corresponding segment. Method to obtain position
- * of needle is abstract.
- * Loads entire clip in memory.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public abstract class AudioGroove extends Out {
 
     /**

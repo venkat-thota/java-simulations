@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl.shapes;
 
 import java.nio.FloatBuffer;
@@ -13,10 +12,6 @@ import com.aimxcel.abclearn.lwjgl.nodes.GLNode;
 
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * Displays a quad-based polygonal grid tesselated with triangles. Think of it as a table of
- * vertices, each connected to its neighbors.
- */
 public class GridMesh extends GLNode {
 
     private FloatBuffer positionBuffer;

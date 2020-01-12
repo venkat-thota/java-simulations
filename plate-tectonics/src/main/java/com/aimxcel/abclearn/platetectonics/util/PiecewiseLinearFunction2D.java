@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.util;
 
 import java.util.ArrayList;
@@ -7,9 +6,6 @@ import java.util.List;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.Function1;
 
-/**
- * An open-ended piecewise linear function for 2D results
- */
 public class PiecewiseLinearFunction2D implements Function1<Double, Double> {
     private List<Vector2D> points = new ArrayList<Vector2D>();
 

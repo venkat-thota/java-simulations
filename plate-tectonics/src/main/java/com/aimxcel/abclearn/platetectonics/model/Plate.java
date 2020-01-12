@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import java.util.ArrayList;
@@ -18,9 +17,6 @@ import static com.aimxcel.abclearn.common.aimxcelcommon.util.FunctionalUtils.fla
 import static com.aimxcel.abclearn.common.aimxcelcommon.util.FunctionalUtils.map;
 import static com.aimxcel.abclearn.common.aimxcelcommon.util.FunctionalUtils.unique;
 
-/**
- * Contains references to the relevant terrain and crust / lithosphere regions for a plate, for easy access.
- */
 public class Plate {
 
     // relevant regions for each plate

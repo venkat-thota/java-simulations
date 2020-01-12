@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: GreenhouseModule
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.greenhouse;
 
 import java.awt.Component;

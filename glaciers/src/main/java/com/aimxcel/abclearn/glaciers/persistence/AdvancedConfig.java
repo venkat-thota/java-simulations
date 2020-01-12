@@ -1,18 +1,13 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.glaciers.persistence;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.IProguardKeepClass;
-
-
-/**
- * AdvancedConfig is a Java Bean compliant configuration of AdvancedModule.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class AdvancedConfig extends IntroConfig implements IProguardKeepClass {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
     

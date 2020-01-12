@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: SoundApplication
- * Package: edu.colorado.phet.sound
- * Author: Another Guy
- * Date: Aug 3, 2004
- */
 package com.aimxcel.abclearn.sound;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.application.*;
@@ -15,7 +7,12 @@ import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication;
 
 public class SoundApplication extends CoreAimxcelApplication {
     
-    public SoundApplication( AimxcelApplicationConfig config ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public SoundApplication( AimxcelApplicationConfig config ) {
         super( config );
 
         //TODO performance tanks when window is made bigger

@@ -1,15 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.greenhouse;
 
 import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
-
-/**
- * Global defaults contains default settings that are common to 2 or more modules.
- *
- * @author John Blanco
- */
 public class GreenhouseDefaults {
 
     /* Not intended for instantiation */

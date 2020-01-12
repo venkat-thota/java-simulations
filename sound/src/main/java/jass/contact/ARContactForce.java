@@ -1,16 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 package jass.contact;
 
 import jass.engine.BufferNotAvailableException;
 import jass.engine.SinkIsFullException;
 import jass.generators.*;
 
-/**
- * A force model with impact, slide, and slide modes based on AR2 model for
- * sliding, wavetable model as in ContactForce for rolling and impact.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class ARContactForce extends ContactForce {
     boolean isComplexReson = false;
 

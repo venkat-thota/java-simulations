@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: PhotonGraphic
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.greenhouse.view;
 
 import java.awt.*;
@@ -27,10 +19,6 @@ import com.aimxcel.abclearn.photonabsorption.PhotonAbsorptionResources;
 import com.aimxcel.abclearn.photonabsorption.model.WavelengthConstants;
 
 public class PhotonGraphic extends CompositeGraphic implements Observer {
-
-    //----------------------------------------------------------------
-    // Class fields and methods
-    //----------------------------------------------------------------
 
     private static BufferedImage baseImage;
     private static HashMap colorLUT = new HashMap();

@@ -1,5 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.glaciers.dialog;
 
 import java.awt.Dimension;
@@ -14,7 +12,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 
 public class EvolutionStateDialog extends PaintImmediateDialog {
     
-    private final EvolutionStatePanel _panel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final EvolutionStatePanel _panel;
 
     public EvolutionStateDialog( Frame owner, Glacier glacier, String moduleName ) {
         super( owner, "Glacier Evolution State (" + moduleName + ")" );

@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: DialGauge
- * Class: edu.colorado.phet.sound.view
- * User: Ron LeMaster
- * Date: Sep 8, 2004
- * Time: 7:39:47 AM
- */
 package com.aimxcel.abclearn.sound.view;
 
 import java.awt.*;
@@ -22,10 +13,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelShapeGraphic;
 import com.aimxcel.abclearn.aimxcelgraphics.view.util.GraphicsUtil;
-
-// todo: add min and max lines and legends on face
-// todo: add min and max limits to needle
-// todo: add ScalarObservable interface and ScalarObserver interface
 
 public class DialGauge extends CompositeAimxcelGraphic implements ScalarObserver {
 

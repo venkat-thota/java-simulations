@@ -1,17 +1,5 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl;
-
-/**
- * Encapsulates a rendering state that is passed along the GLNode hierarchy as it is rendering. Any time a node wants to make a change for its
- * children, it should call getCopy() and modify the copy before passing it.
- */
 public class GLOptions implements Cloneable {
-    /*
-     * IMPORTANT NOTE: this class is cloneable and so shallow copies of all fields
-     * are taken for modification of these settings.
-     */
-
-    // TODO: can we make this something extensible, or is it an advantage of having fixed passes that we don't have to specify their features?
     public static enum RenderPass {
         REGULAR,
 

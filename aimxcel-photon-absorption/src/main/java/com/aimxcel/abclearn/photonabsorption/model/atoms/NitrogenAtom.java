@@ -1,16 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.model.atoms;
 
 import java.awt.Color;
 import java.awt.geom.Point2D;
 
-
-/**
- * Class that represents an atom of nitrogen in the model.
- *
- * @author John Blanco
- */
 public class NitrogenAtom extends Atom {
 
     //------------------------------------------------------------------------

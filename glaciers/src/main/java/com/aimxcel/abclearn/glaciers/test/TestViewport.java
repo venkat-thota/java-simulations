@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.test;
 
@@ -21,17 +20,15 @@ import com.aimxcel.abclearn.aimxcel2dcore.event.PDragEventHandler;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * TestViewport tests viewing one model and one scenegraph with two different canvases.
- * The top canvas is a birds-eye view, with a draggable viewport.
- * The bottom canvas is a zoomed in view.
- * The position and size of the viewport determines what is visible in the zoomed view.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class TestViewport extends JFrame {
     
-    /* squares will be distributed in the bounds of the world, in model distance units */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/* squares will be distributed in the bounds of the world, in model distance units */
     private static final Dimension WORLD_SIZE = new Dimension( 6000, 2000 );
     
     /* height of top canvas will be constrained to this many pixels */
@@ -126,7 +123,11 @@ public class TestViewport extends JFrame {
     /* View of a square, drag to change square's position. */
     private static class SquareNode extends PPath {
         
-        private final Square _square;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private final Square _square;
         
         public SquareNode( Square square ) {
             super();
@@ -171,7 +172,12 @@ public class TestViewport extends JFrame {
     /* layer that contains a collection of square nodes */
     private static class TestLayer extends PLayer {
         
-        public TestLayer( TestModel model ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public TestLayer( TestModel model ) {
             super();
             
             Square[] squares = model.getSquares();
@@ -185,7 +191,12 @@ public class TestViewport extends JFrame {
     /* Canvas, draws a specified layer, at the specified scale. */
     private static class TestCanvas extends PCanvas {
         
-        public TestCanvas( PLayer layer, double scale ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public TestCanvas( PLayer layer, double scale ) {
             super();
             
             getCamera().addLayer( layer );
@@ -247,7 +258,11 @@ public class TestViewport extends JFrame {
     /* View of a viewport, drag to change viewport's position */
     private static class ViewportNode extends PPath {
         
-        private Viewport _viewport;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private Viewport _viewport;
         
         public ViewportNode( Viewport viewport ) {
             super();
@@ -304,7 +319,11 @@ public class TestViewport extends JFrame {
      */
     public static class TestFrame extends JFrame {
 
-        private TestCanvas _topCanvas, _bottomCanvas;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private TestCanvas _topCanvas, _bottomCanvas;
         private Viewport _viewport;
         
         public TestFrame() {

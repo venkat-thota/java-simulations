@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import java.awt.geom.Dimension2D;
@@ -24,15 +23,7 @@ public class Bucket extends SphereBucket<Atom2D> {
         this( new PDimension( calculateIdealBucketWidth( element.getRadius(), quantity ), 200 ), clock, element, quantity );
     }
 
-    /**
-     * Constructor.  The dimensions used are just numbers, i.e. they are not
-     * meant to be any specific size (such as meters).  This enabled
-     * reusability in any 2D model.
-     *
-     * @param size     Physical size of the bucket (model space)
-     * @param element  The element of the atoms in the bucket
-     * @param quantity The number of atoms starting in the bucket
-     */
+    
     public Bucket( Dimension2D size, IClock clock, Element element, int quantity ) {
         super( new Point2D.Double(), size, element.getColor(), BuildAMoleculeStrings.getAtomName( element ), element.getRadius() );
         this.element = element;
@@ -42,13 +33,7 @@ public class Bucket extends SphereBucket<Atom2D> {
         }
     }
 
-    /**
-     * Make sure we can fit all of our atoms in just two rows
-     *
-     * @param radius   Atomic radius (picometers)
-     * @param quantity Quantity of atoms in bucket
-     * @return Width of bucket
-     */
+    
     public static int calculateIdealBucketWidth( double radius, int quantity ) {
         // calculate atoms to go on the bottom row
         int numOnBottomRow = ( quantity <= 2 ) ? quantity : ( quantity / 2 + 1 );

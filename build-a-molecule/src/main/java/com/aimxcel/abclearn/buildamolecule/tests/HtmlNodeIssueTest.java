@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.tests;
 
 import java.awt.*;
@@ -11,14 +10,6 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.HTMLNode;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-//REVIEW Move to piccolo-phet/tests and reference in #2780?
-
-/**
- * See #2780.
- * Resizing of HTMLNodes is jittery, very much like Flex text.
- * Probably because HTMLNode does rendering using JLabel, which renders HTML using BasicHTML,
- * which probably uses integer font sizes.
- */
 public class HtmlNodeIssueTest {
     public static void main( String[] args ) {
         JFrame frame = new JFrame( "HtmlNodeIssueTest" );

@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import static com.aimxcel.abclearn.platetectonics.model.PlateMotionModel.MotionType;
@@ -10,9 +9,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector3F;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-/**
- * Responsible for the model-changing parts of the handles, and tracking the handle's state
- */
 public class Handle {
 
     public final Property<Vector2F> orientation = new Property<Vector2F>( Vector2F.ZERO );

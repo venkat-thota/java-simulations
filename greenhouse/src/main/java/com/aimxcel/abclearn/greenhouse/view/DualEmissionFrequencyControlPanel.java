@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.greenhouse.view;
 
@@ -25,20 +24,18 @@ import com.aimxcel.abclearn.photonabsorption.model.WavelengthConstants;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * This is a control panel that is intended for use in the play area and
- * that allows the setting of 2 different emission frequencies: IR and
- * visible.
- *
- * @author John Blanco
- */
 public class DualEmissionFrequencyControlPanel extends PNode {
 
     // ------------------------------------------------------------------------
     // Class Data
     // ------------------------------------------------------------------------
 
-    private static final Font LABEL_FONT = new AimxcelFont( 24 );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final Font LABEL_FONT = new AimxcelFont( 24 );
 
     // ------------------------------------------------------------------------
     // Instance Data
@@ -66,7 +63,12 @@ public class DualEmissionFrequencyControlPanel extends PNode {
         // Create and add the buttons.  Each one includes an image.  First
         // create a little helper class to make this easier.
         class BorderLayoutPanel extends JPanel {
-            public BorderLayoutPanel(JComponent leftComponent, JComponent rightComponent){
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			public BorderLayoutPanel(JComponent leftComponent, JComponent rightComponent){
                 setLayout(new BorderLayout());
                 add(leftComponent, BorderLayout.WEST);
                 add(rightComponent, BorderLayout.EAST);

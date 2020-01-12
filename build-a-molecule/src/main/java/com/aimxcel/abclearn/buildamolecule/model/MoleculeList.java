@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import java.io.BufferedReader;
@@ -10,13 +9,7 @@ import com.aimxcel.abclearn.buildamolecule.BuildAMoleculeResources;
 
 import com.aimxcel.abclearn.chemistry.model.Atom;
 
-//REVIEW use logging instead of System.out throughout, since this happens at startup in production product.
 
-/**
- * Has functions relating to lists of molecules (e.g. is a molecule or submolecule allowed?) Uses static initialization to load in a small fraction
- * of molecules from collection-molecules.txt, and then in a separate thread loads the rest of the molecules + the allowed structures. The 1st
- * call that requires the full molecule list or allowed structures will block until it is all read in or computed
- */
 public class MoleculeList {
     /*---------------------------------------------------------------------------*
     * complete molecule data structures

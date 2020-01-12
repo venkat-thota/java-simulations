@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.render;
 
 import java.io.BufferedReader;
@@ -7,7 +6,11 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 public class Controller extends javax.swing.JDialog {
-    protected static final double MAX_SLIDERVAL = 10000;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	protected static final double MAX_SLIDERVAL = 10000;
     protected static final int NSLIDERS = 21; // defaults
     protected static final int NBUTTONS = 4; // defaults
     protected double[] val; //initial slider values

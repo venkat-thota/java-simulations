@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import java.awt.*;
@@ -43,10 +42,7 @@ import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 import static com.aimxcel.abclearn.chemistry.molecules.HorizontalMoleculeNode.*;
 
-/**
- * Represents a complete (stable) molecule with a name and structure. Includes 2d and 3d representations,
- * and can generate visuals of both types.
- */
+
 public class CompleteMolecule extends MoleculeStructure<PubChemAtom> implements com.aimxcel.abclearn.aimxceljmol.Molecule {
     private String commonName; // as said by pubchem (or overridden)
     private String molecularFormula; // as said by pubchem

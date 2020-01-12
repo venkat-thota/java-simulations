@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.patches;
 
 import jass.engine.BufferNotAvailableException;
@@ -9,19 +8,6 @@ import jass.generators.Delay;
 import jass.generators.Mixer;
 import jass.generators.OnePoleLowPass;
 
-/**
- * Delay line with a one pole low-pass. Used in Moorers reverb. See e.g.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- * @book{Steiglitz96, title        = {A Digital Signal Processing Primer with
- * Applications to Digital Audio and Computer Music},
- * author          =  {Ken Steiglitz},
- * publisher	= {Addison-Wesley},
- * address		= {New York},
- * year		= {1996},
- * pages = {290--295}}
- * BUGS: Does not support removal of source.
- */
 public class LowPassComb extends InOut {
 
     protected float srate;

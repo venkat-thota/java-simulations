@@ -6,10 +6,6 @@ import org.poly2tri.triangulation.delaunay.DelaunayTriangle;
 
 public interface Triangulatable
 {
-    /**
-     * Preparations needed before triangulation start should be handled here
-     * @param tcx
-     */
     public void prepareTriangulation( TriangulationContext<?> tcx );
     
     public List<DelaunayTriangle> getTriangles();

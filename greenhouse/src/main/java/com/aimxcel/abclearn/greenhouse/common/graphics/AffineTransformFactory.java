@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: AffineTransformFactory
- * Package: edu.colorado.phet.common.view
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.greenhouse.common.graphics;
 
 import java.awt.*;

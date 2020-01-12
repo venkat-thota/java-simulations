@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.charts;
 
@@ -28,16 +27,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.application.PaintImmediateDialo
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockListener;
-
-/**
- * GlacierLengthVersusTimeChart displays a "Glacier Length versus Time" chart.
- * The chart updates as the glacier evolves.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlacierLengthVersusTimeChart extends PaintImmediateDialog {
     
-    private static final Range MIN_LENGTH_RANGE_METRIC = new Range( 0, 3E3 ); // meters
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final Range MIN_LENGTH_RANGE_METRIC = new Range( 0, 3E3 ); // meters
     private static final Range MIN_LENGTH_RANGE_ENGLISH = new Range( 
             UnitsConverter.metersToFeet( MIN_LENGTH_RANGE_METRIC.getLowerBound() ), 
             UnitsConverter.metersToFeet( MIN_LENGTH_RANGE_METRIC.getUpperBound() ) ); // feet

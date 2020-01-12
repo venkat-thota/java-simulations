@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl.nodes;
 
 import java.awt.*;
@@ -24,12 +23,6 @@ import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
 import static org.lwjgl.opengl.GL11.*;
-
-/**
- * Allows overlaying a Swing GUI onto LWJGL. This should only be rendered in an orthographic mode.
- * <p/>
- * NOTE: Any updates to the Swing component should be done exclusively within the Swing Event Dispatch Thread. See lwjgl-implementation-notes.txt
- */
 public class OrthoSwingNode extends AbstractSwingGraphicsNode {
 
     public final Property<Vector2D> position;

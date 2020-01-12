@@ -1,16 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/**
- * Climate is the model of climate.
- * Documentation is in glaciers/doc/model.txt.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Climate {
     
     //----------------------------------------------------------------------------

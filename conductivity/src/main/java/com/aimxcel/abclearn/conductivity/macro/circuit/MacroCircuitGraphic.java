@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro.circuit;
 
@@ -19,9 +18,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.TransformListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
-
-// Referenced classes of package edu.colorado.phet.semiconductor.macro.circuit:
-//            Wire, Resistor, MacroCircuit, LinearBranch
 
 public class MacroCircuitGraphic {
 

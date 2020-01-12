@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view.materials;
 
 import java.awt.*;
@@ -8,9 +7,6 @@ import com.aimxcel.abclearn.platetectonics.model.CrustModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
 
-/**
- * Displays dark texture for more dense earth, and lighter texture for less dense earth
- */
 public class DensityMaterial implements EarthMaterial {
     private static final Color min = new Color( 255, 255, 255 );
     private static final Color max = new Color( 0, 0, 0 );

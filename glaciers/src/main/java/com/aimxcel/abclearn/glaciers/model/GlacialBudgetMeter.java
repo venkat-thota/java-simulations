@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -10,12 +9,6 @@ import com.aimxcel.abclearn.glaciers.model.Climate.ClimateListener;
 import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierAdapter;
 import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierListener;
 
-/**
- * GlacialBudgetMeter is the model of a glacial budget meter.
- * The meter displays the accumulation, ablation and glacial budget at a point on the glacier.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlacialBudgetMeter extends AbstractTool {
     
     //----------------------------------------------------------------------------

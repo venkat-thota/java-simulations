@@ -1,16 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.Out;
 
 import java.net.URL;
-
-/**
- * A force model based on looping through a buffer, loaded from an audio
- * file/url or provided by caller.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class LoopBuffer extends Out {
     /**
      * Buffer to loop

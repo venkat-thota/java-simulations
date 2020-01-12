@@ -1,18 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
 import com.aimxcel.abclearn.glaciers.GlaciersConstants;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
-
-/**
- * GlaciersClock is the clock for this simulation.
- * The simulation time change (dt) on each clock tick is constant,
- * regardless of when (in wall time) the ticks actually happen.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlaciersClock extends ConstantDtClock {
 
     //----------------------------------------------------------------------------
@@ -23,30 +14,11 @@ public class GlaciersClock extends ConstantDtClock {
         super( 1000 / GlaciersConstants.CLOCK_FRAME_RATE_RANGE.getDefault(), GlaciersConstants.CLOCK_DT );
     }
     
-    //----------------------------------------------------------------------------
-    // Setters and getters
-    //----------------------------------------------------------------------------
     
-    /**
-     * Sets the frame rate.
-     * Due to integer precision and conversion to clock delay,
-     * the clock may actually run at a slightly different frame rate.
-     * Whether the clock can actually run at the requested frame rate
-     * is dependent on the speed of the host computer.
-     * 
-     * @param frameRate frames per second
-     */
     public void setFrameRate( int frameRate ) {
         setDelay( 1000 / frameRate );
     }
-    
-    /**
-     * Gets the frame rate.
-     * Due to integer precision and conversion to clock delay,
-     * this may be slightly different than the frame rate set with setFrameRate.
-     * 
-     * @return frames per second
-     */
+   
     public int getFrameRate() {
         return 1000 / getDelay();
     }

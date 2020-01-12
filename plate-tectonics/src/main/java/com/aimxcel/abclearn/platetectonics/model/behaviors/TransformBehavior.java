@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model.behaviors;
 
 import com.aimxcel.abclearn.platetectonics.model.PlateMotionModel;
@@ -7,9 +6,7 @@ import com.aimxcel.abclearn.platetectonics.model.Sample;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector3F;
 
-/**
- * Behavior for the transform motion (one plate goes forward, the other goes back)
- */
+
 public class TransformBehavior extends PlateBehavior {
 
     // whether we move forward or back

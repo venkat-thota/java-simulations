@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.batteryresistorcircuit.volt;
 
 
@@ -10,13 +9,6 @@ import com.aimxcel.abclearn.batteryresistorcircuit.common.paint.Painter;
 import com.aimxcel.abclearn.batteryresistorcircuit.common.paint.TextPainter;
 import com.aimxcel.abclearn.batteryresistorcircuit.gui.VoltageListener;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sam Reid
- * Date: Dec 8, 2002
- * Time: 12:47:01 PM
- * To change this template use Options | File Templates.
- */
 public class VoltageOnBattery implements Painter, VoltageListener {
     TextPainter tp;
     DecimalFormat nf = new DecimalFormat();

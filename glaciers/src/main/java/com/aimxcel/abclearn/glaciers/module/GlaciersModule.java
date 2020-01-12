@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.module;
 
@@ -10,11 +9,6 @@ import com.aimxcel.abclearn.glaciers.model.GlaciersModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 import com.aimxcel.abclearn.core.aimxcelcore.CoreModule;
 
-/**
- * GlaciersModule is the base class for all modules in the Glaciers sim.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public abstract class GlaciersModule extends CoreModule {
     
     private final GlaciersModel _model;

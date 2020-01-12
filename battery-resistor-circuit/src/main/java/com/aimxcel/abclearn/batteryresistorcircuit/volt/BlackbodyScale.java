@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.batteryresistorcircuit.volt;
 
 import java.awt.*;
@@ -7,13 +6,6 @@ import java.awt.image.BufferedImage;
 
 import com.aimxcel.abclearn.batteryresistorcircuit.common.paint.Painter;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sam Reid
- * Date: Jan 24, 2003
- * Time: 8:05:23 PM
- * To change this template use Options | File Templates.
- */
 public class BlackbodyScale implements Painter, PowerListener {
     BufferedImage spectrum;
     BufferedImage arrow;

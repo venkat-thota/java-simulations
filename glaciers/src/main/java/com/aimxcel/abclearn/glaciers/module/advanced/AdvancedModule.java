@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.module.advanced;
 
@@ -19,12 +18,6 @@ import com.aimxcel.abclearn.glaciers.model.GlaciersModel;
 import com.aimxcel.abclearn.glaciers.module.GlaciersModule;
 import com.aimxcel.abclearn.glaciers.persistence.AdvancedConfig;
 import com.aimxcel.abclearn.glaciers.view.GlaciersPlayArea;
-
-/**
- * This is the "Advanced" module.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class AdvancedModule extends GlaciersModule {
 
     //----------------------------------------------------------------------------

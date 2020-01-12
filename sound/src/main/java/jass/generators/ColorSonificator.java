@@ -1,19 +1,5 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
-
-/**
- * Map HSB color to [pitch reson-width loudness]
- * Represent a color (h,s,b) by a noise source of loudness b,
- * filtered through a reson bank with Shepard frequencies
- * (i.e. octaves apart covering the audible range) and some damping d = 1*freq/freq_lowest.
- * The hue h [0 1] will be mapped to an octave range in freq. (Note the dampings
- * are also scaled when freq. is scaled to preserve scale invariance of octaves.) The saturation
- * s [0 1] will be mapped to the "material" (i.e., the width of the resonances will be
- * multiplied by a factor depending on the saturation.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class ColorSonificator extends ModalObjectWithOneContact {
 
     private float lowestFrequency = 10;     // lower limit of hearing

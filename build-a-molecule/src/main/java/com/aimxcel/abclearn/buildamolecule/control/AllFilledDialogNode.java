@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.control;
 
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.MODEL_VIEW_TRANSFORM;
@@ -22,29 +21,57 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 import com.aimxcel.abclearn.aimxcel2dextra.swing.SwingLayoutNode;
 
-/**
- * Displays a dialog that tells the user that all collection boxes are full.
- */
+
 public class AllFilledDialogNode extends PNode {
-    public AllFilledDialogNode( PBounds availablePlayAreaBounds, final VoidFunction0 regenerateCallback ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public AllFilledDialogNode( PBounds availablePlayAreaBounds, final VoidFunction0 regenerateCallback ) {
         PNode background = new PNode();
         addChild( background );
-        addChild( new SwingLayoutNode( new GridBagLayout() ) {{
+        addChild( new SwingLayoutNode( new GridBagLayout() ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             // smiley face
-            addChild( new FaceNode( 120 ) {{
+            addChild( new FaceNode( 120 ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                           smile();
                       }},
-                      new GridBagConstraints() {{
+                      new GridBagConstraints() {/**
+						 * 
+						 */
+						private static final long serialVersionUID = 1L;
+
+					{
                           gridx = 0;
                           gridy = 0;
                       }}
             );
 
             // text explaining all collection boxes are filled
-            addChild( new PText( BuildAMoleculeStrings.COLLECTION_ALL_FILLED ) {{
+            addChild( new PText( BuildAMoleculeStrings.COLLECTION_ALL_FILLED ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                           setFont( new AimxcelFont( 20, true ) );
                       }},
-                      new GridBagConstraints() {{
+                      new GridBagConstraints() {/**
+						 * 
+						 */
+						private static final long serialVersionUID = 1L;
+
+					{
                           gridx = 0;
                           gridy = 1;
                           insets = new Insets( 10, 0, 0, 0 );
@@ -52,7 +79,12 @@ public class AllFilledDialogNode extends PNode {
             );
 
             // button to generate a new kit/collection
-            addChild( new TextButtonNode( BuildAMoleculeStrings.COLLECTION_TRY_WITH_DIFFERENT_MOLECULES, new AimxcelFont( 18, true ) ) {{
+            addChild( new TextButtonNode( BuildAMoleculeStrings.COLLECTION_TRY_WITH_DIFFERENT_MOLECULES, new AimxcelFont( 18, true ) ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                           setBackground( Color.ORANGE );
                           addActionListener( new ActionListener() {
                               public void actionPerformed( ActionEvent e ) {
@@ -61,7 +93,12 @@ public class AllFilledDialogNode extends PNode {
                               }
                           } );
                       }},
-                      new GridBagConstraints() {{
+                      new GridBagConstraints() {/**
+						 * 
+						 */
+						private static final long serialVersionUID = 1L;
+
+					{
                           gridx = 0;
                           gridy = 2;
                           insets = new Insets( 10, 0, 0, 0 );

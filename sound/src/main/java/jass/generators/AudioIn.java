@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.Out;
@@ -6,13 +5,6 @@ import jass.render.FormatUtils;
 import jass.render.RTAudioIn;
 
 
-/**
- * Obtain buffers by reading audio input. To use native audio input use appropriate contructor.
- * Mono input only.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- *         (ASIO interface by Richard Corbett.)
- */
 public class AudioIn extends Out {
     /**
      * Audio input port.

@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*
- * Class: ApparatusPanel
- * Package: edu.colorado.phet.common.view.graphics
- *
- * Created by: Ron LeMaster
- * Date: Nov 6, 2002
- */
 package com.aimxcel.abclearn.conductivity.oldphetgraphics;
 
 import javax.swing.*;
@@ -20,21 +11,13 @@ import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
-/**
- * This is a base class for panels that contain graphic representations
- * of elements in the PhysicalSystem.
- * <p/>
- * The graphic objects to be displayed are maintained in "layers". Each layer can
- * contain any number of Graphic objects, and each layer has an integer "level"
- * associated with it. Layers are drawn in ascending order of their levels. The order
- * in which objects in a given level are drawn in undefined.
- * <p/>
- *
- * @see Graphic
- */
 public class ApparatusPanel extends JPanel implements Observer {
 
-    private BasicStroke borderStroke = new BasicStroke( 4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private BasicStroke borderStroke = new BasicStroke( 4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND );
     CompositeInteractiveGraphic graphic = new CompositeInteractiveGraphic();
     ArrayList graphicsSetups = new ArrayList();
 

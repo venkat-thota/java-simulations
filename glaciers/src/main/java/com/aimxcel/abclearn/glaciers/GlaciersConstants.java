@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers;
 
@@ -11,13 +10,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.DoubleRange;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.IntegerRange;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-
-/**
- * GlaciersConstants is a collection of constants that configure global properties.
- * If you change something here, it will change *everywhere* in this simulation.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlaciersConstants {
 
     /* Not intended for instantiation. */

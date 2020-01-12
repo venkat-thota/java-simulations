@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
@@ -15,9 +14,6 @@ import static com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.User
 import com.aimxcel.abclearn.platetectonics.PlateTectonicsSimSharing.UserActions;
 import com.aimxcel.abclearn.platetectonics.model.ToolboxState;
 
-/**
- * Handles tool dragging, so that we don't clutter the module/tab with this state information
- */
 public class ToolDragHandler {
 
     private boolean dragging = false;

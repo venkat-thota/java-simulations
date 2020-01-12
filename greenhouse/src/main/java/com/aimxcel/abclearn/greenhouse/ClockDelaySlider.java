@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.greenhouse;
 
 import java.awt.Font;
@@ -13,16 +12,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResource
 import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.LinearValueControl;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
-
-/**
- * Slider that controls the amount of delay between clock ticks for the given
- * clock.  This is intended for use in the clock control panel.
- * 
- * Author: Sam Reid, John Blanco
- */
 public class ClockDelaySlider extends VerticalLayoutPanel {
 	
-    private LinearValueControl linearSlider;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private LinearValueControl linearSlider;
     private int maxDelay;
 
     public ClockDelaySlider( int maxDelay, int minDelay, String textFieldPattern, final ConstantDtClock clock,

@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.buildamolecule.module;
 
@@ -21,10 +20,6 @@ import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeSimSharing.UserComponent.collectMultipleTab;
 import static com.aimxcel.abclearn.chemistry.model.Element.*;
-
-/**
- * Module for 2nd tab. Collection boxes take multiple molecules of the same type, and start off with a different kit collection each time
- */
 public class CollectMultipleModule extends AbstractBuildAMoleculeModule {
 
     public CollectMultipleModule( Frame parentFrame ) {

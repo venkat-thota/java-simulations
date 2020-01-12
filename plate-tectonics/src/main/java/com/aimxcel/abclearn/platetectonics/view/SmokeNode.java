@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view;
 
 import java.nio.FloatBuffer;
@@ -31,9 +30,6 @@ import static org.lwjgl.opengl.GL11.glDrawArrays;
 import static org.lwjgl.opengl.GL11.glEnableClientState;
 import static org.lwjgl.opengl.GL11.glVertexPointer;
 
-/**
- * Handles the smoke puffs for the volcanoes
- */
 public class SmokeNode extends GLNode {
 
     // record what model puff corresponds to what node, so we can remove them later

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import java.awt.geom.Point2D;
@@ -10,14 +9,12 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.Spacer;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Panel that contains crust pieces that can be dragged out into the play area and dropped onto either the left or right side.
- * <p/>
- * IMPORTANT NOTE: the crust pieces are not actually contained inside this panel, since they need to be draggable outside of the panel.
- * They are placed on top, and this class just provides the coordinates for positioning them.
- */
 public class CrustChooserPanel extends PNode {
-    // size and padding for the icons
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// size and padding for the icons
     public static final int CRUST_AREA_MAX_WIDTH = 140;
     public static final int CRUST_AREA_MAX_HEIGHT = 100;
     public static final int CRUST_AREA_PADDING = 20;

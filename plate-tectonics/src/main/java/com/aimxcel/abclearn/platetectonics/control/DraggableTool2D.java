@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import com.aimxcel.abclearn.platetectonics.model.ToolboxState;
@@ -9,9 +8,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ParameterSet;
 
-/**
- * Interface for a general tool (ruler, density sensor, thermometer)
- */
 public interface DraggableTool2D {
 
     // whether drags should be allowed to start at the specified screen point

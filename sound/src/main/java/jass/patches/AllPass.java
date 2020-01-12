@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.patches;
 
 import jass.engine.BufferNotAvailableException;
@@ -8,22 +7,7 @@ import jass.engine.Source;
 import jass.generators.Delay;
 import jass.generators.Mixer;
 
-/**
- * Allpass with delay M  Used in Moorers reverb. See e.g.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- * @book{Steiglitz96, title        = {A Digital Signal Processing Primer with
- * Applications to Digital Audio and Computer Music},
- * author          =  {Ken Steiglitz},
- * publisher	= {Addison-Wesley},
- * address		= {New York},
- * year		= {1996},
- * pages = {290--295}}
- * y = H(z) x
- * H(z) = (z^{-m} + a)/(1 + a*z^{-m}))
- * Must have delay greater than the bufferSize.
- * BUGS: Does not support removal of source.
- */
+
 public class AllPass extends InOut {
 
     protected float srate;

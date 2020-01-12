@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import java.util.ArrayList;
@@ -15,16 +14,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.SimSharingManager;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.ModelComponentTypes;
 
-/**
- * Our clock is pushed forward by LWJGL by almost arbitrary amounts of time (depending on system performance).
- * Additionally, we need time limits for the tab animations and that is easiest to integrate into the actual clock.
- * There is also a time multiplier to allow a separate "time rate" control.
- * <p/>
- * For this simulation, the clock's reported time changes are in millions of years.
- * <p/>
- * Some aspects of the normal ConstantDtClock and superclasses are copied over for correct general clock behavior
- * TODO: investigate modifying common clock code to remove code duplication
- */
+
 public class TectonicsClock implements IClock {
     private double lastSimulationTime = 0.0;
     private double simulationTime = 0.0;

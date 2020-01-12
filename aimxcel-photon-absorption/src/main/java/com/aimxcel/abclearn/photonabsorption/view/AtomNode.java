@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.view;
 
@@ -15,12 +14,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ColorUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-
-/**
- * Class that represents an atom in the view.
- *
- * @author John Blanco
- */
 public class AtomNode extends PNode {
 
     // ------------------------------------------------------------------------

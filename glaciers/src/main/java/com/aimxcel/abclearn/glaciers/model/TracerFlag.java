@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -12,13 +11,6 @@ import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 
-/**
- * TracerFlag is the model of a tracer flag.
- * A tracer flag can be planted at a position along the glacier.
- * It will move with the glacier, thus indicating glacier movement.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class TracerFlag extends AbstractTool {
 
     //----------------------------------------------------------------------------

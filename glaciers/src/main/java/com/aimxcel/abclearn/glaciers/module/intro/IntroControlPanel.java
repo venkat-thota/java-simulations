@@ -1,5 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.glaciers.module.intro;
 
 import java.awt.Color;
@@ -22,14 +20,14 @@ import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 
-/**
- * Control panel for the "Intro" module.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class IntroControlPanel extends JPanel {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

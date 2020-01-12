@@ -1,13 +1,12 @@
-// Copyright 2002-2011, University of Colorado
 package jass.engine;
 
-/**
- * Thrown when encountering unsupported file format.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class UnsupportedAudioFileFormatException extends Exception {
-    public UnsupportedAudioFileFormatException( String s ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public UnsupportedAudioFileFormatException( String s ) {
         super( s );
     }
 

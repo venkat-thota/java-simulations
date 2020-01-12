@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -16,15 +15,14 @@ import com.aimxcel.abclearn.glaciers.model.IceRipple.IceRippleListener;
 
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
-
-/**
- * IceRippleNode is the visual representation of a "ripple" on the surface of the ice.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class IceRippleNode extends PComposite {
     
-    private static final Stroke STROKE = new BasicStroke( 1f );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final Stroke STROKE = new BasicStroke( 1f );
     
     private final Glacier _glacier;
     private final IceRipple _ripple;

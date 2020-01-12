@@ -1,13 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 
-/**
- * A force model based on looping through a buffer once, loaded from an audio
- * file or provided by caller.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class OneShotBuffer extends LoopBuffer {
 
     /**

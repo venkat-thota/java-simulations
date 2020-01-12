@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.tests;
 
 import java.awt.*;
@@ -10,9 +9,6 @@ import com.aimxcel.abclearn.buildamolecule.model.MoleculeList;
 
 import com.aimxcel.abclearn.aimxceljmol.JmolPanel;
 
-/**
- * @author Sam Reid
- */
 public class TestJMolView {
     public static void main( String[] args ) {
         JFrame frame = new JFrame( "Hello" ) {{

@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: InterferenceListenerGraphic
- * Package: edu.colorado.phet.sound.view
- * Author: Another Guy
- * Date: Aug 11, 2004
- */
 package com.aimxcel.abclearn.sound.view;
 
 import java.awt.Graphics2D;

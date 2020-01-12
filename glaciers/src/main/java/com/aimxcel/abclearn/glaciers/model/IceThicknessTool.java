@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -9,13 +8,6 @@ import java.util.Iterator;
 import com.aimxcel.abclearn.glaciers.GlaciersConstants;
 import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierAdapter;
 import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierListener;
-
-/**
- * IceThicknessTool is the model of an ice thickness tool.
- * It measures the thickness of ice at a position along the glacier.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class IceThicknessTool extends AbstractTool {
     
     //----------------------------------------------------------------------------

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.batteryresistorcircuit.volt;
 
 import java.awt.*;
@@ -9,13 +8,6 @@ import com.aimxcel.abclearn.batteryresistorcircuit.common.paint.Painter;
 import com.aimxcel.abclearn.batteryresistorcircuit.common.phys2d.Law;
 import com.aimxcel.abclearn.batteryresistorcircuit.common.phys2d.System2D;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Sam Reid
- * Date: Dec 8, 2002
- * Time: 7:28:07 PM
- * To change this template use Options | File Templates.
- */
 public class Turnstile implements Painter, Law, CurrentListener {
     BufferedImage image;
     double angle;

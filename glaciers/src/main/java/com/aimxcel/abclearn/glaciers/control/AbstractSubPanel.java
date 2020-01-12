@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.control;
 
@@ -10,14 +9,14 @@ import javax.swing.JPanel;
 import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 
-/**
- * AbstractSubPanel is the base class for subordinate panels of the main control panel.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public abstract class AbstractSubPanel extends JPanel {
 
-    public AbstractSubPanel( String title, Color titleColor, Font titleFont ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public AbstractSubPanel( String title, Color titleColor, Font titleFont ) {
         super();
         
         Border emptyBorder = BorderFactory.createEmptyBorder( 3, 3, 3, 3 ); // top, left, bottom, right

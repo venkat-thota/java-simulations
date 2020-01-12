@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import static com.aimxcel.abclearn.platetectonics.util.Side.LEFT;
@@ -19,11 +18,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.Function0;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.Function1;
-
-/**
- * Displays a simplified block model of crusts resting on the mantle. Their elevation is dependent on
- * their density (temperature and composition), and the center crust is user controlled.
- */
 public class CrustModel extends PlateTectonicsModel {
 
     public static final float INNER_OUTER_CORE_BOUNDARY_Y = -5180000;

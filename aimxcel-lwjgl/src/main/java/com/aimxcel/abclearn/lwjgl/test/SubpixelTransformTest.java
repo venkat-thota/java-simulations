@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl.test;
 
 import java.awt.*;
@@ -12,14 +11,7 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.Core3DCanvas;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Core rendering test to verify suspicions that setting translations to less than half a pixel (sub-pixel offsets) did not change the antialiasing
- * as anticipated.
- * <p/>
- * The circle moves much slower than the mouse (and the transform is printed to console to confirm that it is indeed using subpixel transformations),
- * however the circle's motion visually is not linear (instead, staggered like a step function), and it steps forward pixel by pixel instead of
- * smoothly blending across a pixel's range.
- */
+
 public class SubpixelTransformTest {
 
     public static AffineTransform transform = new AffineTransform();

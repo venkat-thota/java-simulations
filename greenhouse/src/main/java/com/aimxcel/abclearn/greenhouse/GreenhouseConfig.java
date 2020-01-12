@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: GreenhouseConfig
- * Class: edu.colorado.phet.greenhouse
- * User: Ron LeMaster
- * Date: Oct 10, 2003
- * Time: 10:12:46 PM
- */
 package com.aimxcel.abclearn.greenhouse;
 
 import java.awt.Color;

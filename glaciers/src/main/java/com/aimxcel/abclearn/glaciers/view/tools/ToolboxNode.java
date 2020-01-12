@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
@@ -19,25 +18,19 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
-/**
- * 
- * ToolboxNode is the toolbox. It contains a collection of icons, 
- * positioned on a background, with a title tab in the upper left corner.
- * The origin of this node is at the upper-left corner of the tab.
- * <p>
- * When an icon is clicked in the toolbox, the icon asked a specified "tool producer"
- * to create a tool (model and view). The tool icon then handles the initial
- * dragging of from the toolbox to the world.  See ToolIconNode.  
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class ToolboxNode extends PNode {
     
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     
-    /*
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/*
      * true: show a trash can icon, dispose of tools by dragging them to this icon
      * false: no trash can icon, dispose of tools by dragging them back to the toolbox
      */
@@ -244,7 +237,12 @@ public class ToolboxNode extends PNode {
     
     private static final class ToolboxToolTipNode extends ToolTipNode {
         
-        public ToolboxToolTipNode( String text, PNode associatedNode ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public ToolboxToolTipNode( String text, PNode associatedNode ) {
             super( text, associatedNode, GlaciersConstants.TOOLTIPS_INITIAL_DELAY );
             setLocationStrategy( new LeftAlignedAboveMouseCursor() );
         }

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.UnsupportedAudioFileFormatException;
@@ -8,12 +7,6 @@ import javax.sound.sampled.AudioSystem;
 import java.io.File;
 import java.net.URL;
 
-/**
- * A buffer from an audio file or URL, streamed off the source.
- * Assumes 16 bit audio format.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class StreamingAudioFileBuffer {
     /**
      * Sampling rate  in Hertz.

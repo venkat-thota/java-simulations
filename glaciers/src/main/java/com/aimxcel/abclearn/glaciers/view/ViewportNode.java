@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -10,15 +9,14 @@ import com.aimxcel.abclearn.glaciers.model.Viewport;
 import com.aimxcel.abclearn.glaciers.model.Viewport.ViewportListener;
 
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
-
-/**
- * ViewportNode is the visual representation of a viewport.
- * 
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ViewportNode extends PPath {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

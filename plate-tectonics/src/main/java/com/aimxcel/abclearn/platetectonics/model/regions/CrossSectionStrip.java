@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model.regions;
 
 import java.util.LinkedList;
@@ -12,10 +11,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.event.ValueNotifier;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 
-/**
- * Describes a (usually horizontal) strip of earth cross-section delineated by a top and bottom list of points. It is essentially the sum
- * of quadrilaterals made up by top[i],top[i+1],bottom[i+1],bottom[i] for all applicable i.
- */
 public class CrossSectionStrip {
     public final List<Sample> topPoints = new LinkedList<Sample>();
     public final List<Sample> bottomPoints = new LinkedList<Sample>();

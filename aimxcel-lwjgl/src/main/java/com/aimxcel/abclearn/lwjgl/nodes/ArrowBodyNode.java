@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl.nodes;
 
 import java.util.ArrayList;
@@ -13,10 +12,6 @@ import static com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils.vertex3f;
 import static org.lwjgl.opengl.GL11.GL_TRIANGLES;
 import static org.lwjgl.opengl.GL11.glBegin;
 import static org.lwjgl.opengl.GL11.glEnd;
-
-/**
- * Renders an arrow's main body (no stroke / border). Use ArrowNode for an entire arrow (with an outline).
- */
 public class ArrowBodyNode extends GLNode {
 
     private final Arrow2F arrow;

@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: GreenhouseApplication
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.greenhouse;
 
 import java.awt.Container;
@@ -28,14 +20,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelLookAndFeel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication;
 
-/**
- * General comments, issues:
- * I wrote this using real model coordinates and units. The origin is at the center of the earth, and the positive
- * y direction is up. Unfortunately, this has turned out to cause a host of issues.
- * <p/>
- * The snow in the ice age reflects photons, but is not really in the model. Instead I do a rough estimate of where
- * it is in the background image (in the view) and use that.
- */
 public class GreenhouseApplication extends CoreAimxcelApplication {
 
     /**

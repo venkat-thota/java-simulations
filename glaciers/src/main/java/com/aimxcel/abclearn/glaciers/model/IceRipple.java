@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -13,13 +12,6 @@ import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
-
-/**
- * IceRipple is the model of a "ripple" on the surface of the ice.
- * Ripples are used to show that the ice is moving.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class IceRipple extends ClockAdapter {
 
     //----------------------------------------------------------------------------

@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.buildamolecule;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IModelAction;

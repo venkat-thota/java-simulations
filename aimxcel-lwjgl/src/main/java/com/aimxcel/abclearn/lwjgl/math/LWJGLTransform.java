@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl.math;
 
 import java.nio.FloatBuffer;
@@ -15,13 +14,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.Matrix4F.MatrixType;
 import static org.lwjgl.opengl.GL11.glMultMatrix;
 import static org.lwjgl.opengl.GL11.glScalef;
 import static org.lwjgl.opengl.GL11.glTranslatef;
-
-/**
- * Allows forward and inverse transforms with the power of full 4x4 matrices, allowing
- * affine, perspective, and other transformations.
- * <p/>
- * Has separate functions for transforming position, deltas, and normals (as they are all different)
- */
 public class LWJGLTransform {
     public final Notifier<LWJGLTransform> changed = new ValueNotifier<LWJGLTransform>( this );
 

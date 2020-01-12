@@ -1,13 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 package jass.contact;
 
 import jass.engine.Out;
 
-/**
- * A force model based on stick slip model.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
+
 public class StickSlip extends Out {
 
     private float srate; // sampling rate in Hertz

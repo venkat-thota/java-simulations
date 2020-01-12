@@ -1,15 +1,12 @@
 package org.poly2tri.triangulation.delaunay.sweep;
 
-import org.poly2tri.triangulation.TriangulationContext;
 import org.poly2tri.triangulation.TriangulationDebugContext;
 import org.poly2tri.triangulation.TriangulationPoint;
 import org.poly2tri.triangulation.delaunay.DelaunayTriangle;
 
 public class DTSweepDebugContext extends TriangulationDebugContext
 {
-    /*
-     * Fields used for visual representation of current triangulation
-     */
+    
     protected DelaunayTriangle _primaryTriangle;
     protected DelaunayTriangle _secondaryTriangle;
     protected TriangulationPoint _activePoint;
@@ -26,8 +23,7 @@ public class DTSweepDebugContext extends TriangulationDebugContext
         return true;
     }
 
-    //  private Tuple2<TPoint,Double> m_circumCircle = new Tuple2<TPoint,Double>( new TPoint(), new Double(0) );
-//  public Tuple2<TPoint,Double> getCircumCircle() { return m_circumCircle; }
+    
     public DelaunayTriangle getPrimaryTriangle()
     {
         return _primaryTriangle;

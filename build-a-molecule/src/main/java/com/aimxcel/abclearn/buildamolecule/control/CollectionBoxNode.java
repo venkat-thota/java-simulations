@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.control;
 
 import java.awt.*;
@@ -21,13 +20,13 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
-/**
- * Represents a generic collection box node which is decorated by additional header nodes (probably text describing what can be put in, what is in it,
- * etc.)
- */
 public class CollectionBoxNode extends GeneralLayoutNode {
 
-    private final CollectionBox box;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final CollectionBox box;
     private final PNode boxNode = new PNode();
     private final AimxcelPPath blackBox;
     private final PNode moleculeLayer = new PNode();
@@ -52,7 +51,12 @@ public class CollectionBoxNode extends GeneralLayoutNode {
     public CollectionBoxNode( final CollectionBox box, final Function1<PNode, Rectangle2D> toModelBounds ) {
         this.box = box;
 
-        blackBox = new AimxcelPPath( new Rectangle2D.Double( 0, 0, 160, 50 ), BuildAMoleculeConstants.MOLECULE_COLLECTION_BOX_BACKGROUND ) {{
+        blackBox = new AimxcelPPath( new Rectangle2D.Double( 0, 0, 160, 50 ), BuildAMoleculeConstants.MOLECULE_COLLECTION_BOX_BACKGROUND ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             final AimxcelPPath reference = this;
             locationUpdateObserver = new SimpleObserver() {
                 public void update() {
@@ -62,7 +66,12 @@ public class CollectionBoxNode extends GeneralLayoutNode {
             };
 
             // create our show 3D button, and have it change visibility based on the box quantity
-            PNode show3dButton = new ShowMolecule3DButtonNode( dialog, box.getMoleculeType() ) {{
+            PNode show3dButton = new ShowMolecule3DButtonNode( dialog, box.getMoleculeType() ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 box.addListener( new Adapter() {
                     {
                         // update initial visibility

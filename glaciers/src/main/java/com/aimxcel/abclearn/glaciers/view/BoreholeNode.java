@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -16,14 +15,14 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ColorUtils;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
-/**
- * BoreholeNode is the visual representation of a borehole.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class BoreholeNode extends PComposite {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

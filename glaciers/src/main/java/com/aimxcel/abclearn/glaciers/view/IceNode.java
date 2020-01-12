@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -13,14 +12,14 @@ import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierListener;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
-/**
- * IceNode is the visual representation of the glacier ice.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class IceNode extends PComposite {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

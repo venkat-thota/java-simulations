@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: EarthGraphic
- * Class: edu.colorado.phet.greenhouse
- * User: Ron LeMaster
- * Date: Oct 10, 2003
- * Time: 11:09:24 PM
- */
 package com.aimxcel.abclearn.greenhouse.view;
 
 import java.awt.*;
@@ -29,10 +20,7 @@ import com.aimxcel.abclearn.greenhouse.model.ReflectivityAssessor;
 import com.aimxcel.abclearn.photonabsorption.model.WavelengthConstants;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PAffineTransform;
 
-/**
- * Quirks:
- * Adds itself to the apparatusPanel
- */
+
 public class EarthGraphic implements Graphic, ReflectivityAssessor {
 
     private static final double Y_OFFSET = -1.0;

@@ -1,5 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.glaciers.control;
 
 import java.awt.Frame;
@@ -23,15 +21,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ResetAllButton;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
-
-/**
- * MiscControlPanel contains miscellaneous controls.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class MiscControlPanel extends JPanel {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
     

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.greenhouse;
 
 import java.awt.Font;
@@ -20,7 +19,12 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelTitledPanel;
 
 public class GreenhouseLegend extends AimxcelTitledPanel {
 
-    GreenhouseLegend() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	GreenhouseLegend() {
         this( AimxcelTitledBorder.DEFAULT_FONT );
     }
     

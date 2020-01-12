@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl.nodes;
 
 import java.awt.*;
@@ -12,9 +11,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.event.UpdateListener;
 import com.aimxcel.abclearn.lwjgl.SwingImage;
 import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
 
-/**
- * Contains Swing-specific graphics node behavior for the Ortho / Planar varieties
- */
 public abstract class AbstractSwingGraphicsNode extends AbstractGraphicsNode {
 
     protected final JComponent component;

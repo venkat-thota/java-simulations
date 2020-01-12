@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -9,12 +8,7 @@ import java.util.Iterator;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockListener;
 
-/**
- * AbstractTool is the base class for all tools in the toolbox.
- * It keeps track of its position and changes to the simulation clock.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public abstract class AbstractTool extends Movable implements ClockListener {
     
     //----------------------------------------------------------------------------

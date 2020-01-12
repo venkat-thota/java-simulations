@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.greenhouse;
 
@@ -18,24 +17,8 @@ import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.CoreModule;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.CoreClockControlPanel;
 
-/**
- * This class is where the model and view classes are created and connected
- * for the portion of the sim that allows the user to shoot photons at various
- * molecules and see what happens.
- *
- * @author John Blanco
- */
 public class PhotonAbsorptionModule extends CoreModule {
 
-    //----------------------------------------------------------------------------
-    // Class Data
-    //----------------------------------------------------------------------------
-
-    // Constants that control the clock.  Note that since the true time scale
-    // is unreasonable (since we are working with flying photons and
-    // vibrating atoms) that we just use real time for the clock time and
-    // expect the model to move things at speeds that appear reasonable to the
-    // users.
     private static final int CLOCK_DELAY = 1000 / GreenhouseDefaults.CLOCK_FRAME_RATE;
     private static final double CLOCK_DT = 1000 / GreenhouseDefaults.CLOCK_FRAME_RATE;
 

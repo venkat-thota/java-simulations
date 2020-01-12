@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro.bands;
 
@@ -8,10 +7,6 @@ import java.util.Random;
 import com.aimxcel.abclearn.conductivity.macro.MacroSystem;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
-
-// Referenced classes of package edu.colorado.phet.semiconductor.macro.bands:
-//            Band, BandParticle, BandParticleObserver, EnergyLevel, 
-//            EnergyCell
 
 public class DefaultBandSet implements ModelElement {
     protected Band upper;

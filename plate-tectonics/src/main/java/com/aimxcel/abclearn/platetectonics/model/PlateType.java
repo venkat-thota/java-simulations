@@ -1,11 +1,8 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import com.aimxcel.abclearn.platetectonics.PlateTectonicsResources.Strings;
 
-/**
- * Different types of plates have different properties
- */
+
 public enum PlateType {
     CONTINENTAL( true, false, 2750,
                  3500, -40000, 70000, Strings.CONTINENTAL_CRUST ),

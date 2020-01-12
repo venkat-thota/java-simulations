@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model.data;
 
 import java.io.File;
@@ -12,9 +11,6 @@ import com.aimxcel.abclearn.buildamolecule.model.StrippedMolecule;
 
 import com.aimxcel.abclearn.chemistry.model.Atom;
 
-/**
- * Generate allowed structures (structures.txt) from the molecules
- */
 public class MoleculePreprocessing {
     // indexed with atom histogram hash for heavy atoms
     private static final Map<String, List<StrippedMolecule<Atom>>> allowedStructures = new HashMap<String, List<StrippedMolecule<Atom>>>();

@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.module;
 
 import java.awt.Frame;
@@ -26,10 +25,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ConstantDtClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.simsharing.messages.IUserComponent;
 import com.aimxcel.abclearn.core.aimxcelcore.SimSharingCoreModule;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
-
-/**
- * Superclass for modules in Build a Molecule. Handles code required for all modules (bounds, canvas handling, and the ability to switch models)
- */
 public abstract class AbstractBuildAMoleculeModule extends SimSharingCoreModule {
     protected final LayoutBounds bounds;
     protected BuildAMoleculeCanvas canvas;

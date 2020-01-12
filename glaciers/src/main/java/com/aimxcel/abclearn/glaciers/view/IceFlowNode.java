@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -20,21 +19,17 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.Vector2DNode;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
-
-/**
- * IceFlowNode is the visual representation of ice flow in the glacier.
- * Ice flow is represented as a grid of vectors in the ice.
- * Each vector represents the speed and direction of ice flow at that point.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class IceFlowNode extends PComposite {
 
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
 
-    private static final double DX = 400; // horizontal distance between velocity samples (meters)
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final double DX = 400; // horizontal distance between velocity samples (meters)
     private static final double DZ = 50; // elevation between velocity samples (meters)
     private static final double ICE_ROCK_MARGIN = 20; // meters
     private static final double ICE_AIR_MARGIN = 0; // meters
@@ -139,7 +134,12 @@ public class IceFlowNode extends PComposite {
     * VelocityVectorNode encapsulates the "look" of an ice velocity vector.
     */
     private static class VelocityVectorNode extends Vector2DNode {
-        public VelocityVectorNode( double x, double y, double scale ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public VelocityVectorNode( double x, double y, double scale ) {
             super( x, y, 1, scale );
             setHeadSize( VELOCITY_VECTOR_HEAD_WIDTH, VELOCITY_VECTOR_HEAD_HEIGHT );
             setTailWidth( VELOCITY_VECTOR_TAIL_WIDTH );

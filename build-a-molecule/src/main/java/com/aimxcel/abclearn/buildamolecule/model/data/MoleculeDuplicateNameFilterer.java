@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model.data;
 
 import java.io.BufferedReader;
@@ -12,11 +11,7 @@ import com.aimxcel.abclearn.buildamolecule.model.MoleculeList;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.FileUtils;
 
-/**
- * Filters out molecules that have duplicate names AND a lower CID value
- *
- * CID: PubChem Compound ID
- */
+
 public class MoleculeDuplicateNameFilterer {
     public static void main( String[] args ) throws IOException {
         File inFile = new File( args[0] ); // molecule list file

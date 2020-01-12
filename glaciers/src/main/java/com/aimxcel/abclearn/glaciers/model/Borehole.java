@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -10,15 +9,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 
-/**
- * Borehole is the model of a borehole.
- * A borehole is approximated as a set of points that make up a vertical line where the hole is created.
- * As the borehole evolves, the points move at different speeds, based on their position in the ice.
- * The borehole also "fills in" as it evolves.  The borehole is deleted when it is completely filled in,
- * or when all of its points reach the terminus.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class Borehole extends ClockAdapter {
 
     //----------------------------------------------------------------------------

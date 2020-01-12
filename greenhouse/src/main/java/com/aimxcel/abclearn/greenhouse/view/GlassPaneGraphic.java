@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: GlassPaneGraphic
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 30, 2003
- */
 package com.aimxcel.abclearn.greenhouse.view;
 
 import java.awt.*;
@@ -17,14 +9,6 @@ import com.aimxcel.abclearn.greenhouse.common.graphics.Graphic;
 import com.aimxcel.abclearn.greenhouse.common.graphics.ImageGraphic;
 import com.aimxcel.abclearn.greenhouse.model.GlassPane;
 
-/**
- * GlassPaneGraphic
- * <p/>
- * A graphic that fakes a glass pane. Rather than using alpha compositing in the Graphics2D,
- * we paint it with an opaque paint that is computed to look like the glass pane being
- * composited with alpha. This is done so that photons can appear to disappear into the glass
- * and emerge again from it.
- */
 public class GlassPaneGraphic implements Graphic {
     private Rectangle2D.Double graphic;
     private Paint glassPaint = Color.white;

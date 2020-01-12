@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: HorizontalPhotonEmitter
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 10, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.awt.geom.Rectangle2D;

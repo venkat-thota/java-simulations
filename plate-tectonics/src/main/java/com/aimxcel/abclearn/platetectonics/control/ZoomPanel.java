@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import javax.swing.*;
@@ -12,12 +11,14 @@ import com.aimxcel.abclearn.lwjgl.utils.SwingForwardingProperty;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Displays a zoom control in the 1st tab
- */
+
 public class ZoomPanel extends PNode {
 
-    private final SwingForwardingProperty<Double> swingZoomRatio;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final SwingForwardingProperty<Double> swingZoomRatio;
     private final Property<Double> zoomRatio;
 
     public ZoomPanel( final Property<Double> zoomRatio ) {
@@ -25,7 +26,12 @@ public class ZoomPanel extends PNode {
         final PText zoomText = new PText( Strings.ZOOM );
 
         swingZoomRatio = new SwingForwardingProperty<Double>( zoomRatio );
-        VSliderNode slider = new VSliderNode( UserComponents.zoomSlider, 0, 1, 6, 100, swingZoomRatio, new Property<Boolean>( true ) ) {{
+        VSliderNode slider = new VSliderNode( UserComponents.zoomSlider, 0, 1, 6, 100, swingZoomRatio, new Property<Boolean>( true ) ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setOffset( ( zoomText.getFullBounds().getWidth() - getFullBounds().getWidth() ) / 2,
                        zoomText.getFullBounds().getMaxY() + 10
             );

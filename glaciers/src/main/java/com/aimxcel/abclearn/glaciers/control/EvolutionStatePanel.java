@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.control;
 
@@ -15,17 +14,13 @@ import com.aimxcel.abclearn.glaciers.model.Glacier.EvolutionState;
 import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierListener;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
-
-/**
- * EvolutionStatePanel displays the current and previous state variables that are 
- * internal to the glacier's evolution model.  This panel is for debugging purposes
- * and is not localized.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class EvolutionStatePanel extends JPanel {
     
-    private final Glacier _glacier;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final Glacier _glacier;
     private final GlacierListener _glacierListener;
     private final EvolutionState _currentState, _previousState;
     
@@ -172,7 +167,11 @@ public class EvolutionStatePanel extends JPanel {
      */
     private static class NumberDisplay extends JLabel {
 
-        private final DecimalFormat format;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private final DecimalFormat format;
         
         public NumberDisplay( String formatPattern ) {
             super();
@@ -189,7 +188,11 @@ public class EvolutionStatePanel extends JPanel {
      */
     private static class Point2DDisplay extends JLabel {
         
-        private final DecimalFormat format;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private final DecimalFormat format;
         
         public Point2DDisplay( String formatPattern ) {
             super();

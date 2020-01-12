@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.glaciers.view;
 
 import java.awt.geom.GeneralPath;
@@ -14,20 +13,13 @@ import com.aimxcel.abclearn.glaciers.util.UnitsConverter;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
-/**
- * Patch of snow between the terminus and ELA, when the ELA is below the terminus.
- * When the ELA is above or at the terminus, this snow patch doesn't exist.
- * <p>
- * There is no model for the shape of this patch.
- * From the model's point of view this patch does not exist, and has zero thickness.
- * Tools will behave as if the patch doesn't exist.
- * See Unfuddle #766 for the history of this feature.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class SnowPatchNode extends PComposite {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

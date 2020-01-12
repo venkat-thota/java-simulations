@@ -1,5 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.chemistry.molecules;
 
 import static com.aimxcel.abclearn.chemistry.model.Element.P;
@@ -12,12 +10,6 @@ import com.aimxcel.abclearn.chemistry.model.Element;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.Function1;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadedSphereNode;
 
-/**
- * Atoms look like shaded spheres.
- * Origin is at geometric center of bounding rectangle.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class AtomNode extends ShadedSphereNode {
 
     private static final double RATE_OF_CHANGE = 0.75; // >0 and <1, increase this to make small atoms appear smaller

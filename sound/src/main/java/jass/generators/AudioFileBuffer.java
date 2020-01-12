@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.render.FormatUtils;
@@ -8,11 +7,6 @@ import javax.sound.sampled.AudioSystem;
 import java.io.File;
 import java.net.URL;
 
-/**
- * A buffer loaded from an audio file or URL.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class AudioFileBuffer {
     /**
      * Sampling rate  in Hertz.

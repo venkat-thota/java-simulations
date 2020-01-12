@@ -1,20 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import java.net.URL;
 
-/**
- * Jump through a buffer, loaded from an audio
- * file or provided by caller. No speed or volume control is provided.
- * Sample is divided into segments with segmentation array segs[].
- * seg[k] is start of segment k, except last element of segs[], which denotes
- * the end of the last segment (in order not to run into the artificial buffer end).
- * Playback starts at segment i, then makes transition to setgment k, with transition
- * probability tprob[i][k] (user provided matrix).
- * Generally you must define first the segments, then the transition matrix.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class GranularConstantLoopBuffer extends ConstantLoopBuffer {
 
     /**

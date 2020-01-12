@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.control;
 
@@ -22,20 +21,17 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.Line
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.CoreClockControlPanel;
 
-
-/**
- * GlaciersClockControlPanel is a custom clock control panel.
- * It has a time display, frame rate control, and transport control buttons.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlaciersClockControlPanel extends CoreClockControlPanel {
     
     //----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
     
-    private final GlaciersClock _clock;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final GlaciersClock _clock;
     private final ConstantDtClockListener _clockListener;
     private final LinearValueControl _frameRateControl;
 

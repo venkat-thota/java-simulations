@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.view;
 
 import java.awt.geom.Rectangle2D;
@@ -28,11 +27,12 @@ import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.MODEL_
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeSimSharing.UserComponent.breakApartButton;
 import static com.aimxcel.abclearn.common.aimxcelcommon.simsharing.SimSharingManager.sendButtonPressed;
 
-/**
- * Displays the molecule name and 'X' to break apart the molecule
- */
 public class MoleculeMetadataNode extends PNode {
-    private Molecule molecule;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Molecule molecule;
     private final JmolDialogProperty dialog = new JmolDialogProperty();
 
     private Map<Atom2D, SimpleObserver> observerMap = new HashMap<Atom2D, SimpleObserver>();
@@ -54,7 +54,12 @@ public class MoleculeMetadataNode extends PNode {
             /*---------------------------------------------------------------------------*
             * label with chemical formula and common name
             *----------------------------------------------------------------------------*/
-            addChild( new HTMLNode( completeMolecule.getDisplayName() ) {{
+            addChild( new HTMLNode( completeMolecule.getDisplayName() ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setFont( new AimxcelFont( 14, true ) );
                 currentX.set( currentX.get() + getFullBounds().getWidth() + 10 );
             }} );
@@ -62,7 +67,12 @@ public class MoleculeMetadataNode extends PNode {
             /*---------------------------------------------------------------------------*
             * show 3d button
             *----------------------------------------------------------------------------*/
-            addChild( new ShowMolecule3DButtonNode( dialog, completeMolecule ) {{
+            addChild( new ShowMolecule3DButtonNode( dialog, completeMolecule ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setOffset( currentX.get(), 0 );
                 currentX.set( currentX.get() + getFullBounds().getWidth() + 5 );
             }} );
@@ -71,7 +81,12 @@ public class MoleculeMetadataNode extends PNode {
         /*---------------------------------------------------------------------------*
         * break-up button
         *----------------------------------------------------------------------------*/
-        addChild( new PNode() {{
+        addChild( new PNode() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addChild( new PImage( BuildAMoleculeResources.getImage( BuildAMoleculeConstants.IMAGE_SPLIT_ICON ) ) );
             addInputEventListener( new CursorHandler() {
                 @Override

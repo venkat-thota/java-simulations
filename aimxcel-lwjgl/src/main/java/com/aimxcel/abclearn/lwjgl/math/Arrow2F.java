@@ -1,11 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl.math;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
 
-/**
- * copied somewhat from the Arrow class TODO cleanup
- */
+
 public class Arrow2F {
     private Vector2F tailLocation;
     private Vector2F tipLocation;

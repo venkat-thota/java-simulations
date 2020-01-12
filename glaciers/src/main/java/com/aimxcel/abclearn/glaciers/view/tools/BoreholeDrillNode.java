@@ -1,5 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.glaciers.view.tools;
 
 import java.awt.Image;
@@ -17,18 +15,18 @@ import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
-/**
- * BoreholeDrillNode is the visual representation of a borehole drill.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class BoreholeDrillNode extends AbstractToolNode {
 
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     
-    // can the drill be dragged while its button is pressed?
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// can the drill be dragged while its button is pressed?
     private static final boolean ALLOW_DRAGGING_WHILE_BUTTON_IS_PRESSED = true;
     
     //----------------------------------------------------------------------------
@@ -77,7 +75,12 @@ public class BoreholeDrillNode extends AbstractToolNode {
     //----------------------------------------------------------------------------
     
     private static class DrillNode extends PComposite {
-        public DrillNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public DrillNode() {
             super();
             PImage imageNode = new PImage( GlaciersImages.BOREHOLE_DRILL );
             addChild( imageNode );
@@ -85,7 +88,12 @@ public class BoreholeDrillNode extends AbstractToolNode {
     }
     
     private static class ButtonNode extends ImageButtonNode {
-        public ButtonNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public ButtonNode() {
             super( GlaciersImages.BOREHOLE_DRILL_OFF_BUTTON, GlaciersImages.BOREHOLE_DRILL_ON_BUTTON );
         }
     }

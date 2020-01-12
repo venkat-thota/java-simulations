@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.view;
 
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.MODEL_VIEW_TRANSFORM;
@@ -26,10 +25,6 @@ import com.aimxcel.abclearn.core.aimxcelcore.simsharing.SimSharingDragHandler;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
-
-/**
- * Shows a kit (series of buckets full of different types of atoms)
- */
 public class KitView {
     private PNode topLayer = new PNode();
     private PNode metadataLayer = new PNode();

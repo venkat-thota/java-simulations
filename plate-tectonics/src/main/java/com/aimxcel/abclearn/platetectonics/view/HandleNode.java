@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view;
 
 import java.util.Arrays;
@@ -33,10 +32,6 @@ import static com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector3F.Y_U
 import static com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector3F.Z_UNIT;
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * Displays a draggable ball-and-stick draggable handle (like a shifter in a car) that can go in various directions depending on the selected crust
- * types. This is how the user (in manual mode) selects the movement direction, and how they control speed. It does not show up in automatic mode.
- */
 public class HandleNode extends GLNode {
 
     // what resolution the mesh will be (much coarser and it will look faceted)

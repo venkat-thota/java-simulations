@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
@@ -31,18 +30,18 @@ import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * IceThicknessToolNode is the visual representation of an ice thickness tool.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class IceThicknessToolNode extends AbstractToolNode {
     
     //----------------------------------------------------------------------------
     // Instance data
     //----------------------------------------------------------------------------
     
-    private static final NumberFormat ICE_THICKNESS_FORMAT = new DefaultDecimalFormat( "0.0" );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final NumberFormat ICE_THICKNESS_FORMAT = new DefaultDecimalFormat( "0.0" );
     private static final PDimension HANDLE_SIZE = new PDimension( 5, 20 );
     private static final PDimension CALIPERS_CLOSED_SIZE = new PDimension( 25, 20 );
     
@@ -132,7 +131,11 @@ public class IceThicknessToolNode extends AbstractToolNode {
      */
     private static class HandleNode extends PComposite {
         
-        private static final Stroke STROKE = new BasicStroke( 1f );
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private static final Stroke STROKE = new BasicStroke( 1f );
         private static final Color STROKE_COLOR = Color.BLACK;
         private static final Color FILL_COLOR = new Color( 85, 14, 14 ); // reddish brown
         
@@ -164,7 +167,11 @@ public class IceThicknessToolNode extends AbstractToolNode {
      */
     private static class CalipersNode extends PComposite {
         
-        private static final Stroke STROKE = new BasicStroke( 1f );
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private static final Stroke STROKE = new BasicStroke( 1f );
         private static final Color STROKE_COLOR = Color.BLACK;
         private static final Color FILL_COLOR = new Color( 140, 136, 120 ); // metal gray
         private static final double FRAME_THICKNESS = 3;
@@ -223,7 +230,11 @@ public class IceThicknessToolNode extends AbstractToolNode {
      */
     private static class ValueNode extends PComposite {
         
-        private JLabel _thicknessLabel;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private JLabel _thicknessLabel;
         private PSwing _pswing;
         private boolean _englishUnits;
         private String _units;

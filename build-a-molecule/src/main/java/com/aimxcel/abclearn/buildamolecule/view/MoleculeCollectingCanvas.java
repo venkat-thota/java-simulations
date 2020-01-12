@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.view;
 
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.STAGE_SIZE;
@@ -14,12 +13,15 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction0;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 
-/**
- * Canvas (like its subclass) that shows kits, but also has a collection area to the right-hand side
- */
+
 public class MoleculeCollectingCanvas extends BuildAMoleculeCanvas {
 
-    private CollectionBoxHintNode collectionBoxHintNode = null; // arrow shown to prompt user to put a molecule in a collection box
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private CollectionBoxHintNode collectionBoxHintNode = null; // arrow shown to prompt user to put a molecule in a collection box
 
     private VoidFunction0 regenerateCallback;
 
@@ -32,16 +34,16 @@ public class MoleculeCollectingCanvas extends BuildAMoleculeCanvas {
         this.regenerateCallback = regenerateCallback;
 
         getBaseLayer().addChild( new CollectionPanel( collectionList, singleCollectionMode, new VoidFunction1<SimpleObserver>() {
-            /**
-             In place so that we can notify this observer when the collection panel (and its associated collection boxes) are fully
-             * attached to the canvas. This is necessary, because we need to turn view => model coordinates and update the box model
-             * positions.
-             * @param simpleObserver Observer to add
-             */
+            
             public void apply( SimpleObserver simpleObserver ) {
                 collectionAttachmentListeners.add( simpleObserver );
             }
-        }, toModelBounds ) {{
+        }, toModelBounds ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setOffset( STAGE_SIZE.width - getFullBounds().getWidth() - VIEW_PADDING, VIEW_PADDING );
         }} );
 

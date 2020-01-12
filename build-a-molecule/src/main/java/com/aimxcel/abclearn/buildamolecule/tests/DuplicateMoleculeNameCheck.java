@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.tests;
 
 import java.util.List;
@@ -6,10 +5,6 @@ import java.util.List;
 import com.aimxcel.abclearn.buildamolecule.model.CompleteMolecule;
 import com.aimxcel.abclearn.buildamolecule.model.MoleculeList;
 
-/**
- * Discovers any pairs of complete molecules that have the same common name. This should not happen when other-molecules.txt is in its
- * complete form, so this provides as a double-check
- */
 public class DuplicateMoleculeNameCheck {
     public static void main( String[] args ) {
         List<CompleteMolecule> molecules = MoleculeList.getMasterInstance().getAllCompleteMolecules();

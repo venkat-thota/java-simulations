@@ -24,7 +24,6 @@ import com.aimxcel.abclearn.lwjgl.LWJGLAimxcelApplication;
 import com.aimxcel.abclearn.lwjgl.LWJGLCanvas;
 import com.aimxcel.abclearn.lwjgl.StartupUtils;
 import com.aimxcel.abclearn.lwjgl.utils.ColorPropertyControl;
-import com.aimxcel.abclearn.lwjgl.utils.GLActionListener;
 import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
 
 /**
@@ -32,7 +31,11 @@ import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
  */
 public class PlateTectonicsApplication extends LWJGLAimxcelApplication {
 
-    public static final Property<Boolean> showFPSMeter = new Property<Boolean>( false );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static final Property<Boolean> showFPSMeter = new Property<Boolean>( false );
     public static final Property<Boolean> showDebuggingItems = new Property<Boolean>( false );
     public static final Property<Boolean> moveTimeControl = new Property<Boolean>( false );
 
@@ -91,7 +94,12 @@ public class PlateTectonicsApplication extends LWJGLAimxcelApplication {
         JMenu developerMenu = frame.getDeveloperMenu();
         // add items to the Developer menu here...
 
-        developerMenu.add( new JCheckBoxMenuItem( "Show Frames Per Second" ) {{
+        developerMenu.add( new JCheckBoxMenuItem( "Show Frames Per Second" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     final boolean show = isSelected();
@@ -104,7 +112,12 @@ public class PlateTectonicsApplication extends LWJGLAimxcelApplication {
             } );
         }} );
 
-        developerMenu.add( new JCheckBoxMenuItem( "Show Debugging Items" ) {{
+        developerMenu.add( new JCheckBoxMenuItem( "Show Debugging Items" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     final boolean show = isSelected();
@@ -117,7 +130,12 @@ public class PlateTectonicsApplication extends LWJGLAimxcelApplication {
             } );
         }} );
 
-        developerMenu.add( new JCheckBoxMenuItem( "Re-align time control" ) {{
+        developerMenu.add( new JCheckBoxMenuItem( "Re-align time control" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     setSelected( moveTimeControl.get() );
@@ -133,7 +151,12 @@ public class PlateTectonicsApplication extends LWJGLAimxcelApplication {
 
         developerMenu.add( new JSeparator() );
 
-        developerMenu.add( new JMenuItem( "Performance Options" ) {{
+        developerMenu.add( new JMenuItem( "Performance Options" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     new PerformanceFrame();
@@ -141,14 +164,29 @@ public class PlateTectonicsApplication extends LWJGLAimxcelApplication {
             } );
         }} );
 
-        developerMenu.add( new JMenuItem( "Color Options" ) {{
+        developerMenu.add( new JMenuItem( "Color Options" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
-                    new JDialog( frame ) {{
+                    new JDialog( frame ) {/**
+						 * 
+						 */
+						private static final long serialVersionUID = 1L;
+
+					{
                         setTitle( "Color Options" );
                         setResizable( false );
 
-                        setContentPane( new JPanel() {{
+                        setContentPane( new JPanel() {/**
+							 * 
+							 */
+							private static final long serialVersionUID = 1L;
+
+						{
                             setLayout( new BoxLayout( this, BoxLayout.Y_AXIS ) );
                             add( new ColorPropertyControl( frame, "Dial color: ", PlateTectonicsConstants.DIAL_HIGHLIGHT_COLOR ) );
                         }} );
@@ -159,14 +197,24 @@ public class PlateTectonicsApplication extends LWJGLAimxcelApplication {
             } );
         }} );
 
-        developerMenu.add( new JMenuItem( "Show Error Dialog" ) {{
+        developerMenu.add( new JMenuItem( "Show Error Dialog" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     LWJGLUtils.showErrorDialog( frame, new RuntimeException( "This is a test" ) );
                 }
             } );
         }} );
-        developerMenu.add( new JMenuItem( "Show Mac Java 1.7 Dialog" ) {{
+        developerMenu.add( new JMenuItem( "Show Mac Java 1.7 Dialog" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     LWJGLUtils.showMacJava7Warning( frame );

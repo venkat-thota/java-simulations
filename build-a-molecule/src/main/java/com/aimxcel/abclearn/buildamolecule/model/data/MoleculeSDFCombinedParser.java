@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model.data;
 
 import java.io.BufferedReader;
@@ -14,21 +13,19 @@ import com.aimxcel.abclearn.chemistry.model.Element;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.FileUtils;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.Pair;
 
-/**
- * Main parsing process. Turns separate 2d and 3d SDF files into a filtered ready-to-use chemical file.
- */
 public class MoleculeSDFCombinedParser {
 
-    /**
-     * Molecules that will NOT be tossed, even though they match our criteria to exclude them
-     */
-    public static final Set<Integer> EXCLUSION_OVERRIDE_CIDS = new HashSet<Integer>() {{
+    
+    public static final Set<Integer> EXCLUSION_OVERRIDE_CIDS = new HashSet<Integer>() {/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+	{
         add( 3609161 ); // nitrogen dioxide (ion)
     }};
 
-    /**
-     * Molecules that we will separate out into the collection-molecules.txt
-     */
+   
     public static final Set<Integer> COLLECTION_BOX_CIDS = new HashSet<Integer>() {{
         add( 6326 ); // acetylene
         add( 222 ); // ammonia

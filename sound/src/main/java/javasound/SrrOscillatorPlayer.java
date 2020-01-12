@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Created by IntelliJ IDEA.
- * User: Another Guy
- * Date: Feb 19, 2003
- * Time: 1:26:55 PM
- * To change this template use Options | File Templates.
- */
 package javasound;
 
 import javasound.tone.Tone;

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.module.advanced;
 
@@ -21,15 +20,14 @@ import com.aimxcel.abclearn.glaciers.view.GlaciersPlayArea;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
-
-/**
- * Control panel for the "Advanced" module.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class AdvancedControlPanel extends JPanel {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

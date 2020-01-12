@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -10,11 +9,6 @@ import com.aimxcel.abclearn.glaciers.GlaciersConstants;
 import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierAdapter;
 import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierListener;
 
-/**
- * BoreholeDrill is the model of a borehole drill.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class BoreholeDrill extends AbstractTool {
     
     //----------------------------------------------------------------------------

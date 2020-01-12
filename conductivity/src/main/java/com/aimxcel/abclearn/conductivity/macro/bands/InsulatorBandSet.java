@@ -1,11 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro.bands;
 
 import com.aimxcel.abclearn.conductivity.macro.MacroSystem;
 
-// Referenced classes of package edu.colorado.phet.semiconductor.macro.bands:
-//            DefaultBandSet, Band
 
 public class InsulatorBandSet extends DefaultBandSet {
 

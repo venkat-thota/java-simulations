@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.conductivity;
 
@@ -46,9 +45,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.TransformListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ImageLoader;
-
-// Referenced classes of package edu.colorado.phet.semiconductor.macro:
-//            MacroControlPanel, MacroSystem, EnergyTextGraphic, BandSetGraphic
 
 public class ConductivityApplication {
     // Localization

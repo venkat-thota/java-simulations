@@ -1,17 +1,9 @@
-// Copyright 2002-2011, University of Colorado
-
-/*  */
 package com.aimxcel.abclearn.conductivity.oldphetgraphics;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
-/**
- * User: Sam Reid
- * Date: Mar 21, 2006
- * Time: 4:30:25 PM
- */
 
 public class ImageGraphic implements Graphic {
     BufferedImage image;

@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro.circuit;
 
@@ -6,9 +5,6 @@ import com.aimxcel.abclearn.conductivity.macro.battery.Battery;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2D;
-
-// Referenced classes of package edu.colorado.phet.semiconductor.macro.circuit:
-//            CompositeLinearBranch, Wire, Resistor, LinearBranch
 
 public class Circuit {
 

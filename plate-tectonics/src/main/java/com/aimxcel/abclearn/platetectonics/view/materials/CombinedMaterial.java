@@ -1,14 +1,9 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view.materials;
 
 import java.awt.*;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
 
-/**
- * Heuristic material that is somewhat of a combination of the temperature and density views. It tries to keep the lightness/darkness
- * for temperature, and hue for temperature.
- */
 public class CombinedMaterial implements EarthMaterial {
     private static final Color min = new Color( 64, 64, 64 );
     private static final Color max = new Color( 255, 64, 64 );

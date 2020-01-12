@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.greenhouse.view;
 
@@ -22,14 +21,14 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.photonabsorption.model.Molecule;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
-/**
- * Canvas on which the photon absorption simulation is depicted.
- *
- * @author John Blanco
- */
 public class PhotonAbsorptionCanvas extends AimxcelPCanvas {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Class Data
     //----------------------------------------------------------------------------
 

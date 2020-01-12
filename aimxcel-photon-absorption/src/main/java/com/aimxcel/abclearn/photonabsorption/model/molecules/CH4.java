@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.model.molecules;
 
@@ -14,11 +13,6 @@ import com.aimxcel.abclearn.photonabsorption.model.atoms.HydrogenAtom;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
 
-/**
- * Class that represents CH4 (methane) in the model.
- *
- * @author John Blanco
- */
 public class CH4 extends Molecule {
 
     // ------------------------------------------------------------------------

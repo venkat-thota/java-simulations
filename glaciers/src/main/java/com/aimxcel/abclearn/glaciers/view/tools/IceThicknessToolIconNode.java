@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
@@ -9,12 +8,15 @@ import com.aimxcel.abclearn.glaciers.model.IToolProducer;
 import com.aimxcel.abclearn.glaciers.view.GlaciersModelViewTransform;
 import com.aimxcel.abclearn.glaciers.view.tools.AbstractToolIconNode.InteractiveToolIconNode;
 
-/**
- * IceThicknessToolIconNode
- */
+
 public class IceThicknessToolIconNode extends InteractiveToolIconNode {
     
-    public IceThicknessToolIconNode( IToolProducer toolProducer, GlaciersModelViewTransform mvt  ) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public IceThicknessToolIconNode( IToolProducer toolProducer, GlaciersModelViewTransform mvt  ) {
         super( IceThicknessToolNode.createImage(), toolProducer, mvt );
     }
     

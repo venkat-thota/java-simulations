@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.control;
 
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.*;
@@ -32,12 +31,14 @@ import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * A panel that shows collection areas for different collections, and allows switching between those collections
- */
+
 public class CollectionPanel extends PNode {
 
-    public static final int CONTAINER_PADDING = 15;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static final int CONTAINER_PADDING = 15;
     private GeneralLayoutNode layoutNode = new GeneralLayoutNode();
     private final PNode collectionAreaHolder = new PNode();
     private final PNode backgroundHolder = new PNode();
@@ -45,15 +46,7 @@ public class CollectionPanel extends PNode {
     private final Map<KitCollection, CollectionAreaNode> collectionAreaMap = new HashMap<KitCollection, CollectionAreaNode>();
     private VoidFunction1<SimpleObserver> addCollectionAttachmentListener;
 
-    /**
-     * Constructs a collection area panel
-     *
-     * @param collectionList       List of collections to handle (mutable)
-     * @param singleCollectionMode Whether we use single or multiple style collection boxes
-     * @param addCollectionAttachmentListener
-     *                             Function to add an attachment listener
-     * @param toModelBounds        Function to compute model coordinates from a PNode in the view
-     */
+   
     public CollectionPanel( final CollectionList collectionList, final boolean singleCollectionMode, VoidFunction1<SimpleObserver> addCollectionAttachmentListener, final Function1<PNode, Rectangle2D> toModelBounds ) {
         this.addCollectionAttachmentListener = addCollectionAttachmentListener;
 
@@ -63,12 +56,22 @@ public class CollectionPanel extends PNode {
         layoutNode.translate( CONTAINER_PADDING, CONTAINER_PADDING );
 
         // "Your Molecule Collection"
-        layoutNode.addChild( new HTMLNode( BuildAMoleculeStrings.COLLECTION_AREA_YOUR_MOLECULE_COLLECTION ) {{
+        layoutNode.addChild( new HTMLNode( BuildAMoleculeStrings.COLLECTION_AREA_YOUR_MOLECULE_COLLECTION ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
                                  setFont( new AimxcelFont( 22 ) );
                              }}, method, 0, 0, 5, 0 );
 
         // "Collection X" with arrows
-        layoutNode.addChild( new NextPreviousNavigationNode( new PText() {{
+        layoutNode.addChild( new NextPreviousNavigationNode( new PText() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
                                  collectionList.currentCollection.addObserver( new SimpleObserver() {
                                      public void update() {
                                          setFont( new AimxcelFont( 16, true ) );
@@ -76,7 +79,12 @@ public class CollectionPanel extends PNode {
                                      }
                                  } );
                              }}, Color.YELLOW, Color.BLACK, 14, 18 ) {
-                                 {
+                                 /**
+								 * 
+								 */
+								private static final long serialVersionUID = 1L;
+
+								{
                                      // update when the collection stuff might change.
                                      final SimpleObserver updater = new SimpleObserver() {
                                          public void update() {

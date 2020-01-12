@@ -1,11 +1,4 @@
-// Copyright 2002-2011, University of Colorado
 
-/**
- * Class: Atmosphere
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.util.ArrayList;

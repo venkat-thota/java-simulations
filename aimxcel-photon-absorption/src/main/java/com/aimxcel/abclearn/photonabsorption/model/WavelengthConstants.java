@@ -1,9 +1,5 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.photonabsorption.model;
 
-/**
- * @author Sam Reid
- */
 public class WavelengthConstants {
     public static final double SUNLIGHT_WAVELENGTH = 400E-9;
     public static final double MICRO_WAVELENGTH = 20;

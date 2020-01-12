@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model.behaviors;
 
 import java.util.ArrayList;
@@ -18,10 +17,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector3F;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 
-/**
- * Responsible for the model changes of a plate throughout its lifetime. Main behavior is placed in stepInTime( dt ). Many convenience
- * functions specified in this base class.
- */
 public abstract class PlateBehavior {
     public final PlateMotionPlate plate;
     public final PlateMotionPlate otherPlate;

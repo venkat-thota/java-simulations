@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -21,14 +20,14 @@ import com.aimxcel.abclearn.glaciers.model.Glacier.GlacierListener;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 
-/**
- * EquilibriumLineNode is the visual representation of the equilibrium line.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class EquilibriumLineNode extends AimxcelPNode {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

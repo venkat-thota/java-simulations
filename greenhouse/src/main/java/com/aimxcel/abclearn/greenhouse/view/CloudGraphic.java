@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: CloudGraphic
- * Class: edu.colorado.phet.greenhouse
- * User: Ron LeMaster
- * Date: Oct 12, 2003
- * Time: 4:59:46 PM
- */
 package com.aimxcel.abclearn.greenhouse.view;
 
 import java.awt.*;

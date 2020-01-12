@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: GreenhouseModule
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.greenhouse;
 
 import java.awt.geom.Ellipse2D;
@@ -24,7 +16,7 @@ import com.aimxcel.abclearn.greenhouse.view.CloudGraphic;
 public class GreenhouseModule extends BaseGreenhouseModule {
 
 
-    HashMap cloudsToGraphicMap = new HashMap();
+    HashMap<Cloud, CloudGraphic> cloudsToGraphicMap = new HashMap<Cloud, CloudGraphic>();
     boolean cloudsEnabled = false;
 
 
@@ -77,8 +69,8 @@ public class GreenhouseModule extends BaseGreenhouseModule {
     }
 
     public void cloudsEnabled( boolean enabled ) {
-        Collection clouds = cloudsToGraphicMap.keySet();
-        for ( Iterator iterator = clouds.iterator(); iterator.hasNext(); ) {
+        Collection<Cloud> clouds = cloudsToGraphicMap.keySet();
+        for ( Iterator<Cloud> iterator = clouds.iterator(); iterator.hasNext(); ) {
             Cloud cloud = (Cloud) iterator.next();
             if ( !cloudsEnabled && enabled ) {
                 getGreenhouseModel().addCloud( cloud );
@@ -93,14 +85,14 @@ public class GreenhouseModule extends BaseGreenhouseModule {
     }
 
     public void numCloudsEnabled( int numClouds ) {
-        Collection clouds = cloudsToGraphicMap.keySet();
+        Collection<Cloud> clouds = cloudsToGraphicMap.keySet();
         int n = 0;
-        for ( Iterator iterator = clouds.iterator(); iterator.hasNext(); ) {
+        for ( Iterator<Cloud> iterator = clouds.iterator(); iterator.hasNext(); ) {
             Cloud cloud = (Cloud) iterator.next();
             getGreenhouseModel().removeCloud( cloud );
             getApparatusPanel().removeGraphic( (Graphic) cloudsToGraphicMap.get( cloud ) );
         }
-        for ( Iterator iterator = clouds.iterator(); iterator.hasNext(); ) {
+        for ( Iterator<Cloud> iterator = clouds.iterator(); iterator.hasNext(); ) {
             Cloud cloud = (Cloud) iterator.next();
             n++;
             if ( n <= numClouds ) {

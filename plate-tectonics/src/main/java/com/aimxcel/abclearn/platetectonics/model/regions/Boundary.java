@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model.regions;
 
 import java.util.ArrayList;
@@ -7,12 +6,6 @@ import java.util.List;
 import com.aimxcel.abclearn.platetectonics.model.Sample;
 import com.aimxcel.abclearn.platetectonics.util.Side;
 
-/**
- * A boundary is an ordered series of cross-section samples whose x-values are monotonically non-decreasing (almost always horizontal
- * boundaries).
- * <p/>
- * The general rule is the order of samples are left-to-right, NEVER right-to-left
- */
 public class Boundary {
     public List<Sample> samples = new ArrayList<Sample>();
 

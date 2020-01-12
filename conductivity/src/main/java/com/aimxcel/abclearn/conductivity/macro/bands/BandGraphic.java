@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro.bands;
 
@@ -10,8 +9,6 @@ import com.aimxcel.abclearn.conductivity.oldphetgraphics.Graphic;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.ModelViewTransform2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.graphics.transforms.TransformListener;
 
-// Referenced classes of package edu.colorado.phet.semiconductor.macro.bands:
-//            Band, EnergyLevel
 
 public class BandGraphic
         implements Graphic {

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.test;
 
@@ -18,14 +17,14 @@ import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 
-/**
- * TestThermometerArea tests the constructive area geometry used to form the shape for a thermometer.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class TestThermometerArea extends JFrame {
     
-    // dimensions of the thermometer, not accounting for stroke width
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// dimensions of the thermometer, not accounting for stroke width
     private static final PDimension THERMOMETER_SIZE = new PDimension( 50, 200 );
     private static final int DEFAULT_STROKE_WIDTH = 5;
     

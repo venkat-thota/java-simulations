@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: GreenhouseModel
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 9, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.awt.geom.Rectangle2D;
@@ -19,9 +11,9 @@ public class GreenhouseModel extends BaseModel implements PhotonEmitter.Listener
     private Star sun;
     private Earth earth;
     private Atmosphere atmosphere;
-    private ArrayList photons = new ArrayList();
-    private ArrayList clouds = new ArrayList();
-    private ArrayList glassPanes = new ArrayList();
+    private ArrayList<Photon> photons = new ArrayList<Photon>();
+    private ArrayList<Cloud> clouds = new ArrayList<Cloud>();
+    private ArrayList<GlassPane> glassPanes = new ArrayList<GlassPane>();
     private Rectangle2D.Double bounds;
 
     public GreenhouseModel( Rectangle2D.Double bounds ) {
@@ -32,7 +24,7 @@ public class GreenhouseModel extends BaseModel implements PhotonEmitter.Listener
         return bounds;
     }
 
-    public ArrayList getPhotons() {
+    public ArrayList<Photon> getPhotons() {
         return photons;
     }
 

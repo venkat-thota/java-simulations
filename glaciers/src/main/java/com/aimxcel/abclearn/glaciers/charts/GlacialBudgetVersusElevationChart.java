@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.charts;
 
@@ -28,15 +27,13 @@ import com.aimxcel.abclearn.glaciers.util.UnitsConverter;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.application.PaintImmediateDialog;
 
-/**
- * GlacialBudgetVersusElevationChart charts glacial budget, accumulation and ablation versus elevation.
- * The chart updates as climate is changed.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlacialBudgetVersusElevationChart extends PaintImmediateDialog {
     
-    private static final Range GLACIAL_BUDGET_RANGE_METRIC = new Range( -19, 19 ); // meters/yr
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final Range GLACIAL_BUDGET_RANGE_METRIC = new Range( -19, 19 ); // meters/yr
     private static final Range GLACIAL_BUDGET_RANGE_ENGLISH = new Range( 
             UnitsConverter.metersToFeet( GLACIAL_BUDGET_RANGE_METRIC.getLowerBound() ), 
             UnitsConverter.metersToFeet( GLACIAL_BUDGET_RANGE_METRIC.getUpperBound() ) ); // feet/yr

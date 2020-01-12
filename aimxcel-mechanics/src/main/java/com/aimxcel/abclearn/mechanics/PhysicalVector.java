@@ -1,23 +1,5 @@
-// Copyright 2002-2011, University of Colorado
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
 package com.aimxcel.abclearn.mechanics;
 
-/**
- * This class represents mathmatical vectors. It has package visibility,
- * and is intended to be subclassed to represent vectors of specific
- * dimensionalities.
- *
- * @author Ron LeMaster
- * @version $Revision$
- */
 public class PhysicalVector {
 
     private double[] scalars;

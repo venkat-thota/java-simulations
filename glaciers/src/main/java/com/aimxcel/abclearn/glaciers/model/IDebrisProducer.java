@@ -1,15 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.Point3D;
 
-
-/**
- * IDebrisProducer is the interface implemented by objects that create Debris model elements.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public interface IDebrisProducer {
 
     /**

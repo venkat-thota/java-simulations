@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: ProbablisticPassFilter
- * Package: edu.colorado.phet.filter
- * Author: Another Guy
- * Date: Oct 15, 2003
- */
 package com.aimxcel.abclearn.greenhouse.filter;
 
 public class ProbablisticPassFilter extends Filter1D {

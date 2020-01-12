@@ -1,11 +1,5 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
-/**
- * Second order Butterworth lowpass filter.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 
 public class Butter2LowFilter implements Filter {
 

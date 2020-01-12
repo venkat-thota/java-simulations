@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
@@ -33,18 +32,18 @@ import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * ThermometerNode is the visual representation of a thermometer.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class ThermometerNode extends AbstractToolNode {
     
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     
-    private static final double MAX_TEMPERATURE = 10; // C
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final double MAX_TEMPERATURE = 10; // C
     private static final double MIN_TEMPERATURE = -20; // C
     private static final PDimension THERMOMETER_SIZE = new PDimension( 15, 60 );
     private static final NumberFormat TEMPERATURE_FORMAT = new DefaultDecimalFormat( "0.0" );
@@ -124,7 +123,12 @@ public class ThermometerNode extends AbstractToolNode {
      * The glass thermometer.
      */
     private static class GlassNode extends LiquidExpansionThermometerNode {
-        public GlassNode( PDimension size ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public GlassNode( PDimension size ) {
             super( size );
             setInnerWallVisible( false );
         }
@@ -135,7 +139,11 @@ public class ThermometerNode extends AbstractToolNode {
      */
     private static class ValueNode extends PComposite {
         
-        private JLabel _celsiusLabel;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private JLabel _celsiusLabel;
         private JLabel _fahrenheitLabel;
         private PSwing _pswing;
         

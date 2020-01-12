@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view.materials;
 
 import java.awt.*;
@@ -8,9 +7,6 @@ import com.aimxcel.abclearn.platetectonics.model.CrustModel;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.MathUtil;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
 
-/**
- * Displays gray for "cool" and red for "warm", with a blend in-between
- */
 public class TemperatureMaterial implements EarthMaterial {
     private static final Color min = new Color( 64, 64, 64 );
     private static final Color max = new Color( 255, 64, 64 );

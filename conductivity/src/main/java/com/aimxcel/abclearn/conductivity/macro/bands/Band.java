@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro.bands;
 
@@ -6,9 +5,6 @@ import java.util.ArrayList;
 
 import com.aimxcel.abclearn.conductivity.ConductivityResources;
 import com.aimxcel.abclearn.conductivity.macro.bands.states.Speed;
-
-// Referenced classes of package edu.colorado.phet.semiconductor.macro.bands:
-//            EnergyLevel, DefaultBandSet
 
 public class Band {
 

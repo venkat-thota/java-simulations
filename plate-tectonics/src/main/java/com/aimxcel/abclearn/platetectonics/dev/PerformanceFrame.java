@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.dev;
 
 import java.awt.*;
@@ -8,12 +7,14 @@ import javax.swing.*;
 import com.aimxcel.abclearn.lwjgl.utils.GLActionListener;
 import com.aimxcel.abclearn.platetectonics.PlateTectonicsConstants;
 
-/**
- * Developer control that allows setting the frame rate
- */
 public class PerformanceFrame extends JFrame {
 
-    public PerformanceFrame() throws HeadlessException {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public PerformanceFrame() throws HeadlessException {
         super( "Performance" );
 
         JPanel container = new JPanel( new GridBagLayout() );
@@ -30,7 +31,12 @@ public class PerformanceFrame extends JFrame {
     }
 
     private class FrameRateButton extends JButton {
-        public FrameRateButton( final int frameRate ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public FrameRateButton( final int frameRate ) {
             super( frameRate + "" );
 
             addActionListener( new GLActionListener( new Runnable() {

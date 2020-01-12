@@ -1,13 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*
- * CVS Info -
- * Filename : $Source$
- * Branch : $Name$
- * Modified by : $Author$
- * Revision : $Revision$
- * Date modified : $Date$
- */
 package com.aimxcel.abclearn.greenhouse.util;
 
 import java.awt.*;
@@ -19,15 +9,6 @@ import java.awt.image.BufferedImage;
 import java.awt.image.BufferedImageOp;
 import java.awt.image.ColorModel;
 
-/**
- * DuotoneImageOp
- * <p/>
- * This is a BufferedImageOp that creates a duotone image of an input BufferedImage. The color of the duotone is
- * based on a baseColor specified in the ColorFromWavelength constructor.
- *
- * @author Ron LeMaster
- * @version $Revision$
- */
 public class DuotoneImageOp implements BufferedImageOp {
     private Color baseColor;
 

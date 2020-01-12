@@ -1,13 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro.bands;
 
 import java.util.Random;
 
 import com.aimxcel.abclearn.conductivity.macro.MacroSystem;
-
-// Referenced classes of package edu.colorado.phet.semiconductor.macro.bands:
-//            DefaultBandSet, Band, EnergyLevel
 
 public class PhotoconductorBandSet extends DefaultBandSet {
     //    ConductorBandSet conductorBandSet;

@@ -1,12 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: Cloud
- * Class: edu.colorado.phet.greenhouse
- * User: Ron LeMaster
- * Date: Oct 10, 2003
- * Time: 11:36:26 PM
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.awt.geom.Ellipse2D;

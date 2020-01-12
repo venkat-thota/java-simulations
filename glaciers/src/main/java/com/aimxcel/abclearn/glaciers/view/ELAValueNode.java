@@ -1,5 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.glaciers.view;
 
 import java.awt.Color;
@@ -14,14 +12,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.DefaultDecimalFormat;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * ELAValueNode displays the ELA value for debugging purposes.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ELAValueNode extends PText {
 
-    private static final Font FONT = new AimxcelFont( 14 );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final Font FONT = new AimxcelFont( 14 );
     private static final Color TEXT_COLOR = Color.WHITE;
     private static final NumberFormat NUMBER_FORMAT = new DefaultDecimalFormat( "0" );
     

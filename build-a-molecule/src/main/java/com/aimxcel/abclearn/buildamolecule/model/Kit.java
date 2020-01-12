@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import java.awt.geom.Point2D;
@@ -29,9 +28,6 @@ import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeSimSharing.Model
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeSimSharing.ParameterKey;
 import static com.aimxcel.abclearn.common.aimxcelcommon.util.FunctionalUtils.mkString;
 
-/**
- * Contains multiple buckets of different types of atoms
- */
 public class Kit {
     private final List<Bucket> buckets;
     private final List<Atom2D> atoms = new LinkedList<Atom2D>(); // our master list of atoms (in and out of buckets), but not ones in collection boxes

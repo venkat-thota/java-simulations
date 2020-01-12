@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.control;
 
@@ -29,20 +28,17 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.controls.valuecontrol.Line
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
 
-/**
- * ClimateControlPanel contains climate controls, switchable between English and metric units.
- * Units switching is handled by having 2 panels of controls (one English, one metric) and
- * and making the appropriate panel visible using CardLayout.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ClimateControlPanel extends AbstractSubPanel implements UnitsChangeListener {
 
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     
-    // control patterns, in DecimalFormat syntax
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// control patterns, in DecimalFormat syntax
     private static final String TEMPERATURE_PATTERN = "#0.0";
     private static final String SNOWFALL_PATTERN = "#0.0";
     
@@ -158,7 +154,12 @@ public class ClimateControlPanel extends AbstractSubPanel implements UnitsChange
      */
     private static class EnglishClimateControls extends AbstractClimateControls {
         
-        public EnglishClimateControls( final Climate climate ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public EnglishClimateControls( final Climate climate ) {
            super( ENGLISH_TEMPERATURE_RANGE, GlaciersStrings.UNITS_FAHRENHEIT, ENGLISH_SNOWFALL_RANGE, GlaciersStrings.UNITS_FEET ); 
            
            // update controls to match model, model is in metric units
@@ -194,7 +195,12 @@ public class ClimateControlPanel extends AbstractSubPanel implements UnitsChange
      */
     private static class MetricClimateControls extends AbstractClimateControls {
 
-        public MetricClimateControls( final Climate climate ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public MetricClimateControls( final Climate climate ) {
             super( METRIC_TEMPERATURE_RANGE, GlaciersStrings.UNITS_CELSIUS, METRIC_SNOWFALL_RANGE, GlaciersStrings.UNITS_METERS );
 
             // update controls to match model, model is in metric units
@@ -229,7 +235,11 @@ public class ClimateControlPanel extends AbstractSubPanel implements UnitsChange
      */
     private static abstract class AbstractClimateControls extends JPanel {
         
-        private final LinearValueControl _temperatureControl;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private final LinearValueControl _temperatureControl;
         private final LinearValueControl _snowfallControl;
         private final ArrayList _listeners;
         

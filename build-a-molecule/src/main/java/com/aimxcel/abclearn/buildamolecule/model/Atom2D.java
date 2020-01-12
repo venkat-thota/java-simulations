@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import java.util.ArrayList;
@@ -17,13 +16,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
-/**
- * An atom, extended with position/destination information that is animated
- *
- * @author Sam Reid
- * @author John Blanco
- * @author Jonathan Olson
- */
 public class Atom2D extends Atom implements IBucketSphere<Atom2D> {
 
     // ------------------------------------------------------------------------

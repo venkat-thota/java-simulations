@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.model.atoms;
 
@@ -7,13 +6,6 @@ import java.awt.geom.Point2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.AimxcelColorScheme;
 
-
-
-/**
- * Class that represents an atom of oxygen in the model.
- *
- * @author John Blanco
- */
 public class OxygenAtom extends Atom {
 
     //------------------------------------------------------------------------

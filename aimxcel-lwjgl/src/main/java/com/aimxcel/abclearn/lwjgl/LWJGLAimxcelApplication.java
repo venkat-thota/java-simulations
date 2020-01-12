@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl;
 
 import apple.dts.samplecode.osxadapter.OSXAdapter;
@@ -6,11 +5,6 @@ import apple.dts.samplecode.osxadapter.OSXAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplicationConfig;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.AimxcelUtilities;
-
-/**
- * Main application class for simulations based on LWJGL for 3D display. Currently responsible for certain
- * startup behavior and handling Mac OSX close events properly.
- */
 public class LWJGLAimxcelApplication extends AimxcelApplication {
 
     public LWJGLAimxcelApplication( AimxcelApplicationConfig config ) {

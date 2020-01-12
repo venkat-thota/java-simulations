@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.model.atoms;
 
@@ -7,14 +6,6 @@ import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObservable;
-
-/**
- * Class that represents an atom in the model.  This is used in the
- * microscopic view of photon abosorption.  This is an abstract class, and
- * it is expected that it be extended by specific atoms.
- *
- * @author John Blanco
- */
 public abstract class Atom extends SimpleObservable {
 
     //----------------------------------------------------------------------------

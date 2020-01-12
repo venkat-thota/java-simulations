@@ -1,18 +1,11 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: PhotonEmitter
- * Author: Another Guy
- * Date: Oct 10, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 
 public interface PhotonEmitter<T> {
 
-    void addListener( Listener listener );
+    void addListener( Listener<?> listener );
 
-    void removeListener( Listener listener );
+    void removeListener( Listener<?> listener );
 
     double getProductionRate();
 

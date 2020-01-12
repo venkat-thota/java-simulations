@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.batteryresistorcircuit.collisions;
 
 import com.aimxcel.abclearn.batteryresistorcircuit.Electron;

@@ -1,14 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.FilterUG;
-
-/**
- * Delay line. H(z) = z^_{L}
- * y(t) = x(t-L)
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 
 public class Delay extends FilterUG {
 

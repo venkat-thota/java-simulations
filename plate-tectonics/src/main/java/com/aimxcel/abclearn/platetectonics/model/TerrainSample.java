@@ -1,12 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
 
-/**
- * A location on the surface of the earth with a specific elevation (and texture coordinates). X and Y values will be determined in the
- * Terrain object.
- */
+
 public class TerrainSample {
     private float elevation;
     private Vector2F textureCoordinates;

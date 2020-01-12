@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.model.molecules;
 
@@ -14,11 +13,6 @@ import com.aimxcel.abclearn.photonabsorption.model.atoms.OxygenAtom;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 
 
-/**
- * Class that represents carbon monoxide in the model.
- *
- * @author John Blanco
- */
 public class CO extends Molecule {
 
     // ------------------------------------------------------------------------

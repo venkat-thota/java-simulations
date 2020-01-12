@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.view;
 
@@ -17,11 +16,6 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 
-/**
- * Visual representation of a molecule.
- *
- * @author John Blanco
- */
 public class MoleculeNode extends PNode {
 
     //------------------------------------------------------------------------

@@ -1,5 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.glaciers.module.intro;
 
 import java.awt.Frame;
@@ -18,12 +16,6 @@ import com.aimxcel.abclearn.glaciers.model.GlaciersModel;
 import com.aimxcel.abclearn.glaciers.module.GlaciersModule;
 import com.aimxcel.abclearn.glaciers.persistence.IntroConfig;
 import com.aimxcel.abclearn.glaciers.view.GlaciersPlayArea;
-
-/**
- * This is the "Intro" module.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class IntroModule extends GlaciersModule {
 
     //----------------------------------------------------------------------------

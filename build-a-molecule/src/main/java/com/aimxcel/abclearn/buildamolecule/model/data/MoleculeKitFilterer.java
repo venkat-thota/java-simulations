@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model.data;
 
 import java.io.BufferedReader;
@@ -14,11 +13,6 @@ import com.aimxcel.abclearn.buildamolecule.model.*;
 import com.aimxcel.abclearn.buildamolecule.module.LargerMoleculesModule;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.FileUtils;
-
-/**
- * Filters a molecule file by removing molecules that could not be made with the
- * kits available in the Larger Molecules tab.
- */
 public class MoleculeKitFilterer {
     public static final List<ElementHistogram> availableKitHistograms = new LinkedList<ElementHistogram>();
 

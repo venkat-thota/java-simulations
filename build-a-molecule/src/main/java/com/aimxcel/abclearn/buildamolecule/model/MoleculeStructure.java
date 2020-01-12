@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import java.util.*;
@@ -6,13 +5,6 @@ import java.util.*;
 import com.aimxcel.abclearn.chemistry.model.Atom;
 import com.aimxcel.abclearn.chemistry.model.Element;
 import com.aimxcel.abclearn.chemistry.utils.ChemUtils;
-
-/**
- * Represents a general molecular structure (without position or instance information).
- * <p/>
- * Generics for the atom type significantly simplify a lot of other code that would need
- * either explicit casting or wrapper functions.
- */
 public class MoleculeStructure<AtomT extends Atom> {
     //REVIEW comments below indicate that ordering is important. Describe why ordering is significant.
     private final ArrayList<AtomT> atoms; // NOTE: don't mess with the order

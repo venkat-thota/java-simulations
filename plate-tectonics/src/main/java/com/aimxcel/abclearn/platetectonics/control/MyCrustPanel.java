@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import static com.aimxcel.abclearn.platetectonics.PlateTectonicsResources.Strings.*;
@@ -18,19 +17,24 @@ import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
-
-/**
- * Displays three sliders (temperature, composition and thickness) to control a piece of crust
- */
 public class MyCrustPanel extends PNode {
-    private static final AimxcelFont sliderTitleFont = new AimxcelFont( 14 );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final AimxcelFont sliderTitleFont = new AimxcelFont( 14 );
     private static final AimxcelFont limitFont = new AimxcelFont( 10 );
     private final SliderNode temperatureSlider;
     private final SliderNode compositionSlider;
     private final SliderNode thicknessSlider;
 
     public MyCrustPanel( CrustModel model ) {
-        PText titleNode = new PText( MY_CRUST ) {{
+        PText titleNode = new PText( MY_CRUST ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setFont( new AimxcelFont( 16, true ) );
         }};
 
@@ -73,7 +77,11 @@ public class MyCrustPanel extends PNode {
     }
 
     private static class SliderNode extends PNode {
-        private JSlider slider;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private JSlider slider;
         private final Property<Double> property;
         private final double min;
         private final double max;
@@ -84,10 +92,30 @@ public class MyCrustPanel extends PNode {
             this.property = property;
             this.min = min;
             this.max = max;
-            PText titleNode = new PText( title ) {{ setFont( sliderTitleFont ); }};
-            PText lowNode = new PText( lowText ) {{ setFont( limitFont ); }};
-            PText highNode = new PText( highText ) {{ setFont( limitFont ); }};
-            slider = new SimSharingJSlider( userComponent, 0, sliderMax, getInitialValue() ) {{
+            PText titleNode = new PText( title ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{ setFont( sliderTitleFont ); }};
+            PText lowNode = new PText( lowText ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{ setFont( limitFont ); }};
+            PText highNode = new PText( highText ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{ setFont( limitFont ); }};
+            slider = new SimSharingJSlider( userComponent, 0, sliderMax, getInitialValue() ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setPaintTicks( true );
             }};
             PSwing sliderNode = new PSwing( slider );

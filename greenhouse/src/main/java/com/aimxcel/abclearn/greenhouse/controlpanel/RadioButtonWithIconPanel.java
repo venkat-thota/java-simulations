@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.greenhouse.controlpanel;
 
@@ -16,17 +15,15 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.HorizontalLayoutPanel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.BufferedImageUtils;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-/**
- * This class combines an icon and a radio button on to a panel in the way
- * that is needed on the control panels for this simulation.  The initial
- * motivation for its creation was the need to put different molecules on
- * the control panel, but it may have other applications.
- *
- * @author John Blanco
- */
+
 class RadioButtonWithIconPanel extends HorizontalLayoutPanel {
 
-    // Font to use for labels.
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	// Font to use for labels.
     private static final Font LABEL_FONT = new AimxcelFont(14);
 
     // Fixed height for the panels.

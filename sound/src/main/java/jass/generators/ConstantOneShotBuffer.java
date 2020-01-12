@@ -1,12 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 
-/**
- * Play a buffer once
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class ConstantOneShotBuffer extends ConstantLoopBuffer {
 
     /**

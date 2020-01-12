@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view.labels;
 
 import java.util.ArrayList;
@@ -20,9 +19,7 @@ import static com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils.color4f;
 import static com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils.vertex3f;
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * Displays a dotted line along where a BoundaryLabel specifies a boundary. Used for the lithosphere/mantle boundary distinction.
- */
+
 public class BoundaryLabelNode extends BaseLabelNode {
 
     private BoundaryLabel boundaryLabel;

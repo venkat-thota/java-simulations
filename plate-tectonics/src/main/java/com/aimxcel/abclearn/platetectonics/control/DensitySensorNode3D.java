@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import java.awt.*;
@@ -45,10 +44,6 @@ import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
 import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
-
-/**
- * Displays a speedometer-style draggable readout.
- */
 public class DensitySensorNode3D extends ThreadedPlanarCoreNode implements DraggableTool2D {
 
     // fired when the sensor is permanently removed from the model, so we can detach the necessary listeners

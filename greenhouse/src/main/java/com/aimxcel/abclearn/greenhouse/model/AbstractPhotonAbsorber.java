@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: AbstractPhotonEmitter
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 10, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.util.ArrayList;
@@ -15,7 +7,7 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.ModelElement;
 
 public abstract class AbstractPhotonAbsorber extends Observable implements ModelElement, PhotonAbsorber {
 
-    private ArrayList listeners = new ArrayList();
+    private ArrayList<Listener> listeners = new ArrayList<Listener>();
 
     public void addListener( PhotonAbsorber.Listener listener ) {
         listeners.add( listener );

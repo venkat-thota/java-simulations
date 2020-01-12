@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.tabs;
 
 import java.awt.*;
@@ -60,9 +59,6 @@ import com.aimxcel.abclearn.lwjgl.nodes.GLNode;
 import com.aimxcel.abclearn.lwjgl.nodes.GuiNode;
 import com.aimxcel.abclearn.lwjgl.nodes.OrthoCoreNode;
 
-/**
- * Displays two main plates that the user can direct to move towards, away from, or along each other.
- */
 public class PlateMotionTab extends PlateTectonicsTab {
 
     // either auto or manual mode animations

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl.nodes;
 
 import static org.lwjgl.opengl.GL11.GL_BLEND;
@@ -11,9 +10,7 @@ import static org.lwjgl.opengl.GL11.glOrtho;
 import com.aimxcel.abclearn.lwjgl.GLOptions;
 import com.aimxcel.abclearn.lwjgl.LWJGLTab;
 
-/**
- * Convenience node custom-made for blending orthographic GUIs over a previously-rendered scene.
- */
+
 public class GuiNode extends GLNode {
     private final LWJGLTab tab;
 

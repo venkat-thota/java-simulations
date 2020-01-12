@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: ListenerGraphic
- * Package: edu.colorado.phet.sound.view
- * Author: Another Guy
- * Date: Aug 6, 2004
- */
 package com.aimxcel.abclearn.sound.view;
 
 import java.awt.Point;
@@ -26,11 +18,6 @@ import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.CompositeAimxcelGr
 import com.aimxcel.abclearn.aimxcelgraphics.view.phetgraphics.AimxcelImageGraphic;
 
 public class ListenerGraphic extends CompositeAimxcelGraphic {
-//public class ListenerGraphic extends DefaultInteractiveGraphic {
-
-    //
-    // Static fields and methods
-    //
     protected static int s_earOffsetX = 10;
     protected static int s_earOffsetY = 53;
     private float s_dopplerShiftScaleFactor = 10f;

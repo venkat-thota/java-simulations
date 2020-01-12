@@ -1,12 +1,9 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector2F;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector3F;
 
-/**
- * A location with specific temp/density information that can move over time.
- */
+
 public class Sample {
     private Vector3F position;
     private float temperature;

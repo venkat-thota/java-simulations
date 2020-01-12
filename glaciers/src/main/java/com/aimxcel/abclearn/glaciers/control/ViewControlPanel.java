@@ -1,5 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.glaciers.control;
 
 import java.awt.Color;
@@ -19,15 +17,13 @@ import com.aimxcel.abclearn.glaciers.view.*;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.SwingUtils;
-
-/**
- * ViewControlPanel is the "View" control panel.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class ViewControlPanel extends AbstractSubPanel {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

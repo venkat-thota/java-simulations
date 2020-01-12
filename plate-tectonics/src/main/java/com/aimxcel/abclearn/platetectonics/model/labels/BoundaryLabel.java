@@ -4,10 +4,6 @@ import com.aimxcel.abclearn.platetectonics.model.regions.Boundary;
 import com.aimxcel.abclearn.platetectonics.util.Side;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
-
-/**
- * Represents a labeled boundary that will be displayed as a dotted line
- */
 public class BoundaryLabel extends PlateTectonicsLabel {
     public final Boundary boundary;
     public final Side side;

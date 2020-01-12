@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: MeasureControlPanel
- * Package: edu.colorado.phet.sound.view
- * Author: Another Guy
- * Date: Aug 9, 2004
- */
 package com.aimxcel.abclearn.sound.view;
 
 import javax.swing.*;
@@ -18,7 +10,12 @@ import java.awt.event.ActionListener;
 
 public class MeasureControlPanel extends SoundControlPanel {
 
-    public MeasureControlPanel(final SingleSourceMeasureModule module) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public MeasureControlPanel(final SingleSourceMeasureModule module) {
         super(module);
         JButton button = new JButton(SoundResources.getString("MeasureMode.ClearWave")); //See #2374
         button.addActionListener(new ActionListener() {

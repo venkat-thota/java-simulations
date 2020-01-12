@@ -1,14 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.Out;
 
-/**
- * Output random pulses  uniform in range [-1 +1]. Probability per sample
- * is pps. Amplitude is rnd^exponent.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 
 public class RandPulses extends Out {
     /**

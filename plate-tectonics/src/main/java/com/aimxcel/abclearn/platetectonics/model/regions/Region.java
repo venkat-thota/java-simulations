@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model.regions;
 
 import java.util.ArrayList;
@@ -18,11 +17,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.function.Function2;
 import static com.aimxcel.abclearn.common.aimxcelcommon.util.FunctionalUtils.flatten;
 import static com.aimxcel.abclearn.common.aimxcelcommon.util.FunctionalUtils.map;
 
-/**
- * A region is cross-sectional area of earth made up of strips separated by multiple boundaries (usually top-to-bottom). Given a list of multiple
- * boundaries (top-to-bottom with the same number of samples in each), the region is made up of strips of earth made from each adjacent pair
- * of boundaries.
- */
 public class Region {
 
     // fired when the terrain is permanently removed from the model, so we can detach the necessary listeners

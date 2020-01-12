@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import java.util.HashMap;
@@ -11,9 +10,7 @@ import com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants;
 import com.aimxcel.abclearn.chemistry.model.Atom;
 import com.aimxcel.abclearn.chemistry.model.Element;
 
-/**
- * Histogram of each element in a molecule, and allows fast comparison
- */
+
 public class ElementHistogram {
     public static Set<String> ALLOWED_CHEMICAL_SYMBOLS = new HashSet<String>() {{
         // add in the symbols from our supported elements

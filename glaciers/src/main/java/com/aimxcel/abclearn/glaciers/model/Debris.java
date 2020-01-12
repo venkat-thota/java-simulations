@@ -1,5 +1,3 @@
-// Copyright 2002-2012, University of Colorado
-
 package com.aimxcel.abclearn.glaciers.model;
 
 import java.util.ArrayList;
@@ -12,14 +10,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.MutableVector2D;
 import com.aimxcel.abclearn.common.aimxcelcommon.math.Point3D;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
-
-/**
- * Debris is the model of debris that is moving in the ice.
- * Debris could include rocks, trees, dead animals, etc.
- * In this model, motion ignores the mass of the debris.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class Debris extends ClockAdapter {
 
     //----------------------------------------------------------------------------

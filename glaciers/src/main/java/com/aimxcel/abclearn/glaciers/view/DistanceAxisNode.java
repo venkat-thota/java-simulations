@@ -1,5 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.glaciers.view;
 
 import java.awt.BasicStroke;
@@ -22,20 +20,14 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 
-/**
- * DistanceAxisNode draws the horizontal (distance) axis.
- * Calling this an axis is a bit of a misnomer; it's actually a line that
- * follows the valley floor contour, with x position tick marks.
- * <p>
- * Because the range of the valley floor is so large, and because the birds-eye
- * viewport can change size as the main window is resized,
- * this axis is intended to be rebuilt when the bounds of the zoomed viewport change.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class DistanceAxisNode extends PComposite {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

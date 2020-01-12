@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl;
 
 import java.awt.*;
@@ -12,12 +11,6 @@ import org.lwjgl.opengl.GL11;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
-
-/**
- * Handles the stage to canvas transforms that allow scaling based on how large the canvas is to a fixed stage size.
- * <p/>
- * TODO: with how OpenGL works, can't we just ignore this general kind of thing and wrap it in the projection matrix?
- */
 public abstract class CanvasTransform {
     public final Property<AffineTransform> transform = new Property<AffineTransform>( null );
 

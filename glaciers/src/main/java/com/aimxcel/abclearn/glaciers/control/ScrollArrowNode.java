@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.control;
 
@@ -18,25 +17,17 @@ import com.aimxcel.abclearn.core.aimxcelcore.event.CursorHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.event.ButtonEventHandler.ButtonEventAdapter;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.ArrowNode;
 
-/**
- * ScrollArrowNode is the base class for arrow controls that are
- * used to horizontally scroll the zoomed viewport.
- * <p>
- * LeftScrollArrowNode is for scrolling to the left.
- * RightScrollArrowNode is for scrolling the the right.
- * Scrolling is constrained to the bounds of the birds-eye viewport.
- * <p>
- * The origin of each node is at the tip of the arrow.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public abstract class ScrollArrowNode extends AimxcelPNode {
 
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     
-    // offsets to move the arrow when it is pressed
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// offsets to move the arrow when it is pressed
     private static final int X_OFFSET = 2;
     private static final int Y_OFFSET = 2;
     
@@ -117,7 +108,12 @@ public abstract class ScrollArrowNode extends AimxcelPNode {
     //----------------------------------------------------------------------------
     
     public static class LeftScrollArrowNode extends ScrollArrowNode {
-        public LeftScrollArrowNode( final Viewport birdsEyeViewport, final Viewport zoomedViewport ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public LeftScrollArrowNode( final Viewport birdsEyeViewport, final Viewport zoomedViewport ) {
             super( Math.PI );
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
@@ -130,7 +126,12 @@ public abstract class ScrollArrowNode extends AimxcelPNode {
     }
 
     public static class RightScrollArrowNode extends ScrollArrowNode {
-        public RightScrollArrowNode( final Viewport birdsEyeViewport, final Viewport zoomedViewport, final double maxX ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public RightScrollArrowNode( final Viewport birdsEyeViewport, final Viewport zoomedViewport, final double maxX ) {
             super( 0 );
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {

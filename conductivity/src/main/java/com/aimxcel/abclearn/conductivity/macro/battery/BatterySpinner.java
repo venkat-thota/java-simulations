@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro.battery;
 
@@ -19,9 +18,6 @@ import com.aimxcel.abclearn.conductivity.ConductivityResources;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelOptionPane;
-
-// Referenced classes of package edu.colorado.phet.semiconductor.macro.battery:
-//            Battery
 
 public class BatterySpinner {
     private JSpinner spinner;

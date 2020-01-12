@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.dialog;
 
@@ -14,16 +13,14 @@ import com.aimxcel.abclearn.glaciers.GlaciersStrings;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.application.PaintImmediateDialog;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.EasyGridBagLayout;
-
-
-/**
- * GlacierPictureDialog shows an annotated picture of a real glacier.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlacierPictureDialog extends PaintImmediateDialog {
 
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//----------------------------------------------------------------------------
     // Constructors
     //----------------------------------------------------------------------------
 

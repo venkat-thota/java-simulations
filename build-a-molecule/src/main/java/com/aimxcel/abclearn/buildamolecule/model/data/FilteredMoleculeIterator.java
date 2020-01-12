@@ -1,13 +1,10 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model.data;
 
 import java.util.Iterator;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.Pair;
 
-/**
- * Allows one to iterate through pairs of equivalent 2d and 3d data.
- */
+
 public class FilteredMoleculeIterator implements Iterator<Pair<MoleculeFile, MoleculeFile>> {
     private MoleculeReader reader2d;
     private MoleculeReader reader3d;

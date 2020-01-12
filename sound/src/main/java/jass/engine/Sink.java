@@ -1,13 +1,7 @@
-// Copyright 2002-2011, University of Colorado
 package jass.engine;
 
 
-/**
- * Interface for objects containing  multiple Sources.
- * This object recieves input lines.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
+
 
 public interface Sink {
     /**

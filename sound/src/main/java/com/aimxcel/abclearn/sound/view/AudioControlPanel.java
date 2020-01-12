@@ -1,14 +1,5 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: AudioControlPanel
- * Package: edu.colorado.phet.sound.view
- * Author: Another Guy
- * Date: Aug 13, 2004
- */
 package com.aimxcel.abclearn.sound.view;
 
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,7 +10,11 @@ import com.aimxcel.abclearn.sound.SoundModule;
 import com.aimxcel.abclearn.sound.SoundResources;
 
 public class AudioControlPanel extends JPanel {
-    private JCheckBox audioOnOffCB;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JCheckBox audioOnOffCB;
     private JRadioButton speakerRB;
     private JRadioButton listenerRB;
     private SoundModule module;

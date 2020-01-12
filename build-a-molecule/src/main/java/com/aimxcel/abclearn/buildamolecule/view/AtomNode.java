@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.view;
 
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.MODEL_VIEW_TRANSFORM;
@@ -14,17 +13,13 @@ import com.aimxcel.abclearn.core.aimxcelcore.nodes.ShadedSphereNode;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 
-/**
- * Class that displays an atom and that labels it with the chemical symbol
- * <p/>
- * NOTE: Iodine is unusable as its label is too large (very thin I). If needed, rework the scaling
- *
- * @author John Blanco
- * @author Jonathan Olson
- */
 public class AtomNode extends PNode {
 
-    private final ShadedSphereNode sphericalNode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final ShadedSphereNode sphericalNode;
 
     public AtomNode( final Atom2D atom ) {
 
@@ -33,7 +28,12 @@ public class AtomNode extends PNode {
         addChild( sphericalNode );
 
         // Create, scale, and add the label
-        PText labelNode = new PText() {{
+        PText labelNode = new PText() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setText( atom.getSymbol() );
             setFont( new AimxcelFont( 10, true ) );
             setScale( sphericalNode.getFullBoundsReference().width * 0.65 / getFullBoundsReference().width );

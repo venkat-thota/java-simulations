@@ -32,18 +32,23 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PText;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PAffineTransform;
 
-/**
- * A '3d' button that shows a 3d molecule view when pressed. Only allows one instance of the dialog to be present, so it communicates via a
- * dialog-option property.
- */
 public class ShowMolecule3DButtonNode extends PNode {
-    public final Property<Option<JmolDialog>> dialog;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public final Property<Option<JmolDialog>> dialog;
 
     public ShowMolecule3DButtonNode( final JmolDialogProperty dialog, final CompleteMolecule completeMolecule ) {
         this.dialog = dialog;
 
         // create our text for the '3D' button first. We will need its width later on
-        PText text = new PText( BuildAMoleculeStrings.ICON_3D ) {{
+        PText text = new PText( BuildAMoleculeStrings.ICON_3D ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setFont( new AimxcelFont( 12, true ) );
             setTextPaint( Color.WHITE );
         }};
@@ -124,7 +129,12 @@ public class ShowMolecule3DButtonNode extends PNode {
         /*---------------------------------------------------------------------------*
         * gray "disabled" overlay
         *----------------------------------------------------------------------------*/
-        addChild( new AimxcelPPath( new Rectangle2D.Double( 0, 0, getFullBounds().getWidth(), getFullBounds().getHeight() ) ) {{
+        addChild( new AimxcelPPath( new Rectangle2D.Double( 0, 0, getFullBounds().getWidth(), getFullBounds().getHeight() ) ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             setPaint( new Color( 128, 128, 128, 64 ) );
             setStroke( null );
             dialog.addObserver( new SimpleObserver() {

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.render;
 
 import jass.engine.BufferNotAvailableException;
@@ -9,13 +8,6 @@ import jass.generators.AudioIn;
 
 import java.io.*;
 
-/**
- * Renders Sources to audio card using JavaSound or native methods, or out to file.
- * To write to file manually call advanceTime(), see renderToFile example.
- * Can't add rendered objects after starting it.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class SourcePlayer extends In {
 
     private int bufferSize;

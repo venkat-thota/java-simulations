@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.glaciers.view.tools;
 
 import java.awt.geom.Point2D;
@@ -8,17 +7,7 @@ import com.aimxcel.abclearn.glaciers.model.IToolProducer;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.activities.PActivity;
 
-/**
- * TrashCanDelegate handles the business of operating the trash can.
- * Any node can be the actual trash can. This delegate decides whether
- * something is in the trash, and handles the specifics of what happens
- * when a tool is trashed.
- * <p>
- * In this sim, this allows us to use either a trash can icon or the 
- * toolbox as the place where tools can be dropped and deleted.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class TrashCanDelegate {
     
     private PNode _trashCanNode;

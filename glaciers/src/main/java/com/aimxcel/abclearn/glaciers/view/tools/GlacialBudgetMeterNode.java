@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view.tools;
 
@@ -33,18 +32,19 @@ import com.aimxcel.abclearn.aimxcel2dcore.nodes.PImage;
 import com.aimxcel.abclearn.aimxcel2dextra.nodes.PComposite;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwing;
 
-/**
- * GlacialBudgetMeterNode is the visual representation of a glacial budget meter.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
+
 public class GlacialBudgetMeterNode extends AbstractToolNode {
 
     //----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     
-    private static final boolean SHOW_ELEVATION = false;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final boolean SHOW_ELEVATION = false;
     
     private static final NumberFormat ELEVATION_FORMAT = new DefaultDecimalFormat( "0" );
     private static final NumberFormat ACCUMULATION_FORMAT = new DefaultDecimalFormat( "0.0" );
@@ -136,7 +136,12 @@ public class GlacialBudgetMeterNode extends AbstractToolNode {
      */
     private static class MeterNode extends PComposite {
         
-        public MeterNode() {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public MeterNode() {
             super();
             PImage imageNode = new PImage( GlaciersImages.GLACIAL_BUDGET_METER );
             addChild( imageNode );
@@ -148,7 +153,11 @@ public class GlacialBudgetMeterNode extends AbstractToolNode {
      */
     private static class ValueNode extends PComposite {
         
-        private JLabel _elevationLabel;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private JLabel _elevationLabel;
         private JLabel _accumulationLabel;
         private JLabel _ablationLabel;
         private JLabel _glacialBudgetLabel;

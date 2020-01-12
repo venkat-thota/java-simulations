@@ -41,6 +41,12 @@ import com.aimxcel.abclearn.core.aimxcelcore.CoreAimxcelApplication;
 public class BuildAMoleculeApplication extends CoreAimxcelApplication {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+	/**
      * Shows a cursor that indicates a bond will be split when the mouse is over, and on a click it will break the bond
      */
     public static final Property<Boolean> allowBondBreaking = new Property<Boolean>( true );
@@ -99,7 +105,12 @@ public class BuildAMoleculeApplication extends CoreAimxcelApplication {
         OptionsMenu optionsMenu = new OptionsMenu();
         // add menu items here, or in a subclass on OptionsMenu
 
-        optionsMenu.add( new JMenuItem( BuildAMoleculeStrings.RESET_CURRENT_TAB ) {{
+        optionsMenu.add( new JMenuItem( BuildAMoleculeStrings.RESET_CURRENT_TAB ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     getActiveModule().reset();
@@ -115,14 +126,24 @@ public class BuildAMoleculeApplication extends CoreAimxcelApplication {
         // Developer menu
         JMenu developerMenu = frame.getDeveloperMenu();
         // add items to the Developer menu here...
-        developerMenu.add( new JMenuItem( "Show Table of Molecules" ) {{
+        developerMenu.add( new JMenuItem( "Show Table of Molecules" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     new MoleculeTableDialog( getAimxcelFrame() ).setVisible( true );
                 }
             } );
         }} );
-        developerMenu.add( new JMenuItem( "Regenerate model" ) {{
+        developerMenu.add( new JMenuItem( "Regenerate model" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     ( (AbstractBuildAMoleculeModule) getActiveModule() ).addGeneratedCollection();
@@ -130,10 +151,20 @@ public class BuildAMoleculeApplication extends CoreAimxcelApplication {
             } );
         }} );
         developerMenu.add( new PropertyCheckBoxMenuItem( "Enable bond breaking", allowBondBreaking ) );
-        developerMenu.add( new JMenuItem( "Change Filled Collection Box Color" ) {{
+        developerMenu.add( new JMenuItem( "Change Filled Collection Box Color" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
-                    new JDialog( frame ) {{
+                    new JDialog( frame ) {/**
+						 * 
+						 */
+						private static final long serialVersionUID = 1L;
+
+					{
                         setTitle( "Build a Molecule Colors" );
                         setResizable( false );
 
@@ -151,14 +182,24 @@ public class BuildAMoleculeApplication extends CoreAimxcelApplication {
                 }
             } );
         }} );
-        developerMenu.add( new JMenuItem( "Trigger complete dialog" ) {{
+        developerMenu.add( new JMenuItem( "Trigger complete dialog" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     ( (AbstractBuildAMoleculeModule) getActiveModule() ).getCanvas().getCurrentCollection().allCollectionBoxesFilled.set( true );
                 }
             } );
         }} );
-        developerMenu.add( new JMenuItem( "Load additional data for profiling" ) {{
+        developerMenu.add( new JMenuItem( "Load additional data for profiling" ) {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             addActionListener( new ActionListener() {
                 public void actionPerformed( ActionEvent e ) {
                     MoleculeList.testLoadingForProfiling();

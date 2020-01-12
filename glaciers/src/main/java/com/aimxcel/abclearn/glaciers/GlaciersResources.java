@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers;
 
@@ -11,14 +10,6 @@ import javax.swing.ImageIcon;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelResources;
-
-/**
- * GlaciersResources is a wrapper around the PhET resource loader.
- * If we decide to use a different technique to load resources in the 
- * future, all changes will be encapsulated here.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlaciersResources {
     
     private static final AimxcelResources RESOURCES = new AimxcelResources( GlaciersConstants.PROJECT_NAME );

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.view;
 
@@ -23,16 +22,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.ColorUtils;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPNode;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
-
-/**
- * SnowfallNode is the visual representation of snowfall.
- * A white gradient is drawn in a shape that represents the atmosphere.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class SnowfallNode extends AimxcelPNode {
     
-    //----------------------------------------------------------------------------
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//----------------------------------------------------------------------------
     // Class data
     //----------------------------------------------------------------------------
     

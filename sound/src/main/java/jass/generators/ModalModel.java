@@ -1,14 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import java.io.*;
 import java.net.URL;
 
-/**
- * Modal model, which is loaded from an .sy format text file.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class ModalModel {
 
     /**

@@ -1,10 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/*
- *	Oscillator.java
- *
- *	This file is part of the Java Sound Examples.
- */
 package javasound;
 
 import javax.sound.sampled.AudioFormat;

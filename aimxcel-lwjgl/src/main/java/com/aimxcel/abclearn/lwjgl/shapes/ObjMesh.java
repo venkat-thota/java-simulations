@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl.shapes;
 
 import java.io.BufferedReader;
@@ -23,10 +22,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.math.vector.Vector3F;
 import com.aimxcel.abclearn.lwjgl.utils.GLDisplayList;
 
 import static org.lwjgl.opengl.GL11.*;
-
-/**
- * Reads in (currently a subset of) .obj files (Wavefront format) into a mesh that can be rendered
- */
 public class ObjMesh {
 
     private FloatBuffer positionBuffer;

@@ -1,10 +1,6 @@
 package org.poly2tri.transform.coordinate;
 
-/**
- * A transform that aligns given source normal with the XY plane normal [0,0,1]
- * 
- * @author thahlen@gmail.com
- */
+
 
 public class AnyToXYTransform extends Matrix3Transform
 {

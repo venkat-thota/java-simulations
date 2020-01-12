@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: Thermometer
- * Package: edu.colorado.phet.microwave
- * Author: Another Guy
- * Date: Sep 30, 2003
- */
 package com.aimxcel.abclearn.greenhouse.model;
 
 import java.awt.geom.Point2D;

@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model;
 
 import static com.aimxcel.abclearn.platetectonics.PlateTectonicsConstants.ARROW_CONVERGENT_FILL;
@@ -40,26 +39,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.ObservableList;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.VoidFunction1;
 
-/**
- * Main model for the Plate Motion tab. Starts with just the mantle, then 2 plates are added. The UI and user decide what type of plate
- * behaviors (plate types and motion direction decide this) at the start of the animation, and the PlateBehavior for each plate takes care
- * of the specific type of animation.
- * <p/>
- * The state of the model (and how it needs to react to the user) is very helpful to understand. Here's a simplified (linear) state machine view of
- * the model (note that the user can switch between automatic and manual mode at any time):
- * <p/>
- * A) No crusts dropped (i.e. like the start of the simulation)
- * |    * user drops two crusts into place -->
- * B) Crusts (and plates) initialized, but no motion type or behaviors set or chosen. model.hasBothPlates flag is true
- * |    * user can change model.motionTypeIfStarted in automatic mode with the motion type radio buttons (with green / red / blue icons),
- * |      but it isn't set in stone
- * |    * user either drags the handles in a specific direction (manual mode) or presses play for 1st time (automatic mode) -->
- * C) Motion type fixed (won't change), plate-specific behaviors are created depending on crust types. model.animationStarted flag is true
- * |        (model.initializeBehaviors() is called after model.motionType is set)
- * |    * user can animate as they want (automatic or manual mode)
- * |    * user presses "Rewind" --> rewinds animation, goes to (C) with same motion type / behaviors
- * |    * user presses "Reset" --> goes to (A)
- */
 public class PlateMotionModel extends PlateTectonicsModel {
 
     // the two main plates

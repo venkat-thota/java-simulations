@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.control;
 
 import java.awt.*;
@@ -12,15 +11,13 @@ import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.nodes.PPath;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 
-//REVIEW this looks like it might be generally useful. Consider migration to phetcommon?
-
-/**
- * A container that allows flexible layout generation.
- * <p/>
- * Based on layout methods that can be composed together.
- */
 public class GeneralLayoutNode extends PNode {
-    private static final boolean DEBUG = false;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final boolean DEBUG = false;
 
     private boolean activelyLayingOut = false; // used to prevent children bounds changes during layout trigger another layout
 
@@ -40,7 +37,12 @@ public class GeneralLayoutNode extends PNode {
     /**
      * Takes up space that represents the bounds of all of the layout elements (with their padding)
      */
-    private final PNode invisibleBackground = new PNode() {{
+    private final PNode invisibleBackground = new PNode() {/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+	{
         setVisible( false );
     }};
 
@@ -124,7 +126,12 @@ public class GeneralLayoutNode extends PNode {
         invisibleBackground.removeAllChildren();
         PBounds bounds = getLayoutBounds();
         if ( bounds != null ) {
-            invisibleBackground.addChild( new PPath( bounds ) {{
+            invisibleBackground.addChild( new PPath( bounds ) {/**
+				 * 
+				 */
+				private static final long serialVersionUID = 1L;
+
+			{
                 setStroke( null );
             }} );
         }
@@ -133,7 +140,12 @@ public class GeneralLayoutNode extends PNode {
             invisibleBackground.setVisible( true );
 
             for ( LayoutElement element : elements ) {
-                invisibleBackground.addChild( new AimxcelPPath( new PBounds( element.node.getFullBounds() ) ) {{
+                invisibleBackground.addChild( new AimxcelPPath( new PBounds( element.node.getFullBounds() ) ) {/**
+					 * 
+					 */
+					private static final long serialVersionUID = 1L;
+
+				{
                     setStrokePaint( Color.BLUE );
                     setPaint( new Color( 255, 0, 0, 100 ) );
                 }} );

@@ -1,14 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 
-/**
- * Vibration model of object, capable of playing sound.
- * Extended to keep track of current excitation and capable of modes being turned
- * on/off.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class QuenchableModalObjectWithOneContact extends ModalObjectWithOneContact {
     /**
      * True for the modes that are on

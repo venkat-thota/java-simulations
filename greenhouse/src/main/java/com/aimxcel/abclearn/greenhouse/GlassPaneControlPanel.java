@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: GreenhouseControlPanel
- * Package: edu.colorado.phet.greenhouse
- * Author: Another Guy
- * Date: Oct 10, 2003
- */
 package com.aimxcel.abclearn.greenhouse;
 
 import java.awt.Color;
@@ -38,7 +30,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.ResetAllButton;
 
 public class GlassPaneControlPanel extends JPanel implements Resettable {
 
-    private static Color panelBackground = GreenhouseConfig.PANEL_BACKGROUND_COLOR;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static Color panelBackground = GreenhouseConfig.PANEL_BACKGROUND_COLOR;
     private GlassPaneModule module;
     private JSpinner glassPaneSpinner;
     private JCheckBox allPhotonsCB;

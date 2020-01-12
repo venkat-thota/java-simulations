@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.view;
 
 import java.awt.Color;
@@ -24,13 +23,14 @@ import com.aimxcel.abclearn.aimxcel2dcore.event.PInputEvent;
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeConstants.MODEL_VIEW_TRANSFORM;
 import static com.aimxcel.abclearn.buildamolecule.BuildAMoleculeSimSharing.UserComponent.scissorsButton;
 import static com.aimxcel.abclearn.common.aimxcelcommon.simsharing.SimSharingManager.sendButtonPressed;
-
-/**
- * This is a circular mouse target that when moused-over turns the mouse cursor into scissors that will split the referenced bond
- */
 public class MoleculeBondNode extends PNode {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * "Radius" of the bond target that will break the bond
      */
     public static final double BOND_RADIUS = 5;
@@ -53,7 +53,12 @@ public class MoleculeBondNode extends PNode {
         final boolean isHorizontal = bondDirection == LewisDotModel.Direction.West || bondDirection == LewisDotModel.Direction.East;
 
         // construct our scissors node
-        scissorsNode = new ScissorsNode() {{
+        scissorsNode = new ScissorsNode() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
             if ( isHorizontal ) {
                 rotateInPlace( -Math.PI / 2 );
             }
@@ -71,7 +76,11 @@ public class MoleculeBondNode extends PNode {
         // hit target
         addChild( new AimxcelPPath( new Ellipse2D.Double( -BOND_RADIUS, -BOND_RADIUS, 2 * BOND_RADIUS, 2 * BOND_RADIUS ) ) {
 
-            private boolean isDragging = false; // keep track of mouse-down state so we can NOT hide the cursor when it goes out of our hit zone
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+			private boolean isDragging = false; // keep track of mouse-down state so we can NOT hide the cursor when it goes out of our hit zone
             private boolean isOver = false; // keep track of whether the mouse is over our hit zone, so that when the mouse is released we can keep the scissors visible if we are inside the hit zone
 
             {

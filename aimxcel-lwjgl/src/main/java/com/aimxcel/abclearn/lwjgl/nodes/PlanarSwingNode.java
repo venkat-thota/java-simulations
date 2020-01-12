@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.lwjgl.nodes;
 
 import java.awt.geom.AffineTransform;
@@ -15,12 +14,6 @@ import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
 
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * Renders an arbitrary Swing component into a quad. This node can be transformed arbitrarily (it does not have to be orthographic, and is meant to
- * display a flat surface somewhere within a perspective projection).
- * <p/>
- * NOTE: Any updates to the Swing component should be done exclusively within the Swing Event Dispatch Thread. See lwjgl-implementation-notes.txt
- */
 public class PlanarSwingNode extends AbstractSwingGraphicsNode {
 
     public PlanarSwingNode( final JComponent component ) {

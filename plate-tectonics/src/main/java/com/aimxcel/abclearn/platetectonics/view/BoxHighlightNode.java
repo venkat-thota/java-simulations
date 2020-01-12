@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.view;
 
 import java.awt.*;
@@ -16,11 +15,6 @@ import static com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils.color4f;
 import static com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils.vertex3f;
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * Highlights a box with dashed outlines where a dropped crust piece will go.
- * <p/>
- * This actually uses a decent chunk of vertices, because the actual on-screen shape is curved.
- */
 public class BoxHighlightNode extends GLNode {
     public final Bounds3F bounds;
     private LWJGLTransform modelViewTransform;

@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.tests;
 
 import java.io.File;
@@ -8,10 +7,6 @@ import com.aimxcel.abclearn.buildamolecule.model.CompleteMolecule;
 import com.aimxcel.abclearn.buildamolecule.model.MoleculeList;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.util.FileUtils;
-
-/**
- * Generates a partial part of the strings file that contains property stubs for ALL molecules, not just those in the collection boxes
- */
 public class FullTranslationGenerator {
     public static void main( String[] args ) {
         File outFile = new File( args[0] );

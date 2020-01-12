@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.sound.view;
 
 import java.awt.*;
@@ -22,7 +21,11 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.VerticalLayoutPanel;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
 public class SoundControlPanel extends ControlPanel {
-    private MyControlPanel soundControlPanel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private MyControlPanel soundControlPanel;
     private int rowIdx = 0;
     private AmplitudeControlPanel amplitudeControlPanel;
 
@@ -47,7 +50,12 @@ public class SoundControlPanel extends ControlPanel {
     // Inner classes for the component panels
     //
     private class MyControlPanel extends JPanel {
-        MyControlPanel( SoundModule module ) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		MyControlPanel( SoundModule module ) {
             this.setLayout( new GridBagLayout() );
             GridBagConstraints gbc = new GridBagConstraints( 0, rowIdx++, 1, 1, 1, 1,
                                                              GridBagConstraints.CENTER,
@@ -61,7 +69,11 @@ public class SoundControlPanel extends ControlPanel {
     }
 
     private static class FrequencyControlPanel extends VerticalLayoutPanel {
-        private JLabel frequencyLabel;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private JLabel frequencyLabel;
         private JSlider frequencySlider;
         private String Hertz = SoundResources.getString( "SoundControlPanel.Hertz" );
 
@@ -110,7 +122,11 @@ public class SoundControlPanel extends ControlPanel {
     }
 
     private static class AmplitudeControlPanel extends JPanel {
-        private JSlider amplitudeSlider;
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private JSlider amplitudeSlider;
         private int sliderMax = 10;
         private int sliderMin = 0;
         private int sliderDefault = 5;

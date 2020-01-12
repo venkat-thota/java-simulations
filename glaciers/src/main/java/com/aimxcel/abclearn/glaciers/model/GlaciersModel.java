@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.model;
 
@@ -24,12 +23,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.DoubleRange;
 
-
-/**
- * GlaciersModel is the model for all modules.
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class GlaciersModel implements IToolProducer, IBoreholeProducer, IDebrisProducer, IIceRippleProducer {
     
     //----------------------------------------------------------------------------

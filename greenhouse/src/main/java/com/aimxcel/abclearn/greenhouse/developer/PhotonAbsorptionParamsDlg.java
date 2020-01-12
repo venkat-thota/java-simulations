@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.greenhouse.developer;
 
@@ -16,15 +15,14 @@ import com.aimxcel.abclearn.photonabsorption.model.PhotonAbsorptionModel;
 import com.aimxcel.abclearn.photonabsorption.model.PhotonAbsorptionStrategy;
 
 
-/**
- * Developer control dialog for altering some parameters that affect the behavior
- * of the Photon Absorption tab.
- *
- * @author John Blanco
- */
 public class PhotonAbsorptionParamsDlg extends PaintImmediateDialog {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * Constructor.
      */
     public PhotonAbsorptionParamsDlg (Frame frame, final PhotonAbsorptionModel model){

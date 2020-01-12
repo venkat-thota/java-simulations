@@ -1,17 +1,15 @@
-// Copyright 2002-2011, University of Colorado
 package jass.render;
 
 import javax.swing.*;
 
-/**
- * Applet derived class intended to be subclassed to create applet with sliders and buttons.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public abstract class AppletController extends JApplet {
 
 
-    protected javax.swing.JSlider[] jSlider;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	protected javax.swing.JSlider[] jSlider;
     protected javax.swing.JTextPane[] jTextPane;
     protected javax.swing.JButton[] jButton;
 

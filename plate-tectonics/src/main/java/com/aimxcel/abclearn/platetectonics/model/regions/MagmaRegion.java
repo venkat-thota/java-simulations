@@ -1,4 +1,3 @@
-// Copyright 2002-2012, University of Colorado
 package com.aimxcel.abclearn.platetectonics.model.regions;
 
 import com.aimxcel.abclearn.platetectonics.model.PlateMotionModel;
@@ -11,10 +10,6 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.property.ChangeObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.SimpleObserver;
 import com.aimxcel.abclearn.common.aimxcelcommon.util.function.Function2;
-
-/**
- * Creates a teardrop-shaped magma region with a specific angle and scale
- */
 public class MagmaRegion extends Region {
 
     public final Property<Float> alpha = new Property<Float>( 1f );

@@ -1,4 +1,3 @@
-//  Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.buildamolecule.view;
 
@@ -17,18 +16,16 @@ import com.aimxcel.abclearn.common.aimxcelcommon.util.function.Function1;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PDimension;
-
-/**
- * Common canvas for Build a Molecule. It features kits shown at the bottom. Can be extended to add other parts
- */
 public class BuildAMoleculeCanvas extends AimxcelPCanvas {
 
-    public final CollectionList collectionList; // our (mutable) list of collections that we display
-
     /**
-     * A node added on the canvas at a level below all of the atoms and other objects in play.
-     * Used for adding the collection area.
-     */
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public final CollectionList collectionList; // our (mutable) list of collections that we display
+
+    
     private PNode baseLayer = new PNode();
 
     public BuildAMoleculeCanvas( CollectionList collectionList ) {

@@ -1,12 +1,6 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.glaciers.util;
 
-/**
- * UnitsConverter
- *
- * @author Chris Malley (cmalley@pixelzoom.com)
- */
 public class UnitsConverter {
 
     public static final double metersToFeet( double meters ) {

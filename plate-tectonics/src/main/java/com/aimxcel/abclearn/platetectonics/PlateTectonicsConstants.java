@@ -1,5 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
 package com.aimxcel.abclearn.platetectonics;
 
 import java.awt.*;
@@ -7,9 +5,7 @@ import java.awt.*;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.property.Property;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.AimxcelFont;
 
-/**
- * Contains global constants and some dynamic global variables (like colors)
- */
+
 public class PlateTectonicsConstants {
 
     public static final Property<Integer> FRAMES_PER_SECOND_LIMIT = new Property<Integer>( 60 );

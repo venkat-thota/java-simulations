@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.BufferNotAvailableException;
@@ -9,11 +8,6 @@ import jass.engine.Source;
 import java.util.Hashtable;
 import java.util.Vector;
 
-/**
- * Vibration model of object, capable of playing sound.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class ModalObject extends InOut {
     /**
      * Sampling rate in Hertz.

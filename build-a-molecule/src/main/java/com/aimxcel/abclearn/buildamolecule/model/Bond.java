@@ -1,12 +1,7 @@
-//  Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.buildamolecule.model;
 
 import com.aimxcel.abclearn.chemistry.model.Atom;
 
-/**
- * Base class for a molecular bond between two atoms. Order of the bond and other details are
- * not included, but could be put into a subclass
- */
 public class Bond<T extends Atom> {
     public T a;
     public T b;

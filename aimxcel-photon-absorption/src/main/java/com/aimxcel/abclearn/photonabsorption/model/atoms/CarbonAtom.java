@@ -1,16 +1,8 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.photonabsorption.model.atoms;
 
 import java.awt.Color;
 import java.awt.geom.Point2D;
-
-
-/**
- * Class that represents an atom of Carbon in the model.
- *
- * @author John Blanco
- */
 public class CarbonAtom extends Atom {
 
     //------------------------------------------------------------------------

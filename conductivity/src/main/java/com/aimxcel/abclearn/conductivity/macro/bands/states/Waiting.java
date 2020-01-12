@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 
 package com.aimxcel.abclearn.conductivity.macro.bands.states;
 
@@ -6,8 +5,6 @@ import java.util.Random;
 
 import com.aimxcel.abclearn.conductivity.macro.bands.*;
 
-// Referenced classes of package edu.colorado.phet.semiconductor.macro.bands.states:
-//            MoveTo, Speed
 
 public class Waiting
         implements BandParticleState {

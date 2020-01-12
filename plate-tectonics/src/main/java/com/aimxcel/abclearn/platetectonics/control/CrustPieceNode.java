@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.platetectonics.control;
 
 import java.awt.*;
@@ -10,13 +9,13 @@ import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 import com.aimxcel.abclearn.lwjgl.LWJGLCursorHandler;
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
-
-/**
- * Stylized (cuboid with borders) piece of crust that can be dragged into open spots in the plate motion tab
- */
 public class CrustPieceNode extends PNode {
 
-    public final PlateType type;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public final PlateType type;
 
     public CrustPieceNode( PlateType type, final float height, float intensity ) {
         this.type = type;

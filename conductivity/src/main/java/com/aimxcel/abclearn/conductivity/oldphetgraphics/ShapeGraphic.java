@@ -1,11 +1,3 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: ShapeGraphic
- * Package: edu.colorado.phet.common.examples.examples
- * Author: Another Guy
- * Date: Dec 18, 2003
- */
 package com.aimxcel.abclearn.conductivity.oldphetgraphics;
 
 import java.awt.*;

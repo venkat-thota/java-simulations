@@ -1,4 +1,3 @@
-// Copyright 2002-2011, University of Colorado
 package com.aimxcel.abclearn.lwjgl;
 
 import java.awt.*;
@@ -13,10 +12,6 @@ import com.aimxcel.abclearn.lwjgl.utils.LWJGLUtils;
 
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- * Creates an OpenGL texture that is backed by a BufferedImage, and is updated with a
- * paint() call that allows arbitrary Graphics2D calls.
- */
 public abstract class TextureImage {
     private BufferedImage paintableImage;
     private ByteBuffer buffer;

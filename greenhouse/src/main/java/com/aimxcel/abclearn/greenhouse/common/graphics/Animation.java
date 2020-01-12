@@ -1,25 +1,9 @@
-// Copyright 2002-2011, University of Colorado
-
-/**
- * Class: Animation
- * Package: edu.colorado.phet.common.view.graphics
- * User: Ron LeMaster
- * Date: Dec 2, 2002
- * Time: 5:55:14 PM
- * To change this template use Options | File Templates.
- */
 package com.aimxcel.abclearn.greenhouse.common.graphics;
 
 import java.awt.*;
 
 import com.aimxcel.abclearn.greenhouse.GreenhouseResources;
 
-/**
- * A utility class that supports animation of a set of images read from disk.
- * <p/>
- * The class provides methods for stepping back and forth at will through the
- * set of images.
- */
 public class Animation {
 
     private Image[] frames;

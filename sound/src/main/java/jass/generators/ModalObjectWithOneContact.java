@@ -1,19 +1,11 @@
-// Copyright 2002-2011, University of Colorado
 package jass.generators;
 
 import jass.engine.InOut;
 import jass.engine.SinkIsFullException;
 import jass.engine.Source;
 
-/**
- * Vibration model of object, capable of playing sound.
- *
- * @author Kees van den Doel (kvdoel@cs.ubc.ca)
- */
 public class ModalObjectWithOneContact extends InOut {
-    /**
-     * Sampling rate in Hertz.
-     */
+    
     public float srate;
 
     /**
