@@ -48,7 +48,7 @@ public class ElectromagnetModule extends MagnetsAndElectromagnetsModule {
     private static final Point FIELD_METER_LOCATION = new Point( 150, 400 );
 
     // Colors
-    private static final Color APPARATUS_BACKGROUND = Color.BLACK;
+    private static final Color APPARATUS_BACKGROUND = new Color(0, 51, 51);
 
     // Battery
     private static final double BATTERY_AMPLITUDE = 1.0;

@@ -1,17 +1,21 @@
-// Copyright 2002-2011, University of Colorado
+
 
 package com.aimxcel.abclearn.core.aimxcelcore.test;
 
 import javax.swing.JFrame;
 
-import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.BufferedAimxcelPCanvas;
 
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 
 public class CoreTestFrame extends JFrame {
 
-    private AimxcelPCanvas canvas;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private AimxcelPCanvas canvas;
 
     public CoreTestFrame( String title ) {
         super( title );

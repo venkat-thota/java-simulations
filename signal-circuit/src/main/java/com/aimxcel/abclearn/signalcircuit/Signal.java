@@ -33,7 +33,11 @@ import com.aimxcel.abclearn.signalcircuit.phys2d.System2D;
 import com.aimxcel.abclearn.signalcircuit.phys2d.laws.Repaint;
 
 public class Signal extends JApplet {
-    LayeredPanel panel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	LayeredPanel panel;
     System2D sys;
     JPanel controlPanel;
 
@@ -63,7 +67,7 @@ public class Signal extends JApplet {
         ParticlePainter tagged = new ImagePainter( b2 );
 
         panel = new LayeredPanel();
-        panel.addPainter( new FilledRectanglePainter( 0, 0, 800, 800, Color.white ) );
+        panel.addPainter( new FilledRectanglePainter( 0, 0, 800, 800, new Color(204, 255, 255) ) );
         Stroke stroke = new BasicStroke( (int) ( bi.getWidth() * 1.2 ) );
         //DoublePoint start=new DoublePoint(width/2+50,height/2+50);
         DoublePoint start = new DoublePoint( 100, height / 2 + 50 );

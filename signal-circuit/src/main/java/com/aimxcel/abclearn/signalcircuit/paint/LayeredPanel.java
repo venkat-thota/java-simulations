@@ -9,13 +9,17 @@ import java.util.TreeMap;
 import java.util.Vector;
 
 public class LayeredPanel extends JPanel {
-    TreeMap painters = new TreeMap();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	TreeMap<Integer, Vector<Painter>> painters = new TreeMap<Integer, Vector<Painter>>();
 
     public LayeredPanel() {
     }
 
     public void remove( Painter p, int layer ) {
-        ( (Vector)painters.get( new Integer( layer ) ) ).remove( p );
+        ( (Vector<?>)painters.get( new Integer( layer ) ) ).remove( p );
     }
 
     public void addPainter( Painter p ) {
@@ -23,12 +27,10 @@ public class LayeredPanel extends JPanel {
     }
 
     public void addPainter( Painter p, int level ) {
-        //edu.colorado.aimxcel.util.Debug.traceln("Painter added: "+p+", "+p.getClass());
-        //new Exception().printStackTrace();
 
-        Vector v = (Vector)painters.get( new Integer( level ) );
+        Vector<Painter> v = (Vector<Painter>)painters.get( new Integer( level ) );
         if( v == null ) {
-            v = new Vector();
+            v = new Vector<Painter>();
             painters.put( new Integer( level ), v );
         }
         v.add( p );
@@ -37,15 +39,13 @@ public class LayeredPanel extends JPanel {
     public void paintComponent( Graphics g ) {
         super.paintComponent( g );
         Graphics2D g2 = (Graphics2D)g;
-        Set e = painters.keySet();
-        Iterator it = e.iterator();
+        Set<Integer> e = painters.keySet();
+        Iterator<Integer> it = e.iterator();
         while( it.hasNext() ) {
             Object key = it.next();
-            Vector next = (Vector)painters.get( key );
+            Vector<?> next = (Vector<?>)painters.get( key );
             for( int i = 0; i < next.size(); i++ ) {
                 Painter p = (Painter)next.get( i );
-                //edu.colorado.aimxcel.util.Debug.traceln("num graphics painters: "+graphicsPainters.size());
-                //edu.colorado.aimxcel.util.Debug.traceln("Painter["+i+"]="+p);
                 p.paint( g2 );
             }
         }

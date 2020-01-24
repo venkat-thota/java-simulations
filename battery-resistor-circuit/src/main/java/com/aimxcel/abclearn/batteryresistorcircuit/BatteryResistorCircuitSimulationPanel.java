@@ -9,7 +9,13 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Random;
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 import com.aimxcel.abclearn.batteryresistorcircuit.collisions.Collider;
 import com.aimxcel.abclearn.batteryresistorcircuit.collisions.DefaultCollisionEvent;

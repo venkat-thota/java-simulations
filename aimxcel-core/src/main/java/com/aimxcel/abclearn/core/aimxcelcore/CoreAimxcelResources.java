@@ -1,4 +1,4 @@
-// 
+
 package com.aimxcel.abclearn.core.aimxcelcore;
 
 import java.awt.image.BufferedImage;
@@ -12,7 +12,7 @@ public class CoreAimxcelResources {
     private CoreAimxcelResources() {
     }
 
-    private static AimxcelResources INSTANCE = new AimxcelResources( "core-aimxcel" );
+    private static AimxcelResources INSTANCE = new AimxcelResources( "aimxcel-core" );
 
     public static AimxcelResources getInstance() {
         return INSTANCE;

@@ -69,6 +69,7 @@ aimxcel-common:
 --------------
 mvn clean install
 
+aimxcel-common
 aimxcel2d-core
 aimxcel2d-extra
 aimxcel-core

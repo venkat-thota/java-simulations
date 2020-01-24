@@ -1,19 +1,25 @@
+
 package com.aimxcel.abclearn.core.aimxcelcore.nodes;
 
 import java.awt.Dimension;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import com.aimxcel.abclearn.core.aimxcelcore.nodes.kit.ZeroOffsetNode;
+
 import com.aimxcel.abclearn.aimxcel2dcore.PNode;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PBounds;
 import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 import com.aimxcel.abclearn.aimxcel2dextra.pswing.PSwingCanvas;
-import com.aimxcel.abclearn.core.aimxcelcore.nodes.kit.ZeroOffsetNode;
 
 
 public class Core3DCanvas extends PSwingCanvas {
 
-    private final PNode node;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final PNode node;
 
     /**
      * @param node The node to wrap within the canvas

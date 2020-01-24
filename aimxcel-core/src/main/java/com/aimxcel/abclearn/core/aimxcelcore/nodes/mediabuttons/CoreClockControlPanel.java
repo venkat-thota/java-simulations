@@ -1,3 +1,4 @@
+
 package com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons;
 
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockAdapter;
@@ -5,11 +6,20 @@ import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.ClockEvent;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.TimeControlListener;
 
+
 public class CoreClockControlPanel extends CoreTimeControlPanel {
-    private IClock clock;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private IClock clock;
     private ClockAdapter clockListener;
 
-  
+    /**
+     * Constructs a ClockControlPanel
+     *
+     * @param clock must be non-null
+     */
     public CoreClockControlPanel( final IClock clock ) {
         if ( clock == null ) {
             throw new RuntimeException( "Cannot have a control panel for a null clock." );

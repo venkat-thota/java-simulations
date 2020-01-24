@@ -5,10 +5,10 @@ import java.awt.*;
 import java.util.Vector;
 
 public class CompositePainter implements Painter {
-    Vector v;
+    Vector<Painter> v;
 
     public CompositePainter() {
-        v = new Vector();
+        v = new Vector<Painter>();
     }
 
     public String toString() {

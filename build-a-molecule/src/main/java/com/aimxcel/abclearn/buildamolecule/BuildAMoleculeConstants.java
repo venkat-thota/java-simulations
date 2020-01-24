@@ -45,7 +45,7 @@ public class BuildAMoleculeConstants {
     * colors
     *----------------------------------------------------------------------------*/
 
-    public static final Color CANVAS_BACKGROUND_COLOR = new Color( 198, 226, 246 ); // main play area background
+    public static final Color CANVAS_BACKGROUND_COLOR = new Color( 204, 204, 255 ); // main play area background
     public static final Color MOLECULE_COLLECTION_BACKGROUND = new Color( 238, 238, 238 ); // collection area background
     public static final Color MOLECULE_COLLECTION_BORDER = Color.BLACK; // border around collection area
     public static final Property<Color> MOLECULE_COLLECTION_BOX_HIGHLIGHT = new Property<Color>( Color.YELLOW ); // box highlight (border when full)

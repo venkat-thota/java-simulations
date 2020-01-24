@@ -1,4 +1,4 @@
-// Copyright 2002-2011, University of Colorado
+
 
 package com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons;
 
@@ -23,9 +23,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
-import com.aimxcel.abclearn.aimxcel2dcore.PNode;
-import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 import com.aimxcel.abclearn.common.aimxcelcommon.resources.AimxcelCommonResources;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.TimeControlListener;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.util.DoubleGeneralPath;
@@ -35,20 +32,21 @@ import com.aimxcel.abclearn.core.aimxcelcore.AimxcelPCanvas;
 import com.aimxcel.abclearn.core.aimxcelcore.event.ToolTipHandler;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.AimxcelPPath;
 
+import com.aimxcel.abclearn.aimxcel2dcore.PCanvas;
+import com.aimxcel.abclearn.aimxcel2dcore.PNode;
+import com.aimxcel.abclearn.aimxcel2dcore.util.PPaintContext;
 
-/**
- * Core-based time controls.
- *
- * @author Sam Reid
- * @author Chris Malley
- */
 public class CoreTimeControlPanel extends JPanel {
 
     //------------------------------------------------------------------------
     // Class Data
     //------------------------------------------------------------------------
 
-    private static final String DEFAULT_PLAY_TOOLTIP = AimxcelCommonResources.getString( AimxcelCommonResources.STRING_CLOCK_PLAY );
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final String DEFAULT_PLAY_TOOLTIP = AimxcelCommonResources.getString( AimxcelCommonResources.STRING_CLOCK_PLAY );
     private static final String DEFAULT_PAUSE_TOOLTIP = AimxcelCommonResources.getString( AimxcelCommonResources.STRING_CLOCK_PAUSE );
     private static final String DEFAULT_STEP_TOOLTIP = AimxcelCommonResources.getString( AimxcelCommonResources.STRING_CLOCK_STEP );
     private static final String DEFAULT_STEP_BACK_TOOLTIP = AimxcelCommonResources.getString( AimxcelCommonResources.STRING_CLOCK_STEP_BACK );
@@ -543,7 +541,11 @@ public class CoreTimeControlPanel extends JPanel {
 
     public static class BackgroundNode extends PNode {
 
-        private final AimxcelPPath backgroundNode = new AimxcelPPath( new JLabel().getBackground() );
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private final AimxcelPPath backgroundNode = new AimxcelPPath( new JLabel().getBackground() );
         private final AimxcelPPath tabNode = new AimxcelPPath();
         private int width;
         private int height;

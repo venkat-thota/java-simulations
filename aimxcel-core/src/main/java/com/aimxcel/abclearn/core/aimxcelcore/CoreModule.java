@@ -1,23 +1,17 @@
-// Copyright 2002-2011, University of Colorado
+
 package com.aimxcel.abclearn.core.aimxcelcore;
 
 import java.awt.Component;
 
 import javax.swing.JComponent;
 
-import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.model.clock.IClock;
 import com.aimxcel.abclearn.core.aimxcelcore.help.HelpPane;
 import com.aimxcel.abclearn.core.aimxcelcore.nodes.mediabuttons.CoreClockControlPanel;
 
 
-
-/**
- * PiccoloModule is a module specialized for use with Piccolo.
- *
- * @author Sam Reid
- */
 public class CoreModule extends Module {
 
     //----------------------------------------------------------------------------
@@ -67,25 +61,25 @@ public class CoreModule extends Module {
      * @return AimxcelPCanvas
      */
     public AimxcelPCanvas getAimxcelPCanvas() {
-        AimxcelPCanvas AimxcelPCanvas = null;
+        AimxcelPCanvas aimxcelPCanvas = null;
         JComponent simulationPanel = getSimulationPanel();
         if ( simulationPanel instanceof AimxcelPCanvas ) {
-            AimxcelPCanvas = (AimxcelPCanvas) simulationPanel;
+            aimxcelPCanvas = (AimxcelPCanvas) simulationPanel;
         }
-        return AimxcelPCanvas;
+        return aimxcelPCanvas;
     }
 
     /**
      * Sets the simulation panel (aka, "play area") to a AimxcelPCanvas.
      *
-     * @param AimxcelPCanvas
+     * @param aimxcelPCanvas
      * @deprecated use setSimulationPanel
      */
-    public void setAimxcelPCanvas( AimxcelPCanvas AimxcelPCanvas ) {
-        super.setSimulationPanel( AimxcelPCanvas );
+    public void setAimxcelPCanvas( AimxcelPCanvas aimxcelPCanvas ) {
+        super.setSimulationPanel( aimxcelPCanvas );
     }
 
-    /* vestige of Aimxcelgraphics, called by Module.handleClockTick */
+    /* vestige of aimxcelgraphics, called by Module.handleClockTick */
     protected void handleUserInput() {
     }
 

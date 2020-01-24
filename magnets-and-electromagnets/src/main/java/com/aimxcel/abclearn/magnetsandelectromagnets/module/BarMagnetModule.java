@@ -52,7 +52,7 @@ public class BarMagnetModule extends MagnetsAndElectromagnetsModule {
     private static final Point WIGGLE_ME_LOCATION = new Point( 250, 175 );
 
     // Colors
-    private static final Color APPARATUS_BACKGROUND = Color.BLACK;
+    private static final Color APPARATUS_BACKGROUND = new Color(0, 51, 51);
 
     // Bar Magnet
     private static final Dimension BAR_MAGNET_SIZE = MagnetsAndElectromagnetsConstants.BAR_MAGNET_SIZE;

@@ -1,17 +1,23 @@
+
 package com.aimxcel.abclearn.core.aimxcelcore;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.Module;
 import com.aimxcel.abclearn.common.aimxcelcommon.application.ModuleEvent;
+import com.aimxcel.abclearn.common.aimxcelcommon.application.AimxcelApplication;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ITabbedModulePane;
 import com.aimxcel.abclearn.common.aimxcelcommon.view.ModulePanel;
 
+
 public class TabbedModulePaneCore extends AimxcelTabbedPane implements ITabbedModulePane {
-    private Module current;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Module current;
     private AimxcelApplication application;
 
     public TabbedModulePaneCore() {
